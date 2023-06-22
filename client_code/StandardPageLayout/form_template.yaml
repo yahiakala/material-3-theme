@@ -20,9 +20,5 @@ components:
   properties: {}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
-- name: form1_1
-  properties: {}
-  type: form:Form1
-  layout_properties: {slot: navigation-rail}
 is_package: true
 slots: {}
