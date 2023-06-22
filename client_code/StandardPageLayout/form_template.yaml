@@ -17,8 +17,9 @@ components:
   type: Link
   layout_properties: {slot: navigation-rail}
 - name: navigation_link_1
-  properties: {url: 'https://anvil.works'}
+  properties: {url: ''}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
+  event_bindings: {click: navigation_link_1_click}
 is_package: true
 slots: {}
