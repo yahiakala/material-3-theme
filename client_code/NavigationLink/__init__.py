@@ -18,4 +18,9 @@ class NavigationLink(NavigationLinkTemplate):
       el = anvil.js.get_dom_node(self).querySelector(".navigation-link")
       el.setAttribute("href", value)
 
+  def form_show(self, **event_args):
+    """This method is called when the HTML panel is shown on the screen"""
+    print('HELLO')
+
+
 
