@@ -1,0 +1,7 @@
+container: {type: ColumnPanel}
+components:
+- name: navigation_link_1
+  properties: {}
+  type: form:NavigationLink
+  layout_properties: {grid_position: 'ZUTBLH,MJQGEC'}
+is_package: true
