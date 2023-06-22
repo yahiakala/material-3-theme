@@ -19,7 +19,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-
+    print('form show', self.url)
     self.call_js('setHref', self.url)
 
 
