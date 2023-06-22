@@ -16,5 +16,13 @@ components:
   properties: {text: Link}
   type: Link
   layout_properties: {slot: navigation-rail}
+- name: navigation_link_1
+  properties: {}
+  type: form:NavigationLink
+  layout_properties: {slot: navigation-rail}
+- name: form1_1
+  properties: {}
+  type: form:Form1
+  layout_properties: {slot: navigation-rail}
 is_package: true
 slots: {}
