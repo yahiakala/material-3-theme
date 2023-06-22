@@ -7,6 +7,8 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+
+
   @property
   def url(self):
     return self._url
@@ -17,10 +19,5 @@ class NavigationLink(NavigationLinkTemplate):
     if value:
       el = anvil.js.get_dom_node(self).querySelector(".navigation-link")
       el.setAttribute("href", value)
-
-  def form_show(self, **event_args):
-    """This method is called when the HTML panel is shown on the screen"""
-    print('HELLO')
-
 
 
