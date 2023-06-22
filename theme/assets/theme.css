@@ -1,7 +1,22 @@
 .navigation-rail {
-  background-color: pink;
+  background-color: #EADDFF;
   width: 80px;
   padding: 56px 12px;
-  height: 100vh
-  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+  position: fixed;
+
+  @media(max-width: 600px) {
+  width: 100vw;
+  height: 80px;
+  column-gap: 8px;
+  padding: 12px 8px 16px 8px;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 0;
+  }
 }
+

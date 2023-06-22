@@ -2,8 +2,19 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"navigation-rail\" anvil-slot=\"navigation-rail\"\
       >\n  <p anvil-if-slot-empty=\"navigation-rail\" style=\"font-style: italic;\"\
-      >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n\
-      <div class=\"navigation-bar\">\n</div>\n  \n"}
-components: []
+      >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n"}
+components:
+- name: link_1
+  properties: {text: Link}
+  type: Link
+  layout_properties: {slot: navigation-rail}
+- name: link_2
+  properties: {text: Link}
+  type: Link
+  layout_properties: {slot: navigation-rail}
+- name: link_3
+  properties: {text: Link}
+  type: Link
+  layout_properties: {slot: navigation-rail}
 is_package: true
 slots: {}
