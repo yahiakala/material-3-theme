@@ -3,10 +3,7 @@ package_name: Material_3_Theme_2_0
 startup: {type: form, module: StandardPageLayout}
 name: Material 3 Theme 2.0
 startup_form: null
-native_deps: {head_html: "\n<script type=\"module\">\n    window.anvilEnableLegacyClassNames();\n\
-    </script>\n<style>\n  @import url({{cdn-origin}}/runtime/css/bootstrap.css) layer(bootstrap);\n\
-    \  @import url({{cdn-origin}}/runtime/css/bootstrap-theme.min.css) layer(bootstrap);\n\
-    </style>\n"}
+native_deps: {head_html: ''}
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
 services:
 - source: /runtime/services/tables.yml
