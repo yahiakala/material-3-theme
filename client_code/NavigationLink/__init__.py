@@ -7,17 +7,13 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-
-
   @property
   def url(self):
-    return self._url
+    return self.dom_nodes['navigation-link'].href
 
   @url.setter
   def url(self, value):
-    self._url = value
     if value:
-      el = anvil.js.get_dom_node(self).querySelector(".navigation-link")
-      el.setAttribute("href", value)
+      self.dom_nodes['navigation-link'].href = value
 
 

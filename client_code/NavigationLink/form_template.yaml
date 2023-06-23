@@ -8,11 +8,10 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<a class=\"navigation-link\" href=\"\">\n  <div anvil-slot=\"\
-      icon\"></div>\n  <i anvil-if-slot-empty=\"icon\" class=\"fa-solid fa-star\"\
-      ></i>\n  <div anvil-slot=\"label\">\n    <div style=\"font-style: italic\" anvil-if-slot-empty=\"\
-      label\">Add a label here</div>\n  </div>\n</a>\n\n<script>\n  function setHref(value)\
-      \ {\n    $('.navigation-link').attr(\"href\", value)\n    console.log(value)\n\
-      \  }\n</script>"}
+  properties: {html: "<a class=\"navigation-link\" anvil-name=\"navigation-link\"\
+      \ href=\"\">\n  <div anvil-slot=\"icon\"></div>\n  <i anvil-if-slot-empty=\"\
+      icon\" class=\"fa-solid fa-star\"></i>\n  <div anvil-slot=\"label\">\n    <div\
+      \ style=\"font-style: italic\" anvil-if-slot-empty=\"label\">Add a label here</div>\n\
+      \  </div>\n</a>\n"}
   event_bindings: {}
 custom_component_container: true
