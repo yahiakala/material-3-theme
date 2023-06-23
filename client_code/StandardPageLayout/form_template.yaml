@@ -4,31 +4,15 @@ container:
       >\n  <p anvil-if-slot-empty=\"navigation-rail\" style=\"font-style: italic;\"\
       >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n"}
 components:
-- name: link_1
-  properties: {text: Link, icon: 'fa:home'}
-  type: Link
-  layout_properties: {slot: navigation-rail}
-- name: link_2
-  properties: {text: Link}
-  type: Link
-  layout_properties: {slot: navigation-rail}
-- name: link_3
-  properties: {text: Link}
-  type: Link
-  layout_properties: {slot: navigation-rail}
 - name: navigation_link_1
   properties: {url: 'https:///anvil.works', icon: ''}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
   event_bindings: {click: navigation_link_1_click}
 - name: navigation_link_2
-  properties: {icon: 'fa:home'}
+  properties: {icon: 'fa:home', text: Home, selected: true}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
-  components:
-  - name: label_1
-    properties: {text: Home}
-    type: Label
-    layout_properties: {slot: label}
+  components: []
 is_package: true
 slots: {}

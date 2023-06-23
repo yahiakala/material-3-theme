@@ -31,12 +31,23 @@ class NavigationLink(NavigationLinkTemplate):
 
   @icon.setter
   def icon(self, value):
-    link_icon = self.dom_nodes['link-icon']
+    link_icon = self.dom_nodes['navigation-link-icon']
     value = value.replace(":", "-")
     if value:
       link_icon.className = ""
       link_icon.classList.add("fa")
       link_icon.classList.add(value)
+
+  @property
+  def selected(self):
+    return self._selected
+
+  @selected.setter
+  def selected(self, value):
+    if value:
+      self.dom_nodes['navigation-link'].classList.add('selected')
+    else:
+      self.dom_nodes['navigation-link'].classList.remove('selected')
       
 
 

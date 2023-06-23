@@ -1,3 +1,8 @@
+body{
+  font-family: roboto;
+  color: #1D1B20
+}
+
 .navigation-rail {
   background-color: #FEF7FF;
   width: 80px;
@@ -31,8 +36,29 @@
   text-align: center;
 }
 
-.navigation-link:hover {
+.navigation-link {
+  text-decoration: none;
+  color: #1D192B;
+}
+
+.navigation-link [anvil-name=navigation-link-icon] {
+  padding: 8px 20px; 
+  border-radius: 16px;
+}
+
+.navigation-link .navigation-link-text {
+  padding-top: 4px;
+}
+
+.navigation-link:hover [anvil-name=navigation-link-icon] {
+  background-color: rgba(29, 27, 32, 0.08)
+}
+
+.navigation-link.selected [anvil-name=navigation-link-icon] {
   background-color: #E8DEF8;
-  
+}
+
+.navigation-link.selected:hover [anvil-name=navigation-link-icon] {
+  background: linear-gradient(0deg, rgba(29, 25, 43, 0.08) 0%, rgba(29, 25, 43, 0.08) 100%), rgba(232, 222, 248, 1);
 }
 
