@@ -20,10 +20,10 @@ class NavigationLink(NavigationLinkTemplate):
 
   @property
   def icon(self):
-    return self.dom_nodes['navigation-link'].href
+    return self.dom_nodes['link-icon'].classList[1]
 
-  @url.setter
-  def url(self, value):
+  @icon.setter
+  def icon(self, value):
     if value:
       self.dom_nodes['navigation-link'].href = value
 
