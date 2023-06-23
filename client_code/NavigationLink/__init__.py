@@ -6,7 +6,7 @@ class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    print(self.dom_nodes['navigation-link'].classList[0])
+    self.link_icon = self.dom_nodes['link-icon']
     print(self.icon)
 
   @property
@@ -20,18 +20,16 @@ class NavigationLink(NavigationLinkTemplate):
 
   @property
   def icon(self):
-    print(self.dom_nodes['link-icon'].classList[1])
     return self.dom_nodes['link-icon'].classList[1]
 
   @icon.setter
   def icon(self, value):
-    print(value)
+    link_icon = self.dom_nodes['link-icon']
     value = value.replace(":", "-")
-    print(value)
     if value:
-      self.dom_nodes['link-icon'].className = ""
-      self.dom_nodes['link-icon'].classList.add("fa")
-      self.dom_nodes['link-icon'].classList.add(value)
+      link_icon.className = ""
+      link_icon.classList.add("fa")
+      link_icon.classList.add(value)
       
 
 
