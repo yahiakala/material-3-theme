@@ -26,3 +26,9 @@
   
 }
 
+.navigation-link:hover .link-icon {
+  background-color: blue !important;
+  
+  
+}
+
