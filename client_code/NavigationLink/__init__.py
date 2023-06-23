@@ -20,7 +20,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   @property
   def icon(self):
-    return self.dom_nodes['link-icon'].classList[1]
+    return self.dom_nodes['navigation-link-text']
 
   @icon.setter
   def icon(self, value):

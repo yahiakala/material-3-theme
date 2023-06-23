@@ -21,5 +21,14 @@ components:
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
   event_bindings: {click: navigation_link_1_click}
+- name: navigation_link_2
+  properties: {icon: 'fa:home'}
+  type: form:NavigationLink
+  layout_properties: {slot: navigation-rail}
+  components:
+  - name: label_1
+    properties: {text: Home}
+    type: Label
+    layout_properties: {slot: label}
 is_package: true
 slots: {}

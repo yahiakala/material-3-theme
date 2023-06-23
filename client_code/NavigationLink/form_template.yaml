@@ -1,6 +1,7 @@
 properties:
 - {name: url, type: string, default_value: '', default_binding_prop: true}
 - {name: icon, type: icon, default_value: 'fa:star'}
+- {name: text, type: string, default_value: Label, description: Text for the Link}
 is_package: true
 event_bindings: {show: form_show}
 events:
@@ -10,8 +11,9 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<a class=\"navigation-link\" anvil-name=\"navigation-link\"\
-      \ href=\"\">\n  <i anvil-name=\"link-icon\" class=\"fa fa-star\"></i>\n  <div\
-      \ anvil-slot=\"label\">\n    <div style=\"font-style: italic\" anvil-if-slot-empty=\"\
-      label\">Add a label here</div>\n  </div>\n</a>\n"}
+      \ href=\"\">\n  <i anvil-name=\"navigation-link-icon\" class=\"fa fa-star\"\
+      ></i>\n  <div class=\"navigation-link-text\">Label</div>\n<!--   <div anvil-slot=\"\
+      label\">\n    <div style=\"font-style: italic\" class=\"anvil-designer-only\"\
+      \ anvil-if-slot-empty=\"label\">Add a label here</div>\n  </div> -->\n</a>\n"}
   event_bindings: {}
 custom_component_container: true

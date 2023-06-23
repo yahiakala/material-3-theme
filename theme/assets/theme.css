@@ -1,5 +1,5 @@
 .navigation-rail {
-  background-color: #EADDFF;
+  background-color: #FEF7FF;
   width: 80px;
   padding: 56px 12px;
   height: 100vh;
@@ -26,9 +26,13 @@
   
 }
 
-.navigation-link:hover .link-icon {
-  background-color: blue !important;
-  
+/*navigation link component*/
+.anvil-container:has(.navigation-link) {
+  text-align: center;
+}
+
+.navigation-link:hover {
+  background-color: #E8DEF8;
   
 }
 
