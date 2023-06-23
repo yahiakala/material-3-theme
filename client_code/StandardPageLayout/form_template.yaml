@@ -5,7 +5,7 @@ container:
       >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n"}
 components:
 - name: link_1
-  properties: {text: Link}
+  properties: {text: Link, icon: 'fa:home'}
   type: Link
   layout_properties: {slot: navigation-rail}
 - name: link_2
