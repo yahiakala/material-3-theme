@@ -6,8 +6,6 @@ class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.link_icon = self.dom_nodes['link-icon']
-    print(self.icon)
 
   @property
   def url(self):
@@ -17,6 +15,15 @@ class NavigationLink(NavigationLinkTemplate):
   def url(self, value):
     if value:
       self.dom_nodes['navigation-link'].href = value
+
+  @property
+  def text(self):
+    return self.dom_nodes['navigation-link-text'].innerHTML
+
+  @text.setter
+  def text(self, value):
+    if value:
+      self.dom_nodes['navigation-link-text'].innerHTML = value
 
   @property
   def icon(self):
