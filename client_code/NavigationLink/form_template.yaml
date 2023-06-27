@@ -6,7 +6,7 @@ properties:
 is_package: true
 event_bindings: {show: form_show}
 events:
-- {name: click, default_event: true, description: This code runs when the component is clicked}
+- {name: click, description: This code runs when the component is clicked, default_event: true}
 custom_component: true
 components: []
 container:
