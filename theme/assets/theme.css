@@ -32,7 +32,7 @@ body{
 }
 
 /*navigation link component*/
-.anvil-container:has(.navigation-link) {
+.navigation-link {
   text-align: center;
 }
 
