@@ -18,4 +18,4 @@ container:
       \ class=\"anvil-designer-only\" anvil-if-slot-empty=\"label\">Add a label here</div>\n\
       \  </div> -->\n</a>\n"}
   event_bindings: {}
-custom_component_container: true
+custom_component_container: false
