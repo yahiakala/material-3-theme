@@ -12,8 +12,8 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<a class=\"navigation-link\" anvil-name=\"navigation-link\"\
-      \ href=\"\">\n  <i anvil-name=\"navigation-link-icon\" class=\"fa fa-star\"\
-      ></i>\n  <div anvil-name=\"navigation-link-text\" class=\"navigation-link-text\"\
+      \ href=\"\" onclick=\"\">\n  <i anvil-name=\"navigation-link-icon\" class=\"\
+      fa fa-star\"></i>\n  <div anvil-name=\"navigation-link-text\" class=\"navigation-link-text\"\
       ></div>\n<!--   <div anvil-slot=\"label\">\n    <div style=\"font-style: italic\"\
       \ class=\"anvil-designer-only\" anvil-if-slot-empty=\"label\">Add a label here</div>\n\
       \  </div> -->\n</a>\n"}
