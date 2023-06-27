@@ -5,7 +5,7 @@ container:
       >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n"}
 components:
 - name: navigation_link_1
-  properties: {url: 'https:///anvil.works', icon: ''}
+  properties: {url: 'https:///anvil.works', icon: '', text: Label}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
   event_bindings: {click: navigation_link_1_click}
