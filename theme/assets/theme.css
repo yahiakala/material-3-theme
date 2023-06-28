@@ -50,7 +50,7 @@ body{
   padding-top: 4px;
 }
 
-.navigation-link:hover [anvil-name=navigation-link-icon] {
+.navigation-link:hover [anvil-name=navigation-link-icon], .navigation-link:focus [anvil-name=navigation-link-icon] {
   background-color: rgba(29, 27, 32, 0.08)
 }
 
@@ -58,7 +58,7 @@ body{
   background-color: #E8DEF8;
 }
 
-.navigation-link.selected:hover [anvil-name=navigation-link-icon] {
+.navigation-link.selected:hover [anvil-name=navigation-link-icon], .navigation-link.selected:focus [anvil-name=navigation-link-icon] {
   background: linear-gradient(0deg, rgba(29, 25, 43, 0.08) 0%, rgba(29, 25, 43, 0.08) 100%), rgba(232, 222, 248, 1);
 }
 

@@ -8,11 +8,12 @@ components:
   properties: {url: 'https:///anvil.works', icon: '', text: Label, selected: false}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
-  event_bindings: {click: navigation_link_1_click}
+  event_bindings: {}
 - name: navigation_link_2
   properties: {icon: 'fa:home', text: Home, selected: true}
   type: form:NavigationLink
   layout_properties: {slot: navigation-rail}
   components: []
+  event_bindings: {click: navigation_link_2_click}
 is_package: true
 slots: {}

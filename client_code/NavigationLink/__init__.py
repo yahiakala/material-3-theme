@@ -6,10 +6,12 @@ class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    # self.raise_event("click")
     self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
 
-  def handle_click(self, **event_args):
-    print('hello')
+  def handle_click(self, event):
+    event.preventDefault()
+    self.raise_event("click")
 
   @property
   def url(self):
