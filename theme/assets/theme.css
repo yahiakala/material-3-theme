@@ -39,9 +39,11 @@ body{
 .navigation-link {
   text-decoration: none;
   color: #1D192B;
+  transition: background 0.2s;
 }
 
 .navigation-link [anvil-name=navigation-link-icon] {
+  transition: background 0.2s;
   padding: 8px 20px; 
   border-radius: 16px;
 }
@@ -59,6 +61,12 @@ body{
 }
 
 .navigation-link.selected:hover [anvil-name=navigation-link-icon], .navigation-link.selected:focus [anvil-name=navigation-link-icon] {
-  background: linear-gradient(0deg, rgba(29, 25, 43, 0.08) 0%, rgba(29, 25, 43, 0.08) 100%), rgba(232, 222, 248, 1);
+  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
 }
+
+.navigation-link.selected:active [anvil-name=navigation-link-icon] {
+  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
+}
+
+
 
