@@ -2,18 +2,24 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"navigation-rail\" anvil-slot=\"navigation-rail\"\
       >\n  <p anvil-if-slot-empty=\"navigation-rail\" style=\"font-style: italic;\"\
-      >Add navigation links here</p>\n</div>\n\n<div class=\"content\">\n</div>\n\n"}
-components:
-- name: navigation_link_1
-  properties: {url: 'https:///anvil.works', icon: '', text: Label, selected: false}
-  type: form:NavigationLink
-  layout_properties: {slot: navigation-rail}
-  event_bindings: {}
-- name: navigation_link_2
-  properties: {icon: 'fa:home', text: Home, selected: true}
-  type: form:NavigationLink
-  layout_properties: {slot: navigation-rail}
-  components: []
-  event_bindings: {click: navigation_link_2_click}
+      >Add navigation links here</p>\n</div>\n\n<div class=\"top-app-bar\">\n  <div\
+      \ anvil-slot=\"top-app-bar-title\">\n    <p anvil-if-slot-empty=\"top-app-bar-title\"\
+      \ style=\"font-style: italic;\">Add title here</p>\n  </div>\n  <div anvil-slot=\"\
+      top-app-bar-links\">\n    <p anvil-if-slot-empty=\"top-app-bar-links\" style=\"\
+      font-style: italic;\">Add links here</p>\n  </div>\n</div>\n\n<div class=\"\
+      content\" anvil-slot=\"content\">\n</div>\n\n<script>\n  var topAppBar = $('.top-app-bar')[0];\n\
+      \  document.addEventListener('scroll', function(event) {\n  if (topAppBar.classList.contains('scrolled'))\
+      \ {\n    if (window.scrollY === 0) {\n      topAppBar.classList.remove('scrolled')\n\
+      \     \n  }\n  else {\n    topAppBar.classList.add('scrolled')\n  }\n});\n</script>\n\
+      \n"}
+components: []
 is_package: true
-slots: {}
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: navigation-rail}
+    target: {type: container, name: ''}
+  slot_2:
+    index: 0
+    set_layout_properties: {slot: top-app-bar-links}
+    target: {type: container, name: ''}

@@ -4,7 +4,7 @@ body{
 }
 
 .navigation-rail {
-  background-color: #FEF7FF;
+  background-color: %color:Surface%;
   width: 80px;
   padding: 56px 12px;
   height: 100vh;
@@ -24,7 +24,24 @@ body{
   flex-direction: row;
   justify-content: center;
   bottom: 0;
+  top: unset
   }
+}
+
+.top-app-bar {
+  position: fixed;
+  top:0;
+  top: %anvil-banner-height%;
+  right:0;
+  left:0;
+}
+
+.top-app-bar.scrolled {
+  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+  transition: background 250ms;
+  -webkit-transition: background 250ms;
+  -moz-transition: background 250ms;
+  -o-transition: background 250ms;
 }
 
 .navigation-rail [anvil-dropzone] {
@@ -40,7 +57,7 @@ body{
 
 .navigation-link {
   text-decoration: none;
-  color: #1D192B;
+  color: %color:On Surface Variant%;
   transition: background 0.2s;
 }
 
@@ -55,11 +72,15 @@ body{
 }
 
 .navigation-link:hover [anvil-name=navigation-link-icon], .navigation-link:focus [anvil-name=navigation-link-icon] {
-  background-color: rgba(29, 27, 32, 0.08)
+  background-color: %color:Dark Overlay 1%;
+}
+
+.navigation-link.selected {
+  color: %color:On Secondary Container%;
 }
 
 .navigation-link.selected [anvil-name=navigation-link-icon] {
-  background-color: #E8DEF8;
+  background-color: %color:Secondary Container%;
 }
 
 .navigation-link.selected:hover [anvil-name=navigation-link-icon], .navigation-link.selected:focus [anvil-name=navigation-link-icon] {
