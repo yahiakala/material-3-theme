@@ -1,6 +1,6 @@
 body{
   font-family: roboto;
-  color: #1D1B20
+  color: %color:On Background%
 }
 
 .navigation-rail {
@@ -13,6 +13,8 @@ body{
   align-items: center;
   row-gap: 12px;
   position: fixed;
+  left: 0;
+  top:0;
 
   @media(max-width: 600px) {
   width: 100vw;
