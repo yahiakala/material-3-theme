@@ -10,3 +10,9 @@ components_by_slot:
     properties: {}
     type: form:NavigationLink
     layout_properties: {}
+  slot_2: []
+  slot_4:
+  - name: map_1
+    properties: {height: 940, spacing_above: none, spacing_below: none}
+    type: GoogleMap
+    layout_properties: {}

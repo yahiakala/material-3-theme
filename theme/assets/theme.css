@@ -1,4 +1,4 @@
-body{
+body {
   font-family: roboto;
   color: %color:On Background%
 }
@@ -15,6 +15,7 @@ body{
   position: fixed;
   left: 0;
   top:0;
+  z-index:100;
 
   @media(max-width: 600px) {
   width: 100vw;
@@ -28,26 +29,17 @@ body{
   }
 }
 
-.top-app-bar {
-  position: fixed;
-  top:0;
-  top: %anvil-banner-height%;
-  right:0;
-  left:0;
-}
-
-.top-app-bar.scrolled {
-  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-  transition: background 250ms;
-  -webkit-transition: background 250ms;
-  -moz-transition: background 250ms;
-  -o-transition: background 250ms;
-}
-
 .navigation-rail [anvil-dropzone] {
   margin-top: -6px;
   margin-bottom: -6px;
-  
+}
+
+.content {
+  top: 0;
+  @media(min-width: 600px) {
+    left: 72px;
+    position:relative;
+  }
 }
 
 /*navigation link component*/

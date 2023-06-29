@@ -2,16 +2,9 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"navigation-rail\" anvil-slot=\"navigation-rail\"\
       >\n  <p anvil-if-slot-empty=\"navigation-rail\" style=\"font-style: italic;\"\
-      >Add navigation links here</p>\n</div>\n\n<div class=\"top-app-bar\">\n  <div\
-      \ anvil-slot=\"top-app-bar-title\">\n    <p anvil-if-slot-empty=\"top-app-bar-title\"\
-      \ style=\"font-style: italic;\">Add title here</p>\n  </div>\n  <div anvil-slot=\"\
-      top-app-bar-links\">\n    <p anvil-if-slot-empty=\"top-app-bar-links\" style=\"\
-      font-style: italic;\">Add links here</p>\n  </div>\n</div>\n\n<div class=\"\
-      content\" anvil-slot=\"content\">\n</div>\n\n<script>\n  var topAppBar = $('.top-app-bar')[0];\n\
-      \  document.addEventListener('scroll', function(event) {\n  if (topAppBar.classList.contains('scrolled'))\
-      \ {\n    if (window.scrollY === 0) {\n      topAppBar.classList.remove('scrolled')\n\
-      \     \n  }\n  else {\n    topAppBar.classList.add('scrolled')\n  }\n});\n</script>\n\
-      \n"}
+      >Add navigation links here</p>\n</div>\n\n<div class=\"content\" anvil-slot=\"\
+      content\">\n  <p anvil-if-slot-empty=\"content\" style=\"font-style: italic;\"\
+      >Add content here</p>\n</div>\n\n"}
 components: []
 is_package: true
 slots:
@@ -21,5 +14,13 @@ slots:
     target: {type: container, name: ''}
   slot_2:
     index: 0
-    set_layout_properties: {slot: top-app-bar-links}
+    set_layout_properties: {slot: top-app-bar-title}
+    target: {type: container, name: ''}
+  slot_3:
+    index: 0
+    set_layout_properties: {slot: top-app-bar-title}
+    target: {type: container, name: ''}
+  slot_4:
+    index: 0
+    set_layout_properties: {slot: content}
     target: {type: container, name: ''}
