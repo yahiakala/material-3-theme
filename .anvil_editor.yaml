@@ -3,7 +3,8 @@ unique_ids:
     NavigationLink: '1687431782226411358777892.8858'
     StandardPageLayout: '1687425784458804083712790.1608'
     TestPage: '1688051378062284458686890.71106'
-  modules: {}
+  modules:
+    Functions: '1688130464429152915327683.20825'
   server_modules: {}
   assets:
     theme.css: ETNISNSUVCSJYUF6AOQQTK6JLIO7LPER

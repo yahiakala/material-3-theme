@@ -1,6 +1,7 @@
 body {
   font-family: roboto;
-  color: %color:On Background%
+  color: %color:On Background%;
+  margin: 0
 }
 
 .navigation-rail {
@@ -37,7 +38,7 @@ body {
 .content {
   top: 0;
   @media(min-width: 600px) {
-    left: 72px;
+    left: 80px;
     position:relative;
   }
 }
@@ -83,5 +84,63 @@ body {
   background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
 }
 
+.navigation-link .icon-badge {
+  display: block;
+  background-color: %color:Error%;
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+  position: absolute;
+  margin-left: 14px;
+  margin-top: -22px;
+}
 
 
+/*Dialogs: alerts and notifications*/
+/*Default Anvil alert*/
+.aw-modal-content {
+  background: linear-gradient(0deg, %color:Primary Overlay 3%, %color:Primary Overlay 3%), %color:Background%;
+  box-shadow: none;
+  border: none;
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.aw-modal-header {
+  padding: 0;
+  padding-bottom: 16px;
+  border-bottom: none;
+}
+
+.aw-close {
+  display: none;
+}
+
+.aw-modal-title.alert-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.aw-modal-body {
+  padding: 0;
+}
+
+.aw-modal-footer {
+  padding: 0;
+  padding-top: 24px;
+  border-top: none;
+}
+
+/*TODO: remove this when buttons are styled?*/
+.aw-modal-footer .btn {
+  color: %color:Primary%;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  background-image: none;
+  
+}

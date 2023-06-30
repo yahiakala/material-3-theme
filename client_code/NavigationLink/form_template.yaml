@@ -3,6 +3,7 @@ properties:
 - {name: icon, type: icon, default_value: 'fa:star'}
 - {name: text, type: string, default_value: Label, description: Text for the Link}
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active}
+- {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon}
 is_package: true
 event_bindings: {show: form_show}
 events:
@@ -13,7 +14,8 @@ container:
   type: HtmlTemplate
   properties: {html: "<a class=\"navigation-link\" anvil-name=\"navigation-link\"\
       \ href=\"\" onclick=\"\">\n  <i anvil-name=\"navigation-link-icon\" class=\"\
-      fa fa-star\"></i>\n  <div anvil-name=\"navigation-link-text\" class=\"navigation-link-text\"\
-      ></div>\n\n</a>\n"}
+      fa fa-star\">\n    <span anvil-name=\"icon-badge\" class=\"icon-badge\" style=\"\
+      display: none\"></span>\n  </i>\n  <div anvil-name=\"navigation-link-text\"\
+      \ class=\"navigation-link-text\"></div>\n\n</a>\n"}
   event_bindings: {}
 custom_component_container: false

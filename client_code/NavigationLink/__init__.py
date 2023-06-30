@@ -54,6 +54,16 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['navigation-link'].classList.add('selected')
     else:
       self.dom_nodes['navigation-link'].classList.remove('selected')
+
+  @property
+  def badge(self):
+    return self._badge
+
+  @badge.setter
+  def badge(self, value):
+    if value:
+      print("true!")
+      self.dom_nodes['icon-badge']
       
 
 
