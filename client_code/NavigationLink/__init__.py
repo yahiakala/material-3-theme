@@ -54,6 +54,7 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['navigation-link'].classList.add('selected')
     else:
       self.dom_nodes['navigation-link'].classList.remove('selected')
+    self._selected = value
 
   @property
   def badge(self):
@@ -62,8 +63,24 @@ class NavigationLink(NavigationLinkTemplate):
   @badge.setter
   def badge(self, value):
     if value:
-      print("true!")
-      self.dom_nodes['icon-badge']
+      self.dom_nodes['icon-badge'].style.display = "block"
+    else:
+      self.dom_nodes['icon-badge'].style.display = "none"
+    self._badge = value
+
+  @property
+  def badge_count(self):
+    return self._badge_count
+
+  @badge_count.setter
+  def badge_count(self, value):
+    if value and self.badge:
+      self.dom_nodes['icon-badge'].innerHTML = value
+      self.dom_nodes['icon-badge'].classList.add("large-badge")
+    else:
+      self.dom_nodes['icon-badge'].innerHTML = ""
+      self.dom_nodes['icon-badge'].classList.remove("large-badge")
+    self._badge_count = value
       
 
 

@@ -4,6 +4,7 @@ properties:
 - {name: text, type: string, default_value: Label, description: Text for the Link}
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active}
 - {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon}
+- {name: badge_count, type: number, default_value: ''}
 is_package: true
 event_bindings: {show: form_show}
 events:

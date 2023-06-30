@@ -3,12 +3,13 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: navigation_link_1
-    properties: {text: Home, selected: true}
+    properties: {text: Home, selected: true, icon: 'fa:home'}
     type: form:NavigationLink
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
   - name: navigation_link_2
-    properties: {selected: false, badge: true, badge_count: 10}
+    properties: {selected: false, badge: true, badge_count: 124, icon: 'fa:envelope',
+      text: Mail}
     type: form:NavigationLink
     layout_properties: {}
   - name: navigation_link_3

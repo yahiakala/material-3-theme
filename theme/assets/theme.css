@@ -84,7 +84,10 @@ body {
   background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
 }
 
+/*TODO: Color scheme should have On Error*/
 .navigation-link .icon-badge {
+  font-size: 11px;
+  color: %color:On Primary%;
   display: block;
   background-color: %color:Error%;
   height: 6px;
@@ -93,6 +96,17 @@ body {
   position: absolute;
   margin-left: 14px;
   margin-top: -22px;
+  font-family: Roboto;
+}
+
+.navigation-link .icon-badge.large-badge {
+  padding: 4px;
+  height: fit-content;
+  border-radius: 16px;
+  width: fit-content;
+  margin-top: -26px;
+  margin-left: 12px;
+  
 }
 
 
