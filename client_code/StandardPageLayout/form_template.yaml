@@ -1,12 +1,10 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<div class=\"navigation-rail\">\n  <div class=\"navigation-rail-content\"\
-      \ anvil-slot=\"navigation-rail-content\">\n      <p anvil-if-slot-empty=\"navigation-rail-content\"\
-      \ style=\"font-style: italic;\">Add navigation links here</p>\n  </div>\n<!--\
-      \   <div class=\"navigation-rail-bottom\"></div> -->\n</div>\n\n<div class=\"\
-      content\" anvil-slot=\"content\">\n  <p anvil-if-slot-empty=\"content\" style=\"\
-      font-style: italic;\">Add content here</p>\n</div>\n\n"}
-components: []
+properties:
+- name: navigation_rail_collapse_to
+  type: enum
+  default_value: Bottom app bar
+  default_binding_prop: true
+  options: [Bottom app bar, Navigation drawer]
+  description: How should the side navigation rail collapse on mobile?
 is_package: true
 slots:
   slot_1:
@@ -17,3 +15,13 @@ slots:
     index: 0
     set_layout_properties: {slot: navigation-rail-content}
     target: {type: container, name: ''}
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<div class=\"navigation-rail\">\n  <div class=\"navigation-rail-content\"\
+      \ anvil-slot=\"navigation-rail-content\">\n      <p anvil-if-slot-empty=\"navigation-rail-content\"\
+      \ style=\"font-style: italic;\">Add navigation links here</p>\n  </div>\n<!--\
+      \   <div class=\"navigation-rail-bottom\"></div> -->\n</div>\n\n<div class=\"\
+      content\" anvil-slot=\"content\">\n  <p anvil-if-slot-empty=\"content\" style=\"\
+      font-style: italic;\">Add content here</p>\n</div>\n\n"}

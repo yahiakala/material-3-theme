@@ -7,9 +7,14 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+  
+  @property
+  def navigation_rail_collapse_to(self):
+    return self._navigation_rail_collapse_to
 
-  def navigation_link_2_click(self, **event_args):
-    """This method is called when the component is clicked"""
-    alert("clicked!")
+  @navigation_rail_collapse_to.setter
+  def navigation_rail_collapse_to(self, value):
+    self._navigation_rail_collapse_to = value
+    print(value)
 
 

@@ -24,7 +24,8 @@ body {
   flex-direction: row;
   justify-content: center;
   bottom: 0;
-  top: unset
+  top: unset;
+  overflow-y: hidden;
   }
 }
 
@@ -60,15 +61,15 @@ body {
 /*navigation link component*/
 .navigation-link {
   text-align: center;
-}
-
-.navigation-link {
   text-decoration: none;
   color: %color:On Surface Variant%;
   transition: background 0.2s;
   font-size: 12px;
 }
 
+.navigation-link .navigation-link-text {
+  margin-bottom: 14px;
+}
 .navigation-link [anvil-name=navigation-link-icon] {
   transition: background 0.2s;
   padding: 8px 20px; 
