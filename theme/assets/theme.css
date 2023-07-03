@@ -15,17 +15,18 @@ body {
   position: fixed;
   overflow-y: auto;
   z-index:100;
-  
+}
 
+.navigation-rail.bottom-app-bar {
   @media(max-width: 600px) {
-  width: 100%;
-  height: 80px;
-  padding: 12px 8px 16px 8px;
-  flex-direction: row;
-  justify-content: center;
-  bottom: 0;
-  top: unset;
-  overflow-y: hidden;
+    width: 100%;
+    height: 80px;
+    padding: 12px 8px 16px 8px;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 0;
+    top: unset;
+    overflow-y: hidden;
   }
 }
 
@@ -34,14 +35,16 @@ body {
   margin-top: 20px;
   width: 88px;
   flex-direction: column;
+}
 
-  @media(max-width: 600px) {
-    margin-top: 0px;
-    flex-direction: row;
-    width: 100%;
-    height: 80px;
-    justify-content: center;
-    column-gap: 8px
+.navigation-rail.bottom-app-bar .navigation-rail-content {
+    @media(max-width: 600px) {
+      margin-top: 0px;
+      flex-direction: row;
+      width: 100%;
+      height: 80px;
+      justify-content: center;
+      column-gap: 8px
   }
 }
 

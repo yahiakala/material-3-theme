@@ -15,6 +15,8 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   @navigation_rail_collapse_to.setter
   def navigation_rail_collapse_to(self, value):
     self._navigation_rail_collapse_to = value
-    print(value)
+    value = value.lower().replace(' ', '-')
+    self.dom_nodes['navigation-rail'].className = "navigation-rail"
+    self.dom_nodes['navigation-rail'].classList.add(value)
 
 

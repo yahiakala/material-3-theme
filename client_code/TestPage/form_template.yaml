@@ -3,11 +3,7 @@ layout:
   properties: {navigation_rail_collapse_to: Bottom app bar}
 is_package: true
 components_by_slot:
-  slot_1:
-  - name: navigation_link_2
-    properties: {}
-    type: form:NavigationLink
-    layout_properties: {}
+  slot_1: []
   slot_2:
   - name: navigation_link_1
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true}
