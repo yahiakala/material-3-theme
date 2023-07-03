@@ -63,6 +63,11 @@ body {
   transition: background 0.2s;
   padding: 8px 20px; 
   border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  margin: auto;
 }
 
 .navigation-link .navigation-link-text {
