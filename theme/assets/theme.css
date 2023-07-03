@@ -17,7 +17,7 @@ body {
   z-index:100;
 
   @media(max-width: 600px) {
-  width: 100vw;
+  width: 100%;
   height: 80px;
   column-gap: 8px;
   padding: 12px 8px 16px 8px;
@@ -33,6 +33,13 @@ body {
   margin-top: 20px;
   width: 88px;
   flex-direction: column;
+
+  @media(max-width: 600px) {
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+  }
 }
 
 .navigation-rail [anvil-dropzone] {
