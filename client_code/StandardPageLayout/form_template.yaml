@@ -20,9 +20,19 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"navigation-rail\" class=\"navigation-rail\"\
-      >\n  <div class=\"navigation-rail-content\" anvil-slot=\"navigation-rail-content\"\
+      >\n  <div class=\"navigation-drawer-btn\">\n    <i class=\"fa fa-bars\"></i>\n\
+      \  </div>\n  <div class=\"navigation-rail-content\" anvil-slot=\"navigation-rail-content\"\
       >\n      <p anvil-if-slot-empty=\"navigation-rail-content\" style=\"font-style:\
       \ italic;\">Add navigation links here</p>\n  </div>\n<!--   <div class=\"navigation-rail-bottom\"\
       ></div> -->\n</div>\n\n<div class=\"content\" anvil-slot=\"content\">\n  <p\
       \ anvil-if-slot-empty=\"content\" style=\"font-style: italic;\">Add content\
-      \ here</p>\n</div>\n\n"}
+      \ here</p>\n</div>\n\n<script>\n    var appBar = $('.navigation-drawer')\n \
+      \   var navDrawerBtn = $('.navigation-drawer-btn')\n    var navRailContent =\
+      \ $('.navigation-rail-content')\n\n    document.addEventListener('scroll', function()\
+      \ {\n      console.log('scrolled')\n    if (appBar.classList.contains('scrolled'))\
+      \ {\n      if (window.scrollY === 0) {\n        appBar.classList.remove('scrolled')\n\
+      \      }\n    }\n    else {\n      appBar.classList.add('scrolled')\n    }\n\
+      \  });\n  \n  navDrawerBtn.on('click', function() {\n    if (navRailContent.is('.shown'))\
+      \ {\n      console.log('shown...now hiding')\n      navRailContent.removeClass('shown')\n\
+      \    } else {\n      console.log('hidden...now showing')\n      navRailContent.addClass('shown')\n\
+      \    }\n  } )\n\n</script>\n"}
