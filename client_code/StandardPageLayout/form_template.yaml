@@ -19,9 +19,10 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"navigation-rail\">\n  <div class=\"navigation-rail-content\"\
-      \ anvil-slot=\"navigation-rail-content\">\n      <p anvil-if-slot-empty=\"navigation-rail-content\"\
-      \ style=\"font-style: italic;\">Add navigation links here</p>\n  </div>\n<!--\
-      \   <div class=\"navigation-rail-bottom\"></div> -->\n</div>\n\n<div class=\"\
-      content\" anvil-slot=\"content\">\n  <p anvil-if-slot-empty=\"content\" style=\"\
-      font-style: italic;\">Add content here</p>\n</div>\n\n"}
+  properties: {html: "<div anvil-name=\"navigation-rail\" class=\"navigation-rail\"\
+      >\n  <div class=\"navigation-rail-content\" anvil-slot=\"navigation-rail-content\"\
+      >\n      <p anvil-if-slot-empty=\"navigation-rail-content\" style=\"font-style:\
+      \ italic;\">Add navigation links here</p>\n  </div>\n<!--   <div class=\"navigation-rail-bottom\"\
+      ></div> -->\n</div>\n\n<div class=\"content\" anvil-slot=\"content\">\n  <p\
+      \ anvil-if-slot-empty=\"content\" style=\"font-style: italic;\">Add content\
+      \ here</p>\n</div>\n\n"}
