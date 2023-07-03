@@ -104,8 +104,8 @@ body {
   width: 6px;
   border-radius: 6px;
   position: absolute;
+  margin-top: -18px;
   margin-left: 14px;
-  margin-top: -22px;
   font-family: Roboto;
 }
 
@@ -114,8 +114,8 @@ body {
   height: fit-content;
   border-radius: 16px;
   width: fit-content;
-  margin-top: -26px;
-  margin-left: 12px;
+  margin-top: -16px;
+  margin-left: 20px;
   
 }
 

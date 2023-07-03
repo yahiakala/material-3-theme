@@ -11,3 +11,7 @@ components_by_slot:
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true}
     type: form:NavigationLink
     layout_properties: {}
+  - name: navigation_link_3
+    properties: {badge: true, badge_count: 12, text: Email, icon: 'fa:envelope'}
+    type: form:NavigationLink
+    layout_properties: {}
