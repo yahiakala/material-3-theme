@@ -11,17 +11,9 @@ is_package: true
 slots:
   slot_1:
     index: 0
-    set_layout_properties: {slot: navigation-rail}
+    set_layout_properties: {slot: content}
     target: {type: container, name: ''}
   slot_2:
     index: 0
-    set_layout_properties: {slot: top-app-bar-title}
-    target: {type: container, name: ''}
-  slot_3:
-    index: 0
-    set_layout_properties: {slot: top-app-bar-title}
-    target: {type: container, name: ''}
-  slot_4:
-    index: 0
-    set_layout_properties: {slot: content}
+    set_layout_properties: {slot: navigation-rail-content}
     target: {type: container, name: ''}
