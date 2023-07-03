@@ -45,11 +45,13 @@ body {
   }
 }
 
-.navigation-rail.navigation-drawer {
+.navigation-rail.navigation-drawer + .top-app-bar {
+  display: none;
   @media(max-width: 600px) {
     height: 64px;
     justify-content: flex-start;
     align-items: center;
+    display: flex;
   }
 }
 
@@ -59,30 +61,22 @@ body {
   }
 }
 
-.navigation-rail-content.shown {
+.navigation-rail.navigation-drawer + .top-app-bar .navigation-drawer-btn i {
   @media(max-width: 600px) {
-    display: flex;
-  }
-}
-
-.navigation-rail.navigation-drawer .navigation-drawer-btn {
-  @media(max-width: 600px) {
-    display: block;
-  }
-}
-
-.navigation-drawer-btn i {
   font-size: 20px;
   width: 48px;
-  display: flex;
   justify-content: center;
+  display: flex;
+  }
 }
-
-
 
 .navigation-drawer-btn {
   display: none;
   cursor: pointer;
+}
+
+.navigation-rail.navigation-drawer + .top-app-bar .navigation-drawer-btn {
+  display: block;
 }
 
 .navigation-rail-content {
