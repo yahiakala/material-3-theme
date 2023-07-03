@@ -11,4 +11,3 @@ components_by_slot:
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true}
     type: form:NavigationLink
     layout_properties: {}
-  slot_4: []
