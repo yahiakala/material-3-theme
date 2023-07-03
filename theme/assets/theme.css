@@ -6,16 +6,14 @@ body {
 
 .navigation-rail {
   background-color: %color:Surface%;
-  width: 80px;
-  padding: 56px 12px;
-  height: 100vh;
+/*   width: 80px;
+  padding: 56px 12px; */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  row-gap: 12px;
+  justify-content: space-between;
   position: fixed;
-  left: 0;
-  top:0;
+  overflow-y: auto;
   z-index:100;
 
   @media(max-width: 600px) {
@@ -28,6 +26,13 @@ body {
   bottom: 0;
   top: unset
   }
+}
+
+.navigation-rail-content {
+  display: flex;
+  margin-top: 20px;
+  width: 88px;
+  flex-direction: column;
 }
 
 .navigation-rail [anvil-dropzone] {
