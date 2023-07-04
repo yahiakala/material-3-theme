@@ -36,5 +36,8 @@ container:
       \ === 0) {\n        appBar.classList.remove('scrolled')\n      }\n    }\n  \
       \  else {\n      appBar.classList.add('scrolled')\n    }\n  });\n  \n  navDrawerBtn.on('click',\
       \ function() {\n    if (navRailContent.is('.shown')) {\n      console.log('shown...now\
-      \ hiding')\n      navRailContent.removeClass('shown')\n    } else {\n      console.log('hidden...now\
-      \ showing')\n      navRailContent.addClass('shown')\n    }\n  } )\n\n</script>\n"}
+      \ hiding')\n      setTimeout(() => {navRailContent.animate({left:\"-100%\"},\
+      \ 200, function () {\n      })}, 100)\n      setTimeout(() => {navRailContent.removeClass('shown')},\
+      \ 300)\n    } else {\n      console.log('hidden...now showing')\n      navRailContent.addClass('shown')\n\
+      \      setTimeout(() => {navRailContent.animate({left:\"0px\"}, 200, function\
+      \ () {\n      })}, 100)      \n    }\n  } )\n\n</script>\n"}
