@@ -19,8 +19,8 @@ body {
   top: 0;
 }
 
+@media(max-width: 600px) {
 .navigation-rail.bottom-app-bar, .navigation-rail.navigation-drawer {
-  @media(max-width: 600px) {
     width: 100%;
     padding: 12px 8px 16px 8px;
     flex-direction: row;
@@ -37,12 +37,14 @@ body {
   -o-transition: background 250ms;
 }
 
-.navigation-rail.navigation-drawer .navigation-rail-content {
-  display: none !important;
+@media(max-width: 600px) {
+  .navigation-rail.navigation-drawer .navigation-rail-content {
+    display: none !important;
+  }
 }
 
+@media(max-width: 600px) {
 .navigation-rail.bottom-app-bar {
-  @media(max-width: 600px) {
     bottom: 0;
     top: unset;
     height: 80px;
@@ -51,7 +53,10 @@ body {
 
 .navigation-rail.navigation-drawer + .top-app-bar {
   display: none;
-  @media(max-width: 600px) {
+}
+
+@media(max-width: 600px) {
+  .navigation-rail.navigation-drawer + .top-app-bar {
     height: 64px;
     justify-content: flex-start;
     align-items: center;
@@ -59,14 +64,15 @@ body {
   }
 }
 
-.navigation-rail-content {
-  @media(max-width: 600px) {
+
+@media(max-width: 600px) {
+  .navigation-rail-content {
     display: none !important;
   }
 }
 
+@media(max-width: 600px) {
 .navigation-rail.navigation-drawer + .top-app-bar .navigation-drawer-btn i {
-  @media(max-width: 600px) {
   font-size: 20px;
   width: 48px;
   justify-content: center;
@@ -90,8 +96,8 @@ body {
   flex-direction: column;
 }
 
+@media(max-width: 600px) {
 .navigation-rail.bottom-app-bar .navigation-rail-content {
-    @media(max-width: 600px) {
       margin-top: 0px;
       flex-direction: row;
       width: 100%;
@@ -109,11 +115,15 @@ body {
 .content {
   top: 0;
   padding: 8px;
-  @media(min-width: 600px) {
+}
+
+@media(min-width: 600px) {
+  .content {
     left: 80px;
     position:relative;
-  }
+    }
 }
+
 
 /*navigation link component*/
 .navigation-link {
@@ -235,5 +245,4 @@ body {
   background-color: transparent;
   border: none;
   background-image: none;
-  
 }
