@@ -80,7 +80,7 @@ body {
 }
 
 .navigation-rail-content {
-  display: flex;
+  display: flex !important;
   margin-top: 20px;
   width: 80px;
   flex-direction: column;
