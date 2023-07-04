@@ -5,6 +5,7 @@ body {
   margin: 0;
 }
 
+/*NAVIGATION: RAIL, DRAWER, APP BAR*/
 .navigation-rail {
   background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
 /*   width: 80px;
@@ -37,11 +38,11 @@ body {
   -o-transition: background 250ms;
 }
 
-@media(max-width: 600px) {
+/* @media(max-width: 600px) {
   .navigation-rail.navigation-drawer .navigation-rail-content {
     display: none;
   }
-}
+} */
 
 @media(max-width: 600px) {
   .navigation-rail.navigation-drawer {
@@ -72,9 +73,10 @@ body {
   }
 }
 
+
 @media(max-width: 600px) {
-  .navigation-rail.navigation-drawer .navigation-rail-content.shown {
-    display: flex !important;
+  .navigation-rail.navigation-drawer.shown {
+    display: block !important;
     width: 360px;
     height: 100%;
     padding: 28px;
@@ -90,7 +92,12 @@ body {
 }
 
 @media(max-width: 600px) {
-.navigation-rail.navigation-drawer + .top-app-bar .navigation-drawer-btn i {
+  .navigation-rail.navigation-drawer.shown .drawer-close-btn {
+    display: block;
+  }
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer + .top-app-bar .drawer-open-btn i, .navigation-rail.navigation-drawer .drawer-close-btn i {
   font-size: 20px;
   width: 48px;
   justify-content: center;
@@ -98,12 +105,12 @@ body {
   }
 }
 
-.navigation-drawer-btn {
+.drawer-open-btn, .drawer-close-btn {
   display: none;
   cursor: pointer;
 }
 
-.navigation-rail.navigation-drawer + .top-app-bar .navigation-drawer-btn {
+.navigation-rail.navigation-drawer + .top-app-bar .drawer-open-btn {
   display: block;
 }
 
@@ -161,7 +168,7 @@ body {
 }
 
 
-/*navigation link component*/
+/*NAVIGATION LINK COMPONENT*/
 .navigation-link {
   text-align: center;
   text-decoration: none;
@@ -231,11 +238,18 @@ body {
   width: fit-content;
   margin-top: -16px;
   margin-left: 20px;
-  
+}
+
+/*on mobile in drawer*/
+@media(min-width: 600px) {
+  .navigation-link {
+    display: flex;
+    align-items: center;
+  }
 }
 
 
-/*Dialogs: alerts and notifications*/
+/*DIALOGS: ALERTS AND NOTIFICATIONS*/
 /*Default Anvil alert*/
 .aw-modal-content {
   background: linear-gradient(0deg, %color:Primary Overlay 3%, %color:Primary Overlay 3%), %color:Background%;
