@@ -95,6 +95,7 @@ body {
   .navigation-rail.navigation-drawer.shown .drawer-close-btn {
     display: block;
   }
+}
 
 @media(max-width: 600px) {
 .navigation-rail.navigation-drawer + .top-app-bar .drawer-open-btn i, .navigation-rail.navigation-drawer .drawer-close-btn i {
@@ -180,6 +181,7 @@ body {
 .navigation-link .navigation-link-text {
   margin-bottom: 14px;
 }
+  
 .navigation-link [anvil-name=navigation-link-icon] {
   transition: background 0.2s;
   padding: 8px 20px; 
@@ -241,11 +243,49 @@ body {
 }
 
 /*on mobile in drawer*/
-@media(min-width: 600px) {
-  .navigation-link {
-    display: flex;
-    align-items: center;
-  }
+.navigation-rail.navigation-drawer.shown .navigation-link {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-radius: 100px
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link .navigation-link-text {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link [anvil-name=navigation-link-icon] {
+  margin: 0px
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link.selected [anvil-name=navigation-link-icon] {
+  background: transparent
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link.selected {
+  background-color: %color:Secondary Container%;
+  color: %color:On Secondary Container%;
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link:hover, .navigation-rail.navigation-drawer.shown .navigation-link:focus{
+  background-color: %color:Dark Overlay 1%;
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover, .navigation-rail.navigation-drawer.shown .navigation-link.selected:focus{
+  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-link:hover [anvil-name=navigation-link-icon], 
+.navigation-rail.navigation-drawer.shown .navigation-link:focus [anvil-name=navigation-link-icon],
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover [anvil-name=navigation-link-icon],
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:focus [anvil-name=navigation-link-icon]
+{
+  background: unset;
+}
+
+.navigation-rail.navigation-drawer.shown .navigation-rail-content {
+  width:100%;
 }
 
 
