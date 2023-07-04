@@ -6,7 +6,7 @@ body {
 }
 
 .navigation-rail {
-  background-color: %color:Surface%;
+  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
 /*   width: 80px;
   padding: 56px 12px; */
   height: 100%;
@@ -35,6 +35,10 @@ body {
   -webkit-transition: background 250ms;
   -moz-transition: background 250ms;
   -o-transition: background 250ms;
+}
+
+.navigation-rail.navigation-drawer .navigation-rail-content {
+  display: none !important;
 }
 
 .navigation-rail.bottom-app-bar {
