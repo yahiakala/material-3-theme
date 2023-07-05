@@ -3,7 +3,11 @@ layout:
   properties: {navigation_rail_collapse_to: Navigation drawer}
 is_package: true
 components_by_slot:
-  slot_1: []
+  slot_1:
+  - name: image_1
+    properties: {height: 682}
+    type: Image
+    layout_properties: {}
   slot_2:
   - name: navigation_link_1
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true}

@@ -39,11 +39,12 @@ body {
 }
 
 .top-app-bar.scrolled {
-  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-  transition: background 250ms;
-  -webkit-transition: background 250ms;
-  -moz-transition: background 250ms;
-  -o-transition: background 250ms;
+  background-image: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%);
+  background-color: %color:Background%;
+  transition: background-image 250ms, background-color 250ms;
+  -webkit-transition: background-image 250ms, background-color 250ms;
+  -moz-transition: background-image 250ms, background-color 250ms;
+  -o-transition: background-image 250ms, background-color 250ms;
 }
 
 /* @media(max-width: 600px) {
