@@ -222,7 +222,7 @@ body {
   align-items: center;
   width: 56px;
   margin: auto;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .navigation-link .navigation-link-text {
@@ -252,19 +252,17 @@ body {
   background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 0) 70%)
 }
 
-
-/*TODO: Color scheme should have On Error*/
 .navigation-link .icon-badge {
   font-size: 11px;
-  color: %color:On Primary%;
+  color: %color:On Error%;
   display: block;
   background-color: %color:Error%;
   height: 6px;
   width: 6px;
   border-radius: 6px;
   position: absolute;
-  margin-top: -18px;
-  margin-left: 14px;
+  margin-top: -34px;
+  margin-left: 46px;
   font-family: Roboto;
 }
 
@@ -273,8 +271,8 @@ body {
   height: fit-content;
   border-radius: 16px;
   width: fit-content;
-  margin-top: -16px;
-  margin-left: 20px;
+  margin-top: -40px;
+  margin-left: 40px;
 }
 
 /*on mobile in drawer*/
@@ -386,4 +384,21 @@ body {
   background-color: transparent;
   border: none;
   background-image: none;
+}
+
+/*DIVIDER*/
+.divider {
+  border: solid 1px %color:Outline Variant%;
+  margin-top: 8px;
+  margin-bottom: 8px
+}
+
+.divider.inset {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.divider.full-width {
+  margin-left: 0px;
+  margin-right: 0px;
 }

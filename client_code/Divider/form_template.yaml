@@ -1,0 +1,14 @@
+container:
+  type: HtmlTemplate
+  properties: {html: '<div class="divider" anvil-name="divider">
+
+      </div>'}
+components: []
+is_package: true
+custom_component: true
+properties:
+- name: type
+  type: enum
+  default_value: Full width
+  default_binding_prop: true
+  options: [Full width, Inset]

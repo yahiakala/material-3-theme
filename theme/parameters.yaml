@@ -281,3 +281,5 @@ color_scheme:
   - {name: Primary Overlay 1, color: 'rgba(103, 80, 164, 0.05)'}
   - {name: Primary Overlay 2, color: 'rgba(103, 80, 164, 0.08)'}
   - {name: Primary Overlay 3, color: 'rgba(103, 80, 164, 0.11)'}
+  - {name: Outline Variant, color: '#C4C7C5'}
+  - {name: On Error, color: '#FFFFFF'}
