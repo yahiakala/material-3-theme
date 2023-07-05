@@ -22,6 +22,12 @@ body {
 }
 }
 
+@media(min-width: 600px) {
+.navigation-rail.navigation-drawer {
+  left: 0px !important;
+}
+}
+
 @media(max-width: 600px) {
 .navigation-rail.bottom-app-bar, .navigation-rail.navigation-drawer {
     width: 100%;
@@ -46,12 +52,8 @@ body {
 
 
 .top-app-bar.scrolled {
-  background-image: linear-gradient(0deg, var(--PrimaryOverlay2), var(--PrimaryOverlay2));
-  background-color: %color:Background%;
-  transition: background-color 1s, --PrimaryOverlay2 1s;
-  -webkit-transition: background-color 1s, --PrimaryOverlay2 1s;
-  -moz-transition: background-color 1s, --PrimaryOverlay2 1s;
-  -o-transition: background-color 1s, --PrimaryOverlay2 1s;
+  background-color: %color:Primary Overlay 2%;
+
 }
 
 
@@ -79,6 +81,10 @@ body {
   display: none;
   z-index: 1;
   position: fixed;
+  transition: background-color .25s;
+  -webkit-transition: background-color .25s;
+  -moz-transition: background-color .25s;
+  -o-transition: background-color .25s;
 }
 
 @media(max-width: 600px) {
@@ -242,6 +248,10 @@ body {
 .navigation-link.selected:active [anvil-name=navigation-link-icon] {
   background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
 }
+.navigation-link:active [anvil-name=navigation-link-icon] {
+  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 0) 70%)
+}
+
 
 /*TODO: Color scheme should have On Error*/
 .navigation-link .icon-badge {
