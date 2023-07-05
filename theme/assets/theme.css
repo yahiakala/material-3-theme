@@ -130,7 +130,7 @@ body {
 }
 
 .navigation-drawer-scrim {
-  display: none
+  display:none;
 }
 
 .navigation-rail-content {
