@@ -2,11 +2,12 @@ from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
 
+###TODO: hook up color and font properties
+
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # self.raise_event("click")
     self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
 
   def handle_click(self, event):

@@ -1,10 +1,27 @@
 properties:
-- {name: url, type: string, default_value: '', default_binding_prop: true}
-- {name: icon, type: icon, default_value: 'fa:star'}
-- {name: text, type: string, default_value: Label, description: Text for the Link}
-- {name: selected, type: boolean, default_value: false, description: Is this link selected/active}
-- {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon}
-- {name: badge_count, type: number, default_value: ''}
+- {name: url, type: string, default_value: '', default_binding_prop: true, priority: '15'}
+- {name: icon, type: icon, default_value: 'fa:star', priority: '13'}
+- {name: text, type: string, default_value: Label, description: Text for the Link,
+  priority: '14'}
+- {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
+  priority: '12'}
+- {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
+  priority: '11'}
+- {name: badge_count, type: number, default_value: '', description: '10'}
+- {name: text_color, type: string, default_value: '', description: Color of the text,
+  priority: '9'}
+- {name: hover_color, type: string, default_value: '', description: Background color when hovered,
+  priority: '5'}
+- {name: selected_color, type: string, default_value: '', description: Background color when the selected property is true,
+  priority: '4'}
+- {name: font_size, type: string, default_value: '', description: Size of the font,
+  priority: '8'}
+- {name: font_family, type: string, default_value: '', description: Font family of the text,
+  priority: '6'}
+- {name: icon_color, type: string, default_value: '', description: Color of the icon,
+  priority: '3'}
+- {name: icon_size, type: string, default_value: '', description: Size of the icon,
+  priority: '7'}
 is_package: true
 event_bindings: {show: form_show}
 events:
