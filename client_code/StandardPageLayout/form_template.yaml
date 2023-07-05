@@ -29,19 +29,23 @@ container:
       \ italic;\">Add navigation links here</p>\n  </div>\n</div>\n\n<div class=\"\
       top-app-bar\">\n  <div class=\"drawer-open-btn\">\n    <i class=\"fa fa-bars\"\
       ></i>\n  </div>\n</div>\n\n<div class=\"navigation-drawer-scrim\"></div>\n\n\
-      <div class=\"content\" anvil-slot=\"content\">\n  <p anvil-if-slot-empty=\"\
-      content\" style=\"font-style: italic;\">Add content here</p>\n</div>\n\n<script>\n\
-      \    var appBar = $('.top-app-bar')\n    var navDrawerOpenBtn = $('.drawer-open-btn')\n\
-      \    var navDrawerCloseBtn = $('.drawer-close-btn')\n    var navRailContent\
-      \ = $('.navigation-rail')\n\n  //   document.addEventListener('scroll', function()\
-      \ {\n  //     console.log('scrolled')\n  //   if (appBar.classList.contains('scrolled'))\
-      \ {\n  //     if (window.scrollY === 0) {\n  //       appBar.classList.remove('scrolled')\n\
-      \  //     }\n  //   }\n  //   else {\n  //     appBar.classList.add('scrolled')\n\
-      \  //   }\n  // });\n  \n  navDrawerOpenBtn.on('click', function() {\n    console.log('hidden...now\
-      \ showing')\n    $('.navigation-drawer-scrim').css({display: 'block'})\n   \
-      \ navRailContent.addClass('shown')\n    setTimeout(() => {navRailContent.animate({left:\"\
-      0px\"}, 200,  function () {\n    })}, 100);\n  } )\n  \n  navDrawerCloseBtn.on('click',\
-      \ function() {\n    console.log('shown...now hiding');\n    $('.navigation-drawer-scrim').css({display:\
-      \ 'none'})\n    setTimeout(() => {navRailContent.animate({left:\"-100%\"}, 200,\
-      \ function () {\n      })}, 100)\n    setTimeout(() => {navRailContent.removeClass('shown')},\
-      \ 400)\n  })\n\n</script>\n"}
+      <div class=\"content\" anvil-slot=\"content\" anvil-name=\"content\">\n  <p\
+      \ anvil-if-slot-empty=\"content\" style=\"font-style: italic;\">Add content\
+      \ here</p>\n</div>\n\n<script>\n    var appBar = $('.top-app-bar')\n    var\
+      \ navDrawerOpenBtn = $('.drawer-open-btn')\n    var navDrawerCloseBtn = $('.drawer-close-btn')\n\
+      \    var navRailContent = $('.navigation-rail')\n    var navDrawerScrim = $('.navigation-drawer-scrim')\n\
+      \n  //   document.addEventListener('scroll', function() {\n  //     console.log('scrolled')\n\
+      \  //   if (appBar.classList.contains('scrolled')) {\n  //     if (window.scrollY\
+      \ === 0) {\n  //       appBar.classList.remove('scrolled')\n  //     }\n  //\
+      \   }\n  //   else {\n  //     appBar.classList.add('scrolled')\n  //   }\n\
+      \  // });\n  \n  navDrawerOpenBtn.on('click', function() {\n    console.log('hidden...now\
+      \ showing')\n    navDrawerScrim.css({display: 'block'})\n    setTimeout(() =>\
+      \ {navDrawerScrim.animate({opacity: '1'}, 250,  function () {\n    })}, 100);\n\
+      \    navRailContent.addClass('shown')\n    setTimeout(() => {navRailContent.animate({left:\"\
+      0px\"}, 250,  function () {\n    })}, 100);\n  } )\n  \n  navDrawerCloseBtn.on('click',\
+      \ function() {\n    console.log('shown...now hiding');\n    setTimeout(() =>\
+      \ {navDrawerScrim.animate({opacity: '0'}, 250,  function () {\n    })}, 100);\n\
+      \  \n    setTimeout(() => {navRailContent.animate({left:\"-100%\"}, 250, function\
+      \ () {\n      })}, 100)\n    setTimeout(() => {navRailContent.removeClass('shown')},\
+      \ 350)\n    setTimeout(() => {navDrawerScrim.css({display: 'none'})}, 350);\n\
+      \    \n  })\n\n</script>\n"}

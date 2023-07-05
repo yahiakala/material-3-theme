@@ -19,5 +19,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['navigation-rail'].className = "navigation-rail"
     self.dom_nodes['navigation-rail'].classList.add(value)
     self._navigation_rail_collapse_to = value
+    self.dom_nodes['content']
 
 
