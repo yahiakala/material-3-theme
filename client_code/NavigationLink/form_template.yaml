@@ -394,9 +394,10 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<a class=\"navigation-link\" anvil-name=\"navigation-link\"\
-      \ href=\"\" onclick=\"\">\n  <i anvil-name=\"navigation-link-icon\" class=\"\
-      fa fa-star\">\n  </i>\n  <span anvil-name=\"icon-badge\" class=\"icon-badge\"\
-      \ style=\"display: none\"></span>\n\n  <div anvil-name=\"navigation-link-text\"\
+      \ href=\"\" onclick=\"\">\n<!--   <i anvil-name=\"navigation-link-icon\" class=\"\
+      fa fa-star\">\n  </i> -->\n  <span anvil-name=\"navigation-link-icon\" class=\"\
+      material-symbols-outlined\">star</span>\n  <span anvil-name=\"icon-badge\" class=\"\
+      icon-badge\" style=\"display: none\"></span>\n\n  <div anvil-name=\"navigation-link-text\"\
       \ class=\"navigation-link-text\"></div>\n\n</a>\n"}
   event_bindings: {}
 custom_component_container: false
