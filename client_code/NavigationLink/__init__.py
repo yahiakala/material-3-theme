@@ -96,6 +96,21 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['icon-badge'].innerHTML = ""
       self.dom_nodes['icon-badge'].classList.remove("large-badge")
     self._badge_count = value
+
+  @property
+  def navigate_to(self):
+    return self._navigate_to
+
+  @navigate_to.setter
+  def navigate_to(self, value):
+    if value:
+      print(value)
+ 
+    self._navigate_to = value
+
+  def navigate_to_form(self, form):
+    self.selected = True
+    open_form(form)
       
 
 

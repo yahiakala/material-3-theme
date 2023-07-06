@@ -23,6 +23,6 @@ components_by_slot:
     type: form:Divider
     layout_properties: {}
   - name: navigation_link_2
-    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout}
+    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage}
     type: form:NavigationLink
     layout_properties: {}
