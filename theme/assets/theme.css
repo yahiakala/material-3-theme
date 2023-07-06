@@ -337,6 +337,14 @@ body {
 }
 }
 
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .icon-badge {
+  margin-top: -27px;
+  margin-left: 36px;
+}
+}
+
+
 
 /*DIALOGS: ALERTS AND NOTIFICATIONS*/
 /*Default Anvil alert*/
