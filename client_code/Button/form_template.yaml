@@ -1,6 +1,7 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<button class=\"button\">\n  sdfjasdhfjsd\n</button>"}
+  properties: {html: "<button class=\"button\">\n  <i anvil-name=\"\"></i>\n  This\
+      \ is a button\n</button>"}
 components: []
 is_package: true
 custom_component: true

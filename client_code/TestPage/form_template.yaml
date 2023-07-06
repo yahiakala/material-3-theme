@@ -4,6 +4,10 @@ layout:
 is_package: true
 components_by_slot:
   slot_1:
+  - name: button_1
+    properties: {}
+    type: form:Button
+    layout_properties: {}
   - name: image_1
     properties: {height: 682}
     type: Image
