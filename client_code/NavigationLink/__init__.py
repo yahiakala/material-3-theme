@@ -12,6 +12,10 @@ class NavigationLink(NavigationLinkTemplate):
   def handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
+    if self.navigate_to:
+      open_form(self.navigate_to)
+      self.selected = True
+      
 
   @property
   def url(self):
@@ -103,14 +107,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   @navigate_to.setter
   def navigate_to(self, value):
-    if value:
-      print(value)
- 
     self._navigate_to = value
-
-  def navigate_to_form(self, form):
-    self.selected = True
-    open_form(form)
       
 
 
