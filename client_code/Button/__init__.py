@@ -17,6 +17,6 @@ class Button(ButtonTemplate):
     button_icon = self.dom_nodes['button-icon']
     self._material_icon = value
     if value:
-      button_icon.className = ""
-      button_icon.classList.add("material-symbols-outlined")
       button_icon.innerText = value
+    else:
+      button_icon.style.display = "none"

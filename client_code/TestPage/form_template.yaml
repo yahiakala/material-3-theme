@@ -4,10 +4,17 @@ layout:
 is_package: true
 components_by_slot:
   slot_1:
-  - name: button_1
-    properties: {material_icon: add}
-    type: form:Button
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
     layout_properties: {}
+    components:
+    - name: button_1
+      properties: {}
+      type: form:Button
+    - name: button_2
+      properties: {material_icon: add}
+      type: form:Button
   - name: image_1
     properties: {height: 682}
     type: Image

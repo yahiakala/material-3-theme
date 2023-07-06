@@ -369,5 +369,5 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<button class=\"button\">\n  <i anvil-name=\"button-icon\" class=\"\
-      fa fa-plus\"></i><span>This is a button</span>\n</button>"}
+      material-symbols-outlined\"></i><span>This is a button</span>\n</button>"}
 custom_component_container: false
