@@ -1,8 +1,13 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<button class=\"button\">\n  <i anvil-name=\"\"></i>\n  This\
-      \ is a button\n</button>"}
-components: []
+properties:
+- name: material_icon
+  type: enum
+  default_binding_prop: true
+  options: []
 is_package: true
 custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<button class=\"button\">\n  <i anvil-name=\"button-icon\" class=\"\
+      fa fa-plus\"></i><span>This is a button</span>\n</button>"}
 custom_component_container: false

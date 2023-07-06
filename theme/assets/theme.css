@@ -423,9 +423,14 @@ body {
 .button {
   font-family: Roboto;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 40px;
   background: none;
   border: none;
   color: %color:Primary%;
+  padding: 0 16px 0 12px;
   cursor: pointer;
+}
+
+.button > i {
+  padding-right: 8px
 }
