@@ -363,7 +363,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
 - {name: text, type: string, default_value: Button, description: Text for the Button}
-- {name: prop, type: boolean, default_value: false}
+- {name: enabled, type: boolean, default_value: false}
 is_package: true
 custom_component: true
 components: []
