@@ -122,8 +122,8 @@ body {
 }
 
 @media(max-width: 600px) {
-.navigation-rail.navigation-drawer + .top-app-bar .drawer-open-btn i, .navigation-rail.navigation-drawer .drawer-close-btn i {
-  font-size: 20px;
+.navigation-rail.navigation-drawer + .top-app-bar .drawer-open-btn span, .navigation-rail.navigation-drawer .drawer-close-btn span {
+  font-size: 24px;
   width: 48px;
   justify-content: center;
   display: flex;
