@@ -231,6 +231,7 @@ body {
 
 .navigation-link:hover [anvil-name=navigation-link-icon], .navigation-link:focus [anvil-name=navigation-link-icon] {
   background-color: %color:Dark Overlay 1%;
+  font-weight: bold;
 }
 
 .navigation-link.selected {
@@ -339,8 +340,15 @@ body {
 
 @media(max-width: 600px) {
 .navigation-rail.navigation-drawer.shown .icon-badge {
-  margin-top: -27px;
-  margin-left: 36px;
+  margin-top: -24px;
+  margin-left: 34px;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .icon-badge.large-badge {
+  margin-top: -23px;
+  margin-left: 28px;
 }
 }
 
