@@ -28,3 +28,13 @@ class Button(ButtonTemplate):
   def text(self, value):
     if value:
       self.dom_nodes['button-text'].innerHTML = value
+
+  @property
+  def enabled(self):
+    return self._enabled
+
+  @enabled.setter
+  def enabled(self, value):
+    self._enabled = value
+    if value is False:
+      self.dom_nodes['button'].disabled = "true"

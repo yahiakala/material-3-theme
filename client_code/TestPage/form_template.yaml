@@ -17,6 +17,19 @@ components_by_slot:
       properties: {material_icon: add, text: Button with icon}
       type: form:Button
       layout_properties: {}
+  - name: flow_panel_1_copy_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: button_1_copy_1
+      properties: {text: Disabled button, enabled: false}
+      type: form:Button
+      layout_properties: {}
+    - name: button_2_copy_1
+      properties: {material_icon: add, text: Disabled button with icon, enabled: false}
+      type: form:Button
+      layout_properties: {}
   - name: image_1
     properties: {height: 682}
     type: Image
