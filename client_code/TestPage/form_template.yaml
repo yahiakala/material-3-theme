@@ -5,7 +5,7 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: button_1
-    properties: {}
+    properties: {material_icon: add}
     type: form:Button
     layout_properties: {}
   - name: image_1

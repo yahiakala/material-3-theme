@@ -421,6 +421,7 @@ body {
 
 /* BUTTONS */
 .button {
+  display: inline-flex;
   font-family: Roboto;
   font-size: 14px;
   line-height: 40px;
@@ -432,5 +433,7 @@ body {
 }
 
 .button > i {
-  padding-right: 8px
+  padding-right: 8px;
+  font-size: 18px;
+  line-height: 40px;
 }

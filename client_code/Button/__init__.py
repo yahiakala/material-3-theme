@@ -7,3 +7,16 @@ class Button(ButtonTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  @property
+  def material_icon(self):
+    return self._material_icon
+
+  @material_icon.setter
+  def material_icon(self, value):
+    button_icon = self.dom_nodes['button-icon']
+    self._material_icon = value
+    if value:
+      button_icon.className = ""
+      button_icon.classList.add("material-symbols-outlined")
+      button_icon.innerText = value
