@@ -424,6 +424,8 @@ body {
   display: inline-flex;
   font-family: Roboto;
   font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
   line-height: 40px;
   background: none;
   border: none;
@@ -436,4 +438,8 @@ body {
   padding-right: 8px;
   font-size: 18px;
   line-height: 40px;
+}
+
+.button > .hidden {
+  display: none;
 }

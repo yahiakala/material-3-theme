@@ -10,11 +10,13 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_1
-      properties: {}
+      properties: {text: Button}
       type: form:Button
+      layout_properties: {}
     - name: button_2
-      properties: {material_icon: add}
+      properties: {material_icon: add, text: Button with icon}
       type: form:Button
+      layout_properties: {}
   - name: image_1
     properties: {height: 682}
     type: Image

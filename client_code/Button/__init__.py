@@ -18,5 +18,13 @@ class Button(ButtonTemplate):
     self._material_icon = value
     if value:
       button_icon.innerText = value
-    else:
-      button_icon.style.display = "none"
+      button_icon.classList.remove("hidden")
+
+  @property
+  def text(self):
+    return self.dom_nodes['button-text'].innerHTML
+
+  @text.setter
+  def text(self, value):
+    if value:
+      self.dom_nodes['button-text'].innerHTML = value
