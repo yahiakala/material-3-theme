@@ -14,11 +14,13 @@ class Button(ButtonTemplate):
 
   @material_icon.setter
   def material_icon(self, value):
+    button = self.dom_nodes['button']
     button_icon = self.dom_nodes['button-icon']
     self._material_icon = value
     if value:
       button_icon.innerText = value
       button_icon.classList.remove("hidden")
+      button.classList.add('icon-padding')
 
   @property
   def text(self):
@@ -38,3 +40,5 @@ class Button(ButtonTemplate):
     self._enabled = value
     if value is False:
       self.dom_nodes['button'].disabled = "true"
+
+  

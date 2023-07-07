@@ -427,24 +427,21 @@ body {
   font-weight: 500;
   letter-spacing: 0.1px;
   line-height: 40px;
+  text-align: center;
   background: none;
   border: none;
   color: %color:Primary%;
-  padding: 0 16px 0 12px;
+  padding: 0 12px;
   cursor: pointer;
+  border-radius: 100px;
 }
 
-.button > i {
-  padding-right: 8px;
-  font-size: 18px;
-  line-height: 40px;
-}
+.icon-padding { padding-right: 16px; }
+.button > i {padding-right: 8px; font-size: 18px; line-height: 40px;}
+.button > .hidden { display: none; }
 
-.button > .hidden {
-  display: none;
-}
-
-.button:disabled {
-  cursor: not-allowed;
-  color: %color:On Disabled%;
-}
+.button:hover { background: %color:Primary Overlay 2%; }
+.button:focus { background: %color:Primary Overlay 3%; }
+/* TODO: Try to animate the pressed state */
+.button:active { background: %color:Primary Overlay 3%; }
+.button:disabled { cursor: not-allowed; color: %color:On Disabled%; background: none; }
