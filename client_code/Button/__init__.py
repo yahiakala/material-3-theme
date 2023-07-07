@@ -5,8 +5,11 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.dom_nodes['button'].addEventListener("click", self.handle_click)
 
-    # Any code you write here will run before the form opens.
+  def handle_click(self, event):
+    event.preventDefault()
+    self.raise_event("click")
 
   @property
   def material_icon(self):
