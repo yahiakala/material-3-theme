@@ -364,6 +364,7 @@ properties:
     zoom_out, zoom_out_map, '']
 - {name: text, type: string, default_value: Button, description: Text for the Button}
 - {name: enabled, type: boolean, default_value: true}
+- {name: appearance, type: string, default_value: ''}
 is_package: true
 custom_component: true
 components: []
