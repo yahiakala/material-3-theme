@@ -419,7 +419,7 @@ body {
   margin-right: 0px;
 }
 
-/* BUTTONS */
+/* BUTTONS: COMMON */
 .button {
   display: inline-flex;
   font-family: Roboto;
@@ -444,7 +444,6 @@ body {
 
 .button:hover { background: %color:Primary Overlay 2%; }
 .button:focus { background: %color:Primary Overlay 3%; }
-/* TODO: Try to animate the pressed state? */
 .button:active { background: %color:Primary Overlay 3%; }
 .button:disabled { cursor: not-allowed; color: %color:On Disabled%; background: none; }
 

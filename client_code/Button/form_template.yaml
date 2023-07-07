@@ -368,6 +368,8 @@ properties:
   type: enum
   options: [elevated, filled, tonal, outlined]
 is_package: true
+events:
+- {name: click, default_event: true, description: When the component is clicked}
 custom_component: true
 components: []
 container:
