@@ -445,3 +445,8 @@ body {
 /* TODO: Try to animate the pressed state */
 .button:active { background: %color:Primary Overlay 3%; }
 .button:disabled { cursor: not-allowed; color: %color:On Disabled%; background: none; }
+
+/* Elevated */
+button.elevated {
+  background-color: %color:Surface Container Low%;
+}

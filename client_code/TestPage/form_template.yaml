@@ -10,13 +10,11 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_1
-      properties: {text: Button}
+      properties: {}
       type: form:Button
-      layout_properties: {}
     - name: button_2
       properties: {material_icon: add, text: Button with icon}
       type: form:Button
-      layout_properties: {}
   - name: flow_panel_1_copy_1
     properties: {}
     type: FlowPanel
@@ -28,6 +26,20 @@ components_by_slot:
       layout_properties: {}
     - name: button_2_copy_1
       properties: {material_icon: add, text: Disabled button with icon, enabled: false}
+      type: form:Button
+      layout_properties: {}
+  - name: flow_panel_1_copy_1_copy_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: button_1_copy_1_copy_1
+      properties: {text: Elevated button, enabled: true, appearance: elevated}
+      type: form:Button
+      layout_properties: {}
+    - name: button_2_copy_1_copy_1
+      properties: {material_icon: add, text: Elevated button with icon, enabled: true,
+        appearance: elevated}
       type: form:Button
       layout_properties: {}
   - name: image_1
