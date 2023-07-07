@@ -432,21 +432,46 @@ body {
   border: none;
   color: %color:Primary%;
   padding: 0 12px;
+  margin: 10px; /*  Do I want to add a margin? */
   cursor: pointer;
   border-radius: 100px;
 }
 
 .icon-padding { padding-right: 16px; }
+.icon-padding.elevated, .icon-padding.filled, .icon-padding.tonal, .icon-padding.outlined { padding-left: 16px !important; }
 .button > i {padding-right: 8px; font-size: 18px; line-height: 40px;}
 .button > .hidden { display: none; }
 
 .button:hover { background: %color:Primary Overlay 2%; }
 .button:focus { background: %color:Primary Overlay 3%; }
-/* TODO: Try to animate the pressed state */
+/* TODO: Try to animate the pressed state? */
 .button:active { background: %color:Primary Overlay 3%; }
 .button:disabled { cursor: not-allowed; color: %color:On Disabled%; background: none; }
 
 /* Elevated */
-button.elevated {
-  background-color: %color:Surface Container Low%;
-}
+.button.elevated { background-color: %color:Surface Container Low%; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); padding: 0 24px; }
+.button.elevated:hover { background-color: %color:Primary Overlay 2%; box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
+.button.elevated:focus { background-color: %color:Primary Overlay 3%; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
+.button.elevated:active { background-color: %color:Primary Overlay 3%; box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
+.button.elevated:disabled { background-color: %color:Disabled Container%; color: %color:On Disabled%; box-shadow: none; }
+
+/* Filled */
+.button.filled { background-color: %color:Primary%; color: %color:On Primary%; padding: 0 24px; }
+.button.filled:hover { background: linear-gradient(0deg, %color:Light Overlay 1%, %color:Light Overlay 1%), %color:Primary%; box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
+.button.filled:focus { background: linear-gradient(0deg, %color:Light Overlay 2%, %color:Light Overlay 2%), %color:Primary%;}
+.button.filled:active { background: linear-gradient(0deg, %color:Light Overlay 2%, %color:Light Overlay 2%), %color:Primary%;}
+.button.filled:disabled { background: %color:Disabled Container%; color: %color:On Disabled%; box-shadow: none; }
+
+/* Tonal */
+.button.tonal { background-color: %color:Secondary Container%; color: %color:On Secondary Container%; padding: 0 24px; }
+.button.tonal:hover { background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), %color:Secondary Container%; box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
+.button.tonal:focus { background: linear-gradient(0deg, %color:Dark Overlay 2%, %color:Dark Overlay 2%), %color:Secondary Container%; }
+.button.tonal:active { background: linear-gradient(0deg, %color:Dark Overlay 2%, %color:Dark Overlay 2%), %color:Secondary Container%; }
+.button.tonal:disabled { background: %color:Disabled Container%; color: %color:On Disabled%; box-shadow: none; }
+
+/* Outlined */
+.button.outlined { border: 1px solid %color:Outline%; }
+.button.outlined:hover { background-color: %color:Primary Overlay 2%; }
+.button.outlined:focus { background-color: %color:Primary Overlay 3%; }
+.button.outlined:active { background-color: %color:Primary Overlay 3%; }
+.button.outlined:disabled { background: none; border: 1px solid %color:On Disabled%; }
