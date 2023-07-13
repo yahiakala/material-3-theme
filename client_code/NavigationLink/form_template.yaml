@@ -10,10 +10,6 @@ properties:
 - {name: badge_count, type: number, default_value: '', description: '10'}
 - {name: text_color, type: color, default_value: '', description: Color of the text,
   priority: '9'}
-- {name: hover_color, type: color, default_value: '', description: Background color when hovered,
-  priority: '5'}
-- {name: selected_color, type: color, default_value: '', description: Background color when the selected property is true,
-  priority: '4'}
 - {name: font_size, type: string, default_value: '', description: Size of the font,
   priority: '8'}
 - {name: font_family, type: string, default_value: '', description: Font family of the text,

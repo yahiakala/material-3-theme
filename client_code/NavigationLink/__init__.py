@@ -1,6 +1,7 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
+from ..Functions import theme_color_to_css
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
@@ -8,6 +9,7 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
+
 
   def handle_click(self, event):
     event.preventDefault()
@@ -110,19 +112,27 @@ class NavigationLink(NavigationLinkTemplate):
   
   @property
   def icon_size(self):
-    return self.dom_nodes['navigation-link-icon'].style.font_size
+    return self.dom_nodes['navigation-link-icon'].style.fontSize
 
   @icon_size.setter
   def icon_size(self, value):
-    self.dom_nodes['navigation-link-icon'].style.font_size = value
+    self.dom_nodes['navigation-link-icon'].style.fontSize = value
+
+  @property
+  def font_size(self):
+    return self.dom_nodes['navigation-link-text'].style.fontSize
+
+  @font_size.setter
+  def font_size(self, value):
+    self.dom_nodes['navigation-link-text'].style.fontSize = value
 
   @property
   def font_family(self):
-    return self.dom_nodes['navigation-link-text'].style.font_family
+    return self.dom_nodes['navigation-link-text'].style.fontFamily
 
   @font_family.setter
   def font_family(self, value):
-    self.dom_nodes['navigation-link-text'].style.font_family = value
+    self.dom_nodes['navigation-link-text'].style.fontFamily = value
   
   @property
   def text_color(self):
@@ -130,8 +140,16 @@ class NavigationLink(NavigationLinkTemplate):
 
   @text_color.setter
   def text_color(self, value):
-    self.dom_nodes['navigation-link-text'].style.color = value
-    
-      
+    if value:
+      self.dom_nodes['navigation-link-text'].style.color = theme_color_to_css(value)
+  
+  @property
+  def icon_color(self):
+    return self.dom_nodes['navigation-link-icon'].style.color
+
+  @icon_color.setter
+  def icon_color(self, value):
+    if value:
+      self.dom_nodes['navigation-link-icon'].style.color = theme_color_to_css(value)
 
 
