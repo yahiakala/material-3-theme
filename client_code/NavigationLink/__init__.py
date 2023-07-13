@@ -1,6 +1,5 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
-import anvil.server
 import anvil.js
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)

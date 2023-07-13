@@ -1,6 +1,5 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
-import anvil.server
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):

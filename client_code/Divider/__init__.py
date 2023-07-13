@@ -1,6 +1,5 @@
 from ._anvil_designer import DividerTemplate
 from anvil import *
-import anvil.server
 
 class Divider(DividerTemplate):
   def __init__(self, **properties):

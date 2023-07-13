@@ -1,6 +1,5 @@
 from ._anvil_designer import TestPageTemplate
 from anvil import *
-import anvil.server
 
 class TestPage(TestPageTemplate):
   def __init__(self, **properties):
