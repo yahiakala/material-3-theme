@@ -1,0 +1,7 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<label class=\"switch\">\n  <input type=\"checkbox\">\n  <span\
+      \ class=\"slider\"></span>\n</label>"}
+components: []
+is_package: true
+custom_component: true
