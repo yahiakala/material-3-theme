@@ -1,7 +1,7 @@
-from ._anvil_designer import TestPageTemplate
+from ._anvil_designer import AnotherPageTemplate
 from anvil import *
 
-class TestPage(TestPageTemplate):
+class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

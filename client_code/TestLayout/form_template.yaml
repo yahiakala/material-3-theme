@@ -1,11 +1,9 @@
-layout: {type: 'form:TestLayout'}
+layout:
+  type: form:StandardPageLayout
+  properties: {navigation_rail_collapse_to: Navigation drawer}
 is_package: true
 components_by_slot:
-  slot_1:
-  - name: image_1
-    properties: {height: 592}
-    type: Image
-    layout_properties: {}
+  slot_1: []
   slot_2:
   - name: navigation_link_1
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true, material_icon: house}
@@ -21,6 +19,12 @@ components_by_slot:
     type: form:Divider
     layout_properties: {}
   - name: navigation_link_2
-    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout}
+    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage,
+      text_color: 'theme:Error', font_family: serif, icon_size: 34px, icon_color: 'theme:Primary'}
     type: form:NavigationLink
     layout_properties: {}
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_1}

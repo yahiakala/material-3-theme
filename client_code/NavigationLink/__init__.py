@@ -1,6 +1,7 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
+from ..Functions import theme_color_to_css
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
@@ -9,10 +10,14 @@ class NavigationLink(NavigationLinkTemplate):
     self.init_components(**properties)
     self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
 
+
   def handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
-
+    if self.navigate_to:
+      open_form(self.navigate_to)
+      self.selected = True
+      
   @property
   def url(self):
     return self.dom_nodes['navigation-link'].href
@@ -57,7 +62,7 @@ class NavigationLink(NavigationLinkTemplate):
     if value:
       link_icon.className = ""
       link_icon.classList.add("material-symbols-outlined")
-      link_icon.innerText =value
+      link_icon.innerText = value
 
   @property
   def selected(self):
@@ -96,6 +101,55 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['icon-badge'].innerHTML = ""
       self.dom_nodes['icon-badge'].classList.remove("large-badge")
     self._badge_count = value
-      
+
+  @property
+  def navigate_to(self):
+    return self._navigate_to
+
+  @navigate_to.setter
+  def navigate_to(self, value):
+    self._navigate_to = value
+  
+  @property
+  def icon_size(self):
+    return self.dom_nodes['navigation-link-icon'].style.fontSize
+
+  @icon_size.setter
+  def icon_size(self, value):
+    self.dom_nodes['navigation-link-icon'].style.fontSize = value
+
+  @property
+  def font_size(self):
+    return self.dom_nodes['navigation-link-text'].style.fontSize
+
+  @font_size.setter
+  def font_size(self, value):
+    self.dom_nodes['navigation-link-text'].style.fontSize = value
+
+  @property
+  def font_family(self):
+    return self.dom_nodes['navigation-link-text'].style.fontFamily
+
+  @font_family.setter
+  def font_family(self, value):
+    self.dom_nodes['navigation-link-text'].style.fontFamily = value
+  
+  @property
+  def text_color(self):
+    return self.dom_nodes['navigation-link-text'].style.color
+
+  @text_color.setter
+  def text_color(self, value):
+    if value:
+      self.dom_nodes['navigation-link-text'].style.color = theme_color_to_css(value)
+  
+  @property
+  def icon_color(self):
+    return self.dom_nodes['navigation-link-icon'].style.color
+
+  @icon_color.setter
+  def icon_color(self, value):
+    if value:
+      self.dom_nodes['navigation-link-icon'].style.color = theme_color_to_css(value)
 
 

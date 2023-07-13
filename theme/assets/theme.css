@@ -229,8 +229,13 @@ body {
   padding-top: 4px;
 }
 
-.navigation-link:hover [anvil-name=navigation-link-icon], .navigation-link:focus [anvil-name=navigation-link-icon] {
+.navigation-link:hover [anvil-name=navigation-link-icon]{
   background-color: %color:Dark Overlay 1%;
+  font-weight: bold;
+}
+
+.navigation-link:focus [anvil-name=navigation-link-icon], .navigation-link:active [anvil-name=navigation-link-icon]{
+  background-color: %color:Dark Overlay 2%;
   font-weight: bold;
 }
 
@@ -242,15 +247,12 @@ body {
   background-color: %color:Secondary Container%;
 }
 
-.navigation-link.selected:hover [anvil-name=navigation-link-icon], .navigation-link.selected:focus [anvil-name=navigation-link-icon] {
-  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
+.navigation-link.selected:hover [anvil-name=navigation-link-icon] {
+  background: linear-gradient(0deg, %color:Dark Overlay 1% 0%, %color:Dark Overlay 1% 100%), %color:Secondary Container%;
 }
 
-.navigation-link.selected:active [anvil-name=navigation-link-icon] {
-  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
-}
-.navigation-link:active [anvil-name=navigation-link-icon] {
-  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 0) 70%)
+.navigation-link.selected:focus [anvil-name=navigation-link-icon], .navigation-link.selected:active [anvil-name=navigation-link-icon] {
+  background: linear-gradient(0deg, %color:Dark Overlay 2% 0%, %color:Dark Overlay 2% 100%), %color:Secondary Container%;
 }
 
 .navigation-link .icon-badge {
@@ -312,16 +314,30 @@ body {
 }
 
 @media(max-width: 600px) {
-.navigation-rail.navigation-drawer.shown .navigation-link:hover, .navigation-rail.navigation-drawer.shown .navigation-link:focus{
+.navigation-rail.navigation-drawer.shown .navigation-link:hover{
   background-color: %color:Dark Overlay 1%;
 }
 }
 
+
 @media(max-width: 600px) {
-.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover, .navigation-rail.navigation-drawer.shown .navigation-link.selected:focus{
-  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
+.navigation-rail.navigation-drawer.shown .navigation-link:active, .navigation-rail.navigation-drawer.shown .navigation-link:focus{
+  background-color: %color:Dark Overlay 2%;
 }
 }
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover{
+  background: linear-gradient(0deg, %color:Dark Overlay 1% 0%, %color:Dark Overlay 1% 100%), %color:Secondary Container%;
+  }
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:active, .navigation-rail.navigation-drawer.shown .navigation-link.selected:focus{
+  background: linear-gradient(0deg, %color:Dark Overlay 2% 0%, %color:Dark Overlay 2% 100%), %color:Secondary Container%;
+  }
+}
+
 @media(max-width: 600px) {
 .navigation-rail.navigation-drawer.shown .navigation-link:hover [anvil-name=navigation-link-icon], 
 .navigation-rail.navigation-drawer.shown .navigation-link:focus [anvil-name=navigation-link-icon],
