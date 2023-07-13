@@ -7,8 +7,3 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def navigation_link_1_click(self, **event_args):
-    """This method is called when the component is clicked"""
-    alert(title="Alert", content="You're on the home page!", buttons=["Continue", "Cancel"], role="")
-

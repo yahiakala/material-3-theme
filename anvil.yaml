@@ -1,6 +1,6 @@
 allow_embedding: false
 package_name: Material_3_Theme_2_0
-startup: {type: form, module: TestPage}
+startup: {type: form, module: TestLayout}
 name: Material 3 Theme 2.0
 startup_form: null
 native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.com">

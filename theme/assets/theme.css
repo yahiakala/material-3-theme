@@ -243,14 +243,14 @@ body {
 }
 
 .navigation-link.selected:hover [anvil-name=navigation-link-icon], .navigation-link.selected:focus [anvil-name=navigation-link-icon] {
-  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
+  background: linear-gradient(0deg, %color:Dark Overlay 1% 0%, %color:Dark Overlay 1% 100%), %color:Secondary Container%;
 }
 
 .navigation-link.selected:active [anvil-name=navigation-link-icon] {
-  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 1) 70%), rgba(232, 222, 248, 1)
+  background: radial-gradient(circle farthest-corner at 65px 100%, %color:Dark Overlay 2% 70%, %color:Dark Overlay 2% 70%, %color:Secondary Container% 70%), %color:Secondary Container%
 }
 .navigation-link:active [anvil-name=navigation-link-icon] {
-  background: radial-gradient(circle farthest-corner at 65px 100%, rgba(29, 25, 43, 0.12) 70%, rgba(29, 25, 43, 0.12) 70%, rgba(232, 222, 248, 0) 70%)
+  background: radial-gradient(circle farthest-corner at 65px 100%, %color:Dark Overlay 2% 70%, %color:Dark Overlay 2% 70%, rgba(232, 222, 248, 0) 70%)
 }
 
 .navigation-link .icon-badge {
@@ -319,7 +319,7 @@ body {
 
 @media(max-width: 600px) {
 .navigation-rail.navigation-drawer.shown .navigation-link.selected:hover, .navigation-rail.navigation-drawer.shown .navigation-link.selected:focus{
-  background: linear-gradient(0deg, rgba(29, 25, 43, 0.12) 0%, rgba(29, 25, 43, 0.12) 100%), rgba(232, 222, 248, 1);
+  background: linear-gradient(0deg, %color:Dark Overlay 2% 0%, %color:Dark Overlay 2% 100%), %color:Secondary Container%;
 }
 }
 @media(max-width: 600px) {

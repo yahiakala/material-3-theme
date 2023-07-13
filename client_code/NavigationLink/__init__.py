@@ -16,7 +16,6 @@ class NavigationLink(NavigationLinkTemplate):
       open_form(self.navigate_to)
       self.selected = True
       
-
   @property
   def url(self):
     return self.dom_nodes['navigation-link'].href

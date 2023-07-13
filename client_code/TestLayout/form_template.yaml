@@ -1,0 +1,29 @@
+layout:
+  type: form:StandardPageLayout
+  properties: {navigation_rail_collapse_to: Navigation drawer}
+is_package: true
+components_by_slot:
+  slot_1: []
+  slot_2:
+  - name: navigation_link_1
+    properties: {text: Home, icon: 'fa:home', badge: true, selected: true, material_icon: house}
+    type: form:NavigationLink
+    layout_properties: {}
+  - name: navigation_link_3
+    properties: {badge: true, badge_count: 12, text: Messsages, icon: 'fa:comments',
+      material_icon: message}
+    type: form:NavigationLink
+    layout_properties: {}
+  - name: divider_1
+    properties: {type: Inset}
+    type: form:Divider
+    layout_properties: {}
+  - name: navigation_link_2
+    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage}
+    type: form:NavigationLink
+    layout_properties: {}
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_1}

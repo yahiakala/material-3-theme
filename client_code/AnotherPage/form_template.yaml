@@ -1,8 +1,0 @@
-layout: {type: 'form:TestPage'}
-is_package: true
-components_by_slot:
-  slot_1:
-  - name: label_1
-    properties: {text: This is another page}
-    type: Label
-    layout_properties: {}
