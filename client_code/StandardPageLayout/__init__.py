@@ -1,5 +1,6 @@
 from ._anvil_designer import StandardPageLayoutTemplate
 from anvil import *
+import anvil.server
 
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):

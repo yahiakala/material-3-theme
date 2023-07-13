@@ -1,5 +1,6 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
+import anvil.server
 import anvil.js
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -107,6 +108,31 @@ class NavigationLink(NavigationLinkTemplate):
   @navigate_to.setter
   def navigate_to(self, value):
     self._navigate_to = value
+  
+  @property
+  def icon_size(self):
+    return self.dom_nodes['navigation-link-icon'].style.font_size
+
+  @icon_size.setter
+  def icon_size(self, value):
+    self.dom_nodes['navigation-link-icon'].style.font_size = value
+
+  @property
+  def font_family(self):
+    return self.dom_nodes['navigation-link-text'].style.font_family
+
+  @font_family.setter
+  def font_family(self, value):
+    self.dom_nodes['navigation-link-text'].style.font_family = value
+  
+  @property
+  def text_color(self):
+    return self.dom_nodes['navigation-link-text'].style.color
+
+  @text_color.setter
+  def text_color(self, value):
+    self.dom_nodes['navigation-link-text'].style.color = value
+    
       
 
 

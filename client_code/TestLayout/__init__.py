@@ -1,5 +1,6 @@
 from ._anvil_designer import TestLayoutTemplate
 from anvil import *
+import anvil.server
 
 class TestLayout(TestLayoutTemplate):
   def __init__(self, **properties):

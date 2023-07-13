@@ -1,8 +1,7 @@
-from ._anvil_designer import ButtonTemplate
+from ._anvil_designer import AnotherPageTemplate
 from anvil import *
-import anvil.server
 
-class Button(ButtonTemplate):
+class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

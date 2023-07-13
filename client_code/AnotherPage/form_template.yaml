@@ -1,0 +1,2 @@
+layout: {type: 'form:TestLayout'}
+is_package: true

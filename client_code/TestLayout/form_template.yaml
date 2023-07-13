@@ -19,7 +19,8 @@ components_by_slot:
     type: form:Divider
     layout_properties: {}
   - name: navigation_link_2
-    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage}
+    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage,
+      text_color: lightblue, font_family: serif, icon_size: 34px}
     type: form:NavigationLink
     layout_properties: {}
 slots:
