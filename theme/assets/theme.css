@@ -498,7 +498,7 @@ body {
   display: inline-block;
   width: 52px;
   height: 32px;
-  border: 2px %color:Outline%;
+  
 }
 
 .switch input {
@@ -514,10 +514,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: %color:Surface Container Highest%;
+  -webkit-transition: .2s;
+  transition: .2s;
   border-radius: 16px;
+  border: 2px %color:Outline% solid;
 }
 
 .slider:before {
@@ -525,26 +526,31 @@ body {
   content: "";
   height: 16px;
   width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  left: 6px;
+  bottom: 6px;
+  background-color: %color:Outline%;
+  -webkit-transition: .2s;
+  transition: .2s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: %color:Primary%;
+  border: none;
 }
+
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translate(16px, 2px);
+  -ms-transform: translate(16px, 2px);
+  transform: translate(16px, 2px);
+  background-color: %color:On Primary%;
+  height: 24px;
+  width: 24px;
 }
 
 

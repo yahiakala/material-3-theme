@@ -1,7 +1,11 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_1: []
+  slot_1:
+  - name: switch_1
+    properties: {}
+    type: form:Switch
+    layout_properties: {}
   slot_2:
   - name: navigation_link_1
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true, material_icon: house}
