@@ -284,3 +284,4 @@ color_scheme:
   - {name: Outline Variant, color: '#C4C7C5'}
   - {name: On Error, color: '#FFFFFF'}
   - {name: Surface Container Low, color: '#F7F2FA'}
+  - {name: Surface Container Highest, color: '#E6E0E9'}

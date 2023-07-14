@@ -9,4 +9,3 @@ def theme_color_to_css(color:str):
     return app.theme_colors[color]
   else:
     return color
-  

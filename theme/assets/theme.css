@@ -490,3 +490,108 @@ body {
 .button.outlined:focus { background-color: %color:Primary Overlay 3%; }
 .button.outlined:active { background-color: %color:Primary Overlay 3%; }
 .button.outlined:disabled { background: none; border: 1px solid %color:On Disabled%; }
+
+/*SWITCH*/
+/*Inspired by W3 schools slider: https://www.w3schools.com/howto/howto_css_switch.asp*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  
+}
+
+.switch input.switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: %color:Surface Container Highest%;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  border-radius: 16px;
+  border: 2px %color:Outline% solid;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  margin-left: 6px;
+  background-color: %color:Outline%;
+  -webkit-transition: height .15s, width .15s, transform .15s .15s;
+  transition: height .15s, width .15s, transform .15s .15s;
+  border-radius: 50%;
+}
+
+.switch-slider.has-disabled-icon:before {
+  height: 24px;
+  width: 24px;
+}
+
+.switch-input:checked + .switch-slider {
+  background-color: %color:Primary%;
+  border: none;
+}
+
+.switch-input:checked + .switch-slider:before {
+  -webkit-transform: translate(16px);
+  -ms-transform: translate(16px);
+  transform: translate(16px);
+  background-color: %color:On Primary%;
+  height: 24px;
+  width: 24px;
+}
+
+.switch-slider .enabled-switch-icon, .switch-slider .disabled-switch-icon  {
+  z-index: 1;
+  font-size: 16px;
+  margin-left: 10px;
+  -webkit-transition: transform .15s .15s;
+  transition: transform .15s .15s;
+}
+
+.switch-slider .disabled-switch-icon {
+  margin-left: -16px;
+}
+
+.switch-slider.has-disabled-icon:not(.has-enabled-icon) .disabled-switch-icon {
+  margin-left: 0px;
+}
+
+.switch-input:checked + .switch-slider .enabled-switch-icon, .switch-input:checked + .switch-slider .disabled-switch-icon {
+  -webkit-transform: translate(16px);
+  -ms-transform: translate(16px);
+  transform: translate(16px);
+}
+
+.switch input.switch-input:checked + .switch-slider .enabled-switch-icon {
+  color: %color:On Primary Container%;
+  visibility: visible;
+}
+
+.switch input.switch-input:checked + .switch-slider .disabled-switch-icon {
+  visibility: hidden;
+}
+
+.switch-input:not(:checked) + .switch-slider .disabled-switch-icon {
+  color: %color:Surface Container Highest%;
+  visibility: visible;
+}
+
+.switch-input:not(:checked) + .switch-slider .enabled-switch-icon {
+  visibility: hidden;
+}
+
+

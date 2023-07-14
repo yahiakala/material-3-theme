@@ -2,7 +2,14 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
-  - name: image_1
-    properties: {height: 592}
-    type: Image
+  - name: switch_1
+    properties: {enabled_icon: light_mode, disabled_icon: dark_mode, enabled: true,
+      enabled_background_color: 'theme:Tertiary'}
+    type: form:Switch
     layout_properties: {}
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+container: {}
+components: []
