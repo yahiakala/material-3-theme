@@ -28,7 +28,3 @@ slots:
     index: 0
     set_layout_properties: {}
     target: {type: slot, name: slot_1}
-  slot_2:
-    index: 0
-    set_layout_properties: {}
-    target: {type: slot, name: slot_2}
