@@ -14,8 +14,13 @@ class Switch(SwitchTemplate):
   @enabled_icon.setter
   def enabled_icon(self, value):
     link_icon = self.dom_nodes['switch-icon']
+    switch_slider = self.dom_nodes['switch-slider']
     self._enabled_icon = value
+    
+    link_icon.classList.remove("material-symbols-outlined")
+    switch_slider.classList.remove('has-icon')
+    
     if value:
-      link_icon.className = ""
       link_icon.classList.add("material-symbols-outlined")
       link_icon.innerText = value
+      switch_slider.classList.add('has-icon')
