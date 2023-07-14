@@ -492,7 +492,7 @@ body {
 .button.outlined:disabled { background: none; border: 1px solid %color:On Disabled%; }
 
 /*SWITCH*/
-/*Heavily inspired by W3 schools slider: https://www.w3schools.com/howto/howto_css_switch.asp*/
+/*Inspired by W3 schools slider: https://www.w3schools.com/howto/howto_css_switch.asp*/
 .switch {
   position: relative;
   display: inline-block;
@@ -509,14 +509,16 @@ body {
 
 .slider {
   position: absolute;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: %color:Surface Container Highest%;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
   border-radius: 16px;
   border: 2px %color:Outline% solid;
 }
@@ -526,11 +528,10 @@ body {
   content: "";
   height: 16px;
   width: 16px;
-  left: 6px;
-  bottom: 6px;
+  margin-left: 6px;
   background-color: %color:Outline%;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: height .15s, width .15s, transform .15s .15s;
+  transition: height .15s, width .15s, transform .15s .15s;
   border-radius: 50%;
 }
 
@@ -545,9 +546,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translate(16px, 2px);
-  -ms-transform: translate(16px, 2px);
-  transform: translate(16px, 2px);
+  -webkit-transform: translate(16px);
+  -ms-transform: translate(16px);
+  transform: translate(16px);
   background-color: %color:On Primary%;
   height: 24px;
   width: 24px;
