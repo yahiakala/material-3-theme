@@ -734,6 +734,6 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<label class=\"switch\">\n  <input type=\"checkbox\">\n  <span\
-      \ class=\"slider\"><span anvil-name=\"switch-icon\"></span></span>\n</label>\n\
-      \n"}
+  properties: {html: "<label class=\"switch\">\n  <input class=\"switch-input\" type=\"\
+      checkbox\">\n  <span class=\"slider\"><span anvil-name=\"switch-icon\" class=\"\
+      switch-icon\"></span></span>\n</label>\n\n"}

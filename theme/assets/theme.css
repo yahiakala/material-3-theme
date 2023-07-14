@@ -501,7 +501,7 @@ body {
   
 }
 
-.switch input {
+.switch input.switch-input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -535,23 +535,37 @@ body {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+.switch-input:checked + .slider {
   background-color: %color:Primary%;
   border: none;
 }
 
 
-input:focus + .slider {
+.switch-input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+.switch-input:checked + .slider:before {
   -webkit-transform: translate(16px);
   -ms-transform: translate(16px);
   transform: translate(16px);
   background-color: %color:On Primary%;
   height: 24px;
   width: 24px;
+}
+
+.switch input.slider .switch-icon {
+  z-index: 1;
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.switch input.switch-input:checked + .slider .switch-icon {
+  color: %color:On Primary%;
+}
+
+.switch-input:not(:checked) + .slider .switch-icon {
+  color: %color:Surface Container Highest%;
 }
 
 
