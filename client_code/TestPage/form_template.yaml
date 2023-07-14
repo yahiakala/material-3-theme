@@ -6,4 +6,8 @@ components_by_slot:
     properties: {enabled_icon: check}
     type: form:Switch
     layout_properties: {}
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
   slot_2: []
