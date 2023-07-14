@@ -727,11 +727,11 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   description: Optional icon on the switch when disabled
-- {name: disabled_background_color, type: string, default_value: ''}
-- {name: enabled_background_color, type: string, default_value: ''}
-- {name: disabled_thumb_color, type: string, default_value: ''}
-- {name: enabled_thumb_color, type: string, default_value: ''}
-- {name: disabled_outline_color, type: string, default_value: ''}
+- {name: disabled_background_color, type: color, default_value: ''}
+- {name: enabled_background_color, type: color, default_value: ''}
+- {name: disabled_thumb_color, type: color, default_value: ''}
+- {name: enabled_thumb_color, type: color, default_value: ''}
+- {name: disabled_outline_color, type: color, default_value: ''}
 - {name: border_radius, type: string, default_value: ''}
 is_package: true
 events:

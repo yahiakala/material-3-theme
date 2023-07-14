@@ -545,11 +545,6 @@ body {
   border: none;
 }
 
-
-.switch-input:focus + .switch-slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
 .switch-input:checked + .switch-slider:before {
   -webkit-transform: translate(16px);
   -ms-transform: translate(16px);

@@ -1,5 +1,7 @@
 from ._anvil_designer import SwitchTemplate
 from anvil import *
+from anvil.js.window import jQuery
+from ..Functions import theme_color_to_css
 
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
@@ -45,3 +47,16 @@ class Switch(SwitchTemplate):
   @enabled.setter
   def enabled(self, value):
     self.dom_nodes['switch-input'].checked = value
+
+  @property
+  def enabled_background_color(self):
+    return self._enabled_background_color
+
+  @enabled_background_color.setter
+  def enabled_background_color(self, value):
+    if value:
+      print('enabled bg color', value)
+      self._enabled_background_color = value
+      color = theme_color_to_css(value)
+      print(jQuery('.switch-input:checked + .switch-slider'))
+      jQuery('.switch-input:checked + .switch-slider').css({'background-color': color})
