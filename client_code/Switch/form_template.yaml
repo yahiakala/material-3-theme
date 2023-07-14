@@ -363,7 +363,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   description: Optional icon on the switch when enabled
-- {name: enabled, type: string, default_value: ''}
+- {name: enabled, type: boolean, default_value: false}
 - name: disabled_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -734,8 +734,8 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<label class=\"switch\">\n  <input class=\"switch-input\" type=\"\
-      checkbox\">\n  <span class=\"switch-slider\" anvil-name=\"switch-slider\"><span\
-      \ anvil-name=\"enabled-switch-icon\" class=\"enabled-switch-icon\"></span><span\
-      \ anvil-name=\"disabled-switch-icon\" class=\"disabled-switch-icon\"></span></span>\n\
-      </label>\n\n"}
+  properties: {html: "<label class=\"switch\">\n  <input class=\"switch-input\" anvil-name=\"\
+      switch-input\" type=\"checkbox\">\n  <span class=\"switch-slider\" anvil-name=\"\
+      switch-slider\"><span anvil-name=\"enabled-switch-icon\" class=\"enabled-switch-icon\"\
+      ></span><span anvil-name=\"disabled-switch-icon\" class=\"disabled-switch-icon\"\
+      ></span></span>\n</label>\n\n"}

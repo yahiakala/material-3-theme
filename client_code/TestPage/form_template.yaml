@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: switch_1
-    properties: {enabled_icon: light_mode, disabled_icon: ''}
+    properties: {enabled_icon: light_mode, disabled_icon: dark_mode, enabled: false}
     type: form:Switch
     layout_properties: {}
   - name: flow_panel_1

@@ -37,3 +37,11 @@ class Switch(SwitchTemplate):
       link_icon.classList.add("material-symbols-outlined")
       link_icon.innerText = value
       switch_slider.classList.add('has-disabled-icon')
+
+  @property
+  def enabled(self):
+    return self.dom_nodes['switch-input'].checked
+
+  @enabled.setter
+  def enabled(self, value):
+    self.dom_nodes['switch-input'].checked = value
