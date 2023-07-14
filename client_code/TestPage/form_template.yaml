@@ -6,4 +6,3 @@ components_by_slot:
     properties: {height: 592}
     type: Image
     layout_properties: {}
-  slot_2: []
