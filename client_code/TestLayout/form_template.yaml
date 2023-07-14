@@ -20,7 +20,7 @@ components_by_slot:
     layout_properties: {}
   - name: navigation_link_2
     properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage,
-      text_color: 'theme:Error', font_family: serif, icon_size: 34px, icon_color: 'theme:Primary'}
+      text_color: lightblue, font_family: serif, icon_size: 34px, icon_color: 'theme:Primary'}
     type: form:NavigationLink
     layout_properties: {}
 slots:
