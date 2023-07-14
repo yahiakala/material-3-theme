@@ -1,6 +1,7 @@
 from ._anvil_designer import SwitchTemplate
 from anvil import *
 from anvil.js.window import jQuery
+from anvil.js import window
 from ..Functions import theme_color_to_css
 
 class Switch(SwitchTemplate):
@@ -48,6 +49,7 @@ class Switch(SwitchTemplate):
   def enabled(self, value):
     self.dom_nodes['switch-input'].checked = value
 
+  #query selectors not acting as expected. Will return to this. component is finished, otherwise
   @property
   def enabled_background_color(self):
     return self._enabled_background_color
@@ -58,5 +60,5 @@ class Switch(SwitchTemplate):
       print('enabled bg color', value)
       self._enabled_background_color = value
       color = theme_color_to_css(value)
-      print(jQuery('.switch-input:checked + .switch-slider'))
-      jQuery('.switch-input:checked + .switch-slider').css({'background-color': color})
+      # jQuery('.switch-input:checked + .switch-slider').css('background-color', color)
+      print(window.document.querySelector('.switch-input:checked + .switch-slider'))
