@@ -2,6 +2,6 @@ container:
   type: HtmlTemplate
   properties: {html: "<div>\n\t<label>\n\t\t<input>\n    <i class=\"material-symbols-outlined\
       \ hidden\">search</i>\n\t\t<span>Label text</span>\n\t\t<span>Supporting text</span>\n\
-      \t\t<i class=\"material-symbols-outlined hidden\">close</i>\n\t</label>\n</div>"}
+      \t\t<i class=\"material-symbols-outlined hidden\">close</i>\n\t</label>\n</div> "}
 components: []
 is_package: true
