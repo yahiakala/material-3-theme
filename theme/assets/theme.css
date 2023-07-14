@@ -559,13 +559,7 @@ body {
   width: 24px;
 }
 
-.switch-input:checked + .switch-slider.has-icon [anvil-name=switch-icon]{
-  -webkit-transform: translate(16px);
-  -ms-transform: translate(16px);
-  transform: translate(16px);
-}
-
-.switch-slider.has-icon [anvil-name=switch-icon] {
+.switch-slider .enabled-switch-icon, .switch-slider .disabled-switch-icon {
   z-index: 1;
   font-size: 16px;
   margin-left: 10px;
@@ -573,12 +567,28 @@ body {
   transition: transform .15s .15s;
 }
 
-.switch input.switch-input:checked + .switch-slider.has-icon [anvil-name=switch-icon] {
-  color: %color:On Primary Container%;
+.switch-input:checked + .switch-slider .enabled-switch-icon, .switch-input:checked + .switch-slider .enabled-switch-icon {
+  -webkit-transform: translate(16px);
+  -ms-transform: translate(16px);
+  transform: translate(16px);
 }
 
-.switch-input:not(:checked) + .switch-slider.has-icon [anvil-name=switch-icon] {
+.switch input.switch-input:checked + .switch-slider .enabled-switch-icon {
+  color: %color:On Primary Container%;
+  visibility: visible;
+}
+
+.switch input.switch-input:checked + .switch-slider .disabled-switch-icon {
+  visibility: hidden;
+}
+
+.switch-input:not(:checked) + .switch-slider .disabled-switch-icon {
   color: %color:Surface Container Highest%;
+  visibility: visible;
+}
+
+.switch-input:not(:checked) + .switch-slider .enabled-switch-icon {
+  visibility: hidden;
 }
 
 
