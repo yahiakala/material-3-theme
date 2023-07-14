@@ -735,4 +735,5 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<label class=\"switch\">\n  <input type=\"checkbox\">\n  <span\
-      \ class=\"slider\"></span>\n</label>\n\n"}
+      \ class=\"slider\"><span anvil-name=\"switch-icon\"></span></span>\n</label>\n\
+      \n"}
