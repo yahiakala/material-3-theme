@@ -535,7 +535,7 @@ body {
   border-radius: 50%;
 }
 
-.switch-slider.has-icon:before {
+.switch-slider.has-disabled-icon:before {
   height: 24px;
   width: 24px;
 }
@@ -559,7 +559,7 @@ body {
   width: 24px;
 }
 
-.switch-slider .enabled-switch-icon, .switch-slider .disabled-switch-icon {
+.switch-slider .enabled-switch-icon, .switch-slider .disabled-switch-icon  {
   z-index: 1;
   font-size: 16px;
   margin-left: 10px;
@@ -567,7 +567,15 @@ body {
   transition: transform .15s .15s;
 }
 
-.switch-input:checked + .switch-slider .enabled-switch-icon, .switch-input:checked + .switch-slider .enabled-switch-icon {
+.switch-slider .disabled-switch-icon {
+  margin-left: -16px;
+}
+
+.switch-slider.has-disabled-icon:not(.has-enabled-icon) .disabled-switch-icon {
+  margin-left: 0px;
+}
+
+.switch-input:checked + .switch-slider .enabled-switch-icon, .switch-input:checked + .switch-slider .disabled-switch-icon {
   -webkit-transform: translate(16px);
   -ms-transform: translate(16px);
   transform: translate(16px);

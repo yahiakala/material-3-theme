@@ -20,6 +20,7 @@ class Switch(SwitchTemplate):
     if value:
       link_icon.classList.add("material-symbols-outlined")
       link_icon.innerText = value
+      switch_slider.classList.add('has-enabled-icon')
   
   @property
   def disabled_icon(self):
@@ -32,9 +33,7 @@ class Switch(SwitchTemplate):
     self._disabled_icon = value
     
     link_icon.classList.remove("material-symbols-outlined")
-    switch_slider.classList.remove('has-icon')
-    
     if value:
       link_icon.classList.add("material-symbols-outlined")
       link_icon.innerText = value
-      switch_slider.classList.add('has-icon')
+      switch_slider.classList.add('has-disabled-icon')
