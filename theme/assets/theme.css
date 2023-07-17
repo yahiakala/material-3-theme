@@ -351,7 +351,6 @@ body {
 .button.outlined:disabled { background: none; border: 1px solid %color:On Disabled%; }
 
 /* TEXT FIELD */
-
 .text-field-input {
   height: 56px;
   padding: 0 16px;
@@ -368,19 +367,23 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 16px;
   display: flex;
   align-items: center;
   pointer-events: none;
+  padding-left: 16px;
+  display: flex;
+  width: 100%;
 }
 
-.text-field-supporting {
+.text-field-supporting, .text-field-character-count {
   color: %color:On Surface Variant%;
   font-size: 12px;
   letter-spacing: 0.4px;
   line-height: 16px;
-  padding: 4px 16px 0 16px;
 }
+
+.text-field-supporting { padding: 4px 16px 0 16px; }
+.text-field-character-count { padding: 4px 16px 0 0px; }
 
 .text-field-input:focus {
   box-shadow: inset 0 -2px 0 %color:Primary%;
@@ -388,7 +391,12 @@ body {
   padding-bottom: 8px;
 }
 
-.text-field-input:focus + .text-field-label .label-text, .filled-text-field + .text-field-label .label-text {
+:not(.text-field-input:placeholder-shown) .text-field-input {
+  padding-top: 24px;
+  padding-bottom: 8px
+}
+
+.text-field-input:focus + .text-field-label .label-text, :not(.text-field-input:placeholder-shown) + .text-field-label .label-text {
   font-size: 12px;
   transform: translate(0, -64%);
   letter-spacing: 0.4px;
@@ -399,4 +407,14 @@ body {
 
 .text-field-label .label-text {
   transition: all 0.15s ease-out;
+}
+.text-field i { font-size: 20px; }
+
+.leading-icon {
+  padding-right: 16px
+}
+
+.trailing-icon {
+  position: absolute;
+  right: 16px;
 }

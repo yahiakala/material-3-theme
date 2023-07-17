@@ -1,13 +1,19 @@
 container:
   type: HtmlTemplate
-  properties: {html: "\n<div style=\"width: fit-content;\">\n  <div class=\"text-field-input-container\"\
-      \ style=\"position: relative;\">\n    <input class=\"text-field-input\" anvil-name=\"\
-      text-field-input\" type=\"text\" id=\"tfield\" />\n  \t<label class=\"text-field-label\"\
-      \ for=\"tfield\">\n  \t\t<div class=\"label-text\">Label text</div>\n  \t</label>\n\
-      \  </div>\n  <label class=\"text-field-supporting\"> Suporting text </label>\n\
-      </div>\n\n\n<!--     <i class=\"material-symbols-outlined hidden\">search</i>\
-      \ -->\n<!-- \t\t<i class=\"material-symbols-outlined hidden\">close</i> -->\n\
-      \n"}
+  properties: {html: "<div class=\"text-field\" style=\"width: fit-content;\">\n \
+      \ <div class=\"text-field-input-container\" style=\"position: relative;\">\n\
+      \    <input class=\"text-field-input\" anvil-name=\"text-field-input\" type=\"\
+      text\" id=\"tfield\" placeholder=\" \" />\n    <label class=\"text-field-label\"\
+      \ for=\"tfield\">\n      <i class=\"leading-icon material-symbols-outlined\"\
+      >search</i>\n  \t\t<div class=\"label-text\">Label text</div>\n      <i class=\"\
+      trailing-icon material-symbols-outlined\">close</i>\n  \t</label>\n  </div>\n\
+      \  <label style=\"display:flex; justify-content: space-between\"> \n    <span\
+      \ class=\"text-field-supporting\">Suporting text</span>\n    <span style=\"\
+      display: none\" class=\"text-field-character-count\" anvil-name=\"text-field-character-count\"\
+      >5/20</span>\n  </label>\n</div>\n\n\n<!--      -->\n<!-- \t\t<i class=\"material-symbols-outlined\
+      \ hidden\">close</i> -->\n\n"}
 components: []
 is_package: true
 custom_component: true
+properties:
+- {name: max_characters, type: number, default_value: '', default_binding_prop: true}
