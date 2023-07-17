@@ -384,7 +384,7 @@ body {
   padding-bottom: 8px;
 }
 
-.text-field-input:focus + .text-field-label .label-text, :not(.text-field-input[value=""]) + .text-field-label .label-text {
+.text-field-input:focus + .text-field-label .label-text, .filled-text-field + .text-field-label .label-text {
   font-size: 12px;
   transform: translate(0, -64%);
   letter-spacing: 0.4px;

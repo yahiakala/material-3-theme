@@ -1,11 +1,11 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"text-field-container\">\n  <input class=\"text-field-input\"\
-      \ type=\"text\" id=\"tfield\" value=\"\"/>\n\t<label class=\"text-field-label\"\
-      \ for=\"tfield\">\n\t\t<div class=\"label-text\">Label text</div>\n\t</label>\n\
-      </div>\n\n<!--     <i class=\"material-symbols-outlined hidden\">search</i>\
-      \ -->\n<!-- \t\t<i class=\"material-symbols-outlined hidden\">close</i> -->\n\
-      \n"}
+  properties: {html: "<div class=\"text-field-container\" anvil-name=\"text-field-container\"\
+      >\n  <input class=\"text-field-input\" anvil-name=\"text-field-input\" type=\"\
+      text\" id=\"tfield\" />\n\t<label class=\"text-field-label\" for=\"tfield\"\
+      >\n\t\t<div class=\"label-text\">Label text</div>\n\t</label>\n</div>\n\n<!--\
+      \     <i class=\"material-symbols-outlined hidden\">search</i> -->\n<!-- \t\t\
+      <i class=\"material-symbols-outlined hidden\">close</i> -->\n\n"}
 components: []
 is_package: true
 custom_component: true
