@@ -352,10 +352,6 @@ body {
 
 /* TEXT FIELD */
 
-.text-field-container {
-  position: relative;
-}
-
 .text-field-input {
   height: 56px;
   padding: 0 16px;
@@ -376,6 +372,14 @@ body {
   display: flex;
   align-items: center;
   pointer-events: none;
+}
+
+.text-field-supporting {
+  color: %color:On Surface Variant%;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  padding: 4px 16px 0 16px;
 }
 
 .text-field-input:focus {
