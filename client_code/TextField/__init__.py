@@ -9,6 +9,24 @@ class TextField(TextFieldTemplate):
     # Any code you write here will run before the form opens.
 
   @property
+  def label_text(self):
+    return self.dom_nodes['label-text'].innerHTML
+
+  @label_text.setter
+  def label_text(self, value):
+    if value:
+      self.dom_nodes['label-text'].innerHTML = value
+
+  @property
+  def supporting_text(self):
+    return self.dom_nodes['text-field-supporting'].innerHTML
+
+  @supporting_text.setter
+  def supporting_text(self, value):
+    if value:
+      self.dom_nodes['text-field-supporting'].innerHTML = value
+
+  @property
   def max_characters(self):
     return self._max_characters
 
@@ -27,11 +45,28 @@ class TextField(TextFieldTemplate):
   def leading_icon(self, value):
     text_field_label = self.dom_nodes['text-field-label']
     leading_icon = self.dom_nodes['leading-icon']
+    text_field_input = self.dom_nodes['text-field-input']
     self._material_icon = value
     if value:
+      leading_icon.style.display = "block"
       leading_icon.innerText = value
-      text_field_label.style.padding = ""
-      # button.classList.add('icon-padding')
+      text_field_label.style.paddingLeft = "12px"
+      text_field_input.style.paddingLeft = "48px"
+
+  @property
+  def trailing_icon(self):
+    return self._trailing_icon
+
+  @trailing_icon.setter
+  def trailing_icon(self, value):
+    text_field_label = self.dom_nodes['text-field-label']
+    trailing_icon = self.dom_nodes['trailing-icon']
+    text_field_input = self.dom_nodes['text-field-input']
+    self._material_icon = value
+    if value:
+      trailing_icon.style.display = "block"
+      trailing_icon.innerText = value
+      text_field_input.style.paddingRight = "48px"
 
 
 
