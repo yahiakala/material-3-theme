@@ -19,6 +19,20 @@ class TextField(TextFieldTemplate):
       character_count.style.display = "block"
       character_count.innerHTML = value
 
+  @property
+  def leading_icon(self):
+    return self._leading_icon
+
+  @leading_icon.setter
+  def leading_icon(self, value):
+    text_field_label = self.dom_nodes['text-field-label']
+    leading_icon = self.dom_nodes['leading-icon']
+    self._material_icon = value
+    if value:
+      leading_icon.innerText = value
+      button_icon.classList.remove("hidden")
+      button.classList.add('icon-padding')
+
 
 
   
