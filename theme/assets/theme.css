@@ -371,7 +371,6 @@ body {
   align-items: center;
   pointer-events: none;
   padding-left: 16px;
-  display: flex;
   width: 100%;
 }
 

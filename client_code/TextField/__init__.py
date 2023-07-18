@@ -30,7 +30,7 @@ class TextField(TextFieldTemplate):
     self._material_icon = value
     if value:
       leading_icon.innerText = value
-      # button_icon.classList.remove("hidden")
+      text_field_label.style.padding = ""
       # button.classList.add('icon-padding')
 
 
