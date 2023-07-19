@@ -6,22 +6,21 @@ components_by_slot:
   slot_1: []
   slot_2:
   - name: navigation_link_1
-    properties: {text: Home, icon: 'fa:home', badge: true, selected: true, material_icon: house}
-    type: form:NavigationLink
+    properties: {icon: '', text: Home, material_icon: home}
+    type: form:Components.NavigationLink
     layout_properties: {}
-  - name: navigation_link_3
-    properties: {badge: true, badge_count: 12, text: Messsages, icon: 'fa:comments',
-      material_icon: message}
-    type: form:NavigationLink
+    event_bindings: {click: navigation_link_1_click}
+  - name: navigation_link_2
+    properties: {material_icon: email, text: Mail}
+    type: form:Components.NavigationLink
     layout_properties: {}
   - name: divider_1
-    properties: {type: Inset}
-    type: form:Divider
+    properties: {}
+    type: form:Components.Divider
     layout_properties: {}
-  - name: navigation_link_2
-    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage,
-      text_color: lightblue, font_family: serif, icon_size: 34px, icon_color: 'theme:Primary'}
-    type: form:NavigationLink
+  - name: navigation_link_3
+    properties: {material_icon: logout, text: Logout}
+    type: form:Components.NavigationLink
     layout_properties: {}
 slots:
   slot_1:
