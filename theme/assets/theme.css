@@ -416,3 +416,7 @@ body {
 .text-field i { font-size: 20px; }
 .leading-icon { padding-right: 16px }
 .trailing-icon { position: absolute; right: 12px; }
+
+.text-field.outlined .text-field-input {
+  color: red;
+}

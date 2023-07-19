@@ -727,6 +727,9 @@ properties:
 - {name: label_text, type: string, default_value: ''}
 - {name: supporting_text, type: string, default_value: ''}
 - {name: enabled, type: boolean, default_value: true}
+- name: appearance
+  type: enum
+  options: [' ', outlined]
 is_package: true
 events: []
 custom_component: true

@@ -81,6 +81,15 @@ class TextField(TextFieldTemplate):
       input.disabled = "true"
       supporting_text.classList.add("text-field-supporting-disabled")
 
+  @property
+  def appearance(self):
+    return self._appearance
+
+  @appearance.setter
+  def appearance(self, value):
+    text_field = self.dom_nodes['text-field']
+    if value:
+      text_field.classList.add(value)
 
 
   
