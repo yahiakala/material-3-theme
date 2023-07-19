@@ -726,22 +726,23 @@ properties:
     zoom_out, zoom_out_map]
 - {name: label_text, type: string, default_value: ''}
 - {name: supporting_text, type: string, default_value: ''}
+- {name: enabled, type: boolean, default_value: true}
 is_package: true
 events: []
 custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"text-field\" style=\"width: fit-content; margin:\
-      \ 10px;\">\n  <div class=\"text-field-input-container\" style=\"position: relative;\"\
-      >\n    <input class=\"text-field-input\" anvil-name=\"text-field-input\" type=\"\
-      text\" id=\"tfield\" placeholder=\" \" />\n    <label class=\"text-field-label\"\
-      \ for=\"tfield\" anvil-name=\"text-field-label\">\n      <i class=\"leading-icon\
-      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
-      ></i>\n  \t\t<div class=\"label-text\" anvil-name=\"label-text\">Label text</div>\n\
-      \      <i class=\"trailing-icon material-symbols-outlined\" anvil-name=\"trailing-icon\"\
-      \ style=\"display: none;\"></i>\n  \t</label>\n  </div>\n  <label style=\"display:flex;\
-      \ justify-content: space-between\"> \n    <span class=\"text-field-supporting\"\
-      \ anvil-name=\"text-field-supporting\">Suporting text</span>\n    <span style=\"\
-      display: none\" class=\"text-field-character-count\" anvil-name=\"text-field-character-count\"\
-      >5/20</span>\n  </label>\n</div>"}
+  properties: {html: "<div class=\"text-field\" anvil-name=\"text-field\" style=\"\
+      width: fit-content; margin: 10px;\">\n  <div class=\"text-field-input-container\"\
+      \ style=\"position: relative;\">\n    <input class=\"text-field-input\" anvil-name=\"\
+      text-field-input\" type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <label\
+      \ class=\"text-field-label\" for=\"tfield\" anvil-name=\"text-field-label\"\
+      >\n      <i class=\"leading-icon material-symbols-outlined\" anvil-name=\"leading-icon\"\
+      \ style=\"display: none;\"></i>\n  \t\t<div class=\"label-text\" anvil-name=\"\
+      label-text\">Label text</div>\n      <i class=\"trailing-icon material-symbols-outlined\"\
+      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</label>\n\
+      \  </div>\n  <label style=\"display:flex; justify-content: space-between\" for=\"\
+      tfield\" > \n    <span class=\"text-field-supporting\" anvil-name=\"text-field-supporting\"\
+      \ >Suporting text</span>\n    <span style=\"display: none\" class=\"text-field-character-count\"\
+      \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}

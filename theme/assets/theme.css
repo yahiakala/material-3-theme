@@ -363,10 +363,6 @@ body {
   color: %color:On Surface%;
 }
 
-.text-field-input:hover {
-  box-shadow: inset 0 -1px 0 %color:On Surface%;
-}
-
 .text-field-label {
   position: absolute;
   top: 0;
@@ -376,6 +372,7 @@ body {
   pointer-events: none;
   padding-left: 16px;
   width: 100%;
+  color: %color:On Surface Variant%;
 }
 
 .text-field-supporting, .text-field-character-count {
@@ -388,29 +385,33 @@ body {
 .text-field-supporting { padding: 4px 16px 0 16px; }
 .text-field-character-count { padding: 4px 16px 0 0px; }
 
-.text-field-input:focus {
-  box-shadow: inset 0 -2px 0 %color:Primary%;
-  padding-top: 24px;
-  padding-bottom: 8px;
+.text-field-input:hover {
+  box-shadow: inset 0 -1px 0 %color:On Surface%;
+  background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), %color:Surface Container Highest%;
 }
 
-:not(.text-field-input:placeholder-shown) .text-field-input {
-  padding-top: 24px;
-  padding-bottom: 8px
+.text-field-input:disabled {
+  background: %color:Disabled Container 2%;
+  box-shadow: inset 0 -1px 0 %color:On Disabled%;
+  cursor: not-allowed;
+  color: %color:On Disabled%;
 }
 
+.text-field-input:disabled + .text-field-label { color: %color:On Disabled%; }
+.text-field-supporting-disabled { color: %color:On Disabled%; }
+
+.text-field-input:focus { box-shadow: inset 0 -2px 0 %color:Primary%; padding-top: 24px; padding-bottom: 8px;}
+.text-field-input:focus + .text-field-label .label-text { color: %color:Primary%; }
 .text-field-input:focus + .text-field-label .label-text, :not(.text-field-input:placeholder-shown) + .text-field-label .label-text {
   font-size: 12px;
   transform: translate(0, -64%);
   letter-spacing: 0.4px;
   line-height: 16px;
   padding-top: 8px;
-  color: %color:Primary%;
 }
 
-.text-field-label .label-text {
-  transition: all 0.15s ease-out;
-}
+:not(.text-field-input:placeholder-shown) .text-field-input { padding-top: 24px; padding-bottom: 8px }
+.text-field-label .label-text { transition: all 0.15s ease-out; }
 
 .text-field i { font-size: 20px; }
 .leading-icon { padding-right: 16px }

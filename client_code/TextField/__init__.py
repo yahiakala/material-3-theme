@@ -68,6 +68,19 @@ class TextField(TextFieldTemplate):
       trailing_icon.innerText = value
       text_field_input.style.paddingRight = "48px"
 
+  @property
+  def enabled(self):
+    return self._enabled
+
+  @enabled.setter
+  def enabled(self, value):
+    self._enabled = value
+    input = self.dom_nodes['text-field-input']
+    supporting_text = self.dom_nodes['text-field-supporting']
+    if value is False:
+      input.disabled = "true"
+      supporting_text.classList.add("text-field-supporting-disabled")
+
 
 
   
