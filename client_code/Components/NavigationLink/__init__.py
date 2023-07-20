@@ -1,7 +1,7 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
-from ..Functions import theme_color_to_css
+from ...Functions import theme_color_to_css
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
