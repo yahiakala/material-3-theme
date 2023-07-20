@@ -60,4 +60,4 @@ class Switch(SwitchTemplate):
       self._enabled_background_color = value
       color = theme_color_to_css(value)
       # jQuery('.switch-input:checked + .switch-slider').css('background-color', color)
-      print(self.dom_nodes['switch-input'])
+      print(self.dom_nodes['switch'].querySelector('.switch-input:checked + .switch-slider'))

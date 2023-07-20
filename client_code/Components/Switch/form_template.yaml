@@ -740,8 +740,8 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<label class=\"switch\">\n  <input class=\"switch-input\" anvil-name=\"\
-      switch-input\" type=\"checkbox\">\n  <span class=\"switch-slider\" anvil-name=\"\
-      switch-slider\"><span anvil-name=\"enabled-switch-icon\" class=\"enabled-switch-icon\"\
-      ></span><span anvil-name=\"disabled-switch-icon\" class=\"disabled-switch-icon\"\
-      ></span></span>\n</label>\n\n"}
+  properties: {html: "<label anvil-name=\"switch\" class=\"switch\">\n  <input class=\"\
+      switch-input\" anvil-name=\"switch-input\" type=\"checkbox\">\n  <span class=\"\
+      switch-slider\" anvil-name=\"switch-slider\"><span anvil-name=\"enabled-switch-icon\"\
+      \ class=\"enabled-switch-icon\"></span><span anvil-name=\"disabled-switch-icon\"\
+      \ class=\"disabled-switch-icon\"></span></span>\n</label>\n\n"}
