@@ -30,13 +30,3 @@ def style_property(dom_node_name, style_prop):
       self.dom_nodes[dom_node_name].style[style_prop] = value
 
   return property(getter, setter)
-
-def component_property(dom_node_name, prop):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].prop
-
-  def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].prop = value
-
-  return property(getter, setter)

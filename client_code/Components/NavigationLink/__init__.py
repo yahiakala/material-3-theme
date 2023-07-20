@@ -1,7 +1,7 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, component_property
+from ...Functions import color_property, style_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -20,14 +20,16 @@ class NavigationLink(NavigationLinkTemplate):
       open_form(self.navigate_to)
       self.selected = True
 
-  @property
-  def url(self):
-    return self.dom_nodes['navigation-link'].href
+  url = component_property('navigation-link', 'href')
+
+  # @property
+  # def url(self):
+  #   return self.dom_nodes['navigation-link'].href
     
-  @url.setter
-  def url(self, value):
-    if value:
-      self.dom_nodes['navigation-link'].href = value
+  # @url.setter
+  # def url(self, value):
+  #   if value:
+  #     self.dom_nodes['navigation-link'].href = value
 
   @property
   def text(self):
@@ -116,11 +118,11 @@ class NavigationLink(NavigationLinkTemplate):
 
   icon_color = color_property('navigation-link-icon', 'color')
 
-  font_family = component_property('navigation-link-text', 'fontFamily')
+  font_family = style_property('navigation-link-text', 'fontFamily')
   
-  font_size = component_property('navigation-link-text', 'fontSize')
+  font_size = style_property('navigation-link-text', 'fontSize')
   
-  icon_size = component_property('navigation-link-icon', 'fontSize')
+  icon_size = style_property('navigation-link-icon', 'fontSize')
 
   
 
