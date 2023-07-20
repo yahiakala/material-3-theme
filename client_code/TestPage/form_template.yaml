@@ -2,12 +2,19 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
-  - name: flow_panel_1
+  - name: flow_panel_2
     properties: {}
     type: FlowPanel
     layout_properties: {}
-  - name: button_1
+    components:
+    - name: button_2
+      properties: {}
+      type: form:Components.Button
+    - name: button_1
+      properties: {}
+      type: form:Components.Button
+  - name: flow_panel_1
     properties: {}
-    type: form:Components.Button
+    type: FlowPanel
     layout_properties: {}
 components: []
