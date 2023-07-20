@@ -1,4 +1,8 @@
-@import ./_/theme/anvil-m3/button.css;
+@import './_/theme/anvil-m3/button.css';
+
+:root {
+  --anvil-m3-primary: %color:Primary%;
+}
 
 body {
   font-family: roboto;
