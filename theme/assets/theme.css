@@ -2,9 +2,16 @@
 
 :root {
   --anvil-m3-primary: %color:Primary%;
+  --anvil-m3-on-primary: %color:On Primary%;
+  --anvil-m3-outline: %color:Outline%;
+  --anvil-m3-secondary-container: %color:Secondary Container%;
   --anvil-m3-primary-overlay-2: %color:Primary Overlay 2%;
   --anvil-m3-primary-overlay-3: %color:Primary Overlay 3%;
   --anvil-m3-on-disabled: %color:On Disabled%;
+  --anvil-m3-disabled-container: %color:Disabled Container%;
+  --anvil-m3-surface-container-low: %color:Surface Container Low%;
+  --anvil-m3-light-overlay-1: %color:Light Overlay 1%;
+  --anvil-m3-light-overlay-2: %color:Light Overlay 2%;
 }
 
 body {
