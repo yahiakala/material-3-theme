@@ -8,7 +8,7 @@ properties:
 - {name: navigation_rail_color, type: string, default_value: ''}
 - {name: background_color, type: string, default_value: ''}
 - {name: text_color, type: string, default_value: ''}
-- {name: prop, type: string, default_value: '', description: Page title}
+- {name: app_title, type: string, default_value: '', description: Page title}
 is_package: true
 slots:
   slot_1:
@@ -32,20 +32,20 @@ container:
       \ class=\"material-symbols-outlined\">menu</span>\n  </div>\n  \n</div>\n\n\
       <div class=\"navigation-drawer-scrim\"></div>\n\n<div class=\"content\" anvil-slot=\"\
       content\" anvil-name=\"content\">\n  <p anvil-if-slot-empty=\"content\" style=\"\
-      font-style: italic;\">Add content here</p>\n</div>\n\n<script>\n  var appBar\
-      \ = $('.top-app-bar')\n  var navDrawerOpenBtn = $('.drawer-open-btn')\n  var\
-      \ navDrawerCloseBtn = $('.drawer-close-btn')\n  var navRail = $('.navigation-rail')\n\
-      \  var navDrawerScrim = $('.navigation-drawer-scrim')\n                    \
-      \     \n  document.addEventListener('scroll', function() {\n  if (appBar.hasClass('scrolled'))\
-      \ {\n    if (window.scrollY === 0) {\n      appBar.removeClass('scrolled')\n\
-      \    }\n  }\n  else {\n    appBar.addClass('scrolled')\n  }\n});\n\n  navDrawerOpenBtn.on('click',\
-      \ function() {\n    navDrawerScrim.css({display: 'block'})\n    setTimeout(()\
-      \ => {navDrawerScrim.animate({opacity: '1'}, 250,  function () {\n    })}, 100);\n\
-      \    navRail.addClass('shown')\n    setTimeout(() => {navRail.animate({left:\
-      \ \"0px\"}, 250,  function () {\n    })}, 100);\n  } )\n  \n  navDrawerCloseBtn.on('click',\
-      \ hideSidebar)\n  navDrawerScrim.on('click', hideSidebar)\n\n  function hideSidebar()\
-      \ {\n    setTimeout(() => {navDrawerScrim.animate({opacity: '0'}, 250,  function\
-      \ () {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"-100%\"\
-      }, 250, function () {\n      })}, 100)\n    setTimeout(() => {navRail.removeClass('shown')},\
+      font-style: italic;\">Add content here</p>\n</div>\n\n<!-- TODO: remove jQuery\
+      \ -->\n<script>\n  var appBar = $('.top-app-bar')\n  var navDrawerOpenBtn =\
+      \ $('.drawer-open-btn')\n  var navDrawerCloseBtn = $('.drawer-close-btn')\n\
+      \  var navRail = $('.navigation-rail')\n  var navDrawerScrim = $('.navigation-drawer-scrim')\n\
+      \                         \n  document.addEventListener('scroll', function()\
+      \ {\n  if (appBar.hasClass('scrolled')) {\n    if (window.scrollY === 0) {\n\
+      \      appBar.removeClass('scrolled')\n    }\n  }\n  else {\n    appBar.addClass('scrolled')\n\
+      \  }\n});\n\n  navDrawerOpenBtn.on('click', function() {\n    navDrawerScrim.css({display:\
+      \ 'block'})\n    setTimeout(() => {navDrawerScrim.animate({opacity: '1'}, 250,\
+      \  function () {\n    })}, 100);\n    navRail.addClass('shown')\n    setTimeout(()\
+      \ => {navRail.animate({left: \"0px\"}, 250,  function () {\n    })}, 100);\n\
+      \  } )\n  \n  navDrawerCloseBtn.on('click', hideSidebar)\n  navDrawerScrim.on('click',\
+      \ hideSidebar)\n\n  function hideSidebar() {\n    setTimeout(() => {navDrawerScrim.animate({opacity:\
+      \ '0'}, 250,  function () {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"\
+      -100%\"}, 250, function () {\n      })}, 100)\n    setTimeout(() => {navRail.removeClass('shown')},\
       \ 350)\n    setTimeout(() => {navDrawerScrim.css({display: 'none'})}, 350);\n\
       \  }\n\n</script>\n"}

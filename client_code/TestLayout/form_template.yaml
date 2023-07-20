@@ -1,12 +1,13 @@
 layout:
   type: form:StandardPageLayout
-  properties: {navigation_rail_collapse_to: Navigation drawer}
+  properties: {navigation_rail_collapse_to: Bottom app bar}
 is_package: true
 components_by_slot:
   slot_1: []
   slot_2:
   - name: navigation_link_1
-    properties: {icon: '', text: Home, material_icon: home, selected: true, badge: false}
+    properties: {icon: '', text: Home, material_icon: home, selected: true, badge: false,
+      navigate_to: AnotherPage}
     type: form:Components.NavigationLink
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
