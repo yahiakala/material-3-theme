@@ -745,7 +745,7 @@ container:
       \ style=\"display: none;\"></i>\n  \t\t<div class=\"label-text\" anvil-name=\"\
       label-text\">Label text</div>\n      <i class=\"trailing-icon material-symbols-outlined\"\
       \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</label>\n\
-      \  </div>\n  <label style=\"display:flex; justify-content: space-between\" for=\"\
-      tfield\" > \n    <span class=\"text-field-supporting\" anvil-name=\"text-field-supporting\"\
+      \  </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
+      \ \n    <span class=\"text-field-supporting\" anvil-name=\"text-field-supporting\"\
       \ >Suporting text</span>\n    <span style=\"display: none\" class=\"text-field-character-count\"\
       \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
