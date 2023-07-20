@@ -2,6 +2,17 @@ from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
 from ...Functions import theme_color_to_css
+import anvil.designer
+
+def theme_color_property(dom_node_name, style_prop):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].style[style_prop]
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].style[style_prop] = theme_color_to_css(value)
+
+  return property(getter, setter)
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
@@ -9,7 +20,8 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
-
+    if anvil.designer.in_designer:
+      anvil.designer.register_interaction(self, self.dom_nodes['navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
   def handle_click(self, event):
     event.preventDefault()
@@ -133,15 +145,8 @@ class NavigationLink(NavigationLinkTemplate):
   @font_family.setter
   def font_family(self, value):
     self.dom_nodes['navigation-link-text'].style.fontFamily = value
-  
-  @property
-  def text_color(self):
-    return self.dom_nodes['navigation-link-text'].style.color
 
-  @text_color.setter
-  def text_color(self, value):
-    if value:
-      self.dom_nodes['navigation-link-text'].style.color = theme_color_to_css(value)
+  text_color = theme_color_property('navigation-link-text', 'color')
   
   @property
   def icon_color(self):
