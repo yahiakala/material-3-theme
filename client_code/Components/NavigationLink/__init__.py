@@ -111,35 +111,17 @@ class NavigationLink(NavigationLinkTemplate):
   @navigate_to.setter
   def navigate_to(self, value):
     self._navigate_to = value
-  
-  @property
-  def icon_size(self):
-    return self.dom_nodes['navigation-link-icon'].style.fontSize
-
-  @icon_size.setter
-  def icon_size(self, value):
-    self.dom_nodes['navigation-link-icon'].style.fontSize = value
-
-  @property
-  def font_size(self):
-    return self.dom_nodes['navigation-link-text'].style.fontSize
-
-  @font_size.setter
-  def font_size(self, value):
-    self.dom_nodes['navigation-link-text'].style.fontSize = value
-
-  @property
-  def font_family(self):
-    return self.dom_nodes['navigation-link-text'].style.fontFamily
-
-  @font_family.setter
-  def font_family(self, value):
-    self.dom_nodes['navigation-link-text'].style.fontFamily = value
 
   text_color = color_property('navigation-link-text', 'color')
 
   icon_color = color_property('navigation-link-icon', 'color')
 
-  font_family = component_property('navigation-link-text', 'font')
+  font_family = component_property('navigation-link-text', 'fontFamily')
+  
+  font_size = component_property('navigation-link-text', 'fontSize')
+  
+  icon_size = component_property('navigation-link-icon', 'fontSize')
+
+  
 
 
