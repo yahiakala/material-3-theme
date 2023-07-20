@@ -4,16 +4,6 @@ import anvil.js
 from ...Functions import theme_color_to_css
 import anvil.designer
 
-def theme_color_property(dom_node_name, style_prop):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].style[style_prop]
-
-  def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].style[style_prop] = theme_color_to_css(value)
-
-  return property(getter, setter)
-
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
@@ -146,7 +136,7 @@ class NavigationLink(NavigationLinkTemplate):
   def font_family(self, value):
     self.dom_nodes['navigation-link-text'].style.fontFamily = value
 
-  text_color = theme_color_property('navigation-link-text', 'color')
+  text_color = color_property('navigation-link-text', 'color')
   
   @property
   def icon_color(self):

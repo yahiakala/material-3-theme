@@ -9,3 +9,14 @@ def theme_color_to_css(color:str):
     return app.theme_colors[color]
   else:
     return color
+
+#REUSABLE PROPERTIES
+def color_property(dom_node_name, style_prop):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].style[style_prop]
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].style[style_prop] = theme_color_to_css(value)
+
+  return property(getter, setter)
