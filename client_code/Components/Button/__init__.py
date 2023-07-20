@@ -41,8 +41,10 @@ class Button(ButtonTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
-    if value is False:
-      self.dom_nodes['button'].disabled = "true"
+    if value:
+      self.dom_nodes['button'].removeAttribute("disabled")
+    else:
+      self.dom_nodes['button'].setAttribute("disabled", " ")
 
   @property
   def appearance(self):

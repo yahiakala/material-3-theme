@@ -437,10 +437,8 @@ body {
 .text-field.outlined .text-field-input:hover { border: 1px solid %color:On Surface%; }
 .text-field.outlined .text-field-input:hover + .text-field-label { color: %color:On Surface%; }
 
-.text-field-input:disabled {
-  cursor: not-allowed;
-  color: %color:On Disabled%;
-}
+.text-field.outlined .text-field-input:disabled { border: 1px solid %color:Disabled Container%; }
+.text-field.outlined .text-field-input:disabled + .text-field-label { color: %color:On Disabled%; }
 
 
 
