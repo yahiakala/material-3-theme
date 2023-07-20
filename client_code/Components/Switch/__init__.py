@@ -57,7 +57,6 @@ class Switch(SwitchTemplate):
   @enabled_background_color.setter
   def enabled_background_color(self, value):
     if value:
-      print('enabled bg color', value)
       self._enabled_background_color = value
       color = theme_color_to_css(value)
       # jQuery('.switch-input:checked + .switch-slider').css('background-color', color)
