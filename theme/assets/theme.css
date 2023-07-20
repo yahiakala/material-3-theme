@@ -2,6 +2,7 @@
 
 :root {
   --anvil-m3-primary: %color:Primary%;
+  --anvil-m3-primary-container: %color:Primary Container%;
   --anvil-m3-on-primary: %color:On Primary%;
   --anvil-m3-outline: %color:Outline%;
   --anvil-m3-secondary-container: %color:Secondary Container%;
