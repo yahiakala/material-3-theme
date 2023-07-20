@@ -4,8 +4,16 @@
   --anvil-m3-primary: %color:Primary%;
   --anvil-m3-primary-container: %color:Primary Container%;
   --anvil-m3-on-primary: %color:On Primary%;
-  --anvil-m3-outline: %color:Outline%;
+  --anvil-m3-on-primary-container: %color:On Primary Container%;
+  --anvil-m3-secondary: %color:Secondary%;
   --anvil-m3-secondary-container: %color:Secondary Container%;
+  --anvil-m3-on-secondary: %color:On Secondary%;
+  --anvil-m3-on-secondary-container: %color:On Secondary Container%;
+  --anvil-m3-tertiary: %color:Tertiary%;
+  --anvil-m3-tertiary-container: %color:Tertiary Container%;
+  --anvil-m3-on-tertiary: %color:On Tertiary%;
+  --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
+  --anvil-m3-outline: %color:Outline%;
   --anvil-m3-primary-overlay-2: %color:Primary Overlay 2%;
   --anvil-m3-primary-overlay-3: %color:Primary Overlay 3%;
   --anvil-m3-on-disabled: %color:On Disabled%;
