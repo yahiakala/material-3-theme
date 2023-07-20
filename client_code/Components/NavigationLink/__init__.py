@@ -29,14 +29,8 @@ class NavigationLink(NavigationLinkTemplate):
     if value:
       self.dom_nodes['navigation-link'].href = value
 
-  @property
-  def text(self):
-    return self.dom_nodes['navigation-link-text'].innerHTML
 
-  @text.setter
-  def text(self, value):
-    if value:
-      self.dom_nodes['navigation-link-text'].innerHTML = value
+  text = component_property('navigation-link-text', 'innerHTML')
 
   @property
   def icon(self):
