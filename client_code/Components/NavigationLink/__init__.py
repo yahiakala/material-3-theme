@@ -20,16 +20,14 @@ class NavigationLink(NavigationLinkTemplate):
       open_form(self.navigate_to)
       self.selected = True
 
-  url = component_property('navigation-link', 'href')
-
-  # @property
-  # def url(self):
-  #   return self.dom_nodes['navigation-link'].href
+  @property
+  def url(self):
+    return self.dom_nodes['navigation-link'].href
     
-  # @url.setter
-  # def url(self, value):
-  #   if value:
-  #     self.dom_nodes['navigation-link'].href = value
+  @url.setter
+  def url(self, value):
+    if value:
+      self.dom_nodes['navigation-link'].href = value
 
   @property
   def text(self):
