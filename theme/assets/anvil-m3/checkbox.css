@@ -7,9 +7,16 @@
   align-items: center;
 }
 
-.anvil-m3-checkmark {
+input.anvil-m3-checkbox:after {
   font-size: 18px !important;
-  display: none !important;
+  font-family: 'Material Symbols Outlined';
+  content: "done";
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  color: var(--anvil-m3-on-primary);
+  display: none;
+  margin-top: -4px;
 }
 
 input.anvil-m3-checkbox {
@@ -18,9 +25,14 @@ input.anvil-m3-checkbox {
   width: 18px;
   height: 18px;
   border-radius: 2px;
-  background-color: var(--anvil-m3-on-surface);
+  border: 2px solid var(--anvil-m3-on-surface-variant);
 }
 
-input.anvil-m3-checkbox:checked + .anvil-m3-checkmark {
+input.anvil-m3-checkbox:checked:after {
   display: block !important;
+}
+
+input.anvil-m3-checkbox:checked {
+  background-color: var(--anvil-m3-primary);
+  border: 0px;
 }
