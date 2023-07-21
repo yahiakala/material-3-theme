@@ -2,16 +2,20 @@
   height: 40px;
   width: 40px;
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .anvil-m3-checkmark {
   font-size: 18px !important;
-  margin-left: -18px;
+  display: none !important;
 }
 
 input.anvil-m3-checkbox {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  margin: 0;
+  opacity: 0;
+}
+
+input.anvil-m3-checkbox:checked + .anvil-m3-checkmark {
+  display: block !important;
 }
