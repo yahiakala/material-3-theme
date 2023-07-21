@@ -25,8 +25,11 @@
   --anvil-m3-light-overlay-2: %color:Light Overlay 2%;
   --anvil-m3-dark-overlay-1: %color:Dark Overlay 1%;
   --anvil-m3-dark-overlay-2: %color:Dark Overlay 2%;
+  --anvil-m3-surface: %color:Surface%;
   --anvil-m3-on-surface: %color:On Surface%;
   --anvil-m3-on-surface-variant: %color:On Surface Variant%;
+  --anvil-m3-error: %color:Error%;
+  --anvil-m3-on-error: %color:On Error%;
 }
 
 body {

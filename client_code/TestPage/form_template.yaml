@@ -2,27 +2,33 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
-  - name: flow_panel_2
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: button_2
-      properties: {}
-      type: form:Components.Button
-    - name: button_1
-      properties: {}
-      type: form:Components.Button
-  - name: flow_panel_1
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-  - name: switch_1
-    properties: {}
-    type: form:Components.Switch
+  - name: checkbox_7
+    properties: {label: Checkbox}
+    type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_1
-    properties: {}
+    properties: {disabled: false, selected: true, label: Selected}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_2
+    properties: {error: true, label: Error}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_3
+    properties: {disabled: true, label: Disabled}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_4
+    properties: {label: Error disabled, error: true, disabled: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_5
+    properties: {label: Selected disabled, selected: true, disabled: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+    data_bindings: []
+  - name: checkbox_6
+    properties: {label: Selected error disabled, selected: true, error: true, disabled: true}
     type: form:Components.Checkbox
     layout_properties: {}
 components: []
