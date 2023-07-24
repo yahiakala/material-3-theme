@@ -1,0 +1,166 @@
+.navigation-link {
+  text-align: center;
+  text-decoration: none;
+  color: %color:On Surface Variant%;
+  transition: background 0.2s;
+  font-size: 12px;
+}
+
+.navigation-link .navigation-link-text {
+  margin-bottom: 14px;
+}
+  
+.navigation-link [anvil-name=navigation-link-icon] {
+  transition: background 0.2s;
+  padding: 8px 20px; 
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  margin: auto;
+  font-size: 24px;
+}
+
+.navigation-link .navigation-link-text {
+  padding-top: 4px;
+}
+
+.navigation-link:hover [anvil-name=navigation-link-icon]{
+  background-color: %color:Dark Overlay 1%;
+  font-weight: bold;
+}
+
+.navigation-link:focus [anvil-name=navigation-link-icon], .navigation-link:active [anvil-name=navigation-link-icon]{
+  background-color: %color:Dark Overlay 2%;
+  font-weight: bold;
+}
+
+.navigation-link.selected {
+  color: %color:On Secondary Container%;
+}
+
+.navigation-link.selected [anvil-name=navigation-link-icon] {
+  background-color: %color:Secondary Container%;
+}
+
+.navigation-link.selected:hover [anvil-name=navigation-link-icon] {
+  background: linear-gradient(0deg, %color:Dark Overlay 1% 0%, %color:Dark Overlay 1% 100%), %color:Secondary Container%;
+}
+
+.navigation-link.selected:focus [anvil-name=navigation-link-icon], .navigation-link.selected:active [anvil-name=navigation-link-icon] {
+  background: linear-gradient(0deg, %color:Dark Overlay 2% 0%, %color:Dark Overlay 2% 100%), %color:Secondary Container%;
+}
+
+.navigation-link .icon-badge {
+  font-size: 11px;
+  color: %color:On Error%;
+  display: block;
+  background-color: %color:Error%;
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+  position: absolute;
+  margin-top: -34px;
+  margin-left: 46px;
+  font-family: Roboto;
+}
+
+.navigation-link .icon-badge.large-badge {
+  padding: 4px;
+  height: fit-content;
+  border-radius: 16px;
+  width: fit-content;
+  margin-top: -40px;
+  margin-left: 40px;
+}
+
+/*on mobile in drawer*/
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-radius: 100px
+}
+}
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link .navigation-link-text {
+  margin: 0px;
+  padding: 0px;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link [anvil-name=navigation-link-icon] {
+  margin: 0px
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected [anvil-name=navigation-link-icon] {
+  background: transparent
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected {
+  background-color: %color:Secondary Container%;
+  color: %color:On Secondary Container%;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link:hover{
+  background-color: %color:Dark Overlay 1%;
+}
+}
+
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link:active, .navigation-rail.navigation-drawer.shown .navigation-link:focus{
+  background-color: %color:Dark Overlay 2%;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover{
+  background: linear-gradient(0deg, %color:Dark Overlay 1% 0%, %color:Dark Overlay 1% 100%), %color:Secondary Container%;
+  }
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:active, .navigation-rail.navigation-drawer.shown .navigation-link.selected:focus{
+  background: linear-gradient(0deg, %color:Dark Overlay 2% 0%, %color:Dark Overlay 2% 100%), %color:Secondary Container%;
+  }
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-link:hover [anvil-name=navigation-link-icon], 
+.navigation-rail.navigation-drawer.shown .navigation-link:focus [anvil-name=navigation-link-icon],
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:hover [anvil-name=navigation-link-icon],
+.navigation-rail.navigation-drawer.shown .navigation-link.selected:focus [anvil-name=navigation-link-icon]
+{
+  background: unset;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .navigation-rail-content {
+  width:100%;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .icon-badge {
+  margin-top: -24px;
+  margin-left: 34px;
+}
+}
+
+@media(max-width: 600px) {
+.navigation-rail.navigation-drawer.shown .icon-badge.large-badge {
+  margin-top: -23px;
+  margin-left: 28px;
+}
+}
