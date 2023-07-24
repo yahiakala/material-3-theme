@@ -2,7 +2,6 @@
   display: inline-flex;
   background: none;
   border: none;
-  color: var(--anvil-m3-primary);
   padding: 0 16px; /* But how would you handle the cards that have pictures? */
   margin: 0 4px; /* it says max of 8dp between cards - maybe that should be the responsibility of whoever is implementing it? */
   cursor: pointer;

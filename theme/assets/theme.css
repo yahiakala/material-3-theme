@@ -1,4 +1,5 @@
 @import './_/theme/anvil-m3/button.css';
+@import './_/theme/anvil-m3/card.css';
 
 :root {
   --anvil-m3-primary: %color:Primary%;
