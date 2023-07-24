@@ -285,3 +285,4 @@ color_scheme:
   - {name: On Error, color: '#FFFFFF'}
   - {name: Surface Container Low, color: '#F7F2FA'}
   - {name: Surface Container Highest, color: '#E6E0E9'}
+  - {name: Dark Overlay 3, color: 'rgba(29, 25, 43, 0.16)'}

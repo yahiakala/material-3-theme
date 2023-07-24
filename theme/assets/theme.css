@@ -15,6 +15,9 @@
   --anvil-m3-on-tertiary: %color:On Tertiary%;
   --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
   --anvil-m3-surface-container-highest: %color:Surface Container Highest%;
+  --anvil-m3-surface: %color:Surface%;
+  --anvil-m3-on-surface: %color:On Surface%;
+
 
   --anvil-m3-outline: %color:Outline%;
   --anvil-m3-primary-overlay-2: %color:Primary Overlay 2%;
@@ -26,6 +29,7 @@
   --anvil-m3-light-overlay-2: %color:Light Overlay 2%;
   --anvil-m3-dark-overlay-1: %color:Dark Overlay 1%;
   --anvil-m3-dark-overlay-2: %color:Dark Overlay 2%;
+  --anvil-m3-dark-overlay-3: %color:Dark Overlay 3%;
 }
 
 body {

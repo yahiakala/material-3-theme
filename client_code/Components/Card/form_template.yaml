@@ -4,6 +4,8 @@ properties:
   default_binding_prop: true
   options: ['', elevated, filled, outlined]
 - {name: disabled, type: boolean, default_value: false}
+- {name: interactive, type: boolean, default_value: false, description: 'Dictates
+    if components will have interaction states (hover, focus, etc.)'}
 is_package: true
 custom_component: true
 components: []
@@ -12,7 +14,7 @@ container:
   properties: {html: "<!-- <button anvil-name=\"button\" class=\"button\">\n  <i anvil-name=\"\
       button-icon\" class=\"material-symbols-outlined hidden\"></i><span anvil-name=\"\
       button-text\">Button</span>\n</button> -->\n\n\n<div anvil-name=\"anvil-m3-card\"\
-      \ class=\"anvil-m3-card\">\n  <div anvil-slot=\"mySlot\" anvil-name=\"anvil-m3-card-content\"\
-      \ anvil>\n    <p anvil-if-slot-empty=\"mySlot\">Card Content</p>\n  </div>\n\
-      </div>", visible: true}
+      \ class=\"anvil-m3-card\" tabindex=\"0\">\n  <div anvil-slot=\"mySlot\" anvil-name=\"\
+      anvil-m3-card-content\" anvil>\n    <p anvil-if-slot-empty=\"mySlot\">Card</p>\n\
+      \  </div>\n</div>", visible: true}
 custom_component_container: true
