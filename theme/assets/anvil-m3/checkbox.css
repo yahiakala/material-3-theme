@@ -65,9 +65,43 @@ input.anvil-m3-checkbox:disabled:after, .anvil-m3-checkbox-container.anvil-m3-ch
 
 /*Hover, focus, active states*/
 
-.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover{
-  background-color: pink;
+.anvil-m3-checkbox-hover {
   border-radius: 40px;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-dark-overlay-1);
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:checked) {
+  background-color: var(--anvil-m3-primary-overlay-2);
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error:hover .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-error-overlay-1);
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:disabled) {
+  background-color: transparent;
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-dark-overlay-2);
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:checked) {
+  background-color: var(--anvil-m3-primary-overlay-3);
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error:focus .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-error-overlay-2);
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:disabled) {
+  background-color: transparent;
 }
