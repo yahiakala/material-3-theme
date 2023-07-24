@@ -15,7 +15,6 @@ class NavigationLink(NavigationLinkTemplate):
       anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
   def handle_click(self, event):
-    event.preventDefault()
     self.raise_event("click")
     if self.navigate_to:
       open_form(self.navigate_to)
