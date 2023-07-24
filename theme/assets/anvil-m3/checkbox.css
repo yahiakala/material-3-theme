@@ -1,0 +1,107 @@
+.anvil-m3-checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 24px;
+}
+
+input.anvil-m3-checkbox:after {
+  font-size: 18px !important;
+  font-family: 'Material Symbols Outlined';
+  content: "done";
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  color: var(--anvil-m3-on-primary);
+  display: none;
+  margin-top: -4px;
+}
+
+input.anvil-m3-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid var(--anvil-m3-on-surface-variant);
+}
+
+input.anvil-m3-checkbox:checked:after {
+  display: block !important;
+}
+
+input.anvil-m3-checkbox:checked {
+  background-color: var(--anvil-m3-primary);
+  border: 0px;
+}
+
+/*Error states*/
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox {
+  border: 2px solid var(--anvil-m3-error);
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox:checked {
+  background-color: var(--anvil-m3-error);
+  border: 0px;
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox:after {
+  color: var(--anvil-m3-on-error);
+}
+
+/*Disabled states*/
+
+input.anvil-m3-checkbox:disabled, .anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox:disabled{
+  border-color: var(--anvil-m3-on-disabled);
+}
+
+input.anvil-m3-checkbox:disabled:checked, .anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox:disabled:checked {
+  background-color: var(--anvil-m3-on-disabled);
+}
+
+input.anvil-m3-checkbox:disabled:after, .anvil-m3-checkbox-container.anvil-m3-checkbox-error input.anvil-m3-checkbox:disabled:after  {
+  color: var(--anvil-m3-surface);
+}
+
+/*Hover, focus, active states*/
+
+.anvil-m3-checkbox-hover {
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-dark-overlay-1);
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:checked) {
+  background-color: var(--anvil-m3-primary-overlay-2);
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error:hover .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-error-overlay-1);
+}
+
+.anvil-m3-checkbox-container:hover .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:disabled) {
+  background-color: transparent;
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-dark-overlay-2);
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:checked) {
+  background-color: var(--anvil-m3-primary-overlay-3);
+}
+
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error:focus .anvil-m3-checkbox-hover {
+  background-color: var(--anvil-m3-error-overlay-2);
+}
+
+.anvil-m3-checkbox-container:focus .anvil-m3-checkbox-hover:has(input.anvil-m3-checkbox:disabled) {
+  background-color: transparent;
+}

@@ -1,0 +1,16 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div anvil-name=\"anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\"\
+      >\n  <div class=\"anvil-m3-checkbox-hover\">\n    <input class=\"anvil-m3-checkbox\"\
+      \ anvil-name=\"anvil-m3-checkbox\" type=\"checkbox\">\n  </div>\n  <label class=\"\
+      anvil-m3-checkbox-label\" anvil-name=\"anvil-m3-checkbox-label\"></label>\n\
+      </div>\n"}
+components: []
+is_package: true
+custom_component: true
+properties:
+- {name: selected, type: boolean, default_value: false, default_binding_prop: true,
+  description: Whether or not the checkbox is checked}
+- {name: disabled, type: boolean, default_value: false, description: Whether or not the checkbox is disabled}
+- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
+- {name: label, type: string, default_value: Label}
