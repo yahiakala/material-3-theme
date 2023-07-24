@@ -9,9 +9,9 @@ class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['navigation-link'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)
     if anvil.designer.in_designer:
-      anvil.designer.register_interaction(self, self.dom_nodes['navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
+      anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
   def handle_click(self, event):
     event.preventDefault()
@@ -22,21 +22,21 @@ class NavigationLink(NavigationLinkTemplate):
 
   @property
   def url(self):
-    return self.dom_nodes['navigation-link'].href
+    return self.dom_nodes['anvil-m3-navigation-link'].href
     
   @url.setter
   def url(self, value):
     if value:
-      self.dom_nodes['navigation-link'].href = value
+      self.dom_nodes['anvil-m3-navigation-link'].href = value
 
   @property
   def text(self):
-    return self.dom_nodes['navigation-link-text'].innerHTML
+    return self.dom_nodes['anvil-m3-navigation-link-text'].innerHTML
     
   @text.setter
   def text(self, value):
     if value:
-      self.dom_nodes['navigation-link-text'].innerHTML = value
+      self.dom_nodes['anvil-m3-navigation-link-text'].innerHTML = value
 
   @property
   def icon(self):
@@ -44,7 +44,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   @icon.setter
   def icon(self, value):
-    link_icon = self.dom_nodes['navigation-link-icon']
+    link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
     self._icon = value
     # value = value.replace(":", "-")
     # if value:
@@ -59,7 +59,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   @material_icon.setter
   def material_icon(self, value):
-    link_icon = self.dom_nodes['navigation-link-icon']
+    link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
     self._material_icon = value
     if value:
       link_icon.className = ""
@@ -73,9 +73,9 @@ class NavigationLink(NavigationLinkTemplate):
   @selected.setter
   def selected(self, value):
     if value:
-      self.dom_nodes['navigation-link'].classList.add('selected')
+      self.dom_nodes['anvil-m3-navigation-link'].classList.add('anvil-m3-navigation-link-selected')
     else:
-      self.dom_nodes['navigation-link'].classList.remove('selected')
+      self.dom_nodes['anvil-m3-navigation-link'].classList.remove('anvil-m3-navigation-link-selected')
     self._selected = value
 
   @property
@@ -85,9 +85,9 @@ class NavigationLink(NavigationLinkTemplate):
   @badge.setter
   def badge(self, value):
     if value:
-      self.dom_nodes['icon-badge'].style.display = "block"
+      self.dom_nodes['anvil-m3-icon-badge'].style.display = "block"
     else:
-      self.dom_nodes['icon-badge'].style.display = "none"
+      self.dom_nodes['anvil-m3-icon-badge'].style.display = "none"
     self._badge = value
 
   @property
@@ -97,11 +97,11 @@ class NavigationLink(NavigationLinkTemplate):
   @badge_count.setter
   def badge_count(self, value):
     if value and self.badge:
-      self.dom_nodes['icon-badge'].innerHTML = value
-      self.dom_nodes['icon-badge'].classList.add("large-badge")
+      self.dom_nodes['anvil-m3-icon-badge'].innerHTML = value
+      self.dom_nodes['anvil-m3-icon-badge'].classList.add("anvil-m3-large-badge")
     else:
-      self.dom_nodes['icon-badge'].innerHTML = ""
-      self.dom_nodes['icon-badge'].classList.remove("large-badge")
+      self.dom_nodes['anvil-m3-icon-badge'].innerHTML = ""
+      self.dom_nodes['anvil-m3-icon-badge'].classList.remove("anvil-m3-large-badge")
     self._badge_count = value
 
   @property
@@ -112,15 +112,15 @@ class NavigationLink(NavigationLinkTemplate):
   def navigate_to(self, value):
     self._navigate_to = value
 
-  text_color = color_property('navigation-link-text', 'color')
+  text_color = color_property('anvil-m3-navigation-link-text', 'color')
 
-  icon_color = color_property('navigation-link-icon', 'color')
+  icon_color = color_property('anvil-m3-navigation-link-icon', 'color')
 
-  font_family = style_property('navigation-link-text', 'fontFamily')
+  font_family = style_property('anvil-m3-navigation-link-text', 'fontFamily')
   
-  font_size = style_property('navigation-link-text', 'fontSize')
+  font_size = style_property('anvil-m3-navigation-link-text', 'fontSize')
   
-  icon_size = style_property('navigation-link-icon', 'fontSize')
+  icon_size = style_property('anvil-m3-navigation-link-icon', 'fontSize')
 
   
 
