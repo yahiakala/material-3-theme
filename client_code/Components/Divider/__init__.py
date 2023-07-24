@@ -12,10 +12,10 @@ class Divider(DividerTemplate):
 
   @type.setter
   def type(self, value):
-    divider = self.dom_nodes['divider']
+    divider = self.dom_nodes['anvil-m3-divider']
     self._type = value
     value = value.lower().replace(' ', '-')
-    divider.className = "divider"
-    self.dom_nodes['divider'].classList.add(value)
+    divider.className = "anvil-m3-divider"
+    self.dom_nodes['anvil-m3-divider'].classList.add(value)
 
 

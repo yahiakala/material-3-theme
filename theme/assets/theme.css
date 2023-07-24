@@ -286,18 +286,18 @@ body {
 }
 
 /*DIVIDER*/
-.divider {
+.anvil-m3-divider {
   border: solid 1px %color:Outline Variant%;
   margin-top: 8px;
   margin-bottom: 8px
 }
 
-.divider.inset {
+.anvil-m3-divider.inset {
   margin-left: 16px;
   margin-right: 16px;
 }
 
-.divider.full-width {
+.anvil-m3-divider.full-width {
   margin-left: 0px;
   margin-right: 0px;
 }

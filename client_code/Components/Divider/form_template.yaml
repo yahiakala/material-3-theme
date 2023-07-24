@@ -1,6 +1,6 @@
 container:
   type: HtmlTemplate
-  properties: {html: '<div class="divider" anvil-name="divider">
+  properties: {html: '<div class="anvil-m3-divider" anvil-name="anvil-m3-divider">
 
       </div>'}
 components: []
