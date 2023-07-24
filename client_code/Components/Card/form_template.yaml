@@ -1,16 +1,18 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<!-- <button anvil-name=\"button\" class=\"button\">\n  <i anvil-name=\"\
-      button-icon\" class=\"material-symbols-outlined hidden\"></i><span anvil-name=\"\
-      button-text\">Button</span>\n</button> -->\n\n\n<div anvil-name=\"anvil-m3-card\"\
-      \ class=\"anvil-m3-card\">\n  <div anvil-name=\"card-content\">Card Content</div>\n\
-      </div>", visible: true}
-components: []
-is_package: true
-custom_component: true
 properties:
 - name: appearance
   type: enum
   default_binding_prop: true
   options: ['', elevated, filled, outlined]
 - {name: disabled, type: boolean, default_value: false}
+is_package: true
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<!-- <button anvil-name=\"button\" class=\"button\">\n  <i anvil-name=\"\
+      button-icon\" class=\"material-symbols-outlined hidden\"></i><span anvil-name=\"\
+      button-text\">Button</span>\n</button> -->\n\n\n<div anvil-name=\"anvil-m3-card\"\
+      \ class=\"anvil-m3-card\">\n  <div anvil-slot=\"mySlot\" anvil-name=\"anvil-m3-card-content\"\
+      \ anvil>\n    <p anvil-if-slot-empty=\"mySlot\">Card Content</p>\n  </div>\n\
+      </div>", visible: true}
+custom_component_container: true
