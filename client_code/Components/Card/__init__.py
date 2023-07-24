@@ -12,8 +12,8 @@ class Card(CardTemplate):
 
   @appearance.setter
   def appearance(self, value):
-    button = self.dom_nodes['button']
+    card = self.dom_nodes['card']
     if value:
-      button.classList.add(value)
+      card.classList.add(value)
 
   
