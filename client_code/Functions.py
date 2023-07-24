@@ -30,3 +30,70 @@ def style_property(dom_node_name, style_prop):
       self.dom_nodes[dom_node_name].style[style_prop] = value
 
   return property(getter, setter)
+
+def innerHTML_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].innerHTML
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].innerHTML = value
+
+  return property(getter, setter)
+
+def innerText_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].innerText
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].innerText = value
+
+  return property(getter, setter)
+
+def href_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].href
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].href = value
+
+  return property(getter, setter)
+
+def href_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].href
+
+  def setter(self, value):
+    if value:
+      self.dom_nodes[dom_node_name].href = value
+
+  return property(getter, setter)
+
+def checked_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].checked
+
+  def setter(self, value):
+    self.dom_nodes[dom_node_name].checked = value
+
+  return property(getter, setter)
+
+def enabled_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].enabled
+
+  def setter(self, value):
+    self.dom_nodes[dom_node_name].enabled = value
+
+  return property(getter, setter)
+
+def disabled_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].disabled
+
+  def setter(self, value):
+    self.dom_nodes[dom_node_name].disabled = value
+
+  return property(getter, setter)
