@@ -12,5 +12,5 @@ properties:
 - name: appearance
   type: enum
   default_binding_prop: true
-  options: [elevated, filled, outlined]
+  options: ['', elevated, filled, outlined]
 - {name: disabled, type: boolean, default_value: false}

@@ -15,5 +15,6 @@ class Card(CardTemplate):
     card = self.dom_nodes['anvil-m3-card']
     if value:
       card.classList.add(value)
+    # needs to replace instead of adding.
 
   
