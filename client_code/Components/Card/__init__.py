@@ -12,7 +12,7 @@ class Card(CardTemplate):
 
   @appearance.setter
   def appearance(self, value):
-    card = self.dom_nodes['card']
+    card = self.dom_nodes['anvil-m3-card']
     if value:
       card.classList.add(value)
 
