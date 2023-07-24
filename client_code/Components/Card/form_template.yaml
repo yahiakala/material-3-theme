@@ -6,3 +6,9 @@ container:
       card\">\n  \n</div>", visible: true}
 components: []
 is_package: true
+custom_component: true
+properties:
+- name: appearance
+  type: enum
+  default_binding_prop: true
+  options: [elevated, filled, outlined]

@@ -21,4 +21,8 @@ components_by_slot:
     properties: {}
     type: form:Components.Switch
     layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
 components: []
