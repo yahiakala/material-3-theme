@@ -25,4 +25,12 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+  - name: card_2
+    properties: {appearance: filled}
+    type: form:Components.Card
+    layout_properties: {}
+  - name: card_3
+    properties: {appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {}
 components: []
