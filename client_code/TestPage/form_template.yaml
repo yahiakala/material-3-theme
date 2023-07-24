@@ -1,5 +1,9 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_1: []
+  slot_1:
+  - name: checkbox_1
+    properties: {selected: true, disabled: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
 components: []

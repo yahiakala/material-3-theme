@@ -246,7 +246,7 @@ body {
 
 /*DIALOGS: ALERTS AND NOTIFICATIONS*/
 /*Default Anvil alert*/
-.aw-modal-content {
+.anvil-modal-content {
   background: linear-gradient(0deg, %color:Primary Overlay 3%, %color:Primary Overlay 3%), %color:Background%;
   box-shadow: none;
   border: none;
@@ -254,34 +254,34 @@ body {
   padding: 24px;
 }
 
-.aw-modal-header {
+.anvil-modal-header {
   padding: 0;
   padding-bottom: 16px;
   border-bottom: none;
 }
 
-.aw-close {
+.anvil-close {
   display: none;
 }
 
-.aw-modal-title.alert-title {
+.anvil-modal-title.alert-title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
 }
 
-.aw-modal-body {
+.anvil-modal-body {
   padding: 0;
 }
 
-.aw-modal-footer {
+.anvil-modal-footer {
   padding: 0;
   padding-top: 24px;
   border-top: none;
 }
 
 /*TODO: remove this when buttons are styled?*/
-.aw-modal-footer .btn {
+.anvil-modal-footer .btn {
   color: %color:Primary%;
   font-size: 14px;
   line-height: 20px;

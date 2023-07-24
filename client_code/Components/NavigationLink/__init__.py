@@ -1,7 +1,7 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, style_property, href_property
+from ...Functions import color_property, style_property, href_property, innerHTML_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -10,6 +10,7 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)
+    
     if anvil.designer.in_designer:
       anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
@@ -22,23 +23,7 @@ class NavigationLink(NavigationLinkTemplate):
 
   url = href_property('anvil-m3-navigation-link')
 
-  # @property
-  # def url(self):
-  #   return self.dom_nodes['anvil-m3-navigation-link'].href
-    
-  # @url.setter
-  # def url(self, value):
-  #   if value:
-  #     self.dom_nodes['anvil-m3-navigation-link'].href = value
-
-  @property
-  def text(self):
-    return self.dom_nodes['anvil-m3-navigation-link-text'].innerHTML
-    
-  @text.setter
-  def text(self, value):
-    if value:
-      self.dom_nodes['anvil-m3-navigation-link-text'].innerHTML = value
+  text = innerHTML_property('anvil-m3-navigation-link-text')
 
   @property
   def icon(self):

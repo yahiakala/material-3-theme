@@ -1,34 +1,17 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
+from ...Functions import checked_property, innerText_property, disabled_property
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  @property
-  def disabled(self):
-    return self.dom_nodes['anvil-m3-checkbox'].disabled
+  disabled = disabled_property('anvil-m3-checkbox')
 
-  @disabled.setter
-  def disabled(self, value):
-    self.dom_nodes['anvil-m3-checkbox'].disabled = value
+  selected = checked_property('anvil-m3-checkbox')
 
-  @property
-  def selected(self):
-    return self.dom_nodes['anvil-m3-checkbox'].checked
-
-  @selected.setter
-  def selected(self, value):
-    self.dom_nodes['anvil-m3-checkbox'].checked = value
-
-  @property
-  def label(self):
-    return self.dom_nodes['anvil-m3-checkbox-label'].innerText
-
-  @label.setter
-  def label(self, value):
-    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value
+  label = innerText_property('anvil-m3-checkbox-label')
 
   @property
   def error(self):
