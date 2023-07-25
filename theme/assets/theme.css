@@ -91,7 +91,7 @@ body {
 
 
 .anvil-m3-top-app-bar.anvil-m3-scrolled {
-  background-color: %color:Primary Overlay 2%;
+  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
 
 }
 

@@ -16,13 +16,25 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
 
     window.document.addEventListener('scroll', self.add_scroll_class)
+    self.nav_drawer_open_btn.on('click', self.open_nav_drawer)
+  #   navDrawerScrim.css({display: 'block'})
+  #   setTimeout(() => {navDrawerScrim.animate({opacity: '1'}, 250,  function () {
+  #   })}, 100);
+  #   navRail.addClass('anvil-m3-shown')
+  #   setTimeout(() => {navRail.animate({left: "0px"}, 250,  function () {
+  #   })}, 100);
+  # } )
+
+  def open_nav_drawer(self, e):
+    self.nav_drawer_scrim.style.display = 'block'
+    window.setTimeout(lambda x: self.nav_rail_scrim.animate({opacity: '1'}, 250))
                                   
-  def add_scroll_class(self):
-    if self.app_bar.hasClass('anvil-m3-scrolled'):
+  def add_scroll_class(self, e):
+    if self.app_bar.classList.contains('anvil-m3-scrolled'):
       if window.scrollY == 0:
-        self.app_bar.removeClass('anvil-m3-scrolled')
+        self.app_bar.classList.remove('anvil-m3-scrolled')
     else:
-      self.app_bar.addClass('anvil-m3-scrolled')    
+      self.app_bar.classList.add('anvil-m3-scrolled')    
   
   @property
   def navigation_rail_collapse_to(self):

@@ -22,4 +22,8 @@ components_by_slot:
     layout_properties: {}
   slot_2: []
   slot_3: []
-slots: {}
+slots:
+  slot_3:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_3}

@@ -2,4 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1: []
+  slot_3:
+  - name: image_1
+    properties: {source: 'https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj',
+      height: 543, display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {}
 components: []
