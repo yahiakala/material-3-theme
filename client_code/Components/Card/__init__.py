@@ -4,6 +4,7 @@ from anvil import *
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    self.printAllClasses()
 
   @property
   def appearance(self):
@@ -11,36 +12,39 @@ class Card(CardTemplate):
     
   @appearance.setter
   def appearance(self, value):
-    classes = self.dom_nodes['anvil-m3-card'].classList
     self._appearance = value
+    classes = self.dom_nodes['anvil-m3-card'].classList
     if (value):
-      if (value is "outlined"):
-        classes.remove("elevated")
-        classes.remove("filled")
-        classes.add(value)
-    else:
-      classes.remove("outlined")
-      classes.remove("elevated")
-      classes.remove("filled")
-
+      for c in classes:
+        if (c in ["outlined", "filled", "elevated"]):
+          classes.remove(c)
+      classes.add(value)
     
   @property
   def interactive(self):
     return self._interactive
+    
   @interactive.setter
   def interactive(self, value):
-    card = self.dom_nodes['anvil-m3-card']
-    classes = card.classList
-    print(classes)
+    self._interactive = value
+    classes = self.dom_nodes['anvil-m3-card'].classList
+    classes.toggle('interactive', value)
+      
+  @property
+  def disabled(self):
+    return self.disabled
     
-    alreadyInteractive = self.hasClass('interactive')
-    if (alreadyInteractive and not value):
-      print("remove value")
-    elif (not alreadyInteractive and value):
-      card.classList.add(value)  
+  @disabled.setter
+  def disabled(self, value):
+    self._disabled = value
+    classes = self.dom_nodes['anvil-m3-card'].classList
+    classes.toggle('disabled', value)
       
   def hasClass(self, className):
     classes = self.dom_nodes['anvil-m3-card'].classList
     return classes.contains(className)
-      
-  
+
+  def printAllClasses(self):
+    classes = self.dom_nodes['anvil-m3-card'].classList
+    for c in classes:
+      print(c)
