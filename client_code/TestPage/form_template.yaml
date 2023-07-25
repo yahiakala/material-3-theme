@@ -23,17 +23,29 @@ components_by_slot:
     type: form:Components.Switch
     layout_properties: {}
   - name: card_2
-    properties: {interactive: true, appearance: elevated}
+    properties: {interactive: false, appearance: elevated}
     type: form:Components.Card
     layout_properties: {}
     components:
     - name: label_1_copy_1
+      properties: {text: 'elevated default
+
+
+          '}
+      type: Label
+      layout_properties: {slot: anvil-m3-card-slot}
+  - name: card_2_copy_1
+    properties: {interactive: true, appearance: elevated}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1_copy_1_copy_1
       properties: {text: 'elevated interactive
 
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_3
     properties: {interactive: true, disabled: true, appearance: elevated}
     type: form:Components.Card
@@ -45,7 +57,7 @@ components_by_slot:
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_1
     properties: {interactive: true, appearance: filled}
     type: form:Components.Card
@@ -57,7 +69,7 @@ components_by_slot:
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_4
     properties: {interactive: true, disabled: true, appearance: filled}
     type: form:Components.Card
@@ -69,7 +81,7 @@ components_by_slot:
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_5
     properties: {interactive: true, appearance: outlined}
     type: form:Components.Card
@@ -81,7 +93,7 @@ components_by_slot:
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_6
     properties: {interactive: true, disabled: true, appearance: outlined}
     type: form:Components.Card
@@ -93,5 +105,5 @@ components_by_slot:
 
           '}
       type: Label
-      layout_properties: {slot: mySlot}
+      layout_properties: {slot: anvil-m3-card-slot}
 components: []

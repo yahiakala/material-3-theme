@@ -4,10 +4,7 @@ from anvil import *
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    # self.printAllClasses()
-    # self.dom_nodes['button'].addEventListener("click", self.handle_click)
-    # self.dom_nodes['anvil-m3-card'].addEventListener("mousedown", self.onMouseDown)
-
+    
   @property
   def appearance(self):
     return self._appearance
@@ -19,9 +16,9 @@ class Card(CardTemplate):
     # classes = self.dom_nodes['anvil-m3-card'].classList
     if (value):
       for c in classes:
-        if (c in ["outlined", "filled", "elevated"]):
+        if (c in ["anvil-m3-outlined", "anvil-m3-filled", "anvil-m3-elevated"]):
           classes.remove(c)
-      classes.add(value)
+      classes.add(f"anvil-m3-{value}")
     
   @property
   def interactive(self):
@@ -31,7 +28,7 @@ class Card(CardTemplate):
   def interactive(self, value):
     self._interactive = value
     classes = self.dom_nodes['anvil-m3-card'].classList
-    classes.toggle('interactive', value)
+    classes.toggle('anvil-m3-interactive', value)
       
   @property
   def disabled(self):
@@ -41,7 +38,7 @@ class Card(CardTemplate):
   def disabled(self, value):
     self._disabled = value
     classes = self.dom_nodes['anvil-m3-card'].classList
-    classes.toggle('disabled', value)
+    classes.toggle('anvil-m3-disabled', value)
       
   # def hasClass(self, className):
   #   classes = self.dom_nodes['anvil-m3-card'].classList
@@ -51,13 +48,3 @@ class Card(CardTemplate):
   #   classes = self.dom_nodes['anvil-m3-card'].classList
   #   for c in classes:
   #     print(c)
-
-  # def onMouseDown(self, event):
-  #   card = self.dom_nodes['anvil-m3-card']
-  #   print(event.clientY, card.getBoundingClientRect().top)
-  #   print(event.clientX, card.getBoundingClientRect().left)
-
-  #   circle = self.dom_nodes['document'].createElement('div')
-    
-    
-    
