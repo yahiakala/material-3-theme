@@ -2,6 +2,7 @@
 @import './_/theme/anvil-m3/checkbox.css';
 @import './_/theme/anvil-m3/switch.css';
 @import './_/theme/anvil-m3/navigation-link.css';
+@import './_/theme/anvil-m3/card.css';
 
 :root {
   --anvil-m3-primary: %color:Primary%;
@@ -16,6 +17,10 @@
   --anvil-m3-tertiary-container: %color:Tertiary Container%;
   --anvil-m3-on-tertiary: %color:On Tertiary%;
   --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
+  --anvil-m3-surface-container-highest: %color:Surface Container Highest%;
+  --anvil-m3-surface: %color:Surface%;
+  --anvil-m3-on-surface: %color:On Surface%;
+  --anvil-m3-on-surface-variant: %color:Surface Variant%;
 
   --anvil-m3-outline: %color:Outline%;
   --anvil-m3-primary-overlay-2: %color:Primary Overlay 2%;
@@ -35,6 +40,7 @@
   --anvil-m3-on-error: %color:On Error%;
   --anvil-m3-error-overlay-1: %color:Error Overlay 1%;
   --anvil-m3-error-overlay-2: %color:Error Overlay 2%;
+  --anvil-m3-dark-overlay-3: %color:Dark Overlay 3%;
 }
 
 body {

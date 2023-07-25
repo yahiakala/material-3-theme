@@ -287,3 +287,4 @@ color_scheme:
   - {name: Surface Container Highest, color: '#E6E0E9'}
   - {name: Error Overlay 1, color: 'rgba(179, 38, 30, 0.08)'}
   - {name: Error Overlay 2, color: 'rgba(179, 38, 30, 0.12)'}
+  - {name: Dark Overlay 3, color: 'rgba(29, 25, 43, 0.16)'}
