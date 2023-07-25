@@ -15,19 +15,19 @@
   background-color: var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */
 }
-.anvil-m3-card.elevated.interactive:hover {
+.anvil-m3-card.elevated.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 2 */
 }
-.anvil-m3-card.elevated.interactive:focus {
+.anvil-m3-card.elevated.interactive:not(.disabled):focus {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
-.anvil-m3-card.elevated.interactive.pressed {
+.anvil-m3-card.elevated.interactive:not(.disabled).pressed {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */
 }
-.anvil-m3-card.elevated.interactive.dragged {
+.anvil-m3-card.elevated.interactive:not(.disabled).dragged {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-3), var(--anvil-m3-dark-overlay-3)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);    /* lvl 3 */
 }
@@ -39,19 +39,19 @@
 .anvil-m3-card.filled { 
   background-color: var(--anvil-m3-surface-container-highest); 
 }
-.anvil-m3-card.filled.interactive:hover {
+.anvil-m3-card.filled.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
-.anvil-m3-card.filled.interactive:focus {
+.anvil-m3-card.filled.interactive:not(.disabled):focus {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-highest); 
   box-shadow: none;
 }
-.anvil-m3-card.filled.interactive.pressed { 
+.anvil-m3-card.filled.interactive:not(.disabled).pressed { 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-highest); 
   box-shadow: none;
 }
-.anvil-m3-card.filled.interactive.dragged { 
+.anvil-m3-card.filled.interactive:not(.disabled).dragged { 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-3), var(--anvil-m3-dark-overlay-3)), var(--anvil-m3-surface-container-highest); 
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);    /* lvl 3 */
 }
@@ -64,18 +64,18 @@
   background-color: var(--anvil-m3-surface);  
   border: 1px solid var(--anvil-m3-outline);
 }
-.anvil-m3-card.outlined.interactive:hover {
+.anvil-m3-card.outlined.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface); 
   box-shadow: none;
 }
-.anvil-m3-card.outlined.interactive:focus {
+.anvil-m3-card.outlined.interactive:not(.disabled):focus {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface); 
   box-shadow: none;
 }
-.anvil-m3-card.outlined.interactive.pressed { 
+.anvil-m3-card.outlined.interactive:not(.disabled).pressed { 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface); 
 }
-.anvil-m3-card.outlined.interactive.dragged { 
+.anvil-m3-card.outlined.interactive:not(.disabled).dragged { 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-3), var(--anvil-m3-dark-overlay-3)), var(--anvil-m3-surface); 
   box-shadow: none;
 }

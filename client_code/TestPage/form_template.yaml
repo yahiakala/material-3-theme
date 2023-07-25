@@ -23,31 +23,7 @@ components_by_slot:
     type: form:Components.Switch
     layout_properties: {}
   - name: card_1
-    properties: {appearance: elevated, interactive: false, disabled: true}
+    properties: {}
     type: form:Components.Card
     layout_properties: {}
-    components:
-    - name: button_3
-      properties: {}
-      type: form:Components.Button
-      layout_properties: {slot: mySlot}
-      event_bindings: {click: button_3_click}
-  - name: card_2
-    properties: {appearance: filled, disabled: true}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: label_1
-      properties: {text: Blha blah blah I am the boogey man}
-      type: Label
-      layout_properties: {slot: mySlot}
-  - name: card_3
-    properties: {appearance: outlined, disabled: true}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: text_box_1
-      properties: {placeholder: write somethign in here! TEEHEE}
-      type: TextBox
-      layout_properties: {slot: mySlot}
 components: []
