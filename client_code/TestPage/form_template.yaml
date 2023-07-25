@@ -37,4 +37,21 @@ components_by_slot:
         - name: button_1
           properties: {}
           type: form:Components.Button
+      - name: card_2
+        properties: {}
+        type: form:Components.Card
+        layout_properties: {grid_position: 'FSBZHQ,ULJZJJ'}
+        components:
+        - name: navigation_link_1
+          properties: {}
+          type: form:Components.NavigationLink
+          layout_properties: {slot: anvil-m3-card-slot}
+        - name: image_2
+          properties: {}
+          type: Image
+          layout_properties: {slot: anvil-m3-card-slot}
+        - name: date_picker_1
+          properties: {}
+          type: DatePicker
+          layout_properties: {slot: anvil-m3-card-slot}
 components: []

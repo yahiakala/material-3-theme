@@ -2,7 +2,8 @@ properties:
 - name: appearance
   type: enum
   default_binding_prop: true
-  options: ['', elevated, filled, outlined]
+  options: [elevated, filled, outlined]
+  default_value: elevated
 - {name: disabled, type: boolean, default_value: false}
 - {name: interactive, type: boolean, default_value: false, description: 'Dictates
     if components will have interaction states (hover, focus, etc.)'}
@@ -16,5 +17,6 @@ container:
       button-icon\" class=\"material-symbols-outlined hidden\"></i><span anvil-name=\"\
       button-text\">Button</span>\n</button> -->\n\n\n<div anvil anvil-slot=\"anvil-m3-card-slot\"\
       \ anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\" tabindex=\"0\">\n   \
-      \ <p anvil-if-slot-empty=\"anvil-m3-card-slot\">Card</p>\n</div>", visible: true}
+      \ <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"><i>Insert\
+      \ Card Content</i></p>\n</div>", visible: true}
 custom_component_container: true

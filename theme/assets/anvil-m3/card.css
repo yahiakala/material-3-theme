@@ -2,17 +2,13 @@
   display: inline-block;
   background: none;
   border: none;
-  /*todo: add min-width*/
-  padding: 0 16px; /* But how would you handle the cards that have pictures? */
-  /*todo: just do right margin*/
-  margin: 4px 4px; /* it says max of 8dp between cards - maybe that should be the responsibility of whoever is implementing it? */
-/*   cursor: pointer; */
+  min-width: 15px;
+  padding: 0 16px;
+  margin: 0 8px 8px 0;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
 }
-
-/* which one is the default?? */
 
 /* Elevated */
 .anvil-m3-card.anvil-m3-elevated { 
