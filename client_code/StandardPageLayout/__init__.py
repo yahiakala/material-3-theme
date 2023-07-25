@@ -7,6 +7,11 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    var appBar = $('.anvil-m3-top-app-bar')
+    var navDrawerOpenBtn = $('.anvil-m3-drawer-open-btn')
+    var navDrawerCloseBtn = $('.anvil-m3-drawer-close-btn')
+    var navRail = $('.anvil-m3-navigation-rail')
+    var navDrawerScrim = $('.anvil-m3-navigation-drawer-scrim')
 
 
 
