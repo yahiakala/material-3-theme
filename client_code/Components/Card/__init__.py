@@ -43,21 +43,21 @@ class Card(CardTemplate):
     classes = self.dom_nodes['anvil-m3-card'].classList
     classes.toggle('disabled', value)
       
-  def hasClass(self, className):
-    classes = self.dom_nodes['anvil-m3-card'].classList
-    return classes.contains(className)
+  # def hasClass(self, className):
+  #   classes = self.dom_nodes['anvil-m3-card'].classList
+  #   return classes.contains(className)
 
-  def printAllClasses(self):
-    classes = self.dom_nodes['anvil-m3-card'].classList
-    for c in classes:
-      print(c)
+  # def printAllClasses(self):
+  #   classes = self.dom_nodes['anvil-m3-card'].classList
+  #   for c in classes:
+  #     print(c)
 
-  def onMouseDown(self, event):
-    card = self.dom_nodes['anvil-m3-card']
-    print(event.clientY, card.getBoundingClientRect().top)
-    print(event.clientX, card.getBoundingClientRect().left)
+  # def onMouseDown(self, event):
+  #   card = self.dom_nodes['anvil-m3-card']
+  #   print(event.clientY, card.getBoundingClientRect().top)
+  #   print(event.clientX, card.getBoundingClientRect().left)
 
-    circle = self.dom_nodes['document'].createElement('div')
+  #   circle = self.dom_nodes['document'].createElement('div')
     
     
     
