@@ -7,6 +7,7 @@ properties:
 - {name: interactive, type: boolean, default_value: false, description: 'Dictates
     if components will have interaction states (hover, focus, etc.)'}
 is_package: true
+events: []
 custom_component: true
 components: []
 container:

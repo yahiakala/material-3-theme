@@ -4,7 +4,8 @@ from anvil import *
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    self.printAllClasses()
+    # self.printAllClasses()
+  # self.dom_nodes['button'].addEventListener("click", self.handle_click)
 
   @property
   def appearance(self):

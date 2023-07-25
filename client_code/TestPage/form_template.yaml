@@ -28,7 +28,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1_copy_1
-      properties: {text: elevated interactive}
+      properties: {text: 'elevated interactive
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
   - name: card_3
@@ -37,7 +40,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1_copy_2
-      properties: {text: elevated disabled}
+      properties: {text: 'elevated disabled
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
   - name: card_1
@@ -46,7 +52,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1
-      properties: {text: filled interactive}
+      properties: {text: 'filled interactive
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
   - name: card_4
@@ -55,7 +64,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1_copy_5
-      properties: {text: filled disabled}
+      properties: {text: 'filled disabled
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
   - name: card_5
@@ -64,7 +76,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1_copy_4
-      properties: {text: outlined interactive}
+      properties: {text: 'outlined interactive
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
   - name: card_6
@@ -73,7 +88,10 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: label_1_copy_3
-      properties: {text: outlined disabled}
+      properties: {text: 'outlined disabled
+
+
+          '}
       type: Label
       layout_properties: {slot: mySlot}
 components: []
