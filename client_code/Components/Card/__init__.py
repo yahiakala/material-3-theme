@@ -57,6 +57,7 @@ class Card(CardTemplate):
     print(event.clientY, card.getBoundingClientRect().top)
     print(event.clientX, card.getBoundingClientRect().left)
 
-    circle = document.createElement('div')
+    circle = self.dom_nodes['document'].createElement('div')
+    
     
     
