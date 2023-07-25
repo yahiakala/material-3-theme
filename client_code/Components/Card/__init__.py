@@ -4,7 +4,10 @@ from anvil import *
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
+
+  def disableClicks(self, e):
+    e.preventDefault()
+
   @property
   def appearance(self):
     return self._appearance
@@ -13,12 +16,10 @@ class Card(CardTemplate):
   def appearance(self, value):
     self._appearance = value
     classes = self.dom_nodes['anvil-m3-card'].classList
-    # classes = self.dom_nodes['anvil-m3-card'].classList
-    
+    classes.remove("anvil-m3-outlined")
+    classes.remove("anvil-m3-filled")
+    classes.remove("anvil-m3-elevated")
     if (value):
-      for c in classes:
-        if (c in ["anvil-m3-outlined", "anvil-m3-filled", "anvil-m3-elevated"]):
-          classes.remove(c)
       classes.add(f"anvil-m3-{value}")
     
   @property
@@ -38,9 +39,16 @@ class Card(CardTemplate):
   @disabled.setter
   def disabled(self, value):
     self._disabled = value
-    classes = self.dom_nodes['anvil-m3-card'].classList
+    card = self.dom_nodes['anvil-m3-card']
+    classes = card.classList
     classes.toggle('anvil-m3-disabled', value)
-      
+    if value:
+      print("create a eventListener that will preventDefault and stop Propgation")
+      card.addEventListener("click", disableClicks)
+    else:
+      card.removeEventListener("click", disableClicks)
+
+ 
   # def hasClass(self, className):
   #   classes = self.dom_nodes['anvil-m3-card'].classList
   #   return classes.contains(className)
