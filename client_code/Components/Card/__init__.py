@@ -14,6 +14,7 @@ class Card(CardTemplate):
     self._appearance = value
     classes = self.dom_nodes['anvil-m3-card'].classList
     # classes = self.dom_nodes['anvil-m3-card'].classList
+    
     if (value):
       for c in classes:
         if (c in ["anvil-m3-outlined", "anvil-m3-filled", "anvil-m3-elevated"]):

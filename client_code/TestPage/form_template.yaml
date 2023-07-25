@@ -58,6 +58,15 @@ components_by_slot:
           '}
       type: Label
       layout_properties: {slot: anvil-m3-card-slot}
+  - name: card_7
+    properties: {appearance: filled}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_2
+      properties: {text: filled default}
+      type: Label
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: card_1
     properties: {interactive: true, appearance: filled}
     type: form:Components.Card
@@ -80,6 +89,15 @@ components_by_slot:
 
 
           '}
+      type: Label
+      layout_properties: {slot: anvil-m3-card-slot}
+  - name: card_8
+    properties: {appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_3
+      properties: {text: outlined default}
       type: Label
       layout_properties: {slot: anvil-m3-card-slot}
   - name: card_5
