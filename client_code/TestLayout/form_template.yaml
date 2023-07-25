@@ -4,25 +4,7 @@ layout:
 is_package: true
 components_by_slot:
   slot_1: []
-  slot_2:
-  - name: navigation_link_1
-    properties: {icon: '', text: Home, material_icon: home, selected: true, badge: false,
-      navigate_to: AnotherPage, font_size: '', url: ''}
-    type: form:Components.NavigationLink
-    layout_properties: {}
-    event_bindings: {click: navigation_link_1_click}
-  - name: navigation_link_2
-    properties: {material_icon: email, text: Mail, badge: true, badge_count: 12}
-    type: form:Components.NavigationLink
-    layout_properties: {}
-  - name: divider_1
-    properties: {type: Inset}
-    type: form:Components.Divider
-    layout_properties: {}
-  - name: navigation_link_3
-    properties: {material_icon: logout, text: Logout, url: 'https://anvil.works'}
-    type: form:Components.NavigationLink
-    layout_properties: {}
+  slot_2: []
   slot_3: []
 slots:
   slot_1:

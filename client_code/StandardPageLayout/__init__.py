@@ -18,9 +18,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self._navigation_rail_collapse_to = value
     value = value.lower().replace(' ', '-')
     self.dom_nodes['anvil-m3-navigation-rail'].className = "anvil-m3-navigation-rail"
-    self.dom_nodes['anvil-m3-navigation-rail'].classList.add(value)
-    self.dom_nodes['content'].className = "content"
-    self.dom_nodes['content'].classList.add(value)
+    self.dom_nodes['anvil-m3-navigation-rail'].classList.add(f"anvil-m3-{value}")
+    self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
+    self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
 
   app_title = innerText_property('anvil-m3-app-title')
 
