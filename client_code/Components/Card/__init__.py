@@ -11,9 +11,19 @@ class Card(CardTemplate):
     
   @appearance.setter
   def appearance(self, value):
-    card = self.dom_nodes['anvil-m3-card']
-    classes = 
+    classes = self.dom_nodes['anvil-m3-card'].classList
+    self._appearance = value
+    if (value):
+      if (value is "outlined"):
+        classes.remove("elevated")
+        classes.remove("filled")
+        classes.add(value)
+    else:
+      classes.remove("outlined")
+      classes.remove("elevated")
+      classes.remove("filled")
 
+    
   @property
   def interactive(self):
     return self._interactive
@@ -28,6 +38,7 @@ class Card(CardTemplate):
       print("remove value")
     elif (not alreadyInteractive and value):
       card.classList.add(value)  
+      
   def hasClass(self, className):
     classes = self.dom_nodes['anvil-m3-card'].classList
     return classes.contains(className)
