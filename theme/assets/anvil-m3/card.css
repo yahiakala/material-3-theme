@@ -6,6 +6,8 @@
   margin: 4px 4px; /* it says max of 8dp between cards - maybe that should be the responsibility of whoever is implementing it? */
 /*   cursor: pointer; */
   border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
 /* which one is the default?? */
@@ -24,10 +26,10 @@
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
-/* .anvil-m3-card.elevated.interactive:not(.disabled).pressed {
+.anvil-m3-card.elevated.interactive:not(.disabled).pressed {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */
-} */
+}
 .anvil-m3-card.elevated.interactive:not(.disabled).dragged {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-3), var(--anvil-m3-dark-overlay-3)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);    /* lvl 3 */
