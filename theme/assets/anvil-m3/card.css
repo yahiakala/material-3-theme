@@ -32,6 +32,8 @@
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);    /* lvl 3 */
 }
 .anvil-m3-card.elevated.disabled {
+  color: var(--anvil-m3-surface-variant);
+  opacity: .38;
   box-shadow: none;
 }
 
@@ -56,6 +58,8 @@
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);    /* lvl 3 */
 }
 .anvil-m3-card.filled.disabled {
+  color: var(--anvil-m3-surface-variant);
+  opacity: .38;
   box-shadow: none;
 }
 
@@ -80,6 +84,7 @@
   box-shadow: none;
 }
 .anvil-m3-card.outlined.disabled {
-  background-color: green;
+  color: var(--anvil-m3-surface-variant);
+  opacity: .12;
   box-shadow: none;
 }

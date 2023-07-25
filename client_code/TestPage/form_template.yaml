@@ -22,8 +22,58 @@ components_by_slot:
     properties: {}
     type: form:Components.Switch
     layout_properties: {}
-  - name: card_1
-    properties: {}
+  - name: card_2
+    properties: {interactive: true, appearance: elevated}
     type: form:Components.Card
     layout_properties: {}
+    components:
+    - name: label_1_copy_1
+      properties: {text: elevated interactive}
+      type: Label
+      layout_properties: {slot: mySlot}
+  - name: card_3
+    properties: {interactive: true, disabled: true, appearance: elevated}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1_copy_2
+      properties: {text: elevated disabled}
+      type: Label
+      layout_properties: {slot: mySlot}
+  - name: card_1
+    properties: {interactive: true, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1
+      properties: {text: filled interactive}
+      type: Label
+      layout_properties: {slot: mySlot}
+  - name: card_4
+    properties: {interactive: true, disabled: true, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1_copy_5
+      properties: {text: filled disabled}
+      type: Label
+      layout_properties: {slot: mySlot}
+  - name: card_5
+    properties: {interactive: true, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1_copy_4
+      properties: {text: outlined interactive}
+      type: Label
+      layout_properties: {slot: mySlot}
+  - name: card_6
+    properties: {interactive: true, disabled: true, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: label_1_copy_3
+      properties: {text: outlined disabled}
+      type: Label
+      layout_properties: {slot: mySlot}
 components: []
