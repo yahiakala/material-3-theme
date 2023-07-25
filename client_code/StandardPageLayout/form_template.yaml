@@ -46,14 +46,14 @@ container:
       \n<!-- TODO: remove jQuery -->\n<script>\n  var navDrawerOpenBtn = $('.anvil-m3-drawer-open-btn')\n\
       \  var navDrawerCloseBtn = $('.anvil-m3-drawer-close-btn')\n  var navRail =\
       \ $('.anvil-m3-navigation-rail')\n  var navDrawerScrim = $('.anvil-m3-navigation-drawer-scrim')\n\
-      \n  navDrawerOpenBtn.on('click', function() {\n    navDrawerScrim.css({display:\
-      \ 'block'})\n    setTimeout(() => {navDrawerScrim.animate({opacity: '1'}, 250,\
-      \  function () {\n    })}, 100);\n    navRail.addClass('anvil-m3-shown')\n \
-      \   setTimeout(() => {navRail.animate({left: \"0px\"}, 250,  function () {\n\
-      \    })}, 100);\n  } )\n  \n  navDrawerCloseBtn.on('click', hideSidebar)\n \
-      \ navDrawerScrim.on('click', hideSidebar)\n\n  function hideSidebar() {\n  \
-      \  setTimeout(() => {navDrawerScrim.animate({opacity: '0'}, 250,  function ()\
-      \ {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"-100%\"\
+      \n  // navDrawerOpenBtn.on('click', function() {\n  //   navDrawerScrim.css({display:\
+      \ 'block'})\n  //   setTimeout(() => {navDrawerScrim.animate({opacity: '1'},\
+      \ 250,  function () {\n  //   })}, 100);\n  //   navRail.addClass('anvil-m3-shown')\n\
+      \  //   setTimeout(() => {navRail.animate({left: \"0px\"}, 250,  function ()\
+      \ {\n  //   })}, 100);\n  // } )\n  \n  navDrawerCloseBtn.on('click', hideSidebar)\n\
+      \  navDrawerScrim.on('click', hideSidebar)\n\n  function hideSidebar() {\n \
+      \   setTimeout(() => {navDrawerScrim.animate({opacity: '0'}, 250,  function\
+      \ () {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"-100%\"\
       }, 250, function () {\n      })}, 100)\n    setTimeout(() => {navRail.removeClass('anvil-m3-shown')},\
       \ 350)\n    setTimeout(() => {navDrawerScrim.css({display: 'none'})}, 350);\n\
       \  }\n\n</script>\n"}
