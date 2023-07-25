@@ -136,6 +136,13 @@ body {
   }
 }
 
+@media(max-width: 600px) {
+  .navigation-rail.navigation-drawer + .top-app-bar .anvil-m3-app-title {
+    color: var(--anvil-m3-on-surface);
+    font-size: 22px;
+  }
+}
+
 
 @media(max-width: 600px) {
   .navigation-rail.navigation-drawer.shown {

@@ -28,13 +28,14 @@ container:
       >menu_open</span>\n  </div>\n  <div class=\"navigation-rail-content\" anvil-slot=\"\
       navigation-rail-content\">\n      <p anvil-if-slot-empty=\"navigation-rail-content\"\
       \ style=\"font-style: italic;\">Add navigation links here</p>\n  </div>\n</div>\n\
-      \n<div class=\"top-app-bar\">\n  <div class=\"drawer-open-btn\">\n    <span\
-      \ class=\"material-symbols-outlined\">menu</span>\n  </div>\n  \n</div>\n\n\
-      <div class=\"navigation-drawer-scrim\"></div>\n\n<div class=\"content\" anvil-slot=\"\
-      content\" anvil-name=\"content\">\n  <p anvil-if-slot-empty=\"content\" style=\"\
-      font-style: italic;\">Add content here</p>\n</div>\n\n<!-- TODO: remove jQuery\
-      \ -->\n<script>\n  var appBar = $('.top-app-bar')\n  var navDrawerOpenBtn =\
-      \ $('.drawer-open-btn')\n  var navDrawerCloseBtn = $('.drawer-close-btn')\n\
+      \n<div class=\"top-app-bar\">\n  <!--TODO: change this to an icon button-->\n\
+      \  <div class=\"drawer-open-btn\">\n    <span class=\"material-symbols-outlined\"\
+      >menu</span>\n  </div>\n  <span anvil-name=\"anvil-m3-app-title\" class=\"anvil-m3-app-title\"\
+      ></span>\n</div>\n\n<div class=\"navigation-drawer-scrim\"></div>\n\n<div class=\"\
+      content\" anvil-slot=\"content\" anvil-name=\"content\">\n  <p anvil-if-slot-empty=\"\
+      content\" style=\"font-style: italic;\">Add content here</p>\n</div>\n\n<!--\
+      \ TODO: remove jQuery -->\n<script>\n  var appBar = $('.top-app-bar')\n  var\
+      \ navDrawerOpenBtn = $('.drawer-open-btn')\n  var navDrawerCloseBtn = $('.drawer-close-btn')\n\
       \  var navRail = $('.navigation-rail')\n  var navDrawerScrim = $('.navigation-drawer-scrim')\n\
       \                         \n  document.addEventListener('scroll', function()\
       \ {\n  if (appBar.hasClass('scrolled')) {\n    if (window.scrollY === 0) {\n\

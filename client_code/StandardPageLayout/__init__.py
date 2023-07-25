@@ -21,4 +21,5 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['content'].className = "content"
     self.dom_nodes['content'].classList.add(value)
 
+  app_title = 
 
