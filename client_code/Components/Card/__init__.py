@@ -6,7 +6,7 @@ class Card(CardTemplate):
     self.init_components(**properties)
     # self.printAllClasses()
     # self.dom_nodes['button'].addEventListener("click", self.handle_click)
-    self.dom_nodes['anvil-m3-card'].addEventListener("mousedown", self.onMouseDown)
+    # self.dom_nodes['anvil-m3-card'].addEventListener("mousedown", self.onMouseDown)
 
   @property
   def appearance(self):
