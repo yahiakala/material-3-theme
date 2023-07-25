@@ -20,11 +20,21 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     # self.nav_drawer_scrim.addEventListener('click', hide_nav_drawer)
 
+  #  navDrawerOpenBtn.on('click', function() {
+  #  navDrawerScrim.css({display: 'block'})
+  #  setTimeout(() => {navDrawerScrim.animate({opacity: '1'}, 250,  function () {
+  #  })}, 100);
+  #  navRail.addClass('anvil-m3-shown')
+  #  setTimeout(() => {navRail.animate({left: "0px"}, 250,  function () {
+  #  })}, 100);
+  # } )
+  
+
   def open_nav_drawer(self, e):
     self.nav_drawer_scrim.style.display = 'block'
-    window.setTimeout(lambda: self.nav_drawer_scrim.animate({'opacity': '1'}, 250), 100)
+    window.setTimeout(lambda: self.nav_drawer_scrim.animate({'opacity': '1'}, 250, lambda: None), 100)
     self.nav_rail.classList.add('anvil-m3-shown')
-    window.setTimeout(lambda: self.nav_rail.animate({'left': '0px'}, 250), 100)
+    window.setTimeout(lambda: self.nav_rail.animate({'left': '0px'}, 250, lambda: None), 100)
     
                                   
   def add_scroll_class(self, e):
