@@ -5,9 +5,6 @@ class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
 
-  def disableClicks(self, e):
-    e.preventDefault()
-
   @property
   def appearance(self):
     return self._appearance
