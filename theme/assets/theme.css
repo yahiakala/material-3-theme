@@ -140,8 +140,22 @@ body {
   .navigation-rail.navigation-drawer + .top-app-bar .anvil-m3-app-title {
     color: var(--anvil-m3-on-surface);
     font-size: 22px;
+    padding-left: 16px;
+    padding-right: 24px;
   }
 }
+
+@media(max-width: 600px) {
+  .navigation-rail.navigation-drawer + .top-app-bar .anvil-m3-app-bar-links {
+    display: flex;
+    padding-right: 16px;
+    column-gap: 24px;
+    align-items: center;
+    justify-content: right;
+  }
+}
+
+
 
 
 @media(max-width: 600px) {

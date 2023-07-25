@@ -23,6 +23,15 @@ components_by_slot:
     properties: {material_icon: logout, text: Logout, url: 'https://anvil.works'}
     type: form:Components.NavigationLink
     layout_properties: {}
+  slot_3:
+  - name: button_1
+    properties: {text: ' ', material_icon: calendar_month}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_2
+    properties: {text: ' ', material_icon: add_photo_alternate}
+    type: form:Components.Button
+    layout_properties: {}
 slots:
   slot_1:
     index: 0

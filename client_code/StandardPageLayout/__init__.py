@@ -1,5 +1,6 @@
 from ._anvil_designer import StandardPageLayoutTemplate
 from anvil import *
+from ..Functions import innerText_property
 
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
@@ -21,5 +22,5 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['content'].className = "content"
     self.dom_nodes['content'].classList.add(value)
 
-  app_title = 
+  app_title = innerText_property('anvil-m3-app-title')
 

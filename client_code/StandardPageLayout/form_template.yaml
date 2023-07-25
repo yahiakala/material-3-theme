@@ -19,6 +19,10 @@ slots:
     index: 0
     set_layout_properties: {slot: navigation-rail-content}
     target: {type: container, name: ''}
+  slot_3:
+    index: 0
+    set_layout_properties: {slot: app-bar-links}
+    target: {type: container, name: ''}
 custom_component: true
 components: []
 container:
@@ -31,22 +35,25 @@ container:
       \n<div class=\"top-app-bar\">\n  <!--TODO: change this to an icon button-->\n\
       \  <div class=\"drawer-open-btn\">\n    <span class=\"material-symbols-outlined\"\
       >menu</span>\n  </div>\n  <span anvil-name=\"anvil-m3-app-title\" class=\"anvil-m3-app-title\"\
-      ></span>\n</div>\n\n<div class=\"navigation-drawer-scrim\"></div>\n\n<div class=\"\
-      content\" anvil-slot=\"content\" anvil-name=\"content\">\n  <p anvil-if-slot-empty=\"\
-      content\" style=\"font-style: italic;\">Add content here</p>\n</div>\n\n<!--\
-      \ TODO: remove jQuery -->\n<script>\n  var appBar = $('.top-app-bar')\n  var\
-      \ navDrawerOpenBtn = $('.drawer-open-btn')\n  var navDrawerCloseBtn = $('.drawer-close-btn')\n\
-      \  var navRail = $('.navigation-rail')\n  var navDrawerScrim = $('.navigation-drawer-scrim')\n\
-      \                         \n  document.addEventListener('scroll', function()\
-      \ {\n  if (appBar.hasClass('scrolled')) {\n    if (window.scrollY === 0) {\n\
-      \      appBar.removeClass('scrolled')\n    }\n  }\n  else {\n    appBar.addClass('scrolled')\n\
-      \  }\n});\n\n  navDrawerOpenBtn.on('click', function() {\n    navDrawerScrim.css({display:\
-      \ 'block'})\n    setTimeout(() => {navDrawerScrim.animate({opacity: '1'}, 250,\
-      \  function () {\n    })}, 100);\n    navRail.addClass('shown')\n    setTimeout(()\
-      \ => {navRail.animate({left: \"0px\"}, 250,  function () {\n    })}, 100);\n\
-      \  } )\n  \n  navDrawerCloseBtn.on('click', hideSidebar)\n  navDrawerScrim.on('click',\
-      \ hideSidebar)\n\n  function hideSidebar() {\n    setTimeout(() => {navDrawerScrim.animate({opacity:\
-      \ '0'}, 250,  function () {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"\
-      -100%\"}, 250, function () {\n      })}, 100)\n    setTimeout(() => {navRail.removeClass('shown')},\
+      ></span>\n  <div class=\"anvil-m3-app-bar-links\" anvil-slot=\"app-bar-links\"\
+      ><span anvil-if-slot-empty=\"app-bar-links\" style=\"font-style: italic;\">Add\
+      \ optional icon buttons here</span></div>\n</div>\n\n<div class=\"navigation-drawer-scrim\"\
+      ></div>\n\n<div class=\"content\" anvil-slot=\"content\" anvil-name=\"content\"\
+      >\n  <p anvil-if-slot-empty=\"content\" style=\"font-style: italic;\">Add content\
+      \ here</p>\n</div>\n\n<!-- TODO: remove jQuery -->\n<script>\n  var appBar =\
+      \ $('.top-app-bar')\n  var navDrawerOpenBtn = $('.drawer-open-btn')\n  var navDrawerCloseBtn\
+      \ = $('.drawer-close-btn')\n  var navRail = $('.navigation-rail')\n  var navDrawerScrim\
+      \ = $('.navigation-drawer-scrim')\n                         \n  document.addEventListener('scroll',\
+      \ function() {\n  if (appBar.hasClass('scrolled')) {\n    if (window.scrollY\
+      \ === 0) {\n      appBar.removeClass('scrolled')\n    }\n  }\n  else {\n   \
+      \ appBar.addClass('scrolled')\n  }\n});\n\n  navDrawerOpenBtn.on('click', function()\
+      \ {\n    navDrawerScrim.css({display: 'block'})\n    setTimeout(() => {navDrawerScrim.animate({opacity:\
+      \ '1'}, 250,  function () {\n    })}, 100);\n    navRail.addClass('shown')\n\
+      \    setTimeout(() => {navRail.animate({left: \"0px\"}, 250,  function () {\n\
+      \    })}, 100);\n  } )\n  \n  navDrawerCloseBtn.on('click', hideSidebar)\n \
+      \ navDrawerScrim.on('click', hideSidebar)\n\n  function hideSidebar() {\n  \
+      \  setTimeout(() => {navDrawerScrim.animate({opacity: '0'}, 250,  function ()\
+      \ {\n    })}, 100);\n  \n    setTimeout(() => {navRail.animate({left:\"-100%\"\
+      }, 250, function () {\n      })}, 100)\n    setTimeout(() => {navRail.removeClass('shown')},\
       \ 350)\n    setTimeout(() => {navDrawerScrim.css({display: 'none'})}, 350);\n\
       \  }\n\n</script>\n"}
