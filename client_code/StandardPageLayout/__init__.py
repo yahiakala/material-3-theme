@@ -32,9 +32,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   def open_nav_drawer(self, e):
     self.nav_drawer_scrim.style.display = 'block'
-    window.setTimeout(lambda: self.nav_drawer_scrim.animate({'opacity': '1'}, 250, lambda: None), 100)
+    window.setTimeout(lambda: self.nav_drawer_scrim.animate([{'opacity': '1'}], {'duration':1050, 'iterations': 1}), 100)
     self.nav_rail.classList.add('anvil-m3-shown')
-    window.setTimeout(lambda: self.nav_rail.animate({'left': '0px'}, 250, lambda: None), 100)
+    window.setTimeout(lambda: self.nav_rail.animate([{'left': '-100%'}, {'left': '0px'}], {'duration': 1050, 'iterations': 1}), 100)
     
                                   
   def add_scroll_class(self, e):
