@@ -10,6 +10,7 @@ class NavigationLink(NavigationLinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)
+    print('navigate to', self.navigate_to)
     
     if anvil.designer.in_designer:
       anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
