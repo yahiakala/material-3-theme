@@ -42,13 +42,7 @@ class Card(CardTemplate):
     card = self.dom_nodes['anvil-m3-card']
     classes = card.classList
     classes.toggle('anvil-m3-disabled', value)
-    if value:
-      print("create a eventListener that will preventDefault and stop Propgation")
-      card.addEventListener("click", disableClicks)
-    else:
-      card.removeEventListener("click", disableClicks)
-
- 
+    
   # def hasClass(self, className):
   #   classes = self.dom_nodes['anvil-m3-card'].classList
   #   return classes.contains(className)
