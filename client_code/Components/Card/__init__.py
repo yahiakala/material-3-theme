@@ -5,8 +5,17 @@ class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # self.printAllClasses()
-  # self.dom_nodes['button'].addEventListener("click", self.handle_click)
+    # self.dom_nodes['button'].addEventListener("click", self.handle_click)
+    self.domCard.addEventListener("mousedown", self.onMouseDown)
 
+  @property
+  def domCard(self):
+    return self._domCard
+
+  @domCard.setter
+  def domCard(self, value):
+    self._domCard = self.dom_nodes['anvil-m3-card']
+  
   @property
   def appearance(self):
     return self._appearance
@@ -15,6 +24,7 @@ class Card(CardTemplate):
   def appearance(self, value):
     self._appearance = value
     classes = self.dom_nodes['anvil-m3-card'].classList
+    # classes = self.dom_nodes['anvil-m3-card'].classList
     if (value):
       for c in classes:
         if (c in ["outlined", "filled", "elevated"]):
@@ -49,3 +59,8 @@ class Card(CardTemplate):
     classes = self.dom_nodes['anvil-m3-card'].classList
     for c in classes:
       print(c)
+
+  def onMouseDown(self, event):
+    print(event)
+    
+    
