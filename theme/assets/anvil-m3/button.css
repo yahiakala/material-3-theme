@@ -15,8 +15,8 @@
   border-radius: 100px;
 }
 
-.icon-padding { padding-right: 16px; }
-.icon-padding.elevated, .icon-padding.filled, .icon-padding.tonal, .icon-padding.outlined { padding-left: 16px !important; }
+.anvil-m3-icon-padding { padding-right: 16px; }
+.anvil-m3-icon-padding.anvil-m3-elevated, .icon-padding.anvil-m3-filled, .icon-padding.anvil-m3-tonal, .icon-padding.anvil-m3-outlined { padding-left: 16px !important; }
 .anvil-m3-button > i {padding-right: 8px; font-size: 18px; line-height: 40px;}
 
 .anvil-m3-button:hover { background: var(--anvil-m3-primary-overlay-2); }

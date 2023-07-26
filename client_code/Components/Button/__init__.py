@@ -23,7 +23,7 @@ class Button(ButtonTemplate):
     if value:
       button_icon.innerText = value
       button_icon.style.display = "block"
-      button.classList.add('icon-padding')
+      button.classList.add('anvil-m3-icon-padding')
 
   @property
   def text(self):
