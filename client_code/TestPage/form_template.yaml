@@ -8,4 +8,8 @@ components_by_slot:
       height: 543, display_mode: zoom_to_fill}
     type: Image
     layout_properties: {}
+  - name: button_1
+    properties: {appearance: elevated, enabled: false}
+    type: form:Components.Button
+    layout_properties: {}
 components: []
