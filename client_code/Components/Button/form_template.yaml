@@ -366,7 +366,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true}
 - name: appearance
   type: enum
-  options: [elevated, filled, tonal, outlined]
+  options: [' ', elevated, filled, tonal, outlined]
 is_package: true
 data_bindings: []
 events:
