@@ -18,7 +18,7 @@ components_by_slot:
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_1
-    properties: {appearance: outlined}
+    properties: {appearance: outlined, leading_icon: search, trailing_icon: close}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_4
