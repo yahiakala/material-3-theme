@@ -21,4 +21,8 @@ components_by_slot:
     properties: {appearance: outlined}
     type: form:Components.TextField
     layout_properties: {}
+  - name: text_field_4
+    properties: {enabled: false, appearance: outlined}
+    type: form:Components.TextField
+    layout_properties: {}
 components: []
