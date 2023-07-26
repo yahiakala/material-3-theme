@@ -35,7 +35,7 @@
 
 .text-field-input:hover {
   box-shadow: inset 0 -1px 0 var(--anvil-m3-on-surface);
-  background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), var(--anvil-m3-surface-container-highest);
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest);
 }
 
 .text-field-input:disabled {
