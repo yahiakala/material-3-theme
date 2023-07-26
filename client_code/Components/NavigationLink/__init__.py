@@ -11,8 +11,8 @@ class NavigationLink(NavigationLinkTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)
     
-    # if anvil.designer.in_designer:
-    #   anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
+    if anvil.designer.in_designer:
+      anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
   def handle_click(self, event):
     self.raise_event("click")
