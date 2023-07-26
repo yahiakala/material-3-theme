@@ -1,0 +1,22 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div anvil-name=\"anvil-m3-radiobutton-container\" class=\"\
+      anvil-m3-radiobutton-container\">\n  <input class=\"anvil-m3-radiobutton-input\"\
+      \ anvil-name=\"anvil-m3-radiobutton-input\" type=\"radio\">\n  <div class=\"\
+      anvil-m3-radiobutton-hover\" anvil-name=\"anvil-m3-radiobutton-hover\">\n  \
+      \  <span class=\"material-symbols-outlined anvil-m3-radiobutton-unchecked\"\
+      \ anvil-name=\"anvil-m3-radiobutton-unchecked\">radio_button_unchecked</span>\n\
+      \    <span class=\"material-symbols-outlined anvil-m3-radiobutton-checked\"\
+      \ anvil-name=\"anvil-m3-radiobutton-checked\" style=\"display:none\">radio_button_checked</span>\n\
+      \  </div>\n  <label class=\"anvil-m3-radiobutton-label\" anvil-name=\"anvil-m3-radiobutton-label\"\
+      \n    style=\"font-style: italic; color:#bbb\"></label>\n</div>"}
+  event_bindings: {show: form_show}
+components: []
+is_package: true
+custom_component: true
+properties:
+- {name: group, type: string, default_value: '', default_binding_prop: true, description: Radio button group name}
+- {name: selected, type: boolean, default_value: false, description: Radio button option for html <input> checked property}
+- {name: enabled, type: boolean, default_value: true, description: Enable radio button}
+- {name: text, type: string, default_value: ''}
+- {name: name, type: string, default_value: '', description: Component Name}

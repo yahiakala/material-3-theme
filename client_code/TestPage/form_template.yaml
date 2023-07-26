@@ -2,12 +2,70 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: card_1
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: radio_button_1
+        properties: {group: a, text: 1 a, selected: true}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_2
+        properties: {group: a, text: 2 a}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_3
+        properties: {group: a, text: ffdsa}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+    - name: card_2
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: radio_button_4
+        properties: {group: b, text: 1 b}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_5
+        properties: {group: b, text: 2 b}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_6
+        properties: {group: b, text: asdfasdf, enabled: false}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+    - name: card_3
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: radio_button_8
+        properties: {group: c, name: nothing 1}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_9
+        properties: {group: c, name: nothing 2, enabled: false}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: name
+        properties: {group: c, name: nothing 3, selected: true}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
   - name: checkbox_1
-    properties: {selected: true, disabled: true}
+    properties: {selected: false, disabled: false, error: false}
     type: form:Components.Checkbox
+    layout_properties: {}
   - name: label_1
     properties: {}
     type: Label
+    layout_properties: {}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
     layout_properties: {}
   - name: text_field_2
     properties: {supporting_text: Supporting text, error: false, placeholder: Placeholder,
@@ -44,72 +102,6 @@ components_by_slot:
     properties: {}
     type: form:Components.TextField
     layout_properties: {}
-    components:
-    - name: card_1
-      properties: {appearance: elevated}
-      type: form:Components.Card
-      layout_properties: {grid_position: 'KNSUVO,IFKIJO'}
-      components:
-      - name: image_1
-        properties: {source: 'https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj',
-          display_mode: zoom_to_fill}
-        type: Image
-        layout_properties: {slot: anvil-m3-card-slot}
-      - name: column_panel_1
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-slot}
-        components:
-        - name: label_2
-          properties: {text: Play relaxing songs, font: '', font_size: 26}
-          type: Label
-          layout_properties: {grid_position: 'XNUAFY,VOQMUO'}
-        - name: label_3
-          properties: {text: from your recent favorites, font_size: 12}
-          type: Label
-          layout_properties: {grid_position: 'HNLGUH,JQHBBX'}
-        - name: flow_panel_1
-          properties: {align: right}
-          type: FlowPanel
-          layout_properties: {grid_position: 'ZCXRFR,WWXQAR'}
-          components:
-          - name: button_1
-            properties: {}
-            type: form:Components.Button
-      event_bindings: {click: card_1_click}
-    - name: card_2
-      properties: {}
-      type: form:Components.Card
-      layout_properties: {grid_position: 'KNSUVO,XBPZOJ'}
-      components:
-      - name: flow_panel_2
-        properties: {}
-        type: FlowPanel
-        layout_properties: {slot: anvil-m3-card-slot}
-        components:
-        - name: switch_1
-          properties: {}
-          type: form:Components.Switch
-        - name: navigation_link_2
-          properties: {}
-          type: form:Components.NavigationLink
-        - name: navigation_link_1
-          properties: {}
-          type: form:Components.NavigationLink
-      - name: divider_1
-        properties: {}
-        type: form:Components.Divider
-        layout_properties: {slot: anvil-m3-card-slot}
-      - name: label_4
-        properties: {}
-        type: Label
-        layout_properties: {slot: anvil-m3-card-slot}
-      - name: text_box_1
-        properties: {}
-        type: TextBox
-        layout_properties: {slot: anvil-m3-card-slot}
-    - name: button_2
-      properties: {material_icon: ' ', text: ''}
-      type: form:Components.Button
-      layout_properties: {grid_position: 'QRRMFH,DBVGAV'}
+    components: []
 components: []
+event_bindings: {show: form_show}
