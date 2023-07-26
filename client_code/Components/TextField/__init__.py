@@ -77,9 +77,12 @@ class TextField(TextFieldTemplate):
     self._enabled = value
     input = self.dom_nodes['text-field-input']
     supporting_text = self.dom_nodes['text-field-supporting']
-    if value is False:
-      input.disabled = "true"
-      supporting_text.classList.add("text-field-supporting-disabled")
+    if value:
+      self.dom_nodes['button'].removeAttribute("disabled")
+      supporting_text.classList.remove("anvil-m3-text-field-supporting-disabled")
+    else:
+      self.dom_nodes['button'].setAttribute("disabled", " ")
+      supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
 
   @property
   def appearance(self):
