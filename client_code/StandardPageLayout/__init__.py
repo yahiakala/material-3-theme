@@ -23,14 +23,15 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def open_nav_drawer(self, e):
     self.nav_drawer_scrim.style.display = 'block'
     self.nav_drawer_scrim.animate([{'opacity': '1'}], {'duration': 250, 'iterations': 1})
-    self.nav_rail.classList.add('anvil-m3-shown')
+    #self.nav_rail.style.display = 'block'
     self.nav_rail.animate([{'left': '-100%'}, {'left': '0px'}], {'duration': 250, 'iterations': 1})
 
   def hide_nav_drawer(self, e):
-    window.setTimeout(lambda: self.nav_drawer_scrim.animate([{'opacity': '0'}], {'duration': 250, 'iterations': 1}), 100)
-    window.setTimeout(lambda: self.nav_rail.animate([{'left': '0'}, {'left': '-100%'}], {'duration': 250, 'iterations': 1}), 100)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 350)
-    window.setTimeout(lambda: self.nav_drawer_scrim.style.setProperty('display','none'), 350)
+    self.nav_rail.animate([{'left': '0px'}, {'left': '-100%'}], {'duration': 250, 'iterations': 1})
+    # window.setTimeout(lambda: self.nav_drawer_scrim.animate([{'opacity': '0'}], {'duration': 250, 'iterations': 1}), 100)
+    # window.setTimeout(lambda: self.nav_rail.animate([{'left': '0'}, {'left': '-100%'}], {'duration': 250, 'iterations': 1}), 100)
+    # window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 350)
+    # window.setTimeout(lambda: self.nav_drawer_scrim.style.setProperty('display','none'), 350)
                                   
   def add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
