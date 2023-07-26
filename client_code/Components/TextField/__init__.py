@@ -91,7 +91,7 @@ class TextField(TextFieldTemplate):
     classes = self.dom_nodes['text-field'].classList
     classes.remove("anvil-m3-outlined")
     if value:
-      classes.add(value)
+      classes.add(f"anvil-m3-{value}")
 
 
   
