@@ -377,5 +377,5 @@ container:
   type: HtmlTemplate
   properties: {html: "<button anvil-name=\"button\" class=\"button\">\n  <i anvil-name=\"\
       button-icon\" class=\"material-symbols-outlined hidden\"></i>\n  <span anvil-name=\"\
-      button-text\">Button</span>\n</button>"}
+      button-text\"></span>\n</button>"}
 custom_component_container: false
