@@ -14,15 +14,16 @@ components_by_slot:
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_3
-    properties: {leading_icon: search}
+    properties: {leading_icon: search, trailing_icon: close}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_1
-    properties: {appearance: outlined, leading_icon: search, trailing_icon: close}
+    properties: {appearance: outlined, leading_icon: search, trailing_icon: close,
+      supporting_text: Supporting text}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_4
-    properties: {enabled: false, appearance: outlined}
+    properties: {enabled: false, appearance: outlined, supporting_text: Supporting text}
     type: form:Components.TextField
     layout_properties: {}
 components: []
