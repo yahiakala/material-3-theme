@@ -50,6 +50,7 @@ class Button(ButtonTemplate):
 
   @appearance.setter
   def appearance(self, value):
+    self._appearance = value
     button = self.dom_nodes['button']
     if value:
       button.classList.add(value)
