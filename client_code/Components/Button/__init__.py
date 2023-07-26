@@ -22,7 +22,7 @@ class Button(ButtonTemplate):
     self._material_icon = value
     if value:
       button_icon.innerText = value
-      button_icon.classList.remove("hidden")
+      button_icon.style.display = "block"
       button.classList.add('icon-padding')
 
   @property
@@ -53,6 +53,6 @@ class Button(ButtonTemplate):
     self._appearance = value
     button = self.dom_nodes['button']
     if value:
-      button.classList.add(value)
+      button.classList.add(f"anvil-m3-{value}")
 
   
