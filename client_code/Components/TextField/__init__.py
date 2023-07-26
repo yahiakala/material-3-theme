@@ -87,9 +87,11 @@ class TextField(TextFieldTemplate):
 
   @appearance.setter
   def appearance(self, value):
-    text_field = self.dom_nodes['text-field']
+    self._appearance = value
+    classes = self.dom_nodes['text-field'].classList
+    classes.remove("anvil-m3-outlined")
     if value:
-      text_field.classList.add(value)
+      classes.add(value)
 
 
   

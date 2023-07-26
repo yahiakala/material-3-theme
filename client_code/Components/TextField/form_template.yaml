@@ -2,7 +2,7 @@ properties:
 - {name: max_characters, type: number, default_value: '', default_binding_prop: true}
 - name: leading_icon
   type: enum
-  options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
+  options: [' ', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
     3p, 4g_mobiledata, 4g_plus_mobiledata, 4k, 4k_plus, 4mp, 5g, 5k, 5k_plus, 5mp,
@@ -364,7 +364,7 @@ properties:
     zoom_out, zoom_out_map]
 - name: trailing_icon
   type: enum
-  options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
+  options: [' ', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
     3p, 4g_mobiledata, 4g_plus_mobiledata, 4k, 4k_plus, 4mp, 5g, 5k, 5k_plus, 5mp,
@@ -736,16 +736,17 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"text-field\" anvil-name=\"text-field\" style=\"\
-      width: fit-content; margin: 10px;\">\n  <div class=\"text-field-input-container\"\
-      \ style=\"position: relative;\">\n    <input class=\"text-field-input\" anvil-name=\"\
-      text-field-input\" type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <label\
-      \ class=\"text-field-label\" for=\"tfield\" anvil-name=\"text-field-label\"\
-      >\n      <i class=\"leading-icon material-symbols-outlined\" anvil-name=\"leading-icon\"\
-      \ style=\"display: none;\"></i>\n  \t\t<div class=\"label-text\" anvil-name=\"\
-      label-text\">Label text</div>\n      <i class=\"trailing-icon material-symbols-outlined\"\
-      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</label>\n\
-      \  </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
-      \ \n    <span class=\"text-field-supporting\" anvil-name=\"text-field-supporting\"\
-      \ ></span>\n    <span style=\"display: none\" class=\"text-field-character-count\"\
-      \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
+  properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
+      \ style=\"width: fit-content; margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
+      \ style=\"position: relative;\">\n    <input class=\"anvil-m3-text-field-input\"\
+      \ anvil-name=\"text-field-input\" type=\"text\" id=\"tfield\" placeholder=\"\
+      \ \" />\n    <label class=\"anvil-m3-text-field-label\" for=\"tfield\" anvil-name=\"\
+      text-field-label\">\n      <i class=\"anvil-m3-leading-icon material-symbols-outlined\"\
+      \ anvil-name=\"leading-icon\" style=\"display: none;\"></i>\n  \t\t<div class=\"\
+      anvil-m3-label-text\" anvil-name=\"label-text\">Label text</div>\n      <i class=\"\
+      anvil-m3-trailing-icon material-symbols-outlined\" anvil-name=\"trailing-icon\"\
+      \ style=\"display: none;\"></i>\n  \t</label>\n  </div>\n  <label style=\"display:flex;\
+      \ justify-content: space-between\" > \n    <span class=\"anvil-m3-text-field-supporting\"\
+      \ anvil-name=\"text-field-supporting\" ></span>\n    <span style=\"display:\
+      \ none\" class=\"anvil-m3-text-field-character-count\" anvil-name=\"text-field-character-count\"\
+      >5/20</span>\n  </label>\n</div>"}

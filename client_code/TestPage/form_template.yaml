@@ -13,6 +13,10 @@ components_by_slot:
     properties: {}
     type: form:Components.TextField
     layout_properties: {}
+  - name: text_field_3
+    properties: {leading_icon: search}
+    type: form:Components.TextField
+    layout_properties: {}
   - name: text_field_1
     properties: {appearance: outlined}
     type: form:Components.TextField
