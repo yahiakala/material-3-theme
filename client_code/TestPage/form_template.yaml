@@ -77,7 +77,7 @@ components_by_slot:
         type: TextBox
         layout_properties: {slot: anvil-m3-card-slot}
   - name: button_2
-    properties: {}
+    properties: {text: Bghdfghutton}
     type: form:Components.Button
     layout_properties: {}
 components: []
