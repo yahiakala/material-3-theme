@@ -60,12 +60,11 @@ body {
   top: 0;
 }
 }
-
+  
 @media(min-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-navigation-drawer {
-  left: 0px !important;
-}
-}
+    .anvil-m3-navigation-rail.anvil-m3-navigation-link
+  }
+
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-navigation-drawer {
@@ -162,7 +161,7 @@ body {
     display: block;
     width: 0px;
     height: 100%;
-    padding: 28px;
+    padding: 28px 0px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     margin: 0;
     top: 0;
@@ -172,6 +171,12 @@ body {
     position: absolute;
     transition: width .25s;
     
+  }
+}
+
+@media(max-width: 600px) {
+  .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown {
+    width: 360px;
   }
 }
 
