@@ -738,15 +738,15 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
       \ style=\"width: fit-content; margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
-      \ style=\"position: relative;\">\n    <input class=\"anvil-m3-text-field-input\"\
-      \ anvil-name=\"text-field-input\" type=\"text\" id=\"tfield\" placeholder=\"\
-      \ \" />\n    <label class=\"anvil-m3-text-field-label\" for=\"tfield\" anvil-name=\"\
-      text-field-label\">\n      <i class=\"anvil-m3-leading-icon material-symbols-outlined\"\
-      \ anvil-name=\"leading-icon\" style=\"display: none;\"></i>\n  \t\t<div class=\"\
-      anvil-m3-label-text\" anvil-name=\"label-text\">Label text</div>\n      <i class=\"\
-      anvil-m3-trailing-icon material-symbols-outlined\" anvil-name=\"trailing-icon\"\
-      \ style=\"display: none;\"></i>\n  \t</label>\n  </div>\n  <label style=\"display:flex;\
-      \ justify-content: space-between\" > \n    <span class=\"anvil-m3-text-field-supporting\"\
-      \ anvil-name=\"text-field-supporting\" ></span>\n    <span style=\"display:\
-      \ none\" class=\"anvil-m3-text-field-character-count\" anvil-name=\"text-field-character-count\"\
-      >5/20</span>\n  </label>\n</div>"}
+      \ style=\"position: relative;\">\n    <div class=\"border-container\"><div class=\"\
+      anvil-m3-label-text\" anvil-name=\"label-text\">Label text</div></div>\n   \
+      \ <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
+      \ type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <label class=\"anvil-m3-text-field-label\"\
+      \ for=\"tfield\" anvil-name=\"text-field-label\">\n      <i class=\"anvil-m3-leading-icon\
+      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
+      ></i>\n  \t\t\n      <i class=\"anvil-m3-trailing-icon material-symbols-outlined\"\
+      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</label>\n\
+      \  </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
+      \ \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
+      \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
+      \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
