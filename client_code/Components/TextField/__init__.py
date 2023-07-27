@@ -67,6 +67,10 @@ class TextField(TextFieldTemplate):
       trailing_icon.style.display = "block"
       trailing_icon.innerText = value
       text_field_input.style.paddingRight = "48px"
+    else:
+      trailing_icon.style.display = "block"
+      trailing_icon.innerText = value
+      text_field_input.style.paddingRight = "48px"
 
   @property
   def enabled(self):
