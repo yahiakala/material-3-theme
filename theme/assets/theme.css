@@ -314,8 +314,3 @@ body {
   margin-left: 0px;
   margin-right: 0px;
 }
-
-.content { background-color: inherit; }
-.anvil-container { background-color: inherit; }
-#appGoesHere { background-color: inherit }
-.anvil-root-container { background-color: inherit }

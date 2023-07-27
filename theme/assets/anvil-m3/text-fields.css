@@ -69,14 +69,9 @@
 
 /* Outlined */
 .anvil-m3-text-field.anvil-m3-outlined { background-color: inherit; }
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input {
-/*   border-radius: 4px; */
-/*   border: 1px solid var(--anvil-m3-outline); */
-  box-shadow: none;
-  background: none;
-}
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input { box-shadow: none; background: none; }
 
-.border-container {
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container {
   border-color: var(--anvil-m3-outline);
   border-radius: 4px;
   position: absolute;
@@ -90,35 +85,28 @@
   pointer-events: none;
 }
 
-.border-container > .border-container-cell-tl { border: 1px solid var(--anvil-m3-outline); border-color: inherit; border-right: none; border-bottom: none; border-top-left-radius: 4px; }
-.border-container > .border-container-cell-t { border-top: 1px solid var(--anvil-m3-outline); }
-.border-container > .border-container-cell-tr { border: 1px solid var(--anvil-m3-outline); border-left: none; border-bottom: none; border-top-right-radius: 4px; }
-.border-container > .border-container-cell-b { grid-column: 1 / span 3; grid-row: 2 / span 4; border: 1px solid var(--anvil-m3-outline); border-top: none; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container > .anvil-m3-border-container-cell-tl { border: 1px solid var(--anvil-m3-outline); border-color: inherit; border-right: none; border-bottom: none; border-top-left-radius: 4px; }
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container > .anvil-m3-border-container-cell-t { border-top: 1px solid var(--anvil-m3-outline); }
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container > .anvil-m3-border-container-cell-tr { border: 1px solid var(--anvil-m3-outline); border-left: none; border-bottom: none; border-top-right-radius: 4px; }
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container > .anvil-m3-border-container-cell-b { grid-column: 1 / span 3; grid-row: 2 / span 4; border: 1px solid var(--anvil-m3-outline); border-top: none; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
 
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-label-text {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1; 
-}
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-label-text { grid-column: 2 / span 1; grid-row: 3 / span 1; }
 
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .border-container {
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-border-container {
   grid-template-columns: 16px auto 1fr;
   grid-template-rows: 4px 0fr auto 1fr 4px;
 }
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .border-container .anvil-m3-label-text {
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-border-container .anvil-m3-label-text {
   font-size: 12px;
   padding: 0 4px;
   transform: translate(0, calc(-50% - 4px))
 }
 
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .border-container > .border-container-cell-t {
-  border-color: transparent;
-}
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-border-container > .anvil-m3-border-container-cell-t { border-color: transparent; }
 
-.border-container, .border-container .anvil-m3-label-text, .border-container > .border-container-cell-t  { transition: all 0.15s ease-out; }
-
-/* .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input-container { background-color: inherit; }
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-label { background-color: inherit; }
-.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-label-text { background-color: inherit; } */
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container, 
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container .anvil-m3-label-text, 
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-border-container > .anvil-m3-border-container-cell-t  { transition: all 0.15s ease-out; }
 
 .anvil-m3-text-field-label {
   top: 2px;
