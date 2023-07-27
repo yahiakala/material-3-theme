@@ -90,6 +90,11 @@
   pointer-events: none;
 }
 
+.border-container > .border-container-cell-tl { }
+.border-container > .border-container-cell-t { }
+.border-container > .border-container-cell-tr { }
+.border-container > .border-container-cell-b { }
+
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-label-text {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1; 
