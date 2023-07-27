@@ -83,6 +83,7 @@
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus { border: 2px solid var(--anvil-m3-primary); padding: 0;}
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-text-field-label .anvil-m3-label-text { background: var(--anvil-m3-background); padding: 0 4px; }
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-text-field-label .anvil-m3-label-text { transform: translate(-5%, -160%);}
+.anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-text-field-label .anvil-m3-trailing-icon { right: 14px; }
 .anvil-m3-text-field.anvil-m3-outlined :not(.anvil-m3-text-field-input:placeholder-shown) + .anvil-m3-text-field-label .anvil-m3-label-text { background: var(--anvil-m3-background); padding: 0 4px; transform: translate(-5%, -160%);}
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:focus + .anvil-m3-text-field-label.with-icon .anvil-m3-label-text { transform: translate(-50%, -160%);}
 .anvil-m3-text-field.anvil-m3-outlined :not(.anvil-m3-text-field-input:placeholder-shown) + .anvil-m3-text-field-label.with-icon .anvil-m3-label-text { background: var(--anvil-m3-background); padding: 0 4px; transform: translate(-50%, -160%);}
