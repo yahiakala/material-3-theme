@@ -228,9 +228,9 @@ body {
   }
 }
 
-.anvil-m3-navigation-drawer-scrim {
+/* .anvil-m3-navigation-drawer-scrim {
   display:none;
-}
+} */
 
 .anvil-m3-navigation-rail-content {
   display: flex;
