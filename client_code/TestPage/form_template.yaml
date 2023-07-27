@@ -26,4 +26,13 @@ components_by_slot:
     properties: {enabled: false, appearance: outlined, supporting_text: Supporting text}
     type: form:Components.TextField
     layout_properties: {}
+  - name: card_1
+    properties: {appearance: filled}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: text_field_5
+      properties: {appearance: outlined, leading_icon: search, trailing_icon: close}
+      type: form:Components.TextField
+      layout_properties: {slot: anvil-m3-card-slot}
 components: []
