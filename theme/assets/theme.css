@@ -47,9 +47,9 @@ body {
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 600px) {
 .anvil-m3-navigation-rail {
-  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-/*   width: 80px;
-  padding: 56px 12px; */
+  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%; 
+  width: 80px !important;
+/* padding: 56px 12px; */
   height: 100%;
   display: flex;
   flex-direction: column;

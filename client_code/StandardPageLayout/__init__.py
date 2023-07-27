@@ -20,8 +20,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
-    window.document.addEventListener('')
-
   def open_nav_drawer(self, e):
     self.nav_rail.style.width = '360px'
     self.nav_rail.style.left = "0px"
