@@ -222,6 +222,12 @@ body {
   }
 }
 
+@media(max-width: 600px) {
+  .anvil-m3-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
+    opacity: 1;
+  }
+}
+
 .anvil-m3-navigation-drawer-scrim {
   display:none;
 }
