@@ -21,6 +21,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
   def open_nav_drawer(self, e):
+    self.nav_rail.style.width = '360px'
     self.nav_rail.classList.add('anvil-m3-shown')
     # self.nav_rail.style.width = '360px'
     # self.nav_rail.style.paddingTop = '28px'
@@ -30,6 +31,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   def hide_nav_drawer(self, e):
     self.nav_rail.classList.remove('anvil-m3-shown')
+    window.setTimeout(lambda: self.nav_rail.style.width = '0px', 250)
     # self.nav_rail.style.width = '0px'
     # self.nav_drawer_close_btn.display = 'none'
 

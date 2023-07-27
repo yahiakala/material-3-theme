@@ -61,15 +61,6 @@ body {
 }
 }
   
-@media(max-width: 600px) {
-    .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link {
-      display: flex;
-      align-items: center;
-      height: 56px;
-      border-radius: 100px;
-    }
-  }
-
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-navigation-drawer {
@@ -166,15 +157,16 @@ body {
     display: block;
     width: 0px;
     height: 100%;
-    padding: 28px 0px;
+    padding: 28px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     margin: 0;
     top: 0;
+    left: -100%;
     border-right: none;
     border-radius: 0 20px 20px 0;
     transition: right 0.5s;
     position: absolute;
-    transition: width .25s;
+    transition: left .25s;
     
   }
 }
@@ -182,12 +174,14 @@ body {
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown {
     width: 360px;
+    left: 0px;
   }
 }
 
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
     display: block;
+/*     padding-left: 28px; */
   }
 }
 
