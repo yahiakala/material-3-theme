@@ -43,7 +43,7 @@ class TextField(TextFieldTemplate):
 
   @leading_icon.setter
   def leading_icon(self, value):
-    text_field_label = self.dom_nodes['text-field-label']
+    icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
     border_container = self.dom_nodes['anvil-m3-border-container']
@@ -51,13 +51,13 @@ class TextField(TextFieldTemplate):
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value
-      text_field_label.style.paddingLeft = "12px"
+      icon_container.style.paddingLeft = "12px"
       text_field_input.style.paddingLeft = "48px"
       border_container.classList.add("with-icon")
     else:
       leading_icon.style.display = "none"
       leading_icon.innerText = ""
-      text_field_label.style.paddingLeft = "16px"
+      icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
 
   @property
@@ -66,7 +66,7 @@ class TextField(TextFieldTemplate):
 
   @trailing_icon.setter
   def trailing_icon(self, value):
-    text_field_label = self.dom_nodes['text-field-label']
+    icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['text-field-input']
     self._material_icon = value
