@@ -24,12 +24,13 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_rail.style.width = '360px'
     self.nav_rail.style.left = "0px"
     self.nav_rail.classList.add('anvil-m3-shown')
-    self.nav_drawer_scrim.animate([{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
     
 
 
   def hide_nav_drawer(self, e):
     self.nav_rail.style.left = "-101%"
+    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 250)
 
