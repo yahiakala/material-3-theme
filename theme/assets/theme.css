@@ -61,8 +61,13 @@ body {
 }
 }
   
-@media(min-width: 600px) {
-    .anvil-m3-navigation-rail.anvil-m3-navigation-link
+@media(max-width: 600px) {
+    .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      border-radius: 100px;
+    }
   }
 
 
