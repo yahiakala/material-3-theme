@@ -53,3 +53,5 @@
   opacity: .12;
   box-shadow: none;
 }
+
+.anvil-m3-card .anvil-container { background-color: inherit; }
