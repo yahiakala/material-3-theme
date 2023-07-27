@@ -30,7 +30,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   def hide_nav_drawer(self, e):
     self.nav_rail.style.left = "-101%"
-    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 250)
 
