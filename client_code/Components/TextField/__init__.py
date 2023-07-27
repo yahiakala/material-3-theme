@@ -52,6 +52,12 @@ class TextField(TextFieldTemplate):
       leading_icon.innerText = value
       text_field_label.style.paddingLeft = "12px"
       text_field_input.style.paddingLeft = "48px"
+      text_field_label.classList.add("with-icon")
+    else:
+      leading_icon.style.display = "none"
+      leading_icon.innerText = ""
+      text_field_label.style.paddingLeft = "16px"
+      text_field_input.style.paddingLeft = "16px"
 
   @property
   def trailing_icon(self):
@@ -69,7 +75,7 @@ class TextField(TextFieldTemplate):
       text_field_input.style.paddingRight = "48px"
     else:
       trailing_icon.style.display = "none"
-      trailing_icon.innerText = None
+      trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
 
   @property

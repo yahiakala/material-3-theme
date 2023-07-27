@@ -36,7 +36,7 @@ components_by_slot:
       type: form:Components.TextField
       layout_properties: {slot: anvil-m3-card-slot}
   - name: text_field_6
-    properties: {}
+    properties: {appearance: outlined}
     type: form:Components.TextField
     layout_properties: {}
 components: []
