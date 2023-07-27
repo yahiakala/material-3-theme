@@ -22,6 +22,10 @@ components_by_slot:
       supporting_text: Supporting text}
     type: form:Components.TextField
     layout_properties: {}
+  - name: text_field_7
+    properties: {enabled: false}
+    type: form:Components.TextField
+    layout_properties: {}
   - name: text_field_4
     properties: {enabled: false, appearance: outlined, supporting_text: Supporting text}
     type: form:Components.TextField
