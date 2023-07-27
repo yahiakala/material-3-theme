@@ -4,6 +4,10 @@ from anvil import *
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    self.dom_nodes['anvil-m3-card'].addEventListener("click", self.handle_click)
+
+  def handle_click(self, event):
+    self.raise_event("click")
 
   @property
   def appearance(self):

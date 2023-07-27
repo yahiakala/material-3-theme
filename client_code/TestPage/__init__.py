@@ -14,3 +14,8 @@ class TestPage(TestPageTemplate):
     """This method is called when the component is clicked"""
     alert("clicked button in elevated card")
 
+  def card_1_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    print("TEEHEE")
+
+

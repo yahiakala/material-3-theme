@@ -45,6 +45,7 @@ components_by_slot:
           - name: button_1
             properties: {}
             type: form:Components.Button
+      event_bindings: {click: card_1_click}
     - name: card_2
       properties: {}
       type: form:Components.Card
