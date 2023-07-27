@@ -46,13 +46,14 @@ class TextField(TextFieldTemplate):
     text_field_label = self.dom_nodes['text-field-label']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
+    border_container = self.dom_nodes['anvil-m3-border-container']
     self._material_icon = value
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value
       text_field_label.style.paddingLeft = "12px"
       text_field_input.style.paddingLeft = "48px"
-      text_field_label.classList.add("with-icon")
+      border_container.classList.add("with-icon")
     else:
       leading_icon.style.display = "none"
       leading_icon.innerText = ""
