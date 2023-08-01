@@ -746,11 +746,11 @@ container:
       ></div>\n      <div class=\"anvil-m3-border-container-cell-b\"></div>\n    \
       \  <label class=\"anvil-m3-label-text\" anvil-name=\"label-text\" for=\"tfield\"\
       >Label text</label>\n    </div>\n   \n    <div class=\"anvil-m3-icon-container\"\
-      \ anvil-name=\"anvil-m3-icon-container\">\n      <a href=\"javascript:void(0)\"\
-      \ class=\"anvil-m3-leading-icon material-symbols-outlined\" anvil-name=\"leading-icon\"\
-      \ style=\"display: none;\"></a>\n      <i class=\"anvil-m3-trailing-icon material-symbols-outlined\"\
-      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
-      \ </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
-      \ \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
-      \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
+      \ anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-leading-icon\
+      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
+      ></i>\n      <i class=\"anvil-m3-trailing-icon material-symbols-outlined\" anvil-name=\"\
+      trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n  </div>\n  <label\
+      \ style=\"display:flex; justify-content: space-between\" > \n    <span class=\"\
+      anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\" ></span>\n\
+      \    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
       \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
