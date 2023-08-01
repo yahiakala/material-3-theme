@@ -124,6 +124,20 @@ class TextField(TextFieldTemplate):
     else:
       classes.remove("anvil-m3-tfield-error")
 
+  @property
+  def placeholder(self):
+    return self._placeholder
+
+  @placeholder.setter
+  def placeholder(self, value):
+    self._placeholder = value
+    input = self.dom_nodes['text-field-input']
+    if value:
+      input.placeholder = value
+    else:
+      input.placeholder = " "
+      
+
 
 
   
