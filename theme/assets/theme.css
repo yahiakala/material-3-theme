@@ -41,6 +41,7 @@
   --anvil-m3-error-overlay-2: %color:Error Overlay 2%;
   --anvil-m3-dark-overlay-3: %color:Dark Overlay 3%;
   --anvil-m3-background: %color:Background%;
+  --anvil-m3-on-error-container: %color:On Error Container%;
 }
 
 body {

@@ -43,6 +43,7 @@ class TextField(TextFieldTemplate):
 
   @leading_icon.setter
   def leading_icon(self, value):
+    self._leading_icon = value
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -66,6 +67,7 @@ class TextField(TextFieldTemplate):
 
   @trailing_icon.setter
   def trailing_icon(self, value):
+    self._trailing_icon = value
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -117,6 +119,8 @@ class TextField(TextFieldTemplate):
     classes = self.dom_nodes['text-field'].classList
     if value:
       classes.add("anvil-m3-tfield-error")
+      # if self.trailing_icon:
+      #   self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-tfield-error")
 
