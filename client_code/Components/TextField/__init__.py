@@ -3,6 +3,7 @@ from anvil import *
 
 class TextField(TextFieldTemplate):
   def __init__(self, **properties):
+    self._label_text = properties.get('label_text', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -136,6 +137,12 @@ class TextField(TextFieldTemplate):
       input.placeholder = value
     else:
       input.placeholder = " "
+
+  def form_show(self, **event_args):
+    """This method is called when the HTML panel is shown on the screen"""
+    if anvil.designer.in_designer:
+      if not self.label_text:
+        self.label_text = anvil.designer.get_design_name(self)
       
 
 
