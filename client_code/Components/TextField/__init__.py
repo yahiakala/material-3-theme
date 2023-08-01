@@ -31,8 +31,7 @@ class TextField(TextFieldTemplate):
   @label_text.setter
   def label_text(self, value):
     self._label_text = value
-    if value:
-      self.dom_nodes['label-text'].innerHTML = value or ""
+    self.dom_nodes['label-text'].innerHTML = value or ""
 
   @property
   def supporting_text(self):
