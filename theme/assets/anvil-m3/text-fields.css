@@ -124,8 +124,8 @@
 
 .anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:hover { box-shadow: inset 0 -1px 0 var(--anvil-m3-on-error-container);}
 .anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:hover + .anvil-m3-border-container .anvil-m3-label-text { color: var(--anvil-m3-on-error-container); }
-/* TODO: Why is the line below not working??? */
-.anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:hover + .anvil-m3-icon-container .anvil-m3-trailing-icon { color: var(--anvil-m3-on-error-container); }
+
+.anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:hover ~ .anvil-m3-icon-container .anvil-m3-trailing-icon { color: var(--anvil-m3-on-error-container); }
 
 .anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:focus { box-shadow: inset 0 -2px 0 var(--anvil-m3-error);}
 .anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-text-field-input:focus + .anvil-m3-border-container .anvil-m3-label-text { color: var(--anvil-m3-error); }

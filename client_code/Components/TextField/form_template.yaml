@@ -733,7 +733,8 @@ properties:
 - {name: error, type: boolean, default_value: false}
 - {name: placeholder, type: string, default_value: ' '}
 is_package: true
-events: []
+events:
+- {name: pressed_enter, default_event: true}
 custom_component: true
 components: []
 container:
@@ -756,3 +757,4 @@ container:
       \ anvil-name=\"text-field-supporting\" ></span>\n    <span style=\"display:\
       \ none\" class=\"anvil-m3-text-field-character-count\" anvil-name=\"text-field-character-count\"\
       >5/20</span>\n  </label>\n</div>"}
+  event_bindings: {show: form_show}

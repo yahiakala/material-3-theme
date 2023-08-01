@@ -8,21 +8,27 @@ class TextField(TextFieldTemplate):
     self._label_text = properties.get('label_text', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
+    
 
     # Any code you write here will run before the form opens.
 
-  # def _anvil_get_design_info_(self, as_layout=False):
-  #   di = super()._anvil_get_design_info_(as_layout)
-  #   di['interactions'] = [{
-  #     "type": "whole_component",
-  #     "title": "Edit text",
-  #     "icon": "edit",
-  #     "default": True,
-  #     "callbacks": {
-  #       "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
-  #     }
-  #   }]
-  #   return di
+  def _anvil_get_design_info_(self, as_layout=False):
+    di = super()._anvil_get_design_info_(as_layout)
+    di['interactions'] = [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
+      }
+    }]
+    return di
+
+  def on_key_down(self, e):
+    if e.key == "Enter":
+      self.raise_event("pressed_enter")
 
   @property
   def label_text(self):
@@ -135,8 +141,8 @@ class TextField(TextFieldTemplate):
     classes = self.dom_nodes['text-field'].classList
     if value:
       classes.add("anvil-m3-tfield-error")
-      # if self.trailing_icon:
-      #   self.trailing_icon = "error"
+      if self.trailing_icon:
+        self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-tfield-error")
 
