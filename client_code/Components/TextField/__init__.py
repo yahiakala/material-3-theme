@@ -26,7 +26,7 @@ class TextField(TextFieldTemplate):
 
   @property
   def label_text(self):
-    return self.dom_nodes['label-text'].innerHTML
+    return self._label_text
 
   @label_text.setter
   def label_text(self, value):
