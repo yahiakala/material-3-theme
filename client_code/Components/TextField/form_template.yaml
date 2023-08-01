@@ -730,6 +730,7 @@ properties:
 - name: appearance
   type: enum
   options: ['', outlined]
+- {name: error, type: boolean, default_value: false}
 is_package: true
 events: []
 custom_component: true

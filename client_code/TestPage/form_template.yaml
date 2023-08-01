@@ -10,7 +10,7 @@ components_by_slot:
     type: Label
     layout_properties: {}
   - name: text_field_2
-    properties: {supporting_text: Supporting text}
+    properties: {supporting_text: Supporting text, error: true}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_3

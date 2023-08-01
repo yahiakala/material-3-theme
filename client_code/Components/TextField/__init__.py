@@ -107,6 +107,20 @@ class TextField(TextFieldTemplate):
     if value:
       classes.add(f"anvil-m3-{value}")
 
+  @property
+  def error(self):
+    return self._error
+
+  @error.setter
+  def error(self, value):
+    self._error = value
+    classes = self.dom_nodes['text-field'].classList
+    if value:
+      classes.add("anvil-m3-tfield-error")
+    else:
+      classes.remove("anvil-m3-tfield-error")
+
+
 
   
 

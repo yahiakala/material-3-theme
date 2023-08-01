@@ -112,3 +112,9 @@
 .anvil-m3-text-field.anvil-m3-outlined .anvil-m3-text-field-input:disabled + .anvil-m3-icon-container { color: var(--anvil-m3-on-disabled); }
 
 .anvil-m3-text-field.anvil-m3-outlined :not(.anvil-m3-text-field-input:placeholder-shown) .anvil-m3-text-field-input { padding: 0; }
+
+/* ERROR STATES */
+
+.anvil-m3-text-field.anvil-m3-tfield-error .anvil-m3-label-text {
+  color: var(--anvil-m3-error);
+}
