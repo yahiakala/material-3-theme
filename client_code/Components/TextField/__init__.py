@@ -10,7 +10,6 @@ class TextField(TextFieldTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
-    
 
     # Any code you write here will run before the form opens.
 
