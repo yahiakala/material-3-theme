@@ -91,7 +91,7 @@ body {
     left: -101%;
     border-right: none;
     border-radius: 0 20px 20px 0;
-    transition: right 0.5s;
+    transition: right 0.25s;
     position: absolute;
     transition: left .25s;
     
