@@ -30,7 +30,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_rail.style.left = "-101%"
     self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 240)
+    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
 
                           
   def add_scroll_class(self, e):

@@ -91,10 +91,8 @@ body {
     left: -101%;
     border-right: none;
     border-radius: 0 20px 20px 0;
-    transition: right 0.25s;
     position: absolute;
-    transition: left .25s;
-    
+
   }
 }
 
@@ -171,13 +169,12 @@ body {
   }
 }
 
-
-
-
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown {
     width: 360px;
     left: 0px;
+    transition: right 0.25s;
+    transition: left .25s;
   }
 }
 
