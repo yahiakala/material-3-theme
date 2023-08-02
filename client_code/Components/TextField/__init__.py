@@ -37,7 +37,7 @@ class TextField(TextFieldTemplate):
 
   def char_counter(self, e):
     input = self.dom_nodes['text-field-input']
-    count = len(input.value)
+    count = input.value
     print(count)
     
 
