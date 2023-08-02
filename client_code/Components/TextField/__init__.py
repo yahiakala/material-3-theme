@@ -10,6 +10,7 @@ class TextField(TextFieldTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
+    self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
 
     # Any code you write here will run before the form opens.
 
@@ -31,7 +32,7 @@ class TextField(TextFieldTemplate):
       self.raise_event("pressed_enter")
 
   def on_change(self, e):
-    
+    self.raise_event("change")
 
   @property
   def label_text(self):
