@@ -58,16 +58,16 @@ class TextField(TextFieldTemplate):
     if value:
       self.dom_nodes['text-field-supporting'].innerHTML = value
 
-  @property
-  def max_characters(self):
-    return self._max_characters
+  # @property
+  # def max_characters(self):
+  #   return self._max_characters
 
-  @max_characters.setter
-  def max_characters(self, value):
-    character_count = self.dom_nodes['text-field-character-count']
-    if value:
-      character_count.style.display = "block"
-      character_count.innerHTML = value
+  # @max_characters.setter
+  # def max_characters(self, value):
+  #   character_count = self.dom_nodes['text-field-character-count']
+  #   if value:
+  #     character_count.style.display = "block"
+  #     character_count.innerHTML = value
 
   @property
   def leading_icon(self):
