@@ -735,6 +735,7 @@ properties:
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
+- {name: change}
 custom_component: true
 components: []
 container:

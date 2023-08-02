@@ -30,6 +30,9 @@ class TextField(TextFieldTemplate):
     if e.key == "Enter":
       self.raise_event("pressed_enter")
 
+  def on_change(self, e):
+    
+
   @property
   def label_text(self):
     return self._label_text
