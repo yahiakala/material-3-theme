@@ -64,7 +64,7 @@
 .anvil-m3-text-field .anvil-m3-border-container, .anvil-m3-text-field .anvil-m3-border-container .anvil-m3-label-text  { transition: all 0.15s ease-out; }
 :not(.anvil-m3-text-field-input:placeholder-shown) .anvil-m3-text-field-input { padding-top: 24px; padding-bottom: 8px }
 
-.anvil-m3-text-field .leading-icon, .anvil-m3-text-field .trailing-icon { font-size: 20px; font-weight: bold; }
+.anvil-m3-icon-container i { font-size: 20px; font-weight: bold; }
 .anvil-m3-leading-icon { padding-right: 16px }
 .anvil-m3-trailing-icon { position: absolute; right: 12px; }
 
@@ -149,7 +149,7 @@
 .anvil-m3-text-field.anvil-m3-outlined.anvil-m3-tfield-error .anvil-m3-text-field-input:focus + .anvil-m3-border-container > .anvil-m3-border-container-cell-t,
 .anvil-m3-text-field.anvil-m3-outlined.anvil-m3-tfield-error :not(.anvil-m3-text-field-input:placeholder-shown) + .anvil-m3-border-container > .anvil-m3-border-container-cell-t { border-color: transparent; }
 
-.anvil-m3-tfield-error .anvil-m3-trailing-icon.material-symbols-outlined  {
+.anvil-m3-tfield-error .material-symbols-outlined.anvil-m3-trailing-icon  {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
