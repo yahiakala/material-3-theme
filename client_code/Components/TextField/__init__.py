@@ -11,7 +11,7 @@ class TextField(TextFieldTemplate):
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
-    self.dom_nodes['text-field-input'].addEventListener("keydown", self.char_counter)
+    # self.dom_nodes['text-field-input'].addEventListener("keydown", self.char_counter)
 
     # Any code you write here will run before the form opens.
 
@@ -35,10 +35,10 @@ class TextField(TextFieldTemplate):
   def on_change(self, e):
     self.raise_event("change")
 
-  def char_counter(self, e):
-    input = self.dom_nodes['text-field-input']
-    count = input.value
-    print(count)
+  # def char_counter(self, e):
+  #   input = self.dom_nodes['text-field-input']
+  #   count = input.value
+  #   print(count)
     
   @property
   def label_text(self):
