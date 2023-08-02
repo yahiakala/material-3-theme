@@ -1,5 +1,4 @@
 properties:
-- {name: max_characters, type: number, default_value: '', default_binding_prop: true}
 - name: leading_icon
   type: enum
   options: [' ', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
