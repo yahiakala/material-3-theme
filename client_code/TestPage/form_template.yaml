@@ -10,23 +10,23 @@ components_by_slot:
     type: Label
     layout_properties: {}
   - name: text_field_2
-    properties: {supporting_text: Supporting text, error: false, placeholder: '',
-      label_text: Label text, trailing_icon: 30fps_select}
+    properties: {supporting_text: Supporting text, error: false, placeholder: Placeholder,
+      label_text: Label text, trailing_icon: ''}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_5
+    properties: {appearance: outlined, leading_icon: search, trailing_icon: close,
+      placeholder: ' Placeholder', label_text: Label text}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_3
-    properties: {leading_icon: search, trailing_icon: close, error: true}
+    properties: {leading_icon: search, trailing_icon: close, error: true, label_text: Label text}
     type: form:Components.TextField
     layout_properties: {}
   - name: text_field_6
-    properties: {appearance: outlined, error: true}
+    properties: {appearance: outlined, error: true, label_text: Label text, placeholder: ''}
     type: form:Components.TextField
     layout_properties: {}
-  - name: button_1
-    properties: {text: button_1}
-    type: Button
-    layout_properties: {}
-    event_bindings: {click: button_1_click}
   - name: text_field_1
     properties: {appearance: outlined, leading_icon: search, trailing_icon: close,
       supporting_text: Supporting text, error: true}
@@ -44,13 +44,4 @@ components_by_slot:
     properties: {}
     type: form:Components.TextField
     layout_properties: {}
-  - name: card_1
-    properties: {appearance: filled}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: text_field_5
-      properties: {appearance: outlined, leading_icon: search, trailing_icon: close}
-      type: form:Components.TextField
-      layout_properties: {slot: anvil-m3-card-slot}
 components: []
