@@ -1,0 +1,85 @@
+.anvil-m3-slider { position: relative; margin: 20px; }
+.anvil-m3-slider input {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  background: transparent;  
+}
+
+.anvil-m3-slider-track-container {
+  height: 4px;
+  position: absolute;
+  left: 10px;
+  bottom: 28%;
+  z-index: -1;
+}
+
+.anvil-m3-slider-progress, .anvil-m3-slider-background {
+  position: absolute;
+  height: 100%;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.anvil-m3-slider-progress { background: var(--anvil-m3-primary); }
+.anvil-m3-slider-background { width: 100%; background-color: var(--anvil-m3-surface-container-highest); }
+
+.anvil-m3-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: var(--anvil-m3-primary);
+  cursor: pointer;
+  margin-top: -8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+}
+
+.anvil-m3-slider input::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: var(--anvil-m3-primary);
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+}
+
+.anvil-m3-slider input::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: var(--anvil-m3-primary);
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+}
+
+.anvil-m3-slider input::-webkit-slider-thumb:hover {
+  outline: 10px solid var(--anvil-m3-primary-overlay-2);
+}
+
+.anvil-m3-slider input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.anvil-m3-slider-label-container {
+  position: absolute;
+  display: flex;
+  background-color: var(--anvil-m3-primary);
+  color: var(--anvil-m3-on-primary);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 50% 50% 50%;
+  transform: rotate(225deg);
+  margin-top: -50px;
+  margin-left: -14px;
+}
+
+.anvil-m3-slider-label { transform: rotate(135deg); }

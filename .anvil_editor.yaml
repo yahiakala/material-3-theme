@@ -1,5 +1,6 @@
 unique_ids:
   forms:
+    Components.Slider: '1691053810024905428539432.8257'
     Components.DropdownMenu_deprecated: '1696925549669743360540737.4421'
     Storybooks.ButtonMenus: 645R43WBRQYMJT6EFUN7OQSO6SPMCZCV
     Storybooks.NavigationLink: '1699888212585995459090444.6667'
@@ -60,6 +61,7 @@ unique_ids:
   server_modules:
     TestModule: '1696934771505893542874780.1255'
   assets:
+    anvil-m3/slider.css: '1691131140302452943278018.87537'
     designer_icons/button.svg: '1702402255403425630787410.6227'
     designer_icons/card.svg: '1702476695777933171902784.5498'
     anvil-m3/radiobutton.css: '1690464669843320825384936.8927'
