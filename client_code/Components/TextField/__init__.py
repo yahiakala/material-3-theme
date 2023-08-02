@@ -40,7 +40,6 @@ class TextField(TextFieldTemplate):
     count = input.value
     print(count)
     
-
   @property
   def label_text(self):
     return self._label_text
