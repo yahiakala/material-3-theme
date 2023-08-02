@@ -1,5 +1,6 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
+import anvil.js
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
@@ -41,8 +42,10 @@ class Button(ButtonTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
-    if value is False:
-      self.dom_nodes['button'].disabled = "true"
+    if value:
+      self.dom_nodes['button'].removeAttribute("disabled")
+    else:
+      self.dom_nodes['button'].setAttribute("disabled", " ")
 
   @property
   def appearance(self):
@@ -54,5 +57,6 @@ class Button(ButtonTemplate):
     button = self.dom_nodes['button']
     if value:
       button.classList.add(f"anvil-m3-{value}")
+
 
   

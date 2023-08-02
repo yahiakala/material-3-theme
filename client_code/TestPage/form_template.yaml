@@ -9,9 +9,40 @@ components_by_slot:
     properties: {}
     type: Label
     layout_properties: {}
-  - name: column_panel_2
+  - name: text_field_2
+    properties: {supporting_text: Supporting text, error: false, placeholder: Placeholder,
+      label_text: Label text, trailing_icon: ''}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_5
+    properties: {appearance: outlined, leading_icon: search, trailing_icon: close,
+      placeholder: ' Placeholder', label_text: Label text}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_3
+    properties: {leading_icon: search, trailing_icon: close, error: true, label_text: Label text}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_6
+    properties: {appearance: outlined, error: true, label_text: Label text, placeholder: ''}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_1
+    properties: {appearance: outlined, leading_icon: search, trailing_icon: close,
+      supporting_text: Supporting text, error: true}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_7
+    properties: {enabled: false, placeholder: ''}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_4
+    properties: {enabled: false, appearance: outlined, supporting_text: Supporting text}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: text_field_8
     properties: {}
-    type: ColumnPanel
+    type: form:Components.TextField
     layout_properties: {}
     components:
     - name: card_1
