@@ -8,6 +8,7 @@ components_by_slot:
     properties: {text: Home, material_icon: home, selected: true}
     type: form:Components.NavigationLink
     layout_properties: {}
+    event_bindings: {click: navigation_link_1_click}
   - name: navigation_link_2
     properties: {material_icon: mail, text: Mail}
     type: form:Components.NavigationLink
