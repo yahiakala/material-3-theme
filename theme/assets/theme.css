@@ -5,6 +5,7 @@
 @import './_/theme/anvil-m3/card.css';
 @import './_/theme/anvil-m3/text-fields.css';
 @import './_/theme/anvil-m3/radiobutton.css';
+@import './_/theme/anvil-m3/menu.css';
 @import './_/theme/anvil-m3/text.css';
 
 :root {
@@ -20,6 +21,7 @@
   --anvil-m3-tertiary-container: %color:Tertiary Container%;
   --anvil-m3-on-tertiary: %color:On Tertiary%;
   --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
+  --anvil-m3-surface-container: %color:Surface Container%;
   --anvil-m3-surface-container-highest: %color:Surface Container Highest%;
   --anvil-m3-surface-container-low: %color:Surface Container Low%;
   --anvil-m3-surface: %color:Surface%;
