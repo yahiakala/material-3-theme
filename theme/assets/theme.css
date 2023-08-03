@@ -142,11 +142,13 @@ body {
 
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar {
-    height: 64px;
+/*     height: 64px; */
+    padding: 20px 16px 24px;
     justify-content: flex-start;
     align-items: center;
     display: flex !important;
     width: 100%;
+    column-gap: 24px;
   }
 }
 
@@ -154,6 +156,7 @@ body {
 .anvil-m3-title-container {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 16px;
 }
 
 @media(max-width: 600px) {
@@ -185,9 +188,6 @@ body {
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, .anvil-m3-navigation-rail.anvil-m3-navigation-drawer .anvil-m3-drawer-close-btn span {
   font-size: 24px;
-  width: 48px;
-  justify-content: center;
-  display: flex;
   }
 }
 
