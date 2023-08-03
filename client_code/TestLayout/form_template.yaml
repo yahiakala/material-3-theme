@@ -5,12 +5,12 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: navigation_link_1
-    properties: {text: Home, material_icon: home, selected: true, navigate_to: AnotherPage}
+    properties: {text: Home, material_icon: home, selected: true, navigate_to: TestPage}
     type: form:Components.NavigationLink
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
   - name: navigation_link_2
-    properties: {material_icon: mail, text: Mail}
+    properties: {material_icon: mail, text: Mail, navigate_to: AnotherPage}
     type: form:Components.NavigationLink
     layout_properties: {}
   - name: divider_1

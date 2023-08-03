@@ -145,7 +145,7 @@ body {
 /*     height: 64px; */
     padding: 20px 16px 24px;
     justify-content: flex-start;
-    align-items: center;
+/*     align-items: center; */
     display: flex !important;
     width: 100%;
     column-gap: 24px;
