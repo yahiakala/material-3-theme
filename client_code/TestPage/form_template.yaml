@@ -15,6 +15,7 @@ components_by_slot:
         properties: {group: a, text: 1 a, selected: true, value: a, group_name: '1'}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {clicked: radio_button_1_clicked}
       - name: radio_button_2
         properties: {group: a, text: 2 a, value: b, group_name: '1'}
         type: form:Components.RadioButton
@@ -35,6 +36,7 @@ components_by_slot:
         - name: label_5
           properties: {}
           type: Label
+      event_bindings: {click: card_1_click}
     - name: card_2
       properties: {}
       type: form:Components.Card
@@ -60,6 +62,9 @@ components_by_slot:
           properties: {text: 'Selected in group 2:'}
           type: Label
           layout_properties: {}
+        - name: label_6
+          properties: {}
+          type: Label
     - name: card_3
       properties: {}
       type: form:Components.Card
@@ -85,6 +90,9 @@ components_by_slot:
           properties: {text: 'Selecting in group asdf:'}
           type: Label
           layout_properties: {}
+        - name: label_7
+          properties: {}
+          type: Label
   - name: checkbox_1
     properties: {selected: false, disabled: false, error: false}
     type: form:Components.Checkbox

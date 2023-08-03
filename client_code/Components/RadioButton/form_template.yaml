@@ -7,7 +7,7 @@ properties:
 - {name: value, type: string, default_value: ''}
 is_package: true
 events:
-- {name: clicked, default_event: true}
+- {name: click, default_event: true}
 custom_component: true
 components: []
 container:

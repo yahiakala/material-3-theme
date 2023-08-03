@@ -7,8 +7,7 @@ from ...Functions import checked_property, name_property, innerText_property
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    # self._text = properties.get('text', '')
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener('click', self.toggleButton)
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
 
   # Properties 
   group_name = name_property('anvil-m3-radiobutton-input')
@@ -60,10 +59,14 @@ class RadioButton(RadioButtonTemplate):
     }]
     return di 
     
-  def toggleButton(self, event):
+  def handle_click(self, event):
     if self.enabled:
+      self.raise_event("click")
+      
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True
+      
+
       
   def updateText(self, value, in_designer_placeholder):
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = value or ""
