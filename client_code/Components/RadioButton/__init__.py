@@ -61,9 +61,9 @@ class RadioButton(RadioButtonTemplate):
     
   def handle_click(self, event):
     if self.enabled:
-      self.raise_event("click")
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True
+      self.raise_event("click")
       
   def updateText(self, value, in_designer_placeholder):
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = value or ""
@@ -76,5 +76,6 @@ class RadioButton(RadioButtonTemplate):
         self.updateText(anvil.designer.get_design_name(self), True)
 
   def get_group_value(self):
+    print(self.group_name)
     selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
     return selectedItem.value

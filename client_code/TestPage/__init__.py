@@ -16,9 +16,6 @@ class TestPage(TestPageTemplate):
 
   def button_2_click(self, **event_args):
     print(self.radio_button_2.get_group_value())
-
-  def set_group_1_label(self, value):
-    self.label_5.text = value
     
   def set_group_2_label(self, value):
     self.label_6.text = value
@@ -26,13 +23,16 @@ class TestPage(TestPageTemplate):
   def set_group_qwer_label(self, value):
     self.label_7.text = value
 
-  def radio_button_1_click(self, **event_args):
-    v = self.radio_button_1.get_group_value()
-    self.set_group_1_label(f"{v}")
+  def group_a1_click(self, **event_args):
+    self.label_5.text = self.radio_button_1.get_group_value()
 
-  def radio_button_8_click(self, **event_args):
-    v = self.radio_button_8.get_group_value()
-    self.set_group_qwer_label(v)
+  def group_t2_click(self, **event_args):
+    print(dir(event_args))
+    self.label_6.text = self.radio_button_5.get_group_value()
+
+  def group_qwer_click(self, **event_args):
+    self.label_7.text = self.radio_button_8.get_group_value()
+
 
 
     

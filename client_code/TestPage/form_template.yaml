@@ -15,15 +15,17 @@ components_by_slot:
         properties: {group: a, text: 1 a, selected: true, value: a, group_name: a1}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
-        event_bindings: {clicked: radio_button_1_clicked, click: radio_button_1_click}
+        event_bindings: {clicked: radio_button_1_clicked, click: group_a1_click}
       - name: radio_button_2
         properties: {group: a, text: 2 a, value: b, group_name: a1}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_a1_click}
       - name: radio_button_3
         properties: {group: a, text: ffdsa, value: c, group_name: a1}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_a1_click}
       - name: flow_panel_2
         properties: {}
         type: FlowPanel
@@ -36,23 +38,26 @@ components_by_slot:
         - name: label_5
           properties: {}
           type: Label
-      event_bindings: {click: card_1_click}
+      event_bindings: {}
     - name: card_2
       properties: {}
       type: form:Components.Card
       components:
       - name: radio_button_4
-        properties: {group: b, text: 1 b, value: '1', group_name: '2'}
+        properties: {group: b, text: 1 b, value: '1', group_name: t2}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
       - name: radio_button_5
-        properties: {group: b, text: 2 b, value: '2', group_name: '2'}
+        properties: {group: b, text: 2 b, value: '2', group_name: t2}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
       - name: radio_button_6
-        properties: {group: b, text: asdfasdf, enabled: false, group_name: '2'}
+        properties: {group: b, text: asdfasdf, enabled: false, group_name: t2}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
       - name: flow_panel_3
         properties: {}
         type: FlowPanel
@@ -73,15 +78,17 @@ components_by_slot:
         properties: {group: c, name: nothing 1, value: '0', group_name: qwer}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
-        event_bindings: {click: radio_button_8_click}
+        event_bindings: {click: group_qwer_click}
       - name: radio_button_9
         properties: {group: c, name: nothing 2, enabled: false, value: '9', group_name: qwer}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_qwer_click}
       - name: name
         properties: {group: c, name: nothing 3, selected: true, value: '8', group_name: qwer}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_qwer_click}
       - name: flow_panel_4
         properties: {}
         type: FlowPanel
