@@ -50,5 +50,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     value = value.lower().replace(' ', '-')
     self.dom_nodes['anvil-m3-navigation-rail'].className = "anvil-m3-navigation-rail"
     self.dom_nodes['anvil-m3-navigation-rail'].classList.add(f"anvil-m3-{value}")
+    #todo: remove the below?
     self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
     self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
