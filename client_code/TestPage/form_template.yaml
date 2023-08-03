@@ -17,14 +17,6 @@ components_by_slot:
     properties: {}
     type: form:Components.Checkbox
     layout_properties: {}
-  slot_4:
-  - name: label_1
-    properties: {text: Material Design 3}
-    type: Label
-    layout_properties: {}
-  slot_2:
-  - name: button_2
-    properties: {material_icon: edit, text: ' '}
-    type: form:Components.Button
-    layout_properties: {}
+  slot_4: []
+  slot_2: []
 components: []
