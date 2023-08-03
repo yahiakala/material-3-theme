@@ -11,8 +11,16 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener('click', self.toggleButton)
 
   # Properties 
-  group = name_property('anvil-m3-radiobutton-input')
+  group_name = name_property('anvil-m3-radiobutton-input')
 
+  @property
+  def value(self):
+    return self._value;
+  @value.setter
+  def value(self, value):
+    self._value = value
+    self.dom_nodes['anvil-m3-radiobutton-input'].value = value or ""
+    
   @property
   def text(self):
     return self._text
@@ -58,7 +66,6 @@ class RadioButton(RadioButtonTemplate):
       self.selected = True
       
   def updateText(self, value, in_designer_placeholder):
-    self.dom_nodes['anvil-m3-radiobutton-input'].value = value or ""
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = value or ""
     if not in_designer_placeholder:
       self.dom_nodes['anvil-m3-radiobutton-label'].removeAttribute("style")
@@ -67,8 +74,7 @@ class RadioButton(RadioButtonTemplate):
     if anvil.designer.in_designer:
       if not self.text:
         self.updateText(anvil.designer.get_design_name(self), True)
-        print("name in designer: "+self.text)
 
   def get_group_value(self):
-    selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group}]:checked")
+    selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
     return selectedItem.value
