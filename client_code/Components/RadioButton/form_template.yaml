@@ -1,6 +1,6 @@
 properties:
 - {name: group_name, type: string, default_value: '', default_binding_prop: true,
-  description: Radio button group name}
+  description: Radio button group name.}
 - {name: selected, type: boolean, default_value: false, description: Radio button option for html <input> checked property}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button}
 - {name: text, type: string, default_value: ''}

@@ -17,14 +17,25 @@ class TestPage(TestPageTemplate):
   def button_2_click(self, **event_args):
     print(self.radio_button_2.get_group_value())
 
-  def card_1_click(self, **event_args):
-    """This method is called when the component is clicked"""
-    print("clicked the card")
+  def set_group_1_label(self, value):
+    self.label_5.text = value
+    
+  def set_group_2_label(self, value):
+    self.label_6.text = value
+    
+  def set_group_qwer_label(self, value):
+    self.label_7.text = value
 
-  def radio_button_1_clicked(self, **event_args):
-    print("clicked the radio button")
+  def radio_button_1_click(self, **event_args):
+    v = self.radio_button_1.get_group_value()
+    self.set_group_1_label(f"{v}")
+
+  def radio_button_8_click(self, **event_args):
+    v = self.radio_button_8.get_group_value()
+    self.set_group_qwer_label(v)
 
 
+    
 
 
 
