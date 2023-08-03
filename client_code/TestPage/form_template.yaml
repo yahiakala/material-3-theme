@@ -15,7 +15,7 @@ components_by_slot:
         properties: {group: a, text: 1 a, selected: true, value: a, group_name: a1}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
-        event_bindings: {clicked: radio_button_1_clicked, click: group_a1_click}
+        event_bindings: {click: group_a1_click}
       - name: radio_button_2
         properties: {group: a, text: 2 a, value: b, group_name: a1}
         type: form:Components.RadioButton

@@ -76,6 +76,5 @@ class RadioButton(RadioButtonTemplate):
         self.updateText(anvil.designer.get_design_name(self), True)
 
   def get_group_value(self):
-    print(self.group_name)
     selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
     return selectedItem.value
