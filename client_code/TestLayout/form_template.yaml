@@ -27,3 +27,11 @@ slots:
     index: 0
     set_layout_properties: {}
     target: {type: slot, name: slot_3}
+  slot_2:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_2}
+  slot_4:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_4}
