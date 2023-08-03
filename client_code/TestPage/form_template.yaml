@@ -12,6 +12,7 @@ components_by_slot:
     properties: {appearance: elevated, enabled: false}
     type: form:Components.Button
     layout_properties: {}
+    event_bindings: {click: button_1_click}
   - name: checkbox_1
     properties: {}
     type: form:Components.Checkbox
