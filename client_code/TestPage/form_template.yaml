@@ -23,6 +23,10 @@ components_by_slot:
         properties: {group: a, text: ffdsa, value: c}
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
+      - name: flow_panel_2
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
     - name: card_2
       properties: {}
       type: form:Components.Card
@@ -38,6 +42,10 @@ components_by_slot:
       - name: radio_button_6
         properties: {group: b, text: asdfasdf, enabled: false}
         type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: flow_panel_3
+        properties: {}
+        type: FlowPanel
         layout_properties: {slot: anvil-m3-card-slot}
     - name: card_3
       properties: {}
