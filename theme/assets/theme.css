@@ -150,13 +150,10 @@ body {
   }
 }
 
-@media(max-width: 600px) {
-  .anvil-m3-navigation-rail.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-app-title {
-    color: var(--anvil-m3-on-surface);
-    font-size: 22px;
-    padding-left: 16px;
-    padding-right: 24px;
-  }
+
+.anvil-m3-title-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media(max-width: 600px) {

@@ -52,6 +52,3 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['anvil-m3-navigation-rail'].classList.add(f"anvil-m3-{value}")
     self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
     self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
-
-  app_title = innerText_property('anvil-m3-app-title')
-
