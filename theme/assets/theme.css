@@ -144,8 +144,8 @@ body {
   .anvil-m3-navigation-rail.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar {
 /*     height: 64px; */
     padding: 20px 16px 24px;
-    justify-content: flex-start;
-/*     align-items: center; */
+    justify-content: space-between;
+    align-items: start;
     display: flex !important;
     width: 100%;
     column-gap: 24px;
