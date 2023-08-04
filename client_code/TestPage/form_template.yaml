@@ -114,7 +114,8 @@ components_by_slot:
     type: form:Components.Button
     layout_properties: {}
   - name: button_2
-    properties: {appearance: elevated, material_icon: 18_up_rating, text: My button}
+    properties: {appearance: elevated, material_icon: 18_up_rating, text: My button,
+      icon_size: '', icon_color: ''}
     type: form:Components.Button
     layout_properties: {}
   - name: button_1
