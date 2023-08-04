@@ -121,9 +121,5 @@ components_by_slot:
     properties: {text: button_1}
     type: Button
     layout_properties: {}
-  - name: button_4
-    properties: {text: button_4}
-    type: Button
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}

@@ -8,6 +8,7 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
     print(self.checkbox_1.selected)
 
+
     # Any code you write here will run before the form opens.
 
   def button_3_click(self, **event_args):
@@ -22,6 +23,8 @@ class TestPage(TestPageTemplate):
 
   def group_qwer_click(self, **event_args):
     self.label_7.text = self.radio_button_8.get_group_value()
+
+  
 
 
 
