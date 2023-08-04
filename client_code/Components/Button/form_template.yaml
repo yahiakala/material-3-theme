@@ -378,4 +378,5 @@ container:
   properties: {html: "<button anvil-name=\"button\" class=\"anvil-m3-button\">\n \
       \ <i anvil-name=\"button-icon\" class=\"material-symbols-outlined\" style=\"\
       display: none;\"></i>\n  <span anvil-name=\"button-text\"></span>\n</button>"}
+  event_bindings: {show: form_show}
 custom_component_container: false

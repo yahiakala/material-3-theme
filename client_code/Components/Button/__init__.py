@@ -15,6 +15,19 @@ class Button(ButtonTemplate):
     event.preventDefault()
     self.raise_event("click")
 
+  def _anvil_get_design_info_(self, as_layout=False):
+    di = super()._anvil_get_design_info_(as_layout)
+    di['interactions'] = [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['button-text'])
+      }
+    }]
+    return di
+
   @property
   def material_icon(self):
     return self._material_icon
@@ -60,7 +73,6 @@ class Button(ButtonTemplate):
     button = self.dom_nodes['button']
     if value:
       button.classList.add(f"anvil-m3-{value}")
-
 
   def form_show(self, **event_args):
       """This method is called when the HTML panel is shown on the screen"""
