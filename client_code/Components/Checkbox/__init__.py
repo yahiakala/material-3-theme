@@ -1,6 +1,6 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
-from ...Functions import checked_property, innerText_property, disabled_property
+from ...Functions import checked_property, innerText_property, enabled_property
 
 #TODO: 
 # * add in designer text edit
@@ -13,8 +13,9 @@ class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
 
-  disabled = disabled_property('anvil-m3-checkbox')
+  enabled = enabled_property('anvil-m3-checkbox')
 
   selected = checked_property('anvil-m3-checkbox')
 
@@ -31,3 +32,9 @@ class Checkbox(CheckboxTemplate):
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
       self._error = value
+
+  def handle_click(self, event):
+    if self.enabled:
+      self.dom_nodes['anvil-m3-checkbox'].focus()
+      self.selected = True
+      self.raise_event("click")
