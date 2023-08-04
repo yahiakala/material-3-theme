@@ -124,7 +124,7 @@ components_by_slot:
     layout_properties: {}
   slot_3:
   - name: checkbox_2
-    properties: {}
+    properties: {selected: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: radio_button_7
