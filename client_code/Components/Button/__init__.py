@@ -2,8 +2,11 @@ from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
 
+import anvil.designer
+
 class Button(ButtonTemplate):
   def __init__(self, **properties):
+    self._text = properties.get('text', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['button'].addEventListener("click", self.handle_click)
@@ -28,12 +31,12 @@ class Button(ButtonTemplate):
 
   @property
   def text(self):
-    return self.dom_nodes['button-text'].innerHTML
+    return self._text
 
   @text.setter
   def text(self, value):
-    if value:
-      self.dom_nodes['button-text'].innerHTML = value
+    self._text = value
+    self.dom_nodes['button-text'].innerHTML = value or ""
 
   @property
   def enabled(self):
@@ -57,6 +60,13 @@ class Button(ButtonTemplate):
     button = self.dom_nodes['button']
     if value:
       button.classList.add(f"anvil-m3-{value}")
+
+
+  def form_show(self, **event_args):
+      """This method is called when the HTML panel is shown on the screen"""
+      if anvil.designer.in_designer:
+        if not self.text:
+          self.text = anvil.designer.get_design_name(self)
 
 
   

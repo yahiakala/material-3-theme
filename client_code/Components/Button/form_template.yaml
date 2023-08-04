@@ -362,7 +362,7 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
-- {name: text, type: string, default_value: Button, description: Text for the Button}
+- {name: text, type: string, default_value: '', description: Text for the Button}
 - {name: enabled, type: boolean, default_value: true}
 - name: appearance
   type: enum
