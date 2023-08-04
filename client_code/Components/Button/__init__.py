@@ -85,9 +85,11 @@ class Button(ButtonTemplate):
 
   def form_show(self, **event_args):
       """This method is called when the HTML panel is shown on the screen"""
-      if anvil.designer.in_designer:
-        if not self.text:
+      if not self.text:
+        if anvil.designer.in_designer:
           self.text = anvil.designer.get_design_name(self)
+        else:
+          self.text = "Button"
 
   text_color = color_property('anvil-m3-button-text', 'color')
   icon_color = color_property('anvil-m3-button-icon', 'color')
