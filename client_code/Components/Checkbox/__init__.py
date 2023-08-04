@@ -2,6 +2,13 @@ from ._anvil_designer import CheckboxTemplate
 from anvil import *
 from ...Functions import checked_property, innerText_property, disabled_property
 
+#TODO: 
+# * add in designer text edit
+# * add component name when added to page
+# * refactor
+# * add focus method
+# * add change event
+
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.

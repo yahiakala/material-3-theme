@@ -122,5 +122,10 @@ components_by_slot:
     properties: {text: button_1}
     type: Button
     layout_properties: {}
+  slot_3:
+  - name: checkbox_2
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
