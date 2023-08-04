@@ -3,11 +3,15 @@ from anvil import *
 from ..Functions import innerText_property
 from anvil.js import window
 
+#TODO: add interactivity with nav drawer buttons?
 
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    # if anvil.designer.in_designer:
+    #   anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-drawer-open-btn'], 'dblclick', lambda x: self.open_nav_drawer)
     
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
@@ -53,3 +57,5 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     #todo: remove the below?
     self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
     self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
+
+
