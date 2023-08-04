@@ -128,8 +128,16 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: radio_button_7
-    properties: {}
+    properties: {group_name: radios}
     type: form:Components.RadioButton
+    layout_properties: {}
+  - name: radio_button_10
+    properties: {group_name: radios}
+    type: form:Components.RadioButton
+    layout_properties: {}
+  - name: check_box_1
+    properties: {text: check_box_1}
+    type: CheckBox
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}

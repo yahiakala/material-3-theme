@@ -109,9 +109,10 @@ input.anvil-m3-checkbox-error:focus:checked+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
 }
 
-input.anvil-m3-checkbox:not(:checked)+.anvil-m3-checkbox-hover:active{
+input.anvil-m3-checkbox:active:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-primary-overlay-3) !important;
 }
+
 input.anvil-m3-checkbox:checked:active+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-dark-overlay-3) !important;
 }
