@@ -1,3 +1,14 @@
+properties:
+- {name: selected, type: boolean, default_value: false, default_binding_prop: true,
+  description: Whether or not the checkbox is checked}
+- {name: enabled, type: boolean, default_value: true, description: Whether or not the checkbox is disabled}
+- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
+- {name: label, type: string, default_value: Label}
+is_package: true
+events:
+- {name: click, default_event: true}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\"\
@@ -8,12 +19,3 @@ container:
       \    <span class=\"material-symbols-outlined anvil-m3-checkbox-checked\" anvil-name=\"\
       anvil-m3-checkbox-checked\">check_box</span>\n  </div>\n  <label class=\"anvil-m3-checkbox-label\"\
       \ anvil-name=\"anvil-m3-checkbox-label\"></label>\n</div>\n"}
-components: []
-is_package: true
-custom_component: true
-properties:
-- {name: selected, type: boolean, default_value: false, default_binding_prop: true,
-  description: Whether or not the checkbox is checked}
-- {name: enabled, type: boolean, default_value: true, description: Whether or not the checkbox is disabled}
-- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
-- {name: label, type: string, default_value: Label}
