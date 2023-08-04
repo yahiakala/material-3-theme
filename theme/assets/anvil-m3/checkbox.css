@@ -5,6 +5,12 @@
   column-gap: 24px;
 }
 
+
+.anvil-m3-checkbox-checked.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+}
+
 /* input.anvil-m3-checkbox:after {
   font-size: 18px !important;
   font-family: 'Material Symbols Outlined';
