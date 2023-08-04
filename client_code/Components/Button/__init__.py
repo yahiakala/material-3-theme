@@ -54,7 +54,7 @@ class Button(ButtonTemplate):
   @text.setter
   def text(self, value):
     self._text = value
-    self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
+    self.dom_nodes['anvil-m3-button-text'].innerHTML = value or anvil.designer.get_design_name(self)
 
   @property
   def enabled(self):
