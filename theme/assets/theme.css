@@ -26,6 +26,8 @@
   --anvil-m3-on-surface-variant: %color:Surface Variant%;
 
   --anvil-m3-outline: %color:Outline%;
+  --anvil-m3-outline-variant: %color:Outline Variant%;
+  --anvil-m3-primary-overlay-1: %color:Primary Overlay 1%;
   --anvil-m3-primary-overlay-2: %color:Primary Overlay 2%;
   --anvil-m3-primary-overlay-3: %color:Primary Overlay 3%;
   --anvil-m3-on-disabled: %color:On Disabled%;
