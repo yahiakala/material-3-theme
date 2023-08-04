@@ -5,7 +5,6 @@ from ...Functions import checked_property, innerText_property, enabled_property
 #TODO: 
 # * add in designer text edit
 # * add component name when added to page
-# * refactor
 # * add focus method
 # * add change event
 
