@@ -28,12 +28,12 @@
 
 .anvil-m3-navigation-link:hover [anvil-name=anvil-m3-navigation-link-icon]{
   background-color: var(--anvil-m3-dark-overlay-1);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .anvil-m3-navigation-link:focus [anvil-name=anvil-m3-navigation-link-icon], .anvil-m3-navigation-link:active [anvil-name=anvil-m3-navigation-link-icon]{
   background-color: var(--anvil-m3-dark-overlay-2);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .anvil-m3-navigation-link.anvil-m3-navigation-link-selected {
