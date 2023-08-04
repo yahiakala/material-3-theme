@@ -11,6 +11,7 @@ class Button(ButtonTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
+    print(dir(self), dir(anvil.designer))
 
   def handle_click(self, event):
     event.preventDefault()
@@ -85,9 +86,9 @@ class Button(ButtonTemplate):
 
   def form_show(self, **event_args):
       """This method is called when the HTML panel is shown on the screen"""
-      if anvil.designer.in_designer:
-        if not self.text:
-          self.text = anvil.designer.get_design_name(self)
+      # if anvil.designer.in_designer:
+      if not self.text:
+        self.text = anvil.designer.get_design_name(self)
 
   text_color = color_property('anvil-m3-button-text', 'color')
   icon_color = color_property('anvil-m3-button-icon', 'color')
