@@ -55,6 +55,7 @@ class TextField(TextFieldTemplate):
 
   @supporting_text.setter
   def supporting_text(self, value):
+    self._supporting_text = value
     if value:
       self.dom_nodes['text-field-supporting'].innerHTML = value
 

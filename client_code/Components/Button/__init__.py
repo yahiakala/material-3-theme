@@ -41,6 +41,10 @@ class Button(ButtonTemplate):
       button_icon.innerText = value
       button_icon.style.display = "block"
       button.classList.add('anvil-m3-icon-padding')
+    else: 
+      button_icon.innerText = ""
+      button_icon.style.display = "none"
+      button.classList.remove('anvil-m3-icon-padding')
 
   @property
   def text(self):
@@ -71,6 +75,10 @@ class Button(ButtonTemplate):
   def appearance(self, value):
     self._appearance = value
     button = self.dom_nodes['button']
+    button.classList.remove('anvil-m3-elevated')
+    button.classList.remove('anvil-m3-filled')
+    button.classList.remove('anvil-m3-tonal')
+    button.classList.remove('anvil-m3-outlined')
     if value:
       button.classList.add(f"anvil-m3-{value}")
 
