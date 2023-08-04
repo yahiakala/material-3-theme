@@ -24,7 +24,7 @@
   --anvil-m3-surface: %color:Surface%;
   --anvil-m3-on-surface: %color:On Surface%;
   --anvil-m3-on-surface-variant: %color:Surface Variant%;
-
+  --anvil-m3-background: %color:Background%;
   --anvil-m3-outline: %color:Outline%;
   --anvil-m3-outline-variant: %color:Outline Variant%;
   --anvil-m3-primary-overlay-1: %color:Primary Overlay 1%;
@@ -37,14 +37,14 @@
   --anvil-m3-light-overlay-2: %color:Light Overlay 2%;
   --anvil-m3-dark-overlay-1: %color:Dark Overlay 1%;
   --anvil-m3-dark-overlay-2: %color:Dark Overlay 2%;
+  --anvil-m3-dark-overlay-3: %color:Dark Overlay 3%;
   --anvil-m3-on-surface-variant: %color:On Surface Variant%;
   --anvil-m3-error: %color:Error%;
   --anvil-m3-on-error: %color:On Error%;
+  --anvil-m3-on-error-container: %color:On Error Container%;
   --anvil-m3-error-overlay-1: %color:Error Overlay 1%;
   --anvil-m3-error-overlay-2: %color:Error Overlay 2%;
-  --anvil-m3-dark-overlay-3: %color:Dark Overlay 3%;
-  --anvil-m3-background: %color:Background%;
-  --anvil-m3-on-error-container: %color:On Error Container%;
+
 }
 
 body {
