@@ -1,6 +1,7 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
+from ...Functions import color_property, style_property
 
 import anvil.designer
 
@@ -9,7 +10,7 @@ class Button(ButtonTemplate):
     self._text = properties.get('text', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['button'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
 
   def handle_click(self, event):
     event.preventDefault()
@@ -23,7 +24,7 @@ class Button(ButtonTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['button-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-button-text'])
       }
     }]
     return di
@@ -34,8 +35,8 @@ class Button(ButtonTemplate):
 
   @material_icon.setter
   def material_icon(self, value):
-    button = self.dom_nodes['button']
-    button_icon = self.dom_nodes['button-icon']
+    button = self.dom_nodes['anvil-m3-button']
+    button_icon = self.dom_nodes['anvil-m3-button-icon']
     self._material_icon = value
     if value:
       button_icon.innerText = value
@@ -53,7 +54,7 @@ class Button(ButtonTemplate):
   @text.setter
   def text(self, value):
     self._text = value
-    self.dom_nodes['button-text'].innerHTML = value or ""
+    self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
 
   @property
   def enabled(self):
@@ -63,9 +64,9 @@ class Button(ButtonTemplate):
   def enabled(self, value):
     self._enabled = value
     if value:
-      self.dom_nodes['button'].removeAttribute("disabled")
+      self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
-      self.dom_nodes['button'].setAttribute("disabled", " ")
+      self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
 
   @property
   def appearance(self):
@@ -74,7 +75,7 @@ class Button(ButtonTemplate):
   @appearance.setter
   def appearance(self, value):
     self._appearance = value
-    button = self.dom_nodes['button']
+    button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
     button.classList.remove('anvil-m3-filled')
     button.classList.remove('anvil-m3-tonal')
@@ -87,6 +88,14 @@ class Button(ButtonTemplate):
       if anvil.designer.in_designer:
         if not self.text:
           self.text = anvil.designer.get_design_name(self)
+
+  text_color = color_property('anvil-m3-button-text', 'color')
+  icon_color = color_property('anvil-m3-button-icon', 'color')
+  font_family = style_property('anvil-m3-button-text', 'fontFamily')
+  font_size = style_property('anvil-m3-button-text', 'fontSize')
+  icon_size = style_property('anvil-m3-button-icon', 'fontSize')
+  # TODO: Add background color property
+
 
 
   
