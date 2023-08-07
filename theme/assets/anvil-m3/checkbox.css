@@ -55,15 +55,6 @@ input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-
   display: none !important;
 }
 
-/* input.anvil-m3-checkbox:checked:after {
-  display: block !important;
-}
-
-input.anvil-m3-checkbox:checked {
-  background-color: var(--anvil-m3-primary);
-  border: 0px;
-} */
-
 /*Error states*/
 .anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-unchecked, .anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-checked {
   color: var(--anvil-m3-error) !important;
