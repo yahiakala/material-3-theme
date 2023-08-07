@@ -37,8 +37,7 @@ class Checkbox(CheckboxTemplate):
       "callbacks": {
         "execute": lambda: handle_click(self)
       }
-    }
-                         ]
+    }]
     return di
   
   def updateText(self, value, in_designer_placeholder):
