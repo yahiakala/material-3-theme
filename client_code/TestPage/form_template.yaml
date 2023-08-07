@@ -132,7 +132,7 @@ components_by_slot:
     type: form:Components.RadioButton
     layout_properties: {}
   - name: checkbox_2
-    properties: {label: Checkbox}
+    properties: {label: Checkbox, text: hello}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: button_4
