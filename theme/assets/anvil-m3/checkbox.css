@@ -32,7 +32,7 @@ input.anvil-m3-checkbox {
   user-select: none;
 }
 
-input.anvil-m3-checkbox:checked
+input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate
 
 /* TOGGLING */
 input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
