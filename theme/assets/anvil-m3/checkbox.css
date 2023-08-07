@@ -41,12 +41,12 @@ input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterm
 }
 
 input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
-  display: inline !important;
+  display: inline;
   color: var(--anvil-m3-primary);
 }
 
 input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
-  display: none !important;
+  display: none;
 }
 
 /*Error states*/
