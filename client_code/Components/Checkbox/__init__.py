@@ -50,7 +50,7 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
-      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline-flex'
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
       
