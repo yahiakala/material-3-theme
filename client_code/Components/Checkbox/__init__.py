@@ -30,7 +30,7 @@ class Checkbox(CheckboxTemplate):
       }
     },
     {
-      
+      "type": 
     }
                          ]
     return di
