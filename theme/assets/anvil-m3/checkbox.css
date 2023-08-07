@@ -63,7 +63,9 @@ input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-
 }
 
 /*Disabled states*/
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate  {
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate  {
   color: var(--anvil-m3-on-disabled) !important;
 }
 
