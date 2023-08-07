@@ -48,7 +48,7 @@ class Checkbox(CheckboxTemplate):
     self._checked = value
     if self._checked == None and self.allow_indeterminate:
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
-      self.dom_nodes['anvil']
+      self.dom_nodes['anvil-m3-checkbox-checked']
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
       
