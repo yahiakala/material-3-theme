@@ -14,18 +14,6 @@
   'opsz' 48
 }
 
-/* input.anvil-m3-checkbox:after {
-  font-size: 18px !important;
-  font-family: 'Material Symbols Outlined';
-  content: "done";
-  -webkit-font-feature-settings: 'liga' 1;
-  -moz-font-feature-settings: 'liga' 1;
-  font-feature-settings: 'liga' 1;
-  color: var(--anvil-m3-on-primary);
-  display: none;
-  margin-top: -4px;
-} */
-
 input.anvil-m3-checkbox {
   opacity:0;
   position: absolute;
