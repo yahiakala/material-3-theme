@@ -29,7 +29,7 @@ class Checkbox(CheckboxTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
       }
     },
-                         
+                       
                          ]
     return di
   
