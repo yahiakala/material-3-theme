@@ -31,7 +31,7 @@ class Checkbox(CheckboxTemplate):
     },
     {
       "type": "whole_component",
-      "title": ""
+      "title": "Visibility",
     }
                          ]
     return di
