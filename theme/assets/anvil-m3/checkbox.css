@@ -32,9 +32,9 @@ input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked 
   display: none !important;
 }
 
-/* input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
+input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
   display: none !important;
-} */
+}
 
 .anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
   display: inline !important;
