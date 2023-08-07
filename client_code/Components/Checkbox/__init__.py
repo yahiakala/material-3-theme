@@ -34,6 +34,9 @@ class Checkbox(CheckboxTemplate):
       "title": "Enable",
       "icon": "power-off",
       "default": True,
+      "callbacks": {
+        "execute"
+      }
     }
                          ]
     return di
