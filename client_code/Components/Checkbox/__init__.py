@@ -5,7 +5,6 @@ import anvil.designer
 
 #TODO: 
 # * add in designer text edit
-# * add component name when added to page
 # * add focus method
 # * add change event
 
@@ -18,9 +17,7 @@ class Checkbox(CheckboxTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    print(bool(self.text))
     if anvil.designer.in_designer and not self.text:
-      print('yes')
       self.text = anvil.designer.get_design_name(self)
       self.dom_nodes['anvil-m3-checkbox-label'].style.fontStyle = "italic"
       self.dom_nodes['anvil-m3-checkbox-label'].style.color = "#bbb"
