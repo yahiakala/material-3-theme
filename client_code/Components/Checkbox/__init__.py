@@ -30,7 +30,8 @@ class Checkbox(CheckboxTemplate):
       }
     },
     {
-      "type": 
+      "type": "whole_component",
+      "title"
     }
                          ]
     return di
