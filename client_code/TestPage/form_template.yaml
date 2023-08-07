@@ -71,5 +71,9 @@ components_by_slot:
     properties: {}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: checkbox_17
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
