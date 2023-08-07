@@ -33,7 +33,7 @@ input.anvil-m3-checkbox {
 }
 
 input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
-  
+  color: var(--anvil-m3-primary);
 }
 
 /* TOGGLING */
