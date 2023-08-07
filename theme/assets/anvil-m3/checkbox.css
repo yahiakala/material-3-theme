@@ -31,13 +31,20 @@ input.anvil-m3-checkbox {
 input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
   display: none !important;
 }
+
+input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
+  display: none !important;
+}
+
 .anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
   display: inline !important;
 }
+
 input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
   display: inline !important;
   color: var(--anvil-m3-primary);
 }
+
 input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
   display: none !important;
 }
