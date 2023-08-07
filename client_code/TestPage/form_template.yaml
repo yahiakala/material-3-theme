@@ -124,7 +124,7 @@ components_by_slot:
     layout_properties: {}
   slot_3:
   - name: checkbox_2
-    properties: {text: 'label, unchecked'}
+    properties: {text: 'label, unchecked', checked: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_3
