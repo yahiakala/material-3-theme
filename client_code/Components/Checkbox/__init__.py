@@ -37,8 +37,9 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
   
   enabled = enabled_property('anvil-m3-checkbox')
-  checked = checked_property('anvil-m3-checkbox')
   label = innerText_property('anvil-m3-checkbox-label')
+
+  @property
 
   @property
   def text(self):
