@@ -19,6 +19,7 @@ input.anvil-m3-checkbox {
   pointer-events: none;
 }
 
+color: var(--anvil-m3-primary);
 
 .anvil-m3-checkbox-checked, .anvil-m3-checkbox-unchecked, .anvil-m3-checkbox-indeterminate {
   font-size: 20px;
