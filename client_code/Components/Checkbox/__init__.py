@@ -32,7 +32,7 @@ class Checkbox(CheckboxTemplate):
     {
       "type": "whole_component",
       "title": "Enable",
-      "icon":
+      "icon": "power"
     }
                          ]
     return di
