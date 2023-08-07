@@ -66,6 +66,7 @@ def checked_property(dom_node_name):
     return self._checked
 
   def setter(self, value):
+    
     self.dom_nodes[dom_node_name].checked = value
 
   return property(getter, setter)
