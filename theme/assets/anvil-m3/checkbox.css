@@ -125,3 +125,9 @@ input.anvil-m3-checkbox:active:not(:checked)+.anvil-m3-checkbox-hover{
 input.anvil-m3-checkbox:checked:active+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-dark-overlay-3) !important;
 }
+
+/* LABEL */
+.anvil-m3-checkbox-label {
+  color: var(--anvil-m3-on-surface);
+  font-style: normal;
+}

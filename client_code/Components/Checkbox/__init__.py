@@ -18,7 +18,7 @@ class Checkbox(CheckboxTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
-      self.text = anvil.designer.get_design_name(self)
+      self.updateText(anvil.designer.get_design_name(self), True)
 
 
   def _anvil_get_design_info_(self, as_layout=False):
@@ -33,8 +33,12 @@ class Checkbox(CheckboxTemplate):
       }
     }]
     return di
-      
-
+  
+  def updateText(self, value, in_designer_placeholder):
+    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
+    if not in_designer_placeholder:
+      self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
+  
   enabled = enabled_property('anvil-m3-checkbox')
   selected = checked_property('anvil-m3-checkbox')
   label = innerText_property('anvil-m3-checkbox-label')
@@ -46,7 +50,8 @@ class Checkbox(CheckboxTemplate):
   @text.setter
   def text(self, value):
     self._text = value
-    self.dom_nodes['anvil-m3-checkbox-label'].innerHTML = value or ""
+    if value:
+      self.updateText(value, False)
 
   @property
   def error(self):

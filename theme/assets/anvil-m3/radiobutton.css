@@ -81,6 +81,6 @@
 .anvil-m3-radiobutton-label {
   vertical-align: middle;
   padding-left: 16px;
-  color: var(--anvil-m3-on-on-surface);
+  color: var(--anvil-m3-on-surface);
   font-style: normal;
 }

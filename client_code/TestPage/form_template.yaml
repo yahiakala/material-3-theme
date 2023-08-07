@@ -128,7 +128,7 @@ components_by_slot:
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_10
-    properties: {group_name: radios}
+    properties: {group_name: radios, text: radio button}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: checkbox_2
