@@ -4,7 +4,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true, description: Whether or not the checkbox is disabled}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
 - {name: text, type: string, default_value: ''}
-- {name: allow_indeterminate, type: string, default_value: ''}
+- {name: allow_indeterminate, type: boolean, default_value: false}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
