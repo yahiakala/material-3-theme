@@ -124,7 +124,7 @@ components_by_slot:
     layout_properties: {}
   slot_3:
   - name: radio_button_7
-    properties: {group_name: radios}
+    properties: {group_name: radios, text: radio button}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_10
@@ -132,8 +132,12 @@ components_by_slot:
     type: form:Components.RadioButton
     layout_properties: {}
   - name: checkbox_2
-    properties: {}
+    properties: {label: radio button}
     type: form:Components.Checkbox
+    layout_properties: {}
+  - name: button_4
+    properties: {}
+    type: form:Components.Button
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
