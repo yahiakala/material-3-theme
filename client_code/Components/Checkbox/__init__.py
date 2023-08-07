@@ -52,7 +52,7 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def allow_indeterminate(self):
-    return _allow
+    return _allow_indeterminate
 
   @allow_indeterminate.setter
   def allow_indeterminate(self, value):
