@@ -30,7 +30,7 @@ class Checkbox(CheckboxTemplate):
       }
     },
     {
-      "type"
+      "type": "whole_com"
     }                   
                          ]
     return di
