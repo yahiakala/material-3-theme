@@ -67,7 +67,7 @@ components_by_slot:
     properties: {text: 'label, indeterminate, disabled'}
     type: form:Components.Checkbox
     layout_properties: {}
-  - name: checkbox_16
+  - name: indeterminate_checkbox_3
     properties: {text: ''}
     type: form:Components.Checkbox
     layout_properties: {}
