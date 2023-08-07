@@ -31,8 +31,8 @@ class Checkbox(CheckboxTemplate):
     },
     {
       "type": "whole_component",
-      "title": "Enable",
-      "icon": "power-off",
+      "title": "Checked",
+      "icon": "check",
       "default": True,
       "callbacks": {
         "execute": lambda: self.enabled = not self.enabled
