@@ -8,7 +8,6 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
     self.indeterminate_checkbox.checked = None
 
-
     # Any code you write here will run before the form opens.
 
   def button_3_click(self, **event_args):
