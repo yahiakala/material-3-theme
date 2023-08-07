@@ -52,13 +52,11 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def allow_indeterminate(self):
-    return self._text
+    pass
 
   @text.setter
   def allow_indeterminate(self, value):
-    self._text = value
-    if value:
-      self.updateText(value, False)
+    
 
   @property
   def error(self):
