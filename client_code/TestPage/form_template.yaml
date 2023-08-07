@@ -160,7 +160,7 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_11
-    properties: {error: true, selected: true}
+    properties: {error: true, selected: true, checked: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_12
