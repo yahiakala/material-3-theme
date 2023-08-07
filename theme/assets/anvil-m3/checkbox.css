@@ -5,7 +5,7 @@
   column-gap: 16px;
 }
 
-.anvil-m3-checkbox-checked.material-symbols-outlined {
+.anvil-m3-checkbox-checked.material-symbols-outlined, .anvil-m3-checkbox-indeterminate.material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
