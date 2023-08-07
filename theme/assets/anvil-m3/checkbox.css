@@ -74,7 +74,9 @@ input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover:hover {
   cursor: not-allowed;
 }
 
-input.anvil-m3-checkbox:disabled ~
+input.anvil-m3-checkbox:disabled ~ label.anvil-m3-checkbox-label {
+  
+}
 
 
 /*Hover, focus, active states*/
