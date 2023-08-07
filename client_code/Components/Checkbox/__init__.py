@@ -56,7 +56,7 @@ class Checkbox(CheckboxTemplate):
 
   @allow_indeterminate.setter
   def allow_indeterminate(self, value):
-    pass
+    self._allow_indeterminate = value
 
   @property
   def error(self):
