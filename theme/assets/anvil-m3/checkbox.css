@@ -75,7 +75,7 @@ input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover:hover {
 }
 
 input.anvil-m3-checkbox:disabled ~ label.anvil-m3-checkbox-label {
-  color: var()
+  color: var(--anvil-m3)
 }
 
 
