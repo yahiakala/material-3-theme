@@ -47,7 +47,7 @@ class Checkbox(CheckboxTemplate):
   def checked(self, value):
     self._checked = value
     if self._checked == None and self.allow_indeterminate:
-      self.dom_nodes[]
+      self.dom_nodes['']
 
   @property
   def text(self):
