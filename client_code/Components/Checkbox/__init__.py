@@ -18,7 +18,7 @@ class Checkbox(CheckboxTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    print(self.text)
+    print(bool(self.text))
     if anvil.designer.in_designer and not self.text:
       print('yes')
       self.text = anvil.designer.get_design_name(self)
