@@ -80,5 +80,10 @@ components_by_slot:
     properties: {text: ''}
     type: form:Components.RadioButton
     layout_properties: {}
+  - name: radio_button_2
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
+    event_bindings: {click: radio_button_2_click}
 components: []
 event_bindings: {show: form_show}
