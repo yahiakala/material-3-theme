@@ -72,7 +72,7 @@ def checked_property(dom_node_name):
 
 def enabled_property(dom_node_name):
   def getter(self):
-    return nself.dom_nodes[dom_node_name].disabled
+    return not self.dom_nodes[dom_node_name].disabled
 
   def setter(self, value):
     self.dom_nodes[dom_node_name].disabled = not value
