@@ -68,11 +68,11 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: indeterminate_checkbox_3
-    properties: {text: 'label, indeterminate, error'}
+    properties: {text: 'label, indeterminate, error', error: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: indeterminate_checkbox_4
-    properties: {text: 'label, indeterminate, error, disabled'}
+    properties: {text: 'label, indeterminate, error, disabled', enabled: false, error: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: radio_button_1
