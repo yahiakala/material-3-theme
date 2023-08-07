@@ -123,21 +123,57 @@ components_by_slot:
     type: Button
     layout_properties: {}
   slot_3:
-  - name: radio_button_7
-    properties: {group_name: radios, text: radio button}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: radio_button_10
-    properties: {group_name: radios, text: radio button}
-    type: form:Components.RadioButton
-    layout_properties: {}
   - name: checkbox_2
-    properties: {label: Checkbox, text: checkbox}
+    properties: {text: 'label, unchecked'}
     type: form:Components.Checkbox
     layout_properties: {}
-  - name: button_4
+  - name: checkbox_3
+    properties: {text: 'label, checked', selected: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_4
+    properties: {text: 'label, error, unchecked', error: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_5
+    properties: {text: 'label, error, checked', selected: true, error: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_6
+    properties: {text: 'label, disabled', enabled: false}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_7
+    properties: {error: true, text: 'label, disabled, error'}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_8
     properties: {}
-    type: form:Components.Button
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_9
+    properties: {selected: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_10
+    properties: {error: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_11
+    properties: {error: true, selected: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_12
+    properties: {enabled: false}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: checkbox_13
+    properties: {enabled: false, error: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: radio_button_7
+    properties: {enabled: false}
+    type: form:Components.RadioButton
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}

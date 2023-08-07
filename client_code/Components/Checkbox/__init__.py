@@ -4,7 +4,6 @@ from ...Functions import checked_property, innerText_property, enabled_property
 import anvil.designer
 
 #TODO: 
-# * add in designer text edit
 # * add focus method
 # * add change event
 
@@ -12,14 +11,12 @@ class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self._text = properties.get('text', '')
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
       self.updateText(anvil.designer.get_design_name(self), True)
-
 
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
