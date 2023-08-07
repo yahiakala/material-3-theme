@@ -75,5 +75,9 @@ components_by_slot:
     properties: {}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
