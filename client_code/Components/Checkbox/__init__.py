@@ -45,7 +45,8 @@ class Checkbox(CheckboxTemplate):
 
   @checked.setter
   def checked(self, value):
-    
+    self._checked = value
+    if 
 
   @property
   def text(self):
