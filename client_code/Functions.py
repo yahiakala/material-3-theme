@@ -63,7 +63,7 @@ def href_property(dom_node_name):
 
 def checked_property(dom_node_name):
   def getter(self):
-    return self.dom_nodes[dom_node_name].checked
+    return self._checked
 
   def setter(self, value):
     self.dom_nodes[dom_node_name].checked = value
