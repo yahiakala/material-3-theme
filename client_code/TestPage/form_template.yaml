@@ -123,18 +123,6 @@ components_by_slot:
     type: Button
     layout_properties: {}
   slot_3:
-  - name: checkbox_2
-    properties: {selected: true}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: checkbox_3
-    properties: {}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: checkbox_4
-    properties: {}
-    type: form:Components.Checkbox
-    layout_properties: {}
   - name: radio_button_7
     properties: {group_name: radios}
     type: form:Components.RadioButton
@@ -143,9 +131,9 @@ components_by_slot:
     properties: {group_name: radios}
     type: form:Components.RadioButton
     layout_properties: {}
-  - name: check_box_1
-    properties: {text: check_box_1}
-    type: CheckBox
+  - name: checkbox_2
+    properties: {}
+    type: form:Components.Checkbox
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}

@@ -1,6 +1,7 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
 from ...Functions import checked_property, innerText_property, enabled_property
+import anvil.designer
 
 #TODO: 
 # * add in designer text edit
@@ -14,11 +15,23 @@ class Checkbox(CheckboxTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
 
+  def form_show(self, **event_args):
+    """This method is called when the HTML panel is shown on the screen"""
+    if anvil.designer.in_designer and not self.text :
+      self.text = anvil.designer.get_design_name(self)
+
   enabled = enabled_property('anvil-m3-checkbox')
-
   selected = checked_property('anvil-m3-checkbox')
-
   label = innerText_property('anvil-m3-checkbox-label')
+
+  @property
+  def text(self):
+    return self._text
+
+  @text.setter
+  def text(self, value):
+    self._text = value
+    self.dom_nodes['anvil-m3-checkbox-label'].innerHTML = value or ""
 
   @property
   def error(self):
