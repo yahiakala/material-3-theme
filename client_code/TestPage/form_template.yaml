@@ -171,9 +171,5 @@ components_by_slot:
     properties: {enabled: false, error: true}
     type: form:Components.Checkbox
     layout_properties: {}
-  - name: radio_button_7
-    properties: {enabled: false}
-    type: form:Components.RadioButton
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
