@@ -51,7 +51,6 @@ class Checkbox(CheckboxTemplate):
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
       
-
   @property
   def text(self):
     return self._text
