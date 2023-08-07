@@ -40,6 +40,7 @@ class Checkbox(CheckboxTemplate):
   label = innerText_property('anvil-m3-checkbox-label')
 
   @property
+  def checked(self)
 
   @property
   def text(self):
