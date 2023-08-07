@@ -35,7 +35,7 @@ class Checkbox(CheckboxTemplate):
       "icon": "power-off",
       "default": True,
       "callbacks": {
-        "execute": lambda: self.
+        "execute": lambda: self.enabled = not self.enabled
       }
     }
                          ]
