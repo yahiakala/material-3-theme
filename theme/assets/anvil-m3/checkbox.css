@@ -29,11 +29,11 @@ input.anvil-m3-checkbox {
 
 /* TOGGLING */
 input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
-  display: none !important;
+  display: none;
 }
 
 input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
-  display: none !important;
+  display: none;
 }
 
 .anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
