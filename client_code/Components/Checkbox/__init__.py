@@ -51,6 +51,16 @@ class Checkbox(CheckboxTemplate):
       self.updateText(value, False)
 
   @property
+  def text(self):
+    return self._text
+
+  @text.setter
+  def text(self, value):
+    self._text = value
+    if value:
+      self.updateText(value, False)
+
+  @property
   def error(self):
     return self._error
 
