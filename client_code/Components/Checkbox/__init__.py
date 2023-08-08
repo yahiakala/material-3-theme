@@ -33,7 +33,7 @@ class Checkbox(CheckboxTemplate):
     return di
   
   def updateText(self, value, in_designer_placeholder):
-    if self.text == 
+    
 
   def handle_click(self, event):
     if self.enabled:
