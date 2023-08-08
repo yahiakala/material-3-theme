@@ -54,7 +54,8 @@ class Checkbox(CheckboxTemplate):
       self.checked = not self.checked
       self.raise_event("click")
 
-
+  
+  
   @property
   def checked(self):
     return self._checked
