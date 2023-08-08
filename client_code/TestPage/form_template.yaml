@@ -1,15 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: card_1
-    properties: {interactive: false}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: check_box_1
-      properties: {text: check_box_1, align: right}
-      type: CheckBox
-      layout_properties: {slot: anvil-m3-card-slot}
+  slot_3: []
 components: []
 event_bindings: {show: form_show}
