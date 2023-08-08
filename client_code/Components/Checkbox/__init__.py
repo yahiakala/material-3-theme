@@ -43,7 +43,7 @@ class Checkbox(CheckboxTemplate):
       self.raise_event("click")
 
   enabled = enabled_property('anvil-m3-checkbox')
-  visible = visible_property('anvil-m3-checkbox-container', 'block')
+  #visible = visible_property('anvil-m3-checkbox-container', 'block')
   
   @property
   def checked(self):
