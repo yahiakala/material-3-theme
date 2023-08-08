@@ -48,15 +48,7 @@ class Checkbox(CheckboxTemplate):
   text_color = color_property('anvil-m3-checkbox-label', 'color')
   background = color_property('anvil-m3-checkbox-container', 'backgroundColor')
   text = innerText_property('anvil-m3-checkbox-label')
-
-  @property
-  def align(self):
-    return self._align
-
-  @align.setter
-  def align(self, value):
-    self.dom_nodes['anvil-m3-checkbox-component'].style.justifyContent = value
-    self._align = value
+  align = st
 
   @property
   def checkbox_color(self):
