@@ -103,7 +103,10 @@ def visible_property(dom_node_name, display_prop):
 
   def setter(self, value):
     self._visible = value
-    
+    if value:
+      self.dom_nodes['anvil-m3-checkbox-container'].style.display = 'block'
+    else:
+      self.dom_nodes['anvil-m3-checkbox-container'].style.display = 'none'
 
   return property(getter, setter)
 
