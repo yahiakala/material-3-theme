@@ -58,7 +58,8 @@ class Checkbox(CheckboxTemplate):
     pass
 
   @visible.setter
-  def visible(self, value)
+  def visible(self, value):
+    pass
   
   
   
