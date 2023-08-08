@@ -55,6 +55,7 @@ class Checkbox(CheckboxTemplate):
   
   
   
+  
   @property
   def checked(self):
     return self._checked
