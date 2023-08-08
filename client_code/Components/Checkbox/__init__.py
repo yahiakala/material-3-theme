@@ -44,15 +44,15 @@ class Checkbox(CheckboxTemplate):
 
   enabled = enabled_property('anvil-m3-checkbox')
 
-  # @property
-  # def visible(self):
-  #   return self._visible
+  @property
+  def visible(self):
+    return self._visible
 
-  # @visible.setter
-  # def visible(self, value):
-  #   self._visible = value
-  #   if value:
-  #     self.dom_nodes['anvil-m3-checkbox-container'].style.display = 
+  @visible.setter
+  def visible(self, value):
+    self._visible = value
+    if value:
+      self.dom_nodes['anvil-m3-checkbox-container'].style.display = block
   
   
   
