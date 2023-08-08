@@ -15,6 +15,7 @@ properties:
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
+- {name: prop, type: string, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
