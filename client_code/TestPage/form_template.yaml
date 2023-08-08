@@ -17,7 +17,7 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_5
-    properties: {text: 'label, error, checked', selected: true, error: true, checked: true}
+    properties: {text: '', selected: true, error: true, checked: true}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_6
