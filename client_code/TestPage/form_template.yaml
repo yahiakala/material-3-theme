@@ -6,10 +6,6 @@ components_by_slot:
     properties: {interactive: false}
     type: form:Components.Card
     layout_properties: {}
-    components:
-    - name: checkbox_1
-      properties: {}
-      type: form:Components.Checkbox
-      layout_properties: {slot: anvil-m3-card-slot}
+    components: []
 components: []
 event_bindings: {show: form_show}
