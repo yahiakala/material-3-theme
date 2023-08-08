@@ -13,6 +13,9 @@ class Checkbox(CheckboxTemplate):
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
     print(self.italic)
 
+  def focus(self):
+    pass
+
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
