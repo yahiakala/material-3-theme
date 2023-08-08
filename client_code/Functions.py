@@ -97,7 +97,7 @@ def name_property(dom_node_name):
 
   return property(getter, setter)
 
-def visible_property(dom_node_name, display):
+def visible_property(dom_node_name, display_type):
   def getter(self):
     return self.dom_nodes[dom_node_name].name
 
