@@ -7,6 +7,7 @@ properties:
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.}
 - {name: visible, type: boolean, default_value: true}
 - {name: underline, type: boolean, default_value: false}
+- {name: prop, type: string, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
