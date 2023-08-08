@@ -136,7 +136,7 @@ def italic_property(dom_node_name):
 
   return property(getter, setter)
 
-def italic_property(dom_node_name):
+def bold_property(dom_node_name):
   def getter(self):
     return self._italic
 
