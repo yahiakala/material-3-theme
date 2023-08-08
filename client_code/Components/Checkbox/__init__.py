@@ -55,7 +55,7 @@ class Checkbox(CheckboxTemplate):
 
   @align.property
   def align(self, value):
-    self.dom_nodes['anvil-m3-checkbox-component'].style.ju
+    self.dom_nodes['anvil-m3-checkbox-component'].style.justifyContent = value
 
   @property
   def checkbox_color(self):
