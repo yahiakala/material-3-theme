@@ -17,7 +17,7 @@ properties:
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
 - {name: font, type: string, default_value: '', description: The font family to use for this component.}
 - {name: checkbox_color, type: color, default_value: '', description: Color of the checkbox}
-- {name: prop, type: string, default_value: ''}
+- {name: foreground, type: string, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
