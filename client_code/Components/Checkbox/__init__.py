@@ -29,14 +29,6 @@ class Checkbox(CheckboxTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
       }
     },
-    {
-      "type": "whole_component",
-      "title": "Checked",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "checked", self.dom_nodes['anvil-m3-checkbox-container'])
-      }
     }]
     return di
   
