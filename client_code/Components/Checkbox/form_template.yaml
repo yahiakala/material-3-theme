@@ -9,7 +9,7 @@ properties:
 - {name: underline, type: boolean, default_value: false}
 - {name: italic, type: boolean, default_value: false}
 - {name: font_size, type: number}
-- {name: bold, type: boolean, default_value: false}
+- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
 is_package: true
 events:
