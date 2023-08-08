@@ -9,6 +9,7 @@ properties:
 - {name: underline, type: boolean, default_value: false}
 - {name: italic, type: boolean, default_value: false}
 - {name: font_size, type: string, default_value: ''}
+- {name: prop, type: string, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
