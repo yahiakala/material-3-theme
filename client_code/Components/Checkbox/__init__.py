@@ -51,7 +51,9 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def align(self):
-    return self._anvil_get_design_info_()
+    return self._align
+
+  
 
   @property
   def checkbox_color(self):
