@@ -33,8 +33,7 @@ class Checkbox(CheckboxTemplate):
     return di
   
   def updateText(self, value, in_designer_placeholder):
-    if self.text == anvil.designer.get_design_name(self):
-      
+    if self.text == 
 
   def handle_click(self, event):
     if self.enabled:
@@ -87,9 +86,9 @@ class Checkbox(CheckboxTemplate):
 
   @text.setter
   def text(self, value):
+    self._text = value
     if value:
       self.updateText(value, False)
-    self._text = value
 
   @property
   def allow_indeterminate(self):
