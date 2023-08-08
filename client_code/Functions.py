@@ -103,6 +103,7 @@ def visible_property(dom_node_name, display_prop):
 
   def setter(self, value):
     self._visible = value
+    
 
   return property(getter, setter)
 
