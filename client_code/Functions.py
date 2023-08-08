@@ -119,7 +119,7 @@ def underline_property(dom_node_name):
     if value:
       self.dom_nodes[dom_node_name].style.textDecoration = 'underline'
     else:
-      self.dom_nodes[dom_node_name].style.display = 'none'
+      self.dom_nodes[dom_node_name].style.textDecoration = 'none'
 
   return property(getter, setter)
   
