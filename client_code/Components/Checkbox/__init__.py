@@ -54,6 +54,7 @@ class Checkbox(CheckboxTemplate):
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].style.display = block
     else:
+      self.dom_nodes['anvil-m3-checkbox-container'].style.display = 'none'
       
   
   
