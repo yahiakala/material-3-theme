@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: column_panel_1
-    properties: {border: '1px dotted '}
+    properties: {border: 1px dotted lightgreen}
     type: ColumnPanel
     layout_properties: {}
     components:
