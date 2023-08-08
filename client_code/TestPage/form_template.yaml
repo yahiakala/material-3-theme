@@ -94,7 +94,7 @@ components_by_slot:
     components:
     - name: button_1
       properties: {text: button_1, enabled: true, visible: true, underline: false,
-        font_size: null, border: ''}
+        font_size: null, border: '', align: full}
       type: Button
       layout_properties: {grid_position: 'XCKKUJ,GAPKOX'}
 components: []
