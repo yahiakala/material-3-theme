@@ -33,7 +33,7 @@ class Checkbox(CheckboxTemplate):
     return di
   
   def updateText(self, value, in_designer_placeholder):
-    if self.text == anvil.designer.get_design_name(self)
+    if self.text == anvil.designer.get_design_name(self):
 
   def handle_click(self, event):
     if self.enabled:
