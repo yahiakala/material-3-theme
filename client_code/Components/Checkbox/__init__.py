@@ -57,7 +57,7 @@ class Checkbox(CheckboxTemplate):
 
   @checkbox_color.setter
   def checkbox_color(self, value):
-    self._checkbox_color = theme_color_to_css(value)
+    self._checkbox_color = value
     if value:
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
       self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
