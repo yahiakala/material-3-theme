@@ -87,7 +87,8 @@ class Checkbox(CheckboxTemplate):
   @text.setter
   def text(self, value):
     self._text = value
-    self.updateText(value, False)
+    if value:
+      self.updateText(value, False)
 
   @property
   def allow_indeterminate(self):
