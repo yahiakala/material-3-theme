@@ -34,7 +34,6 @@ container:
       \    <span class=\"material-symbols-outlined anvil-m3-checkbox-checked\" anvil-name=\"\
       anvil-m3-checkbox-checked\">check_box</span>\n    <span class=\"material-symbols-outlined\
       \ anvil-m3-checkbox-indeterminate\" anvil-name=\"anvil-m3-checkbox-indeterminate\"\
-      >indeterminate_check_box</span>\n  </div>\n  <label style=\"font-style: italic;\
-      \ color:#bbb\" class=\"anvil-m3-checkbox-label\" anvil-name=\"anvil-m3-checkbox-label\"\
-      ></label>\n</div>\n"}
+      >indeterminate_check_box</span>\n  </div>\n  <label class=\"anvil-m3-checkbox-label\"\
+      \ anvil-name=\"anvil-m3-checkbox-label\"></label>\n</div>\n"}
   event_bindings: {show: form_show}
