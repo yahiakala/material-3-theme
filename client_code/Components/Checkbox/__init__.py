@@ -54,7 +54,8 @@ class Checkbox(CheckboxTemplate):
   enabled = enabled_property('anvil-m3-checkbox')
 
   @property
-  def visib
+  def visible(self):
+    
   
   
   
