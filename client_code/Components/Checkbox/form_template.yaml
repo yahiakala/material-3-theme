@@ -26,10 +26,10 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name style=\"display:flex\">\n  <div anvil-name=\"\
-      anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\">\n    <input\
-      \ class=\"anvil-m3-checkbox\" anvil-name=\"anvil-m3-checkbox\" type=\"checkbox\"\
-      >\n    <div class=\"anvil-m3-checkbox-hover\" anvil-name=\"anvil-m3-checkbox-hover\"\
+  properties: {html: "<div anvil-name=anvil-m3-checkbox-container style=\"display:flex\"\
+      >\n  <div anvil-name=\"anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\"\
+      >\n    <input class=\"anvil-m3-checkbox\" anvil-name=\"anvil-m3-checkbox\" type=\"\
+      checkbox\">\n    <div class=\"anvil-m3-checkbox-hover\" anvil-name=\"anvil-m3-checkbox-hover\"\
       >\n      <span class=\"material-symbols-outlined anvil-m3-checkbox-unchecked\"\
       \ anvil-name=\"anvil-m3-checkbox-unchecked\">check_box_outline_blank</span>\n\
       \      <span class=\"material-symbols-outlined anvil-m3-checkbox-checked\" anvil-name=\"\
