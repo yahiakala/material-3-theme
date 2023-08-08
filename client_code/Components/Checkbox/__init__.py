@@ -32,7 +32,7 @@ class Checkbox(CheckboxTemplate):
     {
       "type": "whole_component",
       "title": "Checked",
-      "icon": "eye",
+      "icon": "edit",
       "default": True,
       "callbacks": {
         "execute": lambda: handle_click(self)
