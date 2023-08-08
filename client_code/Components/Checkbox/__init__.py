@@ -53,7 +53,9 @@ class Checkbox(CheckboxTemplate):
   def align(self):
     return self._align
 
-  
+  @align.property
+  def align(self, value):
+    
 
   @property
   def checkbox_color(self):
