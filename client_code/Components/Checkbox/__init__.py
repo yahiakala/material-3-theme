@@ -52,7 +52,7 @@ class Checkbox(CheckboxTemplate):
   font = style_property('anvil-m3-checkbox-label', 'fontFamily')
 
   @property
-  def checked(self):
+  def checkbox(self):
     return self._checked
 
   @checked.setter
