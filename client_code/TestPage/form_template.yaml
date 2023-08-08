@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: checkbox_2
-    properties: {text: 'label, unchecked', checked: false, underline: false}
+    properties: {text: 'label, unchecked', checked: false, underline: false, italic: false}
     type: form:Components.Checkbox
     layout_properties: {}
     event_bindings: {click: checkbox_2_click}
