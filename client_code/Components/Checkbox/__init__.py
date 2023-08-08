@@ -30,11 +30,7 @@ class Checkbox(CheckboxTemplate):
       }
     }]
     return di
-  
-  def updateText(self, value, in_designer_placeholder):
-    if not in_designer_placeholder:
-      self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
-    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
+
 
   def handle_click(self, event):
     if self.enabled:
@@ -52,6 +48,7 @@ class Checkbox(CheckboxTemplate):
   font = style_property('anvil-m3-checkbox-label', 'fontFamily')
   text_color = color_property('anvil-m3-checkbox-label', 'color')
   background = color_property('anvil-m3-checkbox-container', 'backgroundColor')
+  text = 
 
   @property
   def checkbox_color(self):
