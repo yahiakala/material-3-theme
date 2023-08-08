@@ -93,8 +93,3 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
       self._error = value
 
-  def handle_click(self, event):
-    if self.enabled:
-      self.dom_nodes['anvil-m3-checkbox'].focus()
-      self.checked = not self.checked
-      self.raise_event("click")
