@@ -48,6 +48,7 @@ class Checkbox(CheckboxTemplate):
   italic = italic_property('anvil-m3-checkbox-label')
   
   
+  
   @property
   def checked(self):
     return self._checked
