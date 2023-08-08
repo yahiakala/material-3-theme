@@ -88,7 +88,8 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: radio_button_2_click}
   - name: button_1
-    properties: {text: button_1, enabled: true, visible: true, underline: false, font_size: null}
+    properties: {text: button_1, enabled: true, visible: true, underline: false, font_size: null,
+      border: solid 2px pink}
     type: Button
     layout_properties: {}
 components: []
