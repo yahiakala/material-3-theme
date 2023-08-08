@@ -35,7 +35,7 @@ class Checkbox(CheckboxTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "checked", self.dom_nodes['anvil-m3-checkbox'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "checked", self.dom_nodes['anvil-m3-checkbox-container'])
       }
     }]
     return di
@@ -52,7 +52,7 @@ class Checkbox(CheckboxTemplate):
       self.raise_event("click")
 
   enabled = enabled_property('anvil-m3-checkbox')
-  visible = style_property('')
+  visible = style_property('anvil-m3-checkbox-container')
   
   
   
