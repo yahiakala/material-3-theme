@@ -21,7 +21,7 @@ properties:
 - {name: background, type: color, default_value: '', description: The background colour of this component.}
 - name: align
   type: enum
-  options: [left, right]
+  options: [left, right, center]
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
