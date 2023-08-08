@@ -33,9 +33,7 @@ class Checkbox(CheckboxTemplate):
     return di
   
   def updateText(self, value, in_designer_placeholder):
-    if not in_designer_placeholder:
-      self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
-    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
+    if self.text == 
 
   def handle_click(self, event):
     if self.enabled:
