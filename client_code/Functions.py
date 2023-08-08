@@ -110,6 +110,7 @@ def visible_property(dom_node_name, display_prop):
 
   return property(getter, setter)
 
-def underline_property()
+def underline_property(dom_node_name):
+  
 
 
