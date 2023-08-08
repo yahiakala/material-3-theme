@@ -111,6 +111,17 @@ def visible_property(dom_node_name, display_prop):
   return property(getter, setter)
 
 def underline_property(dom_node_name):
+  def getter(self):
+    return self._visible
+
+  def setter(self, value):
+    self._visible = value
+    if value:
+      self.dom_nodes[dom_node_name].style.display = display_prop
+    else:
+      self.dom_nodes[dom_node_name].style.display = 'none'
+
+  return property(getter, setter)
   
 
 
