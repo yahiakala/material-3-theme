@@ -53,9 +53,6 @@ class Checkbox(CheckboxTemplate):
 
   enabled = enabled_property('anvil-m3-checkbox')
   label = innerText_property('anvil-m3-checkbox-label')
-
-
-
   
   
   @property
