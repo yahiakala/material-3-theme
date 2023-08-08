@@ -5,7 +5,6 @@ import anvil.designer
 
 #TODO: 
 # * add focus method
-# * add change event
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
