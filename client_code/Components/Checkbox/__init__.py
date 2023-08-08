@@ -44,7 +44,7 @@ class Checkbox(CheckboxTemplate):
 
   enabled = enabled_property('anvil-m3-checkbox')
   visible = visible_property('anvil-m3-checkbox-container', 'inline-flex')
-  
+  underline = sty
   
   @property
   def checked(self):
