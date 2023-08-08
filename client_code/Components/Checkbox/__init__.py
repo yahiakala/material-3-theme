@@ -53,7 +53,7 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def checkbox_color(self):
-    return self._checked
+    return self._checkbox_color
 
   @checkbox_color.setter
   def checkbox_color(self, value):
