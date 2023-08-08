@@ -125,7 +125,7 @@ def underline_property(dom_node_name):
 
 def italic_property(dom_node_name):
   def getter(self):
-    return self._underline
+    return self._italic
 
   def setter(self, value):
     self._underline = value
