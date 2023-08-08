@@ -60,8 +60,8 @@ class Checkbox(CheckboxTemplate):
     self._checkbox_color = value
     if value:
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
-      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = 'none'
-      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = 'inline'
+      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
 
   
   @property
