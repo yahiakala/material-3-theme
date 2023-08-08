@@ -50,7 +50,8 @@ class Checkbox(CheckboxTemplate):
   text = innerText_property('anvil-m3-checkbox-label')
 
   @property
-  def align(self)
+  def align(self):
+    return self._anvil_get_design_info_()
 
   @property
   def checkbox_color(self):
