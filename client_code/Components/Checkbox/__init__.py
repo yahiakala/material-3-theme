@@ -35,7 +35,7 @@ class Checkbox(CheckboxTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: handle_click(self)
+        "execute": lambda: self.checked = not
       }
     }]
     return di
