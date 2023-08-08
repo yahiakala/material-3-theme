@@ -86,7 +86,6 @@ class Checkbox(CheckboxTemplate):
 
   @text.setter
   def text(self, value):
-    self._text = value
     if value:
       self.updateText(value, False)
 
