@@ -46,7 +46,6 @@ class Checkbox(CheckboxTemplate):
   visible = visible_property('anvil-m3-checkbox-container', 'inline-flex')
   underline = underline_property('anvil-m3-checkbox-label')
   italic = italic_property('anvil-m3-checkbox-label')
-  font_size = style_property('anvil-m3-checkbox-label', 'fontSize')
   
   
   @property
