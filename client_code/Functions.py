@@ -96,3 +96,5 @@ def name_property(dom_node_name):
     self.dom_nodes[dom_node_name].name = value
 
   return property(getter, setter)
+
+
