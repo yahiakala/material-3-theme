@@ -17,7 +17,7 @@ class Checkbox(CheckboxTemplate):
     if anvil.designer.in_designer and not self.text:
       self.text = anvil.designer.get_design_name(self)
       self.italic = True
-      self.text_color = "#bbb"
+      self.text_color = "#"
 
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
@@ -33,7 +33,9 @@ class Checkbox(CheckboxTemplate):
     return di
   
   def updateText(self, value, in_designer_placeholder):
-    
+    if not in_designer_placeholder:
+      self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
+    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
 
   def handle_click(self, event):
     if self.enabled:
