@@ -55,7 +55,7 @@ class Checkbox(CheckboxTemplate):
 
   @align.property
   def align(self, value):
-    
+    self.dom_nodes['anvil-m3-checkbox-component']
 
   @property
   def checkbox_color(self):
