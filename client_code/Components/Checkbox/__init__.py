@@ -49,6 +49,7 @@ class Checkbox(CheckboxTemplate):
   bold = bold_property('anvil-m3-checkbox-label')
   font_size = font_size_property('anvil-m3-checkbox-label')
   
+  
   @property
   def checked(self):
     return self._checked
