@@ -138,7 +138,7 @@ def italic_property(dom_node_name):
 
 def bold_property(dom_node_name):
   def getter(self):
-    return self._italic
+    return self._bold
 
   def setter(self, value):
     self._italic = value
