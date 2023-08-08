@@ -52,7 +52,7 @@ class Checkbox(CheckboxTemplate):
   def visible(self, value):
     self._visible = value
     if value:
-      
+      self.dom_nodes['anvil-m3-checkbox-container']
   
   
   
