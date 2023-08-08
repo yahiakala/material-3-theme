@@ -1,12 +1,15 @@
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
 
+import anvil.designer
+
 class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # self.dom_nodes['button'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
 
+  """ Properties """
   @property
   def leading_icon(self):
     return self._leading_icon
@@ -55,9 +58,21 @@ class MenuItem(MenuItemTemplate):
   def enabled(self, value):
     self._enabled = value
     self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-disabled", not value)
-    
+
+  """ Functions """
   def handle_click(self, event):
-    event.preventDefault()
+    event.preventDefault() #TODO: make sure this doesn't prevent the menu from closing
     self.raise_event("click")
 
-  
+  def _anvil_get_design_info_(self, as_layout=False):
+    di = super()._anvil_get_design_info_(as_layout)
+    di['interactions'] = [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
+      }
+    }]
+    return di

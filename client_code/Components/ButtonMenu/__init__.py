@@ -7,8 +7,8 @@ class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-  
+
+  """ Properties """
   @property
   def text(self):
     return self._text
@@ -24,16 +24,16 @@ class ButtonMenu(ButtonMenuTemplate):
   def appearance(self, value):
     self.menu_button.appearance = value
 
-  @property
-  def menuOpen(self):
-    return self._menuOpen
-  @menuOpen.setter
-  def menuOpen(self, value):
-    self._menuOpen = value or False
-    self.dom_nodes['anvil-m3-buttonMenu-container']
+  # @property
+  # def menuOpen(self):
+  #   return self._menuOpen
+  # @menuOpen.setter
+  # def menuOpen(self, value):
+  #   self._menuOpen = value or False
+    # self.dom_nodes['anvil-m3-buttonMenu-container']
     # if value:
     #   self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus', self.checkFocus)
-
+  
   @property
   def enabled(self):
     return self._enabled
@@ -42,27 +42,19 @@ class ButtonMenu(ButtonMenuTemplate):
     self._enabled = value
     self.menu_button.enabled = value
     
-  def toggle_menu_visibility(self, **event_args):
-    self.set_visibility()
-    # return classes.contains(className)
-    self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
-
+  """ Functions """
   def set_visibility(self, value = None):
-    classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
-    if value:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
-    else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+    self.menu.set_or_toggle_visibility(value)
 
   # def closeOnLoseFocus(self, event):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-  def checkFocus(self, event):
-    # document.activeElement
-    # var descendants = theElement.querySelectorAll("*");
-    print(event.target)
-    pass
+  # def checkFocus(self, event):
+  #   # document.activeElement
+  #   # var descendants = theElement.querySelectorAll("*");
+  #   print(event.target)
+  #   pass
 
 
   def _anvil_get_design_info_(self, as_layout=False):
@@ -79,9 +71,11 @@ class ButtonMenu(ButtonMenuTemplate):
     return design_info
    
   def _on_select_descendant(self):
-    print("Selected! Open")
     self.set_visibility(True)
 
   def _on_select_other(self):
-    print("Something else selected! Close the menu!")
     self.set_visibility(False)
+
+  def set_menu_visibility(self, **event_args):
+    self.set_visibility()
+
