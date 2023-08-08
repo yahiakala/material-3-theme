@@ -56,7 +56,7 @@ class Checkbox(CheckboxTemplate):
     return self._checked
 
   @checked.setter
-  def checked(self, value):
+  def checkbox_color(self, value):
     self._checked = value
     if self._checked == None and self.allow_indeterminate:
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
