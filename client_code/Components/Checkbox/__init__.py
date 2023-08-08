@@ -53,7 +53,7 @@ class Checkbox(CheckboxTemplate):
   font = style_property('anvil-m3-checkbox-label', 'fontFamily')
   text_color = color_property('anvil-m3-checkbox-label', 'color')
   background = color_property('anvil-m3-checkbox-container', 'backgroundColor')
-  text = 
+  text = in
 
   @property
   def checkbox_color(self):
