@@ -97,4 +97,13 @@ def name_property(dom_node_name):
 
   return property(getter, setter)
 
+def name_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].name
+
+  def setter(self, value):
+    self.dom_nodes[dom_node_name].name = value
+
+  return property(getter, setter)
+
 
