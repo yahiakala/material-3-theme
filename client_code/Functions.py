@@ -104,7 +104,7 @@ def visible_property(dom_node_name, display_prop):
   def setter(self, value):
     self._visible = value
     if value:
-      self.dom_nodes[dom_node_name].style.display = 'block'
+      self.dom_nodes[dom_node_name].style.display = display_prop
     else:
       self.dom_nodes[dom_node_name].style.display = 'none'
 
