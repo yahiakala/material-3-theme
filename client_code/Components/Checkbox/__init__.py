@@ -50,7 +50,21 @@ class Checkbox(CheckboxTemplate):
   font_size = font_size_property('anvil-m3-checkbox-label')
   border = style_property('anvil-m3-checkbox-container', 'border')
   font = style_property('anvil-m3-checkbox-label', 'fontFamily')
-  checkbox_color = color_property('anvil-')
+
+  @property
+  def checked(self):
+    return self._checked
+
+  @checked.setter
+  def checked(self, value):
+    self._checked = value
+    if self._checked == None and self.allow_indeterminate:
+      self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
+      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
+      self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
+    else:
+      self.dom_nodes['anvil-m3-checkbox'].checked = value
   
   @property
   def checked(self):
