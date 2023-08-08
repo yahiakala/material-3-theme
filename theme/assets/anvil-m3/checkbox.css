@@ -1,5 +1,5 @@
 .anvil-m3-checkbox-container {
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   column-gap: 16px;
