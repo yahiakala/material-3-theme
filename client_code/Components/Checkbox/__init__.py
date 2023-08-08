@@ -1,6 +1,6 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
-from ...Functions import enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
+from ...Functions import enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css
 import anvil.designer
 
 #TODO: 
@@ -32,10 +32,10 @@ class Checkbox(CheckboxTemplate):
     }]
     return di
   
-  # def updateText(self, value, in_designer_placeholder):
-  #   if not in_designer_placeholder:
-  #     self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
-  #   self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
+  def updateText(self, value, in_designer_placeholder):
+    if not in_designer_placeholder:
+      self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
+    self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
 
   def handle_click(self, event):
     if self.enabled:
@@ -53,7 +53,6 @@ class Checkbox(CheckboxTemplate):
   font = style_property('anvil-m3-checkbox-label', 'fontFamily')
   text_color = color_property('anvil-m3-checkbox-label', 'color')
   background = color_property('anvil-m3-checkbox-container', 'backgroundColor')
-  text = innerText_property('anvil-m3-checkbox-label',)
 
   @property
   def checkbox_color(self):
@@ -83,15 +82,15 @@ class Checkbox(CheckboxTemplate):
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
       
-  # @property
-  # def text(self):
-  #   return self._text
+  @property
+  def text(self):
+    return self._text
 
-  # @text.setter
-  # def text(self, value):
-  #   self._text = value
-  #   if value:
-  #     self.updateText(value, False)
+  @text.setter
+  def text(self, value):
+    self._text = value
+    if value:
+      self.updateText(value, False)
 
   @property
   def allow_indeterminate(self):
