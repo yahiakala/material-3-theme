@@ -132,7 +132,7 @@ def italic_property(dom_node_name):
     if value:
       self.dom_nodes[dom_node_name].style.fontStyle = 'italic'
     else:
-      self.dom_nodes[dom_node_name].style.fontStyle = 'none'
+      self.dom_nodes[dom_node_name].style.fontStyle = 'normal'
 
   return property(getter, setter)
   
