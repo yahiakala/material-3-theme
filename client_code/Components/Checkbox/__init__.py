@@ -59,7 +59,7 @@ class Checkbox(CheckboxTemplate):
 
   @visible.setter
   def visible(self, value):
-    if value
+    
   
   
   
