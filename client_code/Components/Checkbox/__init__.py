@@ -17,7 +17,7 @@ class Checkbox(CheckboxTemplate):
     if anvil.designer.in_designer and not self.text:
       self.text = anvil.designer.get_design_name(self)
       self.italic = True
-      self.text_color = ""
+      self.text_color = "#bbb"
 
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
