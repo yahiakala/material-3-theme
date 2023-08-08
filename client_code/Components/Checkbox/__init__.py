@@ -44,19 +44,6 @@ class Checkbox(CheckboxTemplate):
 
   enabled = enabled_property('anvil-m3-checkbox')
   visible = visible_property('anvil-m3-checkbox-container', 'block')
-
-  @property
-  def visible(self):
-    return self._visible
-
-  @visible.setter
-  def visible(self, value):
-    self._visible = value
-    if value:
-      self.dom_nodes['anvil-m3-checkbox-container'].style.display = 'block'
-    else:
-      self.dom_nodes['anvil-m3-checkbox-container'].style.display = 'none'
-      
   
   @property
   def checked(self):
