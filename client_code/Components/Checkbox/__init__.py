@@ -1,6 +1,6 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
-from ...Functions import checked_property, innerText_property, enabled_property
+from ...Functions import enabled_property, 
 import anvil.designer
 
 #TODO: 
