@@ -130,7 +130,7 @@ def italic_property(dom_node_name):
   def setter(self, value):
     self._italic = value
     if value:
-      self.dom_nodes[dom_node_name].style.textDecoration = 'underline'
+      self.dom_nodes[dom_node_name].style.textDecoration = 'italic'
     else:
       self.dom_nodes[dom_node_name].style.textDecoration = 'none'
 
