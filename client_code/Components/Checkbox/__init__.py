@@ -82,15 +82,15 @@ class Checkbox(CheckboxTemplate):
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
       
-  @property
-  def text(self):
-    return self._text
+  # @property
+  # def text(self):
+  #   return self._text
 
-  @text.setter
-  def text(self, value):
-    self._text = value
-    if value:
-      self.updateText(value, False)
+  # @text.setter
+  # def text(self, value):
+  #   self._text = value
+  #   if value:
+  #     self.updateText(value, False)
 
   @property
   def allow_indeterminate(self):
