@@ -158,7 +158,7 @@ def font_size_property(dom_node_name):
     if value:
       self.dom_nodes[dom_node_name].style.fontSize = 'bold'
     else:
-      self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
+      self.dom_nodes[dom_node_name].style.fontSize = 'normal'
 
   return property(getter, setter)
   
