@@ -1,7 +1,7 @@
 properties:
 - {name: checked, type: boolean, default_value: false, default_binding_prop: true,
   description: Whether or not the checkbox is checked}
-- {name: enabled, type: boolean, default_value: true, description: Whether or not the checkbox is disabled}
+- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
 - {name: text, type: string, default_value: '', description: 'The text displayed on
     this component
