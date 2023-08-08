@@ -157,7 +157,6 @@ def font_size_property(dom_node_name):
     self._font_size = value
     self.dom_nodes[dom_node_name].style.fontSize = f'{value}px'
 
-
   return property(getter, setter)
   
   
