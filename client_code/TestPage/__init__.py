@@ -11,7 +11,7 @@ class TestPage(TestPageTemplate):
     self.indeterminate_checkbox_3.checked = None
     self.indeterminate_checkbox_4.checked = None
 
-    
+    self.button_1.
 
     # Any code you write here will run before the form opens.
 
