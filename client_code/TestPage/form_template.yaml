@@ -4,7 +4,7 @@ components_by_slot:
   slot_3:
   - name: checkbox_2
     properties: {text: 'label, unchecked', checked: false, underline: false, italic: false,
-      bold: false, checkbox_color: ''}
+      bold: false, checkbox_color: '', text_color: 'theme:Surface Variant'}
     type: form:Components.Checkbox
     layout_properties: {}
     event_bindings: {click: checkbox_2_click}
