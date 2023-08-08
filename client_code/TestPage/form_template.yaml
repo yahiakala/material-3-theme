@@ -100,7 +100,7 @@ components_by_slot:
     - name: checkbox_16
       properties: {}
       type: form:Components.Checkbox
-      layout_properties: {grid_position: 'GIOXXJ,KNIGYR', full_width_row: true}
+      layout_properties: {grid_position: 'GIOXXJ,KNIGYR', full_width_row: false}
     - name: checkbox_1
       properties: {}
       type: form:Components.Checkbox
