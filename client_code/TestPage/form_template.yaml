@@ -31,5 +31,10 @@ components_by_slot:
     - name: checkbox_4
       properties: {}
       type: form:Components.Checkbox
+  - name: button_1
+    properties: {appearance: tonal}
+    type: form:Components.Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
 components: []
 event_bindings: {show: form_show}

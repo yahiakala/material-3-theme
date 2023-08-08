@@ -3,8 +3,6 @@ from anvil import *
 from ...Functions import enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
 import anvil.designer
 
-#TODO: 
-# * add focus method
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):

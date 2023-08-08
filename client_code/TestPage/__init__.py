@@ -7,9 +7,11 @@ class TestPage(TestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
+  def button_1_click(self, **event_args):
+    """This method is called when the component is clicked"""
     self.checkbox_4.focus()
+
+
 
   
 
