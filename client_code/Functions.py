@@ -141,7 +141,7 @@ def bold_property(dom_node_name):
     return self._bold
 
   def setter(self, value):
-    self._italic = value
+    self._bold = value
     if value:
       self.dom_nodes[dom_node_name].style.fontStyle = 'italic'
     else:
