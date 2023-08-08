@@ -45,14 +45,16 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-label'].removeAttribute("style")
     self.dom_nodes['anvil-m3-checkbox-label'].innerText = value or ""
 
-  enabled = enabled_property('anvil-m3-checkbox')
-  label = innerText_property('anvil-m3-checkbox-label')
-
   def handle_click(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-checkbox'].focus()
       self.checked = not self.checked
       self.raise_event("click")
+
+  enabled = enabled_property('anvil-m3-checkbox')
+  label = innerText_property('anvil-m3-checkbox-label')
+
+
 
   
   
