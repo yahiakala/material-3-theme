@@ -1,6 +1,6 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
-from ...Functions import enabled_property, style_property, visible_property, underline_property
+from ...Functions import enabled_property, style_property, visible_property, underline_property, italic_property
 import anvil.designer
 
 #TODO: 
