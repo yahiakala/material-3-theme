@@ -97,5 +97,9 @@ components_by_slot:
         font_size: null, border: '', align: left}
       type: Button
       layout_properties: {grid_position: 'XCKKUJ,GAPKOX'}
+    - name: checkbox_1
+      properties: {}
+      type: form:Components.Checkbox
+      layout_properties: {grid_position: 'XCKKUJ,OYQQCV'}
 components: []
 event_bindings: {show: form_show}
