@@ -21,7 +21,7 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_6
-    properties: {text: 'label, disabled', enabled: false}
+    properties: {text: '', enabled: false}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: checkbox_7
