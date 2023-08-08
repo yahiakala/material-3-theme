@@ -18,7 +18,7 @@ properties:
 - {name: font, type: string, default_value: '', description: The font family to use for this component.}
 - {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox}
 - {name: text_color, type: color, default_value: '', description: The color of the component's label}
-- {name: background, type: color, default_value: ''}
+- {name: background, type: color, default_value: '', description: The background colour of this component.}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
