@@ -3,7 +3,11 @@ properties:
   description: Whether or not the checkbox is checked}
 - {name: enabled, type: boolean, default_value: true, description: Whether or not the checkbox is disabled}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
-- {name: text, type: string, default_value: ''}
+- {name: text, type: string, default_value: '', description: 'The text displayed on
+    this component
+
+
+    '}
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.}
 - {name: visible, type: boolean, default_value: true}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
