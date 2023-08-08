@@ -55,7 +55,7 @@ class Checkbox(CheckboxTemplate):
   def checkbox_color(self):
     return self._checked
 
-  @checked.setter
+  @checkbox_color.setter
   def checkbox_color(self, value):
     self._checked = value
     if self._checked == None and self.allow_indeterminate:
