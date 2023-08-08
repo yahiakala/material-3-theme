@@ -149,7 +149,7 @@ def bold_property(dom_node_name):
 
   return property(getter, setter)
 
-def bold_property(dom_node_name):
+def font_size_property(dom_node_name):
   def getter(self):
     return self._bold
 
