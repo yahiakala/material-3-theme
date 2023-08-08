@@ -16,6 +16,11 @@ class TestPage(TestPageTemplate):
   def radio_button_2_click(self, **event_args):
     pass
 
+  def checkbox_2_click(self, **event_args):
+    """This method is called when the component is checked or unchecked"""
+    pass
+
+
   
 
 

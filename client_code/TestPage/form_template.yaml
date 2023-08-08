@@ -6,6 +6,7 @@ components_by_slot:
     properties: {text: 'label, unchecked', checked: false}
     type: form:Components.Checkbox
     layout_properties: {}
+    event_bindings: {click: checkbox_2_click}
   - name: checkbox_3
     properties: {text: 'label, checked', selected: true, checked: true}
     type: form:Components.Checkbox
