@@ -51,6 +51,7 @@ class Checkbox(CheckboxTemplate):
   @visible.setter
   def visible(self, value):
     self._visible = value
+    
   
   
   
