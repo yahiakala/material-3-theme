@@ -11,6 +11,8 @@ class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
+    self.set
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
