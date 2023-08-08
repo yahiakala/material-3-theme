@@ -11,6 +11,8 @@ class TestPage(TestPageTemplate):
     self.indeterminate_checkbox_3.checked = None
     self.indeterminate_checkbox_4.checked = None
 
+    
+
     # Any code you write here will run before the form opens.
 
   def radio_button_2_click(self, **event_args):
