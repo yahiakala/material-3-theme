@@ -52,7 +52,7 @@ class Checkbox(CheckboxTemplate):
       self.raise_event("click")
 
   enabled = enabled_property('anvil-m3-checkbox')
-  visible = 
+  visible = style_property('')
   
   
   
