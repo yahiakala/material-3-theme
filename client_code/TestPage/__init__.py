@@ -6,7 +6,7 @@ class TestPage(TestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.checkbox_1.parent
+    print(self.checkbox_1.parent)
 
   
 
