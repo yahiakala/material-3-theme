@@ -8,8 +8,8 @@ properties:
 - {name: visible, type: boolean, default_value: true}
 - {name: underline, type: boolean, default_value: false}
 - {name: italic, type: boolean, default_value: false}
-- {name: font_size, type: string, default_value: ''}
-- {name: bold, type: string, default_value: ''}
+- {name: font_size, type: number}
+- {name: bold, type: boolean, default_value: false}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is checked or unchecked}
