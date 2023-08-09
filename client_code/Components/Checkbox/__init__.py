@@ -27,7 +27,7 @@ class Checkbox(CheckboxTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.update_component_properties(self, {'checked': not self.checked})
+        "execute": self.toggle_checked() 
       }
     },
     {
@@ -39,6 +39,10 @@ class Checkbox(CheckboxTemplate):
     }       
     ]
     return di
+
+  def toggle_checked(self):
+    self.checked = not self.checked
+    anvil.designer.update_component_properties(self, {'checked': self.checked})
 
   def handle_click(self, event):
     if self.enabled:
