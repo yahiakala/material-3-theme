@@ -27,7 +27,7 @@ class Checkbox(CheckboxTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": self.toggle_checked() 
+        "execute": self.toggle_checked 
       }
     },
     {

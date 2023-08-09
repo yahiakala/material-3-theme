@@ -8,15 +8,15 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: checkbox_1
-      properties: {text: im a checkbox, checked: true}
+      properties: {text: im a checkbox, checked: false}
       type: form:Components.Checkbox
       layout_properties: {grid_position: 'MPDHDU,FVXXKM'}
     - name: checkbox_2
-      properties: {text: text, checked: true}
+      properties: {text: text, checked: false}
       type: form:Components.Checkbox
       layout_properties: {grid_position: 'MPDHDU,WXSZAQ'}
     - name: checkbox_3
-      properties: {text: text, checked: false}
+      properties: {text: text, checked: true}
       type: form:Components.Checkbox
       layout_properties: {grid_position: 'MPDHDU,TSXWSC'}
     - name: check_box_2
@@ -29,7 +29,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: checkbox_4
-      properties: {checked: false}
+      properties: {checked: true}
       type: form:Components.Checkbox
       layout_properties: {}
   - name: button_1
@@ -38,7 +38,8 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: heading_1
-    properties: {text: This is a heading, scale: large, style: title}
+    properties: {align: left, scale: small, border: '', style: display, text: This is a heading,
+      font: '', italic: false, background_color: '', bold: false}
     type: form:Components.Heading
     layout_properties: {}
 components: []

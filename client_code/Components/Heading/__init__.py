@@ -27,7 +27,7 @@ class Heading(HeadingTemplate):
     }]
     return di
 
-  visible = visible_property('anvil-m3-heading-container', 'inline-block')
+  visible = visible_property('anvil-m3-heading-container', 'flex')
   underline = underline_property('anvil-m3-heading')
   italic = italic_property('anvil-m3-heading')
   bold = bold_property('anvil-m3-heading')
@@ -35,7 +35,7 @@ class Heading(HeadingTemplate):
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading', 'fontFamily')
   text_color = color_property('anvil-m3-heading', 'color')
-  background = color_property('anvil-m3-heading-container', 'backgroundColor')
+  background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
   text = innerText_property('anvil-m3-heading')
   align = style_property('anvil-m3-heading-container', 'justifyContent')
 
