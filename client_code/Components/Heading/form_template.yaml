@@ -2,8 +2,10 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-heading-container\" anvil-name=\"anvil-m3-heading-container\"\
       >\n  <span anvil-name=\"anvil-m3-heading-icon\" class=\"material-symbols-outlined\"\
-      ></span>\n  <h1 class=\"anvil-m3-heading\" anvil-name=\"anvil-m3-heading\"></h1>\n\
-      </div>"}
+      ></span>\n  <h1 class=\"anvil-m3-heading-display\" anvil-name=\"anvil-m3-heading\"\
+      ></h1>\n  <h2 class=\"anvil-m3-heading-headline\" anvil-name=\"anvil-m3-heading\"\
+      ></h2>\n  <h3 class=\"anvil-m3-heading-title\" anvil-name=\"anvil-m3-heading\"\
+      ></h3>\n</div>"}
   event_bindings: {show: form_show}
 components: []
 is_package: true
@@ -13,6 +15,7 @@ properties:
   type: enum
   default_binding_prop: true
   options: [display, headline, title]
+  default_value: headline
 - name: scale
   type: enum
   options: [small, medium, large]

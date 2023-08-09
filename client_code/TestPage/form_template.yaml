@@ -38,7 +38,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: heading_1
-    properties: {underlined: true, underline: false, text: This is a heading, visible: true}
+    properties: {}
     type: form:Components.Heading
     layout_properties: {}
 components: []

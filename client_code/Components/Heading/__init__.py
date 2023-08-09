@@ -1,6 +1,7 @@
 from ._anvil_designer import HeadingTemplate
 from anvil import *
 import anvil.designer
+from anvil.js import window
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
 class Heading(HeadingTemplate):
@@ -55,8 +56,24 @@ class Heading(HeadingTemplate):
   @style.setter
   def style(self, value):
     self._style = value
-    self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
-    self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-{value}')
+    display = window.document.getElementsByClassName('anvil-m3-heading-display')
+    headline = window.document.getElementsByClassName('anvil-m3-heading-headline')
+    title = window.document.getElementsByClassName('anvil-m3-heading-title')
+    if value == 'display':
+      display[0].style.display = 'block'
+      headline[0].style.display = 'none'
+      title[0].style.display = 'none'
+    elif value == 'headline':
+      print(display)
+      display[0].style.display = 'none'
+      headline[0].style.display = 'block'
+      title[0].style.display = 'none'
+    elif value == 'title':
+      display[0].style.display = 'none'
+      headline[0].style.display = 'none'
+      title[0].style.display = 'block'
+    # self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
+    # self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-{value}')
 
   @property
   def scale(self):
