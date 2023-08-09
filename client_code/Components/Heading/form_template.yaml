@@ -1,8 +1,9 @@
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-heading-container\" anvil-name=\"anvil-m3-heading-container\"\
-      \ style=\"display:flex\">\n  <\n  <h1 class=\"anvil-m3-heading\" anvil-name=\"\
-      anvil-m3-heading\"></h1>\n</div>"}
+      >\n  <span anvil-name=\"anvil-m3-heading-icon\" class=\"material-symbols-outlined\"\
+      ></span>\n  <h1 class=\"anvil-m3-heading\" anvil-name=\"anvil-m3-heading\"></h1>\n\
+      </div>"}
   event_bindings: {show: form_show}
 components: []
 is_package: true
@@ -22,7 +23,7 @@ properties:
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
 - {name: text, type: string, default_value: '', description: The text displayed on this component,
   multiline: true}
-- {name: underlined, type: boolean, default_value: false, description: Whether or not the text should be underlined}
+- {name: underline, type: boolean, default_value: false, description: Whether or not the text should be underlined}
 - {name: visible, type: boolean, default_value: true, description: Whether or not this component should be displayed on the page}
 - name: material_icon
   type: enum

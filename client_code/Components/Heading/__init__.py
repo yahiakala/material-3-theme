@@ -40,6 +40,16 @@ class Heading(HeadingTemplate):
   align = style_property('anvil-m3-heading-container', 'justifyContent')
 
   @property
+  def material_icon(self):
+    return self._material_icon
+
+  @material_icon.setter
+  def material_icon(self, value):
+    self._material_icon = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+
+  @property
   def style(self):
     return self._style
 
