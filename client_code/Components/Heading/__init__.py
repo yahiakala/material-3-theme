@@ -56,6 +56,6 @@ class Heading(HeadingTemplate):
   @scale.setter
   def scale(self, value):
     self._style = value
-    self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-title')
-    self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-{value}')
+    self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
+    self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-heading-{value}')
 

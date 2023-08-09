@@ -11,8 +11,7 @@ properties:
 - name: style
   type: enum
   default_binding_prop: true
-  options: [Display, Headline, Title]
-  default_value: Headline
+  options: [display, headline, title]
 - name: scale
   type: enum
   options: [small, medium, large]
