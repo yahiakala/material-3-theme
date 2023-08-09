@@ -32,7 +32,7 @@ components_by_slot:
       properties: {}
       type: form:Components.Checkbox
   - name: button_1
-    properties: {appearance: tonal}
+    properties: {appearance: elevated}
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
