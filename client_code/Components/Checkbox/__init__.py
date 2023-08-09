@@ -6,6 +6,7 @@ import anvil.designer
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
+    self.allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
