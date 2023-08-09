@@ -2,10 +2,10 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document
 import anvil.js
+from ...Functions import enabled_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
@@ -19,7 +19,6 @@ class Slider(SliderTemplate):
     self.label_container.appendChild(self.label)
 
 
-    # Any code you write here will run before the form opens.
   def on_input(self, event):
     self.update_progress()
 
