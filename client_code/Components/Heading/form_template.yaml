@@ -3,3 +3,9 @@ container:
   properties: {html: <h1 class="anvil-m3-heading" anvil-name="anvil-m3-heading"></h1>}
 components: []
 is_package: true
+custom_component: true
+properties:
+- name: appearance
+  type: enum
+  default_binding_prop: true
+  options: []
