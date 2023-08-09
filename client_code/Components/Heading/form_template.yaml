@@ -20,7 +20,8 @@ properties:
 - {name: font, type: string, default_value: '', description: The font to use for this component.}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
-- {name: text, type: string, default_value: '', description: The text displayed on this component}
+- {name: text, type: string, default_value: '', description: The text displayed on this component,
+  multiline: true}
 - {name: underlined, type: boolean, default_value: false, description: Whether or not the text should be underlined}
 - {name: visible, type: boolean, default_value: true, description: Whether or not this component should be displayed on the page}
 - name: material_icon
