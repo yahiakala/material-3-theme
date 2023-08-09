@@ -22,12 +22,22 @@ class Checkbox(CheckboxTemplate):
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
-      "type": "region",
-      "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+      "type": "whole_component",
+      "title": "Toggle",
+      "icon": "edit",
+      "default": True,
       "callbacks": {
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
       }
-    }]
+    },
+    {
+      "type": "region",
+      "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+      "callbacks": {
+        "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+      }
+    }       
+    ]
     return di
 
   def handle_click(self, event):
