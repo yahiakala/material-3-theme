@@ -10,6 +10,7 @@ class Slider(SliderTemplate):
     
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
+    anvil.js.window.addEventListener("resize", self.on_window_resize)
     
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
@@ -29,6 +30,9 @@ class Slider(SliderTemplate):
   def on_mouse_up(self, event):
     self.do_hide_label()
     document.removeEventListener("mouseup", self.on_mouse_up)
+
+  def on_window_resize(self, event):
+    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
     
   def update_progress(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]

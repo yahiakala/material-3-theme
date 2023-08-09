@@ -6,14 +6,32 @@ components_by_slot:
     properties: {height: 32}
     type: Spacer
     layout_properties: {}
+  - name: slider_2
+    properties: {has_label: true}
+    type: form:Components.Slider
+    layout_properties: {}
+  slot_3:
+  - name: flow_panel_2
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
     layout_properties: {}
     components:
     - name: slider_1
-      properties: {has_label: true}
+      properties: {}
       type: form:Components.Slider
+      layout_properties: {width: 228}
+  - name: flow_panel_3
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+  - name: slider_3
+    properties: {}
+    type: form:Components.Slider
+    layout_properties: {}
       layout_properties: {width: 312}
   - name: slider_2
     properties: {has_label: true}
