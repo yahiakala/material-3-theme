@@ -42,9 +42,5 @@ components_by_slot:
       text: This is a heading, font: '', italic: false, background_color: '', bold: false}
     type: form:Components.Heading
     layout_properties: {}
-  - name: label_1
-    properties: {icon: 'fa:microchip', foreground: 'theme:Error', text: hello}
-    type: Label
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
