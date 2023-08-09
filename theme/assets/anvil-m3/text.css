@@ -1,0 +1,54 @@
+.anvil-m3-heading {
+  font-weight: 400;
+}
+
+.anvil-m3-heading.anvil-m3-display.anvil-m3-large {
+  line-height: 64px;
+  font-size: 57px;
+  letter-spacing: -0.25;
+}
+
+.anvil-m3-heading.anvil-m3-display.anvil-m3-medium {
+  line-height: 52px;
+  font-size: 45px;
+
+}
+
+.anvil-m3-heading.anvil-m3-display.anvil-m3-small {
+  line-height: 44px;
+  font-size: 36px;
+}
+
+.anvil-m3-heading.anvil-m3-headline.anvil-m3-large {
+  line-height: 40px;
+  font-size: 32px;
+}
+
+.anvil-m3-heading.anvil-m3-headline.anvil-m3-medium {
+  line-height: 36px;
+  font-size: 28px;
+}
+
+.anvil-m3-heading.anvil-m3-headline.anvil-m3-small {
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.anvil-m3-heading.anvil-m3-title.anvil-m3-large {
+  line-height: 28px;
+  font-size: 22px;
+}
+
+.anvil-m3-heading.anvil-m3-title.anvil-m3-medium {
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 0.15;
+  font-weight: 500;
+}
+
+.anvil-m3-heading.anvil-m3-title.anvil-m3-small {
+  line-height: 20px;
+  font-size: 14px;
+  letter-spacing: 0.1;
+  font-weight: 500;
+}
