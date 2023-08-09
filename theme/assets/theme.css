@@ -274,6 +274,7 @@ body {
 @media(min-width: 600px) {
   .anvil-m3-content {
     left: 80px;
+    width: calc(100% - 80px);
     }
 }
 
