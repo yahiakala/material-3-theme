@@ -1,6 +1,8 @@
 container:
   type: HtmlTemplate
-  properties: {html: <h1 class="anvil-m3-heading" anvil-name="anvil-m3-heading"></h1>}
+  properties: {html: "<div class=\"anvil-m3-heading-container\" anvil-name=\"anvil-m3-heading-container\"\
+      \ style=\"display:flex\">\n  <h1 class=\"anvil-m3-heading\" anvil-name=\"anvil-m3-heading\"\
+      ></h1>\n</div>"}
   event_bindings: {show: form_show}
 components: []
 is_package: true
