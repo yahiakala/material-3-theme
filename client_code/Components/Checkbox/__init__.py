@@ -77,7 +77,6 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
-      
 
   @property
   def allow_indeterminate(self):

@@ -37,7 +37,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: heading_1
-    properties: {}
+    properties: {text: This is a heading, scale: medium}
     type: form:Components.Heading
     layout_properties: {}
 components: []
