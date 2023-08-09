@@ -1,5 +1,5 @@
 properties:
-- {name: has_label, type: boolean, default_value: false, default_binding_prop: true}
+- {name: show_label, type: boolean, default_value: false, default_binding_prop: true}
 is_package: true
 events: []
 custom_component: true

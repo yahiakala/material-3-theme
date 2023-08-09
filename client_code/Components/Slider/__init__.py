@@ -58,21 +58,21 @@ class Slider(SliderTemplate):
     return progress_right, progress_top
 
   def do_show_label(self):
-    if self.has_label:
+    if self.show_label:
       self.label_container.remove()
       document.body.appendChild(self.label_container)
 
   def do_hide_label(self):
     self.label_container.remove()
     
-  # TODO: rename to show_label
-  @property
-  def has_label(self):
-    return self._has_label
 
-  @has_label.setter
-  def has_label(self, value):
-    self._has_label = value
+  @property
+  def show_label(self):
+    return self._show_label
+
+  @show_label.setter
+  def show_label(self, value):
+    self._show_label = value
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""

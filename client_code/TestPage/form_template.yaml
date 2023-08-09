@@ -29,7 +29,7 @@ components_by_slot:
     type: FlowPanel
     layout_properties: {}
   - name: slider_3
-    properties: {}
+    properties: {has_label: true}
     type: form:Components.Slider
     layout_properties: {}
       layout_properties: {width: 312}
