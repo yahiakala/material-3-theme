@@ -59,8 +59,6 @@ class Heading(HeadingTemplate):
     if value:
       self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = f'{value}px'
 
-
-
   @property
   def bold(self):
     return self._bold
