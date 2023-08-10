@@ -46,7 +46,7 @@ class Text(TextTemplate):
   def icon_size(self, value):
     self._icon_size = value
     if value:
-      self.dom_nodes['anvil-m3-text-icon'].innerText = value
+      self.dom_nodes['anvil-m3-text-icon'].fontSize = value
 
   @property
   def material_icon(self):
