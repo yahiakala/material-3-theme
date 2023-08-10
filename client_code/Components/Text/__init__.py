@@ -46,12 +46,13 @@ class Text(TextTemplate):
   @font_size.setter
   def font_size(self, value):
     self._font_size = value
+    print(value)
     if value:
       self.dom_nodes['anvil-m3-text'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-text-container'].style.fontSize = f'{value}px'
     else:
-      self.dom_nodes['anvil-m3-text'].style.fontSize = None
-      self.dom_nodes['anvil-m3-text-container'].style.fontSize = None
+      self.dom_nodes['anvil-m3-text'].style.fontSize = '
+      self.dom_nodes['anvil-m3-text-container'].style.fontSize = f'{value}px'
       
 
   @property
