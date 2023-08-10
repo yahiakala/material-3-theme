@@ -22,22 +22,22 @@ class Text(TextTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-heading'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-text'])
       }
     }]
     return di
 
-  visible = visible_property('anvil-m3-heading-container', 'flex')
-  underline = underline_property('anvil-m3-heading')
-  italic = italic_property('anvil-m3-heading')
-  bold = bold_property('anvil-m3-heading')
-  font_size = font_size_property('anvil-m3-heading')
-  border = style_property('anvil-m3-heading-container', 'border')
-  font = style_property('anvil-m3-heading', 'fontFamily')
-  text_color = color_property('anvil-m3-heading', 'color')
-  background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
-  text = innerText_property('anvil-m3-heading')
-  align = style_property('anvil-m3-heading-container', 'justifyContent')
+  visible = visible_property('anvil-m3-text-container', 'flex')
+  underline = underline_property('anvil-m3-text')
+  italic = italic_property('anvil-m3-text')
+  bold = bold_property('anvil-m3-text')
+  font_size = font_size_property('anvil-m3-text')
+  border = style_property('anvil-m3-text-container', 'border')
+  font = style_property('anvil-m3-text', 'fontFamily')
+  text_color = color_property('anvil-m3-text', 'color')
+  background_color = color_property('anvil-m3-text-container', 'backgroundColor')
+  text = innerText_property('anvil-m3-text')
+  align = style_property('anvil-m3-text-container', 'justifyContent')
 
   @property
   def material_icon(self):
@@ -47,7 +47,7 @@ class Text(TextTemplate):
   def material_icon(self, value):
     self._material_icon = value
     if value:
-      self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+      self.dom_nodes['anvil-m3-text-icon'].innerText = value
 
   @property
   def style(self):
@@ -56,8 +56,8 @@ class Text(TextTemplate):
   @style.setter
   def style(self, value):
     self._style = value
-    self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
-    self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-{value}')
+    self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
+    self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-{value}')
 
   @property
   def scale(self):
@@ -66,7 +66,7 @@ class Text(TextTemplate):
   @scale.setter
   def scale(self, value):
     self._style = value
-    self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
-    self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-heading-{value}')
+    self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
+    self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
 
 
