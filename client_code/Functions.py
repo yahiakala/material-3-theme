@@ -16,6 +16,7 @@ def color_property(dom_node_name, style_prop):
     return self.dom_nodes[dom_node_name].style[style_prop]
 
   def setter(self, value):
+    
     if value:
       self.dom_nodes[dom_node_name].style[style_prop] = theme_color_to_css(value)
     else:
