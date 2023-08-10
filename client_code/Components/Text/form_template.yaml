@@ -20,3 +20,4 @@ properties:
 - name: align
   type: enum
   options: [left, center, right]
+- {name: prop, type: string, default_value: ''}
