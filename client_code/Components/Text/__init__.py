@@ -60,6 +60,16 @@ class Text(TextTemplate):
       self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
 
   @property
+  def icon_size(self):
+    return self._icon_size
+
+  @icon_size.setter
+  def icon_size(self, value):
+    self._icon_size = value
+    if value:
+      self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
+
+  @property
   def material_icon(self):
     return self._material_icon
 
