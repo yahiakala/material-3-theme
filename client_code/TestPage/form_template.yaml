@@ -1,19 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: text_1
-    properties: {text: 'The Material Design typescale distinguishes between two types
-        of reference tokens: brand and plain. This enables you to use two different
-        typefaces within your design. The brand typeface (which has the token md.ref.typeface.brand)
-        is recommended for larger font sizes, such as Headline and Display, while
-        plain typeface (with the token md.ref.typeface.plain) is suitable for smaller
-        font sizes, such as Body and Label.', font_size: 34}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_2
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
+  slot_3: []
 components: []
 event_bindings: {show: form_show}
