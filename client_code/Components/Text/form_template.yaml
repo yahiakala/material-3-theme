@@ -16,4 +16,5 @@ properties:
 - name: scale
   type: enum
   options: [small, medium, large]
+  default_value: medium
 - {name: prop, type: string, default_value: ''}
