@@ -17,4 +17,6 @@ properties:
   type: enum
   options: [small, medium, large]
   default_value: medium
-- {name: align, type: string, default_value: ''}
+- name: align
+  type: enum
+  options: []
