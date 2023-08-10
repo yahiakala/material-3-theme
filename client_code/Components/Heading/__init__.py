@@ -30,18 +30,70 @@ class Heading(HeadingTemplate):
   visible = visible_property('anvil-m3-heading-container', 'flex')
 
   @property
-  def material_icon(self):
-    return self._material_icon
+  def underline(self):
+    return self._underline
 
-  @material_icon.setter
-  def material_icon(self, value):
-    self._material_icon = value
+  @underline.setter
+  def underline(self, value):
+    self._underline = value
     if value:
-      self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+      self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'underline'
+      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'underline'
+      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'underline'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'none'
+      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'none'
+      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'none'
+
+  @property
+  def italic(self):
+    return self._italic
+
+  @italic.setter
+  def italic(self, value):
+    self._italic = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontStyle = 'italic'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontStyle = 'italic'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontStyle = 'italic'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontStyle = 'none'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontStyle = 'none'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontStyle = 'none'
+
+  @property
+  def bold(self):
+    return self._bold
+
+  @bold.setter
+  def bold(self, value):
+    self._bold = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'bold'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
+
+  @property
+  def font_size(self):
+    return self._font_size
+
+  @font_size.setter
+  def font_size(self, value):
+    self._font_size = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = 'bold'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = 'bold'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = 'bold'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = 'none'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = 'none'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = 'none'
   
-  underline = underline_property('anvil-m3-heading')
-  italic = italic_property('anvil-m3-heading')
-  bold = bold_property('anvil-m3-heading')
+
   font_size = font_size_property('anvil-m3-heading')
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading', 'fontFamily')
