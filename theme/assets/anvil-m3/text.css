@@ -74,31 +74,31 @@
 }
 
 .anvil-m3-text-body.anvil-m3-text-large {
-  line-height: 24px;
+/*   line-height: 24px; */
   font-size: 16px;
   letter-spacing: 0.5px;
 }
 
 .anvil-m3-text-body.anvil-m3-text-medium {
-  line-height: 20px;
+/*   line-height: 20px; */
   font-size: 14px;
   letter-spacing: 0.25px;
 }
 
 .anvil-m3-text-body.anvil-m3-text-small {
-  line-height: 16px;
+/*   line-height: 16px; */
   font-size: 12px;
   letter-spacing: 0.4px;
 }
 
 .anvil-m3-text-label.anvil-m3-text-large {
-  line-height: 20px;
+/*   line-height: 20px; */
   font-size: 14px;
   letter-spacing: 0.1px;
 }
 
 .anvil-m3-text-label.anvil-m3-text-medium {
-  line-height: 16px;
+/*   line-height: 16px; */
   font-size: 12px;
   letter-spacing: 0.5px;
 }
