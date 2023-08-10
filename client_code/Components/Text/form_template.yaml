@@ -23,3 +23,4 @@ properties:
   default_value: left
 - {name: background, type: color, default_value: '', description: The background colour of this component.}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
+- {name: prop, type: string, default_value: ''}
