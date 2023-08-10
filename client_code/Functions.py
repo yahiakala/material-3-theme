@@ -53,8 +53,7 @@ def href_property(dom_node_name):
     return self.dom_nodes[dom_node_name].href
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].href = value
+    self.dom_nodes[dom_node_name].href = value
 
   return property(getter, setter)
 
