@@ -1,15 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: text_1
-    properties: {font_size: 70, text: Text}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: heading_1
-    properties: {material_icon: animation, icon_color: pink, text_color: '', icon_size: 12,
-      scale: small, style: title}
-    type: form:Components.Heading
-    layout_properties: {}
+  slot_3: []
 components: []
 event_bindings: {show: form_show}
