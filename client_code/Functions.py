@@ -35,8 +35,7 @@ def innerHTML_property(dom_node_name):
     return self.dom_nodes[dom_node_name].innerHTML
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].innerHTML = value
+    self.dom_nodes[dom_node_name].innerHTML = value
 
   return property(getter, setter)
 
@@ -45,8 +44,7 @@ def innerText_property(dom_node_name):
     return self.dom_nodes[dom_node_name].innerText
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].innerText = value
+    self.dom_nodes[dom_node_name].innerText = value
 
   return property(getter, setter)
 
