@@ -66,13 +66,13 @@ class Heading(HeadingTemplate):
   def underline(self, value):
     self.underline = value
     if value:
-      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
-      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'bold'
+      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'bold'
+      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'bold'
     else:
-      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'normal'
-      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'normal'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'normal'
+      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'normal'
+      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'normal'
 
   @property
   def bold(self):
