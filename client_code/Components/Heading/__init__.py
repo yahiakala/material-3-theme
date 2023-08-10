@@ -53,7 +53,7 @@ class Heading(HeadingTemplate):
   def icon_size(self):
     return self._icon_size
 
-  @font_size.setter
+  @icon_size.setter
   def font_size(self, value):
     self._font_size = value
     if value:
