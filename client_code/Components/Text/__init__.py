@@ -39,7 +39,7 @@ class Text(TextTemplate):
   align = style_property('anvil-m3-text-container', 'justifyContent')
 
   @property
-  def material_icon(self):
+  def icon_size(self):
     return self._material_icon
 
   @material_icon.setter
