@@ -33,7 +33,7 @@ class Text(TextTemplate):
   # font_size = font_size_property('anvil-m3-text')
   border = style_property('anvil-m3-text-container', 'border')
   font = style_property('anvil-m3-text', 'fontFamily')
-  text_color = color_property('anvil-m3-text', 'color')
+  text_color = color_property('anvil-m3-text-container', 'color')
   background_color = color_property('anvil-m3-text-container', 'backgroundColor')
   text = innerText_property('anvil-m3-text')
   align = style_property('anvil-m3-text-container', 'justifyContent')
