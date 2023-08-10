@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
   - name: heading_1
     properties: {material_icon: animation, icon_color: pink, text_color: '', icon_size: 12,
-      scale: small}
+      scale: small, style: title}
     type: form:Components.Heading
     layout_properties: {}
 components: []
