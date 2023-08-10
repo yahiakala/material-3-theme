@@ -2,8 +2,8 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-container\" anvil-name=\"anvil-m3-text-container\"\
       >\n  <span anvil-name=\"anvil-m3-text-icon\" class=\"material-symbols-outlined\"\
-      ></span>\n  <div class=\"anvil-m3-text-display\" anvil-name=\"anvil-m3-text\"\
-      ></div>\n</div>"}
+      ></span>\n  <div class=\"anvil-m3-text\" anvil-name=\"anvil-m3-text\"></div>\n\
+      </div>"}
   event_bindings: {show: form_show}
 components: []
 is_package: true
