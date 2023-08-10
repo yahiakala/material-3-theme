@@ -71,8 +71,8 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'underline'
     else:
       self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'none'
-      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'normal'
-      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'normal'
+      self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'none'
+      self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'none'
 
   @property
   def bold(self):
