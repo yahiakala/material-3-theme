@@ -48,7 +48,7 @@ class Text(TextTemplate):
     self._font_size = value
     if value: value = f'{value}px'
     self.dom_nodes['anvil-m3-text'].style.fontSize = value
-    self.dom_nodes['anvil-m3-text-container'].style.fontSize = f'{value}px'
+    self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
       
 
   @property
