@@ -69,6 +69,10 @@
   font-weight: 400;
 }
 
+.anvil-m3-text-body {
+  font-weight: 400;
+}
+
 .anvil-m3-text-body.anvil-m3-text-large {
   line-height: 64px;
   font-size: 57px;
