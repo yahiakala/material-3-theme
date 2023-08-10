@@ -6,6 +6,7 @@ import anvil.designer
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
+    self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
@@ -22,14 +23,26 @@ class Checkbox(CheckboxTemplate):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
       "type": "whole_component",
-      "title": "Edit text",
+      "title": "Toggle",
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+        "execute": self.toggle_checked 
       }
-    }]
+    },
+    {
+      "type": "region",
+      "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+      "callbacks": {
+        "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+      }
+    }       
+    ]
     return di
+
+  def toggle_checked(self):
+    self.checked = not self.checked
+    anvil.designer.update_component_properties(self, {'checked': self.checked})
 
   def handle_click(self, event):
     if self.enabled:
@@ -77,7 +90,6 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
-      
 
   @property
   def allow_indeterminate(self):

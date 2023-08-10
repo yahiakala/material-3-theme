@@ -16,8 +16,8 @@ def color_property(dom_node_name, style_prop):
     return self.dom_nodes[dom_node_name].style[style_prop]
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].style[style_prop] = theme_color_to_css(value)
+    if value: value = theme_color_to_css(value)
+    self.dom_nodes[dom_node_name].style[style_prop] = value
 
   return property(getter, setter)
 
@@ -26,8 +26,7 @@ def style_property(dom_node_name, style_prop):
     return self.dom_nodes[dom_node_name].style[style_prop]
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].style[style_prop] = value
+    self.dom_nodes[dom_node_name].style[style_prop] = value
 
   return property(getter, setter)
 
@@ -36,8 +35,7 @@ def innerHTML_property(dom_node_name):
     return self.dom_nodes[dom_node_name].innerHTML
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].innerHTML = value
+    self.dom_nodes[dom_node_name].innerHTML = value
 
   return property(getter, setter)
 
@@ -46,8 +44,7 @@ def innerText_property(dom_node_name):
     return self.dom_nodes[dom_node_name].innerText
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].innerText = value
+    self.dom_nodes[dom_node_name].innerText = value
 
   return property(getter, setter)
 
@@ -56,8 +53,7 @@ def href_property(dom_node_name):
     return self.dom_nodes[dom_node_name].href
 
   def setter(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].href = value
+    self.dom_nodes[dom_node_name].href = value
 
   return property(getter, setter)
 
@@ -150,7 +146,8 @@ def font_size_property(dom_node_name):
 
   def setter(self, value):
     self._font_size = value
-    self.dom_nodes[dom_node_name].style.fontSize = f'{value}px'
+    if value: value = f'{value}px'
+    self.dom_nodes[dom_node_name].style.fontSize = value
 
   return property(getter, setter)
   

@@ -1,0 +1,110 @@
+.anvil-m3-heading-container, .anvil-m3-text-container {
+  display:flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.anvil-m3-heading-container > .anvil-m3-heading-icon, .anvil-m3-text-container > .anvil-m3-text-icon {
+  font-size: inherit;
+}
+
+/*HEADING*/
+.anvil-m3-heading-display, .anvil-m3-heading-headline, .anvil-m3-heading-title{
+  font-weight: 400;
+}
+
+.anvil-m3-heading-display.anvil-m3-heading-large {
+/*   line-height: 64px; */
+  font-size: 57px;
+  letter-spacing: -0.25px;
+}
+
+.anvil-m3-heading-display.anvil-m3-heading-medium {
+/*   line-height: 52px; */
+  font-size: 45px;
+
+}
+
+.anvil-m3-heading-display.anvil-m3-heading-small {
+/*   line-height: 44px; */
+  font-size: 36px;
+}
+
+.anvil-m3-heading-headline.anvil-m3-heading-large {
+/*   line-height: 40px; */
+  font-size: 32px;
+}
+
+.anvil-m3-heading-headline.anvil-m3-heading-medium {
+/*   line-height: 36px; */
+  font-size: 28px;
+}
+
+.anvil-m3-heading-headline.anvil-m3-heading-small {
+/*   line-height: 32px; */
+  font-size: 24px;
+}
+
+.anvil-m3-heading-title.anvil-m3-heading-large {
+/*   line-height: 28px; */
+  font-size: 22px;
+}
+
+.anvil-m3-heading-title.anvil-m3-heading-medium {
+/*   line-height: 24px; */
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+}
+
+.anvil-m3-heading-title.anvil-m3-heading-small {
+/*   line-height: 20px; */
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+/*TEXT*/
+.anvil-m3-text-body {
+  font-weight: 400;
+}
+
+.anvil-m3-text-label {
+  font-weight: 500;
+}
+
+.anvil-m3-text-body.anvil-m3-text-large {
+/*   line-height: 24px; */
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.anvil-m3-text-body.anvil-m3-text-medium {
+/*   line-height: 20px; */
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+
+.anvil-m3-text-body.anvil-m3-text-small {
+/*   line-height: 16px; */
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.anvil-m3-text-label.anvil-m3-text-large {
+/*   line-height: 20px; */
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+.anvil-m3-text-label.anvil-m3-text-medium {
+/*   line-height: 16px; */
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.anvil-m3-text-label.anvil-m3-text-small {
+/*   line-height: 16px; */
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}

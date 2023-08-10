@@ -1,26 +1,35 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div class=\"anvil-m3-heading-container\" anvil-name=\"anvil-m3-heading-container\"\
+      >\n  <span anvil-name=\"anvil-m3-heading-icon\" class=\"anvil-m3-heading-icon\
+      \ material-symbols-outlined\"></span>\n  <h1 class=\"anvil-m3-heading-display\"\
+      \ anvil-name=\"anvil-m3-heading-display\"></h1>\n  <h2 class=\"anvil-m3-heading-headline\"\
+      \ anvil-name=\"anvil-m3-heading-headline\"></h2>\n  <h3 class=\"anvil-m3-heading-title\"\
+      \ anvil-name=\"anvil-m3-heading-title\"></h3>\n</div>"}
+  event_bindings: {show: form_show}
+components: []
+is_package: true
+custom_component: true
 properties:
-- {name: url, type: string, default_value: '', priority: '15'}
-- {name: icon, type: icon, default_value: 'fa:star', priority: '13'}
-- {name: text, type: string, default_value: Label, description: Text for the Link,
-  priority: '14'}
-- {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
-  priority: '12'}
-- {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
-  priority: '11'}
-- {name: badge_count, type: number, default_value: '', description: '10'}
-- {name: text_color, type: color, default_value: '', description: Color of the text,
-  priority: '9'}
-- {name: font_size, type: string, default_value: '', description: Size of the font,
-  priority: '8'}
-- {name: font_family, type: string, default_value: '', description: Font family of the text,
-  priority: '6'}
-- {name: icon_color, type: color, default_value: '', description: Color of the icon,
-  priority: '3'}
-- {name: icon_size, type: string, default_value: '', description: Size of the icon,
-  priority: '7'}
+- name: style
+  type: enum
+  default_binding_prop: true
+  options: [display, headline, title]
+  default_value: headline
+- name: scale
+  type: enum
+  options: [small, medium, large]
+  default_value: medium
+- {name: font_size, type: number, description: The height of text displayed on this component in pixels}
+- {name: font, type: string, default_value: '', description: The font to use for this component.}
+- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
+- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
+- {name: text, type: string, default_value: '', description: The text displayed on this component,
+  multiline: true}
+- {name: underline, type: boolean, default_value: false, description: Whether or not the text should be underlined}
+- {name: visible, type: boolean, default_value: true, description: Whether or not this component should be displayed on the page}
 - name: material_icon
   type: enum
-  default_value: star
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
@@ -380,23 +389,14 @@ properties:
     wind_power, window, wine_bar, woman, woman_2, woo_commerce, wordpress, work, work_history,
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
-    zoom_out, zoom_out_map, '']
-- {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
-  default_binding_prop: true}
-is_package: true
-event_bindings: {show: form_show}
-events:
-- {name: click, description: when the component is clicked, default_event: true}
-custom_component: true
-components: []
-container:
-  type: HtmlTemplate
-  properties: {html: "<a class=\"anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\"\
-      \ href=\"javascript:void(0)\" onclick=\"\">\n<!--   <i anvil-name=\"navigation-link-icon\"\
-      \ class=\"fa fa-star\">\n  </i> -->\n  <span anvil-name=\"anvil-m3-navigation-link-icon\"\
-      \ class=\"material-symbols-outlined\">star</span>\n  <span anvil-name=\"anvil-m3-icon-badge\"\
-      \ class=\"anvil-m3-icon-badge\" style=\"display: none\"></span>\n\n  <div anvil-name=\"\
-      anvil-m3-navigation-link-text\" class=\"anvil-m3-navigation-link-text\"></div>\n\
-      </a>\n"}
-  event_bindings: {}
-custom_component_container: false
+    zoom_out, zoom_out_map]
+- {name: text_color, type: color, default_value: '', description: The foreground colour of this component.}
+- {name: background_color, type: color, default_value: '', description: The background colour of this component.}
+- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
+- name: align
+  type: enum
+  options: [left, center, right]
+- {name: icon_size, type: number, description: 'The size in pixels of the icon. If
+    not set, the icon will scale with the text.'}
+- {name: icon_color, type: color, default_value: '', description: 'The colour of the
+    icon. If not set, the icon will be the same colour as the text.'}
