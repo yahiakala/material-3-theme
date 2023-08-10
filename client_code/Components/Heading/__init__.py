@@ -28,6 +28,17 @@ class Heading(HeadingTemplate):
     return di
 
   visible = visible_property('anvil-m3-heading-container', 'flex')
+
+  @property
+  def material_icon(self):
+    return self._material_icon
+
+  @material_icon.setter
+  def material_icon(self, value):
+    self._material_icon = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+  
   underline = underline_property('anvil-m3-heading')
   italic = italic_property('anvil-m3-heading')
   bold = bold_property('anvil-m3-heading')
@@ -60,20 +71,18 @@ class Heading(HeadingTemplate):
     headline = self.dom_nodes['anvil-m3-heading-headline']
     title = self.dom_nodes['anvil-m3-heading-title']
     if value == 'display':
-      display[0].style.display = 'block'
-      headline[0].style.display = 'none'
-      title[0].style.display = 'none'
+      display.style.display = 'block'
+      headline.style.display = 'none'
+      title.style.display = 'none'
     elif value == 'headline':
-      print(display)
-      display[0].style.display = 'none'
-      headline[0].style.display = 'block'
-      title[0].style.display = 'none'
+      display.style.display = 'none'
+      headline.style.display = 'block'
+      title.style.display = 'none'
     elif value == 'title':
-      display[0].style.display = 'none'
-      headline[0].style.display = 'none'
-      title[0].style.display = 'block'
-    # self.dom_nodes['anvil-m3-heading'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
-    # self.dom_nodes['anvil-m3-heading'].classList.add(f'anvil-m3-{value}')
+      display.style.display = 'none'
+      headline.style.display = 'none'
+      title.style.display = 'block'
+
 
   @property
   def scale(self):
