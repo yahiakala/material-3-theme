@@ -100,10 +100,11 @@
 .anvil-m3-text-label.anvil-m3-text-medium {
   line-height: 16px;
   font-size: 12px;
-  letter-spacing: 0.5
+  letter-spacing: 0.5;
 }
 
 .anvil-m3-text-label.anvil-m3-text-small {
   line-height: 16px;
   font-size: 11px;
+  letter-spacing: 0.5;
 }
