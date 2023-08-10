@@ -38,6 +38,20 @@ class Text(TextTemplate):
   text = innerText_property('anvil-m3-text')
   align = style_property('anvil-m3-text-container', 'justifyContent')
 
+    @property
+  def font_size(self):
+    return self._font_size
+
+  @font_size.setter
+  def font_size(self, value):
+    self._font_size = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+
+
   @property
   def icon_size(self):
     return self._icon_size
