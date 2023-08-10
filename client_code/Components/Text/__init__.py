@@ -79,7 +79,7 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-label', 'anvil-m3-text-body')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-label', 'anvil-m3-text-body')
-    self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
+    self.dom_nodes['anvil-m3-text-container'].classList.add(f'anvil-m3-text-{value}')
 
   @property
   def scale(self):
