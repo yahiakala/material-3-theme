@@ -11,5 +11,9 @@ components_by_slot:
         font sizes, such as Body and Label.', font_size: 34}
     type: form:Components.Text
     layout_properties: {}
+  - name: text_2
+    properties: {}
+    type: form:Components.Text
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
