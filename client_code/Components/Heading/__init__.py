@@ -30,13 +30,28 @@ class Heading(HeadingTemplate):
   visible = visible_property('anvil-m3-heading-container', 'flex')
   underline = underline_property('anvil-m3-heading-container')
   italic = italic_property('anvil-m3-heading-container')
-  bold = bold_property('anvil-m3-heading-container')
   font_size = font_size_property('anvil-m3-heading-container')
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading-container', 'fontFamily')
   text_color = color_property('anvil-m3-heading-container', 'color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
   align = style_property('anvil-m3-heading-container', 'justifyContent')
+
+  @property
+  def bold(self):
+    return self._bold
+
+  @bold.setter
+  def bold(self, value):
+    self._bold = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'bold'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
 
   @property
   def text(self):
