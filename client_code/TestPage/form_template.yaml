@@ -4,7 +4,7 @@ components_by_slot:
   slot_3:
   - name: text_1
     properties: {text: hello, style: body, scale: large, material_icon: brunch_dining,
-      text_color: ''}
+      text_color: '', icon_color: 'theme:Error'}
     type: form:Components.Text
     layout_properties: {}
 components: []
