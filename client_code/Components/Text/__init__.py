@@ -55,7 +55,7 @@ class Text(TextTemplate):
 
   @icon_size.setter
   def icon_color(self, value):
-    self._icon_size = value
+    self._icon_color = value
     if value:
       self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
 
