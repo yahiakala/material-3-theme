@@ -109,8 +109,8 @@
   cursor: not-allowed; 
   box-shadow: none;
 }
-.anvil-m3-slider-disabled .anvil-m3-slider-progress { background-color: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); }
-.anvil-m3-slider-disabled .anvil-m3-slider-background { background-color: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); }
+.anvil-m3-slider-disabled .anvil-m3-slider-progress { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); }
+.anvil-m3-slider-disabled .anvil-m3-slider-background { background-color: var(--anvil-m3-disabled-container); }
 
 .anvil-m3-slider input:disabled::-webkit-slider-thumb:hover { outline: none; }
 .anvil-m3-slider input:disabled::-moz-range-thumb:hover { outline: none; }
