@@ -91,3 +91,7 @@
 }
 
 .anvil-m3-slider-label { transform: rotate(135deg); }
+
+.anvil-m3-slider input:disabled::-webkit-slider-thumb {
+  background: var(--anvil-m3-on-disabled)
+}
