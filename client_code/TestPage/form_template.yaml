@@ -4,7 +4,7 @@ components_by_slot:
   slot_3:
   - name: text_1
     properties: {text: hello, align: left, background: '', background_color: '', bold: false,
-      font: '', icon_size: 16, material_icon: cake}
+      font: '', material_icon: cake}
     type: form:Components.Text
     layout_properties: {}
 components: []
