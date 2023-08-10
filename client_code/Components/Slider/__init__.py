@@ -73,9 +73,18 @@ class Slider(SliderTemplate):
   def show_label(self, value):
     self._show_label = value
 
+  @property
+  def enabled(self):
+    return self._enabled
+
+  @enabled.setter
+  def enabled(self):
+    
+
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
+
 
 
 
