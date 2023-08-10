@@ -51,7 +51,7 @@ class Text(TextTemplate):
 
   @property
   def icon_color(self):
-    return self._icon_size
+    return self._icon_color
 
   @icon_size.setter
   def icon_color(self, value):
