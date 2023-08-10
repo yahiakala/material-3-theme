@@ -13,7 +13,6 @@ class Text(TextTemplate):
     if anvil.designer.in_designer and not self.text:
       self.text = anvil.designer.get_design_name(self)
 
-
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
