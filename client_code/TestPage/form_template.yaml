@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_1
-    properties: {text: hello, style: label, scale: large}
+    properties: {text: hello, style: body, scale: medium}
     type: form:Components.Text
     layout_properties: {}
 components: []
