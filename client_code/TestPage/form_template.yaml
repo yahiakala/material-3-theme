@@ -1,11 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: button_1
-    properties: {appearance: elevated}
-    type: form:Components.Button
-    layout_properties: {}
-    event_bindings: {click: button_1_click}
+  slot_3: []
 components: []
 event_bindings: {show: form_show}
