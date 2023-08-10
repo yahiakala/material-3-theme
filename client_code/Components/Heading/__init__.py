@@ -84,7 +84,7 @@ class Heading(HeadingTemplate):
     self._style = value
     display = self.dom_nodes['anvil-m3-heading-display']
     headline = self.dom_nodes['anvil-m3-heading-headline']
-    title = self.dom_nodes['anvil-m3-heading-title']
+    title = self.dom_nodes['anvil-m3-heading-title'].remove()
     self.dom_nodes['anvil-m3-heading-container'].classList
     if value == 'display':
       display.style.display = 'block'
