@@ -50,7 +50,6 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text'].style.fontSize = value
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
       
-
   @property
   def icon_size(self):
     return self._icon_size
