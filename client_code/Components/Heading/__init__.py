@@ -60,7 +60,7 @@ class Heading(HeadingTemplate):
 
   @property
   def underline(self):
-    return self.underline
+    return self._underline
 
   @underline.setter
   def underline(self, value):
