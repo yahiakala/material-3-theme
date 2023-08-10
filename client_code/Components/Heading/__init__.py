@@ -50,7 +50,7 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
 
   @property
-  def font_size(self):
+  def icon_size(self):
     return self._font_size
 
   @font_size.setter
