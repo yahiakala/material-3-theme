@@ -3,8 +3,8 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_1
-    properties: {align: left, material_icon: cake, text: hello, font_size: -3, font: '',
-      italic: false, background_color: '', background: '', bold: false}
+    properties: {align: left, scale: large, material_icon: cake, text: hello, font_size: -3,
+      font: '', italic: false, background_color: '', background: '', bold: false}
     type: form:Components.Text
     layout_properties: {}
 components: []
