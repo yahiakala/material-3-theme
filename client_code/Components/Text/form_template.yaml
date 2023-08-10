@@ -391,4 +391,4 @@ properties:
     zoom_out, zoom_out_map]
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
 - {name: text, type: string, default_value: '', description: The text displayed on this component}
-- {name: underline, type: string, default_value: ''}
+- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
