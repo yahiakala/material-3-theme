@@ -41,7 +41,7 @@ class Heading(HeadingTemplate):
   @font_size.setter
   def font_size(self, value):
     self._font_size = value
-    if value:
+    if value: value = f'{value}px'
       self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
