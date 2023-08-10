@@ -51,7 +51,7 @@ class Heading(HeadingTemplate):
 
   @property
   def icon_size(self):
-    return self._font_size
+    return self._icon_size
 
   @font_size.setter
   def font_size(self, value):
