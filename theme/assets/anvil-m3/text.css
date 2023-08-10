@@ -94,6 +94,7 @@
 .anvil-m3-text-label.anvil-m3-text-large {
   line-height: 20px;
   font-size: 14px;
+    letter-spacing: 0.1;
 }
 
 .anvil-m3-text-label.anvil-m3-text-medium {
