@@ -20,4 +20,5 @@ properties:
 - name: align
   type: enum
   options: [left, center, right]
+  default_value: left
 - {name: prop, type: string, default_value: ''}
