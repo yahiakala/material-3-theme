@@ -20,23 +20,23 @@
 }
 
 .anvil-m3-heading-display.anvil-m3-heading-medium {
-  line-height: 52px;
+/*   line-height: 52px; */
   font-size: 45px;
 
 }
 
 .anvil-m3-heading-display.anvil-m3-heading-small {
-  line-height: 44px;
+/*   line-height: 44px; */
   font-size: 36px;
 }
 
 .anvil-m3-heading-headline.anvil-m3-heading-large {
-  line-height: 40px;
+/*   line-height: 40px; */
   font-size: 32px;
 }
 
 .anvil-m3-heading-headline.anvil-m3-heading-medium {
-  line-height: 36px;
+/*   line-height: 36px; */
   font-size: 28px;
 }
 
