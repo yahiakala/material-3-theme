@@ -398,4 +398,4 @@ properties:
     not set, the icon will scale with the text.'}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.'}
-- {name: line_height, type: string, default_value: ''}
+- {name: line_height, type: number}
