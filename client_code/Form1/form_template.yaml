@@ -6,8 +6,4 @@ container:
 components: []
 is_package: true
 custom_component: true
-properties:
-- name: prop
-  type: enum
-  default_binding_prop: true
-  options: [hello, hello]
+properties: []
