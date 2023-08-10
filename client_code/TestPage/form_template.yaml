@@ -3,8 +3,9 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_1
-    properties: {text: hello, style: label, scale: large, material_icon: brunch_dining,
-      text_color: 'theme:Tertiary Container', icon_color: 'theme:Error', underline: false}
+    properties: {scale: large, material_icon: brunch_dining, text_color: 'theme:Tertiary
+        Container', style: label, visible: true, text: hello, italic: false, underline: false,
+      icon_color: 'theme:Error'}
     type: form:Components.Text
     layout_properties: {}
 components: []
