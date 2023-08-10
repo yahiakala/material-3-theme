@@ -15,4 +15,4 @@ properties:
   default_value: body
 - name: scale
   type: enum
-  options: []
+  options: [small, medium, large]
