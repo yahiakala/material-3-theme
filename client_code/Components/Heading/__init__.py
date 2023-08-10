@@ -56,9 +56,9 @@ class Heading(HeadingTemplate):
   @style.setter
   def style(self, value):
     self._style = value
-    display = window.document.getElementsByClassName('anvil-m3-heading-display')
-    headline = window.document.getElementsByClassName('anvil-m3-heading-headline')
-    title = window.document.getElementsByClassName('anvil-m3-heading-title')
+    display = self.dom_nodes['anvil-m3-heading-display']
+    headline = self.dom_nodes['anvil-m3-heading-headline']
+    title = self.dom_nodes['anvil-m3-heading-title']
     if value == 'display':
       display[0].style.display = 'block'
       headline[0].style.display = 'none'

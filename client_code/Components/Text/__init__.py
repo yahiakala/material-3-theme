@@ -56,7 +56,7 @@ class Text(TextTemplate):
   @style.setter
   def style(self, value):
     self._style = value
-    self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-display', 'anvil-m3-headline', 'anvil-m3-title')
+    self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-label', 'anvil-m3-body')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-{value}')
 
   @property

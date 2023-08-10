@@ -6,3 +6,13 @@ container:
       ></div>\n</div>"}
 components: []
 is_package: true
+custom_component: true
+properties:
+- name: style
+  type: enum
+  default_binding_prop: true
+  options: [body, label]
+  default_value: body
+- name: scale
+  type: enum
+  options: []
