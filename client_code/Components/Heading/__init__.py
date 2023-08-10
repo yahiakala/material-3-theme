@@ -64,7 +64,7 @@ class Heading(HeadingTemplate):
 
   @underline.setter
   def underline(self, value):
-    self.underline = value
+    self._underline = value
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'underline'
       self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'underline'
