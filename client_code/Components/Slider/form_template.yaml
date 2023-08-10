@@ -8,9 +8,10 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->\n\
-      \n<div class=\"anvil-m3-slider\">\n  <div class=\"anvil-m3-slider-track-container\"\
-      \ anvil-name=\"anvil-m3-slider-track-container\">\n    <div class=\"anvil-m3-slider-background\"\
-      ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
-      \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
-      \ type=\"range\" min=\"0\" max=\"100\" step=\"0.1\">\n</div>\n\n\n"}
+      \n<div class=\"anvil-m3-slider\" anvil-name=\"anvil-m3-slider\">\n  <div class=\"\
+      anvil-m3-slider-track-container\" anvil-name=\"anvil-m3-slider-track-container\"\
+      >\n    <div class=\"anvil-m3-slider-background\"></div>\n    <div class=\"anvil-m3-slider-progress\"\
+      \ anvil-name=\"anvil-m3-slider-progress\" style=\"width: 50%;\"></div>\n  </div>\n\
+      \  <input anvil-name=\"anvil-m3-slider-input\" type=\"range\" min=\"0\" max=\"\
+      100\" step=\"0.1\">\n</div>\n\n\n"}
   event_bindings: {show: form_show}

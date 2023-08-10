@@ -54,10 +54,16 @@
 }
 
 .anvil-m3-slider input::-webkit-slider-thumb:hover { outline: 10px solid var(--anvil-m3-primary-overlay-2); }
+.anvil-m3-slider input::-moz-range-thumb:hover { outline: 10px solid var(--anvil-m3-primary-overlay-2); }
+.anvil-m3-slider input::-ms-thumb:hover { outline: 10px solid var(--anvil-m3-primary-overlay-2); }
 
 .anvil-m3-slider input:focus::-webkit-slider-thumb { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
+.anvil-m3-slider input:focus::-moz-range-thumb { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
+.anvil-m3-slider input:focus::-ms-thumb { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
 
 .anvil-m3-slider input::-webkit-slider-thumb:active { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
+.anvil-m3-slider input::-moz-range-thumb:active { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
+.anvil-m3-slider input::-ms-thumb:active { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
 
 .anvil-m3-slider input::-webkit-slider-runnable-track {
   width: 100%;

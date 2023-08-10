@@ -78,8 +78,16 @@ class Slider(SliderTemplate):
     return self._enabled
 
   @enabled.setter
-  def enabled(self):
-    
+  def enabled(self, value):
+    self._enabled = value
+    full_slider = self.dom_nodes['anvil-m3-slider']
+    input = self.dom_nodes['anvil-m3-slider-input']
+    if value:
+      input.removeAttribute("disabled")
+      full_slider.classList.remove("anvil-m3-slider-disabled")
+    else:
+      input.setAttribute("disabled", " ")
+      full_slider.classList.add("anvil-m3-slider-disabled")
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""

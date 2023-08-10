@@ -30,7 +30,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: slider_4
-      properties: {}
+      properties: {enabled: false}
       type: form:Components.Slider
       layout_properties: {grid_position: 'TSVZAY,ESBPPZ'}
     - name: slider_5
