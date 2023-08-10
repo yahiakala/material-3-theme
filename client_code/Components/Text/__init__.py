@@ -41,7 +41,7 @@ class Text(TextTemplate):
 
   @property
   def font_size(self):
-    return self._font_size
+    return self.dom_nodes['anvil-m3-text'].style.fontSize
 
   @font_size.setter
   def font_size(self, value):
