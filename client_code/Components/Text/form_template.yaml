@@ -19,4 +19,4 @@ properties:
   default_value: medium
 - name: align
   type: enum
-  options: []
+  options: [left, center, right]
