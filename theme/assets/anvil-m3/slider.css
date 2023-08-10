@@ -93,12 +93,21 @@
 .anvil-m3-slider-label { transform: rotate(135deg); }
 
 
-.anvil-m3-slider input:disabled::-webkit-slider-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface) }
-.anvil-m3-slider input:disabled::-moz-range-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface) }
-.anvil-m3-slider input:disabled::-ms-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface) }
+.anvil-m3-slider input:disabled::-webkit-slider-runnable-track { cursor: not-allowed; }
+.anvil-m3-slider input:disabled::-webkit-slider-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); cursor: not-allowed; }
+.anvil-m3-slider input:disabled::-moz-range-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); cursor: not-allowed; }
+.anvil-m3-slider input:disabled::-ms-thumb { background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); cursor: not-allowed; }
 .anvil-m3-slider-disabled .anvil-m3-slider-progress { background-color: var(--anvil-m3-on-disabled); }
 .anvil-m3-slider-disabled .anvil-m3-slider-background { background-color: var(--anvil-m3-disabled-container); }
 
-.anvil-m3-slider input::-webkit-slider-thumb:hover { outline: none; }
-.anvil-m3-slider input::-moz-range-thumb:hover { outline: none; }
-.anvil-m3-slider input::-ms-thumb:hover { outline: none; }
+.anvil-m3-slider input:disabled::-webkit-slider-thumb:hover { outline: none; }
+.anvil-m3-slider input:disabled::-moz-range-thumb:hover { outline: none; }
+.anvil-m3-slider input:disabled::-ms-thumb:hover { outline: none; }
+
+.anvil-m3-slider input:disabled:focus::-webkit-slider-thumb { outline: none; }
+.anvil-m3-slider input:disabled:focus::-moz-range-thumb { outline: none; }
+.anvil-m3-slider input:disabled:focus::-ms-thumb { outline: none; }
+
+.anvil-m3-slider input:disabled::-webkit-slider-thumb:active { outline: none; }
+.anvil-m3-slider input:disabled::-moz-range-thumb:active { outline: none; }
+.anvil-m3-slider input:disabled::-ms-thumb:active { outline: none; }
