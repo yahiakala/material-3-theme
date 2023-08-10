@@ -36,8 +36,19 @@ class Heading(HeadingTemplate):
   font = style_property('anvil-m3-heading-container', 'fontFamily')
   text_color = color_property('anvil-m3-heading-container', 'color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
-  text = innerText_property('anvil-m3-heading-container')
   align = style_property('anvil-m3-heading-container', 'justifyContent')
+
+  @property
+  def text(self):
+    return self._text
+
+  @text.setter
+  def text(self, value):
+    self._text = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].innerText = value
+      self.dom_nodes['anvil-m3-heading-headline'].innerText = value
+      self.dom_nodes['anvil-m3-heading-title'].innerText = value
 
   @property
   def material_icon(self):
