@@ -59,6 +59,22 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = f'{value}px'
 
   @property
+  def underline(self):
+    return self._bold
+
+  @bold.setter
+  def bold(self, value):
+    self._bold = value
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'bold'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'normal'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
+
+  @property
   def bold(self):
     return self._bold
 
