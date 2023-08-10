@@ -390,4 +390,5 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
-- {name: text, type: string, default_value: ''}
+- {name: text, type: string, default_value: '', description: The text displayed on this component}
+- {name: prop, type: string, default_value: ''}
