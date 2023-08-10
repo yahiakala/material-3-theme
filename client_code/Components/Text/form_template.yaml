@@ -21,4 +21,4 @@ properties:
   type: enum
   options: [left, center, right]
   default_value: left
-- {name: background, type: string, default_value: ''}
+- {name: background, type: string, default_value: '', description: The background colour of this component.}
