@@ -21,4 +21,4 @@ properties:
   type: enum
   options: [left, center, right]
   default_value: left
-- {name: prop, type: string, default_value: ''}
+- {name: background, type: string, default_value: ''}
