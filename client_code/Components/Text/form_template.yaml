@@ -24,4 +24,4 @@ properties:
 - {name: background, type: color, default_value: '', description: The background colour of this component.}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
-- {name: font, type: string, default_value: ''}
+- {name: font, type: string, default_value: '', description: The font to use for this component.}
