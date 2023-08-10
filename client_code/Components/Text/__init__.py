@@ -48,8 +48,6 @@ class Text(TextTemplate):
     if value:
       self.dom_nodes['anvil-m3-text'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
-      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
 
 
   @property
