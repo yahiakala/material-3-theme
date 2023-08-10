@@ -54,8 +54,8 @@ class Heading(HeadingTemplate):
   @icon_size.setter
   def icon_size(self, value):
     self._icon_size = value
-    if value: value = f''
-      self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = f'{value}px'
+    if value: value = f'{value}px'
+    self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = f'{value}px'
 
   @property
   def underline(self):
