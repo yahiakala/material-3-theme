@@ -26,4 +26,5 @@ properties:
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
 - {name: font, type: string, default_value: '', description: The font to use for this component.}
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels}
-- {name: text_color, type: color, default_value: ''}
+- {name: text_color, type: color, default_value: '', description: The colour of the text}
+- {name: prop, type: string, default_value: ''}
