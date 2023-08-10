@@ -84,17 +84,21 @@ class Heading(HeadingTemplate):
   @font_size.setter
   def font_size(self, value):
     self._font_size = value
-    if value:
-      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = 'bold'
-      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = 'bold'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = 'bold'
-    else:
-      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = 'none'
-      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = 'none'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = 'none'
-  
+    self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
+    self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
+    self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
 
-  font_size = font_size_property('anvil-m3-heading')
+  @property
+  def font_size(self):
+    return self._font_size
+
+  @font_size.setter
+  def font_size(self, value):
+    self._font_size = value
+    self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
+    self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
+    self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
+  
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading', 'fontFamily')
   text_color = color_property('anvil-m3-heading', 'color')
