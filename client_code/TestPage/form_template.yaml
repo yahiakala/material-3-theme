@@ -8,7 +8,7 @@ components_by_slot:
         typefaces within your design. The brand typeface (which has the token md.ref.typeface.brand)
         is recommended for larger font sizes, such as Headline and Display, while
         plain typeface (with the token md.ref.typeface.plain) is suitable for smaller
-        font sizes, such as Body and Label.'}
+        font sizes, such as Body and Label.', font_size: 34}
     type: form:Components.Text
     layout_properties: {}
 components: []
