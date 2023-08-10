@@ -62,8 +62,8 @@ class Heading(HeadingTemplate):
   def underline(self):
     return self.underline
 
-  @bold.setter
-  def bold(self, value):
+  @underline.setter
+  def underline(self, value):
     self.underline = value
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
