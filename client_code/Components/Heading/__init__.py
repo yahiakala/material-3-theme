@@ -1,7 +1,6 @@
 from ._anvil_designer import HeadingTemplate
 from anvil import *
 import anvil.designer
-from anvil.js import window
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
 class Heading(HeadingTemplate):
