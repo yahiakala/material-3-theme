@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_1
-    properties: {font_size: 54}
+    properties: {font_size: 54, text: Text}
     type: form:Components.Text
     layout_properties: {}
   - name: heading_1
