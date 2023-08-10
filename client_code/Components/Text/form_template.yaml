@@ -393,4 +393,4 @@ properties:
 - {name: text, type: string, default_value: '', description: The text displayed on this component}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
 - {name: visible, type: boolean, default_value: false, description: Whether or not the component should be displayed on the page.}
-- {name: prop, type: string, default_value: ''}
+- {name: icon_size, type: number}
