@@ -39,8 +39,8 @@ components_by_slot:
     event_bindings: {click: button_1_click}
   - name: heading_1
     properties: {align: left, scale: large, border: 1px solid green, material_icon: account_circle,
-      icon_size: 36, style: headline, text: I'm a heading, font: '', italic: false,
-      background_color: '', bold: true}
+      style: headline, text: I'm a heading, font: '', italic: false, background_color: '',
+      bold: true}
     type: form:Components.Heading
     layout_properties: {}
 components: []
