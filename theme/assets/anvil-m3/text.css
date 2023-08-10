@@ -104,7 +104,7 @@
 }
 
 .anvil-m3-text-label.anvil-m3-text-small {
-  line-height: 16px;
+/*   line-height: 16px; */
   font-size: 11px;
   letter-spacing: 0.5px;
 }
