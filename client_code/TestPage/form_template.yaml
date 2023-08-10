@@ -23,13 +23,13 @@ components_by_slot:
     - name: slider_1
       properties: {}
       type: form:Components.Slider
-      layout_properties: {width: 228}
+      layout_properties: {width: 211}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
     layout_properties: {}
   - name: slider_3
-    properties: {has_label: true}
+    properties: {has_label: true, show_label: true}
     type: form:Components.Slider
     layout_properties: {}
       layout_properties: {width: 312}
