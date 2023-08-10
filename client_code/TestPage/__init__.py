@@ -6,7 +6,6 @@ class TestPage(TestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    print(self.heading_1.icon_color)
 
   
 
