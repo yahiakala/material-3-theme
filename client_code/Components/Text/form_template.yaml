@@ -393,4 +393,5 @@ properties:
 - {name: text, type: string, default_value: '', description: The text displayed on this component}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
 - {name: visible, type: boolean, default_value: false, description: Whether or not the component should be displayed on the page.}
-- {name: icon_size, type: number}
+- {name: icon_size, type: number, description: 'The size in pixels of the icon. If
+    not set, the icon will scale with the text.'}
