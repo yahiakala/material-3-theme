@@ -27,4 +27,4 @@ properties:
 - {name: font, type: string, default_value: '', description: The font to use for this component.}
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels}
 - {name: text_color, type: color, default_value: '', description: The colour of the text}
-- {name: prop, type: string, default_value: ''}
+- {name: material_icon, type: string, default_value: ''}
