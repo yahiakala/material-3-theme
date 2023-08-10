@@ -49,15 +49,15 @@ class Text(TextTemplate):
       self.dom_nodes['anvil-m3-text'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-text-container'].style.fontSize = f'{value}px'
 
-  @property
-  def icon_color(self):
-    return self._icon_color
+  # @property
+  # def icon_color(self):
+  #   return self._icon_color
 
-  @icon_size.setter
-  def icon_color(self, value):
-    self._icon_color = value
-    if value:
-      self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
+  # @icon_size.setter
+  # def icon_color(self, value):
+  #   self._icon_color = value
+  #   if value:
+  #     self.dom_nodes['anvil-m3-text-icon'].style.fontSize = f'{value}px'
 
   @property
   def icon_size(self):
