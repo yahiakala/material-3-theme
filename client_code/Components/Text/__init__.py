@@ -3,6 +3,8 @@ from anvil import *
 import anvil.designer
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
+
+
 class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
