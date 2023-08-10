@@ -6,9 +6,5 @@ components_by_slot:
     properties: {}
     type: form:Components.Text
     layout_properties: {}
-  - name: text_2
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
