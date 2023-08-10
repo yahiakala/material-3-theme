@@ -60,6 +60,7 @@ class Slider(SliderTemplate):
     if self.show_label:
       self.label_container.remove()
       document.body.appendChild(self.label_container)
+      self.update_progress()
 
   def do_hide_label(self):
     self.label_container.remove()
