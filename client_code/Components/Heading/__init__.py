@@ -57,10 +57,7 @@ class Heading(HeadingTemplate):
   def icon_size(self, value):
     self._icon_size = value
     if value:
-      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
-      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
-      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
-      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = f'{value}px'
 
 
 
