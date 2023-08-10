@@ -1,4 +1,4 @@
-.anvil-m3-slider { position: relative; margin: 20px; }
+.anvil-m3-slider { position: relative; margin: 20px; z-index: 1; }
 .anvil-m3-slider input {
   width: 100%;
   height: 100%;
