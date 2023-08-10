@@ -30,7 +30,7 @@ class Text(TextTemplate):
   underline = underline_property('anvil-m3-text')
   italic = italic_property('anvil-m3-text')
   bold = bold_property('anvil-m3-text')
-  font_size = font_size_property('anvil-m3-text')
+  # font_size = font_size_property('anvil-m3-text')
   border = style_property('anvil-m3-text-container', 'border')
   font = style_property('anvil-m3-text', 'fontFamily')
   text_color = color_property('anvil-m3-text', 'color')
