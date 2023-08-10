@@ -4,9 +4,6 @@
   column-gap: 8px;
 }
 
-.anvil-m3-heading-container > .anvil-m3-heading-icon {
-  font-size: inherit !important;
-}
 
 .anvil-m3-heading-display, .anvil-m3-heading-headline, .anvil-m3-heading-title{
   font-weight: 400;
