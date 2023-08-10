@@ -37,11 +37,5 @@ components_by_slot:
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
-  - name: heading_1
-    properties: {align: left, scale: small, border: '', material_icon: add, text_color: 'theme:Error',
-      style: display, visible: false, text: I'm a heading, font: '', italic: false,
-      background_color: '', bold: true, underline: false}
-    type: form:Components.Heading
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
