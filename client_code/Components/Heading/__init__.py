@@ -85,7 +85,8 @@ class Heading(HeadingTemplate):
     display = self.dom_nodes['anvil-m3-heading-display']
     headline = self.dom_nodes['anvil-m3-heading-headline']
     title = self.dom_nodes['anvil-m3-heading-title']
-    self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-heading-display', 'anvil-m3-heading-headline', )
+    self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-heading-display', 'anvil-m3-heading-headline', 'anvil-m3-heading-title')
+    self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
     if value == 'display':
       display.style.display = 'block'
       headline.style.display = 'none'
@@ -109,7 +110,9 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-display'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-headline'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-title'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
+    self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-display'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-headline'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
+    self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
 
