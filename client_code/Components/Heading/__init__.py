@@ -28,7 +28,6 @@ class Heading(HeadingTemplate):
     return di
 
   visible = visible_property('anvil-m3-heading-container', 'flex')
-  underline = underline_property('anvil-m3-heading-container')
   italic = italic_property('anvil-m3-heading-container')
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading-container', 'fontFamily')
