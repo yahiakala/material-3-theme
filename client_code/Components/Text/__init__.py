@@ -40,7 +40,7 @@ class Text(TextTemplate):
 
   @property
   def icon_size(self):
-    return self._material_icon
+    return self._icon_size
 
   @material_icon.setter
   def material_icon(self, value):
