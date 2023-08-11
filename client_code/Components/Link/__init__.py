@@ -16,7 +16,7 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
 
     def handle_click(self, event):
-    self.raise_event("click")
+      self.raise_event("click")
     if self.navigate_to:
       open_form(self.navigate_to)
       self.selected = True
