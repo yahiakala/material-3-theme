@@ -3,7 +3,8 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_field_1
-    properties: {label_text: text field, appearance: '', error: false, leading_icon: 9k_plus}
+    properties: {label_text: text field, appearance: '', error: false, leading_icon: 9k_plus,
+      trailing_icon: arrow_circle_down}
     type: form:Components.TextField
     layout_properties: {}
 components: []
