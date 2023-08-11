@@ -38,7 +38,7 @@ class Link(LinkTemplate):
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
-  material_icon
+  material_icon 
     @property
   def material_icon(self):
     return self._material_icon
