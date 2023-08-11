@@ -20,15 +20,6 @@ components_by_slot:
     properties: {}
     type: FlowPanel
     layout_properties: {}
-  - name: card_1
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: link_4
-      properties: {text: hello}
-      type: form:Components.Link
-      layout_properties: {slot: anvil-m3-card-slot}
   - name: link_3
     properties: {}
     type: form:Components.Link
