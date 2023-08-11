@@ -1,10 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: checkbox_1
-    properties: {}
-    type: form:Components.Checkbox
-    layout_properties: {}
+  slot_3: []
 components: []
 event_bindings: {show: form_show}
