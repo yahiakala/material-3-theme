@@ -30,11 +30,10 @@ class RadioButton(RadioButtonTemplate):
   # Class Functions
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
+    di['interactions'] = [
+      {
       "type": "whole_component_multi",
       "title": "Align",
-      # "icon": "edit",
-      # "default": True,
       "options": [{
         "name": "Left Align",
         "id": "left",
@@ -49,16 +48,22 @@ class RadioButton(RadioButtonTemplate):
         "icon" : "align-right",
       }],
       "callbacks": {
-        "execute": print(id)#lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
+        "execute": self.setAlignment
       }
-    },{
+    },
+      {
+      "type": "whole_component",
+      "title": "Visible",
+      "icon": "add", #TODO: eye icon
+      "callbacks": {
+        "execute": self.toggle_visible
+      }
+    }, {
       "type": "whole_component",
       "title": "Enable",
-      "icon": "add",
-      "default": True,
+      "icon": "add", #TODO: power icon
       "callbacks": {
-        "execute": anvil.designer.update_component_properties({"enabled": not self.enabled})
-        # "execute": lambda: anvil.designer.updateComponentProperties(self, {["enable"]: not self.enabled})
+        "execute": self.toggle_enabled
       }
     },{
       "type": "whole_component",
@@ -67,9 +72,55 @@ class RadioButton(RadioButtonTemplate):
       "default": True,
       "callbacks": {
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
+      },   
+    },{
+      "type": "region",
+      "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
+      "callbacks": {
+        "doubleClick": self.toggle_selected
       }
-    }]
+    } ]
     return di 
+
+  # todo: interaction bold, italic, underline
+  def toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {'selected': self.selected})
+
+  def toggle_enabled(self):
+    self.enabled = not self.enabled
+    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
+
+  def toggle_visible(self):
+    self.visible = not self.visible
+    anvil.designer.update_component_properties(self, {'visible': self.visible})
+
+  def setAlignment(self, value):
+    self.align = value
+    anvil.designer.update_component_properties(self, {'align': self.align})
+
+  
+  # def _anvil_get_design_info_(self, as_layout=False):
+  #   di = super()._anvil_get_design_info_(as_layout)
+  #   di['interactions'] = [{
+  #     "type": "whole_component",
+  #     "title": "Toggle",
+  #     "icon": "edit",
+  #     "default": True,
+  #     "callbacks": {
+  #       "execute": self.toggle_checked 
+  #     }
+  #   },
+  #   {
+  #     "type": "region",
+  #     "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+  #     "callbacks": {
+  #       "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+  #     }
+  #   }       
+  #   ]
+  #   return di
+
     
   def handle_click(self, event):
     if self.enabled:
