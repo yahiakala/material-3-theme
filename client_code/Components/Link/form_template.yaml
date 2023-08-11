@@ -1,5 +1,6 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-link-container\">\n  <a></a>\n  \n</div>"}
+  properties: {html: "<div class=\"anvil-m3-link-container\">\n  <a class=\"anvil-m3-link\"\
+      ></a>\n\n</div>"}
 components: []
 is_package: true
