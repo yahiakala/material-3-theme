@@ -88,6 +88,15 @@ def name_property(dom_node_name):
 
   return property(getter, setter)
 
+def value_property(dom_node_name):
+  def getter(self):
+    return self.dom_nodes[dom_node_name].value
+
+  def setter(self, value):
+    self.dom_nodes[dom_node_name].value = value
+
+  return property(getter, setter)
+
 def visible_property(dom_node_name, display_prop):
   def getter(self):
     return self._visible

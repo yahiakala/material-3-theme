@@ -2,10 +2,35 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: radio_button_4
+    properties: {group_name: radioGroup1, selected: true}
+    type: form:Components.RadioButton
+    layout_properties: {}
   - name: text_field_1
     properties: {label_text: text field, appearance: outlined, error: false, leading_icon: 9k_plus,
       trailing_icon: arrow_circle_down, supporting_text: supporting text}
     type: form:Components.TextField
+    layout_properties: {}
+  - name: radio_button_1
+    properties: {selected: true, align: right, border: 1px solid green, text_color: 'theme:Error',
+      enabled: true, value: button 1, visible: true, font: '', italic: false, background: 'theme:Error
+        Overlay 2', bold: false, group_name: radioGroup1, underline: false}
+    type: form:Components.RadioButton
+    layout_properties: {}
+    event_bindings: {show: radio_button_1_show, clicked: radio_button_1_clicked}
+  - name: radio_button_2
+    properties: {text: radio_button_2, bold: true, italic: true, underline: false,
+      enabled: true, visible: true, selected: true, align: left}
+    type: RadioButton
+    layout_properties: {}
+  - name: checkbox_1
+    properties: {font_size: 23, border: 2px dashed blue, visible: true, text: '',
+      checked: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: radio_button_3
+    properties: {text: radio_button_3}
+    type: RadioButton
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}

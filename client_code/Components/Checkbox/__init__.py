@@ -6,6 +6,7 @@ import anvil.designer
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
