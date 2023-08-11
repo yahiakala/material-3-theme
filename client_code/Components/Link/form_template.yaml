@@ -9,6 +9,7 @@ properties:
 - {name: italic, type: boolean, default_value: false}
 - {name: font, type: string, default_value: ''}
 - {name: font_size, type: number}
+- {name: prop, type: string, default_value: ''}
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
