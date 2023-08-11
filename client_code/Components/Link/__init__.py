@@ -20,7 +20,7 @@ class Link(LinkTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-link'])
       }
     }]
     return di
