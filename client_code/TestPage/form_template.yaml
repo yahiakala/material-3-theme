@@ -16,5 +16,9 @@ components_by_slot:
     properties: {}
     type: FlowPanel
     layout_properties: {}
+  - name: link_2
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
