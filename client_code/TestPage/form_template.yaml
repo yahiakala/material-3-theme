@@ -16,5 +16,9 @@ components_by_slot:
     properties: {visible: true}
     type: Link
     layout_properties: {}
+  - name: link_3
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
