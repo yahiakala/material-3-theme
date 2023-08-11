@@ -24,3 +24,5 @@ class Link(LinkTemplate):
       }
     }]
     return di
+
+  
