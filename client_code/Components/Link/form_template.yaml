@@ -371,7 +371,7 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: underline, type: boolean, default_value: false}
+- {name: underline, type: boolean, default_value: true}
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
