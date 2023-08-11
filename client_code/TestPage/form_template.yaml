@@ -4,7 +4,7 @@ components_by_slot:
   slot_3:
   - name: link_1
     properties: {text: Hello, url: 'https://anvil.works', bold: false, italic: false,
-      font: '', align: left}
+      font: '', align: left, material_icon: 10mp}
     type: form:Components.Link
     layout_properties: {}
   - name: checkbox_1
