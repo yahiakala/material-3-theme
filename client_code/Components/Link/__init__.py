@@ -39,4 +39,4 @@ class Link(LinkTemplate):
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
   material_icon = innerText_property('anvil-m3-link-icon')
-  underline = 
+  underline = underline_property('')
