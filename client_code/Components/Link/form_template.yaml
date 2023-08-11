@@ -4,6 +4,7 @@ properties:
 - name: align
   type: enum
   options: [left, center, right]
+  default_value: left
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
