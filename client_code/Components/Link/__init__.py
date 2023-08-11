@@ -38,3 +38,12 @@ class Link(LinkTemplate):
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
+    @property
+  def material_icon(self):
+    return self._material_icon
+
+  @material_icon.setter
+  def material_icon(self, value):
+    self._material_icon = value
+    if value:
+      self.dom_nodes['anvil-m3-text-icon'].innerText = value
