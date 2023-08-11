@@ -40,4 +40,5 @@ class Link(LinkTemplate):
   font_size = font_size_property('anvil-m3-link')
   material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link')
+  visible = visible_property('anvil-m3-link-container', 'flex')
   
