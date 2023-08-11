@@ -37,4 +37,4 @@ class Link(LinkTemplate):
   italic = italic_property('anvil-m3-link')
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-text', 'fontFamily')
-  font_size = font
+  font_size = font_size_property('')
