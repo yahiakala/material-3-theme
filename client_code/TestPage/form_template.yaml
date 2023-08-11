@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: link_1
-    properties: {text: Hello}
+    properties: {text: Hello, url: 'https://anvil.works'}
     type: form:Components.Link
     layout_properties: {}
 components: []
