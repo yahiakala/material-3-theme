@@ -25,4 +25,4 @@ class Link(LinkTemplate):
     }]
     return di
 
-  text = innerText_property('anvil-m3-text')
+  text = innerText_property('anvil-m3-link')
