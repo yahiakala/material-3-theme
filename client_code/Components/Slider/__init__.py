@@ -13,6 +13,7 @@ class Slider(SliderTemplate):
     
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
+    
     anvil.js.window.addEventListener("resize", self.on_window_resize)
     
     self.label_container = document.createElement('div')
