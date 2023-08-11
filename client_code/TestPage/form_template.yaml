@@ -7,8 +7,9 @@ components_by_slot:
     type: form:Components.Link
     layout_properties: {}
   - name: checkbox_1
-    properties: {checked: false}
+    properties: {checked: false, text: hello}
     type: form:Components.Checkbox
     layout_properties: {}
+    event_bindings: {click: checkbox_1_click}
 components: []
 event_bindings: {show: form_show}

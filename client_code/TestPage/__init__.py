@@ -7,6 +7,11 @@ class TestPage(TestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def checkbox_1_click(self, **event_args):
+    """This method is called when the component is checked or unchecked"""
+    pass
+
+
   
 
   
