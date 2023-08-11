@@ -15,6 +15,12 @@ class Link(LinkTemplate):
       self.text = anvil.designer.get_design_name(self)
       self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
 
+    def handle_click(self, event):
+    self.raise_event("click")
+    if self.navigate_to:
+      open_form(self.navigate_to)
+      self.selected = True
+
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
