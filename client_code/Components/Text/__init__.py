@@ -9,7 +9,7 @@ from ...Functions import visible_property, underline_property, italic_property, 
 class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self._props = {**_defa**properties}
+    self._props = {**properties}
     self.init_components(**self._props)
     
   def form_show(self, **event_args):
