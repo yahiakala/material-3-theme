@@ -1,10 +1,12 @@
+properties:
+- {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component}
+is_package: true
+events:
+- {name: event, default_event: true}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-link-container\" class=\"anvil-m3-link-container\"\
       >\n  <a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
       \ class=\"anvil-m3-link\"></a>\n</div>"}
-components: []
-is_package: true
-custom_component: true
-properties:
-- {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component}
