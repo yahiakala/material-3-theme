@@ -33,3 +33,4 @@ class Link(LinkTemplate):
 
   text = innerText_property('anvil-m3-link')
   url = href_property('anvil-m3-link')
+  align = style_property('anvil-m3-text-container', 'justifyContent')
