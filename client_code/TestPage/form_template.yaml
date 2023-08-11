@@ -3,8 +3,8 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: link_1
-    properties: {text: Hello, url: 'https://anvil.works', bold: false, italic: false,
-      font: '', align: left, material_icon: 13mp, underline: true}
+    properties: {url: 'https://anvil.works', align: left, material_icon: 13mp, visible: true,
+      text: Hello, font: '', italic: false, bold: false, underline: true}
     type: form:Components.Link
     layout_properties: {}
   - name: checkbox_1
