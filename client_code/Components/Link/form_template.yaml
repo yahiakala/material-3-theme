@@ -5,7 +5,8 @@ properties:
   type: enum
   options: [left, center, right]
   default_value: left
-- {name: bold, type: string, default_value: ''}
+- {name: bold, type: boolean, default_value: false}
+- {name: prop, type: string, default_value: ''}
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
