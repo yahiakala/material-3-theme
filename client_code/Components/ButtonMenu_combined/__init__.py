@@ -37,7 +37,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self._enabled = value
     self.menu_button.enabled = value
 
-  @property
+  @property #todo: make this internal
   def position(self):
     return self._position;
   @position.setter
@@ -47,12 +47,12 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.menuSize = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
 
-  def windowSize(self):
+  def windowSize(self): #todo: make this internal
     return self._windowSize
   def windowSize(self, value):
     self._windowSize = value
     
-  @property
+  @property #todo: make this internal
   def menuSize(self):
     return self._menuSize
   @menuSize.setter
@@ -113,7 +113,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       
     visible = not classes.contains('anvil-m3-buttonMenu-items-hidden')
     if visible:
-      menuNode.addEventListener('click', self.child_clicked)
+      menuNode.addEventListener('click', self.child_clicked) #need to remove event handler
       
       if not anvil.designer.in_designer:
         self.place_shield()
@@ -129,14 +129,14 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       {
         "type": "on_selection",
         "callbacks": {
-          "onSelectDescendent": self._on_select_descendant,
+          "onSelectDescendent": self._on_select_descendent,
           "onSelectOther": self._on_select_other
         }
       },
     ]
     return design_info
 
-  def _on_select_descendant(self):
+  def _on_select_descendent(self):
     self.set_visibility(True)
 
   def _on_select_other(self):
@@ -170,7 +170,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def place_shield(self):
     document.body.appendChild(self.shield)
-    self.shield.addEventListener('click', self.remove_shield_handler)
+    self.shield.addEventListener('click', self.remove_shield_handler) #need to remove event handler magix x- remove! for shield 
     document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
