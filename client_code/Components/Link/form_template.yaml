@@ -386,3 +386,4 @@ container:
       material-symbols-outlined anvil-m3-link-icon\"></span>\n    <div anvil-slot=\"\
       anvil-m3-link\"></div>\n  </a>\n</div>"}
   event_bindings: {show: form_show}
+custom_component_container: true
