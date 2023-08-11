@@ -16,10 +16,6 @@ components_by_slot:
     properties: {visible: true}
     type: Link
     layout_properties: {}
-  - name: button_1
-    properties: {text: button_1}
-    type: Button
-    layout_properties: {}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
@@ -27,6 +23,10 @@ components_by_slot:
   - name: link_3
     properties: {}
     type: form:Components.Link
+    layout_properties: {}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
