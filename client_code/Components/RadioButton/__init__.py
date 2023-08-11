@@ -2,48 +2,30 @@ from ._anvil_designer import RadioButtonTemplate
 from anvil import *
 from anvil.js.window import document
 import anvil.designer
-from ...Functions import checked_property, name_property, innerText_property
+from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
 
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
 
   # Properties 
+  visible = visible_property('anvil-m3-radiobutton-container', 'inline-flex')
   group_name = name_property('anvil-m3-radiobutton-input')
-
-  @property
-  def value(self):
-    return self._value;
-  @value.setter
-  def value(self, value):
-    self._value = value
-    self.dom_nodes['anvil-m3-radiobutton-input'].value = value or ""
-    
-  @property
-  def text(self):
-    return self._text
-  @text.setter
-  def text(self, value):
-    self._text = value
-    if value:
-      self.updateText(value, False)
- 
-  @property
-  def selected(self):
-    return self._selected
-  @selected.setter
-  def selected(self, value):
-    self._selected = value
-    self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
-   
-  @property
-  def enabled(self):
-    return self._enabled
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
-    self.dom_nodes['anvil-m3-radiobutton-input'].disabled = not value
+  value = value_property('anvil-m3-radiobutton-input')
+  enabled = enabled_property('anvil-m3-radiobutton-input')
+  italic = italic_property('anvil-m3-radiobutton-label')
+  bold = bold_property('anvil-m3-radiobutton-label')
+  underline = underline_property('anvil-m3-radiobutton-label')
+  font_size = font_size_property('anvil-m3-radiobutton-label')
+  border = style_property('anvil-m3-radiobutton-container', 'border')
+  font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
+  text_color = color_property('anvil-m3-radiobutton-label', 'color')
+  background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
+  text = innerText_property('anvil-m3-radiobutton-label')
+  align = style_property('anvil-m3-radiobutton-component', 'justifyContent')
+  selected = checked_property('anvil-m3-radiobutton-input')
 
   # Class Functions
   def _anvil_get_design_info_(self, as_layout=False):
@@ -63,17 +45,11 @@ class RadioButton(RadioButtonTemplate):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True
-      self.raise_event("click")
-      
-  def updateText(self, value, in_designer_placeholder):
-    self.dom_nodes['anvil-m3-radiobutton-label'].innerText = value or ""
-    if not in_designer_placeholder:
-      self.dom_nodes['anvil-m3-radiobutton-label'].removeAttribute("style")
-   
+      self.raise_event("clicked")
+    
   def form_show(self, **event_args):
-    if anvil.designer.in_designer:
-      if not self.text:
-        self.updateText(anvil.designer.get_design_name(self), True)
+    if anvil.designer.in_designer and not self.text:
+      self.text = anvil.designer.get_design_name(self)
 
   def get_group_value(self):
     selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")

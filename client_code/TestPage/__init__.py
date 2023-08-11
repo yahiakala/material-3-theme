@@ -7,6 +7,17 @@ class TestPage(TestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def radio_button_1_clicked(self, **event_args):
+    pass
+
+  def radio_button_1_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    pass
+
+
+
+
+
   
 
   
