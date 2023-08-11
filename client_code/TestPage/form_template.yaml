@@ -24,5 +24,9 @@ components_by_slot:
     properties: {}
     type: FlowPanel
     layout_properties: {}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
