@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
   - name: link_1
     properties: {url: 'https://anvil.works', align: left, material_icon: 13mp, visible: true,
       text: Hello, font: '', italic: false, bold: false, underline: true}
