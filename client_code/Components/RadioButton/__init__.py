@@ -31,6 +31,36 @@ class RadioButton(RadioButtonTemplate):
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
+      "type": "whole_component_multi",
+      "title": "Align",
+      # "icon": "edit",
+      # "default": True,
+      "options": [{
+        "name": "Left Align",
+        "id": "left",
+        "icon" : "align-left",
+      },{
+        "name": "Left Center",
+        "id": "center",
+        "icon" : "align-center",
+      },{
+        "name": "Left Right",
+        "id": "right",
+        "icon" : "align-right",
+      }],
+      "callbacks": {
+        "execute": print(id)#lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
+      }
+    },{
+      "type": "whole_component",
+      "title": "Enable",
+      "icon": "add",
+      "default": True,
+      "callbacks": {
+        "execute": anvil.designer.update_component_properties({"enabled": not self.enabled})
+        # "execute": lambda: anvil.designer.updateComponentProperties(self, {["enable"]: not self.enabled})
+      }
+    },{
       "type": "whole_component",
       "title": "Edit text",
       "icon": "edit",

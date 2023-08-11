@@ -20,7 +20,8 @@ components_by_slot:
     type: RadioButton
     layout_properties: {}
   - name: checkbox_1
-    properties: {font_size: 23, border: 2px dashed blue, visible: true, text: ''}
+    properties: {font_size: 23, border: 2px dashed blue, visible: true, text: '',
+      checked: false}
     type: form:Components.Checkbox
     layout_properties: {}
   - name: radio_button_3
