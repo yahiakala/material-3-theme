@@ -10,7 +10,7 @@ _defaults = {}
 class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self._props = {_defaults | properties}
+    self._props = {**_defaults | properties}
     self.init_components(**self._props)
     
   def form_show(self, **event_args):
