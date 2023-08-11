@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-link-container\" class=\"anvil-m3-link-container\"\
-      >\n  <a href=\"\" href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
+      >\n  <a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
       \ class=\"anvil-m3-link\"></a>\n</div>"}
 components: []
 is_package: true
