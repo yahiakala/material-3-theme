@@ -1,4 +1,4 @@
-.anvil-m3-heading-container, .anvil-m3-text-container {
+.anvil-m3-heading-container, .anvil-m3-text-container, .anvil-m3-link-container {
   display:flex;
   align-items: center;
   column-gap: 8px;
