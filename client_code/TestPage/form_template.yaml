@@ -16,6 +16,10 @@ components_by_slot:
     properties: {visible: true}
     type: Link
     layout_properties: {}
+  - name: label_1
+    properties: {}
+    type: Label
+    layout_properties: {}
   - name: link_3
     properties: {}
     type: form:Components.Link
