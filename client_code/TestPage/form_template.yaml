@@ -25,5 +25,9 @@ components_by_slot:
       properties: {}
       type: FlowPanel
       layout_properties: {grid_position: 'WJUQOE,UPSCCB'}
+  - name: flow_panel_2
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
