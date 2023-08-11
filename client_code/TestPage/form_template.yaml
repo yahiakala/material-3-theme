@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: text_field_1
-    properties: {label_text: text field, appearance: '', error: true}
+    properties: {label_text: text field, appearance: '', error: false}
     type: form:Components.TextField
     layout_properties: {}
 components: []
