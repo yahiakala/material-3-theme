@@ -38,4 +38,4 @@ class Link(LinkTemplate):
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
-  material_icon = innerText_property('anvil-m3-text-icon')
+  material_icon = innerText_property('anvil-m3-link-icon')
