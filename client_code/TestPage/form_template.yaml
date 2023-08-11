@@ -12,5 +12,9 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
     event_bindings: {click: checkbox_1_click}
+  - name: link_2
+    properties: {}
+    type: Link
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
