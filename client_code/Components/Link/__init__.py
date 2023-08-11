@@ -32,4 +32,4 @@ class Link(LinkTemplate):
     return di
 
   text = innerText_property('anvil-m3-link')
-  url = href_property('anvil-m')
+  url = href_property('anvil-m3-link')
