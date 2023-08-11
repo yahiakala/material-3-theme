@@ -1,13 +1,3 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-text-container\" anvil-name=\"anvil-m3-text-container\"\
-      >\n  <span anvil-name=\"anvil-m3-text-icon\" class=\"anvil-m3-text-icon material-symbols-outlined\"\
-      ></span>\n  <div class=\"anvil-m3-text\" anvil-name=\"anvil-m3-text\"></div>\n\
-      </div>"}
-  event_bindings: {show: form_show}
-components: []
-is_package: true
-custom_component: true
 properties:
 - name: style
   type: enum
@@ -398,3 +388,14 @@ properties:
     not set, the icon will scale with the text.'}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.'}
+is_package: true
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<div class=\"anvil-m3-text-container\" anvil-name=\"anvil-m3-text-container\"\
+      >\n  <span anvil-name=\"anvil-m3-text-icon\" class=\"anvil-m3-text-icon material-symbols-outlined\"\
+      ></span>\n  <div class=\"anvil-m3-text\" anvil-name=\"anvil-m3-text\"></div>\n\
+      </div>"}
+  event_bindings: {show: form_show}
+custom_component_container: true
