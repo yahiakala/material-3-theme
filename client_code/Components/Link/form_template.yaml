@@ -372,7 +372,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
 - {name: underline, type: boolean, default_value: true}
-- {name: prop, type: string, default_value: ''}
+- {name: visible, type: boolean, default_value: false}
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
