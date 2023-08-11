@@ -9,7 +9,9 @@ properties:
 - {name: italic, type: boolean, default_value: false}
 - {name: font, type: string, default_value: ''}
 - {name: font_size, type: number}
-- {name: icon, type: string, default_value: ''}
+- name: material_icon
+  type: enum
+  options: []
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
