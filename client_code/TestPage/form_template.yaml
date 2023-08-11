@@ -7,8 +7,8 @@ components_by_slot:
     type: form:Components.Link
     layout_properties: {}
   - name: checkbox_1
-    properties: {checked: false, text: hello, allow_indeterminate: true, background: 'theme:On
-        Error'}
+    properties: {checked: false, text: hello, allow_indeterminate: true, background: 'theme:Error
+        Overlay 2'}
     type: form:Components.Checkbox
     layout_properties: {}
     event_bindings: {click: checkbox_1_click}
