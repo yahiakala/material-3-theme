@@ -5,7 +5,7 @@ import anvil.js
 from ...Functions import enabled_property
 
 # todo: does this work on a free plan?
-# todo: clean up 
+# todo: clean up event handlers
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
