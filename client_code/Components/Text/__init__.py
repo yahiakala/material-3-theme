@@ -5,6 +5,7 @@ from ...Functions import visible_property, underline_property, italic_property, 
 
 #TODO: figure out what to do with line height
 #TODO: add margin and padding
+_defaults = {}
 
 class Text(TextTemplate):
   def __init__(self, **properties):
