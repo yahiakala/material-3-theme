@@ -4,6 +4,7 @@ from ...Functions import enabled_property, style_property, visible_property, und
 import anvil.designer
 
 
+
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     self._allow_indeterminate = properties['allow_indeterminate']
