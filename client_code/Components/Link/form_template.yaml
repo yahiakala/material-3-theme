@@ -3,7 +3,7 @@ properties:
 - {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.}
 - name: align
   type: enum
-  options: []
+  options: [left, center, right]
 is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
