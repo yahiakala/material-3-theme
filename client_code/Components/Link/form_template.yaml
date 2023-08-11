@@ -4,3 +4,6 @@ container:
       >\n  <a anvil-name=\"anvil-m3-link\" class=\"anvil-m3-link\"></a>\n</div>"}
 components: []
 is_package: true
+custom_component: true
+properties:
+- {name: prop, type: string, default_value: '', default_binding_prop: true}
