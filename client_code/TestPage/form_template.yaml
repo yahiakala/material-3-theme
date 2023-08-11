@@ -13,7 +13,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: checkbox_1_click}
   - name: link_2
-    properties: {}
+    properties: {visible: true}
     type: Link
     layout_properties: {}
 components: []
