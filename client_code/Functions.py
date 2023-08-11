@@ -129,7 +129,7 @@ def italic_property(dom_node_name):
 
 def bold_property(dom_node_name):
   def getter(self):
-    return self._props.get('bold')
+    return self._props[]'bold')
 
   def setter(self, value):
     self._props['bold'] = value
