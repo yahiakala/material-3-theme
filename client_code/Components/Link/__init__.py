@@ -36,3 +36,4 @@ class Link(LinkTemplate):
   align = style_property('anvil-m3-link-container', 'justifyContent')
   italic = italic_property('anvil-m3-link')
   bold = bold_property('anvil-m3-link')
+  font = style_property('anvil-m3-text', 'fontFamily')
