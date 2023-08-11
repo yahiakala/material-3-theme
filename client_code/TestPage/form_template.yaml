@@ -16,6 +16,10 @@ components_by_slot:
     properties: {}
     type: FlowPanel
     layout_properties: {}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {}
   - name: link_2
     properties: {}
     type: form:Components.Link
