@@ -1,5 +1,6 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
+import anvil.designer
 
 class Link(LinkTemplate):
   def __init__(self, **properties):
