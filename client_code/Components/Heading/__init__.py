@@ -1,7 +1,8 @@
 from ._anvil_designer import HeadingTemplate
 from anvil import *
+from anvil import HtmlTemplate
 import anvil.designer
-from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
 #TODO: figure out what to do with line height
 #TODO: add margin and padding
@@ -29,7 +30,7 @@ class Heading(HeadingTemplate):
     }]
     return di
 
-  visible = visible_property('anvil-m3-heading-container', 'flex')
+  visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
   border = style_property('anvil-m3-heading-container', 'border')
   font = style_property('anvil-m3-heading-container', 'fontFamily')
