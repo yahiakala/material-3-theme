@@ -8,6 +8,11 @@ import anvil.designer
 class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    
+    self.window_size = {}
+    self.menu_size = {}
+    self.button_positioning = {}
+    
     # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
     # self.dom_nodes['anvil-m3-buttonMenu-container'].id = self.id
     self.shield = document.createElement("div")
@@ -37,71 +42,48 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self._enabled = value
     self.menu_button.enabled = value
 
-  @property #todo: make this internal
-  def position(self):
-    return self._position;
-  @position.setter
-  def position(self, value = {"top": 0, "left": 0, "bottom": 0, "right": 0, "height": 0, "width": 0}):
-    self._position = value
-    self.windowSize = {"width": window.innerWidth, "height": window.innerHeight}
-    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    self.menuSize = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
-
-  def windowSize(self): #todo: make this internal
-    return self._windowSize
-  def windowSize(self, value):
-    self._windowSize = value
-    
-  @property #todo: make this internal
-  def menuSize(self):
-    return self._menuSize
-  @menuSize.setter
-  def menuSize(self, value):
-    self._menuSize = value
-
   def toggle_menu_visibility(self, **event_args):
-    # menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.set_visibility()
-    
 
   def update_menu_placement(self):
-      menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    
-      # horizontal placement
-      menuLeft = self.position['left']
-      menuRight = menuLeft + self.menuSize['width']
-      if self.windowSize['width'] < menuRight:
-        menuNode.style.right = '5px'
-      else:
-        menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
+    self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+    # horizontal placement
+    menuLeft = self.button_positioning['left']
+    menuRight = menuLeft + self.menu_size['width']
+    if self.window_size['width'] < menuRight:
+      menuNode.style.right = '5px'
+    else:
+      menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+      
+    # vertical placement
+    menuTop = self.button_positioning['bottom']
+    menuBottom = menuTop + self.menu_size['height']
+
+    ## menu too tall!
+    if (self.window_size['height'] - self.button_positioning['height']) < self.menu_size['height']: 
+      spaceAtTop = self.button_positioning['top']
+      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.button_positioning['height'])
+
+      # put at the top and set container height
+      if spaceAtTop > spaceAtBottom:
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.button_positioning['top'] - 5))}px"
+        menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         
-      # vertical placement
-      menuTop = self.position['bottom']
-      menuBottom = menuTop + self.menuSize['height']
+      # put at the bottom and set container height
+      else:
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+        menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
 
-      ## menu too tall!
-      if (self.windowSize['height'] - self.position['height']) < self.menuSize['height']: 
-        spaceAtTop = self.position['top']
-        spaceAtBottom = self.windowSize['height'] - (spaceAtTop + self.position['height'])
-
-        # put at the top and set container height
-        if spaceAtTop > spaceAtBottom:
-          menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
-          menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
-          
-        # put at the bottom and set container height
-        else:
-          menuNode.style.top = f"{math.floor(menuTop + 5)}px"
-          menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
-
-      ## menu fits
-      else: 
-        # default placement is out of bounds
-        if self.windowSize['height'] < menuBottom:
-          menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
-        # fits in default position
-        else:
-          menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+    ## menu fits
+    else: 
+      # default placement is out of bounds
+      if self.window_size['height'] < menuBottom:
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.button_positioning['top'] - 5))}px"
+      # fits in default position
+      else:
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     
   def set_visibility(self, value = None):
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
@@ -117,7 +99,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       
       if not anvil.designer.in_designer:
         self.place_shield()
-      self.get_button_position()
+      self.get_button_measurements()
       self.update_menu_placement()
     else:
       menuNode.removeAttribute("style")
@@ -142,9 +124,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def _on_select_other(self):
     self.set_visibility(False)
 
-  def get_button_position(self):
+  def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    self.position = {
+    self.button_positioning = {
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
@@ -152,21 +134,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
-
-  def printPosition(self):
-    print(self.position["top"])
-    print(self.position["right"])
-    print(self.position["bottom"])
-    print(self.position["left"])
-    print(self.position["height"])
-    print(self.position["width"])
-    print()
-    print(self.windowSize["width"])
-    print(self.windowSize["height"])
-    print()
-    print(self.menuSize["width"])
-    print(self.menuSize["height"])
-    print("*****")
 
   def place_shield(self):
     document.body.appendChild(self.shield)
@@ -183,7 +150,4 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       document.body.style.removeProperty("overflow")
     
   def child_clicked(self, event):
-    # print("child clicked")
-    # print(event)
-    # print(event.target)
     self.remove_shield()
