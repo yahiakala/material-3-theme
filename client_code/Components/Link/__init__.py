@@ -14,7 +14,7 @@ class Link(LinkTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
-      self.dom_nodes['link-placeholder'].text = anvil.designer.get_design_name(self)
+      self.dom_nodes['link-placeholder'].innerText = anvil.designer.get_design_name(self)
       
 
   def handle_click(self, event):
