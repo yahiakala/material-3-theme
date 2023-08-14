@@ -16,7 +16,7 @@ class Link(LinkTemplate):
       self.text = anvil.designer.get_design_name(self)
       
 
-    def handle_click(self, event):
+  def handle_click(self, event):
       self.raise_event("click")
 
   def _anvil_get_design_info_(self, as_layout=False):
