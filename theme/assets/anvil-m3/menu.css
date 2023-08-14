@@ -91,16 +91,16 @@
 }
 
 /* hover */
-.anvil-m3-menuItem-container:hover {
+.anvil-m3-menuItem-container:hover,  .anvil-m3-menuItem-container-keyboardHover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container);
   cursor: pointer;
 }
 
-.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-core {
+.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-core,  .anvil-m3-menuItem-container-keyboardHover .anvil-m3-menuItem-core,{
   color: var(--anvil-m3-on-surface)
 }
 
-.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-aux {
+.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-aux, .anvil-m3-menuItem-container-keyboardHover  .anvil-m3-menuItem-aux {
   color: var(--anvil-m3-on-surface-variant)
 }
 

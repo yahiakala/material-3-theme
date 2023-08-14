@@ -7,11 +7,10 @@ import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
 
-
 class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
+    self.open = False
     self.window_size = {}
     self.menu_size = {}
     self.button_positioning = {}
@@ -19,14 +18,22 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.hoverIndex = None
     self.itemIndices = set()
     self.children = None
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-    # self.dom_nodes['anvil-m3-buttonMenu-container'].id = self.id
+    
     self.shield = document.createElement("div")
-    # self.shield.id = f'shield-{self.id}'
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
-  visible = HtmlTemplate.visible
+    self.handle_keyboard_events = self.handle_keyboard_events
+    # NOTE: these might get changed to "x-anvil-page-added" and "x-anvil-page-removed" in the future
+    self.add_event_handler("x-anvil-propagate-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-propagate-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
+    document.addEventListener('keydown', self.handle_keyboard_events)
+  def on_cleanup(self, **event_args):
+    document.removeEventListener('keydown', self.handle_keyboard_events)
   
+  visible = HtmlTemplate.visible
+    
   @property
   def text(self):
     return self._text
@@ -101,24 +108,22 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
       
-    open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
-    if open:
+    self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
+    if self.open:
       menuNode.addEventListener('click', self.child_clicked) #need to remove event handler
-      document.addEventListener('keydown', self.handle_keyboard_events, True) #need to remove event handler
       if not anvil.designer.in_designer:
         self.place_shield()
       self.get_button_measurements()
       self.update_menu_placement()
 
       self.get_hover_index_information()
-      #   print(dir(slot))
         
     else:
       menuNode.removeAttribute("style")
-      document.removeEventListener('keydown', self.handle_keyboard_events, True)
       self.hoverIndex = None
+      self.clear_hover_styles()
+      
       # todo: remove event listener for keyboardboard things. 
-    return open
     
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
@@ -155,30 +160,37 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.remove_shield()
 
   def handle_keyboard_events(self, event):
-    if event.key is "ArrowUp":
-      self.iterate_hover(False)
-      print(self.hoverIndex)
+    if not self.open: #menu isn't even open. Do 
       return
-    if event.key is "ArrowDown":
-      self.iterate_hover(True)
-      print(self.hoverIndex)
+
+    action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
+    if event.key not in action_keys:
+      #todo: eventually want to use this to jump somewhere in the list
       return
-    if event.key is "Space" or event.key is "Enter":
-      if self.hoverIndex is None:
-        return
+    
+    if event.key is "ArrowUp" or event.key is "ArrowDown":
+      self.iterate_hover(event.key is "ArrowDown")
+      return
+
+    # if event.key is "Tab":
+    #   pass
       
-      print("space or enter")
-      return
-    if event.key is "Tab" or event.key is "Escape":
-      print("Tab or Escape")
-      self.set_visibility(False)
-      return
+    def attemptSelect():
+      if not self.hoverIndex is None:
+        self.children[self.hoverIndex].raise_event("click")
+      event.preventDefault();
+    
+    if (event.key is " "): #space key as " " is stupid
+      attemptSelect()
+    if (event.key is "Enter"):
+      attemptSelect()
+      
+    self.set_visibility(False)
 
   def iterate_hover(self, inc = True):
     if inc:
       if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):
         self.hoverIndex = -1
-
       while True:
         self.hoverIndex += 1
         if self.hoverIndex in self.itemIndices:
@@ -189,13 +201,18 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       while True:
         self.hoverIndex -= 1
         if self.hoverIndex in self.itemIndices:
-          break;
-          
-    self.track_styles();
+          break; 
+    self.update_hover_styles();
 
-  def track_styles(self):
-    pass
-          
+  def clear_hover_styles(self):
+    for child in self.children:
+      if isinstance(child, MenuItem):
+        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+
+  def update_hover_styles(self):
+    self.clear_hover_styles()
+    self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+    
 # DESIGNER INTERACTIONS
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
