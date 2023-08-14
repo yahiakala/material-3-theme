@@ -17,7 +17,7 @@ class Link(LinkTemplate):
       
 
   def handle_click(self, event):
-      self.raise_event("click")
+    self.raise_event("click")
 
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
