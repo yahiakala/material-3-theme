@@ -1,5 +1,6 @@
 from ._anvil_designer import ButtonMenu_combinedTemplate
 from anvil import *
+from anvil import HtmlTemplate
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math
@@ -18,7 +19,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.shield = document.createElement("div")
     # self.shield.id = f'shield-{self.id}'
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-
+  
+  visible = HtmlTemplate.visible
+  
   @property
   def text(self):
     return self._text
@@ -101,8 +104,14 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
         self.place_shield()
       self.get_button_measurements()
       self.update_menu_placement()
+
+      # todo: add event listener for keyboardboard things. 
+    
+
+    
     else:
       menuNode.removeAttribute("style")
+      # todo: remove event listener for keyboardboard things. 
     return visible
     
   def _anvil_get_design_info_(self, as_layout=False):
@@ -115,7 +124,29 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
           "onSelectOther": self._on_select_other
         }
       },
-    ]
+      {
+      "type": "whole_component",
+      "title": "Visible",
+      "icon": "add", #TODO: eye icon
+      "callbacks": {
+        "execute": self.toggle_visible
+      }
+    }, {
+      "type": "whole_component",
+      "title": "Enable",
+      "icon": "add", #TODO: power icon
+      "callbacks": {
+        "execute": self.toggle_enabled
+      }
+    },{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+      }
+    }]
     return design_info
 
   def _on_select_descendent(self):
@@ -124,6 +155,16 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def _on_select_other(self):
     self.set_visibility(False)
 
+  def toggle_visible(self):
+    self.visible = not self.visible
+    anvil.designer.update_component_properties(self, {'visible': self.visible})
+
+  def toggle_enabled(self):
+    self.enabled = not self.enabled
+    print("problem here")
+    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
+    print("problem HERE!!")
+    
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     self.button_positioning = {
