@@ -384,6 +384,6 @@ container:
       >\n  <a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
       \ class=\"anvil-m3-link\">\n    <span anvil-name=\"anvil-m3-link-icon\" class=\"\
       material-symbols-outlined anvil-m3-link-icon\"></span>\n    <div anvil-slot=\"\
-      anvil-m3-link\">\n      \n    </div>\n  </a>\n</div>"}
+      anvil-m3-link\">\n      <div>\n    </div>\n  </a>\n</div>"}
   event_bindings: {show: form_show}
 custom_component_container: true
