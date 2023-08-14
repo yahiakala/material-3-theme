@@ -16,13 +16,17 @@ components_by_slot:
     properties: {}
     type: form:Components.Link
     layout_properties: {}
+  - name: checkbox_2
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
   - name: link_3
     properties: {}
     type: form:Components.Link
     layout_properties: {}
-  - name: checkbox_2
+  - name: column_panel_1
     properties: {}
-    type: form:Components.Checkbox
+    type: ColumnPanel
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
