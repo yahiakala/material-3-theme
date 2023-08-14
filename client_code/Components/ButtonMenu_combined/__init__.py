@@ -5,6 +5,8 @@ from anvil.js import window
 from anvil.js.window import document
 import random, string, math
 import anvil.designer
+from ..Menu.MenuItem import MenuItem
+
 
 class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
@@ -13,13 +15,16 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.window_size = {}
     self.menu_size = {}
     self.button_positioning = {}
-    
+
+    self.hoverIndex = None
+    self.itemIndices = set()
+    self.children = None
     # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
     # self.dom_nodes['anvil-m3-buttonMenu-container'].id = self.id
     self.shield = document.createElement("div")
     # self.shield.id = f'shield-{self.id}'
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-  
+
   visible = HtmlTemplate.visible
   
   @property
@@ -96,24 +101,102 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
       
-    visible = not classes.contains('anvil-m3-buttonMenu-items-hidden')
-    if visible:
+    open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
+    if open:
       menuNode.addEventListener('click', self.child_clicked) #need to remove event handler
-      
+      document.addEventListener('keydown', self.handle_keyboard_events, True) #need to remove event handler
       if not anvil.designer.in_designer:
         self.place_shield()
       self.get_button_measurements()
       self.update_menu_placement()
 
-      # todo: add event listener for keyboardboard things. 
-    
-
-    
+      self.get_hover_index_information()
+      #   print(dir(slot))
+        
     else:
       menuNode.removeAttribute("style")
+      document.removeEventListener('keydown', self.handle_keyboard_events, True)
+      self.hoverIndex = None
       # todo: remove event listener for keyboardboard things. 
-    return visible
+    return open
     
+  def get_button_measurements(self):
+    rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
+    self.button_positioning = {
+      "top": rect.top,
+      "right": rect.right,
+      "bottom": rect.bottom,
+      "left": rect.left,
+      "height": rect.bottom - rect.top,
+      "width": rect.right - rect.left,
+    }
+  
+  def get_hover_index_information(self):
+    self.children = self.get_components()[1:]
+    for i in range(0, len(self.children)):
+      if isinstance(self.children[i], MenuItem):
+        self.itemIndices.add(i)
+    
+  def place_shield(self):
+    document.body.appendChild(self.shield)
+    self.shield.addEventListener('click', self.remove_shield_handler) #need to remove event handler magix x- remove! for shield 
+    document.body.style.overflow = "hidden"
+    
+  def remove_shield_handler(self, event):
+    self.remove_shield()
+    
+  def remove_shield(self):
+    if document.contains(self.shield):
+      document.body.removeChild(self.shield)
+      self.toggle_menu_visibility()
+      document.body.style.removeProperty("overflow")
+    
+  def child_clicked(self, event):
+    self.remove_shield()
+
+  def handle_keyboard_events(self, event):
+    if event.key is "ArrowUp":
+      self.iterate_hover(False)
+      print(self.hoverIndex)
+      return
+    if event.key is "ArrowDown":
+      self.iterate_hover(True)
+      print(self.hoverIndex)
+      return
+    if event.key is "Space" or event.key is "Enter":
+      if self.hoverIndex is None:
+        return
+      
+      print("space or enter")
+      return
+    if event.key is "Tab" or event.key is "Escape":
+      print("Tab or Escape")
+      self.set_visibility(False)
+      return
+
+  def iterate_hover(self, inc = True):
+    if inc:
+      if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):
+        self.hoverIndex = -1
+
+      while True:
+        self.hoverIndex += 1
+        if self.hoverIndex in self.itemIndices:
+          break;
+    else:
+      if self.hoverIndex is None or self.hoverIndex is 0:
+        self.hoverIndex = len(self.children)
+      while True:
+        self.hoverIndex -= 1
+        if self.hoverIndex in self.itemIndices:
+          break;
+          
+    self.track_styles();
+
+  def track_styles(self):
+    pass
+          
+# DESIGNER INTERACTIONS
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
@@ -161,34 +244,5 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def toggle_enabled(self):
     self.enabled = not self.enabled
-    print("problem here")
     anvil.designer.update_component_properties(self, {'enabled': self.enabled})
-    print("problem HERE!!")
     
-  def get_button_measurements(self):
-    rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    self.button_positioning = {
-      "top": rect.top,
-      "right": rect.right,
-      "bottom": rect.bottom,
-      "left": rect.left,
-      "height": rect.bottom - rect.top,
-      "width": rect.right - rect.left,
-    }
-
-  def place_shield(self):
-    document.body.appendChild(self.shield)
-    self.shield.addEventListener('click', self.remove_shield_handler) #need to remove event handler magix x- remove! for shield 
-    document.body.style.overflow = "hidden"
-    
-  def remove_shield_handler(self, event):
-    self.remove_shield()
-    
-  def remove_shield(self):
-    if document.contains(self.shield):
-      document.body.removeChild(self.shield)
-      self.toggle_menu_visibility()
-      document.body.style.removeProperty("overflow")
-    
-  def child_clicked(self, event):
-    self.remove_shield()
