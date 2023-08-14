@@ -24,9 +24,5 @@ components_by_slot:
     properties: {}
     type: form:Components.Link
     layout_properties: {}
-  - name: link_4
-    properties: {}
-    type: Link
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
