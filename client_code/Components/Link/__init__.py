@@ -9,6 +9,7 @@ class Link(LinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
+    
 
   # def form_show(self, **event_args):
   #   """This method is called when the HTML panel is shown on the screen"""
