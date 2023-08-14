@@ -9,7 +9,7 @@ class Link(LinkTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
-    self.dom_nodes['link-placeholder'].text = anvil.designer.get_design_name(self)
+    
     
 
   def form_show(self, **event_args):
