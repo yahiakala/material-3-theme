@@ -21,19 +21,26 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
     self.handle_keyboard_events = self.handle_keyboard_events
+    self.remove_shield_handler = self.remove_shield_handler
+    self.child_clicked = self.child_clicked
     # NOTE: these might get changed to "x-anvil-page-added" and "x-anvil-page-removed" in the future
     self.add_event_handler("x-anvil-propagate-page-added", self.on_mount)
     self.add_event_handler("x-anvil-propagate-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
+    self.shield.addEventListener('click', self.remove_shield_handler)
+    self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
+    self.shield.removeEventListener('click', self.remove_shield_handler)
+    self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
-    
+  
   @property
   def text(self):
     return self._text
@@ -60,6 +67,27 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
 
+  def set_visibility(self, value = None):
+    classes = self.menuNode.classList
+    if value is not None:
+      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
+    else:
+      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+      
+    self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
+    if self.open:
+      if not anvil.designer.in_designer:
+        self.place_shield()
+      self.get_button_measurements()
+      self.update_menu_placement()
+
+      self.get_hover_index_information()
+        
+    else:
+      self.menuNode.removeAttribute("style")
+      self.hoverIndex = None
+      self.clear_hover_styles()
+    
   def update_menu_placement(self):
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
@@ -100,31 +128,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     
-  def set_visibility(self, value = None):
-    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    classes = menuNode.classList
-    if value is not None:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
-    else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
-      
-    self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
-    if self.open:
-      menuNode.addEventListener('click', self.child_clicked) #need to remove event handler
-      if not anvil.designer.in_designer:
-        self.place_shield()
-      self.get_button_measurements()
-      self.update_menu_placement()
-
-      self.get_hover_index_information()
-        
-    else:
-      menuNode.removeAttribute("style")
-      self.hoverIndex = None
-      self.clear_hover_styles()
-      
-      # todo: remove event listener for keyboardboard things. 
-    
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     self.button_positioning = {
@@ -135,16 +138,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
-  
-  def get_hover_index_information(self):
-    self.children = self.get_components()[1:]
-    for i in range(0, len(self.children)):
-      if isinstance(self.children[i], MenuItem):
-        self.itemIndices.add(i)
-    
+ 
   def place_shield(self):
     document.body.appendChild(self.shield)
-    self.shield.addEventListener('click', self.remove_shield_handler) #need to remove event handler magix x- remove! for shield 
     document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
@@ -158,14 +154,20 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     
   def child_clicked(self, event):
     self.remove_shield()
-
+  
+  def get_hover_index_information(self):
+    self.children = self.get_components()[1:]
+    for i in range(0, len(self.children)):
+      if isinstance(self.children[i], MenuItem):
+        self.itemIndices.add(i)
+   
   def handle_keyboard_events(self, event):
-    if not self.open: #menu isn't even open. Do 
+    if not self.open:
       return
 
     action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
     if event.key not in action_keys:
-      #todo: eventually want to use this to jump somewhere in the list
+      #TODO: eventually want to use this to jump somewhere in the list
       return
     
     if event.key is "ArrowUp" or event.key is "ArrowDown":
@@ -262,4 +264,3 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def toggle_enabled(self):
     self.enabled = not self.enabled
     anvil.designer.update_component_properties(self, {'enabled': self.enabled})
-    

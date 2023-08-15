@@ -11,9 +11,10 @@ properties:
 - {name: value, type: string, default_value: '', group: Attributes}
 - name: align
   type: enum
-  options: [left, right, center]
+  options: [left, center, right]
   description: Align this component in it's container
   group: Appearance
+  default_value: left
 - {name: background, type: color, description: background color of the component,
   default_value: '', group: Appearance}
 - {name: bold, type: boolean, default_value: false, description: Display the component text as bold,
