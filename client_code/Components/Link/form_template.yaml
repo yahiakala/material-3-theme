@@ -373,6 +373,7 @@ properties:
     zoom_out, zoom_out_map]
 - {name: underline, type: boolean, default_value: true}
 - {name: visible, type: boolean, default_value: true}
+- {name: text_color, type: color, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}
