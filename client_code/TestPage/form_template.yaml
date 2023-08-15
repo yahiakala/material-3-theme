@@ -2,11 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: link_1
-    properties: {url: 'https://anvil.works', align: left, material_icon: 13mp, visible: true,
-      text: Hello, font: '', italic: false, bold: false, underline: true}
-    type: form:Components.Link
-    layout_properties: {}
   - name: checkbox_1
     properties: {checked: false, text: hello, allow_indeterminate: true, background: ''}
     type: form:Components.Checkbox
@@ -20,13 +15,18 @@ components_by_slot:
     properties: {}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: link_1
+    properties: {url: 'https://anvil.works', align: left, material_icon: 13mp, visible: true,
+      text: Hello, font: '', italic: false, bold: false, underline: true}
+    type: form:Components.Link
+    layout_properties: {}
+  - name: anvil_link
+    properties: {}
+    type: Link
+    layout_properties: {}
   - name: link_3
     properties: {}
     type: form:Components.Link
-    layout_properties: {}
-  - name: link_4
-    properties: {}
-    type: Link
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
