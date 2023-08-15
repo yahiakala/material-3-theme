@@ -374,7 +374,7 @@ properties:
 - {name: underline, type: boolean, default_value: true}
 - {name: visible, type: boolean, default_value: true}
 - {name: text_color, type: color, default_value: ''}
-- {name: prop, type: string, default_value: ''}
+- {name: icon_color, type: string, default_value: ''}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}
