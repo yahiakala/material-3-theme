@@ -14,7 +14,7 @@ class Link(LinkTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
-      self.dom_nodes['link-placeholder'].innerText = anvil.designer.get_design_name(self)
+      self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
       
 
   def handle_click(self, event):
@@ -28,19 +28,19 @@ class Link(LinkTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-link'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-link-text'])
       }
     }]
     return di
 
-  text = innerText_property('anvil-m3-link')
+  text = innerText_property('anvil-m3-link-text')
   url = href_property('anvil-m3-link')
   align = style_property('anvil-m3-link-container', 'justifyContent')
-  italic = italic_property('anvil-m3-link')
+  italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
   material_icon = innerText_property('anvil-m3-link-icon')
-  underline = underline_property('anvil-m3-link')
+  underline = underline_property('anvil-m3-link-text')
   visible = visible_property('anvil-m3-link-container', 'flex')
   
