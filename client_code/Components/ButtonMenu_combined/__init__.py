@@ -180,7 +180,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     def attemptSelect():
       if not self.hoverIndex is None:
         self.children[self.hoverIndex].raise_event("click")
-      event.preventDefault();
+      # event.preventDefault();
     
     if (event.key is " "): #space key as " " is stupid
       attemptSelect()
@@ -207,9 +207,10 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.update_hover_styles();
 
   def clear_hover_styles(self):
-    for child in self.children:
-      if isinstance(child, MenuItem):
-        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+    if self.children is not None:
+      for child in self.children:
+        if isinstance(child, MenuItem):
+          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
   def update_hover_styles(self):
     self.clear_hover_styles()

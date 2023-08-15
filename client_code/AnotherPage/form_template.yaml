@@ -6,4 +6,20 @@ components_by_slot:
     properties: {text: This is another page}
     type: Label
     layout_properties: {}
-  slot_3: []
+  slot_3:
+  - name: button_menu_combined_1
+    properties: {text: halp, appearance: tonal}
+    type: form:Components.ButtonMenu_combined
+    layout_properties: {}
+  - name: text_1
+    properties: {}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+  - name: button_menu_combined_2
+    properties: {}
+    type: form:Components.ButtonMenu_combined
+    layout_properties: {}
