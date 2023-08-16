@@ -140,20 +140,23 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     }
  
   def place_shield(self):
-    document.body.appendChild(self.shield)
-    document.body.style.overflow = "hidden"
+    if not document.contains(self.shield):
+      document.body.appendChild(self.shield)
+      document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
     self.remove_shield()
+    self.set_visibility(False)
     
   def remove_shield(self):
     if document.contains(self.shield):
       document.body.removeChild(self.shield)
-      self.toggle_menu_visibility()
       document.body.style.removeProperty("overflow")
     
   def child_clicked(self, event):
+    # do the click action. The child should handle this
     self.remove_shield()
+    self.set_visibility(False)
   
   def get_hover_index_information(self):
     self.children = self.get_components()[1:]
@@ -173,22 +176,23 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     if event.key is "ArrowUp" or event.key is "ArrowDown":
       self.iterate_hover(event.key is "ArrowDown")
       return
-
+      
     # if event.key is "Tab":
     #   pass
-      
+    hover = self.hoverIndex #holding value for situation like alerts where it awaits 
+    self.remove_shield()
+    self.set_visibility(False)
+    
     def attemptSelect():
-      if not self.hoverIndex is None:
-        self.children[self.hoverIndex].raise_event("click")
-      # event.preventDefault();
+      event.preventDefault();
+      if not hover is None:
+        self.children[hover].raise_event("click")
     
     if (event.key is " "): #space key as " " is stupid
       attemptSelect()
     if (event.key is "Enter"):
       attemptSelect()
       
-    self.set_visibility(False)
-
   def iterate_hover(self, inc = True):
     if inc:
       if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):

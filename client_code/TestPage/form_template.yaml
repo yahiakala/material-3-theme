@@ -71,6 +71,7 @@ components_by_slot:
       properties: {text: '0'}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_16_click}
     - name: divider_5
       properties: {}
       type: form:Components.Divider
@@ -79,6 +80,7 @@ components_by_slot:
       properties: {text: '2'}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_19_click}
     - name: divider_6
       properties: {}
       type: form:Components.Divider
@@ -87,6 +89,7 @@ components_by_slot:
       properties: {text: '4'}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_21_click}
     - name: divider_7
       properties: {}
       type: form:Components.Divider
@@ -95,6 +98,7 @@ components_by_slot:
       properties: {text: '6'}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_29_click}
     - name: divider_8
       properties: {}
       type: form:Components.Divider
@@ -171,6 +175,14 @@ components_by_slot:
     type: GridPanel
     layout_properties: {}
     components:
+    - name: label_1
+      properties: {text: 'Selected Trail Type:'}
+      type: Label
+      layout_properties: {col_xs: 0, row: QNFVWQ, width_xs: 3}
+    - name: selected_trail
+      properties: {}
+      type: Label
+      layout_properties: {col_xs: 2, row: QNFVWQ, width_xs: 3}
     - name: flow_panel_1
       properties: {align: right}
       type: FlowPanel
@@ -184,26 +196,27 @@ components_by_slot:
           properties: {text: Running, leading_icon: directions_run}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          event_bindings: {click: menu_item_26_click}
         - name: menu_item_27
           properties: {text: Walking, leading_icon: directions_walk}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          event_bindings: {click: menu_item_27_click}
         - name: menu_item_28
           properties: {text: Hiking, leading_icon: hiking}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          event_bindings: {click: menu_item_28_click}
         - name: menu_item_33
           properties: {text: Cycling, leading_icon: directions_bike}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_32
-          properties: {text: Swimming, leading_icon: pool}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          event_bindings: {click: menu_item_33_click}
         - name: menu_item_31
           properties: {text: Skiing, leading_icon: downhill_skiing}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          event_bindings: {click: menu_item_31_click}
         layout_properties: {}
   - name: image_1_copy_1
     properties: {height: 353}
@@ -218,26 +231,32 @@ components_by_slot:
       properties: {text: Bold, trailing_text: ⌘B, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_17_click}
     - name: menu_item_22
       properties: {text: Italic, trailing_text: ⌘I, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_22_click}
     - name: menu_item_25
       properties: {text: Underline, trailing_text: ⌘U, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_25_click}
     - name: menu_item_24
       properties: {text: Strikethrough, trailing_text: ⌘+Shift+X, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_24_click}
     - name: menu_item_23
       properties: {text: Superscript, trailing_text: '⌘,', hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_23_click}
     - name: menu_item_18
       properties: {text: Subscript, trailing_text: ⌘., hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_18_click}
     - name: divider_4
       properties: {}
       type: form:Components.Divider
@@ -246,5 +265,6 @@ components_by_slot:
       properties: {text: Paragraph Styles, trailing_icon: arrow_right, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_20_click}
 components: []
 event_bindings: {show: form_show}
