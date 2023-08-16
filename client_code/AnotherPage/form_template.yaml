@@ -7,7 +7,19 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: map_1
-    properties: {height: 205}
-    type: GoogleMap
+  - name: button_menu_integrated_1
+    properties: {text: halp, appearance: tonal}
+    type: form:Components.ButtonMenu_integrated
+    layout_properties: {}
+  - name: text_1
+    properties: {}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+  - name: button_menu_integrated_2
+    properties: {}
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}

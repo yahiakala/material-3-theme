@@ -1,0 +1,146 @@
+/***** Menu *****/
+.anvil-m3-menu-items-container { 
+  position: absolute;
+  min-width: 112px;
+  max-width: 280px;
+  min-height: 24px;
+  max-height: 100vh;
+  border-radius: 4px;
+  padding: 8px 0;
+  background-color: var(--anvil-m3-surface-container);
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); /* level 2*/
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.anvil-m3-menu-hidden {
+/*   display: none; */
+  pointer-events: none;
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
+}
+
+/***** MenuItems *****/
+.anvil-m3-menuItem-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  min-width: 112px;
+  height: 48px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.anvil-m3-menuItem-leadingIcon {
+  min-width: 24px;
+  font-size: 24px !important;
+  margin-right: 12px;
+  display: block;
+}
+
+.anvil-m3-menuItem-leadingIcon.anvil-m3-menuItem-hideLeadingIcon {
+  display: none;
+}
+
+.anvil-m3-menuItem-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.anvil-m3-menuItem-labelText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  padding-right: 24px;
+}
+
+.anvil-m3-menuItem-trailingText {
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+.anvil-m3-menuItem-trailingIcon {
+  font-size: 24px !important;
+}
+
+.anvil-m3-menuItem-core {
+  color: var(--anvil-m3-on-surface);
+}
+
+.anvil-m3-menuItem-aux {
+  color: var(--anvil-m3-on-surface-variant);
+}
+
+/* DISABLED */
+.anvil-m3-menuItem-disabled {
+  cursor: default !important;
+  background: var(--anvil-m3-surface-container) !important;
+}
+.anvil-m3-menuItem-disabled .anvil-m3-menuItem-core {
+  color: var(--anvil-m3-on-surface) !important;
+  opacity: .38 !important;
+}
+.anvil-m3-menuItem-disabled .anvil-m3-menuItem-aux {
+  color: var(--anvil-m3-on-surface) !important;
+  opacity: .38 !important;
+}
+
+/* hover */
+.anvil-m3-menuItem-container:hover,  .anvil-m3-menuItem-container-keyboardHover {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container);
+  cursor: pointer;
+}
+
+.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-core,  .anvil-m3-menuItem-container-keyboardHover .anvil-m3-menuItem-core,{
+  color: var(--anvil-m3-on-surface)
+}
+
+.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-aux, .anvil-m3-menuItem-container-keyboardHover  .anvil-m3-menuItem-aux {
+  color: var(--anvil-m3-on-surface-variant)
+}
+
+/* todo: focus and active */
+
+/***** ButtonMenu *****/
+.anvil-m3-buttonMenu-container {
+  display: inline-block;
+  position: relative;
+}
+
+.anvil-m3-buttonMenu-items-container {
+  position: fixed;
+  min-width: 112px;
+  max-width: 280px;
+  min-height: 24px;
+  max-height: 100vh;
+  border-radius: 4px;
+  padding: 8px 0;
+  background-color: var(--anvil-m3-surface-container);
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); /* level 2*/
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.anvil-m3-buttonMenu-items-hidden {
+  pointer-events: none;
+  opacity: 0;
+/*   height: 1px; */
+  overflow: hidden;
+}
+
+
+/* SHEILD */
+.anvil-m3-menu-clickShield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: 8;
+}
