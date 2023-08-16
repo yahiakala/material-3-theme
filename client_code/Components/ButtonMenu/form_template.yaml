@@ -8,7 +8,7 @@ properties:
   default_value: elevated
 - {name: enabled, type: boolean, default_value: true}
 is_package: true
-custom_component: true
+custom_component: false
 components:
 - name: menu_button
   properties: {text: Button, appearance: elevated, enabled: true}

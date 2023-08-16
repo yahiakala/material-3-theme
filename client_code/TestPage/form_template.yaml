@@ -2,9 +2,9 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: button_menu_combined_1
+  - name: button_menu_integrated_1
     properties: {text: Font Face, visible: true, enabled: true}
-    type: form:Components.ButtonMenu_combined
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
     - name: menu_item_2
@@ -62,9 +62,9 @@ components_by_slot:
     properties: {enabled: false, text: disabled}
     type: form:Components.RadioButton
     layout_properties: {}
-  - name: button_menu_combined_5
+  - name: button_menu_integrated_5
     properties: {text: numbers, appearance: tonal}
-    type: form:Components.ButtonMenu_combined
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
     - name: menu_item_16
@@ -109,9 +109,9 @@ components_by_slot:
       type: FlowPanel
       layout_properties: {grid_position: 'TWWPKN,NLMBAM'}
       components:
-      - name: button_menu_combined_3
+      - name: button_menu_integrated_3
         properties: {text: Line Spacing, appearance: filled, enabled: true, visible: true}
-        type: form:Components.ButtonMenu_combined
+        type: form:Components.ButtonMenu_integrated
         layout_properties: {}
         components:
         - name: menu_item_4
@@ -176,9 +176,9 @@ components_by_slot:
       type: FlowPanel
       layout_properties: {col_xs: 6, row: QNFVWQ, width_xs: 6}
       components:
-      - name: button_menu_combined_4
+      - name: button_menu_integrated_4
         properties: {text: Trail Type}
-        type: form:Components.ButtonMenu_combined
+        type: form:Components.ButtonMenu_integrated
         components:
         - name: menu_item_26
           properties: {text: Running, leading_icon: directions_run}
@@ -209,9 +209,9 @@ components_by_slot:
     properties: {height: 353}
     type: Image
     layout_properties: {}
-  - name: button_menu_combined_2
+  - name: button_menu_integrated_2
     properties: {text: Format, appearance: outlined}
-    type: form:Components.ButtonMenu_combined
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
     - name: menu_item_17

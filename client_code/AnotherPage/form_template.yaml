@@ -7,9 +7,9 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: button_menu_combined_1
+  - name: button_menu_integrated_1
     properties: {text: halp, appearance: tonal}
-    type: form:Components.ButtonMenu_combined
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}
   - name: text_1
     properties: {}
@@ -19,7 +19,7 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
-  - name: button_menu_combined_2
+  - name: button_menu_integrated_2
     properties: {}
-    type: form:Components.ButtonMenu_combined
+    type: form:Components.ButtonMenu_integrated
     layout_properties: {}

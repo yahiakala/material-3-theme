@@ -1,4 +1,4 @@
-from ._anvil_designer import ButtonMenu_combinedTemplate
+from ._anvil_designer import ButtonMenu_integratedTemplate
 from anvil import *
 from anvil import HtmlTemplate
 from anvil.js import window
@@ -7,7 +7,7 @@ import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
 
-class ButtonMenu_combined(ButtonMenu_combinedTemplate):
+class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.open = False
