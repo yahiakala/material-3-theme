@@ -46,6 +46,10 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_9_click}
+  - name: radio_button_4
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
