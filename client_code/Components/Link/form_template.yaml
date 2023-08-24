@@ -375,7 +375,7 @@ properties:
 - {name: visible, type: boolean, default_value: true}
 - {name: text_color, type: color, default_value: ''}
 - {name: icon_color, type: color, default_value: ''}
-- {name: icon_size, type: number}
+- {name: icon_size, type: number, default_value: 24}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}
