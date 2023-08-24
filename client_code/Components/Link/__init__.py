@@ -44,4 +44,15 @@ class Link(LinkTemplate):
   underline = underline_property('anvil-m3-link-text')
   visible = visible_property('anvil-m3-link-container', 'flex')
   text_color = color_property('anvil-m3-link', 'color')
+  icon_color = color_property('anvil-m3-link-icon', 'color')
+
+  @property
+  def icon_size(self):
+    return self._icon_size
+
+  @icon_size.setter
+  def icon_size(self, value):
+    self._icon_size = value
+    if value: value = f'{value}px'
+    self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
   
