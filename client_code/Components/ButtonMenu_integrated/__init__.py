@@ -225,7 +225,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
       {
-        "type": "on_selection",
+        "type": "designer_events",
         "callbacks": {
           "onSelectDescendent": self._on_select_descendent,
           "onSelectOther": self._on_select_other
