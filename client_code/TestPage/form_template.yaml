@@ -21,7 +21,7 @@ components_by_slot:
     type: form:Components.Text
     layout_properties: {}
   - name: heading_1
-    properties: {material_icon: handyman}
+    properties: {material_icon: handyman, text: Heading}
     type: form:Components.Heading
     layout_properties: {}
 components: []
