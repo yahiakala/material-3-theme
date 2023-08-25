@@ -69,6 +69,10 @@
   font-weight: 500;
 }
 
+.anvil-m3-heading-title.anvil-m3-heading-small .anvil-m3-heading-icon {
+  font-size: 20px;
+}
+
 /*TEXT*/
 .anvil-m3-text-body {
   font-weight: 400;
@@ -84,10 +88,18 @@
   letter-spacing: 0.5px;
 }
 
+.anvil-m3-text-body.anvil-m3-text-large .anvil-m3-text-icon {
+  font-size: 24px;
+}
+
 .anvil-m3-text-body.anvil-m3-text-medium {
 /*   line-height: 20px; */
   font-size: 14px;
   letter-spacing: 0.25px;
+}
+
+.anvil-m3-text-body.anvil-m3-text-medium .anvil-m3-text-icon {
+  font-size: 20px;
 }
 
 .anvil-m3-text-body.anvil-m3-text-small {
@@ -100,6 +112,10 @@
 /*   line-height: 20px; */
   font-size: 14px;
   letter-spacing: 0.1px;
+}
+
+.anvil-m3-text-label.anvil-m3-text-large .anvil-m3-text-icon {
+  font-size: 20px;
 }
 
 .anvil-m3-text-label.anvil-m3-text-medium {
