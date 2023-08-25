@@ -15,13 +15,48 @@ components_by_slot:
     properties: {text: Log out, material_icon: logout}
     type: form:Components.Link
     layout_properties: {}
-  - name: text_1
-    properties: {text: I'm text with an icon, material_icon: local_pizza, scale: medium,
-      style: body}
+  - name: text_4
+    properties: {scale: small, text: body small, material_icon: eco}
     type: form:Components.Text
     layout_properties: {}
+  - name: text_1
+    properties: {text: body medium, material_icon: local_pizza, scale: medium, style: body}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: text_3
+    properties: {scale: large, text: body large, material_icon: deck}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: text_5
+    properties: {text: label small, style: label, scale: small, material_icon: cloud}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: text_2
+    properties: {style: label, text: label medium, material_icon: boy}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: text_6
+    properties: {style: label, scale: large, text: label large, material_icon: opacity}
+    type: form:Components.Text
+    layout_properties: {}
+  - name: heading_4
+    properties: {style: title, text: title medium, material_icon: sports_tennis}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_5
+    properties: {scale: small, style: title, text: title small, material_icon: piano}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_2
+    properties: {text: headline small, scale: small, material_icon: home}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: heading_1
-    properties: {material_icon: handyman, text: Heading}
+    properties: {material_icon: handyman, text: headline medium}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_3
+    properties: {text: headline large, scale: large, material_icon: downhill_skiing}
     type: form:Components.Heading
     layout_properties: {}
 components: []
