@@ -102,6 +102,10 @@
   font-size: 20px;
 }
 
+.anvil-m3-text-body.anvil-m3-text-small .anvil-m3-text-icon {
+  font-size: 18px;
+}
+
 .anvil-m3-text-body.anvil-m3-text-small {
 /*   line-height: 16px; */
   font-size: 12px;
@@ -116,6 +120,10 @@
 
 .anvil-m3-text-label.anvil-m3-text-large .anvil-m3-text-icon {
   font-size: 20px;
+}
+
+.anvil-m3-text-label.anvil-m3-text-medium .anvil-m3-text-icon, .anvil-m3-text-label.anvil-m3-text-small .anvil-m3-text-icon {
+  font-size: 18px;
 }
 
 .anvil-m3-text-label.anvil-m3-text-medium {
