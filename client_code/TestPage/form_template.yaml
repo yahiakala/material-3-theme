@@ -39,12 +39,16 @@ components_by_slot:
     properties: {style: label, scale: large, text: label large, material_icon: opacity}
     type: form:Components.Text
     layout_properties: {}
+  - name: heading_5
+    properties: {scale: small, style: title, text: title small, material_icon: piano}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: heading_4
     properties: {style: title, text: title medium, material_icon: sports_tennis}
     type: form:Components.Heading
     layout_properties: {}
-  - name: heading_5
-    properties: {scale: small, style: title, text: title small, material_icon: piano}
+  - name: heading_6
+    properties: {text: title large, style: title, scale: large, material_icon: forest}
     type: form:Components.Heading
     layout_properties: {}
   - name: heading_2
@@ -57,6 +61,18 @@ components_by_slot:
     layout_properties: {}
   - name: heading_3
     properties: {text: headline large, scale: large, material_icon: downhill_skiing}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_8
+    properties: {text: display small, scale: small, style: display, material_icon: no_encryption}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_7
+    properties: {text: Display medium, material_icon: yard, style: display}
+    type: form:Components.Heading
+    layout_properties: {}
+  - name: heading_9
+    properties: {style: display, scale: large, text: Display large, material_icon: radio}
     type: form:Components.Heading
     layout_properties: {}
 components: []
