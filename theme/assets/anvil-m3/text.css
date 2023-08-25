@@ -57,6 +57,10 @@
   font-weight: 500;
 }
 
+.anvil-m3-heading-title.anvil-m3-heading-medium .anvil-m3-heading-icon {
+  font-size: 24px;
+}
+
 
 .anvil-m3-heading-title.anvil-m3-heading-small {
 /*   line-height: 20px; */
