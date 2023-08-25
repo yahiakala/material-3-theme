@@ -4,7 +4,6 @@ from ...Functions import enabled_property, style_property, visible_property, und
 import anvil.designer
 
 #todo: move get design name to text setter
-#todo: change click event to change
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
@@ -47,10 +46,10 @@ class Checkbox(CheckboxTemplate):
     anvil.designer.update_component_properties(self, {'checked': self.checked})
 
   def handle_click(self, event):
-    if self.enabled:
+    if self.enabled and self.checked is not None:
       self.dom_nodes['anvil-m3-checkbox'].focus()
       self.checked = not self.checked
-      self.raise_event("click")
+      self.raise_event("change")
 
   enabled = enabled_property('anvil-m3-checkbox')
   visible = visible_property('anvil-m3-checkbox-container', 'inline-flex')

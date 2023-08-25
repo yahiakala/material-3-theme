@@ -6,7 +6,7 @@ components_by_slot:
     properties: {checked: false, text: hello, allow_indeterminate: true, background: ''}
     type: form:Components.Checkbox
     layout_properties: {}
-    event_bindings: {click: checkbox_1_click}
+    event_bindings: {click: checkbox_1_click, change: checkbox_1_change}
   - name: checkbox_2
     properties: {}
     type: form:Components.Checkbox

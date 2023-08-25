@@ -16,7 +16,6 @@ class Link(LinkTemplate):
     if anvil.designer.in_designer and not self.text:
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
       
-
   def handle_click(self, event):
     self.raise_event("click")
 

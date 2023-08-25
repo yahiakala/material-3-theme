@@ -25,7 +25,7 @@ properties:
   description: Align this component’s text
 is_package: true
 events:
-- {name: click, default_event: true, description: When the component is checked or unchecked}
+- {name: change, default_event: true, description: When the component is checked or unchecked}
 custom_component: true
 components: []
 container:
