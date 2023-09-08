@@ -2,7 +2,9 @@ from ._anvil_designer import SwitchTemplate
 from anvil import *
 from anvil.js.window import jQuery
 from anvil.js import window
-from ...Functions import theme_color_to_css
+from ...Functions import theme_color_to_css, enabled_property
+
+#TODO: Make disabling the switch work
 
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
@@ -11,14 +13,14 @@ class Switch(SwitchTemplate):
 
     # Any code you write here will run before the form opens.
   @property
-  def enabled_icon(self):
-    return self._enabled_icon
+  def selected_icon(self):
+    return self._selected_icon
 
-  @enabled_icon.setter
-  def enabled_icon(self, value):
+  @selected_icon.setter
+  def selected_icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-enabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    self._enabled_icon = value
+    self._selected_icon = value
     link_icon.classList.remove("material-symbols-outlined")
     if value:
       link_icon.classList.add("material-symbols-outlined")
@@ -26,14 +28,14 @@ class Switch(SwitchTemplate):
       switch_slider.classList.add('anvil-m3-has-enabled-icon')
   
   @property
-  def disabled_icon(self):
-    return self._disabled_icon
+  def unselected_icon(self):
+    return self._unselected_icon
 
-  @disabled_icon.setter
-  def disabled_icon(self, value):
+  @unselected_icon.setter
+  def unselected_icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-disabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    self._disabled_icon = value
+    self._unselected_icon = value
     
     link_icon.classList.remove("material-symbols-outlined")
     if value:
@@ -42,9 +44,11 @@ class Switch(SwitchTemplate):
       switch_slider.classList.add('anvil-m3-has-disabled-icon')
 
   @property
-  def enabled(self):
+  def selected(self):
     return self.dom_nodes['anvil-m3-switch-input'].checked
 
-  @enabled.setter
-  def enabled(self, value):
+  @selected.setter
+  def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
+
+  enabled = enabled_property('anvil-m3-switch-input')

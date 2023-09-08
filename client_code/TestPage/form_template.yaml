@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: switch_1
+    properties: {selected_icon: check, enabled: true, unselected_icon: close}
+    type: form:Components.Switch
+    layout_properties: {}
   - name: button_menu_integrated_1
     properties: {text: Font Face, visible: true, enabled: true}
     type: form:Components.ButtonMenu_integrated
