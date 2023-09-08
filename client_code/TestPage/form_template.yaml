@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: switch_1
+    properties: {disabled_icon: close, enabled_icon: check}
+    type: form:Components.Switch
+    layout_properties: {}
   - name: checkbox_1
     properties: {checked: false, text: hello, allow_indeterminate: true, background: ''}
     type: form:Components.Checkbox
