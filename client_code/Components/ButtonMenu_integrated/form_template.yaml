@@ -8,6 +8,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true}
 - {name: visible, type: boolean, default_value: true}
 is_package: true
+data_bindings: []
 custom_component: true
 components:
 - name: menu_button
@@ -19,7 +20,7 @@ container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
       >\n  <!-- the following div needs marker where it prevents exposure of the slot\
-      \ when being used in a parent component -->\n  <div anvil-slot=\"button\" internal></div>\
+      \ when being used in a parent component -->\n  <div anvil-slot=\"button\" anvil-slot-internal></div>\
       \ \n  \n  <div anvil-slot=\"anvil-m3-buttonMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
       \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
       >\n      <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
