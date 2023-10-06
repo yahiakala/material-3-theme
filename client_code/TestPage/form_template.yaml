@@ -67,6 +67,10 @@ components_by_slot:
     properties: {bold: false}
     type: form:Components.RadioButton
     layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
