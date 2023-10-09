@@ -17,7 +17,7 @@ components_by_slot:
         type: form:Components.Text
         layout_properties: {}
       - name: switch_1
-        properties: {selected: true, enabled: false}
+        properties: {selected: true, enabled: false, selected_icon: delete}
         type: form:Components.Switch
         layout_properties: {}
     - name: flow_panel_4
@@ -30,7 +30,7 @@ components_by_slot:
         type: form:Components.Text
         layout_properties: {}
       - name: switch_2
-        properties: {enabled: false}
+        properties: {enabled: false, unselected_icon: cookie}
         type: form:Components.Switch
         layout_properties: {}
     - name: switch_3

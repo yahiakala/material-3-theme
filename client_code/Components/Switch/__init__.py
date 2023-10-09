@@ -4,7 +4,6 @@ from anvil.js.window import jQuery
 from anvil.js import window
 from ...Functions import theme_color_to_css, enabled_property
 
-#TODO: Make disabling the switch work
 
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
