@@ -16,7 +16,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: menu_item_2
-      properties: {text: Arial, leading_icon: people, hide_leading_icon: true}
+      properties: {text: Arial, leading_icon: 4k_plus, hide_leading_icon: true, trailing_icon: ' '}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_2_click}
@@ -73,7 +73,8 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_field_1
-      properties: {appearance: outlined, supporting_text: asdf}
+      properties: {appearance: outlined, supporting_text: asdf, leading_icon: ' ',
+        enabled: true}
       type: form:Components.TextField
       layout_properties: {slot: anvil-m3-card-slot}
   - name: image_3
