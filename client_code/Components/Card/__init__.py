@@ -35,7 +35,7 @@ class Card(CardTemplate):
       
   @property
   def disabled(self):
-    return self.disabled
+    return self._disabled
     
   @disabled.setter
   def disabled(self, value):
