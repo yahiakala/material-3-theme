@@ -4,7 +4,6 @@
   display: inline-block;
   width: 52px;
   height: 32px;
-  
 }
 
 .anvil-m3-switch input.anvil-m3-switch-input {
@@ -48,6 +47,10 @@
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider {
   background-color: var(--anvil-m3-primary);
+  border: none;
+}
+.anvil-m3-switch-input:checked:disabled + .anvil-m3-switch-slider {
+  background-color: var(--anvil-m3-light-overlay-2);
   border: none;
 }
 
