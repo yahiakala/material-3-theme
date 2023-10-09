@@ -71,6 +71,11 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components:
+    - name: text_field_1
+      properties: {appearance: outlined, supporting_text: asdf}
+      type: form:Components.TextField
+      layout_properties: {slot: anvil-m3-card-slot}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
