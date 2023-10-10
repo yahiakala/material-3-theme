@@ -9,8 +9,17 @@ class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
-    # Any code you write here will run before the form opens.
+  def on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-switch-input'].addEventListener("click", self.handle_click)
+    
+  def on_cleanup(self, **event_args):
+    document.removeEventListener('keydown', self.handle_keyboard_events)
+    self.shield.removeEventListener('click', self.remove_shield_handler)
+    self.menuNode.removeEventListener('click', self.child_clicked)
+  
   @property
   def selected_icon(self):
     return self._selected_icon
