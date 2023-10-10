@@ -13,13 +13,14 @@ class Switch(SwitchTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-switch-input'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self.handle_change)
     
   def on_cleanup(self, **event_args):
-    document.removeEventListener('keydown', self.handle_keyboard_events)
-    self.shield.removeEventListener('click', self.remove_shield_handler)
-    self.menuNode.removeEventListener('click', self.child_clicked)
-  
+    self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self.handle_change)
+
+  def handle_change():
+    pass
+    
   @property
   def selected_icon(self):
     return self._selected_icon
