@@ -109,6 +109,11 @@ components_by_slot:
     properties: {text: text_3}
     type: form:Components.Text
     layout_properties: {}
+  - name: checkbox_1
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
+    event_bindings: {change: checkbox_1_change}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image

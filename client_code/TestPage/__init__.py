@@ -89,6 +89,11 @@ class TestPage(TestPageTemplate):
     """This method is called when the state of the component is changed"""
     print('switched')
 
+  def checkbox_1_change(self, **event_args):
+    """This method is called when the component is checked or unchecked"""
+    print('checked')
+
+
 
 
 

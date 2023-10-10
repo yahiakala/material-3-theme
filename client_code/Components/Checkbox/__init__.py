@@ -11,7 +11,7 @@ class Checkbox(CheckboxTemplate):
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)
 
   def focus(self):
     self.dom_nodes['anvil-m3-checkbox'].focus()
@@ -46,11 +46,11 @@ class Checkbox(CheckboxTemplate):
     self.checked = not self.checked
     anvil.designer.update_component_properties(self, {'checked': self.checked})
 
-  def handle_click(self, event):
+  def handle_change(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-checkbox'].focus()
       self.checked = not self.checked
-      self.raise_event("click")
+      self.raise_event("change")
 
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
