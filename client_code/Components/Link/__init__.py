@@ -3,18 +3,18 @@ from anvil import *
 import anvil.designer
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property
 
-# if there is something within the link, there should be no design name text
 
 class Link(LinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click) 
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    print(self.get_components())
-      
+    if anvil.designer.in_designer and not self.text and not self.get_components():
+      self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
+    
   def handle_click(self, event):
     self.raise_event("click")
 
@@ -43,22 +43,6 @@ class Link(LinkTemplate):
   visible = visible_property('anvil-m3-link-container', 'flex')
   text_color = color_property('anvil-m3-link', 'color')
   icon_color = color_property('anvil-m3-link-icon', 'color')
-
-  @property
-  def text(self):
-    return self._text
-
-  @text.setter
-  def text(self, value):
-    print('value:', value)
-    self._text = value
-    if anvil.designer.in_designer and not self._text:
-      print(anvil.designer.get_design_name(self))
-      self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
-      print('aloha')
-    else:
-      self.dom_nodes['anvil-m3-link-text'].innerText = value
-      print('hallo')
 
   @property
   def icon_size(self):

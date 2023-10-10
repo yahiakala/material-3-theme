@@ -2,14 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: link_3
-    properties: {}
-    type: form:Components.Link
-    layout_properties: {}
-  - name: link_2
-    properties: {}
-    type: form:Components.Link
-    layout_properties: {}
   - name: link_1
     properties: {text: Log out, material_icon: logout}
     type: form:Components.Link
