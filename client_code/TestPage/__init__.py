@@ -9,12 +9,6 @@ class TestPage(TestPageTemplate):
     #self.checkbox_1.checked = None
 
 
-  def link_1_click(self, **event_args):
-    """This method is called clicked"""
-    print('clicked')
-
-
-
 
 
 
