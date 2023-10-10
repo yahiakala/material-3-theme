@@ -2,19 +2,16 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: switch_1
-    properties: {disabled_icon: close, enabled_icon: check}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {checked: false, text: hello, allow_indeterminate: true, background: ''}
-    type: form:Components.Checkbox
-    layout_properties: {}
-    event_bindings: {click: checkbox_1_click, change: checkbox_1_change}
-  - name: checkbox_2
+  - name: link_2
     properties: {}
-    type: form:Components.Checkbox
+    type: form:Components.Link
     layout_properties: {}
+    components:
+    - name: button_1
+      properties: {text: button_1}
+      type: Button
+      layout_properties: {slot: anvil-m3-link}
+    event_bindings: {click: link_2_click}
   - name: link_1
     properties: {text: Log out, material_icon: logout}
     type: form:Components.Link

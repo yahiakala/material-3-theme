@@ -3,6 +3,7 @@ from anvil import *
 import anvil.designer
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property
 
+# if there is something within the link, there should be no design name text
 
 class Link(LinkTemplate):
   def __init__(self, **properties):
