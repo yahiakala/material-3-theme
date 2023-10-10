@@ -50,11 +50,12 @@ def innerText_property(dom_node_name):
 
 def href_property(dom_node_name):
   def getter(self):
-    print('getting href prop: ', self.dom_nodes[dom_node_name].href)
-    return self.dom_nodes[dom_node_name].href
+    print('getting href prop: ', self._href)
+    return self._href
 
   def setter(self, value):
     print('setting href prop to: ', value)
+    self._href = value
     self.dom_nodes[dom_node_name].href = value
 
   return property(getter, setter)
