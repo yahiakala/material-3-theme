@@ -11,7 +11,14 @@ class Checkbox(CheckboxTemplate):
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)
+
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self.handle_change)
 
   def focus(self):
     self.dom_nodes['anvil-m3-checkbox'].focus()
