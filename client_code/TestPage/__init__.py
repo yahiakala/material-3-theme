@@ -85,6 +85,11 @@ class TestPage(TestPageTemplate):
   def menu_item_20_click(self, **event_args):
     print("do nothing")
 
+  def switch_3_change(self, **event_args):
+    """This method is called when the state of the component is changed"""
+    print('switched')
+
+
 
 
 

@@ -18,8 +18,11 @@ class Switch(SwitchTemplate):
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self.handle_change)
 
-  def handle_change():
-    pass
+  def handle_change(self, event):
+    if self.enabled:
+      #self.dom_nodes['anvil-m3-switch-input'].focus()
+      self.selected = not self.selected
+      self.raise_event("change")
     
   @property
   def selected_icon(self):
