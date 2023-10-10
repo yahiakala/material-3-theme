@@ -391,7 +391,8 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
-- {name: text, type: string, default_value: '', description: The text displayed on this component}
+- {name: text, type: string, default_value: '', description: The text displayed on this component,
+  multiline: true}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component should be displayed on the page.}
 - {name: icon_size, type: number, description: 'The size in pixels of the icon. If

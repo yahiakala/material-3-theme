@@ -104,6 +104,10 @@ components_by_slot:
         enabled: true}
       type: form:Components.TextField
       layout_properties: {slot: anvil-m3-card-slot}
+  - name: text_3
+    properties: {text: text_3}
+    type: form:Components.Text
+    layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
