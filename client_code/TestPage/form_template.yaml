@@ -2,73 +2,14 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: link_2
-    properties: {underline: true, visible: true, text_color: ''}
-    type: form:Components.Link
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
     layout_properties: {}
-  - name: link_1
-    properties: {text: Log out, material_icon: logout}
-    type: form:Components.Link
-    layout_properties: {}
-  - name: text_4
-    properties: {scale: small, text: body small, material_icon: eco}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_1
-    properties: {text: body medium, material_icon: local_pizza, scale: medium, style: body}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_3
-    properties: {scale: large, text: body large, material_icon: deck}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_5
-    properties: {text: label small, style: label, scale: small, material_icon: cloud}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_2
-    properties: {style: label, text: label medium, material_icon: boy}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_6
-    properties: {style: label, scale: large, text: label large, material_icon: opacity}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: heading_5
-    properties: {scale: small, style: title, text: title small, material_icon: piano}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_4
-    properties: {style: title, text: title medium, material_icon: sports_tennis}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_6
-    properties: {text: title large, style: title, scale: large, material_icon: forest}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_2
-    properties: {text: headline small, scale: small, material_icon: home}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_1
-    properties: {material_icon: handyman, text: headline medium}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_3
-    properties: {text: headline large, scale: large, material_icon: downhill_skiing}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_8
-    properties: {text: display small, scale: small, style: display, material_icon: no_encryption}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_7
-    properties: {text: Display medium, material_icon: yard, style: display}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: heading_9
-    properties: {style: display, scale: large, text: Display large, material_icon: radio}
-    type: form:Components.Heading
-    layout_properties: {}
+    components:
+    - name: link_1
+      properties: {text: Link}
+      type: form:Components.Link
+      layout_properties: {grid_position: 'GNCJUN,EAJSIX'}
 components: []
 event_bindings: {show: form_show}
