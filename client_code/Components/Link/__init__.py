@@ -11,7 +11,6 @@ class Link(LinkTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
     
-    
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text:
@@ -45,6 +44,14 @@ class Link(LinkTemplate):
   visible = visible_property('anvil-m3-link-container', 'flex')
   text_color = color_property('anvil-m3-link', 'color')
   icon_color = color_property('anvil-m3-link-icon', 'color')
+
+  @property
+  def text(self):
+    return self.dom_nodes['anvil-m3-link-text'].innerText
+
+  @text.setter
+  def text(self, value):
+    self.dom_nodes['anvil-m3-link-text'].innerText = value
 
   @property
   def icon_size(self):
