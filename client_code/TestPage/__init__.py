@@ -95,6 +95,10 @@ class TestPage(TestPageTemplate):
   def menu_item_20_click(self, **event_args):
     print("do nothing")
 
+  def button_1_click(self, **event_args):
+    self.floating_menu.visible = not self.floating_menu.visible
+
+
 
 
 
