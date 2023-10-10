@@ -50,11 +50,15 @@ class Link(LinkTemplate):
 
   @text.setter
   def text(self, value):
+    print('value:', value)
     self._text = value
     if anvil.designer.in_designer and not self._text:
+      print(anvil.designer.get_design_name(self))
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
+      print('aloha')
     else:
       self.dom_nodes['anvil-m3-link-text'].innerText = value
+      print('hallo')
 
   @property
   def icon_size(self):

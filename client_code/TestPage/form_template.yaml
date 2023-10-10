@@ -10,12 +10,6 @@ components_by_slot:
     properties: {}
     type: form:Components.Link
     layout_properties: {}
-    components:
-    - name: button_1
-      properties: {text: button_1}
-      type: Button
-      layout_properties: {slot: anvil-m3-link}
-    event_bindings: {click: link_2_click}
   - name: link_1
     properties: {text: Log out, material_icon: logout}
     type: form:Components.Link
