@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: link_3
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
   - name: link_2
     properties: {}
     type: form:Components.Link
