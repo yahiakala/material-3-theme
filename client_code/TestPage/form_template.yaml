@@ -8,8 +8,14 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: link_1
-      properties: {text: Link}
+      properties: {text: ''}
       type: form:Components.Link
       layout_properties: {grid_position: 'GNCJUN,EAJSIX'}
+      components:
+      - name: column_panel_2
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {slot: anvil-m3-link}
+      event_bindings: {click: link_1_click}
 components: []
 event_bindings: {show: form_show}

@@ -8,9 +8,11 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
     #self.checkbox_1.checked = None
 
-  def checkbox_1_change(self, **event_args):
-    """This method is called when the component is checked or unchecked"""
-    print('hello')
+
+  def link_1_click(self, **event_args):
+    """This method is called clicked"""
+    print('clicked')
+
 
 
 
