@@ -3,7 +3,7 @@ from anvil import *
 import anvil.designer
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property
 
-#todo: flex properties break having a component inside
+
 class Link(LinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -47,7 +47,7 @@ class Link(LinkTemplate):
   font_size = font_size_property('anvil-m3-link')
   material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link-text')
-  visible = visible_property('anvil-m3-link-container', 'flex')
+  visible = visible_property('anvil-m3-link-container', 'block')
   text_color = color_property('anvil-m3-link', 'color')
   icon_color = color_property('anvil-m3-link-icon', 'color')
   border = style_property('anvil-m3-link-container', 'border')
