@@ -128,6 +128,7 @@ components_by_slot:
       items: ['']
       placeholder: hold the place!!!
       include_placeholder: false
+      label_text: ''
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
