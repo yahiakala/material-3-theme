@@ -23,6 +23,9 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
+    # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
+    # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
+    # To not have to do this, Stu is considering creating a add_event_listener() and remove_event_listener() to anvil.js
     self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
     self.child_clicked = self.child_clicked
