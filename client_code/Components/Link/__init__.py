@@ -50,6 +50,7 @@ class Link(LinkTemplate):
   visible = visible_property('anvil-m3-link-container', 'flex')
   text_color = color_property('anvil-m3-link', 'color')
   icon_color = color_property('anvil-m3-link-icon', 'color')
+  border = style_property('anvil-m3-link-container', 'border')
 
   @property
   def icon_size(self):
