@@ -44,6 +44,7 @@ def innerText_property(dom_node_name):
     return self.dom_nodes[dom_node_name].innerText
 
   def setter(self, value):
+    print('setting innerText: ', value)
     self.dom_nodes[dom_node_name].innerText = value
 
   return property(getter, setter)
