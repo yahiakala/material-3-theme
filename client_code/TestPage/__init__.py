@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import plotly.graph_objects as go
 from anvil.tables import app_tables
+from ..Components.Menu.MenuItem import MenuItem
 
 
 class TestPage(TestPageTemplate):
@@ -98,8 +99,17 @@ class TestPage(TestPageTemplate):
   def button_1_click(self, **event_args):
     self.floating_menu.visible = not self.floating_menu.visible
 
+  def dropdown_menu_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    # print(self.dropdown_menu_1.selected_value)
+    self.heading_1.text = self.dropdown_menu_1.selected_value
 
-
+  def dropdown_menu_2_change(self, **event_args):
+    """This method is called when an item is selected"""
+    if self.dropdown_menu_2.selected_value is None:
+      self.heading_2.text = ""
+    else:
+      self.heading_2.text = self.dropdown_menu_2.selected_value[0]
 
 
 

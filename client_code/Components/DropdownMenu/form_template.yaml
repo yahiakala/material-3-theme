@@ -47,6 +47,7 @@ properties:
 - {name: width, type: string, default_value: '', important: false, description: 'The
     width of this DropDown, or “default” to have the width set by the container',
   group: Style}
+- {name: label_text, type: string, default_value: '', important: true, group: Attributes}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
@@ -58,8 +59,8 @@ components:
   layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   components: []
 - name: selection_field
-  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: Label,
-    placeholder: Select Item, supporting_text: ' '}
+  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '',
+    placeholder: '', supporting_text: ' '}
   type: form:Components.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
 container:

@@ -72,10 +72,14 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components: []
-  - name: text_field_1
-    properties: {trailing_icon: arrow_drop_down}
-    type: form:Components.TextField
+  - name: flow_panel_5
+    properties: {}
+    type: FlowPanel
     layout_properties: {}
+    components:
+    - name: text_field_1
+      properties: {trailing_icon: arrow_drop_down}
+      type: form:Components.TextField
   - name: drop_down_1
     properties:
       items: ['']
@@ -103,42 +107,47 @@ components_by_slot:
         visible: true
         enabled: true
         include_placeholder: true
-        items: [selection 1, selection 2, selection 3]
+        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        placeholder: Make a selection. This one is None
+        label_text: label text herrooo
       type: form:Components.DropdownMenu
       layout_properties: {}
+      event_bindings: {change: dropdown_menu_1_change}
+    - name: heading_1
+      properties: {}
+      type: form:Components.Heading
+  - name: heading_2
+    properties: {align: right}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: dropdown_menu_2
     properties:
       align: right
       enabled: true
       appearance: outlined
       items: ['']
+      placeholder: select to set to none
+      include_placeholder: true
+      label_text: Job Title
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
     - {property: items, code: 'self.item[''items'']', writeback: false}
+    event_bindings: {change: dropdown_menu_2_change}
   - name: flow_panel_4
-    properties: {}
+    properties: {align: center}
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: button_1
-      properties: {text: show menu}
-      type: form:Components.Button
-      layout_properties: {}
-      event_bindings: {click: button_1_click}
-    - name: floating_menu
-      properties: {visible: false}
-      type: form:Components.Menu
-      components:
-      - name: menu_item_35
-        properties: {text: menu item 1}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-menu-slot}
-      - name: menu_item_36
-        properties: {text: menu item 2}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-menu-slot}
-      layout_properties: {}
+    - name: dropdown_menu_3
+      properties:
+        items: [l;askdfj ;aosidjf ;aow9jf;lk ajsd f09auw 4;lkajs df, asd;fj a;lskdjf ;alskdjf0pa9uw4j;lkajwd flk ja,
+          as;dkfj 0a8u2j4;lkajw dfkl;aj sdf, asdkfjh p9284u ;oflajkwdflk;djs foiua weo,
+          'asd;fkj ap908wu4;olakjwdflkj ', asdifuy 0p24j;lkajsd f asdf, asdkljfh p04uwaisdf asdfiuh p9082u34 ;oi 4jti]
+        label_text: smol
+        include_placeholder: ''
+      type: form:Components.DropdownMenu
+      layout_properties: {width: 231}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
