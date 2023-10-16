@@ -137,6 +137,12 @@
 .anvil-m3-dropdownMenu-container {
   display: inline-block;
   position: relative;
+  width: 100%;
+  background-color: purple;
+}
+
+.anvil-m3-dropdownMenu-textfield {
+  background-color: pink;
 }
 
 .anvil-m3-dropdownMenu-items-container { 

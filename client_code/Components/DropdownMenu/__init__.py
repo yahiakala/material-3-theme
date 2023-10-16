@@ -46,6 +46,9 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
+  # todo: override textfield widths so dropdown can be dragged to be changed. god this is gonna be such a pain
+  
+
   #properties
   visible = HtmlTemplate.visible
   
