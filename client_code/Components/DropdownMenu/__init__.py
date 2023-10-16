@@ -210,7 +210,6 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   def update_menu_placement(self):
-    # menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
