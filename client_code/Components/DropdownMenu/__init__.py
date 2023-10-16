@@ -211,8 +211,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def update_menu_placement(self):
     menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
-    print(menuNode.style)
-    menuNode.attributeStyleMap.delete("height")
+    menuNode.removeAttribute("style")
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
@@ -227,7 +226,13 @@ class DropdownMenu(DropdownMenuTemplate):
     menuTop = self._box_positioning['bottom']
     menuBottom = menuTop + self._menu_size['height']
 
-    ## menu too tall!
+    # entire menu is taller than window
+    if (self._window_size['height'] < menuBottom):
+      pass
+    else:
+      
+    
+    """## menu too tall!
     if (self._window_size['height'] < menuBottom):
       print("doesn't fit")
     
@@ -258,7 +263,7 @@ class DropdownMenu(DropdownMenuTemplate):
         menuNode.style.bottom = f"{math.floor(self._window_size['height'] - (self._box_positioning['top'] - 5))}px"
       # fits in default position
       else:
-        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px""""
     
   def get_textfield_measurements(self):
     rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
