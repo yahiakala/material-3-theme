@@ -111,22 +111,4 @@ class TestPage(TestPageTemplate):
     else:
       self.heading_2.text = self.dropdown_menu_2.selected_value[0]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   

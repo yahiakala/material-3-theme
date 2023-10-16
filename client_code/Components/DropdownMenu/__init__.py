@@ -315,3 +315,69 @@ class DropdownMenu(DropdownMenuTemplate):
           
       selection.add_event_handler('click', handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
+
+ 
+# DESIGNER INTERACTIONS
+  def _anvil_get_design_info_(self, as_layout=False):
+    design_info = super()._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+      # {
+      #   "type": "designer_events",
+      #   "callbacks": {
+      #     "onSelectDescendent": self._on_select_descendent,
+      #     "onSelectOther": self._on_select_other
+      #   }
+      # },
+      {
+      "type": "whole_component",
+      "title": "Visible",
+      "icon": "add", #TODO: eye icon
+      "callbacks": {
+        "execute": self.toggle_visible
+      }
+    }, {
+      "type": "whole_component",
+      "title": "Enable",
+      "icon": "add", #TODO: power icon
+      "callbacks": {
+        "execute": self.toggle_enabled
+      }
+    },{
+      "type": "whole_component",
+      "title": "Edit Label",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self.selection_field, "label_text", self.selection_field.dom_nodes['label-text'])
+      }
+    }]
+    return design_info
+
+  # def _on_select_descendent(self):
+  #   self.set_visibility(True)
+
+  # def _on_select_other(self):
+  #   self.set_visibility(False)
+
+  def toggle_visible(self):
+    self.visible = not self.visible
+    anvil.designer.update_component_properties(self, {'visible': self.visible})
+
+  def toggle_enabled(self):
+    self.enabled = not self.enabled
+    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
