@@ -48,7 +48,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
   
   @property
   def enabled(self):
@@ -333,26 +332,7 @@ class DropdownMenu(DropdownMenuTemplate):
       "callbacks": {
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['label-text'])
       }
-    },{
-      "type": "whole_component_multi",
-      "title": "Align",
-      "options": [{
-        "name": "Left Align",
-        "id": "left",
-        "icon" : "align-left",
-      },{
-        "name": "Left Center",
-        "id": "center",
-        "icon" : "align-center",
-      },{
-        "name": "Left Right",
-        "id": "right",
-        "icon" : "align-right",
-      }],
-      "callbacks": {
-        "execute": self.set_alignment
-      }
-    },]
+    }]
     return design_info
 
   def toggle_visible(self):
@@ -362,7 +342,3 @@ class DropdownMenu(DropdownMenuTemplate):
   def toggle_enabled(self):
     self.enabled = not self.enabled
     anvil.designer.update_component_properties(self, {'enabled': self.enabled})
-
-  def set_alignment(self, value):
-    self.align = value
-    anvil.designer.update_component_properties(self, {'align': self.align})
