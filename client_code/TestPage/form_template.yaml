@@ -64,7 +64,7 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: radio_button_4
-    properties: {bold: false}
+    properties: {bold: false, selected: true}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: card_1
