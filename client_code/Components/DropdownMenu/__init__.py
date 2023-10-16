@@ -271,6 +271,8 @@ class DropdownMenu(DropdownMenuTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
+    print("new meausrements!")
+    print(self._box_positioning)
   
   def place_shield(self):
     if not document.contains(self.shield):
