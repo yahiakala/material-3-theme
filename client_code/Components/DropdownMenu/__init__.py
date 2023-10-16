@@ -215,15 +215,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
-    # menuLeft = self._box_positioning['left']
-    # menuRight = menuLeft + self._menu_size['width']
-    # if self._window_size['width'] < menuRight:
-    #   menuNode.style.right = '5px'
-    # else:
-    #   menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
     menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
     menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
-    # menuNode.style.right = f"{math.floor(self._box_positioning['right'])}px"
     
     # vertical placement
     menuTop = self._box_positioning['bottom']
