@@ -112,7 +112,7 @@ components_by_slot:
         placeholder: Make a selection. This one is None
         label_text: ''
       type: form:Components.DropdownMenu
-      layout_properties: {expand: false}
+      layout_properties: {expand: true}
       event_bindings: {change: dropdown_menu_1_change}
     - name: heading_1
       properties: {}
