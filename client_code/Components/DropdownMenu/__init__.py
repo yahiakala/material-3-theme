@@ -233,25 +233,20 @@ class DropdownMenu(DropdownMenuTemplate):
       spaceAtTop = self._box_positioning['top']
       spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
 
-    #   # put at the top and set container height
+      # put at the top and set container height
       if spaceAtTop > spaceAtBottom:
-        # menuNode.style.bottom /
-        # menuNode.style.bottom = f"{math.floor(self._box_positioning['top'])}px"
+        # fits 
+        if spaceAtTop > self._menu_size['height']:
+          menuNode.style.bottom = 
+          pass
         menuNode.style.bottom = f"{math.floor(self._window_size['height'] - (self._box_positioning['top'] - 5))}px"
+        menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         
-        #too big when at the top
-        if (self._menu_size['height'] > spaceAtTop):
-          menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
-          #fits in the top part
-        # else:
-          
-        
-        
-    #   # put at the bottom and set container height
+      # put at the bottom and set container height
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
         menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
-
+        
     ## menu fits
     else: 
       # default placement is out of bounds
