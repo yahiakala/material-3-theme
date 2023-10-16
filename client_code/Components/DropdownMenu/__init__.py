@@ -215,13 +215,16 @@ class DropdownMenu(DropdownMenuTemplate):
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
-    menuLeft = self._box_positioning['left']
-    menuRight = menuLeft + self._menu_size['width']
-    if self._window_size['width'] < menuRight:
-      menuNode.style.right = '5px'
-    else:
-      menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
-      
+    # menuLeft = self._box_positioning['left']
+    # menuRight = menuLeft + self._menu_size['width']
+    # if self._window_size['width'] < menuRight:
+    #   menuNode.style.right = '5px'
+    # else:
+    #   menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+    menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
+    menuNode.style.width = f"{math.floor{self._box_positioning['width']}px"
+    # menuNode.style.right = f"{math.floor(self._box_positioning['right'])}px"
+    
     # vertical placement
     menuTop = self._box_positioning['bottom']
     menuBottom = menuTop + self._menu_size['height']
@@ -232,51 +235,16 @@ class DropdownMenu(DropdownMenuTemplate):
     if spaceAtBottom < self._menu_size["height"]:
       # place the menu at the bottom
       if spaceAtBottom > spaceAtTop:
-        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
-        menuNode.style.height = f"{math.floor(spaceAtBottom - 5)}px"
+        menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+        menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
       # place the menu at the top
       else:
-        if spaceAtTop > self._menu_size["height"]:
-          menuNode.style.bottom = f"{math.floor(self._box_positioning['top'] + 5)}px"
-        else:
-          pass
+        menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
+        if spaceAtTop < self._menu_size["height"]:
+          menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
     else:
-       menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
       
-    
-    """## menu too tall!
-    if (self._window_size['height'] < menuBottom):
-      print("doesn't fit")
-    
-    # if (self._window_size['height'] - self._box_positioning['height']) < self._menu_size['height']: 
-      spaceAtTop = self._box_positioning['top']
-      spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
-
-      # put at the top and set container height
-      if spaceAtTop > spaceAtBottom:
-        # fits 
-        menuNode.style.bottom = f"{math.floor(self._window_size['height'] - (self._box_positioning['top'] - 5))}px"
-        if spaceAtTop < self._menu_size['height']:
-          print("squishing")
-          menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
-        else: 
-          print("no squishing")
-        
-      # put at the bottom and set container height
-      else:
-        print("still doesnot fit")
-        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
-        menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
-        
-    ## menu fits
-    else: 
-      # default placement is out of bounds
-      if self._window_size['height'] < menuBottom:
-        menuNode.style.bottom = f"{math.floor(self._window_size['height'] - (self._box_positioning['top'] - 5))}px"
-      # fits in default position
-      else:
-        menuNode.style.top = f"{math.floor(menuTop + 5)}px""""
-    
   def get_textfield_measurements(self):
     rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
     self._box_positioning = {
