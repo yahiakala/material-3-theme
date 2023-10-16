@@ -109,7 +109,7 @@ components_by_slot:
         include_placeholder: true
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
         placeholder: Make a selection. This one is None
-        label_text: label text herrooo
+        label_text: ''
       type: form:Components.DropdownMenu
       layout_properties: {}
       event_bindings: {change: dropdown_menu_1_change}
@@ -128,7 +128,7 @@ components_by_slot:
       items: ['']
       placeholder: select to set to none
       include_placeholder: true
-      label_text: Job Title
+      label_text: help
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
