@@ -95,6 +95,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     
   def update_menu_placement(self):
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    menuNode.removeAttribute("style")
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
