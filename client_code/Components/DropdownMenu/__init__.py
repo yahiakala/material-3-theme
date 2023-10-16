@@ -225,9 +225,11 @@ class DropdownMenu(DropdownMenuTemplate):
     # vertical placement
     menuTop = self._box_positioning['bottom']
     menuBottom = menuTop + self._menu_size['height']
-
-    # entire menu is taller than window
-    if (self._window_size['height'] < menuBottom):
+    spaceAtTop = self._box_positioning['top']
+    spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
+    
+    # menu won't fit in the standrd spot under the text field
+    if spaceBottom:
       pass
     else:
       
