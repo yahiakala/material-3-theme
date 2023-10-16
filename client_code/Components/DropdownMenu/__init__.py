@@ -99,6 +99,7 @@ class DropdownMenu(DropdownMenuTemplate):
     else:
       self.selection_field.dom_nodes['text-field-input'].value = value
     self.raise_event("change")
+    print(self.items)
   
   @property
   def include_placeholder(self):
