@@ -41,12 +41,17 @@ class DropdownMenu(DropdownMenuTemplate):
           
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
- 
+
+    
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
   # todo: override textfield widths so dropdown can be dragged to be changed. god this is gonna be such a pain
+    self.selection_field.dom_nodes['text-field'].style.width = "calc(100% - 10px)"
+    self.selection_field.dom_nodes['text-field-input'].style.width = "100%"
+    
+    
   
 
   #properties

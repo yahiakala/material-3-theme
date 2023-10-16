@@ -109,8 +109,12 @@ components_by_slot:
         enabled: true
         include_placeholder: true
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
-        placeholder: Make a selection. This one is None
-        label_text: ''
+        placeholder: ' Make a selection. This one is None salkjdf;a fl;kjMake a selection.
+          This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
+          fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
+          This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
+          fl;kjMake a selection. This one is None salkjdf;a fl;kj'
+        label_text: Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj
       type: form:Components.DropdownMenu
       layout_properties: {expand: true}
       event_bindings: {change: dropdown_menu_1_change}
