@@ -222,7 +222,7 @@ class DropdownMenu(DropdownMenuTemplate):
     # else:
     #   menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
     menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
-    menuNode.style.width = f"{math.floor{self._box_positioning['width']}px"
+    menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
     # menuNode.style.right = f"{math.floor(self._box_positioning['right'])}px"
     
     # vertical placement
