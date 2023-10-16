@@ -236,7 +236,10 @@ class DropdownMenu(DropdownMenuTemplate):
         menuNode.style.height = f"{math.floor(spaceAtBottom - 5)}px"
       # place the menu at the top
       else:
-        if spaceAtTop > 
+        if spaceAtTop > self._menu_size["height"]:
+          menuNode.style.bottom = f"{math.floor(self._box_positioning['top'] + 5)}px"
+        else:
+          pass
     else:
        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
       
