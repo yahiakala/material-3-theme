@@ -211,6 +211,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def update_menu_placement(self):
     menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
+    print(menuNode.attributeStyleMap.height)
+    menuNode.attributeStyleMap.delete("height")
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
@@ -236,14 +238,16 @@ class DropdownMenu(DropdownMenuTemplate):
       # put at the top and set container height
       if spaceAtTop > spaceAtBottom:
         # fits 
-        if spaceAtTop > self._menu_size['height']:
-          menuNode.style.bottom = 
-          pass
         menuNode.style.bottom = f"{math.floor(self._window_size['height'] - (self._box_positioning['top'] - 5))}px"
-        menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
+        if spaceAtTop < self._menu_size['height']:
+          print("squishing")
+          menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
+        else: 
+          print("no squishing")
         
       # put at the bottom and set container height
       else:
+        print("still doesnot fit")
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
         menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
         
@@ -266,8 +270,8 @@ class DropdownMenu(DropdownMenuTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
-    print("new meausrements!")
-    print(self._box_positioning)
+    # print("new meausrements!")
+    # print(self._box_positioning)
   
   def place_shield(self):
     if not document.contains(self.shield):
