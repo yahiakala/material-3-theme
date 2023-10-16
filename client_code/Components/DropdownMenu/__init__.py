@@ -316,10 +316,12 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.add_event_handler('click', handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
 
+ 
 # DESIGNER INTERACTIONS
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [{
+    design_info["interactions"] = [
+      {
       "type": "whole_component",
       "title": "Visible",
       "icon": "add", #TODO: eye icon
@@ -360,7 +362,7 @@ class DropdownMenu(DropdownMenuTemplate):
       "callbacks": {
         "execute": self.set_alignment
       }
-    }]
+    },]
     return design_info
 
   def toggle_visible(self):

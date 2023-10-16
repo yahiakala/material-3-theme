@@ -126,7 +126,7 @@ components_by_slot:
       enabled: true
       appearance: outlined
       items: ['']
-      placeholder: select to set to none
+      placeholder: 'select to set to none uasdijhflljkasdf '
       include_placeholder: true
       label_text: help
     type: form:Components.DropdownMenu
