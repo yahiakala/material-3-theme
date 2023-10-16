@@ -229,9 +229,16 @@ class DropdownMenu(DropdownMenuTemplate):
     spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
     
     # menu won't fit in the standrd spot under the text field
-    if spaceBottom:
-      pass
+    if spaceAtBottom < self._menu_size["height"]:
+      # place the menu at the bottom
+      if spaceAtBottom > spaceAtTop:
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+        menuNode.style.height = f"{math.floor(spaceAtBottom - 5)}px"
+      # place the menu at the top
+      else:
+        if spaceAtTop > 
     else:
+       menuNode.style.top = f"{math.floor(menuTop + 5)}px"
       
     
     """## menu too tall!
