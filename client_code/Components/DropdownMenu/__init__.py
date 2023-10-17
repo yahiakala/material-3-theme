@@ -49,10 +49,6 @@ class DropdownMenu(DropdownMenuTemplate):
   # todo: override textfield widths so dropdown can be dragged to be changed. god this is gonna be such a pain
     self.selection_field.dom_nodes['text-field'].style.width = "calc(100% - 10px)"
     self.selection_field.dom_nodes['text-field-input'].style.width = "100%"
-    self.menu.dom_nodes['anvil-m3-menu-items-container'].style.backgroundColor = "blue"
-    
-    
-  
 
   #properties
   visible = HtmlTemplate.visible
