@@ -18,10 +18,7 @@ class MenuItem(MenuItemTemplate):
 
   """ Properties """
   """
-  font_size = font_size_property('anvil-m3-radiobutton-label')
-  font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
-  text_color = color_property('anvil-m3-radiobutton-label', 'color')
-  background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
+  
   text = innerText_property('anvil-m3-menuItem-labelText')
   """
   @property
@@ -36,6 +33,10 @@ class MenuItem(MenuItemTemplate):
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
+  font_size = font_size_property('anvil-m3-menuItem-labelText')
+  font = style_property('anvil-m3-menuItem-labelText', 'fontFamily')
+  text_color = color_property('anvil-m3-menuItem-labelText', 'color')
+  background = color_property('anvil-m3-menuItem-container', 'backgroundColor')
   # @property
   # def text(self):
   #   return self._text
