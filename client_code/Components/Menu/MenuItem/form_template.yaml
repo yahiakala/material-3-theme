@@ -730,6 +730,12 @@ properties:
 - {name: trailing_text, type: string, default_value: '', description: Right Text. Will be to the left of the trailing icon if both exist}
 - {name: hide_leading_icon, type: boolean, default_value: false, description: Option to hide or show the leading icon. This will affect the spacing to the left of the text}
 - {name: enabled, type: boolean, default_value: true}
+- {name: bold, type: boolean, default_value: false, important: true}
+- {name: font, type: string, default_value: '', important: true}
+- {name: font_size, type: string, default_value: '', important: true}
+- {name: text_color, type: string, default_value: '', important: true}
+- {name: italic, type: boolean, default_value: false, important: true}
+- {name: underline, type: boolean, default_value: false, important: true}
 is_package: true
 events:
 - {name: click, default_event: true}
