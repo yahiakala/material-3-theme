@@ -741,7 +741,7 @@ container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
       \ style=\"width: fit-content; margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
-      \ anvil-name=\"text-field-input-container\" style=\"position: relative;\">\n\
+      \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       \    <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
       \ type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <div class=\"anvil-m3-border-container\"\
       \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\

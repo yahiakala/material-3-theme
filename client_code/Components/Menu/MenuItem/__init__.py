@@ -1,15 +1,26 @@
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+from ....Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
 
 import anvil.designer
 
 class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    
+    self._props = properties
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
 
   """ Properties """
+  """
+  
+  text = innerText_property('anvil-m3-menuItem-labelText')
+  """
   @property
   def leading_icon(self):
     return self._leading_icon
@@ -17,14 +28,22 @@ class MenuItem(MenuItemTemplate):
   def leading_icon(self, value):
     self._leading_icon = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
-
-  @property
-  def text(self):
-    return self._text
-  @text.setter
-  def text(self, value):
-    self._text = value
-    self.dom_nodes["anvil-m3-menuItem-labelText"].innerText = value
+    
+  text = innerText_property('anvil-m3-menuItem-labelText')
+  italic = italic_property('anvil-m3-menuItem-labelText')
+  bold = bold_property('anvil-m3-menuItem-labelText')
+  underline = underline_property('anvil-m3-menuItem-labelText')
+  font_size = font_size_property('anvil-m3-menuItem-labelText')
+  font = style_property('anvil-m3-menuItem-labelText', 'fontFamily')
+  text_color = color_property('anvil-m3-menuItem-labelText', 'color')
+  background = color_property('anvil-m3-menuItem-container', 'backgroundColor')
+  # @property
+  # def text(self):
+  #   return self._text
+  # @text.setter
+  # def text(self, value):
+  #   self._text = value
+  #   self.dom_nodes["anvil-m3-menuItem-labelText"].innerText = value
 
   @property
   def trailing_icon(self):

@@ -1,11 +1,22 @@
 from ._anvil_designer import TestPageTemplate
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import plotly.graph_objects as go
+from anvil.tables import app_tables
+from ..Components.Menu.MenuItem import MenuItem
+
 
 class TestPage(TestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.item = anvil.server.call('get_jobs')
+    
     self.init_components(**properties)
+    # self.selecty_items = [(cat['Items'], cat) for cat in app_tables.test.search()]
+    # self.drop_down_1.items = self.selecty_items
 
   def select_font(self, value):
     print(f"font face {value} selected")
@@ -85,34 +96,19 @@ class TestPage(TestPageTemplate):
   def menu_item_20_click(self, **event_args):
     print("do nothing")
 
-  def switch_3_change(self, **event_args):
-    """This method is called when the state of the component is changed"""
-    print('switched')
+  def button_1_click(self, **event_args):
+    self.floating_menu.visible = not self.floating_menu.visible
 
-  def checkbox_1_change(self, **event_args):
-    """This method is called when the component is checked or unchecked"""
-    print('checked')
+  def dropdown_menu_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    # print(self.dropdown_menu_1.selected_value)
+    self.heading_1.text = self.dropdown_menu_1.selected_value
 
+  def dropdown_menu_2_change(self, **event_args):
+    """This method is called when an item is selected"""
+    if self.dropdown_menu_2.selected_value is None:
+      self.heading_2.text = "Nope, nothing"
+    else:
+      self.heading_2.text = self.dropdown_menu_2.selected_value[0]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
