@@ -109,6 +109,55 @@ class DropdownMenu(DropdownMenuTemplate):
   @include_placeholder.setter
   def include_placeholder(self, value):
     self._include_placeholder = value or ""
+
+  @property
+  def bold_items(self):
+    return self._bold_items
+  @bold_items.setter
+  def bold_items(self, value):
+    self._bold_items = value
+
+  @property
+  def italic_items(self):
+    return self._italic_items
+  @italic_items.setter
+  def italic_items(self, value):
+    self._italic_items = value
+
+  @property
+  def underline_items(self):
+    return self._underline_items
+  @underline_items.setter
+  def underline_items(self, value):
+    self._underline_items = value
+
+  @property
+  def items_text_color(self):
+    return self._items_text_color
+  @items_text_color.setter
+  def items_text_color(self, value):
+    self._items_text_color = value
+
+  @property
+  def items_background(self):
+    return self._items_background
+  @items_background.setter
+  def items_background(self, value):
+    self._items_background = value
+
+  @property
+  def items_font(self):
+    return self._items_font
+  @items_font.setter
+  def items_font(self, value):
+    self._items_font = value
+
+  @property
+  def items_font_size(self):
+    return self._items_font_size
+  @items_font_size.setter
+  def items_font_size(self, value):
+    self._items_font_size = value
     
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
@@ -285,6 +334,13 @@ class DropdownMenu(DropdownMenuTemplate):
         self.label_text = anvil.designer.get_design_name(self)
 
   def create_menu_items(self):
+#     bold_items
+# italic_items
+# underline_items
+# items_text_color
+# items_background
+# items_font
+# items_font_size
     if self.include_placeholder:
       p = MenuItem()
       p.text = self.placeholder
