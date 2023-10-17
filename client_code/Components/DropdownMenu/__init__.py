@@ -42,7 +42,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
-    
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
@@ -220,6 +219,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def update_menu_placement(self):
     menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
     menuNode.removeAttribute("style")
+    menuNode.style.maxWidth = "unset"
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
