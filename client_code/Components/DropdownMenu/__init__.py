@@ -334,15 +334,16 @@ class DropdownMenu(DropdownMenuTemplate):
         self.label_text = anvil.designer.get_design_name(self)
 
   def create_menu_items(self):
-#     bold_items
-# italic_items
-# underline_items
-# items_text_color
-# items_background
-# items_font
-# items_font_size
     if self.include_placeholder:
       p = MenuItem()
+      p.bold = self.bold_items
+      p.italic = self.italic_items
+      p.underline = self.underline_items
+      p.text_color = self.items_text_color
+      p.background = self.items_background
+      p.font = self.items_font
+      p.font_size = self.items_font_size
+      
       p.text = self.placeholder
       p.hide_leading_icon = True
       def handle_select_placeholder(**e):
@@ -354,6 +355,15 @@ class DropdownMenu(DropdownMenuTemplate):
     for item in self.items:
       selection = MenuItem()
       selection.hide_leading_icon = True
+      
+      selection.bold = self.bold_items
+      selection.italic = self.italic_items
+      selection.underline = self.underline_items
+      selection.text_color = self.items_text_color
+      selection.background = self.items_background
+      selection.font = self.items_font
+      selection.font_size = self.items_font_size
+      
       if type(item) is list:
         selection.text = item[0]
       else:

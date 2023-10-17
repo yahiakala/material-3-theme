@@ -103,18 +103,19 @@ components_by_slot:
     components:
     - name: dropdown_menu_1
       properties:
-        align: right
+        label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
         appearance: ''
-        visible: true
-        enabled: true
-        include_placeholder: true
-        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        align: right
         placeholder: ' Make a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kj'
-        label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
+        enabled: true
+        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        visible: true
+        italic_items: true
+        include_placeholder: true
       type: form:Components.DropdownMenu
       layout_properties: {expand: true}
       event_bindings: {change: dropdown_menu_1_change}
@@ -127,13 +128,16 @@ components_by_slot:
     layout_properties: {}
   - name: dropdown_menu_2
     properties:
-      align: right
-      enabled: true
-      appearance: outlined
-      items: ['']
-      placeholder: 'select to set to none uasdijhflljkasdf '
-      include_placeholder: true
       label_text: help
+      appearance: outlined
+      align: right
+      items_font: Arial
+      placeholder: 'select to set to none uasdijhflljkasdf '
+      enabled: true
+      items: ['']
+      items_text_color: green
+      items_background: pink
+      include_placeholder: true
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
