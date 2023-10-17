@@ -732,7 +732,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true}
 - {name: bold, type: boolean, default_value: false, important: true}
 - {name: font, type: string, default_value: '', important: true}
-- {name: font_size, type: string, default_value: '', important: true}
+- {name: font_size, type: number, default_value: '', important: true}
 - {name: text_color, type: color, default_value: '', important: true}
 - {name: italic, type: boolean, default_value: false, important: true}
 - {name: underline, type: boolean, default_value: false, important: true}

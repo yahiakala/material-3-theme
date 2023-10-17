@@ -4,19 +4,19 @@ properties:
 - {name: bold, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
   group: Selection Field Style}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value,
-  group: Style}
+  group: Selection Field Style}
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
   group: Attributes}
 - {name: font, type: string, default_value: '', important: false, description: The font family to use for this component,
-  group: Style}
+  group: Selection Field Style}
 - {name: font_size, type: number, important: false, description: The height of text displayed on this component in pixels,
-  group: Style}
+  group: Selection Field Style}
 - {name: text_color, type: color, default_value: '', important: false, description: Component's Input Text Color,
-  group: Style}
+  group: Selection Field Style}
 - {name: include_placeholder, type: boolean, default_value: true, important: true,
   description: Whether to add a placeholder item to the list with value None, group: Attributes}
 - {name: italic, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
-  group: Style}
+  group: Selection Field Style}
 - name: items
   type: text[]
   default_value: []
@@ -31,18 +31,28 @@ properties:
   important: true
   options: ['', outlined]
   description: Selection field's appearance
-  group: Style
+  group: Selection Field Style
 - {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime,
   group: Attributes}
 - {name: underline, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
-  group: Style}
+  group: Selection Field Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
-  group: Style}
+  group: Selection Field Style}
 - {name: width, type: string, default_value: '', important: false, description: 'The
     width of this DropDown, or “default” to have the width set by the container',
-  group: Style}
+  group: Selection Field Style}
 - {name: label_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
+- {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
+- {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
+- {name: items_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color,
+  group: Dropdown Items Style}
+- {name: items_background, type: color, default_value: '', important: false, description: Component's Input Text Color,
+  group: Dropdown Items Style}
+- {name: items_font, type: string, default_value: '', important: false, description: The font family to use for the dropdown items,
+  group: Dropdown Items Style}
+- {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels,
+  group: Dropdown Items Style}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
