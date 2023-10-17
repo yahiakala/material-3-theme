@@ -114,7 +114,7 @@ components_by_slot:
           fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kj'
-        label_text: Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj Make a selection. This one is None salkjdf;a fl;kj
+        label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
       type: form:Components.DropdownMenu
       layout_properties: {expand: true}
       event_bindings: {change: dropdown_menu_1_change}
@@ -150,7 +150,7 @@ components_by_slot:
         label_text: smol
         include_placeholder: ''
       type: form:Components.DropdownMenu
-      layout_properties: {width: 231}
+      layout_properties: {width: 358}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: image_3
