@@ -52,6 +52,14 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
+  # background
+  # bold
+  # border
+  # font
+  # font_size
+  # text_color
+  # italic
+  # underline
   
   @property
   def enabled(self):
