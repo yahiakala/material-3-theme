@@ -1,8 +1,8 @@
 properties:
 - {name: background, type: color, default_value: '', important: false, description: background color of the component,
-  group: Style}
+  group: Selection Field Style}
 - {name: bold, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
-  group: Style}
+  group: Selection Field Style}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value,
   group: Style}
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
@@ -42,6 +42,7 @@ properties:
     width of this DropDown, or “default” to have the width set by the container',
   group: Style}
 - {name: label_text, type: string, default_value: '', important: true, group: Attributes}
+- {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
