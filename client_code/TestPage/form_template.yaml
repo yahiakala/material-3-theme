@@ -78,9 +78,11 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_field_1
-      properties: {label_text: fdsafdsa, placeholder: '', error: false, text_color: 'rgb(98,
-          91, 113)', visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down,
-        italic: false, background: '', bold: false}
+      properties: {display_font_size: 10, label_text: fdsafdsa, label_font_size: -2,
+        italic_display: true, display_text_color: 'rgb(255, 98, 81)', placeholder: '',
+        error: false, text_color: 'rgb(98, 91, 113)', display_font: '"Times New Roman"',
+        visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
+        background: '', bold: false}
       type: form:Components.TextField
       layout_properties: {width: 600, expand: false}
     - name: text_field_1_copy_1
