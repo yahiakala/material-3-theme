@@ -107,9 +107,13 @@ components_by_slot:
     type: DropDown
     layout_properties: {}
     data_bindings: []
-  - name: heading_1
+  - name: dropdown_menu_4
     properties: {}
-    type: form:Components.Heading
+    type: form:Components.DropdownMenu
+    layout_properties: {}
+  - name: text_field_3
+    properties: {}
+    type: form:Components.TextField
     layout_properties: {}
   - name: flow_panel_3
     properties: {}
@@ -142,6 +146,13 @@ components_by_slot:
       type: form:Components.DropdownMenu
       layout_properties: {expand: false, width: 532}
       event_bindings: {change: dropdown_menu_1_change}
+    - name: heading_1
+      properties: {}
+      type: form:Components.Heading
+    - name: text_field_2
+      properties: {}
+      type: form:Components.TextField
+      layout_properties: {width: 661}
   - name: heading_2
     properties: {align: right}
     type: form:Components.Heading
