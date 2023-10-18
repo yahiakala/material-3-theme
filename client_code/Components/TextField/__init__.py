@@ -55,10 +55,9 @@ class TextField(TextFieldTemplate):
   bold = bold_property('label-text')
   underline = underline_property('label-text')
   font_size = font_size_property('label-text')
-  # border = style_property('anvil-m3-radiobutton-container', 'border')
   font = style_property('label-text', 'fontFamily')
   text_color = color_property('label-text', 'color')
-  # background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
+  background = color_property('text-field-input', 'backgroundColor')
   label_text = innerText_property('label-text')
   
   # @property

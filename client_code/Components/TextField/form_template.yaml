@@ -731,8 +731,6 @@ properties:
   group: Style}
 - {name: bold, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
   group: Style}
-- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value,
-  group: Style}
 - {name: font, type: string, default_value: '', important: false, description: The font family to use for this component,
   group: Style}
 - {name: font_size, type: number, important: false, description: The height of text displayed on this component in pixels,
