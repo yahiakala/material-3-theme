@@ -210,47 +210,59 @@ components_by_slot:
     properties: {enabled: false, text: disabled}
     type: form:Components.RadioButton
     layout_properties: {}
-  - name: button_menu_integrated_5
-    properties: {text: numbers, appearance: tonal}
-    type: form:Components.ButtonMenu_integrated
+  - name: flow_panel_6
+    properties: {align: right}
+    type: FlowPanel
     layout_properties: {}
     components:
-    - name: menu_item_16
-      properties: {text: '0'}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_16_click}
-    - name: divider_5
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_19
-      properties: {text: '2'}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_19_click}
-    - name: divider_6
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_21
-      properties: {text: '4'}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_21_click}
-    - name: divider_7
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_29
-      properties: {text: '6'}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_29_click}
-    - name: divider_8
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: button_menu_integrated_5
+      properties: {text: numbers, appearance: tonal}
+      type: form:Components.ButtonMenu_integrated
+      components:
+      - name: menu_item_16
+        properties: {text: '0'}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        event_bindings: {click: menu_item_16_click}
+      - name: divider_5
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_19
+        properties: {text: '2'}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        event_bindings: {click: menu_item_19_click}
+      - name: divider_6
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_21
+        properties: {text: '4'}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        event_bindings: {click: menu_item_21_click}
+      - name: divider_7
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_29
+        properties: {text: '6'}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        event_bindings: {click: menu_item_29_click}
+      - name: menu_item_34
+        properties: {text: long selection text}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_32
+        properties: {text: blah blah more text}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: divider_8
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: column_panel_1
     properties: {background: '', visible: true}
     type: ColumnPanel
