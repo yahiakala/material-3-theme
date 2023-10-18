@@ -177,7 +177,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       #TODO: eventually want to use this to jump somewhere in the list
       return
     
-    if event.key is "ArrowUp" or event.key is "ArrowDown":
+    if event.key in ["ArrowUp", "ArrowDown"]:
       self.iterate_hover(event.key is "ArrowDown")
       return
       

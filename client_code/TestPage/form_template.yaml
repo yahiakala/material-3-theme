@@ -115,7 +115,7 @@ components_by_slot:
     properties: {}
     type: form:Components.TextField
     layout_properties: {}
-  - name: flow_panel_3
+  - name: flow_panel_9
     properties: {}
     type: FlowPanel
     layout_properties: {}
@@ -174,7 +174,7 @@ components_by_slot:
     data_bindings:
     - {property: items, code: 'self.item[''items'']', writeback: false}
     event_bindings: {change: dropdown_menu_2_change}
-  - name: flow_panel_4
+  - name: flow_panel_10
     properties: {align: center}
     type: FlowPanel
     layout_properties: {}
