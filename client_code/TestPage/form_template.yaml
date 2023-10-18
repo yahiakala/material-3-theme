@@ -6,6 +6,10 @@ components_by_slot:
     properties: {}
     type: form:Components.Link
     layout_properties: {}
-    components: []
+    components:
+    - name: button_1
+      properties: {appearance: filled}
+      type: form:Components.Button
+      layout_properties: {slot: anvil-m3-link}
 components: []
 event_bindings: {show: form_show}
