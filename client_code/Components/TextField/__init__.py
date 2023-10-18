@@ -5,13 +5,15 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
+from ...Functions import name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
 import anvil.designer
 
 # Todo: region interactions
 
 class TextField(TextFieldTemplate):
   def __init__(self, **properties):
+    
+    self._props = properties
     self._label_text = properties.get('label_text', '')
     self._trailing_icon = properties.get('trailing_icon', '')
     # Set Form properties and Data Bindings.
@@ -49,24 +51,24 @@ class TextField(TextFieldTemplate):
   
   visible = HtmlTemplate.visible
   
-  # italic = italic_property('anvil-m3-radiobutton-label')
-  # bold = bold_property('anvil-m3-radiobutton-label')
-  # underline = underline_property('anvil-m3-radiobutton-label')
-  # font_size = font_size_property('anvil-m3-radiobutton-label')
+  italic = italic_property('label-text')
+  bold = bold_property('label-text')
+  underline = underline_property('label-text')
+  font_size = font_size_property('label-text')
   # border = style_property('anvil-m3-radiobutton-container', 'border')
-  # font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
-  # text_color = color_property('anvil-m3-radiobutton-label', 'color')
+  font = style_property('label-text', 'fontFamily')
+  text_color = color_property('label-text', 'color')
   # background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
-  # text = innerText_property('anvil-m3-radiobutton-label')
+  label_text = innerText_property('label-text')
   
-  @property
-  def label_text(self):
-    return self._label_text
+  # @property
+  # def label_text(self):
+  #   return self._label_text
 
-  @label_text.setter
-  def label_text(self, value):
-    self._label_text = value
-    self.dom_nodes['label-text'].innerHTML = value or ""
+  # @label_text.setter
+  # def label_text(self, value):
+  #   self._label_text = value
+  #   self.dom_nodes['label-text'].innerHTML = value or ""
 
   @property
   def supporting_text(self):

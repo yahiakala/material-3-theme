@@ -78,7 +78,8 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_field_1
-      properties: {trailing_icon: arrow_drop_down, visible: true}
+      properties: {label_text: fdsafdsa, placeholder: '', error: false, visible: true,
+        font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false, bold: false}
       type: form:Components.TextField
       layout_properties: {width: 600, expand: false}
   - name: drop_down_1
