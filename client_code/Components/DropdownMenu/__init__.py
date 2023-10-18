@@ -316,7 +316,7 @@ class DropdownMenu(DropdownMenuTemplate):
         attemptSelect()
       if (event.key is "Enter"):
         attemptSelect()
-  
+
 
     
   def closeMenu(self):
