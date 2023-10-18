@@ -84,7 +84,7 @@ components_by_slot:
         visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
         background: '', bold: false}
       type: form:Components.TextField
-      layout_properties: {width: 367, expand: false}
+      layout_properties: {width: null, expand: false}
     - name: text_field_1_copy_1
       properties: {label_text: fdsafdsa, placeholder: '', error: false, enabled: false,
         visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
