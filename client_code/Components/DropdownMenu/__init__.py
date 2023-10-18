@@ -302,7 +302,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
       if event.key is "Tab" or "Escape":
         self.closeMenu()
-        
+      print(self._hoverIndex)
+      
       def attemptSelect():
         # event.preventDefault();
         print(self._hoverIndex)
