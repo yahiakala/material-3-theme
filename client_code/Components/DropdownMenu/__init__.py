@@ -283,9 +283,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self._has_focus = False
     
   def handle_keyboard_events(self, event):
+    self._hoverIndex = self._hoverIndex
     if not self._has_focus:
       return
     else:
+      print('handling')
       action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
       open_keys = set(["ArrowUp", "ArrowDown", " ", "Enter"])
       if not self.menu.visible:
@@ -297,7 +299,9 @@ class DropdownMenu(DropdownMenuTemplate):
         return
       
       if event.key is "ArrowUp" or event.key is "ArrowDown":
+        print(sel
         self.iterate_hover(event.key is "ArrowDown")
+        print(f"self1: {self}")
         print(self._hoverIndex)
         return
 
@@ -308,6 +312,7 @@ class DropdownMenu(DropdownMenuTemplate):
       if (event.key is " "): #space key as " " is stupid
         self.attempt_select()
       if (event.key is "Enter"):
+        print('enter pressed')
         self.attempt_select()
         
   def close_menu(self):
