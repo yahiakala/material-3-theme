@@ -78,7 +78,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_field_1
-      properties: {trailing_icon: arrow_drop_down}
+      properties: {trailing_icon: arrow_drop_down, visible: true}
       type: form:Components.TextField
       layout_properties: {width: 600, expand: false}
   - name: drop_down_1

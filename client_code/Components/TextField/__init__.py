@@ -48,17 +48,16 @@ class TextField(TextFieldTemplate):
   #   print(count)
   
   visible = HtmlTemplate.visible
-  value = value_property('anvil-m3-radiobutton-input')
-  enabled = enabled_property('anvil-m3-radiobutton-input')
-  italic = italic_property('anvil-m3-radiobutton-label')
-  bold = bold_property('anvil-m3-radiobutton-label')
-  underline = underline_property('anvil-m3-radiobutton-label')
-  font_size = font_size_property('anvil-m3-radiobutton-label')
-  border = style_property('anvil-m3-radiobutton-container', 'border')
-  font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
-  text_color = color_property('anvil-m3-radiobutton-label', 'color')
-  background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
-  text = innerText_property('anvil-m3-radiobutton-label')
+  
+  # italic = italic_property('anvil-m3-radiobutton-label')
+  # bold = bold_property('anvil-m3-radiobutton-label')
+  # underline = underline_property('anvil-m3-radiobutton-label')
+  # font_size = font_size_property('anvil-m3-radiobutton-label')
+  # border = style_property('anvil-m3-radiobutton-container', 'border')
+  # font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
+  # text_color = color_property('anvil-m3-radiobutton-label', 'color')
+  # background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
+  # text = innerText_property('anvil-m3-radiobutton-label')
   
   @property
   def label_text(self):
@@ -137,7 +136,6 @@ class TextField(TextFieldTemplate):
   @property
   def enabled(self):
     return self._enabled
-
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
