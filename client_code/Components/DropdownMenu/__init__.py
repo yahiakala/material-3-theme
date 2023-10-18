@@ -299,21 +299,23 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key is "ArrowUp" or event.key is "ArrowDown":
         self.iterate_hover(event.key is "ArrowDown")
         return
-        
+
       if event.key is "Tab" or "Escape":
         self.closeMenu()
-      
+        
+      def attemptSelect(self):
+        # event.preventDefault();
+        print(self._hoverIndex)
+        if not self._hoverIndex is None:
+          self._children[self._hoverIndex].raise_event("click")
+        self.closeMenu()
+        
       if (event.key is " "): #space key as " " is stupid
         self.attemptSelect()
       if (event.key is "Enter"):
         self.attemptSelect()
   
-  def attemptSelect(self):
-    # event.preventDefault();
-    print(self._hoverIndex)
-    if not self._hoverIndex is None:
-      self._children[self._hoverIndex].raise_event("click")
-    self.closeMenu()
+
     
   def closeMenu(self):
     self.remove_shield()
