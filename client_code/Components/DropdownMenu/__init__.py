@@ -283,7 +283,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._has_focus = False
     
   def handle_keyboard_events(self, event):
-    #self._hoverIndex = self._hoverIndex
     if not self._has_focus:
       return
     else:
@@ -305,6 +304,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self.close_menu()
 
       if (event.key is " "): #space key as " " is stupid
+        event.preventDefault()
         self.attempt_select()
       if (event.key is "Enter"):
         self.attempt_select()
