@@ -49,7 +49,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  
+
   @property
   def background(self):
     return self._background
@@ -301,25 +301,22 @@ class DropdownMenu(DropdownMenuTemplate):
         return
 
       if event.key is "Tab" or "Escape":
-        self.closeMenu()
-      print(self._hoverIndex)
+        self.close_menu()
       
-      def attemptSelect():
-        # event.preventDefault();
-        print(self._hoverIndex)
-        print(self._children)
-        if not self._hoverIndex is None:
-          self._children[self._hoverIndex].raise_event("click")
-        self.closeMenu()
+      # def attemptSelect():
+      #   # event.preventDefault();
+      #   print(self._hoverIndex)
+      #   print(self._children)
+      #   if not self._hoverIndex is None:
+      #     self._children[self._hoverIndex].raise_event("click")
+      #   self.close_menu()
         
       if (event.key is " "): #space key as " " is stupid
-        attemptSelect()
+        self.attempt_select()
       if (event.key is "Enter"):
-        attemptSelect()
-
-
-    
-  def closeMenu(self):
+        self.attempt_select()
+        
+  def close_menu(self):
     self.remove_shield()
     self.set_menu_visibility(False)
     
@@ -332,7 +329,12 @@ class DropdownMenu(DropdownMenuTemplate):
       if self._hoverIndex is None or self._hoverIndex is 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
-    self.update_hover_styles();
+    self.update_hover_styles()
+    
+  def attempt_select(self):
+    if not self._hoverIndex is None:
+      self._children[self._hoverIndex].raise_event("click")
+    self.close_menu()
     
   def clear_hover_styles(self):
     if self._children is not None:
@@ -405,8 +407,6 @@ class DropdownMenu(DropdownMenuTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
-    # print("new meausrements!")
-    # print(self._box_positioning)
   
   def place_shield(self):
     if not document.contains(self.shield):
@@ -414,7 +414,7 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
-    self.closeMenu()
+    self.close_menu()
     
   def remove_shield(self):
     if document.contains(self.shield):
@@ -423,7 +423,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def child_clicked(self, event):
     event.stopPropagation()
-    self.closeMenu()
+    self.close_menu()
     if self.selected_value is None:
       self._hoverIndex = None
     else:
