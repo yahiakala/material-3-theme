@@ -137,7 +137,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
 
     # def update_menu_placement(self):
-  #   menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
+  #   menuNode = self.menu.dom_nodes['anvil-m3-buttonMenu-items-container']
   #   menuNode.removeAttribute("style")
   #   menuNode.style.maxWidth = "unset"
   #   self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
