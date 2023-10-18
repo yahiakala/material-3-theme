@@ -361,6 +361,7 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
+  group: Attributes
 - name: trailing_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -723,14 +724,44 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: label_text, type: string, default_value: ''}
-- {name: supporting_text, type: string, default_value: ''}
-- {name: enabled, type: boolean, default_value: true}
+  group: Attributes
+- {name: label_text, type: string, default_value: '', group: Attributes}
+- {name: supporting_text, type: string, default_value: '', group: Attributes}
+- {name: background, type: color, default_value: '', important: false, description: background color of the component,
+  group: Style}
+- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
+  group: Style}
+- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label,
+  group: Style}
+- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels,
+  group: Style}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
+  group: Style}
+- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
+  group: Style}
+- {name: enabled, type: boolean, default_value: true, group: Attributes}
 - name: appearance
   type: enum
   options: ['', outlined]
-- {name: error, type: boolean, default_value: false}
-- {name: placeholder, type: string, default_value: ''}
+  group: Style
+- {name: error, type: boolean, default_value: false, group: Style}
+- {name: placeholder, type: string, default_value: '', group: Attributes}
+- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined,
+  group: Style}
+- {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
+  group: Style}
+- {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
+  group: Style}
+- {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
+  group: Style}
+- {name: underline_display, type: boolean, default_value: false, important: false,
+  description: Display this component’s text in underline, group: Style}
+- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text,
+  group: Style}
+- {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
+  group: Style}
+- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
+  group: Style}
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
@@ -740,7 +771,7 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
-      \ style=\"width: fit-content; margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
+      \ style=\"width: calc(100% - 10px); margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
       \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       \    <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
       \ type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <div class=\"anvil-m3-border-container\"\

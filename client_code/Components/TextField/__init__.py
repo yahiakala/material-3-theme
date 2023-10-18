@@ -4,13 +4,16 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from anvil import HtmlTemplate
+from ...Functions import name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
 import anvil.designer
 
 # Todo: region interactions
 
 class TextField(TextFieldTemplate):
   def __init__(self, **properties):
+    
+    self._props = properties
     self._label_text = properties.get('label_text', '')
     self._trailing_icon = properties.get('trailing_icon', '')
     # Set Form properties and Data Bindings.
@@ -45,15 +48,35 @@ class TextField(TextFieldTemplate):
   #   input = self.dom_nodes['text-field-input']
   #   count = input.value
   #   print(count)
+  
+  visible = HtmlTemplate.visible
+  
+  background = color_property('text-field-input', 'backgroundColor')
+  
+  italic_label = italic_property('label-text')
+  bold_label = bold_property('label-text')
+  underline_label = underline_property('label-text')
+  label_font_size = font_size_property('label-text')
+  label_font = style_property('label-text', 'fontFamily')
+  label_text_color = color_property('label-text', 'color')
+  label_text = innerText_property('label-text')
     
-  @property
-  def label_text(self):
-    return self._label_text
+  italic_display = italic_property('text-field-input')
+  bold_display = bold_property('text-field-input')
+  underline_display = underline_property('text-field-input')
+  display_font_size = font_size_property('text-field-input')
+  display_font = style_property('text-field-input', 'fontFamily')
+  display_text_color = color_property('text-field-input', 'color')
+  # display_text = innerText_property('text-field-input')
+  
+  # @property
+  # def label_text(self):
+  #   return self._label_text
 
-  @label_text.setter
-  def label_text(self, value):
-    self._label_text = value
-    self.dom_nodes['label-text'].innerHTML = value or ""
+  # @label_text.setter
+  # def label_text(self, value):
+  #   self._label_text = value
+  #   self.dom_nodes['label-text'].innerHTML = value or ""
 
   @property
   def supporting_text(self):
@@ -123,7 +146,6 @@ class TextField(TextFieldTemplate):
   @property
   def enabled(self):
     return self._enabled
-
   @enabled.setter
   def enabled(self, value):
     self._enabled = value

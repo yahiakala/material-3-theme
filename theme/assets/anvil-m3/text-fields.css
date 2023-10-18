@@ -9,6 +9,7 @@
   letter-spacing: 0.5px;
   color: var(--anvil-m3-on-surface);
   caret-color: var(--anvil-m3-primary);
+  width: 100%;
 }
 
 .anvil-m3-icon-container, .anvil-m3-border-container {

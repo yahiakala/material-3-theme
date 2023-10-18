@@ -37,6 +37,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
+    self.selection_field.dom_nodes['text-field-input'].style.cursor = "pointer"
     self.selection_field.dom_nodes['text-field-input'].setAttribute("readonly", True)
           
     self.shield = document.createElement("div")
@@ -46,12 +47,64 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
-  # todo: override textfield widths so dropdown can be dragged to be changed. god this is gonna be such a pain
-    self.selection_field.dom_nodes['text-field'].style.width = "calc(100% - 10px)"
-    self.selection_field.dom_nodes['text-field-input'].style.width = "100%"
-
   #properties
   visible = HtmlTemplate.visible
+  
+  @property
+  def background(self):
+    return self._background
+  @background.setter
+  def background(self, value):
+    self._background = value
+    self.selection_field.background = value
+  
+  @property
+  def bold_label(self):
+    return self._bold_label
+  @bold_label.setter
+  def bold_label(self, value):
+    self._bold_label = value
+    self.selection_field.bold_label = value
+    
+  @property
+  def label_font(self):
+    return self._label_font
+  @label_font.setter
+  def label_font(self, value):
+    self._label_font = value
+    self.selection_field.label_font = value
+    
+  @property
+  def label_font_size(self):
+    return self._label_font_size
+  @label_font_size.setter
+  def label_font_size(self, value):
+    self._label_font_size = value
+    self.selection_field.label_font_size = value
+  
+  @property
+  def label_text_color(self):
+    return self._label_text_color
+  @label_text_color.setter
+  def label_text_color(self, value):
+    self._label_text_color = value
+    self.selection_field.label_text_color = value
+  
+  @property
+  def italic_label(self):
+    return self._italic_label
+  @italic_label.setter
+  def italic_label(self, value):
+    self._italic_label = value
+    self.selection_field.italic_label = value
+  
+  @property
+  def underline_label(self):
+    return self._underline_label
+  @underline_label.setter
+  def underline_label(self, value):
+    self._underline_label = value
+    self.selection_field.underline_label = value
   
   @property
   def enabled(self):
@@ -69,6 +122,54 @@ class DropdownMenu(DropdownMenuTemplate):
     self._appearance = value
     self.selection_field.appearance = value
     
+  @property
+  def italic_display(self):
+    return self._italic_display
+  @italic_display.setter
+  def italic_display(self, value):
+    self._italic_display = value
+    self.selection_field.italic_display = value
+    
+  @property
+  def bold_display(self):
+    return self._bold_display
+  @bold_display.setter
+  def bold_display(self, value):
+    self._bold_display = value
+    self.selection_field.bold_display = value
+    
+  @property
+  def underline_display(self):
+    return self._underline_display
+  @underline_display.setter
+  def underline_display(self, value):
+    self._underline_display = value
+    self.selection_field.underline_display = value
+    
+  @property
+  def display_font(self):
+    return self._display_font
+  @display_font.setter
+  def display_font(self, value):
+    self._display_font = value
+    self.selection_field.display_font = value
+    
+  @property
+  def display_font_size(self):
+    return self._display_font_size
+  @display_font_size.setter
+  def display_font_size(self, value):
+    self._display_font_size = value
+    self.selection_field.display_font_size = value
+    
+  @property
+  def display_text_color(self):
+    return self._display_text_color
+  @display_text_color.setter
+  def display_text_color(self, value):
+    self._display_text_color = value
+    self.selection_field.display_text_color = value
+
   @property
   def items(self):
     return self._items

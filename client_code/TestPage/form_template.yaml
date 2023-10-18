@@ -78,9 +78,19 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_field_1
-      properties: {trailing_icon: arrow_drop_down}
+      properties: {display_font_size: 10, label_text: fdsafdsa, label_font_size: 20,
+        italic_display: true, display_text_color: 'rgb(255, 98, 81)', placeholder: '',
+        error: false, text_color: 'rgb(98, 91, 113)', display_font: '"Times New Roman"',
+        visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
+        background: '', bold: false}
       type: form:Components.TextField
-      layout_properties: {width: 600, expand: false}
+      layout_properties: {width: 367, expand: false}
+    - name: text_field_1_copy_1
+      properties: {label_text: fdsafdsa, placeholder: '', error: false, enabled: false,
+        visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
+        bold: false}
+      type: form:Components.TextField
+      layout_properties: {width: 833}
   - name: drop_down_1
     properties:
       items: ['']
@@ -93,9 +103,14 @@ components_by_slot:
   - name: drop_down_2
     properties:
       items: [asdf, fdsa, '1234', '!!!!']
+      align: left
     type: DropDown
     layout_properties: {}
     data_bindings: []
+  - name: heading_1
+    properties: {}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
@@ -103,25 +118,30 @@ components_by_slot:
     components:
     - name: dropdown_menu_1
       properties:
+        display_font_size: 20
         label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
         appearance: ''
+        bold_display: true
         align: right
+        italic_display: true
+        display_text_color: '#96d35f'
         placeholder: ' Make a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kj'
         enabled: true
-        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        display_font: Arial
+        label_font: Times New Roman
+        items: [selection 1, selection 2, selection 3, selection 4, selection 5, 'klasjhdf
+            kljahs dfkh;laksdj fl;kaj sdlfkj ;laksjdf l;aksjdf ;laksjd fjfiljs df8u24kjn
+            asd8fu24jk slfjas;ildjf 2904uoljka sfd ']
         visible: true
         italic_items: true
         include_placeholder: true
       type: form:Components.DropdownMenu
-      layout_properties: {expand: true}
+      layout_properties: {expand: false, width: 532}
       event_bindings: {change: dropdown_menu_1_change}
-    - name: heading_1
-      properties: {}
-      type: form:Components.Heading
   - name: heading_2
     properties: {align: right}
     type: form:Components.Heading
@@ -150,11 +170,17 @@ components_by_slot:
     components:
     - name: dropdown_menu_3
       properties:
-        items: ['']
         label_text: smol
+        display_text_color: white
+        text_color: theme:Tertiary Container
+        items: ['']
+        label_text_color: cyan
+        items_text_color: theme:On Secondary
+        items_background: theme:Error
+        background: theme:On Tertiary Container
         include_placeholder: ''
       type: form:Components.DropdownMenu
-      layout_properties: {width: 358}
+      layout_properties: {width: 976}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: image_3
