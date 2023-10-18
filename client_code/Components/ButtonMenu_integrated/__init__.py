@@ -102,6 +102,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     menuNode.style.maxWidth = "unset"
     self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+    
     # horizontal placement
     menuLeft = self._button_positioning['left']
     menuRight = menuLeft + self._menu_size['width']
