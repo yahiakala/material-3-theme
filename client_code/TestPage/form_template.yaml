@@ -161,7 +161,7 @@ components_by_slot:
         items: ['']
         label_text: smol
         include_placeholder: ''
-        background: theme:Error Overlay 2
+        background: theme:On Tertiary Container
         text_color: theme:On Primary Container
       type: form:Components.DropdownMenu
       layout_properties: {width: 245}
