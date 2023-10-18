@@ -194,6 +194,12 @@ components_by_slot:
       layout_properties: {width: 976}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
+    - name: radio_button_5
+      properties: {text: radio_button_5}
+      type: RadioButton
+    - name: button_1
+      properties: {text: button_1}
+      type: Button
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
