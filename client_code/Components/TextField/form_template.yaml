@@ -361,6 +361,7 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
+  group: Attributes
 - name: trailing_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -723,8 +724,9 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: label_text, type: string, default_value: ''}
-- {name: supporting_text, type: string, default_value: ''}
+  group: Attributes
+- {name: label_text, type: string, default_value: '', group: Attributes}
+- {name: supporting_text, type: string, default_value: '', group: Attributes}
 - {name: background, type: color, default_value: '', important: false, description: background color of the component,
   group: Style}
 - {name: bold, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
@@ -739,12 +741,13 @@ properties:
   group: Style}
 - {name: italic, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
   group: Style}
-- {name: enabled, type: boolean, default_value: true}
+- {name: enabled, type: boolean, default_value: true, group: Attributes}
 - name: appearance
   type: enum
   options: ['', outlined]
-- {name: error, type: boolean, default_value: false}
-- {name: placeholder, type: string, default_value: ''}
+  group: Style
+- {name: error, type: boolean, default_value: false, group: Style}
+- {name: placeholder, type: string, default_value: '', group: Attributes}
 - {name: underline, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
   group: Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,

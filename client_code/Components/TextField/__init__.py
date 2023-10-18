@@ -4,7 +4,8 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from anvil import HtmlTemplate
+from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
 import anvil.designer
 
 # Todo: region interactions
@@ -45,7 +46,20 @@ class TextField(TextFieldTemplate):
   #   input = self.dom_nodes['text-field-input']
   #   count = input.value
   #   print(count)
-    
+  
+  visible = HtmlTemplate.visible
+  value = value_property('anvil-m3-radiobutton-input')
+  enabled = enabled_property('anvil-m3-radiobutton-input')
+  italic = italic_property('anvil-m3-radiobutton-label')
+  bold = bold_property('anvil-m3-radiobutton-label')
+  underline = underline_property('anvil-m3-radiobutton-label')
+  font_size = font_size_property('anvil-m3-radiobutton-label')
+  border = style_property('anvil-m3-radiobutton-container', 'border')
+  font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
+  text_color = color_property('anvil-m3-radiobutton-label', 'color')
+  background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
+  text = innerText_property('anvil-m3-radiobutton-label')
+  
   @property
   def label_text(self):
     return self._label_text
