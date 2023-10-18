@@ -84,13 +84,13 @@ components_by_slot:
         visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
         background: '', bold: false}
       type: form:Components.TextField
-      layout_properties: {width: 600, expand: false}
+      layout_properties: {width: 367, expand: false}
     - name: text_field_1_copy_1
       properties: {label_text: fdsafdsa, placeholder: '', error: false, enabled: false,
         visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
         bold: false}
       type: form:Components.TextField
-      layout_properties: {}
+      layout_properties: {width: 833}
   - name: drop_down_1
     properties:
       items: ['']
@@ -133,7 +133,9 @@ components_by_slot:
         enabled: true
         display_font: Arial
         label_font: Times New Roman
-        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        items: [selection 1, selection 2, selection 3, selection 4, selection 5, 'klasjhdf
+            kljahs dfkh;laksdj fl;kaj sdlfkj ;laksjdf l;aksjdf ;laksjd fjfiljs df8u24kjn
+            asd8fu24jk slfjas;ildjf 2904uoljka sfd ']
         visible: true
         italic_items: true
         include_placeholder: true
@@ -178,7 +180,7 @@ components_by_slot:
         background: theme:On Tertiary Container
         include_placeholder: ''
       type: form:Components.DropdownMenu
-      layout_properties: {width: 720}
+      layout_properties: {width: 976}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: image_3
