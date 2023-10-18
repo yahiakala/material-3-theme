@@ -51,14 +51,23 @@ class TextField(TextFieldTemplate):
   
   visible = HtmlTemplate.visible
   
-  italic = italic_property('label-text')
-  bold = bold_property('label-text')
-  underline = underline_property('label-text')
-  font_size = font_size_property('label-text')
-  font = style_property('label-text', 'fontFamily')
-  text_color = color_property('label-text', 'color')
   background = color_property('text-field-input', 'backgroundColor')
+  
+  italic_label = italic_property('label-text')
+  bold_label = bold_property('label-text')
+  underline_label = underline_property('label-text')
+  label_font_size = font_size_property('label-text')
+  label_font = style_property('label-text', 'fontFamily')
+  label_text_color = color_property('label-text', 'color')
   label_text = innerText_property('label-text')
+    
+  italic_display = italic_property('text-field-input')
+  bold_display = bold_property('text-field-input')
+  underline_display = underline_property('text-field-input')
+  display_font_size = font_size_property('text-field-input')
+  display_font = style_property('text-field-input', 'fontFamily')
+  display_text_color = color_property('text-field-input', 'color')
+  # display_text = innerText_property('text-field-input')
   
   # @property
   # def label_text(self):
