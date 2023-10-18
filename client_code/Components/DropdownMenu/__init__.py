@@ -52,14 +52,62 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  # background
-  # bold
-  # border
-  # font
-  # font_size
-  # text_color
-  # italic
-  # underline
+  
+  @property
+  def background(self):
+    return self._background
+  @background.setter
+  def background(self, value):
+    self._background = value
+    self.selection_field.background = value
+  
+  @property
+  def bold(self):
+    return self._bold
+  @bold.setter
+  def bold(self, value):
+    self._bold = value
+    self.selection_field.bold = value
+    
+  @property
+  def font(self):
+    return self._font
+  @font.setter
+  def font(self, value):
+    self._font = value
+    self.selection_field.font = value
+    
+  @property
+  def font_size(self):
+    return self._font_size
+  @font_size.setter
+  def font_size(self, value):
+    self._font_size = value
+    self.selection_field.font_size = value
+  
+  @property
+  def text_color(self):
+    return self._text_color
+  @text_color.setter
+  def text_color(self, value):
+    self._text_color = value
+    self.selection_field.text_color = value
+  
+  @property
+  def italic(self):
+    return self._italic
+  @italic.setter
+  def italic(self, value):
+    self._italic = value
+    self.selection_field.italic = value
+  
+  @property
+  def underline(self):
+    return self._underline
+  @underline.setter
+  def underline(self, value):
+    self._underline = value
+    self.selection_field.underline = value
   
   @property
   def enabled(self):

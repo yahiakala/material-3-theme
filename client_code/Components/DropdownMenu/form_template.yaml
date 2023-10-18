@@ -3,8 +3,6 @@ properties:
   group: Selection Field Style}
 - {name: bold, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
   group: Selection Field Style}
-- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value,
-  group: Selection Field Style}
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
   group: Attributes}
 - {name: font, type: string, default_value: '', important: false, description: The font family to use for this component,

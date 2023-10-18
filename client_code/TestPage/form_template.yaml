@@ -161,8 +161,10 @@ components_by_slot:
         items: ['']
         label_text: smol
         include_placeholder: ''
+        background: theme:Error Overlay 2
+        text_color: theme:On Primary Container
       type: form:Components.DropdownMenu
-      layout_properties: {width: 358}
+      layout_properties: {width: 245}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: image_3
