@@ -135,6 +135,37 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       # fits in default position
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+
+    # def update_menu_placement(self):
+  #   menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
+  #   menuNode.removeAttribute("style")
+  #   menuNode.style.maxWidth = "unset"
+  #   self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
+  #   self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+  #   # horizontal placement
+  #   menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
+  #   menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
+    
+  #   # vertical placement
+  #   menuTop = self._box_positioning['bottom']
+  #   menuBottom = menuTop + self._menu_size['height']
+  #   spaceAtTop = self._box_positioning['top']
+  #   spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
+    
+  #   # menu won't fit in the standrd spot under the text field
+  #   if spaceAtBottom < self._menu_size["height"]:
+  #     # place the menu at the bottom
+  #     if spaceAtBottom > spaceAtTop:
+  #       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+  #       menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
+  #     # place the menu at the top
+  #     else:
+  #       menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
+  #       if spaceAtTop < self._menu_size["height"]:
+  #         menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
+  #   else:
+  #      menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+  
     
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
