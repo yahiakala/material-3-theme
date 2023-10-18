@@ -118,15 +118,21 @@ components_by_slot:
     components:
     - name: dropdown_menu_1
       properties:
+        display_font_size: 20
         label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
         appearance: ''
+        bold_display: true
         align: right
+        italic_display: true
+        display_text_color: '#96d35f'
         placeholder: ' Make a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
           This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
           fl;kjMake a selection. This one is None salkjdf;a fl;kj'
         enabled: true
+        display_font: Arial
+        label_font: Times New Roman
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
         visible: true
         italic_items: true
@@ -162,15 +168,17 @@ components_by_slot:
     components:
     - name: dropdown_menu_3
       properties:
-        items: ['']
         label_text: smol
-        include_placeholder: ''
-        background: theme:On Tertiary Container
+        display_text_color: white
         text_color: theme:Tertiary Container
+        items: ['']
+        label_text_color: cyan
         items_text_color: theme:On Secondary
         items_background: theme:Error
+        background: theme:On Tertiary Container
+        include_placeholder: ''
       type: form:Components.DropdownMenu
-      layout_properties: {width: 245}
+      layout_properties: {width: 720}
       data_bindings:
       - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: image_3

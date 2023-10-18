@@ -37,6 +37,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
+    self.selection_field.dom_nodes['text-field-input'].style.cursor = "pointer"
     self.selection_field.dom_nodes['text-field-input'].setAttribute("readonly", True)
           
     self.shield = document.createElement("div")
@@ -87,7 +88,7 @@ class DropdownMenu(DropdownMenuTemplate):
   
   @property
   def label_text_color(self):
-    return self.label_text_color
+    return self._label_text_color
   @label_text_color.setter
   def label_text_color(self, value):
     self._label_text_color = value

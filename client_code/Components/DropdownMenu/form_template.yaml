@@ -51,12 +51,18 @@ properties:
   group: Dropdown Items Style}
 - {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels,
   group: Dropdown Items Style}
-- {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics, group: Selection Field Style}
-- {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold, group: Selection Field Style}
-- {name: underline_display, type: boolean, default_value: false, important: false, description: Display this component’s text in underline, group: Selection Field Style}
-- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text, group: Selection Field Style}
-- {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels, group: Selection Field Style}
-- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color, group: Selection Field Style}
+- {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
+  group: Selection Field Style}
+- {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
+  group: Selection Field Style}
+- {name: underline_display, type: boolean, default_value: false, important: false,
+  description: Display this component’s text in underline, group: Selection Field Style}
+- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text,
+  group: Selection Field Style}
+- {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
+  group: Selection Field Style}
+- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
+  group: Selection Field Style}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
