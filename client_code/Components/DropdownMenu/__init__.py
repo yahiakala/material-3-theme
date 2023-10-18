@@ -303,17 +303,18 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key is "Tab" or "Escape":
         self.closeMenu()
         
-      def attemptSelect(self):
+      def attemptSelect():
         # event.preventDefault();
         print(self._hoverIndex)
+        print(self._children)
         if not self._hoverIndex is None:
           self._children[self._hoverIndex].raise_event("click")
         self.closeMenu()
         
       if (event.key is " "): #space key as " " is stupid
-        self.attemptSelect()
+        attemptSelect()
       if (event.key is "Enter"):
-        self.attemptSelect()
+        attemptSelect()
   
 
     
