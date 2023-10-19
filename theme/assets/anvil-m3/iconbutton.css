@@ -4,6 +4,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+/*   background-color: purple; */
 }
 
 /*       "" : None,
@@ -12,12 +13,17 @@
       "Outlined": "outlined"} */
 
 .anvil-m3-iconbutton-container {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  color: var(--anvil-m3-on-surface-variant);
+  border: none;
+  text-align: center;
   cursor: pointer;
 } 
 

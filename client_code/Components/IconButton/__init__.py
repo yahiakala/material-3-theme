@@ -12,11 +12,10 @@ class IconButton(IconButtonTemplate):
     # Set Form properties and Data Bindings.
     
     self._appearance_css_classes = {
-      "" : None,
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
-    
+    self._appearance = ""
     self.init_components(**properties)
 
   @property
@@ -39,8 +38,9 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled-tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
-    class_name = self._appearance_css_classes[value]
-    if class_name is not None:
+    
+    if value is not None:
+      class_name = self._appearance_css_classes[value]
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
     
