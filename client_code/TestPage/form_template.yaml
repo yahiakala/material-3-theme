@@ -51,5 +51,17 @@ components_by_slot:
       properties: {icon: toggle_on, appearance: Outlined, visible: true, enabled: true}
       type: form:Components.IconButton
       layout_properties: {}
+  - name: icon_button_10
+    properties: {}
+    type: form:Components.IconButton
+    layout_properties: {}
+  - name: flow_panel_2
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+  - name: flow_panel_3
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
