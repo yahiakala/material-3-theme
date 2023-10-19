@@ -77,19 +77,19 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: icon_button_11
-      properties: {icon: star}
+      properties: {icon: star, enabled: false, selected: true}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_12
-      properties: {appearance: Filled, icon: settings}
+      properties: {appearance: Filled, icon: settings, enabled: false, selected: true}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_13
-      properties: {appearance: Filled tonal, icon: favorite}
+      properties: {appearance: Filled tonal, icon: favorite, enabled: false, selected: true}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_14
-      properties: {appearance: Outlined, icon: toggle_on}
+      properties: {appearance: Outlined, icon: toggle_on, enabled: false, selected: true}
       type: form:Components.IconButton
       layout_properties: {}
     - name: text_3
@@ -102,19 +102,19 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: icon_button_15
-      properties: {icon: star}
+      properties: {icon: star, enabled: false}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_16
-      properties: {appearance: Filled, icon: settings}
+      properties: {appearance: Filled, icon: settings, enabled: false}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_17
-      properties: {appearance: Filled tonal, icon: favorite}
+      properties: {appearance: Filled tonal, icon: favorite, enabled: false}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_18
-      properties: {appearance: Outlined, icon: toggle_on}
+      properties: {appearance: Outlined, icon: toggle_on, enabled: false}
       type: form:Components.IconButton
       layout_properties: {}
       event_bindings: {}
