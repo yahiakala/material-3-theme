@@ -5,13 +5,28 @@
 </div> */
 
 .anvil-m3-iconbutton-component {
-  
+  height: 48px !important;
+  width: 48px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .anvil-m3-iconbutton-container {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  cursor: pointer;
 }
 
 .anvil-m3-iconbutton-icon {
-  
+  font-size: 
+}
+
+.anvil-m3-iconbutton-icon.filled {
+  font-variation-settings:
+  'FILL' 0,
 }
