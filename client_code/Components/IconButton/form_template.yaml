@@ -3,12 +3,11 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-iconbutton-component\" style=\"display:flex\"\
       >\n  <div class=\"anvil-m3-iconbutton-container\" anvil-name=\"anvil-m3-iconbutton-container\"\
       >\n    <span class=\"material-symbols-outlined anvil-m3-iconbutton-icon\" anvil-name=\"\
-      anvil-m3-iconbutton-icon-outlined\">assist_walker</span>\n    <span class=\"\
-      material-symbols anvil-m3-iconbutton-icon\" anvil-name=\"anvil-m3-iconbutton-icon-filled\"\
-      >assist_walker</span>\n<!--     <span class=\"material-symbols-outlined anvil-m3-radiobutton-checked\"\
+      anvil-m3-iconbutton-icon-outlined\">favorite</span>\n    <span class=\"material-symbols\
+      \ anvil-m3-iconbutton-icon\" anvil-name=\"anvil-m3-iconbutton-icon-filled\"\
+      >favorite</span>\n<!--     <span class=\"material-symbols-outlined anvil-m3-radiobutton-checked\"\
       \ anvil-name=\"anvil-m3-radiobutton-checked\" style=\"display:none\">radio_button_checked</span>\
-      \ -->\n\n    decide if you want this to be a you pick, or a they pick kind of\
-      \ thing\n  </div>\n</div>\n\n<!--\n\n<div anvil-name=\"anvil-m3-radiobutton-component\"\
+      \ -->\n\n  </div>\n</div>\n\n<!--\n\n<div anvil-name=\"anvil-m3-radiobutton-component\"\
       \ style=\"display:flex\">\n  <div anvil-name=\"anvil-m3-radiobutton-container\"\
       \ class=\"anvil-m3-radiobutton-container\">\n    <div class=\"anvil-m3-radiobutton-hover\"\
       \ anvil-name=\"anvil-m3-radiobutton-hover\">\n      <span class=\"material-symbols-outlined\
