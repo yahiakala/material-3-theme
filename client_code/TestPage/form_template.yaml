@@ -61,17 +61,42 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: icon_button_11
-      properties: {}
+      properties: {icon: star}
       type: form:Components.IconButton
+      layout_properties: {}
     - name: icon_button_12
-      properties: {}
+      properties: {appearance: Filled, icon: settings}
       type: form:Components.IconButton
+      layout_properties: {}
     - name: icon_button_13
-      properties: {}
+      properties: {appearance: Filled tonal, icon: favorite}
       type: form:Components.IconButton
+      layout_properties: {}
+    - name: icon_button_14
+      properties: {appearance: Outlined, icon: toggle_on}
+      type: form:Components.IconButton
+      layout_properties: {}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
     layout_properties: {}
+    components:
+    - name: icon_button_15
+      properties: {icon: star}
+      type: form:Components.IconButton
+      layout_properties: {}
+    - name: icon_button_16
+      properties: {appearance: Filled, icon: settings}
+      type: form:Components.IconButton
+      layout_properties: {}
+    - name: icon_button_17
+      properties: {appearance: Filled tonal, icon: favorite}
+      type: form:Components.IconButton
+      layout_properties: {}
+    - name: icon_button_18
+      properties: {appearance: Outlined}
+      type: form:Components.IconButton
+      layout_properties: {}
+      event_bindings: {}
 components: []
 event_bindings: {show: form_show}
