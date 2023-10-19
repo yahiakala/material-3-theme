@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: icon_button_1
-    properties: {}
+    properties: {icon: favorite}
     type: form:Components.IconButton
     layout_properties: {}
   - name: flow_panel_9
@@ -12,7 +12,8 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: icon_button_2
-      properties: {}
+      properties: {selected: true, icon: star}
       type: form:Components.IconButton
+      layout_properties: {}
 components: []
 event_bindings: {show: form_show}

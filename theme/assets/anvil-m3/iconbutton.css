@@ -1,9 +1,3 @@
-/* <div anvil-name="anvil-m3-iconbutton-component" class="anvil-m3-iconbutton-component">
-  <div class="anvil-m3-iconbutton-container" anvil-name="anvil-m3-iconbutton-container">
-    <span class="material-symbols-outlined anvil-m3-iconbutton-icon" anvil-name="anvil-m3-iconbutton-icon">favorite</span>
-  </div>
-</div> */
-
 .anvil-m3-iconbutton-component {
   height: 48px !important;
   width: 48px !important;
@@ -20,11 +14,13 @@
   width: 40px;
   border-radius: 40px;
   cursor: pointer;
-  background-color: green;
+  background-color: pink;
 }
 
 .anvil-m3-iconbutton-icon {
   font-size: 20px;
+  
+  vertical-align: middle;
 }
 
 .anvil-m3-iconbutton-icon.selected {
