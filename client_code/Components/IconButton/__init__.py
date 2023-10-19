@@ -5,11 +5,17 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import innerText_property
+from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self._appearance_css_classes = {
+      "" : None,
+      "Filled": "filled",
+      "Filled tonal": "filled-tonal",
+      "Outlined": "outlined"}
 
   @property
   def selected(self):
@@ -17,7 +23,7 @@ class IconButton(IconButtonTemplate):
   @selected.setter
   def selected(self, value):
     self._selected = value
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", value)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
 
   @property
   def appearance(self):
@@ -26,6 +32,7 @@ class IconButton(IconButtonTemplate):
   def appearance(self, value):
     self._appearance = value
     # todo update the css of the dom
-
-  icon = innerText_property('anvil-m3-iconbutton-icon')
     
+  visible = HtmlTemplate.visible
+  icon = innerText_property('anvil-m3-iconbutton-icon')
+
