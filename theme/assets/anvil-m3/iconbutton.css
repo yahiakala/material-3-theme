@@ -20,13 +20,14 @@
   width: 40px;
   border-radius: 40px;
   cursor: pointer;
+  background-color: green;
 }
 
 .anvil-m3-iconbutton-icon {
-  font-size: 
+  font-size: 20px;
 }
 
 .anvil-m3-iconbutton-icon.filled {
   font-variation-settings:
-  'FILL' 0,
+  'FILL' 1,
 }
