@@ -24,6 +24,7 @@ class IconButton(IconButtonTemplate):
   @selected.setter
   def selected(self, value):
     self._selected = value
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
 
   @property
