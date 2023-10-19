@@ -52,13 +52,23 @@ components_by_slot:
       type: form:Components.IconButton
       layout_properties: {}
   - name: icon_button_10
-    properties: {}
+    properties: {enabled: true, selected: true, icon: favorite}
     type: form:Components.IconButton
     layout_properties: {}
   - name: flow_panel_2
     properties: {}
     type: FlowPanel
     layout_properties: {}
+    components:
+    - name: icon_button_11
+      properties: {}
+      type: form:Components.IconButton
+    - name: icon_button_12
+      properties: {}
+      type: form:Components.IconButton
+    - name: icon_button_13
+      properties: {}
+      type: form:Components.IconButton
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
