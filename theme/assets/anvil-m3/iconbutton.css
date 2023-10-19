@@ -27,7 +27,7 @@
   font-size: 20px;
 }
 
-.anvil-m3-iconbutton-icon.filled {
+.anvil-m3-iconbutton-icon.selected {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
