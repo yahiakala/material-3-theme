@@ -10,12 +10,14 @@ from anvil import HtmlTemplate
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    
     self._appearance_css_classes = {
       "" : None,
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
+    
+    self.init_components(**properties)
 
   @property
   def selected(self):

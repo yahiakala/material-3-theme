@@ -6,6 +6,11 @@
   justify-content: center;
 }
 
+/*       "" : None,
+      "Filled": "filled",
+      "Filled tonal": "filled-tonal",
+      "Outlined": "outlined"} */
+
 .anvil-m3-iconbutton-container {
   display: flex;
   justify-content: center;
@@ -14,8 +19,7 @@
   width: 40px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: pink;
-}
+} 
 
 .anvil-m3-iconbutton-icon {
   font-size: 20px;
