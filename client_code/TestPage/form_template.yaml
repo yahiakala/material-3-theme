@@ -20,11 +20,11 @@ components_by_slot:
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_4
-      properties: {icon: toggle_on, selected: true, appearance: Filled tonal}
+      properties: {icon: favorite, selected: true, appearance: Filled tonal}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_5
-      properties: {icon: token, selected: true, appearance: Outlined}
+      properties: {icon: toggle_on, selected: true, appearance: Outlined}
       type: form:Components.IconButton
       layout_properties: {}
   - name: flow_panel_1
@@ -33,19 +33,19 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: icon_button_6
-      properties: {icon: image}
+      properties: {icon: star}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_7
-      properties: {icon: change_circle, appearance: Filled}
+      properties: {icon: settings, appearance: Filled}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_8
-      properties: {icon: disabled_by_default, appearance: Filled tonal}
+      properties: {icon: favorite, appearance: Filled tonal}
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_9
-      properties: {icon: backspace, appearance: Outlined}
+      properties: {icon: toggle_on, appearance: Outlined}
       type: form:Components.IconButton
       layout_properties: {}
 components: []

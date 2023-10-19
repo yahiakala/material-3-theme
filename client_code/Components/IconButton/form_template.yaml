@@ -378,4 +378,4 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-iconbutton-component\" class=\"anvil-m3-iconbutton-component\"\
       >\n  <div class=\"anvil-m3-iconbutton-container\" anvil-name=\"anvil-m3-iconbutton-container\"\
       >\n    <span class=\"material-symbols-outlined anvil-m3-iconbutton-icon\" anvil-name=\"\
-      anvil-m3-iconbutton-icon\">favorite</span>\n  </div>\n</div>"}
+      anvil-m3-iconbutton-icon\"></span>\n  </div>\n</div>"}

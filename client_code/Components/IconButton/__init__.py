@@ -17,7 +17,7 @@ class IconButton(IconButtonTemplate):
   @selected.setter
   def selected(self, value):
     self._selected = value
-    # todo update the css of the dom
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", value)
 
   @property
   def appearance(self):
