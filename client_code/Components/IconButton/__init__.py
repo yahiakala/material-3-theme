@@ -31,7 +31,17 @@ class IconButton(IconButtonTemplate):
   @appearance.setter
   def appearance(self, value):
     self._appearance = value
-    # todo update the css of the dom
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
+    class_name = self._appearance_css_classes[value]
+    if class_name is not None:
+      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
+      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
+    
     
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon')
