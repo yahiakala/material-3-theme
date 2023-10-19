@@ -1,4 +1,10 @@
-properties: []
+properties:
+- {name: selected, type: boolean, default_value: false, default_binding_prop: true,
+  important: true}
+- name: appearance
+  type: enum
+  important: true
+  options: []
 is_package: true
 events:
 - {name: click, default_event: true}
