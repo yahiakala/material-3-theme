@@ -42,6 +42,7 @@
 .anvil-m3-iconbutton-container.filled:focus, .anvil-m3-iconbutton-container.selected.filled:focus { background-color: var(--anvil-m3-primary-overlay-2); }
 .anvil-m3-iconbutton-container.filled:active, .anvil-m3-iconbutton-container.selected.filled:active { background-color: var(--anvil-m3-dark-overlay-2); }
 
+/* NOT selected. */
 
 /* filled selected */
 .anvil-m3-iconbutton-container.selected:hover { background-color: var(--anvil-m3-primary-overlay-2); }
