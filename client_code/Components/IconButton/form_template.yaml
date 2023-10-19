@@ -368,8 +368,8 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: enabled, type: boolean, default_value: false, important: true}
-- {name: visible, type: boolean, default_value: false, important: true}
+- {name: enabled, type: boolean, default_value: true, important: true}
+- {name: visible, type: boolean, default_value: true, important: true}
 is_package: true
 events:
 - {name: click, default_event: true}
