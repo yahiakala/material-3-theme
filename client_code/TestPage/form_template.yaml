@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: text_5
+    properties: {text: enabled}
+    type: form:Components.Text
+    layout_properties: {}
   - name: icon_button_1
     properties: {icon: favorite, enabled: true}
     type: form:Components.IconButton
@@ -30,6 +34,10 @@ components_by_slot:
         enabled: true}
       type: form:Components.IconButton
       layout_properties: {}
+    - name: text_1
+      properties: {text: selected}
+      type: form:Components.Text
+      layout_properties: {}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
@@ -51,8 +59,16 @@ components_by_slot:
       properties: {icon: toggle_on, appearance: Outlined, visible: true, enabled: true}
       type: form:Components.IconButton
       layout_properties: {}
+    - name: text_2
+      properties: {text: unselected}
+      type: form:Components.Text
+      layout_properties: {}
+  - name: text_6
+    properties: {text: disabled}
+    type: form:Components.Text
+    layout_properties: {}
   - name: icon_button_10
-    properties: {enabled: true, selected: true, icon: favorite}
+    properties: {enabled: false, selected: true, icon: favorite}
     type: form:Components.IconButton
     layout_properties: {}
   - name: flow_panel_2
@@ -76,6 +92,10 @@ components_by_slot:
       properties: {appearance: Outlined, icon: toggle_on}
       type: form:Components.IconButton
       layout_properties: {}
+    - name: text_3
+      properties: {text: selected}
+      type: form:Components.Text
+      layout_properties: {}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
@@ -94,9 +114,13 @@ components_by_slot:
       type: form:Components.IconButton
       layout_properties: {}
     - name: icon_button_18
-      properties: {appearance: Outlined}
+      properties: {appearance: Outlined, icon: toggle_on}
       type: form:Components.IconButton
       layout_properties: {}
       event_bindings: {}
+    - name: text_4
+      properties: {text: unselected}
+      type: form:Components.Text
+      layout_properties: {}
 components: []
 event_bindings: {show: form_show}
