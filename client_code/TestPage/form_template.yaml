@@ -60,7 +60,7 @@ components_by_slot:
       type: form:Components.IconButton
       layout_properties: {}
     - name: text_1
-      properties: {text: selected}
+      properties: {text: 'selected, no pseudo states'}
       type: form:Components.Text
       layout_properties: {}
   - name: text_6
@@ -119,7 +119,7 @@ components_by_slot:
       type: form:Components.IconButton
       layout_properties: {}
     - name: text_3
-      properties: {text: selected}
+      properties: {text: 'selected, no pseudo states'}
       type: form:Components.Text
       layout_properties: {}
 components: []
