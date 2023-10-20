@@ -68,11 +68,11 @@
 .anvil-m3-iconbutton-container.outlined:not(.toggle):focus, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 .anvil-m3-iconbutton-container.outlined:not(.toggle):active, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 
-.anvil-m3-iconbutton-container.filled.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-surface-container-highest) }
-.anvil-m3-iconbutton-container.filled.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-surface-container-highest) }
-.anvil-m3-iconbutton-container.filled.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)),  var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  var(--anvil-m3-surface-container-highest) }
 
-.anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):hover { background: green }
+.anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)),  var(--anvil-m3-surface-container-highest) }
 .anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):focus { background: pink }
 .anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):active { background: pink }
 /* 
