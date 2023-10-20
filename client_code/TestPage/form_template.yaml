@@ -80,7 +80,34 @@ components_by_slot:
         type: form:Components.IconButton
         layout_properties: {}
       - name: text_3
-        properties: {text: disabled}
+        properties: {text: disabled unselected}
+        type: form:Components.Text
+        layout_properties: {}
+    - name: flow_panel_3_copy_2_copy_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_5_copy_3_copy_1
+        properties: {icon: settings, toggle: true, enabled: false, selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_4_copy_1
+        properties: {icon: settings, appearance: Filled, toggle: true, enabled: false,
+          selected: true, visible: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_1_copy_2_copy_1
+        properties: {icon: settings, appearance: Filled tonal, toggle: true, enabled: false,
+          selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_2_copy_2_copy_1
+        properties: {icon: settings, appearance: Outlined, toggle: true, enabled: false,
+          selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_3_copy_2
+        properties: {text: disabled selected}
         type: form:Components.Text
         layout_properties: {}
   - name: linear_panel_2
