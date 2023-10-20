@@ -32,8 +32,6 @@ class IconButton(IconButtonTemplate):
       self.selected = not self.selected
     self.raise_event("click")
     
-    
-    
   @property
   def toggle(self):
     return self._toggle
