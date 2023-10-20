@@ -371,6 +371,12 @@ properties:
 - {name: enabled, type: boolean, default_value: true, important: true}
 - {name: visible, type: boolean, default_value: true, important: true}
 - {name: toggle, type: boolean, default_value: false, important: true, description: Use as toggle}
+- {name: border, type: string, default_value: '', group: Style}
+- {name: background, type: color, default_value: '', important: false, group: Style}
+- {name: icon_color, type: color, default_value: '', important: false, group: Style}
+- {name: selected_border, type: string, default_value: '', description: Only used if toggle is enabled, group: Style}
+- {name: selected_background, type: color, default_value: '', important: false, description: Only used if toggle is enabled, group: Style}
+- {name: selected_icon_color, type: color, default_value: '', important: false, description: Only used if toggle is enabled, group: Style}
 is_package: true
 events:
 - {name: click, default_event: true}
