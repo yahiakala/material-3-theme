@@ -2,6 +2,58 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: linear_panel_2
+    properties: {}
+    type: LinearPanel
+    layout_properties: {}
+    components:
+    - name: text_2
+      properties: {text: none toggle}
+      type: form:Components.Text
+      layout_properties: {}
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_1
+        properties: {icon: settings}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2
+        properties: {icon: settings, appearance: Filled}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_3
+        properties: {icon: settings, appearance: Filled tonal}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_4
+        properties: {icon: settings, appearance: Outlined}
+        type: form:Components.IconButton
+        layout_properties: {}
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_1_copy_1
+        properties: {icon: settings, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2_copy_1
+        properties: {icon: settings, appearance: Filled, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_3_copy_1
+        properties: {icon: settings, appearance: Filled tonal, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_4_copy_1
+        properties: {icon: settings, appearance: Outlined, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_3_copy_1
+        properties: {text: disabled}
+        type: form:Components.Text
   - name: linear_panel_1
     properties: {}
     type: LinearPanel
@@ -110,57 +162,5 @@ components_by_slot:
         properties: {text: disabled selected}
         type: form:Components.Text
         layout_properties: {}
-  - name: linear_panel_2
-    properties: {}
-    type: LinearPanel
-    layout_properties: {}
-    components:
-    - name: text_2
-      properties: {text: none toggle}
-      type: form:Components.Text
-      layout_properties: {}
-    - name: flow_panel_2
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: icon_button_1
-        properties: {icon: settings}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_2
-        properties: {icon: settings, appearance: Filled}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_3
-        properties: {icon: settings, appearance: Filled tonal}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_4
-        properties: {icon: settings, appearance: Outlined}
-        type: form:Components.IconButton
-        layout_properties: {}
-    - name: flow_panel_2_copy_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: icon_button_1_copy_1
-        properties: {icon: settings, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_2_copy_1
-        properties: {icon: settings, appearance: Filled, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_3_copy_1
-        properties: {icon: settings, appearance: Filled tonal, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_4_copy_1
-        properties: {icon: settings, appearance: Outlined, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: text_3_copy_1
-        properties: {text: disabled}
-        type: form:Components.Text
 components: []
 event_bindings: {show: form_show}
