@@ -19,6 +19,7 @@ components_by_slot:
         properties: {icon: settings}
         type: form:Components.IconButton
         layout_properties: {}
+        event_bindings: {click: icon_button_1_click}
       - name: icon_button_2
         properties: {icon: settings, appearance: Filled}
         type: form:Components.IconButton

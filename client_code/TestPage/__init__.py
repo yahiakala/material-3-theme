@@ -17,3 +17,6 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
     # self.selecty_items = [(cat['Items'], cat) for cat in app_tables.test.search()]
     # self.drop_down_1.items = self.selecty_items
+
+  def icon_button_1_click(self, **event_args):
+    alert("clicked!!!!")
