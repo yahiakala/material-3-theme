@@ -33,14 +33,14 @@
 .anvil-m3-iconbutton-icon.outlined {}
 .anvil-m3-iconbutton-container.outlined { border: 1px solid var(--anvil-m3-outline) }
 
-.anvil-m3-iconbutton-icon.toggle { color: var(--anvil-m3-on-surface-variant); font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
+.anvil-m3-iconbutton-icon.toggle { color: var(--anvil-m3-on-surface-variant) }
 .anvil-m3-iconbutton-container.toggle { background-color: transparent }
-.anvil-m3-iconbutton-icon.filled.toggle { color: var(--anvil-m3-on-primary) }
-.anvil-m3-iconbutton-container.filled.toggle { background-color: var(--anvil-m3-primary) }
-.anvil-m3-iconbutton-icon.filled-tonal.toggle { color: var(--anvil-m3-on-secondary-container) }
-.anvil-m3-iconbutton-container.filled-tonal.toggle { background-color: var(--anvil-m3-secondary-container) } 
-.anvil-m3-iconbutton-icon.outlined.toggle {}
-.anvil-m3-iconbutton-container.outlined.toggle { border: 1px solid var(--anvil-m3-outline) }
+.anvil-m3-iconbutton-icon.filled.toggle { color: var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-container.filled.toggle { background-color: var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-icon.filled-tonal.toggle { color: var(--anvil-m3-on-surface-variant) }
+.anvil-m3-iconbutton-container.filled-tonal.toggle { background-color: var(--anvil-m3-surface-container-highest) } 
+.anvil-m3-iconbutton-icon.outlined.toggle { color: var(--anvil-m3-on-surface-variant) }
+.anvil-m3-iconbutton-container.outlined.toggle {}
 
 .anvil-m3-iconbutton-icon.selected.toggle { color: var(--anvil-m3-primary); font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
 .anvil-m3-iconbutton-container.selected.toggle { background-color: transparent }
@@ -48,10 +48,25 @@
 .anvil-m3-iconbutton-container.filled.selected.toggle { background-color: var(--anvil-m3-primary) }
 .anvil-m3-iconbutton-icon.filled-tonal.selected.toggle { color: var(--anvil-m3-on-secondary-container) }
 .anvil-m3-iconbutton-container.filled-tonal.selected.toggle { background-color: var(--anvil-m3-secondary-container) } 
-.anvil-m3-iconbutton-icon.outlined.selected.toggle {}
-.anvil-m3-iconbutton-container.outlined.selected.toggle { border: 1px solid var(--anvil-m3-outline) }
+.anvil-m3-iconbutton-icon.outlined.selected.toggle { color: var(--anvil-m3-inverse-on-surface)}
+.anvil-m3-iconbutton-container.outlined.selected.toggle { background-color: var(--anvil-m3-on-surface-variant) }
 
 
+.anvil-m3-iconbutton-icon:not(.toggle) {}
+.anvil-m3-iconbutton-container:not(.toggle) {}
+
+.anvil-m3-iconbutton-icon.filled:not(.toggle) {}
+.anvil-m3-iconbutton-container.filled:not(.toggle) {}
+
+.anvil-m3-iconbutton-icon.filled-tonal:not(.toggle) {}
+.anvil-m3-iconbutton-container.filled-tonal:not(.toggle) {}
+
+.anvil-m3-iconbutton-icon.outlined:not(.toggle):hover {}
+.anvil-m3-iconbutton-container.outlined:not(.toggle):hover {}
+.anvil-m3-iconbutton-icon.outlined:not(.toggle):focus {}
+.anvil-m3-iconbutton-container.outlined:not(.toggle):focus {}
+.anvil-m3-iconbutton-icon.outlined:not(.toggle):active {}
+.anvil-m3-iconbutton-container.outlined:not(.toggle):active {}
 
 
 
