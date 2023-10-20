@@ -293,3 +293,5 @@ color_scheme:
   - {name: Surface Container, color: '#F3EDF7'}
   - {name: Inverse Surface, color: '#322F35'}
   - {name: Inverse On Surface, color: '#F5EFF7'}
+  - {name: Primary Dark Overlay 1, color: 'rgba(103,80,164, 0.8)'}
+  - {name: Primary Dark Overlay 2, color: '#000000'}
