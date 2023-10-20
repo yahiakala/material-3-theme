@@ -68,9 +68,9 @@
 .anvil-m3-iconbutton-container.outlined:not(.toggle):focus, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 .anvil-m3-iconbutton-container.outlined:not(.toggle):active, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 
-.anvil-m3-iconbutton-container.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)),  var(--anvil-m3-primary) }
-.anvil-m3-iconbutton-container.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  var(--anvil-m3-primary) }
-.anvil-m3-iconbutton-container.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-container.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)),  transparent }
+.anvil-m3-iconbutton-container.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  transparent }
+.anvil-m3-iconbutton-container.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  transparent }
 
 .anvil-m3-iconbutton-container.filled.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)),  var(--anvil-m3-surface-container-highest) }
 .anvil-m3-iconbutton-container.filled.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-3), var(--anvil-m3-primary-overlay-3)),  var(--anvil-m3-surface-container-highest) }
@@ -83,7 +83,7 @@
 .anvil-m3-iconbutton-container.outlined.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-inverse-on-surface-overlay-1), var(--anvil-m3-inverse-on-surface-overlay-1)),  var(--anvil-m3-inverse-surface) }
 .anvil-m3-iconbutton-container.outlined.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-inverse-on-surface-overlay-2), var(--anvil-m3-inverse-on-surface-overlay-2)),  var(--anvil-m3-inverse-surface) }
 .anvil-m3-iconbutton-container.outlined.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-inverse-on-surface-overlay-2), var(--anvil-m3-inverse-on-surface-overlay-2)),  var(--anvil-m3-inverse-surface) }
-
+.anvil-m3-iconbutton-container.outlined.toggle.selected { border: none }
 
 
 /* .anvil-m3-button.anvil-m3-filled:hover { var(--anvil-m3-primary) } */
