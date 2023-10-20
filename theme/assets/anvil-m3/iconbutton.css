@@ -52,38 +52,33 @@
 .anvil-m3-iconbutton-container.outlined.selected.toggle { background-color: var(--anvil-m3-on-surface-variant) }
 
 
-
-
-
-/* not toggle */
-
-.anvil-m3-iconbutton-icon:not(.toggle):hover {}
 .anvil-m3-iconbutton-container:not(.toggle):hover, .anvil-m3-iconbutton-container.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-dark-overlay-1) }
-.anvil-m3-iconbutton-icon:not(.toggle):focus {}
 .anvil-m3-iconbutton-container:not(.toggle):focus, .anvil-m3-iconbutton-container.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
-.anvil-m3-iconbutton-icon:not(.toggle):active {}
 .anvil-m3-iconbutton-container:not(.toggle):active, .anvil-m3-iconbutton-container.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 
-.anvil-m3-iconbutton-icon.filled:not(.toggle):hover {}
-.anvil-m3-iconbutton-container.filled:not(.toggle):hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) }
-.anvil-m3-iconbutton-icon.filled:not(.toggle):focus {}
-.anvil-m3-iconbutton-container.filled:not(.toggle):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-primary) }
-.anvil-m3-iconbutton-icon.filled:not(.toggle):active {}
-.anvil-m3-iconbutton-container.filled:not(.toggle):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-container.filled:not(.toggle):hover, .anvil-m3-iconbutton-container.filled.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-container.filled:not(.toggle):focus, .anvil-m3-iconbutton-container.filled.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-container.filled:not(.toggle):active, .anvil-m3-iconbutton-container.filled.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-primary) }
 
-.anvil-m3-iconbutton-icon.filled-tonal:not(.toggle):hover {}
-.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-secondary-container) }
-.anvil-m3-iconbutton-icon.filled-tonal:not(.toggle):focus {}
-.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
-.anvil-m3-iconbutton-icon.filled-tonal:not(.toggle):active {}
-.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):hover, .anvil-m3-iconbutton-container.filled-tonal.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):focus, .anvil-m3-iconbutton-container.filled-tonal.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.filled-tonal:not(.toggle):active, .anvil-m3-iconbutton-container.filled-tonal.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
 
-.anvil-m3-iconbutton-icon.outlined:not(.toggle):hover {}
-.anvil-m3-iconbutton-container.outlined:not(.toggle):hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-dark-overlay-1) }
-.anvil-m3-iconbutton-icon.outlined:not(.toggle):focus {}
-.anvil-m3-iconbutton-container.outlined:not(.toggle):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
-.anvil-m3-iconbutton-icon.outlined:not(.toggle):active {}
-.anvil-m3-iconbutton-container.outlined:not(.toggle):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
+.anvil-m3-iconbutton-container.outlined:not(.toggle):hover, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-dark-overlay-1) }
+.anvil-m3-iconbutton-container.outlined:not(.toggle):focus, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
+.anvil-m3-iconbutton-container.outlined:not(.toggle):active, .anvil-m3-iconbutton-container.outlined.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
+
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-surface-container-highest) }
+.anvil-m3-iconbutton-container.filled.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-surface-container-highest) }
+
+.anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-on-surface-variant) }
+.anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-on-surface-variant) }
+.anvil-m3-iconbutton-container.filled-tonal.toggle:not(.selected):active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-on-surface-variant) }
+
+.anvil-m3-iconbutton-container.outlined.toggle.selected:hover { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)),  var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.outlined.toggle.selected:focus { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.outlined.toggle.selected:active { background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)),  var(--anvil-m3-secondary-container) }
 
 
 
