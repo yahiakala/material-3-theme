@@ -31,7 +31,27 @@
 .anvil-m3-iconbutton-icon.filled-tonal { color: var(--anvil-m3-on-secondary-container) }
 .anvil-m3-iconbutton-container.filled-tonal { background-color: var(--anvil-m3-secondary-container) } 
 .anvil-m3-iconbutton-icon.outlined {}
-.anvil-m3-iconbutton-container.outlined { border: 1px solid var(--anvil-m3-secondary-container) }
+.anvil-m3-iconbutton-container.outlined { border: 1px solid var(--anvil-m3-outline) }
+
+.anvil-m3-iconbutton-icon.toggle { color: var(--anvil-m3-on-surface-variant); font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
+.anvil-m3-iconbutton-container.toggle { background-color: transparent }
+.anvil-m3-iconbutton-icon.filled.toggle { color: var(--anvil-m3-on-primary) }
+.anvil-m3-iconbutton-container.filled.toggle { background-color: var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-icon.filled-tonal.toggle { color: var(--anvil-m3-on-secondary-container) }
+.anvil-m3-iconbutton-container.filled-tonal.toggle { background-color: var(--anvil-m3-secondary-container) } 
+.anvil-m3-iconbutton-icon.outlined.toggle {}
+.anvil-m3-iconbutton-container.outlined.toggle { border: 1px solid var(--anvil-m3-outline) }
+
+.anvil-m3-iconbutton-icon.selected.toggle { color: var(--anvil-m3-primary); font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
+.anvil-m3-iconbutton-container.selected.toggle { background-color: transparent }
+.anvil-m3-iconbutton-icon.filled.selected.toggle { color: var(--anvil-m3-on-primary) }
+.anvil-m3-iconbutton-container.filled.selected.toggle { background-color: var(--anvil-m3-primary) }
+.anvil-m3-iconbutton-icon.filled-tonal.selected.toggle { color: var(--anvil-m3-on-secondary-container) }
+.anvil-m3-iconbutton-container.filled-tonal.selected.toggle { background-color: var(--anvil-m3-secondary-container) } 
+.anvil-m3-iconbutton-icon.outlined.selected.toggle {}
+.anvil-m3-iconbutton-container.outlined.selected.toggle { border: 1px solid var(--anvil-m3-outline) }
+
+
 
 
 
@@ -48,7 +68,6 @@
 
 /* standard selected */
 /* .anvil-m3-iconbutton-icon.selected {
-  color: var(--anvil-m3-primary);
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24
 } */
 
