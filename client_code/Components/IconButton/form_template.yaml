@@ -1,6 +1,6 @@
 properties:
 - {name: selected, type: boolean, default_value: false, default_binding_prop: true,
-  important: true}
+  important: true, description: Only used if toggle is also enabled}
 - name: appearance
   type: enum
   important: true
@@ -370,6 +370,7 @@ properties:
     zoom_out, zoom_out_map]
 - {name: enabled, type: boolean, default_value: true, important: true}
 - {name: visible, type: boolean, default_value: true, important: true}
+- {name: toggle, type: boolean, default_value: false, important: true, description: Use as toggle}
 is_package: true
 events:
 - {name: click, default_event: true}

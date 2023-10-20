@@ -2,125 +2,138 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: text_5
-    properties: {text: enabled}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: icon_button_1
-    properties: {icon: favorite, enabled: true}
-    type: form:Components.IconButton
-    layout_properties: {}
-  - name: flow_panel_1
+  - name: linear_panel_1
     properties: {}
-    type: FlowPanel
+    type: LinearPanel
     layout_properties: {}
     components:
-    - name: icon_button_6
-      properties: {icon: settings, visible: true, enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_7
-      properties: {icon: settings, appearance: Filled, visible: true, enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_8
-      properties: {icon: settings, appearance: Filled tonal, visible: true, enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_9
-      properties: {icon: settings, appearance: Outlined, visible: true, enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: text_2
-      properties: {text: unselected}
-      type: form:Components.Text
-      layout_properties: {}
-  - name: flow_panel_9
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: icon_button_2
-      properties: {selected: true, icon: settings, enabled: true, visible: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_3
-      properties: {icon: settings, selected: true, appearance: Filled, visible: true,
-        enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_4
-      properties: {icon: settings, selected: true, appearance: Filled tonal, visible: true,
-        enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_5
-      properties: {icon: settings, selected: true, appearance: Outlined, visible: true,
-        enabled: true}
-      type: form:Components.IconButton
-      layout_properties: {}
     - name: text_1
-      properties: {text: 'selected, no pseudo states'}
+      properties: {text: toggle}
       type: form:Components.Text
       layout_properties: {}
-  - name: text_6
-    properties: {text: disabled}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: icon_button_10
-    properties: {enabled: false, selected: true, icon: favorite}
-    type: form:Components.IconButton
-    layout_properties: {}
-  - name: flow_panel_3
+    - name: flow_panel_3
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_5
+        properties: {icon: settings, toggle: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1
+        properties: {icon: settings, appearance: Filled, toggle: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_1
+        properties: {icon: settings, appearance: Filled tonal, toggle: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_2
+        properties: {icon: settings, appearance: Outlined, toggle: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_5
+        properties: {text: unselected}
+        type: form:Components.Text
+        layout_properties: {}
+    - name: flow_panel_3_copy_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_5_copy_2
+        properties: {icon: settings, toggle: true, selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_3
+        properties: {icon: settings, appearance: Filled, toggle: true, selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_1_copy_1
+        properties: {icon: settings, appearance: Filled tonal, toggle: true, selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_2_copy_1
+        properties: {icon: settings, appearance: Outlined, toggle: true, selected: true}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_4
+        properties: {text: selected}
+        type: form:Components.Text
+        layout_properties: {}
+    - name: flow_panel_3_copy_2
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_5_copy_3
+        properties: {icon: settings, toggle: true, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_4
+        properties: {icon: settings, appearance: Filled, toggle: true, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_1_copy_2
+        properties: {icon: settings, appearance: Filled tonal, toggle: true, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_5_copy_1_copy_2_copy_2
+        properties: {icon: settings, appearance: Outlined, toggle: true, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_3
+        properties: {text: disabled}
+        type: form:Components.Text
+        layout_properties: {}
+  - name: linear_panel_2
     properties: {}
-    type: FlowPanel
+    type: LinearPanel
     layout_properties: {}
     components:
-    - name: icon_button_15
-      properties: {icon: settings, enabled: false}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_16
-      properties: {appearance: Filled, icon: settings, enabled: false}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_17
-      properties: {appearance: Filled tonal, icon: settings, enabled: false}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_18
-      properties: {appearance: Outlined, icon: settings, enabled: false}
-      type: form:Components.IconButton
-      layout_properties: {}
-      event_bindings: {}
-    - name: text_4
-      properties: {text: unselected}
+    - name: text_2
+      properties: {text: none toggle}
       type: form:Components.Text
       layout_properties: {}
-  - name: flow_panel_2
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: icon_button_11
-      properties: {icon: settings, enabled: false, selected: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_12
-      properties: {appearance: Filled, icon: settings, enabled: false, selected: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_13
-      properties: {appearance: Filled tonal, icon: settings, enabled: false, selected: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: icon_button_14
-      properties: {appearance: Outlined, icon: settings, enabled: false, selected: true}
-      type: form:Components.IconButton
-      layout_properties: {}
-    - name: text_3
-      properties: {text: 'selected, no pseudo states'}
-      type: form:Components.Text
-      layout_properties: {}
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_1
+        properties: {icon: settings}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2
+        properties: {icon: settings, appearance: Filled}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_3
+        properties: {icon: settings, appearance: Filled tonal}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_4
+        properties: {icon: settings, appearance: Outlined}
+        type: form:Components.IconButton
+        layout_properties: {}
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: icon_button_1_copy_1
+        properties: {icon: settings, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2_copy_1
+        properties: {icon: settings, appearance: Filled, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_3_copy_1
+        properties: {icon: settings, appearance: Filled tonal, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_4_copy_1
+        properties: {icon: settings, appearance: Outlined, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_3_copy_1
+        properties: {text: disabled}
+        type: form:Components.Text
 components: []
 event_bindings: {show: form_show}

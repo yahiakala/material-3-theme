@@ -19,6 +19,15 @@ class IconButton(IconButtonTemplate):
     self.init_components(**properties)
 
   @property
+  def toggle(self):
+    return self._toggle
+  @toggle.setter
+  def toggle(self, value):
+    self._toggle = value
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", value)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", value)
+    
+  @property
   def selected(self):
     return self._selected
   @selected.setter
