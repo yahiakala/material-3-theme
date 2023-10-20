@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import innerText_property, enabled_property
+from ...Functions import innerText_property, enabled_property, color_property, style_property
 from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
@@ -71,3 +71,6 @@ class IconButton(IconButtonTemplate):
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
+  border = style_property('anvil-m3-iconbutton-container', 'border')
+  icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
+  background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')

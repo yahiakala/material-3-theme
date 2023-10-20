@@ -111,7 +111,9 @@ components_by_slot:
         type: form:Components.IconButton
         layout_properties: {}
       - name: icon_button_5_copy_1_copy_2_copy_1
-        properties: {icon: settings, appearance: Outlined, toggle: true, selected: true}
+        properties: {appearance: Outlined, selected: true, border: 3px dashed yellow,
+          selected_border: 2px dashed green, toggle: true, selected_background: 'theme:Background',
+          background: 'rgb(4, 51, 255)', icon_color: 'rgb(179, 38, 30)', icon: settings}
         type: form:Components.IconButton
         layout_properties: {}
       - name: text_4
