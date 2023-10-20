@@ -4,7 +4,6 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import document
 from ...Functions import innerText_property, enabled_property
 from anvil import HtmlTemplate
 
@@ -23,13 +22,17 @@ class IconButton(IconButtonTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    document.addEventListener('keydown', self.handle_click)
+    self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self.handle_click)
   def on_cleanup(self, **event_args):
-    document.removeEventListener('keydown', self.handle_click)
+    self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self.handle_click)
   
   def handle_click(self, event):
     event.preventDefault()
+    if self.toggle:
+      self.selected = not self.selected
     self.raise_event("click")
+    
+    
     
   @property
   def toggle(self):

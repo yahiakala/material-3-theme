@@ -20,3 +20,11 @@ class TestPage(TestPageTemplate):
 
   def icon_button_1_click(self, **event_args):
     alert("clicked!!!!")
+
+  def icon_button_1_copy_1_click(self, **event_args):
+    alert("shouldn't work")
+
+  def icon_button_5_click(self, **event_args):
+    self.text_6.text = self.icon_button_5.selected
+
+

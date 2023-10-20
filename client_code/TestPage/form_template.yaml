@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: text_2
-      properties: {text: none toggle}
+      properties: {text: no toggle}
       type: form:Components.Text
       layout_properties: {}
     - name: flow_panel_2
@@ -40,6 +40,7 @@ components_by_slot:
         properties: {icon: settings, enabled: false}
         type: form:Components.IconButton
         layout_properties: {}
+        event_bindings: {click: icon_button_1_copy_1_click}
       - name: icon_button_2_copy_1
         properties: {icon: settings, appearance: Filled, enabled: false}
         type: form:Components.IconButton
@@ -72,6 +73,7 @@ components_by_slot:
         properties: {icon: settings, toggle: true}
         type: form:Components.IconButton
         layout_properties: {}
+        event_bindings: {click: icon_button_5_click}
       - name: icon_button_5_copy_1
         properties: {icon: settings, appearance: Filled, toggle: true}
         type: form:Components.IconButton
@@ -86,6 +88,10 @@ components_by_slot:
         layout_properties: {}
       - name: text_5
         properties: {text: unselected}
+        type: form:Components.Text
+        layout_properties: {}
+      - name: text_6
+        properties: {text: CHANGE ON TOGGLE}
         type: form:Components.Text
         layout_properties: {}
     - name: flow_panel_3_copy_1
