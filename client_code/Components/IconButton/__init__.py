@@ -68,7 +68,6 @@ class IconButton(IconButtonTemplate):
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
     
-    
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
