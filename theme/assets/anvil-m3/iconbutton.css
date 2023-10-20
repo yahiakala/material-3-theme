@@ -28,13 +28,11 @@
   cursor: not-allowed;
 }
 .anvil-m3-iconbutton-container:disabled { background: transparent !important }
-/* .anvil-m3-iconbutton-container:disabled > .anvil-m3-iconbutton-icon { color: var(--anvil-m3-on-disabled) } */
+.anvil-m3-iconbutton-container:disabled > .anvil-m3-iconbutton-icon { color: var(--anvil-m3-on-disabled) }
 
 .anvil-m3-iconbutton-icon.filled { color: var(--anvil-m3-on-primary) }
 .anvil-m3-iconbutton-container.filled { background-color: var(--anvil-m3-primary) }
-/* .anvil-m3-iconbutton-container.filled:disabled { background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-2), var(--anvil-m3-on-surface-variant-overlay-2)),  transparent !important }  */
-
-/* .anvil-m3-iconbutton-container.filled:disabled > .anvil-m3-iconbutton-icon { color: var(--anvil-m3-on-disabled) } */
+.anvil-m3-iconbutton-container.filled:disabled { background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-2), var(--anvil-m3-on-surface-variant-overlay-2)),  transparent !important } 
 
 .anvil-m3-iconbutton-icon.filled-tonal { color: var(--anvil-m3-on-secondary-container) }
 .anvil-m3-iconbutton-container.filled-tonal { background-color: var(--anvil-m3-secondary-container) } 
@@ -42,6 +40,7 @@
 
 .anvil-m3-iconbutton-icon.outlined {}
 .anvil-m3-iconbutton-container.outlined { border: 1px solid var(--anvil-m3-outline) }
+.anvil-m3-iconbutton-container.outlined:disabled { }
 
 .anvil-m3-iconbutton-icon.toggle { color: var(--anvil-m3-on-surface-variant) }
 .anvil-m3-iconbutton-container.toggle { background-color: transparent }
