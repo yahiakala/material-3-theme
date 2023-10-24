@@ -95,6 +95,13 @@ components_by_slot:
         properties: {text: unselected}
         type: form:Components.Text
         layout_properties: {}
+      - name: icon_button_toggle_4_copy_3
+        properties: {appearance: Outlined, selected: false, selected_icon_color: '#4f7a28',
+          border: 1px dashed white, enabled: true, visible: true, selected_border: 4px dotted purple,
+          selected_background: white, background: '#0061ff', icon_color: '#e392fe',
+          icon: settings}
+        type: form:Components.IconButtonToggle
+        layout_properties: {}
     - name: flow_panel_1_copy_2
       properties: {}
       type: FlowPanel
@@ -145,6 +152,13 @@ components_by_slot:
     - name: text_3_copy_2
       properties: {text: selected}
       type: form:Components.Text
+      layout_properties: {}
+    - name: icon_button_toggle_4_copy_3_copy_1
+      properties: {appearance: Outlined, selected: true, selected_icon_color: '#4f7a28',
+        border: 1px dashed white, enabled: true, visible: true, selected_border: 4px dotted purple,
+        selected_background: white, background: '#0061ff', icon_color: '#e392fe',
+        icon: settings}
+      type: form:Components.IconButtonToggle
       layout_properties: {}
   - name: flow_panel_1_copy_1_copy_1
     properties: {}
