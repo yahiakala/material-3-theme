@@ -9,16 +9,20 @@ from anvil import HtmlTemplate
 
 class IconButtonToggle(IconButtonToggleTemplate):
   def __init__(self, **properties):
-    self.background = None
-    self.border = None
-    self.icon_color = None
-    self.selected = False
+    self._selected = None
+    self._background = None
+    self._border = None
+    self._icon_color = None
+    self._selected_background = None
+    self._selected_border = None
+    self._selected_icon_color = None
     
     self._appearance_css_classes = {
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
     self._appearance = ""
+    
     self.init_components(**properties)
 
     self.handle_click = self.handle_click
@@ -132,7 +136,11 @@ class IconButtonToggle(IconButtonToggleTemplate):
 
   def apply_styles(self):
     if self.selected:
-      pass
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.selected_icon_color
     else:
       # self.dom_nodes[dom_node_name].style[style_prop] = value
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
