@@ -120,19 +120,6 @@ class IconButtonToggle(IconButtonToggleTemplate):
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
-  
-  # border = style_property('anvil-m3-iconbutton-container', 'border')
-  # icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
-  # background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
-
-  # def update_selected_border(self):
-  #   pass
-
-  # def update_selected_background(self):
-  #   pass
-
-  # def update_selected_icon_color(self):
-  #   pass
 
   def apply_styles(self):
     if self.selected:
@@ -140,7 +127,6 @@ class IconButtonToggle(IconButtonToggleTemplate):
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
       self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.selected_icon_color
     else:
-      # self.dom_nodes[dom_node_name].style[style_prop] = value
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
       self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
