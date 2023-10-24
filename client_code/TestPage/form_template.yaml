@@ -78,6 +78,7 @@ components_by_slot:
         properties: {icon: settings}
         type: form:Components.IconButtonToggle
         layout_properties: {}
+        event_bindings: {click: icon_button_toggle_1_click}
       - name: icon_button_toggle_2
         properties: {icon: settings, appearance: Filled}
         type: form:Components.IconButtonToggle
@@ -97,8 +98,8 @@ components_by_slot:
         layout_properties: {}
       - name: icon_button_toggle_4_copy_3
         properties: {appearance: Outlined, selected: false, selected_icon_color: '',
-          border: '', enabled: true, visible: true, selected_border: '', selected_background: '',
-          background: '#0061ff', icon_color: '#e392fe', icon: settings}
+          border: 4px dotted cyan, enabled: true, visible: true, selected_border: '',
+          selected_background: '', background: '#0061ff', icon_color: yellow, icon: settings}
         type: form:Components.IconButtonToggle
         layout_properties: {}
     - name: flow_panel_1_copy_2
@@ -157,7 +158,7 @@ components_by_slot:
         border: '', enabled: true, visible: true, selected_border: 4px dotted purple,
         selected_background: white, background: '', icon_color: '', icon: settings}
       type: form:Components.IconButtonToggle
-      layout_properties: {}
+      layout_properties: {width: 133}
   - name: flow_panel_1_copy_1_copy_1
     properties: {}
     type: FlowPanel
