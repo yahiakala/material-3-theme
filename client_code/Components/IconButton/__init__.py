@@ -40,6 +40,10 @@ class IconButton(IconButtonTemplate):
     self._toggle = value
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", value)
+    self.update_selected_background()
+    self.update_selected_border()
+    self.update_selected_icon_color()
+    
     
   @property
   def selected(self):
@@ -49,6 +53,33 @@ class IconButton(IconButtonTemplate):
     self._selected = value
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
+    self.update_selected_background()
+    self.update_selected_border()
+    self.update_selected_icon_color()
+
+  @property
+  def selected_background(self):
+    return self._selected_background
+  @selected_background.setter
+  def selected_background(self, value):
+    self._selected_background = value
+    self.update_selected_background()
+    
+  @property
+  def selected_border(self):
+    return self._selected_border
+  @selected_border.setter
+  def selected_border(self, value):
+    self._selected_border = value
+    self.update_selected_border()
+    
+  @property
+  def selected_icon_color(self):
+    return self._selected_icon_color
+  @selected_icon_color.setter
+  def selected_icon_color(self, value):
+    self._selected_icon_color = value
+    self.update_selected_icon_color()
 
   @property
   def appearance(self):
@@ -74,3 +105,12 @@ class IconButton(IconButtonTemplate):
   border = style_property('anvil-m3-iconbutton-container', 'border')
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
+
+  def update_selected_border(self):
+    pass
+
+  def update_selected_background(self):
+    pass
+
+  def update_selected_icon_color(self):
+    pass
