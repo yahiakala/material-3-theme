@@ -36,9 +36,6 @@ properties:
   group: Selection Field Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
   group: Selection Field Style}
-- {name: width, type: string, default_value: '', important: false, description: 'The
-    width of this DropDown, or “default” to have the width set by the container',
-  group: Selection Field Style}
 - {name: label_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
