@@ -8,7 +8,6 @@ import plotly.graph_objects as go
 from anvil.tables import app_tables
 from ..Components.Menu.MenuItem import MenuItem
 
-
 class TestPage(TestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
