@@ -375,6 +375,7 @@ properties:
   type: enum
   important: true
   options: ['', left, center, right]
+- {name: tooltip, type: string, default_value: '', important: true, group: Attributes}
 is_package: true
 events:
 - {name: click, default_event: true}
