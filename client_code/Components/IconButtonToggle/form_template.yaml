@@ -370,7 +370,6 @@ properties:
     zoom_out, zoom_out_map]
 - {name: enabled, type: boolean, default_value: true, important: true}
 - {name: visible, type: boolean, default_value: true, important: true}
-- {name: toggle, type: boolean, default_value: false, important: true, description: Use as toggle}
 - {name: border, type: string, default_value: '', group: Style}
 - {name: background, type: color, default_value: '', important: false, group: Style}
 - {name: icon_color, type: color, default_value: '', important: false, group: Style}
@@ -389,5 +388,5 @@ container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-iconbutton-component\" class=\"anvil-m3-iconbutton-component\"\
       >\n  <button class=\"anvil-m3-iconbutton-container toggle\" anvil-name=\"anvil-m3-iconbutton-container\"\
-      >\n    <span class=\"material-symbols-outlined anvil-m3-iconbutton-icon\" anvil-name=\"\
-      anvil-m3-iconbutton-icon\"></span>\n  </div>\n</div>"}
+      >\n    <span class=\"material-symbols-outlined anvil-m3-iconbutton-icon toggle\"\
+      \ anvil-name=\"anvil-m3-iconbutton-icon\"></span>\n  </div>\n</div>"}
