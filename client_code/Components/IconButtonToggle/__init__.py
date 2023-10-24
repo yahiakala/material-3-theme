@@ -43,12 +43,32 @@ class IconButtonToggle(IconButtonToggleTemplate):
     # self.update_selected_icon_color()
 
   @property
+  def background(self):
+    return self._background
+  @background.setter
+  def background(self, value):
+    self._background = value
+
+  @property
+  def border(self):
+    return self._border
+  @border.setter
+  def border(self, value):
+    self._border = value
+
+  @property
+  def icon_color(self):
+    return self._icon_color
+  @icon_color.setter
+  def icon_color(self, value):
+    self._icon_color = value
+
+  @property
   def selected_background(self):
     return self._selected_background
   @selected_background.setter
   def selected_background(self, value):
     self._selected_background = value
-    # self.update_selected_background()
 
   @property
   def selected_border(self):
@@ -56,7 +76,6 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @selected_border.setter
   def selected_border(self, value):
     self._selected_border = value
-    # self.update_selected_border()
 
   @property
   def selected_icon_color(self):
@@ -64,7 +83,6 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @selected_icon_color.setter
   def selected_icon_color(self, value):
     self._selected_icon_color = value
-    # self.update_selected_icon_color()
 
   @property
   def appearance(self):
