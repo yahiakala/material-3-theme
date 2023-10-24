@@ -65,118 +65,25 @@ components_by_slot:
       properties: {text: toggle}
       type: form:Components.Text
       layout_properties: {}
-    - name: flow_panel_3
+    - name: flow_panel_1
       properties: {}
       type: FlowPanel
       components:
-      - name: icon_button_5
-        properties: {icon: settings, toggle: true}
-        type: form:Components.IconButton
+      - name: icon_button_toggle_1
+        properties: {icon: settings}
+        type: form:Components.IconButtonToggle
         layout_properties: {}
-        event_bindings: {click: icon_button_5_click}
-      - name: icon_button_5_copy_1
-        properties: {icon: settings, appearance: Filled, toggle: true}
-        type: form:Components.IconButton
+      - name: icon_button_toggle_1_copy_1
+        properties: {icon: settings, appearance: Filled}
+        type: form:Components.IconButtonToggle
         layout_properties: {}
-      - name: icon_button_5_copy_1_copy_1
-        properties: {icon: settings, appearance: Filled tonal, toggle: true}
-        type: form:Components.IconButton
+      - name: icon_button_toggle_1_copy_1_copy_1
+        properties: {icon: settings, appearance: Filled tonal}
+        type: form:Components.IconButtonToggle
         layout_properties: {}
-      - name: icon_button_5_copy_1_copy_2
-        properties: {icon: settings, appearance: Outlined, toggle: true, enabled: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_2_copy_1_copy_1
-        properties: {appearance: Outlined, selected: false, selected_icon_color: '#00fdff',
-          border: 3px dashed yellow, selected_border: 2px dashed green, toggle: true,
-          selected_background: 'theme:Inverse Surface', background: 'rgb(4, 51, 255)',
-          icon_color: 'rgb(179, 38, 30)', icon: settings}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: text_5
-        properties: {text: unselected}
-        type: form:Components.Text
-        layout_properties: {}
-      - name: text_6
-        properties: {text: CHANGE ON TOGGLE}
-        type: form:Components.Text
-        layout_properties: {}
-    - name: flow_panel_3_copy_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: icon_button_5_copy_2
-        properties: {icon: settings, toggle: true, selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_3
-        properties: {icon: settings, appearance: Filled, toggle: true, selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_1_copy_1
-        properties: {icon: settings, appearance: Filled tonal, toggle: true, selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_2_copy_1
-        properties: {appearance: Outlined, selected: true, border: 3px dashed yellow,
-          selected_border: 2px dashed green, toggle: true, selected_background: 'theme:Background',
-          background: 'rgb(4, 51, 255)', icon_color: 'rgb(179, 38, 30)', icon: settings}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: text_4
-        properties: {text: selected}
-        type: form:Components.Text
-        layout_properties: {}
-    - name: flow_panel_3_copy_2
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: icon_button_5_copy_3
-        properties: {icon: settings, toggle: true, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_4
-        properties: {icon: settings, appearance: Filled, toggle: true, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_1_copy_2
-        properties: {icon: settings, appearance: Filled tonal, toggle: true, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_2_copy_2
-        properties: {icon: settings, appearance: Outlined, toggle: true, enabled: false}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: text_3
-        properties: {text: disabled unselected}
-        type: form:Components.Text
-        layout_properties: {}
-    - name: flow_panel_3_copy_2_copy_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: icon_button_5_copy_3_copy_1
-        properties: {icon: settings, toggle: true, enabled: false, selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_4_copy_1
-        properties: {icon: settings, appearance: Filled, toggle: true, enabled: false,
-          selected: true, visible: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_1_copy_2_copy_1
-        properties: {icon: settings, appearance: Filled tonal, toggle: true, enabled: false,
-          selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: icon_button_5_copy_1_copy_2_copy_2_copy_1
-        properties: {icon: settings, appearance: Outlined, toggle: true, enabled: false,
-          selected: true}
-        type: form:Components.IconButton
-        layout_properties: {}
-      - name: text_3_copy_2
-        properties: {text: disabled selected}
-        type: form:Components.Text
+      - name: icon_button_toggle_1_copy_1_copy_2
+        properties: {icon: settings, appearance: Outlined}
+        type: form:Components.IconButtonToggle
         layout_properties: {}
 components: []
 event_bindings: {show: form_show}
