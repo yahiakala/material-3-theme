@@ -9,6 +9,11 @@ from anvil import HtmlTemplate
 
 class IconButtonToggle(IconButtonToggleTemplate):
   def __init__(self, **properties):
+    self.background = None
+    self.border = None
+    self.icon_color = None
+    self.selected = False
+    
     self._appearance_css_classes = {
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
@@ -30,6 +35,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
     event.preventDefault()
     self.selected = not self.selected
     self.raise_event("click")
+    
   @property
   def selected(self):
     return self._selected
@@ -38,9 +44,8 @@ class IconButtonToggle(IconButtonToggleTemplate):
     self._selected = value
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
-    # self.update_selected_background()
-    # self.update_selected_border()
-    # self.update_selected_icon_color()
+    self.apply_styles()
+    
 
   @property
   def background(self):
@@ -48,6 +53,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @background.setter
   def background(self, value):
     self._background = value
+    self.apply_styles()
 
   @property
   def border(self):
@@ -55,6 +61,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @border.setter
   def border(self, value):
     self._border = value
+    self.apply_styles()
 
   @property
   def icon_color(self):
@@ -62,6 +69,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @icon_color.setter
   def icon_color(self, value):
     self._icon_color = value
+    self.apply_styles()
 
   @property
   def selected_background(self):
@@ -69,6 +77,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @selected_background.setter
   def selected_background(self, value):
     self._selected_background = value
+    self.apply_styles()
 
   @property
   def selected_border(self):
@@ -76,6 +85,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @selected_border.setter
   def selected_border(self, value):
     self._selected_border = value
+    self.apply_styles()
 
   @property
   def selected_icon_color(self):
@@ -83,6 +93,7 @@ class IconButtonToggle(IconButtonToggleTemplate):
   @selected_icon_color.setter
   def selected_icon_color(self, value):
     self._selected_icon_color = value
+    self.apply_styles()
 
   @property
   def appearance(self):
@@ -118,3 +129,10 @@ class IconButtonToggle(IconButtonToggleTemplate):
 
   # def update_selected_icon_color(self):
   #   pass
+
+  def apply_styles(self):
+    if self.selected:
+      pass
+    else:
+      # self.dom_nodes[dom_node_name].style[style_prop] = value
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
