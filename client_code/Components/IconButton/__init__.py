@@ -51,6 +51,7 @@ class IconButton(IconButtonTemplate):
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
+  align = style_property('anvil-m3-iconbutton-component', 'justifyContent')
   
   border = style_property('anvil-m3-iconbutton-container', 'border')
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color')

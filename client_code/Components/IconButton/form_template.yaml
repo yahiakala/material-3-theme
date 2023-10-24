@@ -373,6 +373,10 @@ properties:
 - {name: border, type: string, default_value: '', group: Style}
 - {name: background, type: color, default_value: '', important: false, group: Style}
 - {name: icon_color, type: color, default_value: '', important: false, group: Style}
+- name: align
+  type: enum
+  important: true
+  options: ['', left, center, right]
 is_package: true
 events:
 - {name: click, default_event: true}
@@ -380,8 +384,9 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div style=\"display: flex\">\n  <div anvil-name=\"anvil-m3-iconbutton-component\"\
-      \ class=\"anvil-m3-iconbutton-component\">\n    <button class=\"anvil-m3-iconbutton-container\"\
+  properties: {html: "<div anvil-name=\"anvil-m3-iconbutton-component\" style=\"display:\
+      \ flex\">\n  <div anvil-name=\"anvil-m3-iconbutton-component-container\" class=\"\
+      anvil-m3-iconbutton-component\">\n    <button class=\"anvil-m3-iconbutton-container\"\
       \ anvil-name=\"anvil-m3-iconbutton-container\">\n      <span class=\"material-symbols-outlined\
       \ anvil-m3-iconbutton-icon\" anvil-name=\"anvil-m3-iconbutton-icon\"></span>\n\
       \    </div>\n  </div>\n</div>"}

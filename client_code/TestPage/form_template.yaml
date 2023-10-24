@@ -185,7 +185,7 @@ components_by_slot:
       type: form:Components.Text
       layout_properties: {}
   - name: icon_button_5
-    properties: {icon: settings}
+    properties: {icon: settings, align: center}
     type: form:Components.IconButton
     layout_properties: {}
 components: []
