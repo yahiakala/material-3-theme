@@ -380,7 +380,8 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-iconbutton-component\" class=\"anvil-m3-iconbutton-component\"\
-      >\n  <button class=\"anvil-m3-iconbutton-container\" anvil-name=\"anvil-m3-iconbutton-container\"\
-      >\n    <span class=\"material-symbols-outlined anvil-m3-iconbutton-icon\" anvil-name=\"\
-      anvil-m3-iconbutton-icon\"></span>\n  </div>\n</div>"}
+  properties: {html: "<div style=\"display: flex\">\n  <div anvil-name=\"anvil-m3-iconbutton-component\"\
+      \ class=\"anvil-m3-iconbutton-component\">\n    <button class=\"anvil-m3-iconbutton-container\"\
+      \ anvil-name=\"anvil-m3-iconbutton-container\">\n      <span class=\"material-symbols-outlined\
+      \ anvil-m3-iconbutton-icon\" anvil-name=\"anvil-m3-iconbutton-icon\"></span>\n\
+      \    </div>\n  </div>\n</div>"}

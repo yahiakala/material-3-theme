@@ -184,5 +184,9 @@ components_by_slot:
       properties: {text: 'selected, disabled'}
       type: form:Components.Text
       layout_properties: {}
+  - name: icon_button_5
+    properties: {icon: settings}
+    type: form:Components.IconButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
