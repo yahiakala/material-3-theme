@@ -1,4 +1,4 @@
-from ._anvil_designer import IconButtonToggleTemplate
+from ._anvil_designer import IconButton_completeTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -7,22 +7,23 @@ from anvil.tables import app_tables
 from ...Functions import innerText_property, enabled_property, color_property, style_property
 from anvil import HtmlTemplate
 
-class IconButtonToggle(IconButtonToggleTemplate):
+class IconButton_complete(IconButton_completeTemplate):
   def __init__(self, **properties):
     self._selected = None
+    self._toggle = None
     self._background = None
     self._border = None
     self._icon_color = None
     self._selected_background = None
     self._selected_border = None
     self._selected_icon_color = None
-    
+
     self._appearance_css_classes = {
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
     self._appearance = ""
-    
+
     self.init_components(**properties)
 
     self.handle_click = self.handle_click
@@ -39,7 +40,18 @@ class IconButtonToggle(IconButtonToggleTemplate):
     event.preventDefault()
     self.selected = not self.selected
     self.raise_event("click")
+
+  @property
+  def toggle(self):
+    return self._toggle
+  @toggle.setter
+  def toggle(self, value):
+    self._toggle = value
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", value)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", value)
+    self.apply_styles()
     
+
   @property
   def selected(self):
     return self._selected
