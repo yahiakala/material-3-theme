@@ -86,6 +86,13 @@ components_by_slot:
         properties: {icon: settings, appearance: Outlined, toggle: true, enabled: true}
         type: form:Components.IconButton
         layout_properties: {}
+      - name: icon_button_5_copy_1_copy_2_copy_1_copy_1
+        properties: {appearance: Outlined, selected: false, selected_icon_color: '#00fdff',
+          border: 3px dashed yellow, selected_border: 2px dashed green, toggle: true,
+          selected_background: 'theme:Inverse Surface', background: 'rgb(4, 51, 255)',
+          icon_color: 'rgb(179, 38, 30)', icon: settings}
+        type: form:Components.IconButton
+        layout_properties: {}
       - name: text_5
         properties: {text: unselected}
         type: form:Components.Text
