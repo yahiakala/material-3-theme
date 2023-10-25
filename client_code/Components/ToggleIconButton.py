@@ -3,6 +3,12 @@ from .IconButton import IconButton
 icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Attributes", "important": True}
+# - {name: selected_border, type: string, default_value: '', description: Only used if toggle is enabled,
+#   group: Style}
+# - {name: selected_background, type: color, default_value: '', important: false, description: Only used if toggle is enabled,
+#   group: Style}
+# - {name: selected_icon_color, type: color, default_value: '', important: false, description: Only used if toggle is enabled,
+#   group: Style}
 
 class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, *icon_button_properties]
