@@ -7,7 +7,7 @@ package_name: Material_3_Theme_2_0
 allow_embedding: false
 toolbox_sections:
 - packageName: Material_3_Theme_2_0
-  title: Module Widgets
+  title: Module Components
   items:
   - title: ToggleIconButton
     component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
