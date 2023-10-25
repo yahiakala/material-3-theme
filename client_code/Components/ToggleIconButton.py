@@ -4,7 +4,7 @@ from ..Functions import property_with_callback
 icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Attributes", "important": True, "default_value": False}
-selected_border = {"name": "selected_border", "type": "string", "group": "Style", "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
+selected_border_property = {"name": "selected_border", "type": "string", "group": "Style", "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
 selected_background = {"name": "selected_background", "type": "color", "group": "Style", "description": "Background color when component is in the selected state."}
 selected_icon_color = {"name": "selected_icon_color", "type": "color", "group": "Style", "description": "Icon color when component is in the selected state."}
 
@@ -12,7 +12,9 @@ class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, selected_border, selected_background, selected_icon_color, *icon_button_properties]
 
   def __init__(self, **properties):
-    super().__init__(icon_button_properties)
+    pass
+    
+    
   # class A(object):
   #   def __init__(self):
   #       print("world")
