@@ -204,11 +204,11 @@ components_by_slot:
         layout_properties: {slot: anvil-m3-card-slot}
         components:
         - name: toggle_icon_button_1
-          properties: {icon: settings}
+          properties: {icon: settings, selected: false}
           type: form:Components.ToggleIconButton
           layout_properties: {}
         - name: toggle_icon_button_2
-          properties: {appearance: Filled, icon: settings}
+          properties: {appearance: Filled, icon: settings, selected: null}
           type: form:Components.ToggleIconButton
           layout_properties: {}
         - name: toggle_icon_button_3
