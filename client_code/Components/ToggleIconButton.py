@@ -19,6 +19,8 @@ class ToggleIconButton(IconButton):
     # print(properties['selected'])
     
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)    
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)
     self.apply_styles(bool(self.selected))
     
