@@ -22,7 +22,6 @@ class ToggleIconButton(IconButton):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", self.selected)
     
   # Properties 
-    
   def apply_styles(self, value):
     if value:
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
