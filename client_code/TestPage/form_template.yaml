@@ -254,7 +254,7 @@ components_by_slot:
         layout_properties: {slot: anvil-m3-card-slot}
         components:
         - name: toggle_icon_button_1_copy_2
-          properties: {icon: settings, selected: true}
+          properties: {icon: settings, selected: false}
           type: form:Components.ToggleIconButton
           layout_properties: {}
           event_bindings: {click: toggle_icon_button_1_copy_2_click}
