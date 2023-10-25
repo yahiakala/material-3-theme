@@ -13,16 +13,13 @@ class ToggleIconButton(IconButton):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    print(dir(self.selected))
-    print(self.selected)
-    # print(properties)
-    # print(properties['selected'])
-    
+  
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)    
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)
-    self.apply_styles(bool(self.selected))
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)   
+
+    # I think there is a smarter way to do this. I don't know the setter isn't getting called in the beginning.
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", self.selected)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", self.selected)
     
   # Properties 
   def selected_setter(self, value):
@@ -31,6 +28,8 @@ class ToggleIconButton(IconButton):
     self.apply_styles(value)
     
   def apply_styles(self, value):
+    print(value)
+    print("TEEHEE")
     if value:
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border

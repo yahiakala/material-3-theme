@@ -259,7 +259,7 @@ components_by_slot:
           layout_properties: {}
           event_bindings: {click: toggle_icon_button_1_copy_2_click}
         - name: toggle_icon_button_2_copy_2
-          properties: {appearance: Filled, icon: settings, selected: true}
+          properties: {appearance: Filled, icon: settings, selected: false}
           type: form:Components.ToggleIconButton
           layout_properties: {}
         - name: toggle_icon_button_3_copy_2
