@@ -9,6 +9,7 @@ from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self._appearance_css_classes = {
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
@@ -30,6 +31,16 @@ class IconButton(IconButtonTemplate):
     event.preventDefault()
     self.raise_event("click")
 
+
+  # 
+  # @property
+  # def selected(self):
+  #   return self._props.get("selected") #return selected or None if doesn't exist. Dont' have to do the thing from ln 14
+  # @selected.setter
+  # def selected(self, value):
+  #   self._props["selected"] = value
+
+  
   @property
   def appearance(self):
     return self._appearance

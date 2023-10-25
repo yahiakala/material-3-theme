@@ -9,6 +9,8 @@ from anvil import HtmlTemplate
 
 class IconButtonToggle(IconButtonToggleTemplate):
   def __init__(self, **properties):
+    self._props = properties
+    
     self._selected = None
     self._background = None
     self._border = None
@@ -42,10 +44,10 @@ class IconButtonToggle(IconButtonToggleTemplate):
     
   @property
   def selected(self):
-    return self._selected
+    return self._props.get("selected") #return selected or None if doesn't exist. Dont' have to do the thing from ln 14
   @selected.setter
   def selected(self, value):
-    self._selected = value
+    self._props["selected"] = value
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
     self.apply_styles()
