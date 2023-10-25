@@ -28,8 +28,6 @@ class ToggleIconButton(IconButton):
     self.apply_styles(value)
     
   def apply_styles(self, value):
-    print(value)
-    print("TEEHEE")
     if value:
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
