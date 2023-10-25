@@ -56,7 +56,7 @@ class IconButton(IconButtonTemplate):
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
 
   def _anvil_get_design_info_(self, as_layout=False): 
-    design_info = self._anvil_get_design_info_(as_layout)
+    design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
       {
       "type": "whole_component_multi",
