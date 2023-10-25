@@ -6,6 +6,7 @@ unique_ids:
     Components.TextField: UN43FQKR53ALT6FX7OLYPIJAFO4HWVF3
     AnotherPage: '1689242281836579752546860.9573'
     Components.Heading: '1691584734618253051882422.0236'
+    Components.IndeterminateProgressIndicator: '1698403299592393954462333.24396'
     Components.Menu.MenuItem: '1691072927249332240116307.56104'
     Components.Switch: NX6RIMTQ7UKHD7G77KDTDIWQJZ7COLZ3
     TestPage: '1689239207566657999935732.4795'
@@ -22,6 +23,7 @@ unique_ids:
     Components.ButtonMenu: '1691070864852493494074435.9517'
   modules:
     Components: '1689356081598516648538000.70355'
+    Components.DeterminateProgressIndicator: '1698945193104470656635953.70996'
     Components.ToggleIconButton: '1698221918450299392855785.47437'
     Functions: '1688130464429152915327683.20825'
   server_modules:
@@ -35,6 +37,7 @@ unique_ids:
     anvil-m3/switch.css: '1690201930961944613537214.6923'
     anvil-m3/.gitkeep: '1689852830383793423294910.1976'
     anvil-m3/checkbox.css: '1689947587450398517756099.98175'
+    anvil-m3/progress-indicator.css: '1698248959653759098718122.262'
     anvil-m3/text-fields.css: '1690380154363843520236981.625'
     anvil-m3/navigation-link.css: '1690201965306108674878169.32431'
     anvil-m3/card.css: '1690193300845962287696176.0321'

@@ -1,0 +1,52 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div anvil-name=\"anvil-m3-progressindicator-component\" style=\"\
+      display:flex\">\n  <div anvil-name=\"anvil-m3-progressindicator\" class=\"anvil-m3-progressindicator-component\"\
+      >\n    <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-linear\"\
+      \ class=\"anvil-m3-progressindicator-track\">\n      <line y1=\"2\" y2=\"2\"\
+      \ x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator\" class=\"\
+      anvil-m3-progressindicator-indicator\">\n        <animate anvil-name=\"indicator-animate1\"\
+      \ begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"\
+      x2\" dur=\"4s\" calcMode=\"spline\" \n            values=\"0;120%\" \n     \
+      \       keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n        <animate anvil-name=\"\
+      indicator-animate2\" begin=\"00ms\" repeatCount=\"indefinite\" attributeType=\"\
+      XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n            values=\"\
+      0;120%\" \n            keySplines=\"0.48 0 0 0.83\"></animate>\n      </line>\
+      \ \n      <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-extra\"\
+      \  class=\"anvil-m3-progressindicator-indicator\">\n          <animate begin=\"\
+      2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\"\
+      \ dur=\"4s\" calcMode=\"spline\" \n              values=\"0;120%\" \n      \
+      \        keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n          <animate begin=\"\
+      2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x1\"\
+      \ dur=\"4s\" calcMode=\"spline\" \n              values=\"0;120%\" \n      \
+      \        keySplines=\"0.48 0 0 0.83\"></animate>\n      </line>\n    </svg>\n\
+      \    <svg anvil-name=\"anvil-m3-progressindicator-circular\" class=\"anvil-m3-progressindicator-circular\"\
+      >\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\"\
+      \ d=\" M 0 0 A 0 0 0 0 0 0 0\"/>\n    </svg> \n    <div anvil-slot=\"anvil-m3-progressindicator-timer-slot\"\
+      \ anvil-name=\"anvil-m3-progressindicator-timer\" anvil-slot-internal></div>\n\
+      \  </div>\n</div>", visible: true}
+components:
+- name: timer
+  properties: {}
+  type: Timer
+  layout_properties: {slot: anvil-m3-progressindicator-timer-slot}
+  event_bindings: {tick: timer_tick}
+- name: arc_timer
+  properties: {}
+  type: Timer
+  layout_properties: {slot: anvil-m3-progressindicator-timer-slot}
+  event_bindings: {tick: arc_timer_tick}
+is_package: true
+custom_component: true
+properties:
+- name: shape
+  type: enum
+  important: true
+  options: [linear, circular]
+  default_value: linear
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  default_value: left
+- {name: visible, type: boolean, default_value: false, important: true}

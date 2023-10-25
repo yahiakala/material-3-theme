@@ -1,0 +1,29 @@
+.anvil-m3-progressindicator-track {
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--anvil-m3-surface-container-highest); 
+}
+
+.anvil-m3-progressindicator-indicator {
+  stroke: var(--anvil-m3-primary);
+  stroke-width: 4px;
+  transition: x2 0.2s ease;
+}
+
+.anvil-m3-progressindicator-circular {
+  width: 48px;
+  height: 48px;
+  transform: scaleX(-1)
+}
+
+.anvil-m3-progressindicator-arc {
+  stroke: var(--anvil-m3-primary);
+  fill: none;
+  stroke-width: 4px;
+}
+
+.anvil-m3-progressindicator-hidden {
+   display: none;
+}
