@@ -189,5 +189,9 @@ components_by_slot:
     properties: {icon: settings, align: center}
     type: form:Components.IconButton
     layout_properties: {}
+  - name: toggle_icon_button_1
+    properties: {appearance: Filled tonal, icon: 12mp}
+    type: form:Components.ToggleIconButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
