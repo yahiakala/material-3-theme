@@ -231,5 +231,28 @@ components_by_slot:
           - name: text_3_copy_1
             properties: {text: disabled}
             type: form:Components.Text
+    - name: card_5
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: flow_panel_6
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: linear_panel_1
+          properties: {}
+          type: LinearPanel
+          layout_properties: {width: 320}
+          components:
+          - name: icon_button_5
+            properties: {}
+            type: form:Components.IconButton
+          - name: icon_button_6
+            properties: {}
+            type: form:Components.IconButton
+          - name: icon_button_7
+            properties: {}
+            type: form:Components.IconButton
 components: []
 event_bindings: {show: form_show}
