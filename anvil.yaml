@@ -4,6 +4,12 @@ services:
   server_config: {}
 startup: {type: form, module: TestPage}
 package_name: Material_3_Theme_2_0
+toolbox_sections:
+- packageName: Material_3_Theme_2_0
+  title: Module Widgets
+  items:
+  - title: ToggleIconButton
+    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
 allow_embedding: false
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
