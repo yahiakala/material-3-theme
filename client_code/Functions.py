@@ -15,6 +15,16 @@ def theme_color_to_css(color:str):
     return color
 
 #REUSABLE PROPERTIES
+def property_with_callback(prop, cb):
+  def getter(self):
+    return self._props.get(prop)
+
+  def setter(self, value):
+    self._props[prop] = value
+    cb(self, value)
+  
+  return property(getter, setter)
+
 def color_property(dom_node_name, style_prop):
   def getter(self):
     return self.dom_nodes[dom_node_name].style[style_prop]

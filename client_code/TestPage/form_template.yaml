@@ -193,5 +193,9 @@ components_by_slot:
     properties: {appearance: Filled tonal, icon: 12mp, selected: true}
     type: form:Components.ToggleIconButton
     layout_properties: {}
+  - name: toggle_icon_button_2
+    properties: {selected: true, icon: 22mp, appearance: Outlined}
+    type: form:Components.ToggleIconButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}

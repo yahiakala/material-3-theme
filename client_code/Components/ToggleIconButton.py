@@ -14,7 +14,10 @@ class ToggleIconButton(IconButton):
   def selected(self, value):
     self._props["selected"] = value
 
-  def _anvil_get_design_info_(self, as_layout=False):
+  # This will be deprecated v soon.
+  def _anvil_get_design_info_(self, as_layout=False): 
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["propertyDescriptions"] = [selected_property] + design_info["propertyDescriptions"]
     return design_info
+
+  
