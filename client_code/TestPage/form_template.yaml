@@ -246,13 +246,16 @@ components_by_slot:
           layout_properties: {width: 320}
           components:
           - name: icon_button_5
-            properties: {}
+            properties: {align: left, icon: settings}
             type: form:Components.IconButton
+            layout_properties: {}
           - name: icon_button_6
-            properties: {}
+            properties: {align: center, icon: settings}
             type: form:Components.IconButton
+            layout_properties: {}
           - name: icon_button_7
-            properties: {}
+            properties: {align: right, icon: settings}
             type: form:Components.IconButton
+            layout_properties: {}
 components: []
 event_bindings: {show: form_show}
