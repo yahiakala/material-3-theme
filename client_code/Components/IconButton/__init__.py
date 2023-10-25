@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.designer
 from ...Functions import innerText_property, enabled_property, color_property, style_property, property_with_callback
 from anvil import HtmlTemplate
 
@@ -53,3 +54,53 @@ class IconButton(IconButtonTemplate):
   border = style_property('anvil-m3-iconbutton-container', 'border')
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
+
+  def _anvil_get_design_info_(self, as_layout=False): 
+    design_info = self._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+      {
+      "type": "whole_component_multi",
+      "title": "Align",
+      "options": [{
+        "name": "Left Align",
+        "id": "left",
+        "icon" : "align-left",
+      },{
+        "name": "Left Center",
+        "id": "center",
+        "icon" : "align-center",
+      },{
+        "name": "Left Right",
+        "id": "right",
+        "icon" : "align-right",
+      }],
+      "callbacks": {
+        "execute": self.setAlignment
+      }
+    },
+      {
+      "type": "whole_component",
+      "title": "Visible",
+      "icon": "add", #TODO: eye icon
+      "callbacks": {
+        "execute": self.toggle_visible
+      }
+    }, {
+      "type": "whole_component",
+      "title": "Enable",
+      "icon": "add", #TODO: power icon
+      "callbacks": {
+        "execute": self.toggle_enabled
+      }
+    } ]
+    return design_info
+
+  def setAlignment(self, value):
+    self.align = value
+    anvil.designer.update_component_properties(self, {'align': self.align})
+  def toggle_visible(self):
+    self.visible = not self.visible
+    anvil.designer.update_component_properties(self, {'visible': self.visible})
+  def toggle_enabled(self):
+    self.enabled = not self.enabled
+    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
