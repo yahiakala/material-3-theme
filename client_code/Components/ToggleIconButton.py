@@ -17,9 +17,9 @@ class ToggleIconButton(IconButton):
     self.apply_styles()
 
   selected = property_with_callback("selected", selected_setter)
-  selected_border = property_with_callback("selected", selected_setter)
-  selected_background
-  selected_icon_color
+  selected_border = property_with_callback("selected_border", apply_styles)
+  selected_background = property_with_callback("selected_background", apply_styles)
+  selected_icon_color = property_with_callback("selected_icon_color", apply_styles)
   
   """
     @property
@@ -51,13 +51,3 @@ class ToggleIconButton(IconButton):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["propertyDescriptions"] = [selected_property] + design_info["propertyDescriptions"]
     return design_info
-
-  def apply_styles(self):
-    if self.selected:
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
-      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.selected_icon_color
-    else:
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
-      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
