@@ -5,14 +5,14 @@ icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Attributes", "important": True, "default_value": False}
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Style", "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
-selected_background = {"name": "selected_background", "type": "color", "group": "Style", "description": "Background color when component is in the selected state."}
-selected_icon_color = {"name": "selected_icon_color", "type": "color", "group": "Style", "description": "Icon color when component is in the selected state."}
+selected_background_property = {"name": "selected_background", "type": "color", "group": "Style", "description": "Background color when component is in the selected state."}
+selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Style", "description": "Icon color when component is in the selected state."}
 
 class ToggleIconButton(IconButton):
-  _anvil_properties_ = [selected_property, selected_border, selected_background, selected_icon_color, *icon_button_properties]
-
-  def __init__(self, **properties):
-    pass
+  _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *icon_button_properties]
+  
+  # def __init__(self, **properties):
+  #   super().__init__(_anvil_properties_)
     
     
   # class A(object):
