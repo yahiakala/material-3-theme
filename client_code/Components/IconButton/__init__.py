@@ -31,15 +31,6 @@ class IconButton(IconButtonTemplate):
     event.preventDefault()
     self.raise_event("click")
 
-
-  # 
-  # @property
-  # def selected(self):
-  #   return self._props.get("selected") #return selected or None if doesn't exist. Dont' have to do the thing from ln 14
-  # @selected.setter
-  # def selected(self, value):
-  #   self._props["selected"] = value
-
   def appearance_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)

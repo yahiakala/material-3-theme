@@ -11,40 +11,42 @@ selected_icon_color = {"name": "selected_icon_color", "type": "color", "group": 
 class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, selected_border, selected_background, selected_icon_color, *icon_button_properties]
 
+  def __init__(self, **properties):
+    super().__init__(icon_button_properties)
+  # class A(object):
+  #   def __init__(self):
+  #       print("world")
+  
+  # class B(A):
+  #   def __init__(self):
+  #       print("hello")
+  #       super().__init__()
+
+  
+  # def __init__(self, **properties):
+  #   self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
+  #   self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)
+  # super().__init__(**properties)
+  
   def selected_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
     self.apply_styles()
+  def apply_styles(self):
+    if self.selected:
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.selected_icon_color
+    else:
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
 
   selected = property_with_callback("selected", selected_setter)
   selected_border = property_with_callback("selected_border", apply_styles)
   selected_background = property_with_callback("selected_background", apply_styles)
   selected_icon_color = property_with_callback("selected_icon_color", apply_styles)
   
-  """
-    @property
-  def selected(self):
-    return self._props.get("selected") #return selected or None if doesn't exist. Dont' have to do the thing from ln 14
-  @selected.setter
-  def selected(self, value):
-    self._props["selected"] = value
-    
-  """
-
-  """  def appearance_setter(self, value):
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled-tonal", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
-    
-    if value is not None:
-      class_name = self._appearance_css_classes[value]
-      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
-      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
-
-  appearance = property_with_callback("appearance", appearance_setter)"""
 
   # This will be deprecated v soon.
   def _anvil_get_design_info_(self, as_layout=False): 
