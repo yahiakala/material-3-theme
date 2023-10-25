@@ -12,11 +12,15 @@ class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *icon_button_properties]
   def __init__(self, **properties):
     super().__init__(**properties)
-    # self.init_components(**properties)
+    self.init_components(**properties)
+    print(dir(self.selected))
+    print(self.selected)
+    # print(properties)
+    # print(properties['selected'])
     
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)
-    # self.apply_styles(self.selected)
+    self.apply_styles(bool(self.selected))
     
   # Properties 
   def selected_setter(self, value):
@@ -25,7 +29,6 @@ class ToggleIconButton(IconButton):
     self.apply_styles(value)
     
   def apply_styles(self, value):
-    print("setting values")
     if value:
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
