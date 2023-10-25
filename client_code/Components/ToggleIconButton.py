@@ -12,10 +12,11 @@ class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *icon_button_properties]
   def __init__(self, **properties):
     super().__init__(**properties)
+    self.init_components(**properties)
     
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)
-    self.apply_styles(self.selected)
+    # self.apply_styles(self.selected)
     
   # Properties 
   def selected_setter(self, value):
@@ -32,20 +33,14 @@ class ToggleIconButton(IconButton):
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
       self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
-
-
-  # 
-  # border = style_property('anvil-m3-iconbutton-container', 'border')
-  # icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
-  # background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
   
-  selected = property_with_callback("selected", selected_setter)
   border = property_with_callback("border", apply_styles)
   icon_color = property_with_callback("icon_color", apply_styles)
   background = property_with_callback("background", apply_styles)
   selected_border = property_with_callback("selected_border", apply_styles)
   selected_background = property_with_callback("selected_background", apply_styles)
   selected_icon_color = property_with_callback("selected_icon_color", apply_styles)
+  selected = property_with_callback("selected", selected_setter)
   
   def handle_click(self, event):
     event.preventDefault()
