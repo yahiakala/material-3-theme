@@ -23,5 +23,9 @@ class TestPage(TestPageTemplate):
   def icon_button_toggle_1_click(self, **event_args):
     alert("toggled")
 
+  def toggle_icon_button_1_copy_2_click(self, **event_args):
+    alert("toggling with inherited button")
+
+
 
 
