@@ -2,435 +2,260 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: switch_1
-    properties: {selected_icon: check, enabled: true, unselected_icon: close}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: text_1
-    properties: {text: hello}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: button_menu_integrated_1
-    properties: {text: Font Face, visible: true, enabled: true}
-    type: form:Components.ButtonMenu_integrated
-    layout_properties: {}
-    components:
-    - name: menu_item_2
-      properties: {text: Arial, leading_icon: 4k_plus, hide_leading_icon: true, trailing_icon: ' '}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_2_click}
-    - name: menu_item_3
-      properties: {text: Droid Sans, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_3_click}
-    - name: menu_item_10
-      properties: {text: Lusitana, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_10_click}
-    - name: divider_1
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_12
-      properties: {text: Amarante, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_12_click}
-    - name: menu_item_8
-      properties: {text: Arial, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_8_click}
-    - name: menu_item_11
-      properties: {text: Arvo, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_11_click}
-    - name: menu_item_9
-      properties: {text: Droid Sans, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_9_click}
-  - name: button_menu_integrated_6
-    properties: {text: Menu}
-    type: form:Components.ButtonMenu_integrated
-    layout_properties: {}
-    components:
-    - name: menu_item_30
-      properties: {text: Item 1}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-  - name: radio_button_4
-    properties: {bold: false, selected: true}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: card_1
+  - name: flow_panel_4
     properties: {}
-    type: form:Components.Card
+    type: FlowPanel
     layout_properties: {}
-    components: []
+    components:
+    - name: card_1
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: flow_panel_3
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: toggle_icon_button_1
+          properties: {icon: settings, selected: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_2
+          properties: {appearance: Filled, icon: settings, selected: null}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_3
+          properties: {icon: settings, appearance: Filled tonal, selected: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_4
+          properties: {icon: settings, appearance: Outlined}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: text_5
+          properties: {text: unselected}
+          type: form:Components.Text
+          layout_properties: {}
+      - name: flow_panel_3_copy_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: toggle_icon_button_1_copy_1
+          properties: {icon: settings, enabled: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_2_copy_1
+          properties: {appearance: Filled, icon: settings, enabled: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_3_copy_1
+          properties: {icon: settings, appearance: Filled tonal, enabled: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_4_copy_1
+          properties: {icon: settings, appearance: Outlined, enabled: false}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: text_5_copy_1
+          properties: {text: 'unselected, disabled'}
+          type: form:Components.Text
+          layout_properties: {}
+      - name: flow_panel_3_copy_2
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: toggle_icon_button_1_copy_2
+          properties: {icon: settings, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+          event_bindings: {click: toggle_icon_button_1_copy_2_click}
+        - name: toggle_icon_button_2_copy_2
+          properties: {appearance: Filled, icon: settings, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_3_copy_2
+          properties: {icon: settings, appearance: Filled tonal, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_4_copy_2
+          properties: {icon: settings, appearance: Outlined, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: text_5_copy_2
+          properties: {text: selected}
+          type: form:Components.Text
+          layout_properties: {}
+      - name: flow_panel_3_copy_1_copy_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: toggle_icon_button_1_copy_1_copy_1
+          properties: {icon: settings, enabled: false, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_2_copy_1_copy_1
+          properties: {appearance: Filled, icon: settings, enabled: false, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_3_copy_1_copy_1
+          properties: {icon: settings, appearance: Filled tonal, enabled: false, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: toggle_icon_button_4_copy_1_copy_1
+          properties: {icon: settings, appearance: Outlined, enabled: false, selected: true}
+          type: form:Components.ToggleIconButton
+          layout_properties: {}
+        - name: text_5_copy_1_copy_1
+          properties: {text: 'selected, disabled'}
+          type: form:Components.Text
+          layout_properties: {}
+    - name: card_2
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: text_4
+          properties: {text: Custom Styles}
+          type: form:Components.Text
+          layout_properties: {grid_position: 'UBIDUS,PJOSTR'}
+        - name: toggle_icon_button_5
+          properties: {icon: settings, align: center, selected: true, background: blue,
+            border: 1px solid pink, icon_color: yellow, appearance: Filled tonal}
+          type: form:Components.ToggleIconButton
+          layout_properties: {grid_position: 'MQKUSZ,NDWPSQ'}
+        - name: toggle_icon_button_6
+          properties: {selected: true, align: center, selected_icon_color: '#94e3fe',
+            border: 4px dotted purple, selected_border: 2px dashed magenta, selected_background: '#77bb41',
+            background: orange, icon_color: yellow, icon: settings}
+          type: form:Components.ToggleIconButton
+          layout_properties: {grid_position: 'ODPNTK,IBQBZV'}
+    - name: card_4
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: flow_panel_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: column_panel_2
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {width: 560}
+          components:
+          - name: toggle_icon_button_7
+            properties: {icon: settings, align: left, appearance: Filled tonal, visible: true,
+              enabled: true}
+            type: form:Components.ToggleIconButton
+            layout_properties: {grid_position: 'HTPDVM,BRQXVD'}
+          - name: toggle_icon_button_7_copy_2
+            properties: {icon: settings, align: center, appearance: Outlined}
+            type: form:Components.ToggleIconButton
+            layout_properties: {grid_position: 'QRPAGY,MJMMWS'}
+          - name: toggle_icon_button_7_copy_1
+            properties: {icon: settings, align: right, appearance: Filled}
+            type: form:Components.ToggleIconButton
+            layout_properties: {grid_position: 'RPBHGO,XUNVJD'}
   - name: flow_panel_5
     properties: {}
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: text_field_1
-      properties: {display_font_size: 10, label_text: fdsafdsa, label_font_size: 20,
-        italic_display: true, display_text_color: 'rgb(255, 98, 81)', placeholder: '',
-        error: false, text_color: 'rgb(98, 91, 113)', display_font: '"Times New Roman"',
-        visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
-        background: '', bold: false}
-      type: form:Components.TextField
-      layout_properties: {width: null, expand: false}
-    - name: text_field_1_copy_1
-      properties: {label_text: fdsafdsa, placeholder: '', error: false, enabled: false,
-        visible: true, font_size: 20, font: '', trailing_icon: arrow_drop_down, italic: false,
-        bold: false}
-      type: form:Components.TextField
-      layout_properties: {width: 833}
-  - name: drop_down_1
-    properties:
-      items: ['']
-      include_placeholder: true
-      placeholder: has placeholder and binding
-    type: DropDown
-    layout_properties: {}
-    data_bindings:
-    - {property: items, code: 'self.item[''items'']', writeback: false}
-  - name: drop_down_2
-    properties:
-      items: [asdf, fdsa, '1234', '!!!!']
-      align: left
-    type: DropDown
-    layout_properties: {}
-    data_bindings: []
-  - name: dropdown_menu_4
-    properties: {}
-    type: form:Components.DropdownMenu
-    layout_properties: {}
-  - name: text_field_3
-    properties: {}
-    type: form:Components.TextField
-    layout_properties: {}
-  - name: flow_panel_9
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: dropdown_menu_1
-      properties:
-        display_font_size: 20
-        label_text: Make a suggestion. This thing is kinda long I wonder what it'll look like
-        appearance: ''
-        bold_display: true
-        align: right
-        italic_display: true
-        display_text_color: '#96d35f'
-        placeholder: ' Make a selection. This one is None salkjdf;a fl;kjMake a selection.
-          This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
-          fl;kjMake a selection. This one is None salkjdf;a fl;kjMake a selection.
-          This one is None salkjdf;a fl;kjMake a selection. This one is None salkjdf;a
-          fl;kjMake a selection. This one is None salkjdf;a fl;kj'
-        enabled: true
-        display_font: Arial
-        label_font: Times New Roman
-        items: [selection 1, selection 2, selection 3, selection 4, selection 5, 'klasjhdf
-            kljahs dfkh;laksdj fl;kaj sdlfkj ;laksjdf l;aksjdf ;laksjd fjfiljs df8u24kjn
-            asd8fu24jk slfjas;ildjf 2904uoljka sfd ']
-        visible: true
-        italic_items: true
-        include_placeholder: true
-      type: form:Components.DropdownMenu
-      layout_properties: {expand: false, width: 532}
-      event_bindings: {change: dropdown_menu_1_change}
-    - name: heading_1
+    - name: card_3
       properties: {}
-      type: form:Components.Heading
-    - name: text_field_2
-      properties: {}
-      type: form:Components.TextField
-      layout_properties: {width: 661}
-  - name: heading_2
-    properties: {align: right}
-    type: form:Components.Heading
-    layout_properties: {}
-  - name: dropdown_menu_2
-    properties:
-      label_text: help
-      appearance: outlined
-      align: right
-      items_font: Arial
-      placeholder: 'select to set to none uasdijhflljkasdf '
-      enabled: true
-      items: ['']
-      items_text_color: green
-      items_background: pink
-      include_placeholder: true
-    type: form:Components.DropdownMenu
-    layout_properties: {}
-    data_bindings:
-    - {property: items, code: 'self.item[''items'']', writeback: false}
-    event_bindings: {change: dropdown_menu_2_change}
-  - name: flow_panel_10
-    properties: {align: center}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: dropdown_menu_3
-      properties:
-        label_text: smol
-        display_text_color: white
-        text_color: theme:Tertiary Container
-        items: ['']
-        label_text_color: cyan
-        items_text_color: theme:On Secondary
-        items_background: theme:Error
-        background: theme:On Tertiary Container
-        include_placeholder: ''
-      type: form:Components.DropdownMenu
-      layout_properties: {width: 976}
-      data_bindings:
-      - {property: items, code: 'self.item[''items'']', writeback: false}
-    - name: radio_button_5
-      properties: {text: radio_button_5}
-      type: RadioButton
-    - name: button_1
-      properties: {text: button_1}
-      type: Button
-  - name: image_3
-    properties: {height: 488, visible: true}
-    type: Image
-    layout_properties: {}
-  - name: radio_button_1
-    properties: {align: center, text: align-center}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: radio_button_2
-    properties: {visible: false, enabled: true, text: not visible}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: radio_button_3
-    properties: {enabled: false, text: disabled}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: flow_panel_6
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: button_menu_integrated_5
-      properties: {text: numbers, appearance: tonal}
-      type: form:Components.ButtonMenu_integrated
+      type: form:Components.Card
       components:
-      - name: menu_item_16
-        properties: {text: '0'}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: menu_item_16_click}
-      - name: divider_5
+      - name: text_2
+        properties: {text: no toggle}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: linear_panel_2
         properties: {}
-        type: form:Components.Divider
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_19
-        properties: {text: '2'}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: menu_item_19_click}
-      - name: divider_6
-        properties: {}
-        type: form:Components.Divider
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_21
-        properties: {text: '4'}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: menu_item_21_click}
-      - name: divider_7
-        properties: {}
-        type: form:Components.Divider
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_29
-        properties: {text: '6'}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: menu_item_29_click}
-      - name: menu_item_34
-        properties: {text: long selection text}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_32
-        properties: {text: blah blah more text}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: divider_8
-        properties: {}
-        type: form:Components.Divider
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-  - name: column_panel_1
-    properties: {background: '', visible: true}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: flow_panel_2
-      properties: {align: center, visible: true}
-      type: FlowPanel
-      layout_properties: {grid_position: 'TWWPKN,NLMBAM'}
-      components:
-      - name: button_menu_integrated_3
-        properties: {text: Line Spacing, appearance: filled, enabled: true, visible: true}
-        type: form:Components.ButtonMenu_integrated
-        layout_properties: {}
+        type: LinearPanel
+        layout_properties: {slot: anvil-m3-card-slot}
         components:
-        - name: menu_item_4
-          properties: {text: Single}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_5
-          properties: {text: '1.15'}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_6
-          properties: {text: Double}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_7
-          properties: {text: 'Custom: 1.2', leading_icon: check}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: divider_2
+        - name: flow_panel_2
           properties: {}
-          type: form:Components.Divider
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_13
-          properties: {text: Add space before paragraph, hide_leading_icon: true,
-            trailing_icon: arrow_right}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_14
-          properties: {text: Add space after paragraph, hide_leading_icon: true}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: divider_3
+          type: FlowPanel
+          components:
+          - name: icon_button_1
+            properties: {icon: settings}
+            type: form:Components.IconButton
+            layout_properties: {}
+            event_bindings: {click: icon_button_1_click}
+          - name: icon_button_2
+            properties: {icon: settings, appearance: Filled}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_3
+            properties: {icon: settings, appearance: Filled tonal}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_4
+            properties: {icon: settings, appearance: Outlined}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_4_copy_2
+            properties: {icon: settings, appearance: Outlined, background: 'rgb(179,
+                38, 30)', border: 2px dotted yellow, icon_color: orange}
+            type: form:Components.IconButton
+            layout_properties: {}
+        - name: flow_panel_2_copy_1
           properties: {}
-          type: form:Components.Divider
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_15
-          properties: {text: Custom spacing..., hide_leading_icon: true, enabled: false}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        - name: menu_item_1
-          properties: {text: More options..., hide_leading_icon: true}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: image_2
-        properties: {height: '150'}
-        type: Image
-        layout_properties: {width: 0}
-      - name: image_4
-        properties: {}
-        type: Image
-    - name: image_1
-      properties: {height: 503, visible: false}
-      type: Image
-      layout_properties: {grid_position: 'DNEJHM,JHEQFU'}
-  - name: grid_panel_1
-    properties: {}
-    type: GridPanel
-    layout_properties: {}
-    components:
-    - name: label_1
-      properties: {text: 'Selected Trail Type:'}
-      type: Label
-      layout_properties: {col_xs: 0, row: QNFVWQ, width_xs: 3}
-    - name: selected_trail
+          type: FlowPanel
+          components:
+          - name: icon_button_1_copy_1
+            properties: {icon: settings, enabled: false}
+            type: form:Components.IconButton
+            layout_properties: {}
+            event_bindings: {click: icon_button_1_copy_1_click}
+          - name: icon_button_2_copy_1
+            properties: {icon: settings, appearance: Filled, enabled: false}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_3_copy_1
+            properties: {icon: settings, appearance: Filled tonal, enabled: false}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_4_copy_1
+            properties: {icon: settings, appearance: Outlined, enabled: false}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: text_3_copy_1
+            properties: {text: disabled}
+            type: form:Components.Text
+    - name: card_5
       properties: {}
-      type: Label
-      layout_properties: {col_xs: 2, row: QNFVWQ, width_xs: 3}
-    - name: flow_panel_1
-      properties: {align: right}
-      type: FlowPanel
-      layout_properties: {col_xs: 6, row: QNFVWQ, width_xs: 6}
+      type: form:Components.Card
       components:
-      - name: button_menu_integrated_4
-        properties: {text: Trail Type}
-        type: form:Components.ButtonMenu_integrated
+      - name: flow_panel_6
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
         components:
-        - name: menu_item_26
-          properties: {text: Running, leading_icon: directions_run}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-          event_bindings: {click: menu_item_26_click}
-        - name: menu_item_27
-          properties: {text: Walking, leading_icon: directions_walk}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-          event_bindings: {click: menu_item_27_click}
-        - name: menu_item_28
-          properties: {text: Hiking, leading_icon: hiking}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-          event_bindings: {click: menu_item_28_click}
-        - name: menu_item_33
-          properties: {text: Cycling, leading_icon: directions_bike}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-          event_bindings: {click: menu_item_33_click}
-        - name: menu_item_31
-          properties: {text: Skiing, leading_icon: downhill_skiing}
-          type: form:Components.Menu.MenuItem
-          layout_properties: {slot: anvil-m3-buttonMenu-slot}
-          event_bindings: {click: menu_item_31_click}
-        layout_properties: {}
-  - name: image_1_copy_1
-    properties: {height: 353}
-    type: Image
-    layout_properties: {}
-  - name: button_menu_integrated_2
-    properties: {text: Format, appearance: outlined}
-    type: form:Components.ButtonMenu_integrated
-    layout_properties: {}
-    components:
-    - name: menu_item_17
-      properties: {text: Bold, trailing_text: ⌘B, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_17_click}
-    - name: menu_item_22
-      properties: {text: Italic, trailing_text: ⌘I, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_22_click}
-    - name: menu_item_25
-      properties: {text: Underline, trailing_text: ⌘U, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_25_click}
-    - name: menu_item_24
-      properties: {text: Strikethrough, trailing_text: ⌘+Shift+X, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_24_click}
-    - name: menu_item_23
-      properties: {text: Superscript, trailing_text: '⌘,', hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_23_click}
-    - name: menu_item_18
-      properties: {text: Subscript, trailing_text: ⌘., hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_18_click}
-    - name: divider_4
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_20
-      properties: {text: Paragraph Styles, trailing_icon: arrow_right, hide_leading_icon: true}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_20_click}
+        - name: linear_panel_1
+          properties: {}
+          type: LinearPanel
+          layout_properties: {width: 320}
+          components:
+          - name: icon_button_5
+            properties: {align: left, icon: settings}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_6
+            properties: {align: center, icon: settings}
+            type: form:Components.IconButton
+            layout_properties: {}
+          - name: icon_button_7
+            properties: {align: right, icon: settings}
+            type: form:Components.IconButton
+            layout_properties: {}
 components: []
 event_bindings: {show: form_show}

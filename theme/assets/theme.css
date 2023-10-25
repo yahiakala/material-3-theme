@@ -5,6 +5,7 @@
 @import './_/theme/anvil-m3/card.css';
 @import './_/theme/anvil-m3/text-fields.css';
 @import './_/theme/anvil-m3/radiobutton.css';
+@import './_/theme/anvil-m3/iconbutton.css';
 @import './_/theme/anvil-m3/menu.css';
 @import './_/theme/anvil-m3/text.css';
 
@@ -26,7 +27,7 @@
   --anvil-m3-surface-container-low: %color:Surface Container Low%;
   --anvil-m3-surface: %color:Surface%;
   --anvil-m3-on-surface: %color:On Surface%;
-  --anvil-m3-on-surface-variant: %color:Surface Variant%;
+  --anvil-m3-surface-variant: %color:Surface Variant%;
   --anvil-m3-background: %color:Background%;
   --anvil-m3-outline: %color:Outline%;
   --anvil-m3-outline-variant: %color:Outline Variant%;
@@ -47,6 +48,12 @@
   --anvil-m3-on-error-container: %color:On Error Container%;
   --anvil-m3-error-overlay-1: %color:Error Overlay 1%;
   --anvil-m3-error-overlay-2: %color:Error Overlay 2%;
+  --anvil-m3-inverse-surface: %color:Inverse Surface%;
+  --anvil-m3-inverse-on-surface: %color:Inverse On Surface%;
+  --anvil-m3-on-surface-variant-overlay-1: %color:On Surface Variant Overlay 1%;
+  --anvil-m3-on-surface-variant-overlay-2: %color:On Surface Variant Overlay 2%;
+  --anvil-m3-inverse-on-surface-overlay-1: %color:Inverse On Surface Overlay 1%;
+  --anvil-m3-inverse-on-surface-overlay-2: %color:Inverse On Surface Overlay 2%;
 
 }
 
