@@ -1,5 +1,4 @@
-from ._anvil_designer import ToggleIconButton_Template
-from ..IconButton import IconButton
+from .IconButton import IconButton
 
 icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
