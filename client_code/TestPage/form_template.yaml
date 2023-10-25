@@ -257,5 +257,9 @@ components_by_slot:
             properties: {align: right, icon: settings}
             type: form:Components.IconButton
             layout_properties: {}
+  - name: toggle_icon_button_8
+    properties: {}
+    type: form:Components.ToggleIconButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
