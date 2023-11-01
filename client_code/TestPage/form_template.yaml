@@ -11,5 +11,9 @@ components_by_slot:
       properties: {appearance: filled}
       type: form:Components.Button
       layout_properties: {slot: anvil-m3-link}
+    - name: switch_1
+      properties: {}
+      type: form:Components.Switch
+      layout_properties: {slot: anvil-m3-link}
 components: []
 event_bindings: {show: form_show}

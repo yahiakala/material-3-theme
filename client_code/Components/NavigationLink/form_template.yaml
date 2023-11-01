@@ -382,7 +382,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
-  default_binding_prop: true}
+  default_binding_prop: true, default_value: null}
 is_package: true
 event_bindings: {show: form_show}
 events:
