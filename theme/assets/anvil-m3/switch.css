@@ -1,4 +1,8 @@
 /*Inspired by W3 schools slider: https://www.w3schools.com/howto/howto_css_switch.asp*/
+
+.anvil-m3-switch-container {
+  display: flex;
+}
 .anvil-m3-switch {
   position: relative;
   display: inline-block;

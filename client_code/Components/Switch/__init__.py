@@ -68,3 +68,4 @@ class Switch(SwitchTemplate):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
 
   enabled = enabled_property('anvil-m3-switch-input')
+  align = style_property('anvil-m3-switch', 'justifyContent')
