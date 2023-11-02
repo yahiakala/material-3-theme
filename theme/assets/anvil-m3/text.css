@@ -149,8 +149,5 @@
 /*LINK*/
 .anvil-m3-link, .anvil-m3-link:hover {
   color: var(--anvil-m3-primary);
-}
-
-.anvil-m3-link:hover .anvil-m3-link-icon {
   text-decoration: none;
 }
