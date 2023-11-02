@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import jQuery
 from anvil.js import window
-from ...Functions import theme_color_to_css, enabled_property
+from ...Functions import theme_color_to_css, enabled_property, style_property
 
 
 class Switch(SwitchTemplate):
@@ -68,4 +68,4 @@ class Switch(SwitchTemplate):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
 
   enabled = enabled_property('anvil-m3-switch-input')
-  align = style_property('anvil-m3-switch', 'justifyContent')
+  align = style_property('anvil-m3-switch-container', 'justifyContent')

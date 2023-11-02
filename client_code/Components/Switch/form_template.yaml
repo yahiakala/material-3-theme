@@ -746,11 +746,11 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-switch-container\">\n  <label anvil-name=\"\
-      anvil-m3-switch\" class=\"anvil-m3-switch\">\n    <input class=\"anvil-m3-switch-input\"\
-      \ anvil-name=\"anvil-m3-switch-input\" type=\"checkbox\">\n    <span class=\"\
-      anvil-m3-switch-slider\" anvil-name=\"anvil-m3-switch-slider\">\n      <span\
-      \ anvil-name=\"anvil-m3-enabled-switch-icon\" class=\"anvil-m3-enabled-switch-icon\"\
+  properties: {html: "<div anvil-name=\"anvil-m3-switch-container\" class=\"anvil-m3-switch-container\"\
+      >\n  <label anvil-name=\"anvil-m3-switch\" class=\"anvil-m3-switch\">\n    <input\
+      \ class=\"anvil-m3-switch-input\" anvil-name=\"anvil-m3-switch-input\" type=\"\
+      checkbox\">\n    <span class=\"anvil-m3-switch-slider\" anvil-name=\"anvil-m3-switch-slider\"\
+      >\n      <span anvil-name=\"anvil-m3-enabled-switch-icon\" class=\"anvil-m3-enabled-switch-icon\"\
       ></span>\n      <span anvil-name=\"anvil-m3-disabled-switch-icon\" class=\"\
       anvil-m3-disabled-switch-icon\"></span>\n    </span>\n  </label>\n</div>\n\n\
       \n"}
