@@ -13,8 +13,17 @@ components_by_slot:
       layout_properties: {grid_position: 'VGQHSL,KBZSXB'}
       components:
       - name: link_2
-        properties: {align: center, text: Link inside the link.}
+        properties: {align: right, text: Link inside the link.}
         type: form:Components.Link
         layout_properties: {slot: anvil-m3-link}
+  - name: link_3
+    properties: {align: left}
+    type: form:Components.Link
+    layout_properties: {}
+    components:
+    - name: checkbox_1
+      properties: {align: right, checked: false, text: Checkbox}
+      type: form:Components.Checkbox
+      layout_properties: {slot: anvil-m3-link}
 components: []
 event_bindings: {show: form_show}

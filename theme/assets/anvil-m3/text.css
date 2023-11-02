@@ -147,9 +147,11 @@
 }
 
 /*LINK*/
+
 .anvil-m3-link {
   display: flex;
 }
+
 .anvil-m3-link, .anvil-m3-link:hover {
   color: var(--anvil-m3-primary);
   text-decoration: none;
