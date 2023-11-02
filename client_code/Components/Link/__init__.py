@@ -45,7 +45,7 @@ class Link(LinkTemplate):
   bold = bold_property('anvil-m3-link')
   font = style_property('anvil-m3-link', 'fontFamily')
   font_size = font_size_property('anvil-m3-link')
-  material_icon = innerText_property('anvil-m3-link-icon')
+  #material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link-text')
   visible = visible_property('anvil-m3-link-container', 'block')
   text_color = color_property('anvil-m3-link', 'color')
@@ -63,12 +63,14 @@ class Link(LinkTemplate):
     self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
 
   @property
-  def icon_size(self):
-    return self._icon_size
+  def material_icon(self):
+    return self.dom_nodes['anvil-m3-link-icon'].innerText
 
-  @icon_size.setter
-  def icon_size(self, value):
-    self._icon_size = value
-    if value: value = f'{value}px'
-    self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
+  @material_icon.setter
+  def material_icon(self, value):
+    if value:
+      self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
+    else:
+      self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
+    self.dom_nodes['anvil-m3-link-icon'].innerText = value
   
