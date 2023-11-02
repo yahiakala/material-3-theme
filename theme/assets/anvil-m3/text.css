@@ -4,8 +4,8 @@
   column-gap: 8px;
 }
 
-.anvil-m3-link-icon-container {
-  display: flex;
+.anvil-m3-link-container {
+  display: flex
 }
 
 .anvil-m3-heading-container > .anvil-m3-heading-icon, .anvil-m3-text-container > .anvil-m3-text-icon {
@@ -151,3 +151,8 @@
   color: var(--anvil-m3-primary);
   text-decoration: none;
 }
+
+.anvil-m3-link-icon-container {
+  display: flex;
+}
+
