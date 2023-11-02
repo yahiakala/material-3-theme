@@ -4,6 +4,10 @@
   column-gap: 8px;
 }
 
+.anvil-m3-link-icon-container {
+  display: flex;
+}
+
 .anvil-m3-heading-container > .anvil-m3-heading-icon, .anvil-m3-text-container > .anvil-m3-text-icon {
   font-size: inherit;
 }
@@ -143,6 +147,10 @@
 }
 
 /*LINK*/
-.anvil-m3-link {
+.anvil-m3-link, .anvil-m3-link:hover {
   color: var(--anvil-m3-primary);
+}
+
+.anvil-m3-link:hover .anvil-m3-link-icon {
+  text-decoration: none;
 }

@@ -17,7 +17,7 @@ components_by_slot:
       layout_properties: {slot: anvil-m3-link}
     - name: link_1
       properties: {border: '', material_icon: 15mp, icon_color: '', font: '', bold: false,
-        align: left}
+        align: center, text: hello}
       type: form:Components.Link
       layout_properties: {slot: anvil-m3-link}
     data_bindings: []
