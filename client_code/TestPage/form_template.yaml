@@ -15,5 +15,11 @@ components_by_slot:
       properties: {}
       type: form:Components.Switch
       layout_properties: {slot: anvil-m3-link}
+    - name: link_1
+      properties: {border: '', material_icon: 15mp, icon_color: '', font: '', bold: false,
+        align: left}
+      type: form:Components.Link
+      layout_properties: {slot: anvil-m3-link}
+    data_bindings: []
 components: []
 event_bindings: {show: form_show}
