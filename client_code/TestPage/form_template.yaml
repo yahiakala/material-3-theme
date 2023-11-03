@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: link_1
-      properties: {}
+      properties: {align: center}
       type: form:Components.Link
       layout_properties: {grid_position: 'VGQHSL,KBZSXB'}
       components:
@@ -29,5 +29,14 @@ components_by_slot:
       properties: {text: Link}
       type: form:Components.Link
       layout_properties: {slot: anvil-m3-link}
+  - name: link_5
+    properties: {border: 1px dashed cyan, align: left}
+    type: Link
+    layout_properties: {}
+    components:
+    - name: link_6
+      properties: {text: Old link inside old link, align: left}
+      type: Link
+      layout_properties: {grid_position: 'QXSANH,QSGVYI'}
 components: []
 event_bindings: {show: form_show}
