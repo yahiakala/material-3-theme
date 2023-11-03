@@ -74,7 +74,10 @@ class Text(TextTemplate):
   def material_icon(self, value):
     self._material_icon = value
     if value:
-      self.dom_nodes['anvil-m3-text-icon'].innerText = value
+      self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
+    else:
+      self.dom_nodes['anvil-m3-text-icon'].style.marginRight = ""
+    self.dom_nodes['anvil-m3-text-icon'].innerText = value
 
   @property
   def style(self):
