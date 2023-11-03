@@ -15,3 +15,6 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def dropdown_menu_1_change(self, **event_args):
     """This method is called when an item is selected"""
     print('hello')
+
+  def icon_button_1_click(self, **event_args):
+    print('hello')
