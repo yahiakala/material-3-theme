@@ -41,6 +41,6 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
   - name: file_loader_2
-    properties: {text: Upload a file, material_icon: file_upload, enabled: false}
+    properties: {text: Upload a file, material_icon: file_upload, enabled: true, visible: true}
     type: form:Components.FileLoader
     layout_properties: {}
