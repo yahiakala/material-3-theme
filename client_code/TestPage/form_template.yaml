@@ -7,5 +7,9 @@ components_by_slot:
     type: ColumnPanel
     layout_properties: {}
     components: []
+  - name: link_1
+    properties: {text: Link}
+    type: form:Components.Link
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
