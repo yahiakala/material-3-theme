@@ -47,10 +47,10 @@ class Link(LinkTemplate):
   font_size = font_size_property('anvil-m3-link')
   #material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link-text')
-  visible = visible_property('anvil-m3-link-container', 'block')
+  visible = visible_property('anvil-m3-link', 'flex')
   text_color = color_property('anvil-m3-link', 'color')
   icon_color = color_property('anvil-m3-link-icon', 'color')
-  border = style_property('anvil-m3-link-container', 'border')
+  border = style_property('anvil-m3-link', 'border')
 
   @property
   def icon_size(self):
