@@ -37,14 +37,14 @@ components_by_slot:
       properties: {align: center, border: 1px solid lightgreen}
       type: form:Components.Link
       layout_properties: {slot: anvil-m3-link}
-      components:
-      - name: link_2_copy_1
-        properties: {align: left, text: Link inside the link., material_icon: adb}
-        type: form:Components.Link
-        layout_properties: {slot: anvil-m3-link}
+      components: []
   - name: link_7
     properties: {text: old link, align: right}
     type: Link
+    layout_properties: {}
+  - name: link_2_copy_1
+    properties: {align: left, text: Link inside the link., material_icon: adb}
+    type: form:Components.Link
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
