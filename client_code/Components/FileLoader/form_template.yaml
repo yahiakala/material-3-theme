@@ -375,6 +375,9 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: file_upload
+- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
+    this component be displayed?'}
 is_package: true
 events:
 - name: change
@@ -391,7 +394,7 @@ container:
   type: HtmlTemplate
   properties: {html: "<form anvil-name=\"anvil-m3-fileloader-form\" class=\"anvil-m3-fileloader-form\"\
       >\n  <div anvil-name=\"anvil-m3-fileloader-icon-container\" class=\"anvil-m3-fileloader-icon-container\"\
-      >  \n    <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"anvil-m3-text-icon\
+      >  \n    <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"anvil-m3-fileloader-icon\
       \ material-symbols-outlined\"></span>\n    <label anvil-name=\"anvil-m3-fileloader-label\"\
       \ class=\"anvil-m3-fileloader-label\" for=\"anvil-m3-fileloader\">Upload a file</label>\n\
       \  </div>\n  <input style=\"display: none\" id=\"anvil-m3-fileloader\" type=\"\
