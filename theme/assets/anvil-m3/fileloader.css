@@ -1,4 +1,4 @@
-anvil-m3-fileloader-icon-container {
+.anvil-m3-fileloader-icon-container {
   cursor: pointer
 }
 
@@ -9,4 +9,12 @@ anvil-m3-fileloader-icon-container {
 
 input.anvil-m3-fileloader-input:disabled ~ *{
   cursor: not-allowed;
+}
+
+input.anvil-m3-fileloader-input:disabled ~ *{
+  color: var(--anvil-m3-on-surface);
+}
+
+.anvil-m3-fileloader-icon-container {
+  color: var(--anvil-m3-primary);
 }
