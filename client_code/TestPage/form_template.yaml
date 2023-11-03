@@ -2,20 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: link_1
-      properties: {align: center}
-      type: form:Components.Link
-      layout_properties: {grid_position: 'VGQHSL,KBZSXB'}
-      components:
-      - name: link_2
-        properties: {align: right, text: Link inside the link., material_icon: adb}
-        type: form:Components.Link
-        layout_properties: {slot: anvil-m3-link}
   - name: link_3
     properties: {align: left}
     type: form:Components.Link
@@ -38,5 +24,18 @@ components_by_slot:
       properties: {text: Old link inside old link, align: left}
       type: Link
       layout_properties: {grid_position: 'QXSANH,QSGVYI'}
+  - name: link_1
+    properties: {align: left, border: 1px solid lightgreen}
+    type: form:Components.Link
+    layout_properties: {}
+    components:
+    - name: link_2
+      properties: {align: left, text: Link inside the link., material_icon: adb}
+      type: form:Components.Link
+      layout_properties: {slot: anvil-m3-link}
+  - name: link_7
+    properties: {text: old link, align: right}
+    type: Link
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
