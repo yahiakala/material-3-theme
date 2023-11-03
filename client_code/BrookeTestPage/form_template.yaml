@@ -6,3 +6,7 @@ components_by_slot:
     properties: {icon: 'fa:upload'}
     type: FileLoader
     layout_properties: {}
+  - name: file_loader_2
+    properties: {}
+    type: form:Components.FileLoader
+    layout_properties: {}
