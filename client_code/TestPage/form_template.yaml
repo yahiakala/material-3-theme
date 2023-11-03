@@ -26,43 +26,53 @@ components_by_slot:
             type: form:Components.Button
             layout_properties: {}
             event_bindings: {click: button_1_click}
-          - name: determinate_progress_indicator_3
-            properties: {progress: 50, visible: true}
-            type: form:Components.DeterminateProgressIndicator
-            layout_properties: {}
+          - name: linear_progress_indicator_2
+            properties: {visible: true, type: determinate, progress: 55}
+            type: form:Components.LinearProgressIndicator
           - name: divider_1
             properties: {}
             type: form:Components.Divider
-          - name: determinate_progress_indicator_1
-            properties: {shape: circular, progress: 60, align: center, visible: true}
-            type: form:Components.DeterminateProgressIndicator
-            layout_properties: {}
+          - name: circular_progress_indicator_1_copy_1
+            properties: {visible: true, type: determinate, progress: 40}
+            type: form:Components.CircularProgressIndicator
       layout_properties: {width: 441}
-  - name: card_1
+  - name: card_2
     properties: {}
     type: form:Components.Card
     layout_properties: {}
     components:
-    - name: flow_panel_1
+    - name: flow_panel_2
       properties: {}
       type: FlowPanel
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: linear_panel_2
+      - name: column_panel_1
         properties: {}
-        type: LinearPanel
-        layout_properties: {width: 322}
+        type: ColumnPanel
+        layout_properties: {width: 870}
         components:
-        - name: indeterminate_progress_indicator_1
+        - name: linear_progress_indicator_1
+          properties: {visible: true, type: indeterminate}
+          type: form:Components.LinearProgressIndicator
+          layout_properties: {grid_position: 'ECARCB,ZUNXTL'}
+  - name: card_2_copy_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: column_panel_1_copy_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 870}
+        components:
+        - name: circular_progress_indicator_1
           properties: {visible: true}
-          type: form:Components.IndeterminateProgressIndicator
-          layout_properties: {}
-        - name: divider_2
-          properties: {}
-          type: form:Components.Divider
-        - name: indeterminate_progress_indicator_2
-          properties: {shape: circular, align: center, visible: true}
-          type: form:Components.IndeterminateProgressIndicator
-          layout_properties: {}
+          type: form:Components.CircularProgressIndicator
+          layout_properties: {grid_position: 'YMQGPK,BDVCHS'}
 components: []
 event_bindings: {show: form_show}
