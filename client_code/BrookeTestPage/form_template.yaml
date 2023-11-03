@@ -40,3 +40,7 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+  - name: file_loader_2
+    properties: {}
+    type: form:Components.FileLoader
+    layout_properties: {}

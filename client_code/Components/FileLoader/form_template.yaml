@@ -24,4 +24,9 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<form>\n  \n</form>"}
+  properties: {html: "<form class=\"anvil-m3-fileloader-form\">\n  <span anvil-name=\"\
+      anvil-m3-fileloader-icon\" class=\"anvil-m3-text-icon material-symbols-outlined\"\
+      >star</span>\n  <label class=\"anvil-m3-fileloader-label\" for=\"anvil-m3-fileloader\"\
+      >Upload a file</label>\n  <input style=\"display: none\" id=\"anvil-m3-fileloader\"\
+      \ type=\"file\" accept/>\n</form>"}
+custom_component_container: false
