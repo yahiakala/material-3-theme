@@ -2,40 +2,15 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: link_3
-    properties: {align: left}
-    type: form:Components.Link
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
     layout_properties: {}
     components:
-    - name: checkbox_1
-      properties: {align: right, checked: false, text: Checkbox}
-      type: form:Components.Checkbox
-      layout_properties: {slot: anvil-m3-link}
-    - name: link_4
-      properties: {text: Link}
+    - name: link_1
+      properties: {align: left, border: 1px solid blue, text: Link, material_icon: alarm_on,
+        italic: false, url: anvil.works}
       type: form:Components.Link
-      layout_properties: {slot: anvil-m3-link}
-  - name: link_5
-    properties: {border: 1px dashed cyan, align: right}
-    type: Link
-    layout_properties: {}
-    components:
-    - name: link_6
-      properties: {text: Old link inside old link, align: left}
-      type: Link
-      layout_properties: {grid_position: 'QXSANH,QSGVYI'}
-  - name: link_1
-    properties: {align: center, border: 1px solid lightgreen}
-    type: form:Components.Link
-    layout_properties: {}
-    components:
-    - name: link_2
-      properties: {align: left, text: Link inside the link., material_icon: adb}
-      type: form:Components.Link
-      layout_properties: {slot: anvil-m3-link}
-  - name: link_7
-    properties: {text: old link, align: right}
-    type: Link
-    layout_properties: {}
+      layout_properties: {grid_position: 'XFOGXS,DIACII'}
 components: []
 event_bindings: {show: form_show}
