@@ -7,6 +7,6 @@ components_by_slot:
     type: FileLoader
     layout_properties: {}
   - name: file_loader_2
-    properties: {text: Upload a file, material_icon: file_upload}
+    properties: {text: Upload a file, material_icon: file_upload, enabled: false}
     type: form:Components.FileLoader
     layout_properties: {}

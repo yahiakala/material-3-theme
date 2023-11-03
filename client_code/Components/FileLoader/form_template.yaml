@@ -395,8 +395,8 @@ container:
   properties: {html: "<form anvil-name=\"anvil-m3-fileloader-form\" class=\"anvil-m3-fileloader-form\"\
       >\n  <div anvil-name=\"anvil-m3-fileloader-icon-container\" class=\"anvil-m3-fileloader-icon-container\"\
       >  \n    <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"anvil-m3-fileloader-icon\
-      \ material-symbols-outlined\"></span>\n    <label anvil-name=\"anvil-m3-fileloader-label\"\
-      \ class=\"anvil-m3-fileloader-label\" for=\"anvil-m3-fileloader\">Upload a file</label>\n\
-      \  </div>\n  <input style=\"display: none\" id=\"anvil-m3-fileloader\" type=\"\
-      file\" accept/>\n</form>"}
+      \ material-symbols-outlined\"></span>\n    <input style=\"display: none\" anvil-name=\"\
+      anvil-m3-fileloader-input\" id=\"anvil-m3-fileloader\" type=\"file\" accept/>\n\
+      \    <label anvil-name=\"anvil-m3-fileloader-label\" class=\"anvil-m3-fileloader-label\"\
+      \ for=\"anvil-m3-fileloader\">Upload a file</label>\n  </div>\n</form>"}
 custom_component_container: false

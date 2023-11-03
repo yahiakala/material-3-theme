@@ -2,8 +2,11 @@
   cursor: pointer
 }
 
-
 .anvil-m3-fileloader-icon-container {
   display: flex;
   align-items: center;
+}
+
+input.anvil-m3-fileloader-input:disabled + .anvil-m3-fileloader-label {
+  cursor: not-allowed;
 }

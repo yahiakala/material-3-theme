@@ -14,7 +14,7 @@ class FileLoader(FileLoaderTemplate):
 
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
-  enabled = enabled_property('anvil-m3-fileloader-form')
+  enabled = enabled_property('anvil-m3-fileloader-input')
   
   @property
   def material_icon(self):
