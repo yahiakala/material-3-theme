@@ -1,4 +1,8 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3: []
+  slot_3:
+  - name: file_loader_1
+    properties: {icon: 'fa:upload'}
+    type: FileLoader
+    layout_properties: {}

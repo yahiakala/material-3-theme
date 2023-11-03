@@ -1,10 +1,29 @@
+properties:
+- {name: file, type: object, default_binding_prop: true, important: true, description: 'The
+    currently selected file (or the first, if multiple files are selected). This is
+    a Media object.'}
+- {name: file_type, type: string, default_value: '', important: true, description: 'Specify
+    what type of file to upload. Can accept a MIME type (eg “image/png” or “image/*“),
+    or an extension (eg “.png”), or a comma-separated set of them (eg “.png,.jpg,.jpeg”)'}
+- {name: files, type: object, important: true, description: A list of currently selected files. Each file is a Media object.}
+- {name: multiple, type: boolean, default_value: false, important: true, description: 'If
+    True, this FileLoader can load multiple files at the same time'}
+- {name: show_state, type: boolean, default_value: false, important: true, description: 'If
+    True, display a message describing selected files.'}
+is_package: true
+events:
+- name: change
+  default_event: true
+  description: When a new file is loaded into this FileLoader
+  parameters:
+  - {name: file, description: The first selected file. Set the 'multiple' property to allow loading more than one file.}
+  - {name: files, description: A list of loaded files. Set the 'multiple' property to allow loading more than one file.}
+- {name: focus, description: When the FileLoader gets focus}
+- {name: lost_focus, description: When the FileLoader loses focus}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
       >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
       ></div>"}
-components: []
-is_package: true
-custom_component: true
-properties:
-- {name: file, type: object, default_binding_prop: true, important: true}
