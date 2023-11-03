@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ...Functions import property_with_callback
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -13,6 +14,7 @@ class Card(CardTemplate):
   def handle_click(self, event):
     self.raise_event("click")
 
+  appearance = property_with_callback("appearance", updateA)
   @property
   def appearance(self):
     return self._appearance
