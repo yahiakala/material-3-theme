@@ -29,12 +29,11 @@ class Switch(SwitchTemplate):
       self.selected = not self.selected
       self.raise_event("change")
 
-  def set_color_styles(self, selected):
-    switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    if selected and self.selected_background_color:
-      switch_slider.style.backgroundColor = self.selected_background_color
-    elif self.unselected_background_color and not selected:
-      switch_slider.style.backgroundColor = self.unselected_background_color
+  def set_color_styles(self):
+    if self.selected and self.selected_background_color:
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color)
+    elif self.unselected_background_color and not self.selected :
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color)
     
   @property
   def selected_icon(self):
@@ -74,30 +73,12 @@ class Switch(SwitchTemplate):
   @selected.setter
   def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
-    self.set_color_styles(value)
-
-  # @property
-  # def selected_background_color(self):
-  #   return self._selected_background_color
-
-  # @selected_background_color.setter
-  # def selected_background_color(self, value):
-  #   self._selected_background_color = value
-  #   self.set_color_styles(self.selected)
-
-  # @property
-  # def unselected_background_color(self):
-  #   return self._unselected_background_color
-
-  # @unselected_background_color.setter
-  # def unselected_background_color(self, value):
-  #   self._unselected_background_color = value
-  #   self.set_color_styles(self.selected)
+    self.set_color_styles()
       
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
-  selected_background_color('selected_background_color', set_color_styles)
-  unelected_background_color('selected_background_color', set_color_styles)
+  selected_background_color = property_with_callback('selected_background_color', set_color_styles)
+  unelected_background_color = property_with_callback('selected_background_color', set_color_styles)
   
   
 
