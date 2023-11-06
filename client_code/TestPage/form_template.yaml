@@ -122,19 +122,19 @@ components_by_slot:
         layout_properties: {slot: anvil-m3-card-slot}
         components:
         - name: text_4
-          properties: {text: Custom Styles}
+          properties: {text: Custom Styles, background_color: ''}
           type: form:Components.Text
           layout_properties: {grid_position: 'UBIDUS,PJOSTR'}
         - name: toggle_icon_button_5
-          properties: {icon: settings, align: center, selected: true, background: blue,
-            border: 1px solid pink, icon_color: yellow, appearance: Filled tonal,
-            selected_background: ''}
+          properties: {appearance: Filled tonal, selected: true, align: center, border: 1px solid pink,
+            visible: true, selected_background: '', background: 'theme:Tertiary Container',
+            icon_color: 'theme:Surface', icon: settings}
           type: form:Components.ToggleIconButton
           layout_properties: {grid_position: 'MQKUSZ,NDWPSQ'}
         - name: toggle_icon_button_6
-          properties: {selected: true, align: center, selected_icon_color: '#94e3fe',
-            border: 4px dotted purple, selected_border: 2px dashed magenta, selected_background: 'theme:Inverse
-              Surface', background: orange, icon_color: yellow, icon: settings}
+          properties: {selected: true, align: center, selected_icon_color: 'theme:Error',
+            border: 4px dotted purple, selected_border: 2px dashed magenta, selected_background: 'theme:Tertiary
+              Container', background: orange, icon_color: yellow, icon: settings}
           type: form:Components.ToggleIconButton
           layout_properties: {grid_position: 'ODPNTK,IBQBZV'}
     - name: card_4
