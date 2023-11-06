@@ -11,6 +11,19 @@ class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self.handle_change)
+    
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self.handle_change)
+
+  def handle_change(self, file, **event_args):
+    file = anvil.BlobMedia(content=file)
+    print(file)
+    
 
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
