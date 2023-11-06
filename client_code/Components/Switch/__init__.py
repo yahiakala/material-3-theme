@@ -27,6 +27,13 @@ class Switch(SwitchTemplate):
       #self.dom_nodes['anvil-m3-switch-input'].focus()
       self.selected = not self.selected
       self.raise_event("change")
+
+  def set_color_styles(self, selected):
+    switch_slider = self.dom_nodes['anvil-m3-switch-slider']
+    if selected:
+      switch_slider.style.backgroundColor = self.selected_background_color
+    else:
+      switch_slider.style.backgroundColor = self.unselected_background_color
     
   @property
   def selected_icon(self):
@@ -66,10 +73,30 @@ class Switch(SwitchTemplate):
   @selected.setter
   def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
+    if value:
+      self.set_color_styles(value)
 
+  @property
+  def selected_background_color(self):
+    return self._selected_background_color
+
+  @selected_background_color.setter
+  def selected_background_color(self, value):
+    self._selected_background_color = value
+    self.set_color_styles(self.selected)
+
+  @property
+  def unselected_background_color(self):
+    return self._unselected_background_color
+
+  @unselected_background_color.setter
+  def unselected_background_color(self, value):
+    self._unselected_background_color = value
+    self.set_color_styles(self.selected)
+      
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
-  #selected_background_color = property_with_callback('anvil-m3-switch-slider',)
+  
 
   
   
