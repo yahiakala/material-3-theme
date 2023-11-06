@@ -44,3 +44,11 @@ components_by_slot:
     properties: {text: Upload a file, material_icon: file_upload, enabled: true, visible: true}
     type: form:Components.FileLoader
     layout_properties: {}
+  - name: switch_1
+    properties: {unselected_background_color: '', selected: true, selected_background_color: ''}
+    type: form:Components.Switch
+    layout_properties: {}
+  - name: icon_button_1
+    properties: {icon: 13mp, appearance: Filled, background: 'rgb(245, 239, 247)'}
+    type: form:Components.IconButton
+    layout_properties: {}

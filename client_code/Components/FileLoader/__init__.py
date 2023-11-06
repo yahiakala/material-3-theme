@@ -21,8 +21,7 @@ class FileLoader(FileLoaderTemplate):
     self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self.handle_change)
 
   def handle_change(self, file, **event_args):
-    file = anvil.BlobMedia(content=file)
-    print(file)
+    fileloader  
     
 
   text = innerText_property('anvil-m3-fileloader-label')
