@@ -10,6 +10,7 @@ components_by_slot:
     properties: {text: Upload a file, material_icon: file_upload, enabled: true, visible: true}
     type: form:Components.FileLoader
     layout_properties: {}
+    event_bindings: {change: file_loader_2_change}
   - name: switch_1
     properties: {unselected_background_color: '', selected: true, selected_background_color: ''}
     type: form:Components.Switch
