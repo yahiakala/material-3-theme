@@ -12,8 +12,8 @@ from ...Functions import theme_color_to_css, enabled_property, style_property, c
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
     self._props = properties
+    self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
@@ -29,10 +29,12 @@ class Switch(SwitchTemplate):
       self.selected = not self.selected
       self.raise_event("change")
 
-  def set_color_styles(self):
+  def set_color_styles(self, value=None):
+    print(self.selected)
     if self.selected and self.selected_background_color:
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color)
-    elif self.unselected_background_color and not self.selected :
+    elif self.unselected_background_color and not self.selected:
+      print('char')
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color)
     
   @property
@@ -72,13 +74,14 @@ class Switch(SwitchTemplate):
 
   @selected.setter
   def selected(self, value):
+    #print(value)
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self.set_color_styles()
       
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
   selected_background_color = property_with_callback('selected_background_color', set_color_styles)
-  unelected_background_color = property_with_callback('selected_background_color', set_color_styles)
+  unelected_background_color = property_with_callback('unselected_background_color', set_color_styles)
   
   
 
