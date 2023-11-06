@@ -23,9 +23,11 @@ class FileLoader(FileLoaderTemplate):
   def handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
     file_reader = FileReader()
-    file_reader.on('load', self.load_file)
-    if len(files):
-      print(files[0])
+    file_contents = file_reader.readAsBinaryString(files[0])
+    print(file_contents)
+    # def onload(e):
+    #   file_contents = 
+    # file_reader.onload = onload
       
     # media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
     # self.raise_event('change', file=media_obj)
