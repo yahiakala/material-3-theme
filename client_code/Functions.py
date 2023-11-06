@@ -113,10 +113,10 @@ def value_property(dom_node_name):
 
 def underline_property(dom_node_name):
   def getter(self):
-    return self._underline
+    return self._props['underline']
 
   def setter(self, value):
-    self._underline = value
+    self._props.get('underline')
     if value:
       self.dom_nodes[dom_node_name].style.textDecoration = 'underline'
     else:
@@ -126,10 +126,10 @@ def underline_property(dom_node_name):
 
 def italic_property(dom_node_name):
   def getter(self):
-    return self._italic
+    return self._props['italic']
 
   def setter(self, value):
-    self._italic = value
+    self._props.get('italic') = value
     if value:
       self.dom_nodes[dom_node_name].style.fontStyle = 'italic'
     else:
