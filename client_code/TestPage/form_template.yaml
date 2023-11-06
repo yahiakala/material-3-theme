@@ -122,7 +122,8 @@ components_by_slot:
         layout_properties: {slot: anvil-m3-card-slot}
         components:
         - name: text_4
-          properties: {text: Custom Styles, background_color: ''}
+          properties: {text: Custom Styles, background_color: '', icon_color: 'rgb(28,
+              27, 31)'}
           type: form:Components.Text
           layout_properties: {grid_position: 'UBIDUS,PJOSTR'}
         - name: toggle_icon_button_5
