@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property
+from anvil.js.window import FileReader
 
 
 class FileLoader(FileLoaderTemplate):
@@ -21,9 +22,11 @@ class FileLoader(FileLoaderTemplate):
     self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self.handle_change)
 
   def handle_change(self, event, **event_args):
-    file_contents = event.target.value.encode()
-    media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
-    self.raise_event('change', file=media_obj)
+    files = self.dom_nodes['anvil-m3-fileloader-input'].files
+    if len(files):
+      
+    # media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
+    # self.raise_event('change', file=media_obj)
     
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
