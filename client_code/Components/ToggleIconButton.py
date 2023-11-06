@@ -1,6 +1,6 @@
 from .IconButton import IconButton
 import anvil.designer
-from ..Functions import property_with_callback
+from ..Functions import property_with_callback, theme_color_to_css
 
 icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
@@ -25,13 +25,13 @@ class ToggleIconButton(IconButton):
   # Properties 
   def apply_styles(self, value):
     if value:
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.selected_background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = theme_color_to_css(self.selected_background) if self.selected_background else 
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
-      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.selected_icon_color
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = theme_color_to_css(self.selected_icon_color)
     else:
-      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = self.background
+      self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = theme_color_to_css(self.background)
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
-      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = self.icon_color
+      self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = theme_color_to_css(self.icon_color)
 
   def selected_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
@@ -45,6 +45,18 @@ class ToggleIconButton(IconButton):
   selected_background = property_with_callback("selected_background", apply_styles)
   selected_icon_color = property_with_callback("selected_icon_color", apply_styles)
   selected = property_with_callback("selected", selected_setter)
+
+  # def color_property(dom_node_name, style_prop):
+  # def getter(self):
+  #   return self.dom_nodes[dom_node_name].style[style_prop]
+
+  # def setter(self, value):
+  #   if value: value = theme_color_to_css(value)
+  #   self.dom_nodes[dom_node_name].style[style_prop] = value
+
+  # return property(getter, setter)
+
+    
   
   def handle_click(self, event):
     event.preventDefault()
