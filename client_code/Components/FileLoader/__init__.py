@@ -7,7 +7,6 @@ from anvil.tables import app_tables
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property
 from anvil.js.window import FileReader
 
-
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -23,10 +22,18 @@ class FileLoader(FileLoaderTemplate):
 
   def handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
+    file_reader = FileReader()
+    file_reader.on('load', self.load_file)
     if len(files):
+      print(files[0])
       
     # media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
     # self.raise_event('change', file=media_obj)
+
+  def load_file(self, event, file):
+    print(event)
+    
+    
     
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
