@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import jQuery
+from anvil.js.window import document
 from anvil.js import window
 from ...Functions import theme_color_to_css, enabled_property, style_property, color_property
 
@@ -69,4 +69,14 @@ class Switch(SwitchTemplate):
 
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
+
+  @property
+  def selected_background_color(self):
+    return anvil.js.window.querySelector('.anvil-m3-switch-input:checked + .anvil-m3-switch-slider')
+
+  @selected.setter
+  def selected(self, value):
+    self.dom_nodes['anvil-m3-switch-input'].checked = value
+
+  
   
