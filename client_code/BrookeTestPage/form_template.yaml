@@ -20,7 +20,3 @@ components_by_slot:
     properties: {icon: 13mp, appearance: Filled, background: 'rgb(245, 239, 247)'}
     type: form:Components.IconButton
     layout_properties: {}
-  - name: image_1
-    properties: {height: 265}
-    type: Image
-    layout_properties: {}

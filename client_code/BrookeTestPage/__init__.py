@@ -14,7 +14,8 @@ class BrookeTestPage(BrookeTestPageTemplate):
 
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    self.image_1.source = file
+    print(file)
+    anvil.media.download(file)
 
 
 
