@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import jQuery
 from anvil.js import window
-from ...Functions import theme_color_to_css, enabled_property, style_property
+from ...Functions import theme_color_to_css, enabled_property, style_property, color_property
 
 
 class Switch(SwitchTemplate):
@@ -69,3 +69,4 @@ class Switch(SwitchTemplate):
 
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
+  
