@@ -74,7 +74,7 @@ class Switch(SwitchTemplate):
   def selected_background_color(self):
     return anvil.js.window.querySelector('.anvil-m3-switch-input:checked + .anvil-m3-switch-slider')
 
-  @selected.setter
+  @selected_ba.setter
   def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
 
