@@ -133,8 +133,9 @@ components_by_slot:
           layout_properties: {grid_position: 'MQKUSZ,NDWPSQ'}
         - name: toggle_icon_button_6
           properties: {selected: true, align: center, selected_icon_color: 'theme:Error',
-            border: 4px dotted purple, selected_border: 2px dashed magenta, selected_background: 'theme:Tertiary
-              Container', background: orange, icon_color: yellow, icon: settings}
+            border: 4px dotted magenta, selected_border: 2px dashed green, selected_background: 'theme:Tertiary
+              Container', background: 'theme:On Surface Variant', icon_color: yellow,
+            icon: settings}
           type: form:Components.ToggleIconButton
           layout_properties: {grid_position: 'ODPNTK,IBQBZV'}
     - name: card_4
