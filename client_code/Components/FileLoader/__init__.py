@@ -23,7 +23,7 @@ class FileLoader(FileLoaderTemplate):
   def handle_change(self, event, **event_args):
     file_contents = event.target.value.encode()
     media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
-    self.raise_event('change', file)
+    self.raise_event('change', file=media_obj)
     
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible

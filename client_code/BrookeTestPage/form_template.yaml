@@ -6,6 +6,7 @@ components_by_slot:
     properties: {icon: 'fa:upload'}
     type: FileLoader
     layout_properties: {}
+    event_bindings: {}
   - name: file_loader_2
     properties: {text: Upload a file, material_icon: file_upload, enabled: true, visible: true}
     type: form:Components.FileLoader
@@ -18,4 +19,8 @@ components_by_slot:
   - name: icon_button_1
     properties: {icon: 13mp, appearance: Filled, background: 'rgb(245, 239, 247)'}
     type: form:Components.IconButton
+    layout_properties: {}
+  - name: image_1
+    properties: {height: 265}
+    type: Image
     layout_properties: {}
