@@ -16,7 +16,7 @@ components_by_slot:
         properties: {text: 'Selected, selected color'}
         type: form:Components.Text
       - name: switch_1
-        properties: {selected_background_color: 'theme:Error', selected: true}
+        properties: {selected_background_color: '', selected: true}
         type: form:Components.Switch
         layout_properties: {}
     - name: flow_panel_2
@@ -49,7 +49,3 @@ components_by_slot:
         properties: {text: 'Unselected, unselected color'}
         type: form:Components.Text
         layout_properties: {}
-  - name: button_1
-    properties: {appearance: filled, text_color: 'rgb(179, 38, 30)'}
-    type: form:Components.Button
-    layout_properties: {}
