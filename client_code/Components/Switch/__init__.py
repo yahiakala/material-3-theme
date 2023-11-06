@@ -13,6 +13,7 @@ class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self._props = properties
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
@@ -30,9 +31,9 @@ class Switch(SwitchTemplate):
 
   def set_color_styles(self, selected):
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    if selected:
+    if selected and self.selected_background_color:
       switch_slider.style.backgroundColor = self.selected_background_color
-    else:
+    elif self.unselected_background_color and not selected:
       switch_slider.style.backgroundColor = self.unselected_background_color
     
   @property
@@ -73,29 +74,31 @@ class Switch(SwitchTemplate):
   @selected.setter
   def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
-    if value:
-      self.set_color_styles(value)
+    self.set_color_styles(value)
 
-  @property
-  def selected_background_color(self):
-    return self._selected_background_color
+  # @property
+  # def selected_background_color(self):
+  #   return self._selected_background_color
 
-  @selected_background_color.setter
-  def selected_background_color(self, value):
-    self._selected_background_color = value
-    self.set_color_styles(self.selected)
+  # @selected_background_color.setter
+  # def selected_background_color(self, value):
+  #   self._selected_background_color = value
+  #   self.set_color_styles(self.selected)
 
-  @property
-  def unselected_background_color(self):
-    return self._unselected_background_color
+  # @property
+  # def unselected_background_color(self):
+  #   return self._unselected_background_color
 
-  @unselected_background_color.setter
-  def unselected_background_color(self, value):
-    self._unselected_background_color = value
-    self.set_color_styles(self.selected)
+  # @unselected_background_color.setter
+  # def unselected_background_color(self, value):
+  #   self._unselected_background_color = value
+  #   self.set_color_styles(self.selected)
       
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
+  selected_background_color('selected_background_color', set_color_styles)
+  unelected_background_color('selected_background_color', set_color_styles)
+  
   
 
   
