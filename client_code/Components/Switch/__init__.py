@@ -31,11 +31,10 @@ class Switch(SwitchTemplate):
 
   def set_color_styles(self, value=None):
     print(self.selected)
-    if self.selected and self.selected_background_color:
-      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color)
-    elif self.unselected_background_color and not self.selected:
-      print('char')
-      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color)
+    if self.selected:
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
+    else:
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
     
   @property
   def selected_icon(self):
@@ -74,7 +73,6 @@ class Switch(SwitchTemplate):
 
   @selected.setter
   def selected(self, value):
-    #print(value)
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self.set_color_styles()
       
