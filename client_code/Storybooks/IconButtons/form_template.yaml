@@ -85,3 +85,6 @@ components:
         properties: {appearance: Outlined, enabled: false}
         type: form:Components.IconButton
         layout_properties: {}
+      - name: text_3_copy_1
+        properties: {text: Disabled Buttons}
+        type: form:Components.Text
