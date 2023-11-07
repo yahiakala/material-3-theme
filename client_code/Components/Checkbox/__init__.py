@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import enablaed_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
+from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
 import anvil.designer
 
 
@@ -36,18 +36,19 @@ class Checkbox(CheckboxTemplate):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
       "type": "whole_component",
-      "title": "Toggle",
+      "title": "Edit",
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": self.toggle_checked 
+        "execute":  lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
       }
     },
     {
       "type": "region",
-      "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+      "bounds": self.dom_nodes['anvil-m3-checkbox-hover'],
+      "sensitivity": 0,
       "callbacks": {
-        "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+        "execute": self.toggle_checked 
       }
     }       
     ]

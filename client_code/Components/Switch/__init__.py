@@ -30,23 +30,23 @@ class Switch(SwitchTemplate):
       self.selected = not self.selected
       self.raise_event("change")
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
-      "type": "whole_component",
-      "title": "Toggle",
-      "icon": "toggle",
-      "default": True,
-      "callbacks": {
-        "execute": self.toggle_selected 
-      }
-    },     
-    ]
-    return di
+  # def _anvil_get_design_info_(self, as_layout=False):
+  #   di = super()._anvil_get_design_info_(as_layout)
+  #   di['interactions'] = [{
+  #     "type": "whole_component",
+  #     "title": "Toggle",
+  #     "icon": "toggle",
+  #     "default": True,
+  #     "callbacks": {
+  #       "execute": self.toggle_selected 
+  #     }
+  #   },     
+  #   ]
+  #   return di
 
-  def toggle_selected(self):
-    self.selected = not self.selected
-    anvil.designer.update_component_properties(self, {'selected': self.selected})
+  # def toggle_selected(self):
+  #   self.selected = not self.selected
+  #   anvil.designer.update_component_properties(self, {'selected': self.selected})
 
   def set_color_styles(self, value=None):
     if self.selected:
