@@ -150,12 +150,12 @@ def bold_property(dom_node_name):
 
   return property(getter, setter)
 
-def font_size_property(dom_node_name):
+def font_size_property(dom_node_name, prop_name="font_size"):
   def getter(self):
-    return self._font_size
+    return self._props['font-size']
 
   def setter(self, value):
-    self._font_size = value
+    self._props['font-size'] = value
     if value: value = f'{value}px'
     self.dom_nodes[dom_node_name].style.fontSize = value
 
