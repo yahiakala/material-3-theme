@@ -57,8 +57,13 @@ components_by_slot:
     properties: {align: left, file_types: .png}
     type: form:Components.FileLoader
     layout_properties: {}
-    event_bindings: {change: file_loader_3_change}
+    event_bindings: {}
   - name: file_loader_2
-    properties: {}
+    properties: {align: left}
     type: form:Components.FileLoader
+    layout_properties: {}
+    event_bindings: {change: file_loader_2_change}
+  - name: form1_1
+    properties: {}
+    type: form:Form1
     layout_properties: {}
