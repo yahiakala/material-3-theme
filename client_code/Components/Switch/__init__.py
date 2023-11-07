@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from anvil.js.window import document
 from anvil.js import window
 from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback
+import anvil.designer
 
 
 class Switch(SwitchTemplate):
@@ -28,6 +29,24 @@ class Switch(SwitchTemplate):
       #self.dom_nodes['anvil-m3-switch-input'].focus()
       self.selected = not self.selected
       self.raise_event("change")
+
+  def _anvil_get_design_info_(self, as_layout=False):
+    di = super()._anvil_get_design_info_(as_layout)
+    di['interactions'] = [{
+      "type": "whole_component",
+      "title": "Toggle",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": self.toggle_selected 
+      }
+    },     
+    ]
+    return di
+
+  def toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {'selected': self.selected})
 
   def set_color_styles(self, value=None):
     if self.selected:

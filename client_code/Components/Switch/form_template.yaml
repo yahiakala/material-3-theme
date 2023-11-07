@@ -733,12 +733,14 @@ properties:
 - {name: selected_thumb_color, type: color, default_value: ''}
 - {name: unselected_outline_color, type: color, default_value: ''}
 - {name: border_radius, type: string, default_value: ''}
-- {name: enabled, type: boolean, default_value: true}
+- {name: enabled, type: boolean, default_value: true, designerHint: enabled}
 - name: align
   type: enum
   important: true
   options: [left, center, right]
   default_value: left
+  designerHint: align-horizontal
+- {name: margin, type: string, default_value: '', important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the state of the component is changed}
