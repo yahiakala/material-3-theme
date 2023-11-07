@@ -1,0 +1,10 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<form style=\"display: flex\">\n  <div>\n    <div>\n      <label\
+      \ style=\"font-family:serif; font-weight:700\">\n        <span anvil-name=\"\
+      anvil-m3-fileloader-icon\" class=\"anvil-m3-fileloader-icon material-symbols-outlined\"\
+      >file_upload</span>\n        Name:\n        <input style=\"display:none\" type=\"\
+      file\" accept/>\n      </label>\n    </div>\n  </div>\n</form>\n"}
+components: []
+is_package: true
+custom_component: true

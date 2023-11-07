@@ -1,12 +1,3 @@
-.anvil-m3-fileloader-icon-container {
-  cursor: pointer
-}
-
-.anvil-m3-fileloader-icon-container {
-  display: flex;
-  align-items: center;
-}
-
 input.anvil-m3-fileloader-input:disabled ~ *{
   cursor: not-allowed;
 }
@@ -14,13 +5,9 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 input.anvil-m3-fileloader-input:disabled ~ *{
   color: var(--anvil-m3-on-disabled);
 }
-
-.anvil-m3-fileloader-icon-container {
-  color: var(--anvil-m3-primary);
-}
-
-
 .anvil-m3-fileloader-container {
   align-items: center;
   display: flex;
+  color: var(--anvil-m3-primary);
+  cursor: pointer
 }
