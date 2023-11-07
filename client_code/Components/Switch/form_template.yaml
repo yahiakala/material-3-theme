@@ -740,7 +740,7 @@ properties:
   options: [left, center, right]
   default_value: left
   designerHint: align-horizontal
-- {name: margin, type: string, default_value: '', important: true}
+- {name: margin, type: margin, default_value: 8, important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the state of the component is changed}
