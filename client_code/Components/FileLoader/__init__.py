@@ -32,10 +32,15 @@ class FileLoader(FileLoaderTemplate):
     file_reader.onload = onload
     file_reader.readAsArrayBuffer(files[0])
     
-    
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
   enabled = enabled_property('anvil-m3-fileloader-input')
+  text_color = color_property('anvil-m3-fileloader-label', 'color')
+  icon_color = color_property('anvil-m3-fileloader-icon', 'color')
+  background_color = color_property('anvil-m3-fileloader-form', 'backgroundColor')
+  underline = underline_property('anvil-m3-fileloader-label')
+  italic = italic_property('anvil-m3-fileloader-label')
+  bold = bold_property('anvil-m3-fileloader-label')
   
   @property
   def material_icon(self):
@@ -58,6 +63,8 @@ class FileLoader(FileLoaderTemplate):
   def file_type(self, value):
     self._props["file_type"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].accept = value
+
+  
 
 
 
