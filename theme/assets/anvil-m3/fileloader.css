@@ -18,3 +18,7 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 .anvil-m3-fileloader-icon-container {
   color: var(--anvil-m3-primary);
 }
+
+.anvil-m3-fileloader-icon-container > .anvil-m3-fileloader-icon {
+  font-size: inherit;
+}
