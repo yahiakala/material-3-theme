@@ -22,3 +22,8 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 .anvil-m3-fileloader-icon-container > .anvil-m3-fileloader-icon {
   font-size: inherit;
 }
+
+.anvil-m3-fileloader-container {
+  align-items: center;
+  display: flex;
+}
