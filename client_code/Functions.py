@@ -160,6 +160,17 @@ def font_size_property(dom_node_name):
     self.dom_nodes[dom_node_name].style.fontSize = value
 
   return property(getter, setter)
+
+def margin_property(dom_node_name):
+  def getter(self):
+    return self._props.get('margin')
+
+  def setter(self, value):
+    self._props['margin'] = value
+    #value = value
+    self.dom_nodes[dom_node_name].style.margin = f"{value}px"
+    
+  return property(getter, setter)
   
   
 
