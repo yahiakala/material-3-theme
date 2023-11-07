@@ -55,9 +55,8 @@ class IconButton(IconButtonTemplate):
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
 
-  def _anvil_get_design_info_(self, as_layout=False): 
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [
+  def _anvil_get_interactions_(self): 
+    return  [
       {
       "type": "whole_component_multi",
       "title": "Align",
@@ -93,7 +92,6 @@ class IconButton(IconButtonTemplate):
         "execute": self.toggle_enabled
       }
     } ]
-    return design_info
 
   def setAlignment(self, value):
     self.align = value

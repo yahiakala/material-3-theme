@@ -50,9 +50,4 @@ class ToggleIconButton(IconButton):
     event.preventDefault()
     self.selected = not self.selected
     self.raise_event("click")
-  
-  # This will be deprecated v soon.
-  def _anvil_get_design_info_(self, as_layout=False): 
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["propertyDescriptions"] = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property] + design_info["propertyDescriptions"]
-    return design_info
+
