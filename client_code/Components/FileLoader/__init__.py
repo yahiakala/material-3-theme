@@ -5,7 +5,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property
-from anvil.js.window import FileReader
+from anvil.js.window import FileReader, Uint8Array
+
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
@@ -23,14 +24,15 @@ class FileLoader(FileLoaderTemplate):
   def handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
     file_reader = FileReader()
-    file_contents = file_reader.readAsBinaryString(files[0])
-    print(file_contents)
-    # def onload(e):
-    #   file_contents = 
-    # file_reader.onload = onload
+    def onload(e):
+      as_buffer = file_reader.result
+      as_bytes = Uint8Array(as_buffer)
+      self.raise_event('change', file=BlobMedia(content_type=files[0].type, content=as_bytes))
+    file_reader.onload = onload
+    file_reader.readAsArrayBuffer(files[0])
       
     # media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
-    # self.raise_event('change', file=media_obj)
+    
 
   def load_file(self, event, file):
     print(event)
