@@ -386,6 +386,8 @@ properties:
   description: Display this component’s text underlined}
 - {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic}
 - {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold}
+- {name: font, type: string, default_value: '', important: true, description: The font to use for this component.}
+- {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels}
 is_package: true
 events:
 - name: change

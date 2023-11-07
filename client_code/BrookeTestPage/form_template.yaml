@@ -47,8 +47,12 @@ components_by_slot:
     layout_properties: {}
   - name: file_loader_2
     properties: {material_icon: upload, text_color: '', enabled: true, visible: true,
-      italic: false, background_color: '', bold: false, underline: false, icon_color: '',
-      file_type: ''}
+      font_size: 32, font: '', italic: false, background_color: '', bold: false, underline: false,
+      icon_color: '', file_type: ''}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextField
+    layout_properties: {}
