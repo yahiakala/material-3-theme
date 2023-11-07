@@ -4,14 +4,16 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import jQuery
+from anvil.js.window import document
 from anvil.js import window
-from ...Functions import theme_color_to_css, enabled_property, style_property
+from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback
+import anvil.designer
 
 
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -27,6 +29,30 @@ class Switch(SwitchTemplate):
       #self.dom_nodes['anvil-m3-switch-input'].focus()
       self.selected = not self.selected
       self.raise_event("change")
+
+  def _anvil_get_design_info_(self, as_layout=False):
+    di = super()._anvil_get_design_info_(as_layout)
+    di['interactions'] = [{
+      "type": "whole_component",
+      "title": "Toggle",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": self.toggle_selected 
+      }
+    },     
+    ]
+    return di
+
+  def toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {'selected': self.selected})
+
+  def set_color_styles(self, value=None):
+    if self.selected:
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
+    else:
+      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
     
   @property
   def selected_icon(self):
@@ -66,6 +92,14 @@ class Switch(SwitchTemplate):
   @selected.setter
   def selected(self, value):
     self.dom_nodes['anvil-m3-switch-input'].checked = value
-
+    self.set_color_styles()
+      
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent')
+  selected_background_color = property_with_callback('selected_background_color', set_color_styles)
+  unelected_background_color = property_with_callback('unselected_background_color', set_color_styles)
+  
+  
+
+  
+  

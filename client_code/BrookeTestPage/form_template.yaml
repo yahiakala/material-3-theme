@@ -15,13 +15,12 @@ components_by_slot:
     properties: {icon: 13mp, appearance: Filled, background: 'rgb(245, 239, 247)'}
     type: form:Components.IconButton
     layout_properties: {}
+  - name: file_loader_4
+    properties: {}
+    type: form:Components.FileLoader
+    layout_properties: {}
   - name: file_loader_2
     properties: {}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}
-  - name: file_loader_3
-    properties: {}
-    type: form:Components.FileLoader
-    layout_properties: {}
-    event_bindings: {change: file_loader_3_change}
