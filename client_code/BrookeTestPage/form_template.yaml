@@ -52,7 +52,7 @@ components_by_slot:
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}
-  - name: text_field_1
-    properties: {}
-    type: form:Components.TextField
+  - name: text_1
+    properties: {material_icon: bedtime, font_size: 34, text: nighttime, icon_size: null}
+    type: form:Components.Text
     layout_properties: {}
