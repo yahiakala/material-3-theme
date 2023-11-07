@@ -375,9 +375,10 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: file_upload
-- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.}
+- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.,
+  designerHint: enabled}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?'}
+    this component be displayed?', designerHint: visible}
 is_package: true
 events:
 - name: change
