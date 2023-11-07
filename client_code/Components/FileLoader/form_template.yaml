@@ -379,6 +379,13 @@ properties:
   designerHint: enabled}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
     this component be displayed?', designerHint: visible}
+- {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.}
+- {name: icon_color, type: color, default_value: '', important: true}
+- {name: background_color, type: color, default_value: '', important: true}
+- {name: underline, type: boolean, default_value: false, important: true, designerHint: font-underline,
+  description: Display this component’s text underlined}
+- {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic}
+- {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold}
 is_package: true
 events:
 - name: change
