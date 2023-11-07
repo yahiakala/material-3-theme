@@ -17,10 +17,6 @@ class BrookeTestPage(BrookeTestPageTemplate):
     print(file)
     anvil.media.download(file)
 
-  def file_loader_3_change(self, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
-    pass
-
 
 
 

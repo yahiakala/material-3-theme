@@ -70,12 +70,12 @@ class FileLoader(FileLoaderTemplate):
     self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value
 
   @property
-  def file_type(self):
-    return self._props.get("file_type")
+  def file_types(self):
+    return self._props.get("file_types")
 
-  @file_type.setter
-  def file_type(self, value):
-    self._props["file_type"] = value
+  @file_types.setter
+  def file_types(self, value):
+    self._props["file_types"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].accept = value
 
   
