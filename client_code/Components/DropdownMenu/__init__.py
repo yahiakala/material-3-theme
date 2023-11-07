@@ -123,52 +123,52 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.appearance = value
     
   @property
-  def italic_display(self):
-    return self._italic_display
-  @italic_display.setter
-  def italic_display(self, value):
-    self._italic_display = value
-    self.selection_field.italic_display = value
+  def selected_italic_display(self):
+    return self._selected_italic_display
+  @selected_italic_display.setter
+  def selected_italic_display(self, value):
+    self._selected_italic_display = value
+    self.selection_field.selected_italic_display = value
     
   @property
-  def bold_display(self):
-    return self._bold_display
-  @bold_display.setter
-  def bold_display(self, value):
-    self._bold_display = value
-    self.selection_field.bold_display = value
+  def selected_bold_display(self):
+    return self._selected_bold_display
+  @selected_bold_display.setter
+  def selected_bold_display(self, value):
+    self._selected_bold_display = value
+    self.selection_field.selected_bold_display = value
     
   @property
-  def underline_display(self):
-    return self._underline_display
-  @underline_display.setter
-  def underline_display(self, value):
-    self._underline_display = value
-    self.selection_field.underline_display = value
+  def selected_underline_display(self):
+    return self._selected_underline_display
+  @selected_underline_display.setter
+  def selected_underline_display(self, value):
+    self._selected_underline_display = value
+    self.selection_field.selected_underline_display = value
     
   @property
-  def display_font(self):
-    return self._display_font
-  @display_font.setter
-  def display_font(self, value):
-    self._display_font = value
-    self.selection_field.display_font = value
+  def selected_font(self):
+    return self._selected_font
+  @selected_font.setter
+  def selected_font(self, value):
+    self._selected_font = value
+    self.selection_field.selected_font = value
     
   @property
-  def display_font_size(self):
-    return self._display_font_size
-  @display_font_size.setter
-  def display_font_size(self, value):
-    self._display_font_size = value
-    self.selection_field.display_font_size = value
+  def selected_font_size(self):
+    return self._selected_font_size
+  @selected_font_size.setter
+  def selected_font_size(self, value):
+    self._selected_font_size = value
+    self.selection_field.selected_font_size = value
     
   @property
-  def display_text_color(self):
-    return self._display_text_color
-  @display_text_color.setter
-  def display_text_color(self, value):
-    self._display_text_color = value
-    self.selection_field.display_text_color = value
+  def selected_text_color(self):
+    return self._selected_text_color
+  @selected_text_color.setter
+  def selected_text_color(self, value):
+    self._selected_text_color = value
+    self.selection_field.selected_text_color = value
 
   @property
   def items(self):
@@ -203,13 +203,13 @@ class DropdownMenu(DropdownMenuTemplate):
     else:
       self.selection_field.dom_nodes['text-field-input'].value = value
     self.raise_event("change")
-  
+
   @property
-  def include_placeholder(self):
-    return self._include_placeholder
-  @include_placeholder.setter
-  def include_placeholder(self, value):
-    self._include_placeholder = value or ""
+  def allow_none(self):
+    return self._allow_none
+  @allow_none.setter
+  def allow_none(self, value):
+    self._allow_none = value
 
   @property
   def bold_items(self):
@@ -429,26 +429,27 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       if not self.label_text:
         self.label_text = anvil.designer.get_design_name(self)
-
   def create_menu_items(self):
-    if self.include_placeholder:
-      p = MenuItem()
-      p.bold = self.bold_items
-      p.italic = self.italic_items
-      p.underline = self.underline_items
-      p.text_color = self.items_text_color
-      p.background = self.items_background
-      p.font = self.items_font
-      p.font_size = self.items_font_size
-      
-      p.text = self.placeholder
-      p.hide_leading_icon = True
-      def handle_select_placeholder(**e):
-        self.selected_value = None
-        
+    p = MenuItem()
+    p.text = self.placeholder if self.placeholder else "Clear Selection"
+    p.italic = self.italic_items
+    p.underline = self.underline_items
+    p.text_color = self.items_text_color
+    p.background = self.items_background
+    p.font = self.items_font
+    p.font_size = self.items_font_size
+    p.hide_leading_icon = True
+    
+    def handle_select_placeholder(**e):
+      if self.allow_none: self.selected_value = None
+
+    if not self.allow_none:
+      p.enabled = False
+    
+    if self.allow_none or self.placeholder:
       p.add_event_handler('click', handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
-      
+    
     for item in self.items:
       selection = MenuItem()
       selection.hide_leading_icon = True
@@ -472,27 +473,26 @@ class DropdownMenu(DropdownMenuTemplate):
           
       selection.add_event_handler('click', handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
-
  
 # DESIGNER INTERACTIONS
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
       {
-      "type": "whole_component",
-      "title": "Visible",
-      "icon": "add", #TODO: eye icon
-      "callbacks": {
-        "execute": self.toggle_visible
-      }
-    }, {
-      "type": "whole_component",
-      "title": "Enable",
-      "icon": "add", #TODO: power icon
-      "callbacks": {
-        "execute": self.toggle_enabled
-      }
-    },{
+    #   "type": "whole_component",
+    #   "title": "Visible",
+    #   "icon": "add", #TODO: eye icon
+    #   "callbacks": {
+    #     "execute": self.toggle_visible
+    #   }
+    # }, {
+    #   "type": "whole_component",
+    #   "title": "Enable",
+    #   "icon": "add", #TODO: power icon
+    #   "callbacks": {
+    #     "execute": self.toggle_enabled
+    #   }
+    # },{
       "type": "whole_component",
       "title": "Edit Label",
       "icon": "edit",
@@ -503,10 +503,10 @@ class DropdownMenu(DropdownMenuTemplate):
     }]
     return design_info
 
-  def toggle_visible(self):
-    self.visible = not self.visible
-    anvil.designer.update_component_properties(self, {'visible': self.visible})
+  # def toggle_visible(self):
+  #   self.visible = not self.visible
+  #   anvil.designer.update_component_properties(self, {'visible': self.visible})
 
-  def toggle_enabled(self):
-    self.enabled = not self.enabled
-    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
+  # def toggle_enabled(self):
+  #   self.enabled = not self.enabled
+  #   anvil.designer.update_component_properties(self, {'enabled': self.enabled})
