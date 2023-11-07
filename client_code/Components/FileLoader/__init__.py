@@ -11,6 +11,7 @@ from anvil.js.window import FileReader, Uint8Array
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -30,13 +31,6 @@ class FileLoader(FileLoaderTemplate):
       self.raise_event('change', file=BlobMedia(content_type=files[0].type, content=as_bytes))
     file_reader.onload = onload
     file_reader.readAsArrayBuffer(files[0])
-      
-    # media_obj = anvil.BlobMedia(content_type=event.target.type, content=file_contents)
-    
-
-  def load_file(self, event, file):
-    print(event)
-    
     
     
   text = innerText_property('anvil-m3-fileloader-label')
@@ -55,6 +49,15 @@ class FileLoader(FileLoaderTemplate):
     else:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value
+
+  @property
+  def file_type(self):
+    return self._props.get("file_type")
+
+  @file_type.setter
+  def file_type(self, value):
+    self._props["file_type"] = value
+    self.dom_nodes['anvil-m3-fileloader-input'].accept = value
 
 
 
