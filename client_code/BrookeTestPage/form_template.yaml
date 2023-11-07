@@ -46,13 +46,13 @@ components_by_slot:
     type: form:Components.Switch
     layout_properties: {}
   - name: file_loader_2
-    properties: {material_icon: upload, text_color: '', enabled: true, visible: true,
-      font_size: 32, font: '', italic: false, background_color: '', bold: false, underline: false,
-      icon_color: '', file_type: ''}
+    properties: {material_icon: upload, text_color: '', enabled: true, icon_size: null,
+      visible: true, font_size: 45, font: '', italic: false, background_color: '',
+      bold: false, underline: false, icon_color: '', file_type: ''}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}
   - name: text_1
-    properties: {material_icon: bedtime, font_size: 34, text: nighttime, icon_size: null}
+    properties: {material_icon: bedtime, font_size: null, text: nighttime, icon_size: null}
     type: form:Components.Text
     layout_properties: {}

@@ -42,6 +42,8 @@ class FileLoader(FileLoaderTemplate):
   italic = italic_property('anvil-m3-fileloader-label')
   bold = bold_property('anvil-m3-fileloader-label')
   font = style_property('anvil-m3-fileloader-label', 'fontFamily')
+  icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
+  align = style_property('anvil-m3-fileloader-container', 'justifyContent')
 
   @property
   def font_size(self):

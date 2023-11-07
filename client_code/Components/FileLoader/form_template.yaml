@@ -388,6 +388,14 @@ properties:
 - {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold}
 - {name: font, type: string, default_value: '', important: true, description: The font to use for this component.}
 - {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels}
+- {name: icon_size, type: number, important: true, description: 'The size in pixels
+    of the icon. If not set, the icon will scale with the text.'}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  designerHint: align-horizontal
+  default_value: left
 is_package: true
 events:
 - name: change
@@ -395,7 +403,6 @@ events:
   description: When a new file is loaded into this FileLoader
   parameters:
   - {name: file, description: The first selected file. Set the 'multiple' property to allow loading more than one file.}
-  - {name: files, description: A list of loaded files. Set the 'multiple' property to allow loading more than one file.}
 - {name: focus, description: When the FileLoader gets focus}
 - {name: lost_focus, description: When the FileLoader loses focus}
 custom_component: true
@@ -403,11 +410,12 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<form anvil-name=\"anvil-m3-fileloader-form\" class=\"anvil-m3-fileloader-form\"\
-      >\n  <div anvil-name=\"anvil-m3-fileloader-icon-container\" class=\"anvil-m3-fileloader-icon-container\"\
-      >\n    <input style=\"display: none\" class=\"anvil-m3-fileloader-input\" anvil-name=\"\
-      anvil-m3-fileloader-input\" id=\"anvil-m3-fileloader\" type=\"file\" accept/>\n\
-      \    <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"anvil-m3-fileloader-icon\
-      \ material-symbols-outlined\"></span>\n    <label anvil-name=\"anvil-m3-fileloader-label\"\
-      \ class=\"anvil-m3-fileloader-label\" for=\"anvil-m3-fileloader\">Upload a file</label>\n\
-      \  </div>\n</form>"}
+      >\n  <div class=\"anvil-m3-fileloader-container\" anvil-name=\"anvil-m3-fileloader-container\"\
+      >\n    <div anvil-name=\"anvil-m3-fileloader-icon-container\" class=\"anvil-m3-fileloader-icon-container\"\
+      >\n      <input style=\"display: none\" class=\"anvil-m3-fileloader-input\"\
+      \ anvil-name=\"anvil-m3-fileloader-input\" id=\"anvil-m3-fileloader\" type=\"\
+      file\" accept/>\n      <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"\
+      anvil-m3-fileloader-icon material-symbols-outlined\"></span>\n      <label anvil-name=\"\
+      anvil-m3-fileloader-label\" class=\"anvil-m3-fileloader-label\" for=\"anvil-m3-fileloader\"\
+      >Upload a file</label>\n    </div>\n  </div>\n</form>"}
 custom_component_container: false
