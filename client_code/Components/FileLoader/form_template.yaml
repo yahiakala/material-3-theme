@@ -2,7 +2,7 @@ properties:
 - {name: file, type: object, default_binding_prop: true, important: true, description: 'The
     currently selected file (or the first, if multiple files are selected). This is
     a Media object.'}
-- {name: file_type, type: string, default_value: '', important: true, description: 'Specify
+- {name: file_types, type: string, default_value: '', important: true, description: 'Specify
     what type of file to upload. Can accept a MIME type (eg “image/png” or “image/*“),
     or an extension (eg “.png”), or a comma-separated set of them (eg “.png,.jpg,.jpeg”)'}
 - {name: files, type: object, important: true, description: A list of currently selected files. Each file is a Media object.}
