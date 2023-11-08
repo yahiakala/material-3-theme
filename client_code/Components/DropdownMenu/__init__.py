@@ -15,9 +15,11 @@ from ..Menu.MenuItem import MenuItem
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.placeholder = ""
     self.init_components(**properties)
 
+    self.create_menu_items()
+    self._children = self.menu.get_components()
+    
     self._window_size = {}
     self._menu_size = {}
     self._box_positioning = {}
@@ -43,15 +45,14 @@ class DropdownMenu(DropdownMenuTemplate):
           
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-    
+
     if not self.label_text and self.placeholder:
-      self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
+        self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
     
-
   #properties
   visible = HtmlTemplate.visible
 
@@ -115,9 +116,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.selected_text_color = value
   selected_text_color = property_with_callback("selected_text_color", set_selected_text_color)
     
-  def update_label_text(self, value):
+  def set_label_text(self, value):
     self.selection_field.label_text = value or ""
-  label_text = property_with_callback("label_text", update_label_text)
+  label_text = property_with_callback("label_text", set_label_text)
 
   def set_selected_value(self, value):
     if type(value) is list:
@@ -306,11 +307,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.update_hover_styles()
       
   def form_show(self, **event_args):
-    self.create_menu_items()
-    self._children = self.menu.get_components()
     if anvil.designer.in_designer:
       if not self.label_text:
-        self.label_text = anvil.designer.get_design_name(self)
+        self.selection_field.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
+        
   def create_menu_items(self):
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else "Clear Selection"
