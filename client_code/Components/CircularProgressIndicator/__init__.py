@@ -31,11 +31,6 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
 
   progress = property_with_callback("progress", update_progress)
 
-  '''<svg stroke="blue" anvil-name="anvil-m3-progressindicator-determinate" class="anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden">
-      <path style="stroke:blue" anvil-name="anvil-m3-progressindicator-arc" class="anvil-m3-progressindicator-arc" d="M 6.031219015765174 22.94032554970835 A 18 18 -79646.6250000492 1 1 8.374645858507604 32.93578804319722">
-      </path>
-    </svg> '''
-
   def draw_path(self, percent):
     cx, cy = 24, 24 #center of circle
     rx, ry = 18, 18 #major/minor radius
@@ -50,7 +45,6 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
       delta = radian # Angle to sweep in radians (positive)
       d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
       
-      print(self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, 0.1))
       self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("d", d)
     else:
       radian = pi * 99 /  50
