@@ -8,12 +8,17 @@ from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
 from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
+from ...utils import gen_id
 
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
+    if not anvil.designer.in_designer:
+        id = gen_id()
+        self.dom_nodes["anvil-m3-radiobutton-input"].id = id
+        self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   # Properties 
   visible = HtmlTemplate.visible

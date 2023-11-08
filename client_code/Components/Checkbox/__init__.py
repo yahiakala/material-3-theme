@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
+from ...utils import gen_id
 import anvil.designer
 
 
@@ -17,6 +18,11 @@ class Checkbox(CheckboxTemplate):
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    if not anvil.designer.in_designer:
+      id = gen_id()
+      self.dom_nodes["anvil-m3-checkbox"].id = id
+      self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
+
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)
