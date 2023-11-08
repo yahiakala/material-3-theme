@@ -1,4 +1,3 @@
-from client_code.utils import gen_id
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
 import anvil.server
@@ -7,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
+from ...utils import gen_id
 import anvil.designer
 
 
@@ -20,7 +20,7 @@ class Checkbox(CheckboxTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     if not anvil.designer.in_designer:
       id = gen_id()
-      self.dom_nodes["anvil-m3-checkbox-input"].id = id
+      self.dom_nodes["anvil-m3-checkbox"].id = id
       self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
 
 
