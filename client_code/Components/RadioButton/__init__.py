@@ -14,6 +14,10 @@ class RadioButton(RadioButtonTemplate):
     self._props = properties
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
+    if not anvil.designer.in_designer:
+        id = gen_id()
+        self.dom_nodes["anvil-m3-radiobutton-input"].id = id
+        self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   # Properties 
   visible = HtmlTemplate.visible

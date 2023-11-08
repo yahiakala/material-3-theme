@@ -1,3 +1,4 @@
+from client_code.utils import gen_id
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
 import anvil.server
@@ -17,6 +18,11 @@ class Checkbox(CheckboxTemplate):
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    if not anvil.designer.in_designer:
+      id = gen_id()
+      self.dom_nodes["anvil-m3-checkbox-input"].id = id
+      self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
+
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)
