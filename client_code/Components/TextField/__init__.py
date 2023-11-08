@@ -60,7 +60,7 @@ class TextField(TextFieldTemplate):
   
   # label_text = innerText_property('label-text')
   def set_label(self, value):
-    self.dom_nodes['label-text'].innerHTML = value or ""
+    self.dom_nodes['label-text'].innerText = value or ""
   label_text = property_with_callback("label_text", set_label)
     
   italic_display = italic_property('text-field-input')

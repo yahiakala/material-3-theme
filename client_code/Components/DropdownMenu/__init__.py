@@ -359,7 +359,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menu.visible = value
     if value:
       # open
+      print(f"open: {self.label_text}, {self.placeholder}")
       if not self.label_text and self.placeholder:
+        print("open. is it small?")
         self.selection_field.dom_nodes['label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.place_shield()
@@ -368,7 +370,10 @@ class DropdownMenu(DropdownMenuTemplate):
       self.update_menu_placement()
     else:
       # close
-      if not self.label_text and self.placeholder:
+      print(f"close: {self.label_text}, {self.placeholder}")
+
+      if not self.label_text and self.placeholder and self.selected_value is None:
+        print("here")
         self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
         # self.selection_field.label_text = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
