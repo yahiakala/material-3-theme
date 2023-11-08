@@ -17,6 +17,3 @@ class BrookeTestPage(BrookeTestPageTemplate):
     print(file)
     anvil.media.download(file)
 
-
-
-
