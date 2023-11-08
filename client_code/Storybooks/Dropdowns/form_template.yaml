@@ -123,3 +123,35 @@ components:
           allow_none: true
         type: form:Components.DropdownMenu
         layout_properties: {width: 273}
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'WCWYYQ,WKVBAF'}
+    components:
+    - name: flow_panel_3_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: dropdown_menu_3_copy_1
+        properties:
+          items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+            dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+          include_placeholder: ''
+          label_text: Dropdown Label 3
+          allow_none: true
+          enabled: false
+        type: form:Components.DropdownMenu
+        layout_properties: {width: 273}
+      - name: dropdown_menu_4_copy_1
+        properties:
+          items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+            dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+          include_placeholder: ''
+          placeholder: Placeholder Text
+          label_text: Dropdown Label 4
+          appearance: outlined
+          allow_none: true
+          enabled: false
+        type: form:Components.DropdownMenu
+        layout_properties: {width: 273}
