@@ -60,7 +60,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def set_enabled(self, value):
     self.menu_button.enabled = value
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", set_enabled
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
