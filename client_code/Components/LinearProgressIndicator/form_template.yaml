@@ -1,0 +1,39 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div anvil-name=\"anvil-m3-progressindicator-linear\" class=\"\
+      anvil-m3-progressindicator-component\">\n  <svg width=\"100%\" anvil-name=\"\
+      anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-track\"\
+      >\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" class=\"anvil-m3-progressindicator-indicator\"\
+      >\n      <animate begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\"\
+      \ attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"\
+      0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      <animate\
+      \ begin=\"00ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"\
+      x1\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n       \
+      \   keySplines=\"0.48 0 0 0.83\"></animate>\n    </line> \n    <line y1=\"2\"\
+      \ y2=\"2\" x1=\"0\" x2=\"0\" class=\"anvil-m3-progressindicator-indicator\"\
+      >\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"\
+      XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n            values=\"\
+      0;120%\" \n            keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      \
+      \  <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\"\
+      \ attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n            values=\"\
+      0;120%\" \n            keySplines=\"0.48 0 0 0.83\"></animate>\n    </line>\n\
+      \  </svg>\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-determinate\"\
+      \ class=\"anvil-m3-progressindicator-track anvil-m3-progressindicator-hidden\"\
+      >\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator\"\
+      \ class=\"anvil-m3-progressindicator-indicator\">\n      <!--\n      <animate\
+      \ anvil-name=\"indicator-animate1\" begin=\"0\" repeatCount=\"indefinite\" attributeType=\"\
+      XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"\
+      0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      -->\n\
+      \    </line> \n  </svg>\n</div>"}
+components: []
+is_package: true
+custom_component: true
+properties:
+- {name: visible, type: boolean, default_value: false, default_binding_prop: true,
+  important: true, designerHint: visible}
+- name: type
+  type: enum
+  important: true
+  options: [determinate, indeterminate]
+  default_value: indeterminate
+- {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
