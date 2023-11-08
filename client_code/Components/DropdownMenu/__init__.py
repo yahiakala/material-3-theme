@@ -16,9 +16,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
-
-    self.create_menu_items()
-    self._children = self.menu.get_components()
     
     self._window_size = {}
     self._menu_size = {}
@@ -307,6 +304,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.update_hover_styles()
       
   def form_show(self, **event_args):
+    self.create_menu_items()
+    self._children = self.menu.get_components()
+    
     if anvil.designer.in_designer:
       if not self.label_text:
         self.selection_field.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
