@@ -28,6 +28,7 @@ components_by_slot:
     type: form:Components.DropdownMenu
     layout_properties: {}
   - name: checkbox_1
-    properties: {checked: false, text: Checkbox, italic: false}
+    properties: {checked: false, text: Checkbox, italic: false, underline: false,
+      bold: false}
     type: form:Components.Checkbox
     layout_properties: {}
