@@ -48,6 +48,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     if percent is 0:
       d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, 50)
       self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("d", d)
+      # self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("stroke", "None")
     elif percent < 100:
       radian = pi * percent /  50
       delta = radian # Angle to sweep in radians (positive)
