@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import style_property # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
+from ...Functions import style_property, property_with_callback # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math
@@ -46,6 +46,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+    
 
   #properties
   visible = HtmlTemplate.visible
@@ -177,13 +178,18 @@ class DropdownMenu(DropdownMenuTemplate):
   def items(self, value):
     self._items = value
 
-  @property
-  def label_text(self):
-    return self._label_text
-  @label_text.setter
-  def label_text(self, value):
-    self._label_text = value
+  # @property
+  # def label_text(self):
+  #   return self._label_text
+  # @label_text.setter
+  # def label_text(self, value):
+  #   self._label_text = value
+    
+
+  def update_label_text(self, value):
     self.selection_field.label_text = value or ""
+
+  label_text = property_with_callback("label_text", update_label_text)
     
   @property
   def placeholder(self):
