@@ -59,7 +59,6 @@ class RadioButton(RadioButtonTemplate):
       }
     ]
 
-  # todo: interaction bold, italic, underline
   def toggle_selected(self):
     self.selected = not self.selected
     anvil.designer.update_component_properties(self, {'selected': self.selected})

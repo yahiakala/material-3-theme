@@ -68,7 +68,7 @@ components:
               type: form:Components.Menu.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
           - name: button_menu_2
-            properties: {text: menu 1, appearance: filled}
+            properties: {text: menu 2, appearance: filled}
             type: form:Components.ButtonMenu
             components:
             - name: menu_item_1_copy_1
@@ -91,8 +91,9 @@ components:
               properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
               type: form:Components.Menu.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            layout_properties: {}
           - name: button_menu_2_copy_2
-            properties: {text: menu 1, appearance: tonal}
+            properties: {text: menu 3, appearance: tonal}
             type: form:Components.ButtonMenu
             layout_properties: {}
             components:
