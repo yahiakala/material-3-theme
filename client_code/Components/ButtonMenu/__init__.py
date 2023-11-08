@@ -49,7 +49,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
-  
   def set_text(self, value):
     self.menu_button.text = value
   text = property_with_callback("text", set_text)
@@ -60,7 +59,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def set_enabled(self, value):
     self.menu_button.enabled = value
-  enabled = property_with_callback("enabled", set_enabled
+  enabled = property_with_callback("enabled", set_enabled)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()

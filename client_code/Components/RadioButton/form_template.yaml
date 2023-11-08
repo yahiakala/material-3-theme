@@ -6,7 +6,7 @@ properties:
 - {name: selected, type: boolean, default_value: false, description: Radio button option for html <input> checked property,
   group: Attributes}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button,
-  group: Attributes}
+  group: Attributes, designerHint: enabled}
 - {name: text, type: string, default_value: '', group: Attributes}
 - {name: value, type: string, default_value: '', group: Attributes}
 - name: align
@@ -15,6 +15,7 @@ properties:
   description: Align this component in it's container
   group: Appearance
   default_value: left
+  designerHint: align-horizontal
 - {name: background, type: color, description: background color of the component,
   default_value: '', group: Appearance}
 - {name: bold, type: boolean, default_value: false, description: Display the component text as bold,
@@ -32,7 +33,7 @@ properties:
 - {name: underline, type: boolean, default_value: false, description: Display the component text as underlined,
   group: Text}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
-  group: Appearance}
+  group: Appearance, designerHint: visible}
 is_package: true
 events:
 - {name: clicked, default_event: true}
