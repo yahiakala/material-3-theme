@@ -87,8 +87,9 @@ class RadioButton(RadioButtonTemplate):
       {
         "type": "region",
         "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
+        "sensitivity": 0,
         "callbacks": {
-          "doubleClick": self.toggle_selected
+          "execute": self.toggle_selected
         }
       }
     ]
