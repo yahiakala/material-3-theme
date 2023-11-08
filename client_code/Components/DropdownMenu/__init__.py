@@ -43,6 +43,9 @@ class DropdownMenu(DropdownMenuTemplate):
           
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    
+    if not self.label_text and self.placeholder:
+      self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
@@ -357,7 +360,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       # open
       if not self.label_text and self.placeholder:
-        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
+        self.selection_field.dom_nodes['label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.place_shield()
         self.selection_field.trailing_icon = "arrow_drop_up"
@@ -366,7 +369,7 @@ class DropdownMenu(DropdownMenuTemplate):
     else:
       # close
       if not self.label_text and self.placeholder:
-        self.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
+        self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
         # self.selection_field.label_text = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
       self.menuNode.removeAttribute("style")
