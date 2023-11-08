@@ -475,9 +475,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
  
 # DESIGNER INTERACTIONS
-  def _anvil_get_design_info_(self, as_layout=False):
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [
+  def _anvil_get_interactions_(self):
+    return [
       {
       "type": "whole_component",
       "title": "Visible",
@@ -501,7 +500,6 @@ class DropdownMenu(DropdownMenuTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['label-text'])
       }
     }]
-    return design_info
 
   def toggle_visible(self):
     self.visible = not self.visible
