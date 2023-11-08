@@ -36,11 +36,11 @@ class Checkbox(CheckboxTemplate):
     return [
       {
         "type": "whole_component",
-        "title": "Toggle",
+        "title": "Edit",
         "icon": "edit",
         "default": True,
         "callbacks": {
-          "execute": self.toggle_checked 
+          "execute":  lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
         }
       },
       {
