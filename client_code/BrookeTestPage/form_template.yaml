@@ -32,3 +32,11 @@ components_by_slot:
       bold: false}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: button_2
+    properties: {appearance: outlined}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
