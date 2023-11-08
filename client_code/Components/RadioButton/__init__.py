@@ -41,46 +41,6 @@ class RadioButton(RadioButtonTemplate):
   def _anvil_get_interactions_(self):
     return [
       {
-        "type": "whole_component_multi",
-        "title": "Align",
-        "options": [
-          {
-            "name": "Left Align",
-            "id": "left",
-            "icon" : "align-left",
-          },
-          {
-            "name": "Left Center",
-            "id": "center",
-            "icon" : "align-center",
-          },
-          {
-            "name": "Left Right",
-            "id": "right",
-            "icon" : "align-right",
-          }
-        ],
-        "callbacks": {
-          "execute": self.setAlignment
-        }
-      },
-      {
-        "type": "whole_component",
-        "title": "Visible",
-        "icon": "add", #TODO: eye icon
-        "callbacks": {
-          "execute": self.toggle_visible
-        }
-      },
-      {
-        "type": "whole_component",
-        "title": "Enable",
-        "icon": "add", #TODO: power icon
-        "callbacks": {
-          "execute": self.toggle_enabled
-        }
-      },
-      {
         "type": "whole_component",
         "title": "Edit text",
         "icon": "edit",
@@ -103,40 +63,7 @@ class RadioButton(RadioButtonTemplate):
   def toggle_selected(self):
     self.selected = not self.selected
     anvil.designer.update_component_properties(self, {'selected': self.selected})
-
-  def toggle_enabled(self):
-    self.enabled = not self.enabled
-    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
-
-  def toggle_visible(self):
-    self.visible = not self.visible
-    anvil.designer.update_component_properties(self, {'visible': self.visible})
-
-  def setAlignment(self, value):
-    self.align = value
-    anvil.designer.update_component_properties(self, {'align': self.align})
-
-  
-  # def _anvil_get_interactions_(self):
-  #   return [{
-  #     "type": "whole_component",
-  #     "title": "Toggle",
-  #     "icon": "edit",
-  #     "default": True,
-  #     "callbacks": {
-  #       "execute": self.toggle_checked 
-  #     }
-  #   },
-  #   {
-  #     "type": "region",
-  #     "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
-  #     "callbacks": {
-  #       "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
-  #     }
-  #   }       
-  #   ]
-
-    
+   
   def handle_click(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()

@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import style_property, property_with_callback # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
+from ...Functions import style_property, property_with_callback, property_without_callback # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math
@@ -15,9 +15,8 @@ from ..Menu.MenuItem import MenuItem
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.placeholder = ""
     self.init_components(**properties)
-
+    
     self._window_size = {}
     self._menu_size = {}
     self._box_positioning = {}
@@ -43,231 +42,99 @@ class DropdownMenu(DropdownMenuTemplate):
           
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-    
+
     if not self.label_text and self.placeholder:
-      self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
+        self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
     
-
   #properties
   visible = HtmlTemplate.visible
 
-  @property
-  def background(self):
-    return self._background
-  @background.setter
-  def background(self, value):
-    self._background = value
+  def set_background(self, value):
     self.selection_field.background = value
-  
-  @property
-  def bold_label(self):
-    return self._bold_label
-  @bold_label.setter
-  def bold_label(self, value):
-    self._bold_label = value
+  background = property_with_callback("background", set_background)
+
+  def set_bold_label(self, value):
     self.selection_field.bold_label = value
-    
-  @property
-  def label_font(self):
-    return self._label_font
-  @label_font.setter
-  def label_font(self, value):
-    self._label_font = value
+  bold_label = property_with_callback("bold_label", set_bold_label)
+
+  def set_label_font(self, value):
     self.selection_field.label_font = value
-    
-  @property
-  def label_font_size(self):
-    return self._label_font_size
-  @label_font_size.setter
-  def label_font_size(self, value):
-    self._label_font_size = value
+  label_font = property_with_callback("label_font", set_label_font)
+  
+  def set_label_font_size(self, value):
     self.selection_field.label_font_size = value
+  label_font_size = property_with_callback("label_font_size", set_label_font_size)
   
-  @property
-  def label_text_color(self):
-    return self._label_text_color
-  @label_text_color.setter
-  def label_text_color(self, value):
-    self._label_text_color = value
+  def set_label_text_color(self, value):
     self.selection_field.label_text_color = value
+  label_text_color = property_with_callback("label_text_color", set_label_text_color)
   
-  @property
-  def italic_label(self):
-    return self._italic_label
-  @italic_label.setter
-  def italic_label(self, value):
-    self._italic_label = value
+  def set_italic_label(self, value):
     self.selection_field.italic_label = value
-  
-  @property
-  def underline_label(self):
-    return self._underline_label
-  @underline_label.setter
-  def underline_label(self, value):
-    self._underline_label = value
+  italic_label = property_with_callback("italic_label", set_italic_label)
+
+  def set_underline_label(self, value):
     self.selection_field.underline_label = value
-  
-  @property
-  def enabled(self):
-    return self._enabled
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
+  underline_label = property_with_callback("underline_label", set_underline_label)
+
+  def set_enabled(self, value):
     self.selection_field.enabled = value
-    
-  @property
-  def appearance(self):
-    return self._appearance
-  @appearance.setter
-  def appearance(self, value):
-    self._appearance = value
+  enabled = property_with_callback("enabled", set_enabled)
+
+  def set_appearance(self, value):
     self.selection_field.appearance = value
-    
-  @property
-  def selected_italic_display(self):
-    return self._selected_italic_display
-  @selected_italic_display.setter
-  def selected_italic_display(self, value):
-    self._selected_italic_display = value
+  appearance = property_with_callback("appearance", set_appearance)
+
+  def set_selected_italic_display(self, value):
     self.selection_field.selected_italic_display = value
-    
-  @property
-  def selected_bold_display(self):
-    return self._selected_bold_display
-  @selected_bold_display.setter
-  def selected_bold_display(self, value):
-    self._selected_bold_display = value
+  selected_italic_display = property_with_callback("selected_italic_display", set_selected_italic_display)
+
+  def set_selected_bold_display(self, value):
     self.selection_field.selected_bold_display = value
-    
-  @property
-  def selected_underline_display(self):
-    return self._selected_underline_display
-  @selected_underline_display.setter
-  def selected_underline_display(self, value):
-    self._selected_underline_display = value
+  selected_bold_display = property_with_callback("selected_bold_display", set_selected_bold_display)
+
+  def set_selected_underline_display(self, value):
     self.selection_field.selected_underline_display = value
-    
-  @property
-  def selected_font(self):
-    return self._selected_font
-  @selected_font.setter
-  def selected_font(self, value):
-    self._selected_font = value
+  selected_underline_display = property_with_callback("selected_underline_display", set_selected_underline_display)
+
+  def set_selected_font(self, value):
     self.selection_field.selected_font = value
-    
-  @property
-  def selected_font_size(self):
-    return self._selected_font_size
-  @selected_font_size.setter
-  def selected_font_size(self, value):
-    self._selected_font_size = value
+  selected_font = property_with_callback("selected_font", set_selected_font)
+
+  def set_selected_font_size(self, value):
     self.selection_field.selected_font_size = value
-    
-  @property
-  def selected_text_color(self):
-    return self._selected_text_color
-  @selected_text_color.setter
-  def selected_text_color(self, value):
-    self._selected_text_color = value
+  selected_font_size = property_with_callback("selected_font_size", set_selected_font_size)
+
+  def set_selected_text_color(self, value):
     self.selection_field.selected_text_color = value
-
-  @property
-  def items(self):
-    return self._items
-  @items.setter
-  def items(self, value):
-    self._items = value
-
-  # @property
-  # def label_text(self):
-  #   return self._label_text
-  # @label_text.setter
-  # def label_text(self, value):
-  #   self._label_text = value
+  selected_text_color = property_with_callback("selected_text_color", set_selected_text_color)
     
-  def update_label_text(self, value):
+  def set_label_text(self, value):
     self.selection_field.label_text = value or ""
+  label_text = property_with_callback("label_text", set_label_text)
 
-  label_text = property_with_callback("label_text", update_label_text)
-    
-  @property
-  def placeholder(self):
-    return self._placeholder
-  @placeholder.setter
-  def placeholder(self, value):
-    self._placeholder = value
-
-  @property
-  def selected_value(self):
-     return self._selected_value
-  @selected_value.setter
-  def selected_value(self, value):
-    self._selected_value = value
+  def set_selected_value(self, value):
     if type(value) is list:
       self.selection_field.dom_nodes['text-field-input'].value = value[0]
     else:
       self.selection_field.dom_nodes['text-field-input'].value = value
     self.raise_event("change")
+  selected_value = property_with_callback("selected_value", set_selected_value)
 
-  @property
-  def allow_none(self):
-    return self._allow_none
-  @allow_none.setter
-  def allow_none(self, value):
-    self._allow_none = value
-
-  @property
-  def bold_items(self):
-    return self._bold_items
-  @bold_items.setter
-  def bold_items(self, value):
-    self._bold_items = value
-
-  @property
-  def italic_items(self):
-    return self._italic_items
-  @italic_items.setter
-  def italic_items(self, value):
-    self._italic_items = value
-
-  @property
-  def underline_items(self):
-    return self._underline_items
-  @underline_items.setter
-  def underline_items(self, value):
-    self._underline_items = value
-
-  @property
-  def items_text_color(self):
-    return self._items_text_color
-  @items_text_color.setter
-  def items_text_color(self, value):
-    self._items_text_color = value
-
-  @property
-  def items_background(self):
-    return self._items_background
-  @items_background.setter
-  def items_background(self, value):
-    self._items_background = value
-
-  @property
-  def items_font(self):
-    return self._items_font
-  @items_font.setter
-  def items_font(self, value):
-    self._items_font = value
-
-  @property
-  def items_font_size(self):
-    return self._items_font_size
-  @items_font_size.setter
-  def items_font_size(self, value):
-    self._items_font_size = value
+  placeholder = property_without_callback("placeholder")
+  items = property_without_callback("items")
+  allow_none = property_without_callback("allow_none")
+  bold_items = property_without_callback("bold_items")
+  italic_items = property_without_callback("italic_items")
+  underline_items = property_without_callback("underline_items")
+  items_text_color = property_without_callback("items_text_color")
+  items_background = property_without_callback("items_background")
+  items_font = property_without_callback("items_font")
+  items_font_size = property_without_callback("items_font_size")
     
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
@@ -439,9 +306,11 @@ class DropdownMenu(DropdownMenuTemplate):
   def form_show(self, **event_args):
     self.create_menu_items()
     self._children = self.menu.get_components()
+    
     if anvil.designer.in_designer:
       if not self.label_text:
-        self.label_text = anvil.designer.get_design_name(self)
+        self.selection_field.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
+        
   def create_menu_items(self):
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else "Clear Selection"

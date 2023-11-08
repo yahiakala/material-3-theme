@@ -49,7 +49,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
-  
   def set_text(self, value):
     self.menu_button.text = value
   text = property_with_callback("text", set_text)
