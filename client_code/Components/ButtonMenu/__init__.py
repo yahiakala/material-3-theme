@@ -10,9 +10,11 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
+from ...Functions import property_with_callback
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self.init_components(**properties)
     self.open = False
     self._window_size = {}
@@ -48,29 +50,17 @@ class ButtonMenu(ButtonMenuTemplate):
   
   visible = HtmlTemplate.visible
   
-  @property
-  def text(self):
-    return self._text
-  @text.setter
-  def text(self, value):
-    self._text = value
+  def set_text(self, value):
     self.menu_button.text = value
+  text = property_with_callback("text", set_text)
 
-  @property
-  def appearance(self):
-    return self._appearance
-  @appearance.setter
-  def appearance(self, value):
+  def set_appearance(self, value):
     self.menu_button.appearance = value
-    self._appearance = value
+  appearance = property_with_callback("appearance", set_appearance)
 
-  @property
-  def enabled(self):
-    return self._enabled
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
+  def set_enabled(self, value):
     self.menu_button.enabled = value
+  enabled = property_with_callback("enabled", set_enabled)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
