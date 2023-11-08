@@ -186,12 +186,6 @@ components:
               allow_none: false
             type: form:Components.DropdownMenu
             layout_properties: {width: 273}
-    - name: text_6
-      properties: {}
-      type: form:Components.Text
-      layout_properties: {slot: anvil-m3-card-slot}
-      data_bindings:
-      - {property: text, code: 'self.item['''']', writeback: false}
     - name: flow_panel_4_copy_1_copy_1
       properties: {}
       type: FlowPanel
