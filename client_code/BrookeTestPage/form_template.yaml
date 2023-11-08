@@ -57,7 +57,7 @@ components_by_slot:
     properties: {align: left, file_types: .png}
     type: form:Components.FileLoader
     layout_properties: {}
-    event_bindings: {}
+    event_bindings: {change: file_loader_3_change}
   - name: file_loader_2
     properties: {align: left}
     type: form:Components.FileLoader
