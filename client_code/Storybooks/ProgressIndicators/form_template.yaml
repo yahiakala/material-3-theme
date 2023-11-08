@@ -70,11 +70,6 @@ components:
       properties: {visible: true, type: determinate, progress: 10}
       type: form:Components.CircularProgressIndicator
       layout_properties: {slot: anvil-m3-card-slot}
-    - name: flow_panel_3_copy_1
-      properties: {}
-      type: FlowPanel
-      layout_properties: {slot: anvil-m3-card-slot}
-      components: []
     - name: linear_progress_indicator_1_indeterminate
       properties: {visible: true, type: determinate, progress: 47.75}
       type: form:Components.LinearProgressIndicator

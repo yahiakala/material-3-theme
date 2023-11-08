@@ -25,13 +25,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   type = property_with_callback("type", update_determinance)
 
   def update_progress(self, value):
-    v = 0
-    if value is None:
-      v = 0
-    elif value in range(0, 100):
-      v = value
-    elif value >= 100:
-      v = 100
+    v = max(min(value or 0, 100), 0)
     self.draw_path(v)
     # self.dom_nodes['anvil-m3-progressindicator-indicator'].setAttribute("x2", f"{v}%")
 
@@ -50,8 +44,11 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     
     radian = pi * percent /  50
     delta = radian # Angle to sweep in radians (positive)
-    
-    if percent <= 99:
+
+    if percent is 0:
+      d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, 50)
+      self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("d", d)
+    elif percent < 100:
       radian = pi * percent /  50
       delta = radian # Angle to sweep in radians (positive)
       d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
