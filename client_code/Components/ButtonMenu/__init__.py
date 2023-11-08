@@ -233,18 +233,6 @@ class ButtonMenu(ButtonMenuTemplate):
       },
       {
         "type": "whole_component",
-        "title": "Visible",
-        "icon": "add",  # TODO: eye icon
-        "callbacks": {"execute": self.toggle_visible},
-      },
-      {
-        "type": "whole_component",
-        "title": "Enable",
-        "icon": "add",  # TODO: power icon
-        "callbacks": {"execute": self.toggle_enabled},
-      },
-      {
-        "type": "whole_component",
         "title": "Edit text",
         "icon": "edit",
         "default": True,
@@ -261,11 +249,3 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     self.set_visibility(False)
-
-  def toggle_visible(self):
-    self.visible = not self.visible
-    anvil.designer.update_component_properties(self, {'visible': self.visible})
-
-  def toggle_enabled(self):
-    self.enabled = not self.enabled
-    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
