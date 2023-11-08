@@ -67,7 +67,7 @@ components:
       layout_properties: {slot: anvil-m3-card-slot}
       event_bindings: {click: button_1_click}
     - name: circular_progress_indicator_determinate
-      properties: {visible: true, type: determinate, progress: 10}
+      properties: {visible: true, type: determinate, progress: 0}
       type: form:Components.CircularProgressIndicator
       layout_properties: {slot: anvil-m3-card-slot}
     - name: linear_progress_indicator_determinate
