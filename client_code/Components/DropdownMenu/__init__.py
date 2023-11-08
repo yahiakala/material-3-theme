@@ -14,6 +14,7 @@ from ..Menu.MenuItem import MenuItem
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self.placeholder = ""
     self.init_components(**properties)
 
@@ -185,7 +186,6 @@ class DropdownMenu(DropdownMenuTemplate):
   # def label_text(self, value):
   #   self._label_text = value
     
-
   def update_label_text(self, value):
     self.selection_field.label_text = value or ""
 
@@ -355,12 +355,19 @@ class DropdownMenu(DropdownMenuTemplate):
       value = not self.menu.visible
     self.menu.visible = value
     if value:
+      # open
+      if not self.label_text and self.placeholder:
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.place_shield()
         self.selection_field.trailing_icon = "arrow_drop_up"
       self.get_textfield_measurements()
       self.update_menu_placement()
     else:
+      # close
+      if not self.label_text and self.placeholder:
+        self.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
+        # self.selection_field.label_text = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
       self.menuNode.removeAttribute("style")
       if self.selected_value is None:
@@ -484,20 +491,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def _anvil_get_interactions_(self):
     return [
       {
-    #   "type": "whole_component",
-    #   "title": "Visible",
-    #   "icon": "add", #TODO: eye icon
-    #   "callbacks": {
-    #     "execute": self.toggle_visible
-    #   }
-    # }, {
-    #   "type": "whole_component",
-    #   "title": "Enable",
-    #   "icon": "add", #TODO: power icon
-    #   "callbacks": {
-    #     "execute": self.toggle_enabled
-    #   }
-    # },{
       "type": "whole_component",
       "title": "Edit Label",
       "icon": "edit",
@@ -506,11 +499,3 @@ class DropdownMenu(DropdownMenuTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['label-text'])
       }
     }]
-
-  # def toggle_visible(self):
-  #   self.visible = not self.visible
-  #   anvil.designer.update_component_properties(self, {'visible': self.visible})
-
-  # def toggle_enabled(self):
-  #   self.enabled = not self.enabled
-  #   anvil.designer.update_component_properties(self, {'enabled': self.enabled})
