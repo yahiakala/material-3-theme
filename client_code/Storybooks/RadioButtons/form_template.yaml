@@ -63,15 +63,15 @@ components:
             type: form:Components.RadioButton
             layout_properties: {}
           - name: radio_button_1_copy_2
-            properties: {text: Selection 3, group_name: group_1}
+            properties: {text: Selection 3, group_name: group_1, selected: true}
             type: form:Components.RadioButton
             layout_properties: {}
           - name: radio_button_1_copy_3
-            properties: {text: Selection 4, group_name: group_1}
+            properties: {text: Selection 4, group_name: group_1, selected: true}
             type: form:Components.RadioButton
             layout_properties: {}
           - name: radio_button_1_copy_4
-            properties: {text: Selection 5, group_name: group_1}
+            properties: {text: Selection 5, group_name: group_1, selected: true}
             type: form:Components.RadioButton
             layout_properties: {}
           - name: radio_button_1_copy_5
@@ -155,6 +155,6 @@ components:
       type: form:Components.RadioButton
       layout_properties: {slot: anvil-m3-card-slot}
     - name: radio_button_6
-      properties: {text: radio_button_6, group_name: groupx}
+      properties: {text: radio button with text, group_name: groupx}
       type: form:Components.RadioButton
       layout_properties: {slot: anvil-m3-card-slot}
