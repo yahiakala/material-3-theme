@@ -25,3 +25,8 @@ input.anvil-m3-fileloader-input:disabled ~ *{
   color: var(--anvil-m3-on-primary-container);
   text-decoration: none;
 }
+
+.anvil-m3-fileloader-container:focus {
+  outline: 0;
+  
+}
