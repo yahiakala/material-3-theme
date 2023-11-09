@@ -260,6 +260,10 @@ components_by_slot:
             properties: {align: right, icon: settings}
             type: form:Components.IconButton
             layout_properties: {}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextField
+    layout_properties: {}
   - name: checkbox_1
     properties: {checked: false, text: Hello, visible: true, underline: false, enabled: true}
     type: form:Components.Checkbox
