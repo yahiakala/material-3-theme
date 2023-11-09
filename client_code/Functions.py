@@ -18,20 +18,16 @@ def theme_color_to_css(color:str):
 def property_with_callback(prop, cb):
   def getter(self):
     return self._props.get(prop)
-
   def setter(self, value):
     self._props[prop] = value
     cb(self, value)
-  
   return property(getter, setter)
   
 def property_without_callback(prop):
   def getter(self):
     return self._props.get(prop)
-
   def setter(self, value):
     self._props[prop] = value
-  
   return property(getter, setter)
 
 def color_property(dom_node_name, style_prop):
@@ -44,11 +40,10 @@ def color_property(dom_node_name, style_prop):
 
   return property(getter, setter)
 
-# def style_property(dom_node_name, style_prop, prop_name):
-#   def set_style(self, value):
-#     self.dom_nodes[dom_node_name].style[style_prop] = value
-#   return property_with_callback(prop_name, set_style)
-
+def style_property(dom_node_name, style_prop, prop_name):
+  def set_style(self, value):
+    self.dom_nodes[dom_node_name].style[style_prop] = value
+  return property_with_callback(prop_name, set_style)
 
 def innerHTML_property(dom_node_name, prop_name="text"):
   def set_innterHTML(self, value):
@@ -112,16 +107,22 @@ def bold_property(dom_node_name, prop_name="bold"):
       self.dom_nodes[dom_node_name].style.fontStyle = 'normal'
   return property_with_callback(prop_name, set_bold)
 
-def font_size_property(dom_node_name):
-  def getter(self):
-    return self._font_size
-
-  def setter(self, value):
+def font_size_property(dom_node_name, prop_name="font_size"):
+  def set_font_size(self, value):
     self._font_size = value
     if value: value = f'{value}px'
     self.dom_nodes[dom_node_name].style.fontSize = value
-
-  return property(getter, setter)
+  return property_with_callback(prop_name, setset_font_size_bold)
+  
+def font_family_property(dom_node_name, prop_name="font_family"):
+  def set_font_family(self, value):
+    self.dom_nodes[dom_node_name].style.fontFamily = value
+  return property_with_callback(prop_name, set_font_family)
+  
+def border_property(dom_node_name, prop_name="border"):
+  def set_border(self, value):
+    self.dom_nodes[dom_node_name].style.border = value
+  return property_with_callback(prop_name, set_border)
 
 def margin_property(dom_node_name, prop_name="margin"):
   def getter(self):

@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, style_property, href_property, innerHTML_property
+from ...Functions import color_property, style_property, href_property, innerHTML_property, font_family_property, font_size_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -107,11 +107,11 @@ class NavigationLink(NavigationLinkTemplate):
 
   icon_color = color_property('anvil-m3-navigation-link-icon', 'color')
 
-  font_family = style_property('anvil-m3-navigation-link-text', 'fontFamily')
+  font_family = font_family_property('anvil-m3-navigation-link-text')
   
-  font_size = style_property('anvil-m3-navigation-link-text', 'fontSize')
+  font_size = font_size_property('anvil-m3-navigation-link-text', 'font_size')
   
-  icon_size = style_property('anvil-m3-navigation-link-icon', 'fontSize')
+  icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
 
   
 

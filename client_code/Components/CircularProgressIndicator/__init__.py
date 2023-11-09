@@ -16,7 +16,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     # Any code you write here will run before the form opens.
 
   visible = HtmlTemplate.visible
-  align = align = style_property('anvil-m3-progressindicator-component', 'justifyContent') 
+  align = style_property('anvil-m3-progressindicator-component', 'justifyContent', 'align') 
 
   def update_determinance(self, value):
     v = value is "determinate"

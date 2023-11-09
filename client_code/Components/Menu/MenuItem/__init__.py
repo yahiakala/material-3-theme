@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ....Functions import innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css
+from ....Functions import innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
 
 import anvil.designer
 
@@ -34,7 +34,7 @@ class MenuItem(MenuItemTemplate):
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
   font_size = font_size_property('anvil-m3-menuItem-labelText')
-  font = style_property('anvil-m3-menuItem-labelText', 'fontFamily')
+  font = font_family_property('anvil-m3-menuItem-labelText', 'font')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor')
   # @property
