@@ -78,7 +78,7 @@ class Switch(SwitchTemplate):
     self.set_color_styles()
       
   enabled = enabled_property('anvil-m3-switch-input')
-  align = style_property('anvil-m3-switch-container', 'justifyContent')
+  align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
   selected_background_color = property_with_callback('selected_background_color', set_color_styles)
   unelected_background_color = property_with_callback('unselected_background_color', set_color_styles)
   

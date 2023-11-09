@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import style_property, property_with_callback, property_without_callback # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
+from ...Functions import style_property, property_with_callback, property_without_callback 
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math

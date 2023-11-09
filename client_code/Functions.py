@@ -44,14 +44,10 @@ def color_property(dom_node_name, style_prop):
 
   return property(getter, setter)
 
-def style_property(dom_node_name, style_prop):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].style[style_prop]
-
-  def setter(self, value):
-    self.dom_nodes[dom_node_name].style[style_prop] = value
-
-  return property(getter, setter)
+# def style_property(dom_node_name, style_prop, prop_name):
+#   def set_style(self, value):
+#     self.dom_nodes[dom_node_name].style[style_prop] = value
+#   return property_with_callback(prop_name, set_style)
 
 
 def innerHTML_property(dom_node_name, prop_name="text"):
@@ -88,54 +84,33 @@ def name_property(dom_node_name, prop_name="name"):
   return property_with_callback(prop_name, set_name)
 
 def value_property(dom_node_name, prop_name="value"):
-  
-  
-  def getter(self):
-    return self.dom_nodes[dom_node_name].value
-
-  def setter(self, value):
+  def set_value(self, value):
     self.dom_nodes[dom_node_name].value = value
+  return property_with_callback(prop_name, set_value)
 
-  return property(getter, setter)
-
-def underline_property(dom_node_name):
-  def getter(self):
-    return self._props['underline']
-
-  def setter(self, value):
-    self._props.get('underline')
+def underline_property(dom_node_name, prop_name="underline"):
+  def set_underline(self, value):
     if value:
       self.dom_nodes[dom_node_name].style.textDecoration = 'underline'
     else:
       self.dom_nodes[dom_node_name].style.textDecoration = 'none'
+  return property_with_callback(prop_name, set_underline)
 
-  return property(getter, setter)
-
-def italic_property(dom_node_name):
-  def getter(self):
-    return self._props.get('italic')
-
-  def setter(self, value):
-    self._props['italic'] = value
+def italic_property(dom_node_name, prop_name="italic"):
+  def set_italic(self, value):
     if value:
       self.dom_nodes[dom_node_name].style.fontStyle = 'italic'
     else:
       self.dom_nodes[dom_node_name].style.fontStyle = 'normal'
+  return property_with_callback(prop_name, set_italic)
 
-  return property(getter, setter)
-
-def bold_property(dom_node_name):
-  def getter(self):
-    return self._props.get('bold')
-
-  def setter(self, value):
-    self._props['bold'] = value
+def bold_property(dom_node_name, prop_name="bold"):
+  def set_bold(self, value):
     if value:
-      self.dom_nodes[dom_node_name].style.fontWeight = 'bold'
+      self.dom_nodes[dom_node_name].style.fontStyle = 'bold'
     else:
-      self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
-
-  return property(getter, setter)
+      self.dom_nodes[dom_node_name].style.fontStyle = 'normal'
+  return property_with_callback(prop_name, set_bold)
 
 def font_size_property(dom_node_name):
   def getter(self):
