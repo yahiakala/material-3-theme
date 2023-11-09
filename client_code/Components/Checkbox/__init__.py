@@ -9,7 +9,6 @@ from ...Functions import enabled_property, style_property, underline_property, i
 from ...utils import gen_id
 import anvil.designer
 
-
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     self._props = properties
@@ -22,7 +21,6 @@ class Checkbox(CheckboxTemplate):
       id = gen_id()
       self.dom_nodes["anvil-m3-checkbox"].id = id
       self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
-
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)

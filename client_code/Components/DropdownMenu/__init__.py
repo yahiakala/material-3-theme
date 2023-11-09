@@ -15,6 +15,7 @@ from ..Menu.MenuItem import MenuItem
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self._design_name = ""
     self.init_components(**properties)
     
     self._window_size = {}
@@ -112,9 +113,14 @@ class DropdownMenu(DropdownMenuTemplate):
   def set_selected_text_color(self, value):
     self.selection_field.selected_text_color = value
   selected_text_color = property_with_callback("selected_text_color", set_selected_text_color)
-    
+
   def set_label_text(self, value):
-    self.selection_field.label_text = value or ""
+    v = value or ""
+    self.selection_field.dom_nodes['label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
+    if anvil.designer.in_designer and not value:
+      v = self._design_name
+      self.selection_field.dom_nodes['label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
+    self.selection_field.label_text = v
   label_text = property_with_callback("label_text", set_label_text)
 
   def set_selected_value(self, value):
@@ -308,8 +314,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self._children = self.menu.get_components()
     
     if anvil.designer.in_designer:
+      self._design_name = anvil.designer.get_design_name(self)
       if not self.label_text:
-        self.selection_field.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
+        self.selection_field.dom_nodes['label-text'].innerText = self._design_name
         
   def create_menu_items(self):
     p = MenuItem()
