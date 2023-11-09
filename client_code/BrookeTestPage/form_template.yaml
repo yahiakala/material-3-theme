@@ -37,6 +37,6 @@ components_by_slot:
     type: form:Components.Button
     layout_properties: {}
   - name: card_1
-    properties: {}
+    properties: {visible: true}
     type: form:Components.Card
     layout_properties: {}

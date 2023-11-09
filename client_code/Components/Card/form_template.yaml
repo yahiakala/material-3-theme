@@ -7,13 +7,13 @@ properties:
 - {name: enabled, type: boolean, default_value: false, designer_hint: enabled}
 - {name: interactive, type: boolean, default_value: false, description: 'Dictates
     if components will have interaction states (hover, focus, etc.)'}
-- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
 - name: align
   type: enum
   important: true
   options: [left, center, right]
   default_value: left
   designer_hint: align-horizontal
+- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}

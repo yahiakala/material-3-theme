@@ -31,7 +31,7 @@ components:
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
   - name: card_1
-    properties: {}
+    properties: {visible: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
@@ -75,7 +75,7 @@ components:
       type: form:Components.LinearProgressIndicator
       layout_properties: {slot: anvil-m3-card-slot}
   - name: card_2
-    properties: {}
+    properties: {visible: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'YQVVVU,UMEILI'}
     components:
