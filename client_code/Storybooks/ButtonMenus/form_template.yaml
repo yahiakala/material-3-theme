@@ -192,8 +192,4 @@ components:
       properties: {text: ''}
       type: form:Components.ButtonMenu
       layout_properties: {slot: anvil-m3-card-slot}
-      components:
-      - name: menu_item_5
-        properties: {text: Item}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      components: []

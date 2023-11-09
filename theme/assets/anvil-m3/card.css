@@ -3,11 +3,15 @@
   background: none;
   border: none;
   min-width: 15px;
-  padding: 0 16px;
+/*   padding: 0 16px; */
   margin: 0 8px 8px 0;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+}
+
+.anvil-m3-card-content-container {
+  margin: 0 16px;
 }
 
 /* Elevated */
