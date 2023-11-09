@@ -16,6 +16,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
+    self._design_name = ""
     self.open = False
     self._window_size = {}
     self._menu_size = {}
@@ -60,11 +61,11 @@ class ButtonMenu(ButtonMenuTemplate):
   """
   
   def set_text(self, value):
-    print(f"** {value}")
-    print(not value)
+    # print(f"** {value}")
+    # print(not value)
     v = value
     if anvil.designer.in_designer and not value:
-      print(anvil.designer.get_design_name(self))
+      # print(anvil.designer.get_design_name(self))
       v = anvil.designer.get_design_name(self)
     self.menu_button.text = v
   text = property_with_callback("text", set_text)
@@ -136,7 +137,6 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
   
-    
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     self._button_positioning = {
@@ -229,7 +229,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self.clear_hover_styles()
     self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
-# DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
     return [
       {
@@ -254,3 +253,8 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     self.set_visibility(False)
+
+  def form_show(self, **event_args):
+    print("SHOWING FORM")
+    # if anvil.designer.in_designer and not self.text:
+    #   self.text = anvil.designer.get_design_name(self)
