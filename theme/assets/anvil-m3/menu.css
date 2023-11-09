@@ -105,6 +105,10 @@
 /* todo: focus and active */
 
 /***** ButtonMenu *****/
+.anvil-m3-buttonMenu-unnamedButton {
+  font-style: italic;
+  color: var(--anvil-m3-on-disabled);
+}
 .anvil-m3-buttonMenu-container { 
   display: inline-block;
   position: relative;
