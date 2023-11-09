@@ -1,16 +1,19 @@
 properties:
 - {name: file, type: object, default_binding_prop: true, important: true, description: 'The
     currently selected file (or the first, if multiple files are selected). This is
-    a Media object.'}
+    a Media object.', group: Other}
 - {name: file_types, type: string, default_value: '', important: true, description: 'Specify
     what type of file to upload. Can accept a MIME type (eg “image/png” or “image/*“),
-    or an extension (eg “.png”), or a comma-separated set of them (eg “.png,.jpg,.jpeg”)'}
-- {name: files, type: object, important: true, description: A list of currently selected files. Each file is a Media object.}
-- {name: multiple, type: boolean, default_value: false, important: true, description: 'If
-    True, this FileLoader can load multiple files at the same time'}
-- {name: show_state, type: boolean, default_value: false, important: true, description: 'If
-    True, display a message describing selected files.'}
-- {name: text, type: string, default_value: File upload, important: true, description: The text displayed on this component}
+    or an extension (eg “.png”), or a comma-separated set of them (eg “.png,.jpg,.jpeg”)',
+  group: Other}
+- {name: files, type: object, important: true, description: A list of currently selected files. Each file is a Media object.,
+  group: Other}
+- {name: multiple, type: boolean, default_value: false, important: false, description: 'If
+    True, this FileLoader can load multiple files at the same time', group: Other}
+- {name: show_state, type: boolean, default_value: false, important: false, description: 'If
+    True, display a message describing selected files.', group: Other}
+- {name: text, type: string, default_value: File upload, important: true, description: The text displayed on this component,
+  group: Common}
 - name: material_icon
   type: enum
   important: true
@@ -375,27 +378,34 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: file_upload
+  group: Common
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.,
-  designerHint: enabled}
+  designerHint: enabled, group: Interaction}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?', designerHint: visible}
-- {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.}
-- {name: icon_color, type: color, default_value: '', important: true}
-- {name: background_color, type: color, default_value: '', important: true}
+    this component be displayed?', designerHint: visible, group: Appearance}
+- {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.,
+  group: Appearance}
+- {name: icon_color, type: color, default_value: '', important: true, group: Appearance}
+- {name: background_color, type: color, default_value: '', important: false, group: Appearance}
 - {name: underline, type: boolean, default_value: false, important: true, designerHint: font-underline,
-  description: Display this component’s text underlined}
-- {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic}
-- {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold}
-- {name: font, type: string, default_value: '', important: true, description: The font to use for this component.}
-- {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels}
+  description: Display this component’s text underlined, group: Text}
+- {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic,
+  group: Text}
+- {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold,
+  group: Text}
+- {name: font, type: string, default_value: '', important: true, description: The font to use for this component.,
+  group: Text}
+- {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels,
+  group: Text}
 - {name: icon_size, type: number, important: true, description: 'The size in pixels
-    of the icon. '}
+    of the icon. ', group: Text}
 - name: align
   type: enum
   important: true
   options: [left, center, right]
   designerHint: align-horizontal
   default_value: left
+  group: Appearance
 is_package: true
 events:
 - name: change
