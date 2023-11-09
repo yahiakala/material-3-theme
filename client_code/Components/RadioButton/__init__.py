@@ -7,13 +7,13 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
-from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback
+from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property
 from ...utils import gen_id
 
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self._design_name = ""
+    self._design_name = "" 
     self.init_components(**properties)
     
     self.handle_click = self.handle_click
@@ -31,18 +31,18 @@ class RadioButton(RadioButtonTemplate):
     
   # Properties 
   visible = HtmlTemplate.visible
-  group_name = name_property('anvil-m3-radiobutton-input')
+  group_name = name_property('anvil-m3-radiobutton-input', "group_name")
   value = value_property('anvil-m3-radiobutton-input')
   enabled = enabled_property('anvil-m3-radiobutton-input')
   italic = italic_property('anvil-m3-radiobutton-label')
   bold = bold_property('anvil-m3-radiobutton-label')
   underline = underline_property('anvil-m3-radiobutton-label')
   font_size = font_size_property('anvil-m3-radiobutton-label')
-  border = style_property('anvil-m3-radiobutton-container', 'border')
-  font = style_property('anvil-m3-radiobutton-label', 'fontFamily')
+  border = border_property('anvil-m3-radiobutton-container')
+  font = font_family_property('anvil-m3-radiobutton-label', 'font')
   text_color = color_property('anvil-m3-radiobutton-label', 'color')
   background = color_property('anvil-m3-radiobutton-container', 'backgroundColor')
-  align = style_property('anvil-m3-radiobutton-component', 'justifyContent')
+  align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
   selected = checked_property('anvil-m3-radiobutton-input')
 
   def set_text(self, value):

@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
+from ...Functions import property_with_callback, innerText_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
 import anvil.designer
 
 # Todo: region interactions
@@ -51,11 +51,11 @@ class TextField(TextFieldTemplate):
   
   background = color_property('text-field-input', 'backgroundColor')
   
-  italic_label = italic_property('label-text')
-  bold_label = bold_property('label-text')
-  underline_label = underline_property('label-text')
-  label_font_size = font_size_property('label-text')
-  label_font = style_property('label-text', 'fontFamily')
+  italic_label = italic_property('label-text', 'italic_label')
+  bold_label = bold_property('label-text', 'bold_label')
+  underline_label = underline_property('label-text', 'underline_label')
+  label_font_size = font_size_property('label-text', 'label_font_size')
+  label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color')
   
   # label_text = innerText_property('label-text')
@@ -63,11 +63,11 @@ class TextField(TextFieldTemplate):
     self.dom_nodes['label-text'].innerText = value or ""
   label_text = property_with_callback("label_text", set_label)
     
-  italic_display = italic_property('text-field-input')
-  bold_display = bold_property('text-field-input')
-  underline_display = underline_property('text-field-input')
-  display_font_size = font_size_property('text-field-input')
-  display_font = style_property('text-field-input', 'fontFamily')
+  italic_display = italic_property('text-field-input', 'italic_label')
+  bold_display = bold_property('text-field-input', 'bold_display')
+  underline_display = underline_property('text-field-input', 'underline_display')
+  display_font_size = font_size_property('text-field-input', 'display_font_size')
+  display_font = font_family_property('text-field-input', 'display_font')
   display_text_color = color_property('text-field-input', 'color')
   # display_text = innerText_property('text-field-input')
   

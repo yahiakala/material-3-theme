@@ -194,7 +194,7 @@ components_by_slot:
             layout_properties: {}
             event_bindings: {click: icon_button_1_click}
           - name: icon_button_2
-            properties: {icon: settings, appearance: Filled}
+            properties: {icon: settings, appearance: Filled, enabled: true}
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_3
@@ -260,8 +260,12 @@ components_by_slot:
             properties: {align: right, icon: settings}
             type: form:Components.IconButton
             layout_properties: {}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextField
+    layout_properties: {}
   - name: checkbox_1
-    properties: {checked: false, text: Hello, visible: true, underline: false}
+    properties: {checked: false, text: Hello, visible: true, underline: false, enabled: true}
     type: form:Components.Checkbox
     layout_properties: {}
 components: []
