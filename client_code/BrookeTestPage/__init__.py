@@ -23,6 +23,16 @@ class BrookeTestPage(BrookeTestPageTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
-    self.file_loader_2.clear()
+    self.file_loader_2.focus()
+
+  def file_loader_2_focus(self, **event_args):
+    """This method is called when the FileLoader gets focus"""
+    print('im so focused rn')
+
+  def file_loader_2_lost_focus(self, **event_args):
+    """This method is called when the FileLoader loses focus"""
+    print('im so unfocused')
+
+
 
 

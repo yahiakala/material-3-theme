@@ -17,7 +17,7 @@ class FileLoader(FileLoaderTemplate):
 
     self._handle_change = self._handle_change
     self._handle_focus = self._handle_focus
-
+    self._handle_lost_focus = self._handle_lost_focus
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -29,17 +29,20 @@ class FileLoader(FileLoaderTemplate):
 
   def clear(self):
     self.dom_nodes['anvil-m3-fileloader-input'].value = ""
+    #update show_state text if present
 
   def focus(self):
     self.dom_nodes['anvil-m3-fileloader-container'].focus()
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self._handle_change)
-    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("focus", self._handle_focus)
+    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("focus", self._handle_focus)
+    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("blur", self._handle_lost_focus)
     
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self._handle_change)
-    self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("focus", self._handle_focus)
+    self.dom_nodes['anvil-m3-fileloader-container'].removeEventListener("focus", self._handle_focus)
+    self.dom_nodes['anvil-m3-fileloader-container'].removeEventListener("blur", self._handle_lost_focus)
 
   def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
@@ -50,6 +53,12 @@ class FileLoader(FileLoaderTemplate):
       self.raise_event('change', file=BlobMedia(content_type=files[0].type, content=as_bytes))
     file_reader.onload = onload
     file_reader.readAsArrayBuffer(files[0])
+
+  def _handle_focus(self, event, **event_args):
+    self.raise_event("focus")
+
+  def _handle_lost_focus(self, event, **event_args):
+    self.raise_event("lost_focus")
     
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
@@ -65,6 +74,14 @@ class FileLoader(FileLoaderTemplate):
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent')
   border = style_property('anvil-m3-fileloader-container', 'border')
+
+  @property
+  def show_state(self):
+    return self._show_state
+
+  @show_state.setter
+  def show_state(self, value):
+    self._show_state = 
 
   @property
   def material_icon(self):
