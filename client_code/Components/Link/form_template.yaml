@@ -1,12 +1,15 @@
 properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component,
-  multiline: true}
-- {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.}
+  multiline: true, group: Common}
+- {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.,
+  group: Common}
 - name: align
   type: enum
   options: [left, center, right]
   default_value: left
-- {name: bold, type: boolean, default_value: false}
+  designerHint: align-horizontal
+  group: Appearance
+- {name: bold, type: boolean, default_value: false, designerHint: font-bold}
 - {name: italic, type: boolean, default_value: false}
 - {name: font, type: string, default_value: ''}
 - {name: font_size, type: number}
