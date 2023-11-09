@@ -168,6 +168,10 @@
   padding: 1px;
 }
 
+.anvil-m3-link:focus {
+  outline: 0
+}
+
 .anvil-m3-link-icon-container {
   display: flex;
 }
