@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property
+from ...Functions import color_property, font_family_property
 
 import anvil.designer
 

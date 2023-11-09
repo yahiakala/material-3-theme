@@ -112,7 +112,7 @@ def font_size_property(dom_node_name, prop_name="font_size"):
     self._font_size = value
     if value: value = f'{value}px'
     self.dom_nodes[dom_node_name].style.fontSize = value
-  return property_with_callback(prop_name, setset_font_size_bold)
+  return property_with_callback(prop_name, set_font_size)
   
 def font_family_property(dom_node_name, prop_name="font_family"):
   def set_font_family(self, value):

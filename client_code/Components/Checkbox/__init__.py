@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, font_family_property
+from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, font_family_property, border_property
 from ...utils import gen_id
 import anvil.designer
 
@@ -73,7 +73,7 @@ class Checkbox(CheckboxTemplate):
   italic = italic_property('anvil-m3-checkbox-label')
   bold = bold_property('anvil-m3-checkbox-label')
   font_size = font_size_property('anvil-m3-checkbox-label')
-  border = style_property('anvil-m3-checkbox-container', 'border')
+  border = border_property('anvil-m3-checkbox-container')
   font = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color')
   background = color_property('anvil-m3-checkbox-container', 'backgroundColor')

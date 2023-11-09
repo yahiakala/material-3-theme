@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 
 #TODO: figure out what to do with line height
 #TODO: add margin and padding
@@ -37,7 +37,7 @@ class Text(TextTemplate):
   underline = underline_property('anvil-m3-text')
   italic = italic_property('anvil-m3-text')
   bold = bold_property('anvil-m3-text')
-  border = style_property('anvil-m3-text-container', 'border')
+  border = border_property('anvil-m3-text-container')
   font = font_family_property('anvil-m3-text', 'font')
   text_color = color_property('anvil-m3-text-container', 'color')
   icon_color = color_property('anvil-m3-text-icon', 'color')
