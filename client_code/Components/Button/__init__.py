@@ -5,12 +5,13 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, font_family_property
+from ...Functions import color_property, font_family_property, font_size_property
 
 import anvil.designer
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self._text = properties.get('text', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

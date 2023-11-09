@@ -43,7 +43,7 @@ class Text(TextTemplate):
   icon_color = color_property('anvil-m3-text-icon', 'color')
   background_color = color_property('anvil-m3-text-container', 'backgroundColor')
   text = innerText_property('anvil-m3-text')
-  align = style_property('anvil-m3-text-container', 'justifyContent')
+  align = style_property('anvil-m3-text-container', 'justifyContent', 'align')
 
   @property
   def font_size(self):

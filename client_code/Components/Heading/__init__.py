@@ -40,7 +40,7 @@ class Heading(HeadingTemplate):
   text_color = color_property('anvil-m3-heading-container', 'color')
   icon_color = color_property('anvil-m3-heading-icon', 'color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
-  align = style_property('anvil-m3-heading-container', 'justifyContent')
+  align = style_property('anvil-m3-heading-container', 'justifyContent', 'align')
 
   @property
   def font_size(self):
