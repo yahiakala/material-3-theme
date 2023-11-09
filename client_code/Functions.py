@@ -53,14 +53,10 @@ def innerHTML_property(dom_node_name):
 
   return property(getter, setter)
 
-def innerText_property(dom_node_name):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].innerText
-
-  def setter(self, value):
+def innerText_property(dom_node_name, prop_name="text"):
+  def set_innerText(self, value):
     self.dom_nodes[dom_node_name].innerText = value
-
-  return property(getter, setter)
+  return property_with_callback(prop_name, set_innerText)
 
 def href_property(dom_node_name):
   def getter(self):
