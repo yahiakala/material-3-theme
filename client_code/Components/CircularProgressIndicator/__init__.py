@@ -18,7 +18,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   visible = HtmlTemplate.visible
 
   def update_determinance(self, value):
-    v = True if value is "determinate" else False
+    v = value is "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle('anvil-m3-progressindicator-hidden', v)
     self.dom_nodes['anvil-m3-progressindicator-determinate'].classList.toggle('anvil-m3-progressindicator-hidden', not v)
 
