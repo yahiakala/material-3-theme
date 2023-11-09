@@ -9,6 +9,7 @@ properties:
   default_value: left
   designerHint: align-horizontal
   group: Appearance
+  important: true
 - {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
   group: Text}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
@@ -379,13 +380,17 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   group: Icon
+  important: true
 - {name: underline, type: boolean, default_value: true, designerHint: font-underline,
-  description: Display this component’s text underlined}
-- {name: visible, type: boolean, default_value: true}
-- {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text}
-- {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon}
+  description: Display this component’s text underlined, group: Text}
+- {name: visible, type: boolean, default_value: true, description: 'Should this component
+    be displayed?', group: Appearance, designerHint: visible, important: true}
+- {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text,
+  important: true}
+- {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon,
+  important: false}
 - {name: icon_size, type: number, default_value: 24, group: Icon, description: The size of the icon in pixels}
-- {name: border, type: string, default_value: '', important: true, description: The border of this component. Can take any valid CSS border value.,
+- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
   group: Appearance}
 is_package: true
 events:
