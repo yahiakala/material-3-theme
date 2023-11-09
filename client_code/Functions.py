@@ -70,37 +70,26 @@ def href_property(dom_node_name, prop_name="url"):
   return property_with_callback(prop_name, set_href)
 
 def checked_property(dom_node_name, prop_name="selected"):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].checked
-
-  def setter(self, value):
+  def set_checked(self, value):
     self.dom_nodes[dom_node_name].checked = value
+  return property_with_callback(prop_name, set_checked)
 
-  return property(getter, setter)
-
-def enabled_property(dom_node_name):
-  def getter(self):
-    return self._enabled
-
-  def setter(self, value):
-    self._enabled = value
+def enabled_property(dom_node_name, prop_name="enabled"):
+  def set_enabled(self, value):
     if value:
       self.dom_nodes[dom_node_name].removeAttribute("disabled")
     else:
       self.dom_nodes[dom_node_name].setAttribute("disabled", " ")
-      
-  return property(getter, setter)
+  return property_with_callback(prop_name, set_enabled)
 
-def name_property(dom_node_name):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].name
-
-  def setter(self, value):
+def name_property(dom_node_name, prop_name="name"):
+  def set_name(self, value):
     self.dom_nodes[dom_node_name].name = value
+  return property_with_callback(prop_name, set_name)
 
-  return property(getter, setter)
-
-def value_property(dom_node_name):
+def value_property(dom_node_name, prop_name="value"):
+  
+  
   def getter(self):
     return self.dom_nodes[dom_node_name].value
 

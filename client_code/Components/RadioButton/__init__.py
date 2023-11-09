@@ -31,7 +31,7 @@ class RadioButton(RadioButtonTemplate):
     
   # Properties 
   visible = HtmlTemplate.visible
-  group_name = name_property('anvil-m3-radiobutton-input')
+  group_name = name_property('anvil-m3-radiobutton-input', "group_name")
   value = value_property('anvil-m3-radiobutton-input')
   enabled = enabled_property('anvil-m3-radiobutton-input')
   italic = italic_property('anvil-m3-radiobutton-label')

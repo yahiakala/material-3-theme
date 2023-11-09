@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import innerText_property, enabled_property, color_property, style_property, property_with_callback
+from ...Functions import innerText_property, color_property, style_property, property_with_callback
 from math import pi, cos, sin
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
