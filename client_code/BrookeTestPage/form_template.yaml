@@ -19,7 +19,7 @@ components_by_slot:
     type: FileLoader
     layout_properties: {}
   - name: button_1
-    properties: {appearance: outlined, text: Focus component}
+    properties: {appearance: outlined, text: Clear component}
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {click: button_1_click}

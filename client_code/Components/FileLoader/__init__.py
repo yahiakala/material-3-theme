@@ -29,6 +29,7 @@ class FileLoader(FileLoaderTemplate):
 
   def clear(self):
     self.dom_nodes['anvil-m3-fileloader-input'].value = ""
+    self.dom_nodes['anvil-m3-fileloader-label'].style.innerText = self.text
     #update show_state text if present
 
   def focus(self):
@@ -54,7 +55,8 @@ class FileLoader(FileLoaderTemplate):
     file_reader.onload = onload
     file_reader.readAsArrayBuffer(files[0])
     if self.show_state:
-      self.dom_nodes['anvil-m3-fileloader-label']
+      num_files = len(files)
+      self.dom_nodes['anvil-m3-fileloader-label'].innerText = "1 file selected" if num_files == 1 else f"{num_files} files selected"
 
   def _handle_focus(self, event, **event_args):
     self.raise_event("focus")
