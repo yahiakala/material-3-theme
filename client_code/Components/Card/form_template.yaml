@@ -4,9 +4,10 @@ properties:
   default_binding_prop: true
   options: [elevated, filled, outlined]
   default_value: elevated
-- {name: disabled, type: boolean, default_value: false}
+- {name: enabled, type: boolean, default_value: false, designer_hint: enabled}
 - {name: interactive, type: boolean, default_value: false, description: 'Dictates
     if components will have interaction states (hover, focus, etc.)'}
+- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}
