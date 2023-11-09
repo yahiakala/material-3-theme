@@ -15,8 +15,8 @@ from ...Functions import property_with_callback
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.init_components(**properties)
     self._design_name = ""
+    self.init_components(**properties)
     self.open = False
     self._window_size = {}
     self._menu_size = {}
@@ -50,23 +50,11 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
-  """
-  
-  # def form_show(self, **event_args):
-  #   if anvil.designer.in_designer:
-  #     if not self.text:
-  #       self.menu_button.text = anvil.designer.get_design_name(self)
-  #   self. = anvil.designer.
-        
-  """
   
   def set_text(self, value):
-    # print(f"** {value}")
-    # print(not value)
     v = value
     if anvil.designer.in_designer and not value:
-      # print(anvil.designer.get_design_name(self))
-      v = anvil.designer.get_design_name(self)
+      v = self._design_name
     self.menu_button.text = v
   text = property_with_callback("text", set_text)
 
@@ -255,6 +243,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.set_visibility(False)
 
   def form_show(self, **event_args):
-    print("SHOWING FORM")
-    # if anvil.designer.in_designer and not self.text:
-    #   self.text = anvil.designer.get_design_name(self)
+    if anvil.designer.in_designer:
+      self._design_name = anvil.designer.get_design_name(self)
+      if not self.text:
+        self.menu_button.text = self._design_name
