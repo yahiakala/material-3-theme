@@ -11,6 +11,7 @@ import anvil.designer
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
+    self._props = properties
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)

@@ -53,34 +53,23 @@ def style_property(dom_node_name, style_prop):
 
   return property(getter, setter)
 
-def innerHTML_property(dom_node_name):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].innerHTML
 
-  def setter(self, value):
+def innerHTML_property(dom_node_name, prop_name="text"):
+  def set_innterHTML(self, value):
     self.dom_nodes[dom_node_name].innerHTML = value
+  return property_with_callback(prop_name, set_innterHTML)
 
-  return property(getter, setter)
-
-def innerText_property(dom_node_name):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].innerText
-
-  def setter(self, value):
+def innerText_property(dom_node_name, prop_name="text"):
+  def set_innerText(self, value):
     self.dom_nodes[dom_node_name].innerText = value
+  return property_with_callback(prop_name, set_innerText)
 
-  return property(getter, setter)
-
-def href_property(dom_node_name):
-  def getter(self):
-    return self.dom_nodes[dom_node_name].href
-
-  def setter(self, value):
+def href_property(dom_node_name, prop_name="url"):
+  def set_href(self, value):
     self.dom_nodes[dom_node_name].href = value
+  return property_with_callback(prop_name, set_href)
 
-  return property(getter, setter)
-
-def checked_property(dom_node_name):
+def checked_property(dom_node_name, prop_name="selected"):
   def getter(self):
     return self.dom_nodes[dom_node_name].checked
 
