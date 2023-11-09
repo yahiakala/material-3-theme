@@ -33,6 +33,7 @@
 
 .anvil-m3-navigation-link:hover {
   color: var(--anvil-m3-on-surface-variant);
+  text-decoration: none;
 }
 
 .anvil-m3-navigation-link:focus [anvil-name=anvil-m3-navigation-link-icon], .anvil-m3-navigation-link:active [anvil-name=anvil-m3-navigation-link-icon]{
