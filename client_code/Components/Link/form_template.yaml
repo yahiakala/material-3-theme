@@ -9,10 +9,13 @@ properties:
   default_value: left
   designerHint: align-horizontal
   group: Appearance
-- {name: bold, type: boolean, default_value: false, designerHint: font-bold}
-- {name: italic, type: boolean, default_value: false}
-- {name: font, type: string, default_value: ''}
-- {name: font_size, type: number}
+- {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
+  group: Text}
+- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
+  group: Text, designerHint: font-italic}
+- {name: font, type: string, default_value: '', description: The font to use for this component.,
+  group: Text}
+- {name: font_size, type: number, group: Text, description: The height of text displayed on this component in pixels}
 - name: material_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -375,12 +378,15 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: underline, type: boolean, default_value: true}
+  group: Icon
+- {name: underline, type: boolean, default_value: true, designerHint: font-underline,
+  description: Display this component’s text underlined}
 - {name: visible, type: boolean, default_value: true}
-- {name: text_color, type: color, default_value: ''}
-- {name: icon_color, type: color, default_value: ''}
-- {name: icon_size, type: number, default_value: 24}
-- {name: border, type: string, default_value: '', important: true, description: The border of this component. Can take any valid CSS border value.}
+- {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text}
+- {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon}
+- {name: icon_size, type: number, default_value: 24, group: Icon, description: The size of the icon in pixels}
+- {name: border, type: string, default_value: '', important: true, description: The border of this component. Can take any valid CSS border value.,
+  group: Appearance}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}
