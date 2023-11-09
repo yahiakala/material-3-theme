@@ -8,8 +8,9 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {change: file_loader_3_change}
   - name: file_loader_2
-    properties: {align: left, background_color: '', bold: false, underline: false,
-      italic: false}
+    properties: {align: left, material_icon: file_upload, icon_size: null, font_size: null,
+      font: '', italic: false, background_color: '', bold: false, underline: false,
+      icon_color: ''}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}
