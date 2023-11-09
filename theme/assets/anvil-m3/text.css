@@ -151,9 +151,17 @@
   display: flex;
 }
 
-.anvil-m3-link, .anvil-m3-link:hover {
+.anvil-m3-link{
   color: var(--anvil-m3-primary);
-  text-decoration: none;
+}
+
+.anvil-m3-link:hover {
+  color: var(--anvil-m3-on-primary-container)
+}
+
+.anvil-m3-link:focus {
+  border: 1px solid var(--anvil-m3-primary);
+  
 }
 
 .anvil-m3-link-icon-container {
