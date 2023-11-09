@@ -49,8 +49,17 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
+  """
+  
+  # def form_show(self, **event_args):
+  #   if anvil.designer.in_designer:
+  #     if not self.text:
+  #       self.menu_button.text = anvil.designer.get_design_name(self)
+        # self. = anvil.designer.
+        
+  """
   def set_text(self, value):
-    self.menu_button.text = value
+    self.menu_button.text = value is value
   text = property_with_callback("text", set_text)
 
   def set_appearance(self, value):
@@ -238,3 +247,4 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     self.set_visibility(False)
+
