@@ -359,3 +359,8 @@ body {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.anvil-m3-unnamedComponentText {
+  font-style: italic;
+  color: var(--anvil-m3-on-disabled);
+}
