@@ -14,12 +14,20 @@ class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
+    
+    self.handle_click = self.handle_click
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
+  def on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self.handle_click)
+    
   # Properties 
   visible = HtmlTemplate.visible
   group_name = name_property('anvil-m3-radiobutton-input')
