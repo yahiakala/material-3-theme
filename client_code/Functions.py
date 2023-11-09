@@ -31,6 +31,7 @@ def property_without_callback(prop):
   return property(getter, setter)
 
 def color_property(dom_node_name, style_prop):
+  def set_
   def getter(self):
     return self.dom_nodes[dom_node_name].style[style_prop]
 
