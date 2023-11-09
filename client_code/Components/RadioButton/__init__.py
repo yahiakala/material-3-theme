@@ -45,18 +45,6 @@ class RadioButton(RadioButtonTemplate):
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent')
   selected = checked_property('anvil-m3-radiobutton-input')
 
-  """
-def set_text(self, value):
-    v = value
-    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-buttonMenu-unnamedButton', False)
-    if anvil.designer.in_designer and not value:
-      v = self._design_name
-      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-buttonMenu-unnamedButton', True)
-    self.menu_button.text = v
-  text = property_with_callback("text", set_text)
-  
-  """
-  # text = innerText_property('anvil-m3-radiobutton-label')
   def set_text(self, value):
     v = value
     # anvil-m3-unnamedComponentText
