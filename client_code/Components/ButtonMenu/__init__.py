@@ -55,13 +55,16 @@ class ButtonMenu(ButtonMenuTemplate):
   #   if anvil.designer.in_designer:
   #     if not self.text:
   #       self.menu_button.text = anvil.designer.get_design_name(self)
-        # self. = anvil.designer.
+  #   self. = anvil.designer.
         
   """
   
   def set_text(self, value):
+    print(f"** {value}")
+    print(not value)
     v = value
     if anvil.designer.in_designer and not value:
+      print(anvil.designer.get_design_name(self))
       v = anvil.designer.get_design_name(self)
     self.menu_button.text = v
   text = property_with_callback("text", set_text)
@@ -251,4 +254,3 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     self.set_visibility(False)
-
