@@ -58,8 +58,12 @@ class ButtonMenu(ButtonMenuTemplate):
         # self. = anvil.designer.
         
   """
+  
   def set_text(self, value):
-    self.menu_button.text = value if value else anvil.designer.get_designer_name(self)
+    v = value
+    if anvil.designer.in_designer and not value:
+      v = anvil.designer.get_design_name(self)
+    self.menu_button.text = v
   text = property_with_callback("text", set_text)
 
   def set_appearance(self, value):
