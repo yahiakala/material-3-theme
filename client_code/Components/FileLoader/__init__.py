@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property
 from anvil.js.window import FileReader, Uint8Array
+from ...utils import gen_id
 
 
 class FileLoader(FileLoaderTemplate):
