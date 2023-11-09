@@ -36,12 +36,12 @@ components:
     layout_properties: {grid_position: 'XELRDD,LWQQOV'}
     components: []
   - name: card_1_copy_1_copy_1
-    properties: {}
+    properties: {appearance: filled}
     type: form:Components.Card
     layout_properties: {grid_position: 'YWLDED,AJTCVA'}
     components: []
   - name: card_1
-    properties: {}
+    properties: {appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'SQJHYW,WXXCHI'}
     components: []
