@@ -2,25 +2,14 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: file_loader_4
-    properties: {}
-    type: FileLoader
-    layout_properties: {}
-  - name: switch_1
-    properties: {unselected_background_color: '', selected: true, selected_background_color: ''}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: text_1
-    properties: {material_icon: bedtime, font_size: null, text: nighttime, icon_size: null}
-    type: form:Components.Text
-    layout_properties: {}
   - name: file_loader_3
     properties: {align: left, file_types: .png}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_3_change}
   - name: file_loader_2
-    properties: {align: left}
+    properties: {align: left, background_color: '', bold: false, underline: false,
+      italic: false}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_2_change}

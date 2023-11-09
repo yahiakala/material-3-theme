@@ -12,6 +12,10 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 
 .anvil-m3-fileloader-container {
   align-items: center;
-  display
+  display: inline-flex;
+  cursor: pointer
+}
+
+.anvil-m3-fileloader-container .anvil-m3-fileloader-label {
   cursor: pointer
 }

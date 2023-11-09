@@ -53,7 +53,7 @@ class FileLoader(FileLoaderTemplate):
   font = style_property('anvil-m3-fileloader-label', 'fontFamily')
   icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
-  align = style_property('anvil-m3-fileloader-container', 'justifyContent')
+  align = style_property('anvil-m3-fileloader-form', 'justifyContent')
 
   @property
   def material_icon(self):
