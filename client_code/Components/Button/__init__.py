@@ -94,8 +94,8 @@ class Button(ButtonTemplate):
         else:
           self.text = "Button"
 
-  text_color = color_property('anvil-m3-button-text', 'color')
-  icon_color = color_property('anvil-m3-button-icon', 'color')
+  text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   font_family = font_family_property('anvil-m3-button-text')
   font_size = font_size_property('anvil-m3-button-text' )
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')

@@ -39,9 +39,9 @@ class Text(TextTemplate):
   bold = bold_property('anvil-m3-text')
   border = border_property('anvil-m3-text-container')
   font = font_family_property('anvil-m3-text', 'font')
-  text_color = color_property('anvil-m3-text-container', 'color')
-  icon_color = color_property('anvil-m3-text-icon', 'color')
-  background_color = color_property('anvil-m3-text-container', 'backgroundColor')
+  text_color = color_property('anvil-m3-text-container', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-text-icon', 'color', 'icon_color')
+  background_color = color_property('anvil-m3-text-container', 'backgroundColor', 'background_color')
   text = innerText_property('anvil-m3-text')
   align = style_property('anvil-m3-text-container', 'justifyContent', 'align')
 

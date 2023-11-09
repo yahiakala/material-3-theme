@@ -30,16 +30,19 @@ def property_without_callback(prop):
     self._props[prop] = value
   return property(getter, setter)
 
-def color_property(dom_node_name, style_prop):
-  def set_
-  def getter(self):
-    return self.dom_nodes[dom_node_name].style[style_prop]
-
-  def setter(self, value):
+def color_property(dom_node_name, style_prop, prop_name):
+  def set_color(self, value):
     if value: value = theme_color_to_css(value)
     self.dom_nodes[dom_node_name].style[style_prop] = value
+  return property_with_callback(prop_name, set_color)
+  # def getter(self):
+  #   return self.dom_nodes[dom_node_name].style[style_prop]
 
-  return property(getter, setter)
+  # def setter(self, value):
+  #   if value: value = theme_color_to_css(value)
+  #   self.dom_nodes[dom_node_name].style[style_prop] = value
+
+  # return property(getter, setter)
 
 def style_property(dom_node_name, style_prop, prop_name):
   def set_style(self, value):

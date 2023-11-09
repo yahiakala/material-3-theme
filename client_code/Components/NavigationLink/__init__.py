@@ -103,9 +103,9 @@ class NavigationLink(NavigationLinkTemplate):
   def navigate_to(self, value):
     self._navigate_to = value
 
-  text_color = color_property('anvil-m3-navigation-link-text', 'color')
+  text_color = color_property('anvil-m3-navigation-link-text', 'color', 'text_color')
 
-  icon_color = color_property('anvil-m3-navigation-link-icon', 'color')
+  icon_color = color_property('anvil-m3-navigation-link-icon', 'color', 'icon_color')
 
   font_family = font_family_property('anvil-m3-navigation-link-text')
   

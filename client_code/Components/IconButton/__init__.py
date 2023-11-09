@@ -52,8 +52,8 @@ class IconButton(IconButtonTemplate):
   align = style_property('anvil-m3-iconbutton-component', 'justifyContent', 'align')
   
   border = border_property('anvil-m3-iconbutton-container')
-  icon_color = color_property('anvil-m3-iconbutton-icon', 'color')
-  background = color_property('anvil-m3-iconbutton-container', 'backgroundColor')
+  icon_color = color_property('anvil-m3-iconbutton-icon', 'color', 'icon_color')
+  background = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background')
 
   # def _anvil_get_interactions_(self): 
   #   return  [

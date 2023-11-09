@@ -35,8 +35,8 @@ class MenuItem(MenuItemTemplate):
   underline = underline_property('anvil-m3-menuItem-labelText')
   font_size = font_size_property('anvil-m3-menuItem-labelText')
   font = font_family_property('anvil-m3-menuItem-labelText', 'font')
-  text_color = color_property('anvil-m3-menuItem-labelText', 'color')
-  background = color_property('anvil-m3-menuItem-container', 'backgroundColor')
+  text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
+  background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   # @property
   # def text(self):
   #   return self._text

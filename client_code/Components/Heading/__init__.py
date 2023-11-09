@@ -37,9 +37,9 @@ class Heading(HeadingTemplate):
   italic = italic_property('anvil-m3-heading-container')
   border = border_property('anvil-m3-heading-container')
   font = font_family_property('anvil-m3-heading-container', 'font')
-  text_color = color_property('anvil-m3-heading-container', 'color')
-  icon_color = color_property('anvil-m3-heading-icon', 'color')
-  background_color = color_property('anvil-m3-heading-container', 'backgroundColor')
+  text_color = color_property('anvil-m3-heading-container', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-heading-icon', 'color', 'icon_color')
+  background_color = color_property('anvil-m3-heading-container', 'backgroundColor', 'background_color')
   align = style_property('anvil-m3-heading-container', 'justifyContent', 'align')
 
   @property

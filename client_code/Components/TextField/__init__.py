@@ -49,14 +49,14 @@ class TextField(TextFieldTemplate):
   
   visible = HtmlTemplate.visible
   
-  background = color_property('text-field-input', 'backgroundColor')
+  background = color_property('text-field-input', 'backgroundColor', 'background')
   
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
   label_font_size = font_size_property('label-text', 'label_font_size')
   label_font = font_family_property('label-text', 'label_font')
-  label_text_color = color_property('label-text', 'color')
+  label_text_color = color_property('label-text', 'color', 'label_text_color')
   
   # label_text = innerText_property('label-text')
   def set_label(self, value):
@@ -68,7 +68,7 @@ class TextField(TextFieldTemplate):
   underline_display = underline_property('text-field-input', 'underline_display')
   display_font_size = font_size_property('text-field-input', 'display_font_size')
   display_font = font_family_property('text-field-input', 'display_font')
-  display_text_color = color_property('text-field-input', 'color')
+  display_text_color = color_property('text-field-input', 'color', 'display_text_color')
   # display_text = innerText_property('text-field-input')
   
   # @property

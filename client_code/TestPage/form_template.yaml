@@ -135,8 +135,8 @@ components_by_slot:
         - name: toggle_icon_button_6
           properties: {selected: true, align: center, selected_icon_color: 'theme:Error',
             border: 4px dotted magenta, selected_border: 2px dashed green, selected_background: 'theme:Tertiary
-              Container', background: 'theme:On Surface Variant', icon_color: yellow,
-            icon: settings}
+              Container', background: 'theme:On Surface Variant', icon_color: 'theme:Tertiary
+              Container', icon: settings}
           type: form:Components.ToggleIconButton
           layout_properties: {grid_position: 'ODPNTK,IBQBZV'}
     - name: card_4
@@ -198,7 +198,7 @@ components_by_slot:
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_3
-            properties: {icon: settings, appearance: Filled tonal}
+            properties: {icon: settings, appearance: Filled tonal, background: ''}
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_4
@@ -206,8 +206,8 @@ components_by_slot:
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_4_copy_2
-            properties: {icon: settings, appearance: Outlined, background: 'rgb(179,
-                38, 30)', border: 2px dotted yellow, icon_color: orange}
+            properties: {icon: settings, appearance: Outlined, background: 'theme:Error',
+              border: 2px dotted yellow, icon_color: 'theme:On Error Container'}
             type: form:Components.IconButton
             layout_properties: {}
         - name: flow_panel_2_copy_1
