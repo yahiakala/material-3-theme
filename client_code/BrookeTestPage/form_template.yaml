@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: file_loader_3
-    properties: {align: left, file_types: .png}
+    properties: {align: left, file_types: .png, text: New Text}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {}
