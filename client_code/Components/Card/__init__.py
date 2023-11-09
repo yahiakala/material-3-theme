@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_with_callback
+from ...Functions import property_with_callback, style_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -15,6 +15,9 @@ class Card(CardTemplate):
   def handle_click(self, event):
     self.raise_event("click")
 
+  
+  align = style_property('anvil-m3-card-component', 'justifyContent')
+  
   def set_appearance(self, value):
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-outlined', False)
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-filled', False)
