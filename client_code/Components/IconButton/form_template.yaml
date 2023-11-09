@@ -367,15 +367,20 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: star_border
-- {name: enabled, type: boolean, default_value: true, important: true}
-- {name: visible, type: boolean, default_value: true, important: true}
+- {name: enabled, type: boolean, default_value: true, important: true, designerHint: enabled,
+  designer_hint: enabled}
+- {name: visible, type: boolean, default_value: true, important: true, designerHint: visible,
+  designer_hint: visible}
 - {name: border, type: string, default_value: '', group: Style}
 - {name: background, type: color, default_value: '', important: false, group: Style}
 - {name: icon_color, type: color, default_value: '', important: false, group: Style}
 - name: align
   type: enum
   important: true
-  options: ['', left, center, right]
+  options: [left, center, right]
+  designerHint: align-horizontal
+  default_value: left
+  designer_hint: align-horizontal
 - {name: tooltip, type: string, default_value: '', important: true, group: Attributes}
 is_package: true
 events:

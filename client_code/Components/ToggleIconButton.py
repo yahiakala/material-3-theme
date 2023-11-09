@@ -52,3 +52,19 @@ class ToggleIconButton(IconButton):
     self.selected = not self.selected
     self.raise_event("click")
 
+  def _anvil_get_interactions_(self):
+    return [
+      {
+        "type": "region",
+        "bounds": self.dom_nodes['anvil-m3-iconbutton-component-container'],
+        "sensitivity": 0,
+        "callbacks": {
+          "execute": self.toggle_selected
+        }
+      }
+    ]
+
+  def toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {'selected': self.selected})
+    

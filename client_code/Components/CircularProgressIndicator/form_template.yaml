@@ -15,10 +15,16 @@ is_package: true
 custom_component: true
 properties:
 - {name: visible, type: boolean, default_value: false, default_binding_prop: true,
-  important: true, designerHint: visible}
+  important: true, designerHint: visible, designer_hint: visible}
 - name: type
   type: enum
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
 - {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  designer_hint: align-horizontal
+  default_value: left
