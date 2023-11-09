@@ -159,9 +159,9 @@
   color: var(--anvil-m3-on-primary-container)
 }
 
-.anvil-m3-link:focus {
+.anvil-m3-link:focus .anvil-m3-link-icon-container {
   border: 1px solid var(--anvil-m3-primary);
-  
+  color: var(--anvil-m3-primary)
 }
 
 .anvil-m3-link-icon-container {

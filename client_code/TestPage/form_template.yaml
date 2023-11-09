@@ -11,29 +11,5 @@ components_by_slot:
     properties: {text: Link, underline: true}
     type: form:Components.Link
     layout_properties: {}
-  - name: check_box_1
-    properties: {text: check_box_1}
-    type: CheckBox
-    layout_properties: {}
-  - name: button_1
-    properties: {}
-    type: form:Components.Button
-    layout_properties: {}
-  - name: button_2
-    properties: {text: button_2}
-    type: Button
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: text_1
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: label_1
-    properties: {}
-    type: Label
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
