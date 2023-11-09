@@ -360,7 +360,7 @@ body {
   margin-right: 0px;
 }
 
-.anvil-m3-unnamedComponentText {
-  font-style: italic;
+.anvil-m3-textlessComponentText {
+  font-style: italic !important;
   color: var(--anvil-m3-on-disabled);
 }

@@ -53,10 +53,10 @@ class ButtonMenu(ButtonMenuTemplate):
   
   def set_text(self, value):
     v = value
-    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-unnamedComponentText', False)
+    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
-      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-unnamedComponentText', True)
+      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.menu_button.text = v
   text = property_with_callback("text", set_text)
 

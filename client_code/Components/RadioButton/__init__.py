@@ -47,10 +47,10 @@ class RadioButton(RadioButtonTemplate):
 
   def set_text(self, value):
     v = value
-    self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-unnamedComponentText', False)
+    self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
-      self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-unnamedComponentText', True)
+      self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
   text = property_with_callback("text", set_text)
   
