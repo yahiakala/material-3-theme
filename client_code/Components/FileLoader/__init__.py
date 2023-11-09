@@ -14,23 +14,26 @@ class FileLoader(FileLoaderTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-fileloader-input"].id = id
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
+  def clear(self):
+    pass
+
   def focus(self):
     self.dom_nodes['anvil-m3-fileloader-container'].focus()
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self.handle_change)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self._handle_change)
     
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self.handle_change)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self._handle_change)
 
-  def handle_change(self, event, **event_args):
+  def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
     file_reader = FileReader()
     def onload(e):

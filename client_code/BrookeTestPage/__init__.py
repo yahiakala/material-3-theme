@@ -23,3 +23,4 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the component is clicked"""
     self.file_loader_2.focus()
 
+
