@@ -15,6 +15,7 @@ from ...Functions import property_with_callback
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self._design_name = ""
     self.init_components(**properties)
     self.open = False
     self._window_size = {}
@@ -49,8 +50,14 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
+  
   def set_text(self, value):
-    self.menu_button.text = value
+    v = value
+    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-unnamedComponentText', False)
+    if anvil.designer.in_designer and not value:
+      v = self._design_name
+      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-unnamedComponentText', True)
+    self.menu_button.text = v
   text = property_with_callback("text", set_text)
 
   def set_appearance(self, value):
@@ -120,7 +127,6 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
   
-    
   def get_button_measurements(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     self._button_positioning = {
@@ -213,7 +219,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self.clear_hover_styles()
     self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
-# DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
     return [
       {
@@ -238,3 +243,9 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     self.set_visibility(False)
+
+  def form_show(self, **event_args):
+    if anvil.designer.in_designer:
+      self._design_name = anvil.designer.get_design_name(self)
+      if not self.text:
+        self.menu_button.text = self._design_name
