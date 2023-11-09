@@ -168,6 +168,10 @@
   padding: 1px;
 }
 
+.anvil-m3-link:focus:hover .anvil-m3-link-icon-container {
+  color: var(--anvil-m3-on-primary-container)
+}
+
 .anvil-m3-link:focus {
   outline: 0
 }
