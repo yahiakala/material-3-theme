@@ -59,7 +59,7 @@ class ButtonMenu(ButtonMenuTemplate):
         
   """
   def set_text(self, value):
-    self.menu_button.text = value is value
+    self.menu_button.text = value if value else 
   text = property_with_callback("text", set_text)
 
   def set_appearance(self, value):
