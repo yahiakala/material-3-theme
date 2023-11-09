@@ -406,6 +406,7 @@ properties:
   designerHint: align-horizontal
   default_value: left
   group: Appearance
+- {name: border, type: string, default_value: '', important: false, group: Appearance}
 is_package: true
 events:
 - name: change

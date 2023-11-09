@@ -22,7 +22,7 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
   def clear(self):
-    pass
+    self.dom_nodes['anvil-m3-fileloader-input'].value = ""
 
   def focus(self):
     self.dom_nodes['anvil-m3-fileloader-container'].focus()
@@ -56,6 +56,7 @@ class FileLoader(FileLoaderTemplate):
   icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent')
+  border = style_property('anvil-m3-fileloader-container', 'border')
 
   @property
   def material_icon(self):

@@ -5,6 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import time
 
 class BrookeTestPage(BrookeTestPageTemplate):
   def __init__(self, **properties):
@@ -16,11 +17,12 @@ class BrookeTestPage(BrookeTestPageTemplate):
 
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
+    time.sleep(5)
     print(file)
-    anvil.media.download(file)
+    
 
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
-    self.file_loader_2.focus()
+    self.file_loader_2.clear()
 
 
