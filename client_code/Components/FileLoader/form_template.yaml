@@ -420,10 +420,11 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<form anvil-name=\"anvil-m3-fileloader-form\" class=\"anvil-m3-fileloader-form\"\
-      >\n  <div class=\"anvil-m3-fileloader-container\" anvil-name=\"anvil-m3-fileloader-container\"\
-      >\n    <span anvil-name=\"anvil-m3-fileloader-icon\" class=\"anvil-m3-fileloader-icon\
-      \ material-symbols-outlined\"></span> \n    <label anvil-name=\"anvil-m3-fileloader-label\"\
-      \ class=\"anvil-m3-fileloader-label\">\n       Upload a file\n    </label>\n\
-      \    <input style=\"display: none\" class=\"anvil-m3-fileloader-input\" anvil-name=\"\
-      anvil-m3-fileloader-input\" type=\"file\" accept/>\n  </div>\n</form>"}
+      >\n  <a href=\"javascript:void(0)\" class=\"anvil-m3-fileloader-container\"\
+      \ anvil-name=\"anvil-m3-fileloader-container\">\n    <span anvil-name=\"anvil-m3-fileloader-icon\"\
+      \ class=\"anvil-m3-fileloader-icon material-symbols-outlined\"></span> \n  \
+      \  <label anvil-name=\"anvil-m3-fileloader-label\" class=\"anvil-m3-fileloader-label\"\
+      >\n       Upload a file\n    </label>\n    <input style=\"display: none\" class=\"\
+      anvil-m3-fileloader-input\" anvil-name=\"anvil-m3-fileloader-input\" type=\"\
+      file\" accept/>\n  </a>\n</form>"}
 custom_component_container: false
