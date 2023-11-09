@@ -4,7 +4,7 @@ properties:
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold,
   group: Selection Field Style}
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
-  group: Attributes, designerHint: enabled}
+  group: Attributes, designerHint: enabled, designer_hint: enabled}
 - {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label,
   group: Selection Field Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels,
@@ -33,7 +33,7 @@ properties:
 - {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
   group: Selection Field Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
-  group: Selection Field Style, designerHint: visible}
+  group: Selection Field Style, designerHint: visible, designer_hint: visible}
 - {name: label_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
