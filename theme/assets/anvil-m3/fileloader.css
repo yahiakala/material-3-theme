@@ -5,9 +5,13 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 input.anvil-m3-fileloader-input:disabled ~ *{
   color: var(--anvil-m3-on-disabled);
 }
-.anvil-m3-fileloader-container {
-  align-items: center;
+.anvil-m3-fileloader-form {
   display: flex;
   color: var(--anvil-m3-primary);
+}
+
+.anvil-m3-fileloader-container {
+  align-items: center;
+  display
   cursor: pointer
 }
