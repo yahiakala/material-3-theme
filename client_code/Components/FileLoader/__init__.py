@@ -53,6 +53,8 @@ class FileLoader(FileLoaderTemplate):
       self.raise_event('change', file=BlobMedia(content_type=files[0].type, content=as_bytes))
     file_reader.onload = onload
     file_reader.readAsArrayBuffer(files[0])
+    if self.show_state:
+      self.dom_nodes['anvil-m3-fileloader-label']
 
   def _handle_focus(self, event, **event_args):
     self.raise_event("focus")
@@ -77,11 +79,11 @@ class FileLoader(FileLoaderTemplate):
 
   @property
   def show_state(self):
-    return self._show_state
+    return self._props.get('show_state')
 
   @show_state.setter
   def show_state(self, value):
-    self._show_state = 
+    self._props['show_state'] = value
 
   @property
   def material_icon(self):
