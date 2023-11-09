@@ -385,7 +385,7 @@ properties:
     this component be displayed?', designerHint: visible, group: Appearance}
 - {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.,
   group: Appearance}
-- {name: icon_color, type: color, default_value: '', important: true, group: Appearance}
+- {name: icon_color, type: color, default_value: '', important: false, group: Appearance}
 - {name: background_color, type: color, default_value: '', important: false, group: Appearance}
 - {name: underline, type: boolean, default_value: false, important: true, designerHint: font-underline,
   description: Display this component’s text underlined, group: Text}

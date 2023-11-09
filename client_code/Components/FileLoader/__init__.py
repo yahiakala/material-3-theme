@@ -21,15 +21,14 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes["anvil-m3-fileloader-input"].id = id
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
+  def focus(self):
+    self.dom_nodes['anvil-m3-fileloader-input'].focus()
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self.handle_change)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self.handle_change)
-
-  def open_fileloader(self, event, **event_args):
-    self.dom_nodes['anvil-m3-fileloader-input'].dispatchEvent('click')
 
   def handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
