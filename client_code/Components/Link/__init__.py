@@ -25,9 +25,8 @@ class Link(LinkTemplate):
   def handle_click(self, event):
     self.raise_event("click")
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
+  def _anvil_get_interactions_(self):
+    return [{
       "type": "whole_component",
       "title": "Edit text",
       "icon": "edit",
@@ -36,7 +35,6 @@ class Link(LinkTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-link-text'])
       }
     }]
-    return di
 
   text = innerText_property('anvil-m3-link-text')
   url = href_property('anvil-m3-link')
