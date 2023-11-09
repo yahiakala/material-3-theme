@@ -6,7 +6,7 @@ components_by_slot:
     properties: {align: left, file_types: .png}
     type: form:Components.FileLoader
     layout_properties: {}
-    event_bindings: {change: file_loader_3_change}
+    event_bindings: {}
   - name: file_loader_2
     properties: {align: left, material_icon: file_upload, text_color: '', icon_size: null,
       font_size: null, font: '', italic: false, background_color: '', bold: false,
@@ -18,3 +18,8 @@ components_by_slot:
     properties: {}
     type: FileLoader
     layout_properties: {}
+  - name: button_1
+    properties: {appearance: outlined, text: Focus component}
+    type: form:Components.Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}

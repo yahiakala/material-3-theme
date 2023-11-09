@@ -22,7 +22,7 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
   def focus(self):
-    self.dom_nodes['anvil-m3-fileloader-input'].focus()
+    self.dom_nodes['anvil-m3-fileloader-container'].focus()
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self.handle_change)

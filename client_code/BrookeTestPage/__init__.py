@@ -10,7 +10,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.file_loader_2.focus()
+    
 
     # Any code you write here will run before the form opens.
 
@@ -18,4 +18,8 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when a new file is loaded into this FileLoader"""
     print(file)
     anvil.media.download(file)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    self.file_loader_2.focus()
 
