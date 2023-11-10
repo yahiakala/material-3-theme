@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components: []
   - name: link_1
-    properties: {text: Click on me I'm a link, underline: true}
+    properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
     type: form:Components.Link
     layout_properties: {}
 components: []
