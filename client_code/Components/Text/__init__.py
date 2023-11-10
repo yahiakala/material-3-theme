@@ -11,6 +11,8 @@ from ...Functions import underline_property, italic_property, style_property, co
 #TODO: figure out what to do with line height
 #TODO: add margin and padding
 
+#TODO: figure out default icon sizes 
+
 class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.

@@ -396,7 +396,6 @@ properties:
 - name: align
   type: enum
   options: [left, center, right]
-- {name: icon_size, type: number, description: 'The size in pixels of the icon. If
-    not set, the icon will scale with the text.'}
+- {name: icon_size, type: number, description: 'The size in pixels of the icon. '}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.'}

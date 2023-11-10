@@ -1,26 +1,24 @@
 properties:
-- {name: url, type: string, default_value: '', priority: '15'}
-- {name: icon, type: icon, default_value: 'fa:star', priority: '13'}
-- {name: text, type: string, default_value: Label, description: Text for the Link,
-  priority: '14'}
-- {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
-  priority: '12'}
-- {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
-  priority: '11'}
-- {name: badge_count, type: number, default_value: '', description: '10'}
-- {name: text_color, type: color, default_value: '', description: Color of the text,
-  priority: '9'}
-- {name: font_size, type: string, default_value: '', description: Size of the font,
-  priority: '8'}
-- {name: font_family, type: string, default_value: '', description: Font family of the text,
-  priority: '6'}
-- {name: icon_color, type: color, default_value: '', description: Color of the icon,
-  priority: '3'}
-- {name: icon_size, type: string, default_value: '', description: Size of the icon,
-  priority: '7'}
+- {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component,
+  multiline: true, group: Common}
+- {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.,
+  group: Common}
+- name: align
+  type: enum
+  options: [left, center, right]
+  default_value: left
+  designerHint: align-horizontal
+  group: Appearance
+  important: true
+- {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
+  group: Text}
+- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
+  group: Text, designerHint: font-italic}
+- {name: font, type: string, default_value: '', description: The font to use for this component.,
+  group: Text}
+- {name: font_size, type: number, group: Text, description: The height of text displayed on this component in pixels}
 - name: material_icon
   type: enum
-  default_value: star
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
@@ -380,23 +378,31 @@ properties:
     wind_power, window, wine_bar, woman, woman_2, woo_commerce, wordpress, work, work_history,
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
-    zoom_out, zoom_out_map, '']
-- {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
-  default_binding_prop: true, default_value: null}
+    zoom_out, zoom_out_map]
+  group: Icon
+  important: true
+- {name: underline, type: boolean, default_value: true, designerHint: font-underline,
+  description: Display this component’s text underlined, group: Text}
+- {name: visible, type: boolean, default_value: true, description: 'Should this component
+    be displayed?', group: Appearance, designerHint: visible, important: true}
+- {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text,
+  important: true}
+- {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon,
+  important: false}
+- {name: icon_size, type: number, default_value: 24, group: Icon, description: The size of the icon in pixels}
+- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
+  group: Appearance}
 is_package: true
-event_bindings: {show: form_show}
 events:
-- {name: click, description: when the component is clicked, default_event: true}
+- {name: click, default_event: true, description: clicked}
 custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<a class=\"anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\"\
-      \ href=\"javascript:void(0)\" onclick=\"\">\n<!--   <i anvil-name=\"navigation-link-icon\"\
-      \ class=\"fa fa-star\">\n  </i> -->\n  <span anvil-name=\"anvil-m3-navigation-link-icon\"\
-      \ class=\"material-symbols-outlined\">star</span>\n  <span anvil-name=\"anvil-m3-icon-badge\"\
-      \ class=\"anvil-m3-icon-badge\" style=\"display: none\"></span>\n\n  <div anvil-name=\"\
-      anvil-m3-navigation-link-text\" class=\"anvil-m3-navigation-link-text\"></div>\n\
-      </a>\n"}
-  event_bindings: {}
-custom_component_container: false
+  properties: {html: "<a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
+      \ class=\"anvil-m3-link\">\n  <div class=\"anvil-m3-link-icon-container\"> \
+      \   \n    <span anvil-name=\"anvil-m3-link-icon\" class=\"material-symbols-outlined\
+      \ anvil-m3-link-icon\"></span>\n    <span anvil-name=\"anvil-m3-link-text\"\
+      ></span>\n  </div>\n</a>"}
+  event_bindings: {show: form_show}
+custom_component_container: true
