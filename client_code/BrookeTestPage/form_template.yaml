@@ -2,41 +2,28 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
+  - name: file_loader_3
+    properties: {align: left, file_types: .png, text: New Text}
+    type: form:Components.FileLoader
     layout_properties: {}
-    components:
-    - name: switch_1
-      properties:
-        selected: true
-        enabled: true
-        align: left
-        margin: [null, null, auto, null]
-      type: form:Components.Switch
-      layout_properties: {grid_position: 'QRYRBE,UUHBHS'}
-    - name: switch_2
-      properties: {enabled: true, selected: true, selected_background_color: '', align: left}
-      type: form:Components.Switch
-      layout_properties: {grid_position: 'HZTERL,CKHCFS'}
+    event_bindings: {}
+  - name: file_loader_2
+    properties: {show_state: true, align: left, border: '', material_icon: file_upload,
+      text_color: '', icon_size: null, font_size: null, font: '', italic: false, background_color: '',
+      bold: false, underline: false, icon_color: ''}
+    type: form:Components.FileLoader
+    layout_properties: {}
+    event_bindings: {change: file_loader_2_change, focus: file_loader_2_focus, lost_focus: file_loader_2_lost_focus}
+  - name: file_loader_1
+    properties: {show_state: true}
+    type: FileLoader
+    layout_properties: {}
   - name: button_1
-    properties: {text: button_1, background: ''}
-    type: Button
-    layout_properties: {}
-  - name: dropdown_menu_1
-    properties: {appearance: outlined, label_text: Name, placeholder: ''}
-    type: form:Components.DropdownMenu
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {checked: false, text: Checkbox, italic: false, underline: false,
-      bold: false}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: button_2
-    properties: {appearance: outlined}
+    properties: {appearance: outlined, text: Clear component}
     type: form:Components.Button
     layout_properties: {}
   - name: card_1
     properties: {visible: true}
     type: form:Components.Card
     layout_properties: {}
+    event_bindings: {click: button_1_click}
