@@ -2,7 +2,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: BrookeTestPage}
+startup: {type: form, module: Storybooks.Cards}
 package_name: Material_3_Theme_2_0
 allow_embedding: false
 toolbox_sections:
@@ -11,6 +11,8 @@ toolbox_sections:
   items:
   - title: ToggleIconButton
     component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
+  - title: DeterminateProgressIndicator
+    component: {type: Material_3_Theme_2_0.Components.DeterminateProgressIndicator}
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
 startup_form: null

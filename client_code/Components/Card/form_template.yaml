@@ -4,9 +4,16 @@ properties:
   default_binding_prop: true
   options: [elevated, filled, outlined]
   default_value: elevated
-- {name: disabled, type: boolean, default_value: false}
+- {name: enabled, type: boolean, default_value: false, designer_hint: enabled}
 - {name: interactive, type: boolean, default_value: false, description: 'Dictates
     if components will have interaction states (hover, focus, etc.)'}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  default_value: left
+  designer_hint: align-horizontal
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}
@@ -14,7 +21,8 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-slot=\"anvil-m3-card-slot\" anvil-name=\"anvil-m3-card\"\
-      \ class=\"anvil-m3-card\" tabindex=\"0\">\n    <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
-      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n</div>", visible: true}
+  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:flex;\
+      \ padding-left: 1px\">\n  <div anvil-slot=\"anvil-m3-card-slot\" anvil-name=\"\
+      anvil-m3-card\" class=\"anvil-m3-card\">\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
+      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n  </div>\n</div>", visible: true}
 custom_component_container: true

@@ -7,36 +7,11 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: button_menu_integrated_1
-    properties: {text: halp, appearance: tonal}
-    type: form:Components.ButtonMenu_integrated
-    layout_properties: {}
   - name: text_1
     properties: {}
     type: form:Components.Text
     layout_properties: {}
   - name: card_1
-    properties: {}
+    properties: {visible: true}
     type: form:Components.Card
     layout_properties: {}
-  - name: button_menu_integrated_2
-    properties: {}
-    type: form:Components.ButtonMenu_integrated
-    layout_properties: {}
-    components:
-    - name: menu_item_1
-      properties: {text: bleepblop}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_3
-      properties: {text: ksajkfd}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_1
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_2
-      properties: {text: whats up}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
