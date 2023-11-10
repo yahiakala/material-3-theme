@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import document
+from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
 from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback
@@ -34,10 +34,10 @@ class Switch(SwitchTemplate):
   def set_color_styles(self, value=None):
     if self.selected:
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
-      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_thumb_color) if self.selected_thumb_color else None
+      if 
+      self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', self.selected_thumb_color)
     else:
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
-      self.dom_nodes['anvil-m3-switch-slider:before'].style.backgroundColor = theme_color_to_css(self.unselected_thumb_color) if self.unselected_thumb_color else None
     
   @property
   def selected_icon(self):
