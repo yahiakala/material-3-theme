@@ -32,7 +32,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: switch_1
-    properties: {selected: true, align: left, unselected_thumb_color: '', selected_background_color: '',
+    properties: {selected: false, align: left, unselected_thumb_color: '', selected_background_color: '',
       enabled: true, visible: true, selected_thumb_color: '', unselected_outline_color: '',
       unselected_background_color: ''}
     type: form:Components.Switch

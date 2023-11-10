@@ -34,10 +34,17 @@ class Switch(SwitchTemplate):
   def set_color_styles(self, value=None):
     if self.selected:
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
-      if 
-      self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', self.selected_thumb_color)
+      if self.selected_thumb_color:
+        self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', theme_color_to_css(self.selected_thumb_color))
+      else:
+        self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', 'var(--anvil-m3-on-primary)')
     else:
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
+      self.dom_nodes['anvil-m3-switch-slider'].style.borderColor = theme_color_to_css(self.unselected_outline_color) if self.unselected_outline_color else None
+      if self.unselected_thumb_color:
+        self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-unselected-thumb-color', theme_color_to_css(self.unselected_thumb_color))
+      else:
+        self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-unselected-thumb-color', 'var(--anvil-m3-outline)')
     
   @property
   def selected_icon(self):
@@ -85,6 +92,7 @@ class Switch(SwitchTemplate):
   unselected_background_color = property_with_callback('unselected_background_color', set_color_styles)
   selected_thumb_color = property_with_callback('selected_thumb_color', set_color_styles)
   unselected_thumb_color = property_with_callback('unselected_thumb_color', set_color_styles)
+  unselected_outline_color = property_with_callback('unselected_outline_color', set_color_styles)
   visible = HtmlTemplate.visible
   
   

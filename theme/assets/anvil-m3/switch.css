@@ -30,7 +30,7 @@ element {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--anvil-m3-unselected-thumb-color);
+  background-color: var(--anvil-m3-surface-container-highest);
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
   border-radius: 16px;
@@ -43,7 +43,7 @@ element {
   height: 16px;
   width: 16px;
   margin-left: 6px;
-  background-color: var(--anvil-m3-outline);
+  background-color: var(--anvil-m3-unselected-thumb-color);
   -webkit-transition: height .15s, width .15s, transform .15s .15s;
   transition: height .15s, width .15s, transform .15s .15s;
   border-radius: 50%;
