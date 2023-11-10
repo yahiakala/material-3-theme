@@ -733,9 +733,9 @@ properties:
   group: Icon
   important: false
 - {name: unselected_background_color, type: color, default_value: '', group: Appearance,
-  description: Background color of the component when toggled off, important: true}
+  description: Background color of the component when toggled off, important: false}
 - {name: selected_background_color, type: color, default_value: '', group: Appearance,
-  description: Background color of the component when toggled on, important: true}
+  description: Background color of the component when toggled on, important: false}
 - {name: unselected_thumb_color, type: color, default_value: '', group: Appearance,
   description: Color of the Switch thumb when toggled off}
 - {name: selected_thumb_color, type: color, default_value: '', description: Color of the Switch thumb when toggled on,
