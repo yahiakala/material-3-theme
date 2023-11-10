@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import document
 from anvil.js import window
+from anvil import HtmlTemplate
 from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback
 import anvil.designer
 
@@ -30,11 +31,12 @@ class Switch(SwitchTemplate):
       self.selected = not self.selected
       self.raise_event("change")
 
-
   def set_color_styles(self, value=None):
     if self.selected:
+      print('if')
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
     else:
+      print('else')
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
     
   @property
@@ -81,6 +83,7 @@ class Switch(SwitchTemplate):
   align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
   selected_background_color = property_with_callback('selected_background_color', set_color_styles)
   unelected_background_color = property_with_callback('unselected_background_color', set_color_styles)
+  visible = HtmlTemplate.visible
   
   
 

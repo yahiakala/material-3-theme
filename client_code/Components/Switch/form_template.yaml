@@ -363,7 +363,10 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   description: Optional icon on the switch when enabled
-- {name: selected, type: boolean, default_value: false, designerHint: toggle}
+  group: Icon
+  important: false
+- {name: selected, type: boolean, default_value: false, designerHint: toggle, group: Common,
+  designer_hint: toggle, description: True if this component is toggled on, important: true}
 - name: unselected_icon
   type: enum
   options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -727,20 +730,31 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   description: Optional icon on the switch when disabled
-- {name: unselected_background_color, type: color, default_value: ''}
-- {name: selected_background_color, type: color, default_value: ''}
-- {name: unselected_thumb_color, type: color, default_value: ''}
-- {name: selected_thumb_color, type: color, default_value: ''}
-- {name: unselected_outline_color, type: color, default_value: ''}
-- {name: border_radius, type: string, default_value: ''}
-- {name: enabled, type: boolean, default_value: true, designerHint: enabled}
+  group: Icon
+  important: false
+- {name: unselected_background_color, type: color, default_value: '', group: Appearance,
+  description: Background color of the component when toggled off, important: true}
+- {name: selected_background_color, type: color, default_value: '', group: Appearance,
+  description: Background color of the component when toggled on, important: true}
+- {name: unselected_thumb_color, type: color, default_value: '', group: Appearance,
+  description: Color of the Switch thumb when toggled off}
+- {name: selected_thumb_color, type: color, default_value: '', description: Color of the Switch thumb when toggled on,
+  group: Appearance}
+- {name: unselected_outline_color, type: color, default_value: '', description: Color of the outline of the Switch when toggled off,
+  group: Appearance}
+- {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled,
+  group: Interaction, description: True if this component should allow user interaction}
 - name: align
   type: enum
   important: true
   options: [left, center, right]
   default_value: left
   designerHint: align-horizontal
-- {name: margin, type: margin, default_value: 8, important: true}
+  group: Appearance
+  designer_hint: align-horizontal
+- {name: margin, type: margin, default_value: 8, important: true, group: Layout}
+- {name: visible, type: boolean, default_value: true, important: true, group: Appearance,
+  designer_hint: visible, description: True if this component should be displayed}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the state of the component is changed}
