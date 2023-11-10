@@ -1,12 +1,14 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
 import anvil.designer
-from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property
 
+from anvil import HtmlTemplate
 
 class Link(LinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -38,17 +40,17 @@ class Link(LinkTemplate):
 
   text = innerText_property('anvil-m3-link-text')
   url = href_property('anvil-m3-link')
-  align = style_property('anvil-m3-link', 'justifyContent')
+  align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
-  font = style_property('anvil-m3-link', 'fontFamily')
+  font = font_family_property('anvil-m3-link', 'font')
   font_size = font_size_property('anvil-m3-link')
   material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link-text')
-  visible = visible_property('anvil-m3-link', 'flex')
-  text_color = color_property('anvil-m3-link', 'color')
-  icon_color = color_property('anvil-m3-link-icon', 'color')
-  border = style_property('anvil-m3-link', 'border')
+  visible = HtmlTemplate.visible
+  text_color = color_property('anvil-m3-link', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-link-icon', 'color', 'icon_color')
+  border = style_property('anvil-m3-link', 'border', 'border')
 
   @property
   def icon_size(self):
