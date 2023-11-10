@@ -8,6 +8,7 @@ from ...Functions import underline_property, italic_property, style_property, co
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
+#Currently can only accept one file at a time 
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
