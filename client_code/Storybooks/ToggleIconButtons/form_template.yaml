@@ -35,112 +35,117 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
-    - name: flow_panel_2
+    - name: card_content_container_1
       properties: {}
-      type: FlowPanel
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: column_panel_1
+      - name: flow_panel_2
         properties: {}
-        type: ColumnPanel
-        layout_properties: {width: 578}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
-        - name: flow_panel_3
+        - name: column_panel_1
           properties: {}
-          type: FlowPanel
-          layout_properties: {grid_position: 'YFXULF,CLTAUS', full_width_row: false}
+          type: ColumnPanel
+          layout_properties: {width: 578}
           components:
-          - name: toggle_icon_button_1
+          - name: flow_panel_3
             properties: {}
-            type: form:Components.ToggleIconButton
-          - name: toggle_icon_button_1_copy_1
-            properties: {appearance: Filled}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_2
-            properties: {appearance: Filled tonal}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_3
-            properties: {appearance: Outlined}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: text_3
-            properties: {text: Unselected Buttons}
-            type: form:Components.Text
-            layout_properties: {}
-        - name: flow_panel_3_copy_1
-          properties: {}
-          type: FlowPanel
-          layout_properties: {grid_position: 'OPSSAR,TRXWQC'}
-          components:
-          - name: toggle_icon_button_1_copy_4
-            properties: {enabled: false}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_1_copy_1
-            properties: {appearance: Filled, enabled: false}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_2_copy_1
-            properties: {appearance: Filled tonal, enabled: false}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_3_copy_1
-            properties: {appearance: Outlined, enabled: false}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: text_3_copy_1
-            properties: {text: Unselected/Disabled Buttons}
-            type: form:Components.Text
-            layout_properties: {}
-        - name: flow_panel_3_copy_2
-          properties: {}
-          type: FlowPanel
-          layout_properties: {grid_position: 'QXIMAX,YLKZLT'}
-          components:
-          - name: toggle_icon_button_1_copy_5
-            properties: {selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_1_copy_2
-            properties: {appearance: Filled, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_2_copy_2
-            properties: {appearance: Filled tonal, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_3_copy_2
-            properties: {appearance: Outlined, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: text_3_copy_2
-            properties: {text: Selected Buttons}
-            type: form:Components.Text
-            layout_properties: {}
-        - name: flow_panel_3_copy_1_copy_1
-          properties: {}
-          type: FlowPanel
-          layout_properties: {grid_position: 'EWLUVH,PIWGQQ'}
-          components:
-          - name: toggle_icon_button_1_copy_4_copy_1
-            properties: {enabled: false, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_1_copy_1_copy_1
-            properties: {appearance: Filled, enabled: false, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_2_copy_1_copy_1
-            properties: {appearance: Filled tonal, enabled: false, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: toggle_icon_button_1_copy_3_copy_1_copy_1
-            properties: {appearance: Outlined, enabled: false, selected: true}
-            type: form:Components.ToggleIconButton
-            layout_properties: {}
-          - name: text_3_copy_2_copy_1
-            properties: {text: Selected/Disabled Buttons}
-            type: form:Components.Text
-            layout_properties: {}
+            type: FlowPanel
+            layout_properties: {grid_position: 'YFXULF,CLTAUS', full_width_row: false}
+            components:
+            - name: toggle_icon_button_1
+              properties: {}
+              type: form:Components.ToggleIconButton
+            - name: toggle_icon_button_1_copy_1
+              properties: {appearance: Filled}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_2
+              properties: {appearance: Filled tonal}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_3
+              properties: {appearance: Outlined}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: text_3
+              properties: {text: Unselected Buttons}
+              type: form:Components.Text
+              layout_properties: {}
+          - name: flow_panel_3_copy_1
+            properties: {}
+            type: FlowPanel
+            layout_properties: {grid_position: 'OPSSAR,TRXWQC'}
+            components:
+            - name: toggle_icon_button_1_copy_4
+              properties: {enabled: false}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_1_copy_1
+              properties: {appearance: Filled, enabled: false}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_2_copy_1
+              properties: {appearance: Filled tonal, enabled: false}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_3_copy_1
+              properties: {appearance: Outlined, enabled: false}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: text_3_copy_1
+              properties: {text: Unselected/Disabled Buttons}
+              type: form:Components.Text
+              layout_properties: {}
+          - name: flow_panel_3_copy_2
+            properties: {}
+            type: FlowPanel
+            layout_properties: {grid_position: 'QXIMAX,YLKZLT'}
+            components:
+            - name: toggle_icon_button_1_copy_5
+              properties: {selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_1_copy_2
+              properties: {appearance: Filled, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_2_copy_2
+              properties: {appearance: Filled tonal, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_3_copy_2
+              properties: {appearance: Outlined, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: text_3_copy_2
+              properties: {text: Selected Buttons}
+              type: form:Components.Text
+              layout_properties: {}
+          - name: flow_panel_3_copy_1_copy_1
+            properties: {}
+            type: FlowPanel
+            layout_properties: {grid_position: 'EWLUVH,PIWGQQ'}
+            components:
+            - name: toggle_icon_button_1_copy_4_copy_1
+              properties: {enabled: false, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_1_copy_1_copy_1
+              properties: {appearance: Filled, enabled: false, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_2_copy_1_copy_1
+              properties: {appearance: Filled tonal, enabled: false, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: toggle_icon_button_1_copy_3_copy_1_copy_1
+              properties: {appearance: Outlined, enabled: false, selected: true}
+              type: form:Components.ToggleIconButton
+              layout_properties: {}
+            - name: text_3_copy_2_copy_1
+              properties: {text: Selected/Disabled Buttons}
+              type: form:Components.Text
+              layout_properties: {}
