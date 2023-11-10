@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
@@ -70,13 +70,13 @@ class FileLoader(FileLoaderTemplate):
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
   enabled = enabled_property('anvil-m3-fileloader-input')
-  text_color = color_property('anvil-m3-fileloader-label', 'color')
-  icon_color = color_property('anvil-m3-fileloader-icon', 'color')
-  background_color = color_property('anvil-m3-fileloader-form', 'backgroundColor')
+  text_color = color_property('anvil-m3-fileloader-label', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-fileloader-icon', 'color', 'icon_color')
+  background_color = color_property('anvil-m3-fileloader-form', 'backgroundColor', 'background_color')
   underline = underline_property('anvil-m3-fileloader-label')
   italic = italic_property('anvil-m3-fileloader-label')
   bold = bold_property('anvil-m3-fileloader-label')
-  font = style_property('anvil-m3-fileloader-label', 'fontFamily')
+  font = font_family_property('anvil-m3-fileloader-label', 'font')
   icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent')

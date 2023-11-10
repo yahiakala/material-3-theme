@@ -22,6 +22,10 @@ components_by_slot:
     properties: {appearance: outlined, text: Clear component}
     type: form:Components.Button
     layout_properties: {}
+  - name: link_1
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
   - name: card_1
     properties: {visible: true}
     type: form:Components.Card
