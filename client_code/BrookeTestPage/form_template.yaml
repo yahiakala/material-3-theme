@@ -44,6 +44,10 @@ components_by_slot:
   - name: text_1
     properties: {align: left, scale: medium, border: '', material_icon: '', text_color: '',
       icon_size: null, style: body, text: hello, font_size: null, italic: false, background_color: '',
-      bold: true, underline: true, icon_color: ''}
+      bold: false, underline: false, icon_color: ''}
     type: form:Components.Text
+    layout_properties: {}
+  - name: heading_1
+    properties: {}
+    type: form:Components.Heading
     layout_properties: {}

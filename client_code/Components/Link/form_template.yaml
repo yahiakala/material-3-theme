@@ -387,7 +387,7 @@ properties:
     be displayed?', group: Appearance, designerHint: visible, important: true}
 - {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text,
   important: true}
-- {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon,
+- {name: icon_color, type: color, default_value: '', group: Appearance, description: The color of the icon,
   important: false}
 - {name: icon_size, type: number, default_value: 24, group: Icon, description: The size of the icon in pixels}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
