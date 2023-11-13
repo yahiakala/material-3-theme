@@ -1,23 +1,24 @@
 properties:
-- {name: url, type: string, default_value: '', priority: '15'}
-- {name: icon, type: icon, default_value: 'fa:star', priority: '13'}
+- {name: url, type: string, default_value: '', group: Other, important: false, description: The target URL of the link}
+- {name: icon, type: icon, default_value: 'fa:star'}
 - {name: text, type: string, default_value: Label, description: Text for the Link,
-  priority: '14'}
+  group: Common, important: true}
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
-  priority: '12'}
+  important: true, group: Appearance}
 - {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
-  priority: '11'}
-- {name: badge_count, type: number, default_value: '', description: '10'}
+  group: Other}
+- {name: badge_count, type: number, default_value: '', description: The number to display on the badge,
+  group: Other}
 - {name: text_color, type: color, default_value: '', description: Color of the text,
-  priority: '9'}
+  group: Appearance}
 - {name: font_size, type: string, default_value: '', description: Size of the font,
-  priority: '8'}
+  group: Text}
 - {name: font_family, type: string, default_value: '', description: Font family of the text,
-  priority: '6'}
+  group: Text}
 - {name: icon_color, type: color, default_value: '', description: Color of the icon,
-  priority: '3'}
-- {name: icon_size, type: string, default_value: '', description: Size of the icon,
-  priority: '7'}
+  group: Appearance}
+- {name: icon_size, type: string, default_value: '', description: Size of the icon in pixels,
+  group: Icon}
 - name: material_icon
   type: enum
   default_value: star
@@ -381,8 +382,11 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
+  description: The icon to display on this component
+  important: true
+  group: Common
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
-  default_binding_prop: true, default_value: null}
+  default_binding_prop: true, default_value: null, group: Common, important: true}
 is_package: true
 event_bindings: {show: form_show}
 events:
