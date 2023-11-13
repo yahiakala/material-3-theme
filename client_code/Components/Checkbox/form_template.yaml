@@ -1,35 +1,46 @@
 properties:
-- {name: checked, type: boolean, default_value: false, default_binding_prop: true,
-  description: Whether or not the checkbox is checked, designerHint: toggle}
+- {default_value: false, group: Common, important: true, name: checked, default_binding_prop: true,
+  type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked}
 - {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction,
-  designerHint: enabled}
-- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
+  designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
+- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state,
+  group: Interaction, important: true}
 - {name: text, type: string, default_value: '', description: 'The text displayed on
     this component
 
 
-    '}
-- {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.}
+    ', group: Common, important: true}
+- {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.,
+  group: Interaction, important: true}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
-  designerHint: visible}
+  designerHint: visible, important: true, group: Appearance, designer_hint: visible}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined,
-  designerHint: font-underline}
+  designerHint: font-underline, designer_hint: font-underline, group: Text}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
-  designerHint: font-italic}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels}
+  designerHint: font-italic, group: Text, designer_hint: font-italic}
+- {name: font_size, type: number, description: The height of text displayed on this component in pixels,
+  group: Text, important: true}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
-  designerHint: font-bold}
-- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
-- {name: font, type: string, default_value: '', description: The font family to use for this component.}
-- {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox}
-- {name: text_color, type: color, default_value: '', description: The color of the component's label}
-- {name: background, type: color, default_value: '', description: The background colour of this component.}
-- name: align
+  designerHint: font-bold, group: Text, designer_hint: font-bold}
+- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
+  group: Appearance}
+- {name: font, type: string, default_value: '', description: The font family to use for this component.,
+  group: Text}
+- {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox,
+  group: Appearance}
+- {name: text_color, type: color, default_value: '', description: The color of the component's label,
+  group: Appearance}
+- {name: background, type: color, default_value: '', description: The background colour of this component.,
+  group: Appearance}
+- default_value: left
+  group: Appearance
+  important: true
+  name: align
   type: enum
+  designer_hint: align-horizontal
+  designerHint: align-horizontal
   options: [left, center, right]
   description: Align this component’s text
-  default_value: left
-  designerHint: align-horizontal
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}

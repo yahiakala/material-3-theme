@@ -14,6 +14,8 @@ properties:
   default_binding_prop: true
   options: [body, label]
   default_value: body
+  important: true
+  group: Appearance
 - name: scale
   type: enum
   options: [small, medium, large]

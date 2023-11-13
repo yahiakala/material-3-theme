@@ -37,3 +37,7 @@ components_by_slot:
       unselected_background_color: ''}
     type: form:Components.Switch
     layout_properties: {}
+  - name: checkbox_1
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
