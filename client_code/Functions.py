@@ -106,9 +106,9 @@ def italic_property(dom_node_name, prop_name="italic"):
 def bold_property(dom_node_name, prop_name="bold"):
   def set_bold(self, value):
     if value:
-      self.dom_nodes[dom_node_name].style.fontStyle = 'bold'
+      self.dom_nodes[dom_node_name].style.fontWeight = 'bold'
     else:
-      self.dom_nodes[dom_node_name].style.fontStyle = 'normal'
+      self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
   return property_with_callback(prop_name, set_bold)
 
 def font_size_property(dom_node_name, prop_name="font_size"):
