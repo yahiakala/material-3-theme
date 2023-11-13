@@ -1,0 +1,45 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: text_1_copy_1
+    properties: {text: NavigationLink Component, font_size: 25, text_color: 'rgb(103,
+        80, 164)'}
+    type: form:Components.Text
+    layout_properties: {grid_position: 'AKFJIP,DTEYVB'}
+  - name: text_2_copy_1
+    properties: {text: Description. Properties. Link to docs. Etc}
+    type: form:Components.Text
+    layout_properties: {grid_position: 'PZXGCA,BNJCLP'}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'DUNIXU,RRDTIG'}
+    components:
+    - name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: navigation_link_1
+        properties: {text: Default}
+        type: form:Components.NavigationLink
+        layout_properties: {grid_position: 'MENMFF,LTDOFF'}
+      - name: navigation_link_2
+        properties: {text: Selected, selected: true}
+        type: form:Components.NavigationLink
+        layout_properties: {grid_position: 'MENMFF,FVFCZF'}
+      - name: navigation_link_3
+        properties: {text: With Badge, badge: true}
+        type: form:Components.NavigationLink
+        layout_properties: {grid_position: 'MENMFF,WPBQDG'}
+      - name: navigation_link_4
+        properties: {text: With Badge and Number, badge: true, badge_count: 8}
+        type: form:Components.NavigationLink
+        layout_properties: {grid_position: 'MENMFF,BTEOSR'}

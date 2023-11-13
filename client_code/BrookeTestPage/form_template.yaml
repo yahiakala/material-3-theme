@@ -31,23 +31,3 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     event_bindings: {click: button_1_click}
-  - name: switch_1
-    properties: {selected: false, align: left, unselected_thumb_color: '', selected_background_color: '',
-      enabled: true, visible: true, selected_thumb_color: '', unselected_outline_color: '',
-      unselected_background_color: ''}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {bold: false}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: text_1
-    properties: {align: left, scale: medium, border: '', material_icon: '', text_color: '',
-      icon_size: null, style: body, text: hello, font_size: null, italic: false, background_color: '',
-      bold: false, underline: false, icon_color: ''}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: heading_1
-    properties: {}
-    type: form:Components.Heading
-    layout_properties: {}
