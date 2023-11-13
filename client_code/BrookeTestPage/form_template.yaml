@@ -41,3 +41,9 @@ components_by_slot:
     properties: {}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: text_1
+    properties: {align: left, scale: medium, border: '', material_icon: '', text_color: '',
+      icon_size: null, style: body, text: hello, font_size: null, italic: false, background_color: '',
+      bold: true, underline: false, icon_color: ''}
+    type: form:Components.Text
+    layout_properties: {}

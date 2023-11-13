@@ -20,16 +20,27 @@ properties:
   type: enum
   options: [small, medium, large]
   default_value: medium
+  group: Appearance
+  important: true
 - name: align
   type: enum
   options: [left, center, right]
   default_value: left
-- {name: background_color, type: color, default_value: '', description: The background colour of this component.}
-- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold}
-- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
-- {name: font, type: string, default_value: '', description: The font to use for this component.}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels}
-- {name: text_color, type: color, default_value: '', description: The colour of the text}
+  important: true
+  group: Appearance
+  designer_hint: align-horizontal
+- {name: background_color, type: color, default_value: '', description: The background colour of this component.,
+  group: Appearance}
+- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
+  group: Text, designer_hint: font-bold}
+- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
+  group: Appearance}
+- {name: font, type: string, default_value: '', description: The font to use for this component.,
+  group: Text}
+- {name: font_size, type: number, description: The height of text displayed on this component in pixels,
+  group: Text, important: true}
+- {name: text_color, type: color, default_value: '', description: The colour of the text,
+  group: Appearance}
 - name: material_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -392,12 +403,17 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics}
+  important: true
+  group: Icon
+- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
+  group: Text, designer_hint: font-italic}
 - {name: text, type: string, default_value: '', description: The text displayed on this component,
-  multiline: true}
-- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined}
-- {name: visible, type: boolean, default_value: true, description: Whether or not the component should be displayed on the page.}
+  multiline: true, group: Common}
+- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined,
+  designer_hint: font-underline, group: Text}
+- {name: visible, type: boolean, default_value: true, description: Whether or not the component should be displayed on the page.,
+  group: Appearance, important: true, designer_hint: visible}
 - {name: icon_size, type: number, description: 'The size in pixels of the icon. If
-    not set, the icon will scale with the text.'}
+    not set, the icon will scale with the text.', group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
-    icon. If not set, the icon will be the same colour as the text.'}
+    icon. If not set, the icon will be the same colour as the text.', group: Appearance}
