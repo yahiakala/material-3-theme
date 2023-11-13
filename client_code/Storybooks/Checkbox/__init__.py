@@ -11,5 +11,6 @@ class Checkbox(CheckboxTemplate):
     self.init_components(**properties)
     self.checkbox_3.checked = None
     self.checkbox_5.checked = None
+    self.checkbox_9.checked = None
 
     # Any code you write here will run before the form opens.

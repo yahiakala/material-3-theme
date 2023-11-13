@@ -27,32 +27,54 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: ''}
     components:
-    - name: checkbox_2
-      properties: {text: Checked, checked: true}
-      type: form:Components.Checkbox
-      layout_properties: {slot: anvil-m3-card-slot}
     - name: column_panel_1_copy_1
       properties: {}
       type: ColumnPanel
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: checkbox_1
-        properties: {text: Unchecked}
+      - name: checkbox_7
+        properties: {enabled: false, text: 'Disabled, checked', checked: true}
         type: form:Components.Checkbox
-        layout_properties: {grid_position: 'VRVZSW,TYWPWR'}
-      - name: checkbox_3
-        properties: {text: Indeterminate*, allow_indeterminate: true}
-        type: form:Components.Checkbox
-        layout_properties: {grid_position: 'IVWJIS,LMQUCS'}
+        layout_properties: {grid_position: 'VRVZSW,WLWLES'}
       - name: checkbox_6
         properties: {text: 'Error, checked', checked: true, error: true}
         type: form:Components.Checkbox
-        layout_properties: {grid_position: 'VIGAAH,JXAULL'}
+        layout_properties: {grid_position: 'VRVZSW,URCWTF'}
+      - name: checkbox_8
+        properties: {enabled: false, text: 'Disabled, unchecked', checked: false}
+        type: form:Components.Checkbox
+        layout_properties: {grid_position: 'DKOSYZ,TYBEXX'}
       - name: checkbox_4
         properties: {text: 'Error, unchecked', error: true}
         type: form:Components.Checkbox
-        layout_properties: {grid_position: 'ATHHJU,LPCSYL'}
-      - name: checkbox_5
-        properties: {text: 'Error, indeterminate', error: true}
+        layout_properties: {grid_position: 'DKOSYZ,CZAGEJ'}
+      - name: checkbox_9
+        properties: {enabled: false, text: 'Disabled, indeterminate', checked: false,
+          allow_indeterminate: true}
         type: form:Components.Checkbox
-        layout_properties: {grid_position: 'HUPSHT,NZRVNU'}
+        layout_properties: {grid_position: 'IVWJIS,TETSOJ'}
+      - name: checkbox_5
+        properties: {text: 'Error, indeterminate', error: true, allow_indeterminate: true}
+        type: form:Components.Checkbox
+        layout_properties: {grid_position: 'IVWJIS,USMIHN'}
+  - name: enabled_checkboxes
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'GJGFTR,OECNNA'}
+    components:
+    - name: checkbox_3_copy_1
+      properties: {text: Indeterminate, allow_indeterminate: true}
+      type: form:Components.Checkbox
+      layout_properties: {grid_position: 'RRYWDC,OICVXQ'}
+    - name: checkbox_1_copy_1
+      properties: {text: Unchecked}
+      type: form:Components.Checkbox
+      layout_properties: {grid_position: 'RRYWDC,OICVXQ'}
+    - name: checkbox_2_copy_1
+      properties: {text: Checked, checked: true}
+      type: form:Components.Checkbox
+      layout_properties: {grid_position: 'RRYWDC,OICVXQ'}
+  - name: disabled_checkboxes
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'KTDRDG,NWHIOI'}
