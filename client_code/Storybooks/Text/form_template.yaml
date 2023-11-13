@@ -8,15 +8,37 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: text_1_copy_1_copy_1_copy_1
+  - name: text_head
     properties: {text: Text Component, font_size: 25, text_color: 'rgb(103, 80, 164)'}
     type: form:Components.Text
     layout_properties: {grid_position: 'AEWVHC,PCSOYD'}
-  - name: text_2_copy_1_copy_1_copy_1
-    properties: {text: ''}
-    type: form:Components.Text
-    layout_properties: {grid_position: 'FIQPST,UYLCKO'}
-  - name: link_1_copy_1_copy_1
-    properties: {url: 'https://m3.material.io/components/checkbox/overview', text: Checkbox in Material 3}
+  - name: typography_link
+    properties: {url: 'https://m3.material.io/styles/typography/overview', text: Typography in Material 3}
     type: form:Components.Link
     layout_properties: {grid_position: ''}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'VZCCDQ,OIYCGE'}
+    components:
+    - name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: text_1
+        properties: {text: Label}
+        type: form:Components.Text
+        layout_properties: {grid_position: 'ZXLMJG,PLIPRV'}
+      - name: text_2
+        properties: {text: Label}
+        type: form:Components.Text
+        layout_properties: {grid_position: 'WJXTUG,YFNUEK'}
+      - name: text_3
+        properties: {text: Label}
+        type: form:Components.Text
+        layout_properties: {grid_position: 'FPOLMD,CYHNGR'}
+      - name: text_4
+        properties: {}
+        type: form:Components.Text
+        layout_properties: {grid_position: 'EWFBWX,CNVYIE'}
