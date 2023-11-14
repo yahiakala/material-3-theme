@@ -50,6 +50,10 @@ components_by_slot:
         properties: {text: I'm a card with an image on it.}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+  - name: switch_1
+    properties: {}
+    type: form:Components.Switch
+    layout_properties: {}
   - name: timer_1
     properties: {}
     type: Timer
