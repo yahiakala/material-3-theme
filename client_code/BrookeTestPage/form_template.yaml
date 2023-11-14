@@ -33,7 +33,8 @@ components_by_slot:
     event_bindings: {click: button_1_click}
     components:
     - name: image_1
-      properties: {source: _/theme/version-control-tab.png, display_mode: zoom_to_fill}
+      properties: {source: _/theme/github-integration-thumbnail.png, display_mode: zoom_to_fill,
+        spacing_below: none, spacing_above: none}
       type: Image
       layout_properties: {slot: anvil-m3-card-slot}
     - name: card_content_container_1
@@ -41,7 +42,11 @@ components_by_slot:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
+      - name: heading_1
+        properties: {scale: small, style: headline, text: Image Card}
+        type: form:Components.Heading
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_1
-        properties: {}
+        properties: {text: I'm a card with an image on it.}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
