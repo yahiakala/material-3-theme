@@ -31,3 +31,17 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     event_bindings: {click: button_1_click}
+    components:
+    - name: image_1
+      properties: {source: _/theme/version-control-tab.png, display_mode: zoom_to_fill}
+      type: Image
+      layout_properties: {slot: anvil-m3-card-slot}
+    - name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: text_1
+        properties: {}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
