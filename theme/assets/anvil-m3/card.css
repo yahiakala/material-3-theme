@@ -5,7 +5,7 @@
     <div anvil-slot="card-image-slot" anvil-name="image" class="anvil-m3-card-image">
       <p anvil-name="empty-image" anvil-if-slot-empty="card-image-slot" > IMG </p>
     </div>
-    <div anvil-slot="card-content-slot" anvil-name="content" class="anvil-m3-card-image">
+    <div anvil-slot="card-content-slot" anvil-name="content" class="anvil-m3-card-content">
       <p anvil-name="empty-content" anvil-if-slot-empty="card-content-slot" > CONT </p>
     </div>
   </div>
@@ -14,5 +14,19 @@
 */
 
 .anvil-m3-card {
-  
+  display: flex;
+  background: pink;
+  margin: 0 8px 8px 0px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.anvil-m3-card-image {
+  background: cyan;
+}
+.anvil-m3-card-content {
+  background: yellow;
 }
