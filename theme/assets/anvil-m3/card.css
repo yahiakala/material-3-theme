@@ -15,13 +15,14 @@
 
 .anvil-m3-card {
   display: flex;
-  background: pink;
+  background: blue;
   margin: 0 8px 8px 0px;
   overflow: hidden;
   position: relative;
   border-radius: 12px;
   min-width: 24px;
   min-height: 24px;
+  width: fit-content; 
 }
 
 .anvil-m3-card-image {
