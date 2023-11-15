@@ -19,6 +19,7 @@ properties:
   important: true
   options: [none, top, left, right, bottom, full]
   default_value: none
+- {name: prop, type: string, default_value: '', important: true}
 is_package: true
 custom_component: true
 components: []
@@ -28,8 +29,8 @@ container:
       \ flex\">\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n  \
       \  <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
       >\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"card-image-slot\"\
-      \ > IMG </p>\n    </div>\n    <div anvil-slot=\"card-content-slot\" anvil-name=\"\
-      content\" class=\"anvil-m3-card-content\">\n      <p anvil-name=\"empty-content\"\
-      \ anvil-if-slot-empty=\"card-content-slot\" > CONT </p>\n    </div>\n  </div>\n\
-      </div>"}
+      \ style=\"color: #BBB\"><i>Image Content</i></p>\n    </div>\n    <div anvil-slot=\"\
+      card-content-slot\" anvil-name=\"content\" class=\"anvil-m3-card-content\">\n\
+      \      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
+      \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n</div>"}
 custom_component_container: true
