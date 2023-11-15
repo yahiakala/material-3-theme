@@ -49,6 +49,10 @@ class Card(CardTemplate):
       self.dom_nodes['image'].style.element.style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", set_image)
 
+  def set_rounded_img(self, value):
+     self.dom_nodes['image'].classList.toggle('anvil-m3-card-rounded', value)
+  rounded_image = property_with_callback("rounded_image", set_rounded_img)
+
 """
 
 <div anvil-name="anvil-m3-card-component" style-"display: flex">

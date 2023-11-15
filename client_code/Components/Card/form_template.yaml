@@ -19,7 +19,7 @@ properties:
   important: true
   options: [none, top, left, right, bottom, full]
   default_value: none
-- {name: prop, type: string, default_value: '', important: true}
+- {name: rounded_image, type: boolean, default_value: false, important: true}
 is_package: true
 custom_component: true
 components: []

@@ -47,7 +47,7 @@ components:
           type: Spacer
           layout_properties: {width: 171}
     - name: card_1_copy_1
-      properties: {visible: true, image_position: top, appearance: outlined}
+      properties: {visible: true, image_position: top, appearance: outlined, rounded_image: true}
       type: form:Components.Card
       layout_properties: {grid_position: 'LDPGIN,DPTQSU DANKLW,PDHWWF'}
       components:
@@ -55,6 +55,16 @@ components:
         properties: {}
         type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
+        components:
+        - name: text_1
+          properties: {text: World Impact, style: label, scale: medium}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_2
+          properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+              Disabled'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: flow_panel_1_copy_1
         properties: {}
         type: FlowPanel
@@ -65,7 +75,7 @@ components:
           type: Spacer
           layout_properties: {width: 171}
   - name: card_1_copy_3
-    properties: {visible: true, image_position: none, appearance: filled}
+    properties: {visible: true, image_position: none, appearance: filled, rounded_image: false}
     type: form:Components.Card
     layout_properties: {grid_position: 'CMOZPE,SAZFNR ESZWFF,CYEHHP'}
     components:
@@ -79,10 +89,24 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_3
-    properties: {visible: true, image_position: top, appearance: filled}
+    properties: {visible: true, image_position: top, appearance: filled, rounded_image: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'CMOZPE,SAZFNR IVCWNM,APNSTC'}
     components:
+    - name: card_content_container_2_copy_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_1_copy_1
+        properties: {text: World Impact, style: label, scale: medium}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_2_copy_1
+        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+            Disabled'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: flow_panel_1_copy_1_copy_3
       properties: {}
       type: FlowPanel
@@ -107,10 +131,24 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_3_copy_1
-    properties: {visible: true, image_position: top}
+    properties: {visible: true, image_position: top, rounded_image: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'CMOZPE,BUZDSS ERPACW,JYUITH'}
     components:
+    - name: card_content_container_2_copy_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_1_copy_2
+        properties: {text: World Impact, style: label, scale: medium}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_2_copy_2
+        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+            Disabled'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: flow_panel_1_copy_1_copy_3_copy_1
       properties: {}
       type: FlowPanel
@@ -121,94 +159,264 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_2
-    properties: {visible: true, image_position: left, appearance: outlined}
+    properties: {visible: true, image_position: left, appearance: outlined, rounded_image: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'AZBIHY,GUQWRP'}
     components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: card_content_container_3
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {width: 180}
+        components:
+        - name: column_panel_2
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: text_1_copy_3
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
+          - name: text_1_copy_3_copy_1
+            properties: {text: ' ', style: label, scale: medium, material_icon: check_circle}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,XSJTPF'}
     - name: flow_panel_1_copy_2
       properties: {}
       type: FlowPanel
       layout_properties: {slot: card-image-slot}
       components:
       - name: spacer_1_copy_2
-        properties: {height: 127}
+        properties: {height: 59}
         type: Spacer
-        layout_properties: {width: 171}
-  - name: card_1_copy_2_copy_1
-    properties: {visible: true, image_position: left, appearance: filled}
+        layout_properties: {width: 100}
+  - name: card_1_copy_2_copy_3
+    properties: {visible: true, image_position: left, appearance: filled, rounded_image: true}
     type: form:Components.Card
     layout_properties: {grid_position: 'AZBIHY,KKZPAQ'}
     components:
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: card_content_container_3_copy_1
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {width: 180}
+        components:
+        - name: column_panel_2_copy_1
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: text_1_copy_3_copy_2
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3_copy_1
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
+          - name: text_1_copy_3_copy_1_copy_1
+            properties: {text: ' ', style: label, scale: medium, material_icon: check_circle}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,XSJTPF'}
+    - name: flow_panel_1_copy_2_copy_3
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_2_copy_3
+        properties: {height: 59}
+        type: Spacer
+        layout_properties: {width: 100}
+  - name: card_1_copy_2_copy_1
+    properties: {visible: true, image_position: left, appearance: elevated, rounded_image: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'AZBIHY,LRFVEG'}
+    components:
+    - name: flow_panel_2_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: card_content_container_3_copy_2
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {width: 180}
+        components:
+        - name: column_panel_2_copy_2
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: text_1_copy_3_copy_3
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3_copy_2
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
+          - name: text_1_copy_3_copy_1_copy_2
+            properties: {text: ' ', style: label, scale: medium, material_icon: check_circle}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,XSJTPF'}
     - name: flow_panel_1_copy_2_copy_1
       properties: {}
       type: FlowPanel
       layout_properties: {slot: card-image-slot}
       components:
       - name: spacer_1_copy_2_copy_1
-        properties: {height: 127}
+        properties: {height: 59}
         type: Spacer
-        layout_properties: {width: 171}
-  - name: card_1_copy_2_copy_1_copy_1
-    properties: {visible: true, image_position: left}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'AZBIHY,LRFVEG'}
-    components:
-    - name: flow_panel_1_copy_2_copy_1_copy_1
-      properties: {}
-      type: FlowPanel
-      layout_properties: {slot: card-image-slot}
-      components:
-      - name: spacer_1_copy_2_copy_1_copy_1
-        properties: {height: 127}
-        type: Spacer
-        layout_properties: {width: 171}
+        layout_properties: {width: 100}
   - name: card_1_copy_1_copy_1_copy_1
     properties: {visible: true, image_position: right, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'RITAPV,NOBDJK'}
     components:
+    - name: card_content_container_3_copy_3
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: flow_panel_3
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: column_panel_2_copy_3
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {width: 212.46875}
+          components:
+          - name: text_1_copy_3_copy_4
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3_copy_3
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
     - name: flow_panel_1_copy_1_copy_1_copy_1
       properties: {}
       type: FlowPanel
       layout_properties: {slot: card-image-slot}
       components:
       - name: spacer_1_copy_1_copy_1_copy_1
-        properties: {height: 127}
+        properties: {height: 46}
         type: Spacer
-        layout_properties: {width: 171}
-  - name: card_1_copy_1_copy_1_copy_1_copy_1
+        layout_properties: {width: 55}
+  - name: card_1_copy_1_copy_1_copy_1_copy_2
     properties: {visible: true, image_position: right, appearance: filled}
     type: form:Components.Card
-    layout_properties: {grid_position: 'RITAPV,UWDBXG'}
+    layout_properties: {grid_position: 'RITAPV,UWDBXG HBMDRY,LCDUNI'}
     components:
-    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_1
+    - name: card_content_container_3_copy_3_copy_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: flow_panel_3_copy_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: column_panel_2_copy_3_copy_1
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {width: 212.46875}
+          components:
+          - name: text_1_copy_3_copy_4_copy_1
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3_copy_3_copy_1
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
+    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_2
       properties: {}
       type: FlowPanel
       layout_properties: {slot: card-image-slot}
       components:
-      - name: spacer_1_copy_1_copy_1_copy_1_copy_1
-        properties: {height: 127}
+      - name: spacer_1_copy_1_copy_1_copy_1_copy_2
+        properties: {height: 46}
         type: Spacer
-        layout_properties: {width: 171}
-  - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: right}
+        layout_properties: {width: 55}
+  - name: card_1_copy_1_copy_1_copy_1_copy_3
+    properties: {visible: true, image_position: right, appearance: elevated}
     type: form:Components.Card
     layout_properties: {grid_position: 'RITAPV,NAHOPA'}
     components:
-    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_1_copy_1
+    - name: card_content_container_3_copy_3_copy_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: flow_panel_3_copy_2
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: column_panel_2_copy_3_copy_2
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {width: 212.46875}
+          components:
+          - name: text_1_copy_3_copy_4_copy_2
+            properties: {text: World Impact, style: label, scale: medium}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
+          - name: text_2_copy_3_copy_3_copy_2
+            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+                Disabled'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
+    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_3
       properties: {}
       type: FlowPanel
       layout_properties: {slot: card-image-slot}
       components:
-      - name: spacer_1_copy_1_copy_1_copy_1_copy_1_copy_1
-        properties: {height: 127}
+      - name: spacer_1_copy_1_copy_1_copy_1_copy_3
+        properties: {height: 46}
         type: Spacer
-        layout_properties: {width: 171}
+        layout_properties: {width: 55}
   - name: card_1_copy_1_copy_1
     properties: {visible: true, image_position: bottom, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'GMVWXN,VWYQHA'}
     components:
+    - name: card_content_container_2_copy_3
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_1_copy_4
+        properties: {text: World Impact, style: label, scale: medium}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_2_copy_4
+        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+            Disabled'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: flow_panel_1_copy_1_copy_1
       properties: {}
       type: FlowPanel
@@ -223,6 +431,20 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'GMVWXN,RBUFKX'}
     components:
+    - name: card_content_container_2_copy_4
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_1_copy_5
+        properties: {text: World Impact, style: label, scale: medium}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_2_copy_5
+        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+            Disabled'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: flow_panel_1_copy_1_copy_1_copy_2
       properties: {}
       type: FlowPanel
@@ -237,6 +459,20 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'GMVWXN,YUKEMC'}
     components:
+    - name: card_content_container_2_copy_5
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_1_copy_6
+        properties: {text: World Impact, style: label, scale: medium}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_2_copy_6
+        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
+            Disabled'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: flow_panel_1_copy_1_copy_1_copy_2_copy_1
       properties: {}
       type: FlowPanel
@@ -251,6 +487,50 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'UXLNDL,JEOHRM'}
     components:
+    - name: card_content_container_4
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: flow_panel_4
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: column_panel_3
+          properties: {}
+          type: ColumnPanel
+          layout_properties: {width: 281}
+          components:
+          - name: icon_button_1
+            properties: {icon: more_vert, align: right}
+            type: form:Components.IconButton
+            layout_properties: {grid_position: 'OZJZDC,ICKLZV'}
+          - name: heading_1
+            properties: {text: Title}
+            type: form:Components.Heading
+            layout_properties: {grid_position: 'ZNWLLL,RPHTJW'}
+          - name: text_3
+            properties: {text: Sub Title, style: label, scale: small}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'XZISUH,MDPZDS'}
+          - name: text_4
+            properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Quisque a mollis mi, id consequat nisl. Donec justo sapien,
+                pellentesque nec mi nec, fermentum iaculis urna. Aliquam dolor nibh,
+                aliquam in luctus nec, molestie at lectus. Mauris porta diam id sem
+                bibendum, ut egestas elit sagittis. Aenean facilisis ex sed vehicula
+                feugiat.'}
+            type: form:Components.Text
+            layout_properties: {grid_position: 'GHLVXK,ZMHTPN'}
+          - name: flow_panel_5
+            properties: {align: right}
+            type: FlowPanel
+            layout_properties: {grid_position: 'JNJZTL,CHZSLE'}
+          - name: button_1
+            properties: {appearance: filled, text: Click}
+            type: form:Components.Button
+            layout_properties: {grid_position: 'VTYQJB,COZVHG'}
     - name: flow_panel_1_copy_1_copy_2
       properties: {}
       type: FlowPanel
