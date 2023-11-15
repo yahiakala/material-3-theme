@@ -1,11 +1,11 @@
-from ._anvil_designer import CardContentContainerTemplate
+from ._anvil_designer import Cards_1Template
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class CardContentContainer(CardContentContainerTemplate):
+class Cards_1(Cards_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
