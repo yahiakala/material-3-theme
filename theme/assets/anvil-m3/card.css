@@ -15,7 +15,6 @@
 
 .anvil-m3-card {
   display: flex;
-  background: blue;
   margin: 0 8px 8px 0px;
   overflow: hidden;
   position: relative;
@@ -23,11 +22,28 @@
   min-width: 24px;
   min-height: 24px;
   width: fit-content; 
+  border: 1px solid transparent;
+}
+.anvil-m3-card.none-image {}
+.anvil-m3-card.top-image {flex-direction: column;}
+.anvil-m3-card.bottom-image {flex-direction: column-reverse;}
+.anvil-m3-card.left-image {flex-direction: row;}
+.anvil-m3-card.right-image {flex-direction: row-reverse;}
+.anvil-m3-card.full-image {}
+
+.anvil-m3-card.anvil-m3-outlined {
+  border-color: var(--anvil-m3-outline)
 }
 
 .anvil-m3-card-image {
   background: cyan;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
 }
+
+
 .anvil-m3-card-content {
   background: yellow;
 }

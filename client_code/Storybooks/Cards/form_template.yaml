@@ -8,7 +8,264 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: card_1
-    properties: {visible: true}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'CMOZPE,RBGWHO'}
+    components:
+    - name: card_1
+      properties: {visible: true, image_position: none, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'LDPGIN,DPTQSU OCPHHP,HTHDCL'}
+      components:
+      - name: card_content_container_1
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+      - name: flow_panel_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: card-image-slot}
+        components:
+        - name: spacer_1
+          properties: {height: 127}
+          type: Spacer
+          layout_properties: {width: 171}
+    - name: card_1_copy_1
+      properties: {visible: true, image_position: top, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'LDPGIN,DPTQSU DANKLW,PDHWWF'}
+      components:
+      - name: flow_panel_1_copy_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: card-image-slot}
+        components:
+        - name: spacer_1_copy_1
+          properties: {height: 127}
+          type: Spacer
+          layout_properties: {width: 171}
+  - name: card_1_copy_3
+    properties: {visible: true, image_position: none, appearance: filled}
     type: form:Components.Card
-    layout_properties: {grid_position: 'BRWMCM,NABZJM'}
+    layout_properties: {grid_position: 'CMOZPE,SAZFNR ESZWFF,CYEHHP'}
+    components:
+    - name: flow_panel_1_copy_3
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_3
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_3
+    properties: {visible: true, image_position: top, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'CMOZPE,SAZFNR IVCWNM,APNSTC'}
+    components:
+    - name: flow_panel_1_copy_1_copy_3
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_3
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_3_copy_1
+    properties: {visible: true, image_position: none}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'CMOZPE,BUZDSS DXIOLN,GICWVP'}
+    components:
+    - name: flow_panel_1_copy_3_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_3_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_3_copy_1
+    properties: {visible: true, image_position: top}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'CMOZPE,BUZDSS ERPACW,JYUITH'}
+    components:
+    - name: flow_panel_1_copy_1_copy_3_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_3_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_2
+    properties: {visible: true, image_position: left, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'AZBIHY,GUQWRP'}
+    components:
+    - name: flow_panel_1_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_2
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_2_copy_1
+    properties: {visible: true, image_position: left, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'AZBIHY,KKZPAQ'}
+    components:
+    - name: flow_panel_1_copy_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_2_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_2_copy_1_copy_1
+    properties: {visible: true, image_position: left}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'AZBIHY,LRFVEG'}
+    components:
+    - name: flow_panel_1_copy_2_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_2_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1_copy_1
+    properties: {visible: true, image_position: right, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'RITAPV,NOBDJK'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1_copy_1_copy_1
+    properties: {visible: true, image_position: right, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'RITAPV,UWDBXG'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1
+    properties: {visible: true, image_position: right}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'RITAPV,NAHOPA'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1_copy_1_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1_copy_1_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1
+    properties: {visible: true, image_position: bottom, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'GMVWXN,VWYQHA'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1_copy_2
+    properties: {visible: true, image_position: bottom, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'GMVWXN,RBUFKX'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1_copy_2
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_1_copy_2_copy_1
+    properties: {visible: true, image_position: bottom}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'GMVWXN,YUKEMC'}
+    components:
+    - name: flow_panel_1_copy_1_copy_1_copy_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_1_copy_2_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_2
+    properties: {visible: true, image_position: full, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'UXLNDL,JEOHRM'}
+    components:
+    - name: flow_panel_1_copy_1_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_2
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_2_copy_1
+    properties: {visible: true, image_position: full, appearance: filled}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'UXLNDL,PNLXTZ'}
+    components:
+    - name: flow_panel_1_copy_1_copy_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_2_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
+  - name: card_1_copy_1_copy_2_copy_1_copy_1
+    properties: {visible: true, image_position: full}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'UXLNDL,KMFCXD'}
+    components:
+    - name: flow_panel_1_copy_1_copy_2_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-image-slot}
+      components:
+      - name: spacer_1_copy_1_copy_2_copy_1_copy_1
+        properties: {height: 127}
+        type: Spacer
+        layout_properties: {width: 171}
