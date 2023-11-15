@@ -38,7 +38,7 @@ components:
     - name: card_content_container_1
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2
         properties: {}
@@ -92,7 +92,7 @@ components:
     - name: card_content_container_2
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: text_4
         properties: {text: 'TODO: smooth out determinate progress transition'}
