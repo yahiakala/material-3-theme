@@ -38,7 +38,7 @@ components:
     - name: card_content_container_1
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: heading_1
         properties: {text: With Label}
@@ -142,7 +142,7 @@ components:
     - name: card_content_container_2
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: heading_1_copy_1
         properties: {text: Without Label}
@@ -246,7 +246,7 @@ components:
     - name: card_content_container_3
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: text_4
         properties: {text: Disabled}
