@@ -25,7 +25,7 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style-\"display:\
+  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:\
       \ flex\">\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n  \
       \  <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
       >\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"card-image-slot\"\
