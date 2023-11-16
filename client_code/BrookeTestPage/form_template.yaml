@@ -54,6 +54,10 @@ components_by_slot:
     properties: {}
     type: form:Components.Switch
     layout_properties: {}
+  - name: button_2
+    properties: {material_icon: done}
+    type: form:Components.Button
+    layout_properties: {}
   - name: timer_1
     properties: {}
     type: Timer
