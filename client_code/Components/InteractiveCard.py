@@ -3,10 +3,26 @@ from .Card import Card
 import anvil.designer
 from ..Functions import property_with_callback
 
+enabled_property = {"name": "enabled", "type": "boolean", "default_value": True, "important": True, "designerHint": "enabled", "designer_hint": "enabled"}
 click_event = {"name": "click", "default_event": True, "description": "When the component is clicked"}
+
 class InteractiveCard(Card):
   _anvil_events_ = [click_event, *Card._anvil_events_]
+  _anvil_properties_ = [enabled_property, *Card._anvil_properties_]
+  
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    
+    self.dom_nodes['anvil-m3-card'].classList.toggle('interactive', True)
+    self.handle_click = self.handle_click
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-card'].addEventListener("click", self.handle_click)
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-card'].removeEventListener("click", self.handle_click)
+
+  def handle_click(self, event):
+    event.preventDefault()
+    self.raise_event("click")
