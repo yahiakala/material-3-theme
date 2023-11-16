@@ -349,7 +349,7 @@ components:
         - name: column_panel_2_copy_3
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 125.265625}
           components:
           - name: text_1_copy_3_copy_4
             properties: {text: World Impact, style: label, scale: medium}
@@ -388,7 +388,7 @@ components:
         - name: column_panel_2_copy_3_copy_1
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 118.46875}
           components:
           - name: text_1_copy_3_copy_4_copy_1
             properties: {text: World Impact, style: label, scale: medium}
@@ -427,7 +427,7 @@ components:
         - name: column_panel_2_copy_3_copy_2
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 128.46875}
           components:
           - name: text_1_copy_3_copy_4_copy_2
             properties: {text: World Impact, style: label, scale: medium}

@@ -61,7 +61,7 @@
 .anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):active {
   box-shadow: unset; 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface); 
-  border-color: var(--anvil-m3-on-surface)
+  border-color: var(--anvil-m3-outline-variant)
 }
 
 .anvil-m3-card.anvil-m3-filled.interactive:not(.disabled):hover {
