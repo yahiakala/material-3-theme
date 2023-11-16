@@ -55,25 +55,29 @@
 
 
 .anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):hover {
-  background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-1), var(--anvil-m3-on-surface-variant-overlay-1)), var(--anvil-m3-surface); 
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
 .anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):active {
   box-shadow: unset; 
-  background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-2), var(--anvil-m3-on-surface-variant-overlay-2)), var(--anvil-m3-surface); 
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface); 
   border-color: var(--anvil-m3-on-surface)
 }
 
 .anvil-m3-card.anvil-m3-filled.interactive:not(.disabled):hover {
-  background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-1), var(--anvil-m3-on-surface-variant-overlay-1)), var(--anvil-m3-surface); 
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
 .anvil-m3-card.anvil-m3-filled.interactive:not(.disabled):active {
   box-shadow: unset; 
-  background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-2), var(--anvil-m3-on-surface-variant-overlay-2)), var(--anvil-m3-surface); 
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-highest); 
 }
 
 .anvil-m3-card.anvil-m3-elevated.interactive:not(.disabled):hover {
-  background-color: var(--anvil-m3-surface-container-highest); 
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 2 */
+}
+.anvil-m3-card.anvil-m3-elevated.interactive:not(.disabled):active {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
