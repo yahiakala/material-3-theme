@@ -1,8 +1,8 @@
 properties:
 - {name: checked, type: boolean, default_value: false, default_binding_prop: true,
-  description: Whether or not the checkbox is checked, designerHint: toggle}
+  description: Whether or not the checkbox is checked, designerHint: toggle, designer_hint: toggle}
 - {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction,
-  designerHint: enabled}
+  designerHint: enabled, designer_hint: enabled}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state}
 - {name: text, type: string, default_value: '', description: 'The text displayed on
     this component
@@ -11,14 +11,14 @@ properties:
     '}
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
-  designerHint: visible}
+  designerHint: visible, designer_hint: visible}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined,
-  designerHint: font-underline}
+  designerHint: font-underline, designer_hint: font-underline}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
-  designerHint: font-italic}
+  designerHint: font-italic, designer_hint: font-italic}
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
-  designerHint: font-bold}
+  designerHint: font-bold, designer_hint: font-bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.}
 - {name: font, type: string, default_value: '', description: The font family to use for this component.}
 - {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox}
@@ -30,6 +30,7 @@ properties:
   description: Align this component’s text
   default_value: left
   designerHint: align-horizontal
+  designer_hint: align-horizontal
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}

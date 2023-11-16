@@ -380,19 +380,19 @@ properties:
   default_value: file_upload
   group: Common
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.,
-  designerHint: enabled, group: Interaction}
+  designerHint: enabled, group: Interaction, designer_hint: enabled}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?', designerHint: visible, group: Appearance}
+    this component be displayed?', designerHint: visible, group: Appearance, designer_hint: visible}
 - {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.,
   group: Appearance}
 - {name: icon_color, type: color, default_value: '', important: false, group: Appearance}
 - {name: background_color, type: color, default_value: '', important: false, group: Appearance}
 - {name: underline, type: boolean, default_value: false, important: true, designerHint: font-underline,
-  description: Display this component’s text underlined, group: Text}
+  description: Display this component’s text underlined, group: Text, designer_hint: font-underline}
 - {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic,
-  group: Text}
+  group: Text, designer_hint: font-italic}
 - {name: bold, type: boolean, default_value: false, important: true, designerHint: font-bold,
-  group: Text}
+  group: Text, designer_hint: font-bold}
 - {name: font, type: string, default_value: '', important: true, description: The font to use for this component.,
   group: Text}
 - {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels,
@@ -406,6 +406,7 @@ properties:
   designerHint: align-horizontal
   default_value: left
   group: Appearance
+  designer_hint: align-horizontal
 - {name: border, type: string, default_value: '', important: false, group: Appearance}
 is_package: true
 events:

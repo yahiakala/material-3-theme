@@ -10,10 +10,11 @@ properties:
   designerHint: align-horizontal
   group: Appearance
   important: true
+  designer_hint: align-horizontal
 - {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
-  group: Text}
+  group: Text, designer_hint: font-bold}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
-  group: Text, designerHint: font-italic}
+  group: Text, designerHint: font-italic, designer_hint: font-italic}
 - {name: font, type: string, default_value: '', description: The font to use for this component.,
   group: Text}
 - {name: font_size, type: number, group: Text, description: The height of text displayed on this component in pixels}
@@ -382,9 +383,9 @@ properties:
   group: Icon
   important: true
 - {name: underline, type: boolean, default_value: true, designerHint: font-underline,
-  description: Display this component’s text underlined, group: Text}
+  description: Display this component’s text underlined, group: Text, designer_hint: font-underline}
 - {name: visible, type: boolean, default_value: true, description: 'Should this component
-    be displayed?', group: Appearance, designerHint: visible, important: true}
+    be displayed?', group: Appearance, designerHint: visible, important: true, designer_hint: visible}
 - {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text,
   important: true}
 - {name: icon_color, type: color, default_value: '', group: Icon, description: The color of the icon,
