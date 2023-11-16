@@ -12,8 +12,7 @@ properties:
   important: true
   options: [elevated, filled, outlined]
   default_value: elevated
-- {name: card_image, type: string, default_value: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  important: true}
+- {name: card_image, type: string, default_value: '', important: true}
 - name: image_position
   type: enum
   important: true
@@ -28,9 +27,9 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:\
       \ flex\">\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n  \
       \  <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
-      >\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"card-image-slot\"\
-      \ style=\"color: #BBB\"><i>Image Content</i></p>\n    </div>\n    <div anvil-slot=\"\
-      card-content-slot\" anvil-name=\"content\" class=\"anvil-m3-card-content\">\n\
-      \      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
+      \ style=\"background-image: '' \">\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"\
+      card-image-slot\" style=\"color: #BBB\"><i>Image Content</i></p>\n    </div>\n\
+      \    <div anvil-slot=\"card-content-slot\" anvil-name=\"content\" class=\"anvil-m3-card-content\"\
+      >\n      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
       \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n</div>"}
 custom_component_container: true

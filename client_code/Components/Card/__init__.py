@@ -46,7 +46,7 @@ class Card(CardTemplate):
     if value:
       self.dom_nodes['image'].style.backgroundImage = f"url('{value}')";
     else:
-      self.dom_nodes['image'].style.element.style.removeProperty = "background-image"
+      self.dom_nodes['image'].style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", set_image)
 
   def set_rounded_img(self, value):
