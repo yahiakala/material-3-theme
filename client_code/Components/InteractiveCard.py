@@ -11,11 +11,10 @@ from ..Functions import property_with_callback
 # selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "Icon color when component is in the selected state."}
 click_event = {"name": "click", "default_event": True, "description": "When the component is clicked"}
 class InteractiveCard(Card):
-  dir(*Card)
-#   _anvil_events_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
+  _anvil_events_ = [click_event, *Card._anvil_events_]
   def __init__(self, **properties):
     super().__init__(**properties)
-#     self.init_components(**properties)
+    self.init_components(**properties)
   
 #     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
 #     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)   
