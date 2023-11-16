@@ -52,3 +52,21 @@
 .anvil-m3-card-content-container{
   margin: 0 16px;
 }
+
+
+.anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):hover {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface); 
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
+}
+.anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):active {
+  border-color: var(--anvil-m3-on-surface)
+}
+
+.anvil-m3-card.anvil-m3-filled.interactive:not(.disabled):hover {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
+}
+
+.anvil-m3-card.anvil-m3-elevated.interactive:not(.disabled):hover {
+  background-color: var(--anvil-m3-surface-container-highest); 
+}
