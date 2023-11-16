@@ -42,6 +42,8 @@ class Card(CardTemplate):
     self.set_class_of_nodes(value, True)
   appearance = property_with_callback("appearance", set_appearance)
 
+
+  # Todo: this will change from string to the URI property
   def set_image(self, value):
     if value:
       self.dom_nodes['image'].style.backgroundImage = f"url('{value}')";
@@ -52,18 +54,3 @@ class Card(CardTemplate):
   def set_rounded_img(self, value):
      self.dom_nodes['image'].classList.toggle('anvil-m3-card-rounded', value)
   rounded_image = property_with_callback("rounded_image", set_rounded_img)
-
-"""
-
-<div anvil-name="anvil-m3-card-component" style-"display: flex">
-  <div anvil-name="anvil-m3-card" class="anvil-m3-card">
-    <div anvil-slot="card-image-slot" anvil-name="image" class="anvil-m3-card-image">
-      <p anvil-name="empty-image" anvil-if-slot-empty="card-image-slot" > IMG </p>
-    </div>
-    <div anvil-slot="card-content-slot" anvil-name="content" class="anvil-m3-card-content">
-      <p anvil-name="empty-content" anvil-if-slot-empty="card-content-slot" > CONT </p>
-    </div>
-  </div>
-</div>
-
-"""
