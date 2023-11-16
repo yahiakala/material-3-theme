@@ -9,9 +9,10 @@ from ..Functions import property_with_callback
 # selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
 # selected_background_property = {"name": "selected_background", "type": "color", "group": "Toggled Style" , "description": "Background color when component is in the selected state."}
 # selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "Icon color when component is in the selected state."}
-
+click_event = {"name": "click", "default_event": True, "description": "When the component is clicked"}
 class InteractiveCard(Card):
-#   _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
+  dir(*Card)
+#   _anvil_events_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
   def __init__(self, **properties):
     super().__init__(**properties)
 #     self.init_components(**properties)
