@@ -59,7 +59,7 @@ components:
               properties: {}
               type: form:Components.ToggleIconButton
             - name: toggle_icon_button_1_copy_1
-              properties: {appearance: Filled}
+              properties: {appearance: Filled, selected: false}
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_2

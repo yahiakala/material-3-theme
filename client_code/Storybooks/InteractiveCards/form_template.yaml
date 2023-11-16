@@ -15,8 +15,8 @@ components:
     components:
     - name: card_1
       properties: {visible: true, image_position: full, appearance: outlined, rounded_image: false,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-      type: form:Components.Card
+        enabled: true}
+      type: form:Components.InteractiveCard
       layout_properties: {grid_position: 'LDPGIN,DPTQSU OCPHHP,HTHDCL'}
       components:
       - name: flow_panel_1
@@ -46,10 +46,12 @@ components:
               properties: {appearance: filled, text: button 2}
               type: form:Components.Button
               layout_properties: {}
+      event_bindings: {}
     - name: card_1_copy_1
       properties: {visible: true, image_position: top, appearance: outlined, rounded_image: true,
-        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-      type: form:Components.Card
+        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        enabled: false}
+      type: form:Components.InteractiveCard
       layout_properties: {grid_position: 'LDPGIN,DPTQSU DANKLW,PDHWWF'}
       components:
       - name: card_content_container_2
@@ -58,7 +60,7 @@ components:
         layout_properties: {slot: card-content-slot}
         components:
         - name: text_1
-          properties: {text: World Impact, style: label, scale: medium}
+          properties: {text: World Impact - disabled, style: label, scale: medium}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_2
@@ -77,8 +79,8 @@ components:
           layout_properties: {width: 171}
   - name: card_1_copy_3
     properties: {visible: true, image_position: full, appearance: filled, rounded_image: false,
-      card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'CMOZPE,SAZFNR ESZWFF,CYEHHP'}
     components:
     - name: flow_panel_1_copy_3
@@ -110,8 +112,9 @@ components:
             layout_properties: {}
   - name: card_1_copy_1_copy_3
     properties: {visible: true, image_position: top, appearance: filled, rounded_image: true,
-      card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+      card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'CMOZPE,SAZFNR IVCWNM,APNSTC'}
     components:
     - name: card_content_container_2_copy_1
@@ -120,7 +123,7 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: text_1_copy_1
-        properties: {text: World Impact, style: label, scale: medium}
+        properties: {text: World Impact - disabled, style: label, scale: medium}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_2_copy_1
@@ -138,8 +141,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_3_copy_1
-    properties: {visible: true, image_position: full, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: full, enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'CMOZPE,BUZDSS DXIOLN,GICWVP'}
     components:
     - name: flow_panel_1_copy_4
@@ -170,8 +173,9 @@ components:
             type: form:Components.Button
             layout_properties: {}
   - name: card_1_copy_1_copy_3_copy_1
-    properties: {visible: true, image_position: top, rounded_image: true, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: top, rounded_image: true, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'CMOZPE,BUZDSS ERPACW,JYUITH'}
     components:
     - name: card_content_container_2_copy_2
@@ -180,7 +184,7 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: text_1_copy_2
-        properties: {text: World Impact, style: label, scale: medium}
+        properties: {text: World Impact - disabled, style: label, scale: medium}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_2_copy_2
@@ -199,8 +203,8 @@ components:
         layout_properties: {width: 171}
   - name: card_1_copy_2
     properties: {visible: true, image_position: left, appearance: outlined, rounded_image: true,
-      card_image: _/theme/icon-512x512.png}
-    type: form:Components.Card
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'AZBIHY,GUQWRP'}
     components:
     - name: flow_panel_2
@@ -242,8 +246,8 @@ components:
         layout_properties: {width: 100}
   - name: card_1_copy_2_copy_3
     properties: {visible: true, image_position: left, appearance: filled, rounded_image: true,
-      card_image: _/theme/icon-512x512.png}
-    type: form:Components.Card
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'AZBIHY,KKZPAQ'}
     components:
     - name: flow_panel_2_copy_1
@@ -285,8 +289,8 @@ components:
         layout_properties: {width: 100}
   - name: card_1_copy_2_copy_1
     properties: {visible: true, image_position: left, appearance: elevated, rounded_image: true,
-      card_image: _/theme/icon-512x512.png}
-    type: form:Components.Card
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'AZBIHY,LRFVEG'}
     components:
     - name: flow_panel_2_copy_2
@@ -327,8 +331,9 @@ components:
         type: Spacer
         layout_properties: {width: 100}
   - name: card_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: right, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: right, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'RITAPV,NOBDJK'}
     components:
     - name: card_content_container_3_copy_3
@@ -344,7 +349,7 @@ components:
         - name: column_panel_2_copy_3
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 125.265625}
           components:
           - name: text_1_copy_3_copy_4
             properties: {text: World Impact, style: label, scale: medium}
@@ -365,8 +370,9 @@ components:
         type: Spacer
         layout_properties: {width: 55}
   - name: card_1_copy_1_copy_1_copy_1_copy_2
-    properties: {visible: true, image_position: right, appearance: filled, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: right, appearance: filled, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'RITAPV,UWDBXG'}
     components:
     - name: card_content_container_3_copy_3_copy_1
@@ -382,7 +388,7 @@ components:
         - name: column_panel_2_copy_3_copy_1
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 118.46875}
           components:
           - name: text_1_copy_3_copy_4_copy_1
             properties: {text: World Impact, style: label, scale: medium}
@@ -403,8 +409,9 @@ components:
         type: Spacer
         layout_properties: {width: 55}
   - name: card_1_copy_1_copy_1_copy_1_copy_3
-    properties: {visible: true, image_position: right, appearance: elevated, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: right, appearance: elevated, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'RITAPV,NAHOPA'}
     components:
     - name: card_content_container_3_copy_3_copy_2
@@ -420,7 +427,7 @@ components:
         - name: column_panel_2_copy_3_copy_2
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 128.46875}
           components:
           - name: text_1_copy_3_copy_4_copy_2
             properties: {text: World Impact, style: label, scale: medium}
@@ -441,8 +448,8 @@ components:
         type: Spacer
         layout_properties: {width: 55}
   - name: card_1_copy_1_copy_1
-    properties: {visible: true, image_position: bottom, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: bottom, appearance: outlined, enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'GMVWXN,VWYQHA'}
     components:
     - name: card_content_container_2_copy_3
@@ -469,8 +476,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_1_copy_2
-    properties: {visible: true, image_position: bottom, appearance: filled, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: bottom, appearance: filled, enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'GMVWXN,RBUFKX'}
     components:
     - name: card_content_container_2_copy_4
@@ -497,8 +504,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_1_copy_2_copy_1
-    properties: {visible: true, image_position: bottom, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
+    properties: {visible: true, image_position: bottom, enabled: true}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'GMVWXN,YUKEMC'}
     components:
     - name: card_content_container_2_copy_5
@@ -525,8 +532,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_2
-    properties: {visible: true, image_position: none, appearance: outlined}
-    type: form:Components.Card
+    properties: {visible: true, image_position: none, appearance: outlined, enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'UXLNDL,JEOHRM'}
     components:
     - name: card_content_container_4
@@ -583,8 +590,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_2_copy_1
-    properties: {visible: true, image_position: none, appearance: filled}
-    type: form:Components.Card
+    properties: {visible: true, image_position: none, appearance: filled, enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'UXLNDL,PNLXTZ'}
     components:
     - name: card_content_container_4_copy_1
@@ -641,8 +648,8 @@ components:
         type: Spacer
         layout_properties: {width: 171}
   - name: card_1_copy_1_copy_2_copy_1_copy_1
-    properties: {visible: true, image_position: none, card_image: ''}
-    type: form:Components.Card
+    properties: {visible: true, image_position: none, enabled: false}
+    type: form:Components.InteractiveCard
     layout_properties: {grid_position: 'UXLNDL,KMFCXD'}
     components:
     - name: card_content_container_4_copy_2
