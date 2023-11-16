@@ -53,6 +53,12 @@
   margin: 0 16px;
 }
 
+.anvil-m3-card.interactive {
+  cursor: pointer;
+}
+.anvil-m3-card.interactive.disabled {
+  cursor: not-allowed;
+}
 
 .anvil-m3-card.anvil-m3-outlined.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface); 
@@ -63,6 +69,9 @@
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface); 
   border-color: var(--anvil-m3-outline-variant)
 }
+.anvil-m3-card.anvil-m3-outlined.interactive.disabled{
+  opacity: 0.38;
+}
 
 .anvil-m3-card.anvil-m3-filled.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
@@ -72,6 +81,10 @@
   box-shadow: unset; 
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-highest); 
 }
+.anvil-m3-card.anvil-m3-filled.interactive.disabled{
+  opacity: 0.38;
+  background-color: var(--anvil-m3-surface-variant);
+}
 
 .anvil-m3-card.anvil-m3-elevated.interactive:not(.disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-low); 
@@ -80,4 +93,8 @@
 .anvil-m3-card.anvil-m3-elevated.interactive:not(.disabled):active {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
+}
+.anvil-m3-card.anvil-m3-elevated.interactive.disabled{
+  opacity: 0.38;
+  background-color: var(--anvil-m3-surface);
 }
