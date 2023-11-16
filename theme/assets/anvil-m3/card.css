@@ -15,7 +15,7 @@
 .anvil-m3-card.right-image { flex-direction: row-reverse; }
 .anvil-m3-card.full-image { }
 
-.anvil-m3-card.anvil-m3-outlined { border: 1px solid var(--anvil-m3-outline) }
+.anvil-m3-card.anvil-m3-outlined { border: 1px solid var(--anvil-m3-outline-variant); background-color: var(--anvil-m3-surface); }
 .anvil-m3-card.anvil-m3-filled { background-color: var(--anvil-m3-surface-container-highest); }
 .anvil-m3-card.anvil-m3-elevated { 
   background-color: var(--anvil-m3-surface-container-low); 
