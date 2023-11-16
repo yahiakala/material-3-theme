@@ -56,11 +56,13 @@ components:
             layout_properties: {}
             components:
             - name: menu_item_1
-              properties: {text: Item 1, leading_icon: visibility, enabled: false}
+              properties: {text: Item 1, leading_icon: visibility, enabled: false,
+                underline: false, italic: false, bold: false}
               type: form:Components.Menu.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2
-              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C,
+                enabled: true}
               type: form:Components.Menu.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3
@@ -93,7 +95,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             layout_properties: {}
           - name: button_menu_2_copy_2
-            properties: {text: menu 3, appearance: tonal}
+            properties: {text: menu 3, appearance: tonal, visible: true, enabled: true}
             type: form:Components.ButtonMenu
             layout_properties: {}
             components:
