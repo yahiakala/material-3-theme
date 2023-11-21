@@ -32,6 +32,8 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: switch_1
-    properties: {selected: false}
+    properties:
+      selected: false
+      margin: [auto, null, null, null]
     type: form:Components.Switch
     layout_properties: {}
