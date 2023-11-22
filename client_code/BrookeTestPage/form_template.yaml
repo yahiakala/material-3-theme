@@ -37,3 +37,8 @@ components_by_slot:
       margin: [auto, null, null, null]
     type: form:Components.Switch
     layout_properties: {}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
