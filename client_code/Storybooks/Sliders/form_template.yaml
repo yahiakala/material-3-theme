@@ -4,15 +4,10 @@ components:
   properties: {text: Slider Component, font_size: 25, text_color: 'rgb(103, 80, 164)'}
   type: form:Components.Text
   layout_properties: {grid_position: 'NLZEXB,ZFMOMV'}
-- name: card_1
-  properties: {align: left, rounded_image: false}
-  type: form:Components.Card
-  layout_properties: {grid_position: 'IHWXWL,PIHTRR', full_width_row: false}
-  components: []
 - name: slider_1
   properties: {}
   type: form:Components.Slider
-  layout_properties: {grid_position: 'XKUNNG,VZPINL'}
+  layout_properties: {grid_position: 'SBBPDL,GHVCFV'}
 - name: slider_2
   properties: {enabled: false}
   type: form:Components.Slider
