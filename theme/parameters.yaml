@@ -283,9 +283,9 @@ color_scheme:
   - {name: Primary Overlay 3, color: 'rgba(60, 217, 237, 0.11)'}
   - {name: Outline Variant, color: '#BFC8CA'}
   - {name: On Error, color: '#FFFFFF'}
-  - {name: Surface Container Low, color: '#F2F4F4'}
-  - {name: Surface Container Highest, color: '#E1E3E3'}
-  - {name: Disabled Container 2, color: 'rgba(29, 27, 32, 0.04)'}
+  - {name: Surface Container Low, color: '#191C1D'}
+  - {name: Surface Container Highest, color: '#323536'}
+  - {name: Disabled Container 2, color: 'rgba(225, 227, 227,  0.04)'}
   - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
   - {name: Error Overlay 2, color: 'rgba(255, 180, 171, 0.12)'}
   - {name: Dark Overlay 3, color: 'rgba(203, 232, 237,0.16)'}
