@@ -22,7 +22,6 @@ class Slider(SliderTemplate):
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
 
-
   def on_input(self, event):
     self.update_progress()
 
@@ -69,7 +68,6 @@ class Slider(SliderTemplate):
   def do_hide_label(self):
     self.label_container.remove()
     
-
   @property
   def show_label(self):
     return self._show_label
