@@ -286,7 +286,7 @@ color_scheme:
   - {name: Surface Container Low, color: '#F2F4F4'}
   - {name: Surface Container Highest, color: '#E1E3E3'}
   - {name: Disabled Container 2, color: 'rgba(29, 27, 32, 0.04)'}
-  - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
+  - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
   - {name: Error Overlay 2, color: 'rgba(255, 180, 171, 0.12)'}
   - {name: Dark Overlay 3, color: 'rgba(203, 232, 237,0.16)'}
   - {name: On Error Container, color: '#FFDAD6'}
