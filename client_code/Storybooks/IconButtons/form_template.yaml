@@ -23,9 +23,9 @@ components:
         layout_properties: {width: 427}
         components:
         - name: text_1
-          properties: {text: IconButton Component, font_size: 25, text_color: 'rgb(103,
-              80, 164)'}
+          properties: {text: IconButton Component, font_size: 25, text_color: 'theme:Primary'}
           type: form:Components.Text
+          layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text

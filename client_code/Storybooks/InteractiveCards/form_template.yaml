@@ -19,8 +19,7 @@ components:
       layout_properties: {width: 427}
       components:
       - name: text_1_copy_7_copy_2
-        properties: {text: InteractiveCard Component, font_size: 25, text_color: 'rgb(103,
-            80, 164)'}
+        properties: {text: InteractiveCard Component, font_size: 25, text_color: 'theme:Primary'}
         type: form:Components.Text
         layout_properties: {}
       - name: text_2_copy_7_copy_2
