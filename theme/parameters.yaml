@@ -287,13 +287,13 @@ color_scheme:
   - {name: Surface Container Highest, color: '#E1E3E3'}
   - {name: Disabled Container 2, color: 'rgba(29, 27, 32, 0.04)'}
   - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
-  - {name: Error Overlay 2, color: 'rgba(186, 26, 26, 0.12)'}
-  - {name: Dark Overlay 3, color: 'rgba(5, 31, 35, 0.16)'}
-  - {name: On Error Container, color: '#410002'}
-  - {name: Surface Container, color: '#ECEEEF'}
-  - {name: Inverse Surface, color: '#2E3132'}
-  - {name: Inverse On Surface, color: '#EFF1F1'}
-  - {name: On Surface Variant Overlay 1, color: 'rgba(63,72,74, 0.08)'}
-  - {name: On Surface Variant Overlay 2, color: 'rgba(63,72,74, 0.12)'}
-  - {name: Inverse On Surface Overlay 1, color: 'rgba(239,241,241, 0.08)'}
-  - {name: Inverse On Surface Overlay 2, color: 'rgba(239,241,2410.12)'}
+  - {name: Error Overlay 2, color: 'rgba(255, 180, 171, 0.12)'}
+  - {name: Dark Overlay 3, color: 'rgba(203, 232, 237,0.16)'}
+  - {name: On Error Container, color: '#FFDAD6'}
+  - {name: Surface Container, color: '#1D2021'}
+  - {name: Inverse Surface, color: '#E1E3E3'}
+  - {name: Inverse On Surface, color: '#191C1D'}
+  - {name: On Surface Variant Overlay 1, color: 'rgba(191,200,202, 0.08)'}
+  - {name: On Surface Variant Overlay 2, color: 'rgba(191,200,202, 0.12)'}
+  - {name: Inverse On Surface Overlay 1, color: 'rgba(25,28,29, 0.08)'}
+  - {name: Inverse On Surface Overlay 2, color: 'rgba(25,28,29,0.12)'}
