@@ -252,41 +252,41 @@ color_scheme:
       - {name: Primary Overlay 2, color: 'rgba(255, 181, 155, 0.08)'}
       - {name: Primary Overlay 3, color: 'rgba(255, 181, 155, 0.11)'}
   colors:
-  - {name: Primary, color: '#D0BCFF'}
-  - {name: Primary Container, color: '#4F378B'}
-  - {name: On Primary, color: '#371E73'}
-  - {name: On Primary Container, color: '#EADDFF'}
-  - {name: Secondary, color: '#CCC2DC'}
-  - {name: Secondary Container, color: '#4A4458'}
-  - {name: On Secondary, color: '#332D41'}
-  - {name: On Secondary Container, color: '#E8DEF8'}
-  - {name: Tertiary, color: '#EFB8C8'}
-  - {name: Tertiary Container, color: '#633B48'}
-  - {name: On Tertiary, color: '#492532'}
-  - {name: On Tertiary Container, color: '#FFD8E4'}
-  - {name: Error, color: '#F2B8B5'}
-  - {name: Background, color: '#1C1B1F'}
-  - {name: Surface, color: '#1C1B1F'}
-  - {name: On Background, color: '#E6E1E5'}
-  - {name: On Surface, color: '#E6E1E5'}
-  - {name: Surface Variant, color: '#49454F'}
-  - {name: On Surface Variant, color: '#CAC4D0'}
-  - {name: Outline, color: '#938F99'}
-  - {name: On Disabled, color: 'rgba(230, 225, 229, 0.38)'}
-  - {name: Disabled Container, color: 'rgba(230, 225, 229, 0.12)'}
-  - {name: Light Overlay 1, color: 'rgba(232, 222, 248, 0.08)'}
-  - {name: Light Overlay 2, color: 'rgba(232, 222, 248, 0.12)'}
-  - {name: Dark Overlay 1, color: 'rgba(232, 222, 248, 0.08)'}
-  - {name: Dark Overlay 2, color: 'rgba(232, 222, 248, 0.12)'}
-  - {name: Primary Overlay 1, color: 'rgba(208, 188, 255, 0.05)'}
-  - {name: Primary Overlay 2, color: 'rgba(208, 188, 255, 0.08)'}
-  - {name: Primary Overlay 3, color: 'rgba(208, 188, 255, 0.11)'}
-  - {name: Outline Variant, color: '#3F484A'}
-  - {name: On Error, color: '#690005'}
-  - {name: Surface Container Low, color: '#191C1D'}
-  - {name: Surface Container Highest, color: '#323536'}
-  - {name: Disabled Container 2, color: 'rgba(225, 227, 227,  0.04)'}
-  - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
+  - {name: Primary, color: '#006C48'}
+  - {name: Primary Container, color: '#00A36C'}
+  - {name: On Primary, color: '#FFFFFF'}
+  - {name: On Primary Container, color: '#002113'}
+  - {name: Secondary, color: '#496455'}
+  - {name: Secondary Container, color: '#CBEAD6'}
+  - {name: On Secondary, color: '#FFFFFF'}
+  - {name: On Secondary Container, color: '#052014'}
+  - {name: Tertiary, color: '#326576'}
+  - {name: Tertiary Container, color: '#B8EAFF'}
+  - {name: On Tertiary, color: '#FFFFFF'}
+  - {name: On Tertiary Container, color: '#001F28'}
+  - {name: Error, color: '#D64D47'}
+  - {name: Background, color: '#FBFDF8'}
+  - {name: Surface, color: '#FBFDF8'}
+  - {name: On Background, color: '#191C1A'}
+  - {name: On Surface, color: '#191C1A'}
+  - {name: Surface Variant, color: '#DCE5DD'}
+  - {name: On Surface Variant, color: '#404943'}
+  - {name: Outline, color: '#707973'}
+  - {name: On Disabled, color: 'rgba(25, 28, 26, 0.38)'}
+  - {name: Disabled Container, color: 'rgba(25, 28, 26, 0.12)'}
+  - {name: Light Overlay 1, color: 'rgba(255, 255, 255, 0.8)'}
+  - {name: Light Overlay 2, color: 'rgba(255, 255, 255, 0.12)'}
+  - {name: Dark Overlay 1, color: 'rgba(5, 32, 20, 0.8)'}
+  - {name: Dark Overlay 2, color: 'rgba(51, 51, 61, 0.12)'}
+  - {name: Primary Overlay 1, color: 'rgba(0, 108, 72, 0.05)'}
+  - {name: Primary Overlay 2, color: 'rgba(0, 108, 72, 0.08)'}
+  - {name: Primary Overlay 3, color: 'rgba(0, 108, 72, 0.11)'}
+  - {name: Outline Variant, color: '#49454F'}
+  - {name: On Error, color: '#601410'}
+  - {name: Surface Container Low, color: '#1D1B20'}
+  - {name: Surface Container Highest, color: '#36343B'}
+  - {name: Disabled Container 2, color: 'rgba(230, 224, 233,  0.04)'}
+  - {name: Error Overlay 1, color: 'rgba(242, 184, 181, 0.08)'}
   - {name: Error Overlay 2, color: 'rgba(242, 184, 181, 0.12)'}
   - {name: Dark Overlay 3, color: 'rgba(232, 222, 248,0.16)'}
   - {name: On Error Container, color: '#F9DEDC'}
