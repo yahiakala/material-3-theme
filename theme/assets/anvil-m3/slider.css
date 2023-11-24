@@ -94,7 +94,6 @@
 
 .anvil-m3-slider-label { transform: rotate(135deg); }
 
-
 .anvil-m3-slider input:disabled::-webkit-slider-runnable-track { cursor: not-allowed; }
 .anvil-m3-slider input:disabled::-webkit-slider-thumb { 
   background: linear-gradient(0deg, var(--anvil-m3-on-disabled), var(--anvil-m3-on-disabled)), var(--anvil-m3-surface); 
