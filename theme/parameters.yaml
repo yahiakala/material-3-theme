@@ -293,7 +293,7 @@ color_scheme:
   - {name: Surface Container, color: '#211F26'}
   - {name: Inverse Surface, color: '#E6E0E9'}
   - {name: Inverse On Surface, color: '#322F35'}
-  - {name: On Surface Variant Overlay 1, color: 'rgba(202,196,208, 0.08)'}
-  - {name: On Surface Variant Overlay 2, color: 'rgba(1202,196,208, 0.12)'}
-  - {name: Inverse On Surface Overlay 1, color: 'rgba(50,47,53, 0.08)'}
-  - {name: Inverse On Surface Overlay 2, color: 'rgba(50,47,53,0.12)'}
+  - {name: On Surface Variant Overlay 1, color: 'rgba(64,73,67, 0.08)'}
+  - {name: On Surface Variant Overlay 2, color: 'rgba(64,73,67, 0.12)'}
+  - {name: Inverse On Surface Overlay 1, color: 'rgba(239,241,237, 0.08)'}
+  - {name: Inverse On Surface Overlay 2, color: 'rgba(239,241,237,0.12)'}
