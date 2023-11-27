@@ -43,7 +43,7 @@ class Card(CardTemplate):
   appearance = property_with_callback("appearance", set_appearance)
 
   image_width = align = style_property('image', 'width', 'image_width')
-  image_height = align = style_property('image', 'height', 'image_width')
+  image_height = align = style_property('image', 'height', 'image_height')
 
   # Todo: this will change from string to the URI property
   def set_image(self, value):
