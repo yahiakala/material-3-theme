@@ -130,8 +130,8 @@ components:
           type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined_copy
-      properties: {appearance: outlined, image_position: left, image_height: 30px,
-        card_image: _/theme/icon-512x512.png, rounded_image: false, image_width: 30px}
+      properties: {appearance: outlined, image_position: left, image_height: 50px,
+        card_image: _/theme/icon-512x512.png, rounded_image: false, image_width: 50px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
       components:
