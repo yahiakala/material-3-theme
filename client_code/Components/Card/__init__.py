@@ -16,7 +16,7 @@ class Card(CardTemplate):
       self.dom_nodes['empty-image'].style.display = "none"
       self.dom_nodes['empty-content'].style.display = "none"
 
-  align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
+  # align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
 
   def set_nodes_class_by_image(self, image_position, val):
@@ -42,6 +42,8 @@ class Card(CardTemplate):
     self.set_class_of_nodes(value, True)
   appearance = property_with_callback("appearance", set_appearance)
 
+  image_width = align = style_property('image', 'width', 'image_width')
+  image_height = align = style_property('image', 'height', 'image_height')
 
   # Todo: this will change from string to the URI property
   def set_image(self, value):

@@ -1,35 +1,32 @@
 properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
   designer_hint: visible}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right]
-  default_value: left
-  designer_hint: align-horizontal
 - name: appearance
   type: enum
   important: true
   options: [elevated, filled, outlined]
   default_value: elevated
-- {name: card_image, type: string, default_value: '', important: true}
+- {name: card_image, type: uri, important: true, accept: image/*}
 - name: image_position
   type: enum
   important: true
   options: [none, top, left, right, bottom, full]
   default_value: none
 - {name: rounded_image, type: boolean, default_value: false, important: true}
+- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height}
+- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width}
 is_package: true
 custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:\
-      \ flex\">\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n  \
-      \  <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
+  properties: {html: "<!-- <div anvil-name=\"anvil-m3-card-component\" style=\"display:\
+      \ flex\"> -->\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n\
+      \    <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
       \ style=\"background-image: '' \">\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"\
       card-image-slot\" style=\"color: #BBB\"><i>Image Content</i></p>\n    </div>\n\
       \    <div anvil-slot=\"card-content-slot\" anvil-name=\"content\" class=\"anvil-m3-card-content\"\
       >\n      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
-      \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n</div>"}
+      \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n<!--\
+      \ </div> -->"}
 custom_component_container: true
