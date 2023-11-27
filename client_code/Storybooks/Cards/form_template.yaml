@@ -146,6 +146,26 @@ components:
         properties: {text: Title}
         type: form:Components.Heading
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_3
+        properties: {text: Sub Title, style: label, scale: small}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_4
+        properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quisque a mollis mi, id consequat nisl. Donec justo sapien, pellentesque
+            nec mi nec, fermentum iaculis urna. Aliquam dolor nibh, aliquam in luctus
+            nec, molestie at lectus. Mauris porta diam id sem bibendum, ut egestas
+            elit sagittis. Aenean facilisis ex sed vehicula feugiat.'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: flow_panel_5
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: button_1_copy
+        properties: {appearance: filled, text: Click}
+        type: form:Components.Button
   - name: card_content_container_2_copy_3
     properties: {}
     type: form:Components.Card.CardContentContainer
@@ -160,33 +180,3 @@ components:
           Disabled'}
       type: form:Components.Text
       layout_properties: {slot: anvil-m3-card-content-container-slot}
-  - name: flow_panel_4
-    properties: {}
-    type: FlowPanel
-    layout_properties: {grid_position: 'NAAADZ,IUUTHF'}
-    components:
-    - name: column_panel_3
-      properties: {}
-      type: ColumnPanel
-      layout_properties: {width: 259}
-      components:
-      - name: text_3
-        properties: {text: Sub Title, style: label, scale: small}
-        type: form:Components.Text
-        layout_properties: {grid_position: 'XZISUH,MDPZDS'}
-      - name: text_4
-        properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Quisque a mollis mi, id consequat nisl. Donec justo sapien, pellentesque
-            nec mi nec, fermentum iaculis urna. Aliquam dolor nibh, aliquam in luctus
-            nec, molestie at lectus. Mauris porta diam id sem bibendum, ut egestas
-            elit sagittis. Aenean facilisis ex sed vehicula feugiat.'}
-        type: form:Components.Text
-        layout_properties: {grid_position: 'GHLVXK,ZMHTPN'}
-      - name: flow_panel_5
-        properties: {align: right}
-        type: FlowPanel
-        layout_properties: {grid_position: 'JNJZTL,CHZSLE'}
-        components:
-        - name: button_1_copy
-          properties: {appearance: filled, text: Click}
-          type: form:Components.Button
