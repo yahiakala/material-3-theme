@@ -16,7 +16,7 @@ class Card(CardTemplate):
       self.dom_nodes['empty-image'].style.display = "none"
       self.dom_nodes['empty-content'].style.display = "none"
 
-  align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
+  # align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
 
   def set_nodes_class_by_image(self, image_position, val):
