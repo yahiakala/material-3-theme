@@ -28,8 +28,6 @@
 .anvil-m3-card-image {
   min-width: 24px;
   min-height: 24px;
-/*   width: 100%; */
-/*   height: 100%; */
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -51,6 +49,8 @@
 
 
 .anvil-m3-card-content {
+  display: flex;
+  flex-direction: column;
 }
 .anvil-m3-card-content.none-image { }
 .anvil-m3-card-content.top-image { }
