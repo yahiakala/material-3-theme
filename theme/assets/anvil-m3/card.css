@@ -63,6 +63,9 @@
 .anvil-m3-card-content-container{
   width: 100%;
   margin: 0 16px;
+  
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .anvil-m3-card.interactive {
