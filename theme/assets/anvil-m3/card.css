@@ -28,8 +28,8 @@
 .anvil-m3-card-image {
   min-width: 24px;
   min-height: 24px;
-  width: 100%;
-  height: 100%;
+/*   width: 100%; */
+/*   height: 100%; */
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -39,19 +39,15 @@
 }
 .anvil-m3-card-image.none-image { display: none }
 .anvil-m3-card-image.top-image {
-  width: 100%
 }
 .anvil-m3-card-image.bottom-image { 
-  width: 100%
 }
 .anvil-m3-card-image.left-image { 
-  height: 100%
 }
 .anvil-m3-card-image.right-image {
-  height: 100%
  }
 .anvil-m3-card-image.full-image {
- }
+}
 
 
 .anvil-m3-card-content {

@@ -13,8 +13,8 @@ properties:
   options: [none, top, left, right, bottom, full]
   default_value: none
 - {name: rounded_image, type: boolean, default_value: false, important: true}
-- {name: image_height, type: string, important: true, default_value: 100%, description: Any valid CSS value for image height}
-- {name: image_width, type: string, important: true, default_value: 100%, description: Any valid CSS value for image width}
+- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height}
+- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width}
 is_package: true
 custom_component: true
 components: []
