@@ -42,9 +42,12 @@ class Card(CardTemplate):
     self.set_class_of_nodes(value, True)
   appearance = property_with_callback("appearance", set_appearance)
 
-  def set_size(self, prop, value):
-    self.dom_nodes['image'].style.[prop] = value
-  # image_width = pro
+  def set_width(self, value):
+    self.dom_nodes['image'].style.width = value
+  image_width = property_with_callback('image_width', set_width)
+  def set_height(self, value):
+    self.dom_nodes['image'].style.height = value
+  image_width = property_with_callback('image_width', set_width)
 
 
   # Todo: this will change from string to the URI property
