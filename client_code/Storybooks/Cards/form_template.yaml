@@ -32,23 +32,60 @@ components:
     components:
     - name: full_outline
       properties: {rounded_image: false, appearance: outlined, image_position: full,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image_height: 250p}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ'}
-      components: []
+      components:
+      - name: full_title_heading_1
+        properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On
+            Primary'}
+        type: form:Components.Heading
+        layout_properties: {slot: card-image-slot}
+      - name: text_5
+        properties: {align: center, text: 'Material 3 is the latest version of Google’s
+            open-source design system. Design and build beautiful, usable products
+            with Material 3.', text_color: 'theme:On Primary'}
+        type: form:Components.Text
+        layout_properties: {slot: card-image-slot}
+      - name: button_2
+        properties: {appearance: tonal, text: button 1}
+        type: form:Components.Button
+        layout_properties: {slot: card-image-slot}
     - name: full_elevated
       properties: {rounded_image: false, appearance: elevated, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_width: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO'}
+      components:
+      - name: full_title_heading_2
+        properties: {text: Material Design, align: center, text_color: 'theme:On Primary'}
+        type: form:Components.Heading
+        layout_properties: {slot: card-image-slot}
+      - name: text_5_copy
+        properties: {align: center, text: 'Material 3 is the latest version of Google’s
+            open-source design system. Design and build beautiful, usable products
+            with Material 3.', text_color: 'theme:On Primary'}
+        type: form:Components.Text
+        layout_properties: {slot: card-image-slot}
     - name: full_filled
       properties: {rounded_image: false, appearance: filled, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_height: '', image_width: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI'}
-      components: []
+      components:
+      - name: full_title_heading_3
+        properties: {align: center, text: Material Design, text_color: 'theme:On Primary'}
+        type: form:Components.Heading
+        layout_properties: {slot: card-image-slot}
+      - name: text_5_copy_copy
+        properties: {align: center, text: 'Material 3 is the latest version of Google’s
+            open-source design system. Design and build beautiful, usable products
+            with Material 3.', text_color: 'theme:On Primary'}
+        type: form:Components.Text
+        layout_properties: {slot: card-image-slot}
   - name: full_image
     properties: {visible: true, image_position: full, appearance: outlined, rounded_image: false,
       card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
@@ -68,20 +105,14 @@ components:
         - name: heading_2
           properties: {align: center, text: Heading, text_color: ''}
           type: form:Components.Heading
-          layout_properties: {}
         - name: flow_panel_6
           properties: {align: center}
           type: FlowPanel
           layout_properties: {}
-          components:
-          - name: button_2
-            properties: {appearance: tonal, text: button 1}
-            type: form:Components.Button
-            layout_properties: {}
-          - name: button_3
-            properties: {appearance: filled, text: button 2}
-            type: form:Components.Button
-            layout_properties: {}
+          components: []
+        - name: button_3
+          properties: {appearance: tonal, text: button 2}
+          type: form:Components.Button
   - name: top_image
     properties: {visible: true, image_position: top, appearance: outlined, rounded_image: true,
       card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
