@@ -29,10 +29,14 @@ class Heading(HeadingTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-heading'])
+        "execute": self.start_inline_editing
       }
     }]
 
+  def start_inline_editing(self):
+    print(self.style)
+
+    
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
   border = border_property('anvil-m3-heading-container')
