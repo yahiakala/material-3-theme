@@ -51,7 +51,6 @@
 
 
 .anvil-m3-card-content {
-/*   background: yellow; */
 }
 .anvil-m3-card-content.none-image { }
 .anvil-m3-card-content.top-image { }
@@ -64,8 +63,7 @@
   width: 100%;
   margin: 0 16px;
   
-  flex-grow: 1;
-  flex-shrink: 1;
+  background: yellow;
 }
 
 .anvil-m3-card.interactive {
