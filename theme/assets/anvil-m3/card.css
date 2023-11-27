@@ -60,7 +60,7 @@
 .anvil-m3-card-content.full-image { display: none }
 
 .anvil-m3-card-content-container{
-  width: 100%;
+/*   width: 100%; */
   margin: 0 16px;
   
   background: yellow;
