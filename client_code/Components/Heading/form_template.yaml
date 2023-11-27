@@ -16,10 +16,12 @@ properties:
   default_binding_prop: true
   options: [display, headline, title]
   default_value: headline
+  group: Appearance
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
+  group: Appearance
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels}
 - {name: font, type: string, default_value: '', description: The font to use for this component.}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
@@ -27,7 +29,7 @@ properties:
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
   designer_hint: font-italic}
 - {name: text, type: string, default_value: '', description: The text displayed on this component,
-  multiline: true}
+  multiline: true, group: Common}
 - {name: underline, type: boolean, default_value: false, description: Whether or not the text should be underlined,
   designer_hint: font-underline}
 - {name: visible, type: boolean, default_value: true, description: Whether or not this component should be displayed on the page,
