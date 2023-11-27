@@ -5,14 +5,12 @@ import anvil.js
 from ...Functions import enabled_property
 
 # todo: does this work on a free plan?
-# todo: clean up event handlers
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
-    self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
-    self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     # todo: put this in a resize observer
     anvil.js.window.addEventListener("resize", self.on_window_resize)
     
@@ -21,6 +19,14 @@ class Slider(SliderTemplate):
     self.label = document.createElement('div')
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
+
+  def on_mount(self, **event_args):
+    self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
+    self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
+
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
+    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
 
   def on_input(self, event):
     self.update_progress()
