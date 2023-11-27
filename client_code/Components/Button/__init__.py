@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, font_family_property, font_size_property
+from ...Functions import color_property, font_family_property, font_size_property, style_property
 
 import anvil.designer
 
@@ -16,6 +16,8 @@ class Button(ButtonTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
+    
+  align = style_property('anvil-m3-button-component', 'justifyContent', 'align') 
 
   def handle_click(self, event):
     event.preventDefault()

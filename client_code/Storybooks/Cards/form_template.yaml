@@ -35,40 +35,111 @@ components:
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_height: 250p}
       type: form:Components.Card
-      layout_properties: {grid_position: 'VUJILW,XGSWAQ'}
+      layout_properties: {grid_position: 'VUJILW,XGSWAQ ETYKRM,BWCZNC'}
       components:
       - name: full_title_heading_1
         properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On
             Primary'}
         type: form:Components.Heading
         layout_properties: {slot: card-image-slot}
-      - name: text_5
-        properties: {align: center, text: 'Material 3 is the latest version of Google’s
-            open-source design system. Design and build beautiful, usable products
-            with Material 3.', text_color: 'theme:On Primary'}
-        type: form:Components.Text
+      - name: card_content_container_6
+        properties: {}
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-image-slot}
-      - name: button_2
-        properties: {appearance: tonal, text: button 1}
-        type: form:Components.Button
+        components:
+        - name: text_5
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s
+              open-source design system. Design and build beautiful, usable products
+              with Material 3.', text_color: 'theme:On Primary'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_2
+          properties: {appearance: filled, text: Get started, align: center}
+          type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: full_outline_copy
+      properties: {rounded_image: false, appearance: outlined, image_position: full,
+        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image_height: 250p}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,XGSWAQ XIYRNO,PLBCPE'}
+      components:
+      - name: full_title_heading_1_copy
+        properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On
+            Primary'}
+        type: form:Components.Heading
         layout_properties: {slot: card-image-slot}
+      - name: card_content_container_6_copy
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-image-slot}
+        components:
+        - name: text_5_copy_2
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s
+              open-source design system. Design and build beautiful, usable products
+              with Material 3.', text_color: 'theme:On Primary'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: full_elevated
       properties: {rounded_image: false, appearance: elevated, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_width: ''}
       type: form:Components.Card
-      layout_properties: {grid_position: 'VUJILW,WREAWO'}
+      layout_properties: {grid_position: 'VUJILW,WREAWO TFZXFM,GWNOJK'}
       components:
       - name: full_title_heading_2
         properties: {text: Material Design, align: center, text_color: 'theme:On Primary'}
         type: form:Components.Heading
         layout_properties: {slot: card-image-slot}
-      - name: text_5_copy
-        properties: {align: center, text: 'Material 3 is the latest version of Google’s
-            open-source design system. Design and build beautiful, usable products
-            with Material 3.', text_color: 'theme:On Primary'}
-        type: form:Components.Text
+      - name: card_content_container_7
+        properties: {}
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-image-slot}
+        components:
+        - name: text_5_copy
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s
+              open-source design system. Design and build beautiful, usable products
+              with Material 3.', text_color: 'theme:On Primary'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_1
+          properties: {align: center, appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: none_elevated
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,WREAWO ATIACM,XQTZXN'}
+      components:
+      - name: card_content_container_4_copy
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: icon_button_1_copy
+          properties: {align: right, icon: more_vert}
+          type: form:Components.IconButton
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: heading_1_copy
+          properties: {text: Title}
+          type: form:Components.Heading
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_3_copy
+          properties: {text: Sub Title, style: label, scale: small}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_4_copy
+          properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Quisque a mollis mi, id consequat nisl. Donec justo sapien, pellentesque
+              nec mi nec, fermentum iaculis urna. Aliquam dolor nibh, aliquam in luctus
+              nec, molestie at lectus. Mauris porta diam id sem bibendum, ut egestas
+              elit sagittis. Aenean facilisis ex sed vehicula feugiat.'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_2_copy
+          properties: {appearance: filled, text: Get started, align: right}
+          type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: full_filled
       properties: {rounded_image: false, appearance: filled, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -80,39 +151,21 @@ components:
         properties: {align: center, text: Material Design, text_color: 'theme:On Primary'}
         type: form:Components.Heading
         layout_properties: {slot: card-image-slot}
-      - name: text_5_copy_copy
-        properties: {align: center, text: 'Material 3 is the latest version of Google’s
-            open-source design system. Design and build beautiful, usable products
-            with Material 3.', text_color: 'theme:On Primary'}
-        type: form:Components.Text
-        layout_properties: {slot: card-image-slot}
-  - name: full_image
-    properties: {visible: true, image_position: full, appearance: outlined, rounded_image: false,
-      card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'IWKOGQ,VOMBLZ'}
-    components:
-    - name: flow_panel_1
-      properties: {}
-      type: FlowPanel
-      layout_properties: {slot: card-image-slot}
-      components:
-      - name: linear_panel_1
+      - name: card_content_container_8
         properties: {}
-        type: LinearPanel
-        layout_properties: {width: 953}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-image-slot}
         components:
-        - name: heading_2
-          properties: {align: center, text: Heading, text_color: ''}
-          type: form:Components.Heading
-        - name: flow_panel_6
-          properties: {align: center}
-          type: FlowPanel
-          layout_properties: {}
-          components: []
-        - name: button_3
-          properties: {appearance: tonal, text: button 2}
+        - name: text_5_copy_copy
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s
+              open-source design system. Design and build beautiful, usable products
+              with Material 3.', text_color: 'theme:On Primary'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_4
+          properties: {align: center, appearance: filled, text: Get started}
           type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: top_image
     properties: {visible: true, image_position: top, appearance: outlined, rounded_image: true,
       card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

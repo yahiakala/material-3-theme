@@ -377,6 +377,7 @@ properties:
   important: true
   options: [left, center, right]
   default_value: left
+  designer_hint: align-horizontal
 is_package: true
 data_bindings: []
 events:
@@ -385,9 +386,10 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div style=\"display:flex\">\n  <button anvil-name=\"anvil-m3-button\"\
-      \ class=\"anvil-m3-button\">\n    <i anvil-name=\"anvil-m3-button-icon\" class=\"\
-      material-symbols-outlined\" style=\"display: none;\"></i>\n    <span anvil-name=\"\
-      anvil-m3-button-text\"></span>\n  </button>\n</div>"}
+  properties: {html: "<div anvil-name=\"anvil-m3-button-component\" style=\"display:flex\"\
+      >\n  <button anvil-name=\"anvil-m3-button\" class=\"anvil-m3-button\">\n   \
+      \ <i anvil-name=\"anvil-m3-button-icon\" class=\"material-symbols-outlined\"\
+      \ style=\"display: none;\"></i>\n    <span anvil-name=\"anvil-m3-button-text\"\
+      ></span>\n  </button>\n</div>"}
   event_bindings: {show: form_show}
 custom_component_container: false
