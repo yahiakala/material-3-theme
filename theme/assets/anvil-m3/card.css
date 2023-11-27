@@ -52,7 +52,11 @@
   display: flex;
   flex-direction: column;
 }
-.anvil-m3-card-content.none-image { }
+
+.anvil-m3-card-content.none-image {
+    flex-grow: 1;
+  flex-shrink: 1;
+}
 .anvil-m3-card-content.top-image { }
 .anvil-m3-card-content.bottom-image { }
 .anvil-m3-card-content.left-image { }
@@ -62,7 +66,6 @@
 .anvil-m3-card-content-container{
 /*   width: 100%; */
   margin: 0 16px;
-  flex: 1 1 100%;
   background: yellow;
 }
 
