@@ -32,8 +32,8 @@
   background-position: 50%;
   background-size: cover;
   overflow: hidden;
-  flex-grow: 1;
-  flex-shrink: 1;
+/*   flex-grow: 1;
+  flex-shrink: 1; */
 }
 .anvil-m3-card-image.none-image { display: none }
 .anvil-m3-card-image.top-image {
