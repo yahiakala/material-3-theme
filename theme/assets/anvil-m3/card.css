@@ -26,6 +26,8 @@
   border-radius: 10px;
 }
 .anvil-m3-card-image {
+  min-width: 10px;
+  min-height: 10px;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
