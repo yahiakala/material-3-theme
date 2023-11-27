@@ -42,7 +42,7 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components:
-    - name: column_panel_1
+    - name: file_loader_4
       properties: {}
-      type: ColumnPanel
+      type: form:Components.FileLoader
       layout_properties: {slot: card-content-slot}
