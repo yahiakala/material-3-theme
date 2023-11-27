@@ -34,7 +34,8 @@ class Heading(HeadingTemplate):
     }]
 
   def start_inline_editing(self):
-    print(self.style)
+    el_name = f'anvil-m3-heading-{self.style}'
+    anvil.designer.start_inline_editing(self, "text", self.dom_nodes[el_name])
 
     
   visible = HtmlTemplate.visible
@@ -150,11 +151,11 @@ class Heading(HeadingTemplate):
 
   @property
   def scale(self):
-    return self._style
+    return self._scale
 
   @scale.setter
   def scale(self, value):
-    self._style = value
+    self._scale = value
     self.dom_nodes['anvil-m3-heading-display'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-headline'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-title'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
