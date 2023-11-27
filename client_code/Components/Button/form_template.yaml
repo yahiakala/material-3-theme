@@ -372,6 +372,11 @@ properties:
 - {name: font_family, type: string, default_value: ''}
 - {name: font_size, type: string, default_value: ''}
 - {name: icon_size, type: string, default_value: ''}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  default_value: left
 is_package: true
 data_bindings: []
 events:
