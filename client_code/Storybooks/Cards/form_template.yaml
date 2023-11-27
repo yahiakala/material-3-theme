@@ -57,29 +57,88 @@ components:
           properties: {appearance: filled, text: Get started, align: center}
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
-    - name: full_outline_copy
-      properties: {rounded_image: false, appearance: outlined, image_position: full,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: 250p}
+    - name: none_outlined
+      properties: {appearance: outlined}
       type: form:Components.Card
-      layout_properties: {grid_position: 'VUJILW,XGSWAQ XIYRNO,PLBCPE'}
+      layout_properties: {grid_position: 'VUJILW,XGSWAQ MVHMYI,SAKNYT'}
       components:
-      - name: full_title_heading_1_copy
-        properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On
-            Primary'}
-        type: form:Components.Heading
-        layout_properties: {slot: card-image-slot}
-      - name: card_content_container_6_copy
+      - name: card_content_container_4_copy_copy
         properties: {}
         type: form:Components.Card.CardContentContainer
-        layout_properties: {slot: card-image-slot}
+        layout_properties: {slot: card-content-slot}
         components:
-        - name: text_5_copy_2
-          properties: {align: center, text: 'Material 3 is the latest version of Google’s
-              open-source design system. Design and build beautiful, usable products
-              with Material 3.', text_color: 'theme:On Primary'}
+        - name: flow_panel_1_copy
+          properties: {}
+          type: FlowPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: heading_1_copy_copy
+            properties: {text: Title}
+            type: form:Components.Heading
+            layout_properties: {width: 184.28125}
+          - name: icon_button_1_copy_copy
+            properties: {align: right, icon: more_vert}
+            type: form:Components.IconButton
+        - name: text_3_copy_copy
+          properties: {text: Sub Title, style: label, scale: small}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_4_copy_copy
+          properties: {text: Material is a design system - backed by open source code - that helps teams build high-quality digital experiences.}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_2_copy_copy
+          properties: {appearance: tonal, text: Learn more, align: right}
+          type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: top_outlined
+      properties: {appearance: outlined, image_position: top, image_height: 120px,
+        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        rounded_image: true}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,XGSWAQ CBIXCJ,NZLDUT'}
+      components:
+      - name: card_content_container_4_copy_copy_copy_2_copy_2_copy_2
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: heading_1_copy_copy_copy_2_copy_2_copy_2
+          properties: {text: Virtual Life}
+          type: form:Components.Heading
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_3_copy_copy_copy_2_copy_2_copy_2
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
+            icon_color: '#fecb3e'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_1_copy_2
+          properties: {text: Experience life differently through different visual reality games!}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: divider_1_copy_2
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: card-content-slot}
+      - name: card_content_container_3
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: link_1_copy_2
+          properties: {text: Expand, align: right}
+          type: form:Components.Link
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: top_outlined_copy
+      properties: {appearance: outlined, image_position: left, image_height: 30px,
+        card_image: _/theme/icon-512x512.png, rounded_image: false, image_width: 30px}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
+      components:
+      - name: card_content_container_1
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
     - name: full_elevated
       properties: {rounded_image: false, appearance: elevated, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -116,36 +175,74 @@ components:
         type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
-        - name: icon_button_1_copy
-          properties: {align: right, icon: more_vert}
-          type: form:Components.IconButton
+        - name: flow_panel_1
+          properties: {}
+          type: FlowPanel
           layout_properties: {slot: anvil-m3-card-content-container-slot}
-        - name: heading_1_copy
-          properties: {text: Title}
-          type: form:Components.Heading
-          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: heading_1_copy
+            properties: {text: Title}
+            type: form:Components.Heading
+            layout_properties: {width: 192.28125}
+          - name: icon_button_1_copy
+            properties: {align: right, icon: more_vert}
+            type: form:Components.IconButton
         - name: text_3_copy
           properties: {text: Sub Title, style: label, scale: small}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_4_copy
-          properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Quisque a mollis mi, id consequat nisl. Donec justo sapien, pellentesque
-              nec mi nec, fermentum iaculis urna. Aliquam dolor nibh, aliquam in luctus
-              nec, molestie at lectus. Mauris porta diam id sem bibendum, ut egestas
-              elit sagittis. Aenean facilisis ex sed vehicula feugiat.'}
+          properties: {text: Material is a design system - backed by open source code - that helps teams build high-quality digital experiences.}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: button_2_copy
-          properties: {appearance: filled, text: Get started, align: right}
+          properties: {appearance: tonal, text: Learn more, align: right}
           type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: top_elevated
+      properties: {appearance: elevated, image_position: top, image_height: 120px,
+        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        rounded_image: true}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,WREAWO YGIPAY,XNRXKB'}
+      components:
+      - name: card_content_container_4_copy_copy_copy_2_copy_2_copy
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: heading_1_copy_copy_copy_2_copy_2_copy
+          properties: {text: Virtual Life}
+          type: form:Components.Heading
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_3_copy_copy_copy_2_copy_2_copy
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
+            icon_color: '#fecb3e'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_1_copy
+          properties: {text: Experience life differently through different visual reality games!}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: divider_1_copy
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: card-content-slot}
+      - name: card_content_container_9
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: link_1_copy
+          properties: {text: Expand, align: right}
+          type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: full_filled
       properties: {rounded_image: false, appearance: filled, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_height: '', image_width: ''}
       type: form:Components.Card
-      layout_properties: {grid_position: 'VUJILW,YAEOWI'}
+      layout_properties: {grid_position: 'VUJILW,YAEOWI BWFXIR,JIWAFR'}
       components:
       - name: full_title_heading_3
         properties: {align: center, text: Material Design, text_color: 'theme:On Primary'}
@@ -166,125 +263,75 @@ components:
           properties: {align: center, appearance: filled, text: Get started}
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
-  - name: top_image
-    properties: {visible: true, image_position: top, appearance: outlined, rounded_image: true,
-      card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      image_width: '', image_height: 200px}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'WLPINA,SPQPNN'}
-    components:
-    - name: card_content_container_2
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
+    - name: none_filled
+      properties: {appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,YAEOWI JCCLYA,BCRGQW'}
       components:
-      - name: text_1
-        properties: {text: World Impact, style: label, scale: medium}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: text_2
-        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
-            Disabled'}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-  - name: left_image
-    properties: {visible: true, image_position: left, appearance: outlined, rounded_image: true,
-      card_image: _/theme/icon-512x512.png, image_width: 150px, image_height: 300px}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'GVHZUF,GATSXH'}
-    components:
-    - name: flow_panel_2
-      properties: {}
-      type: FlowPanel
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: card_content_container_3
+      - name: card_content_container_4_copy_copy_copy
         properties: {}
         type: form:Components.Card.CardContentContainer
-        layout_properties: {width: 149}
+        layout_properties: {slot: card-content-slot}
         components:
-        - name: column_panel_2
+        - name: flow_panel_1_copy_copy
           properties: {}
-          type: ColumnPanel
+          type: FlowPanel
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
-          - name: text_1_copy_3
-            properties: {text: World Impact, style: label, scale: medium}
-            type: form:Components.Text
-            layout_properties: {grid_position: 'XYNSME,HEDFQG GDHUHZ,FSTNNE'}
-          - name: text_2_copy_3
-            properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
-                Disabled'}
-            type: form:Components.Text
-            layout_properties: {grid_position: 'XYNSME,HEDFQG XTWEIJ,NGHUDE'}
-          - name: text_1_copy_3_copy_1
-            properties: {text: ' ', style: label, scale: medium, material_icon: check_circle}
-            type: form:Components.Text
-            layout_properties: {grid_position: 'XYNSME,XSJTPF'}
-  - name: right_image
-    properties: {visible: true, image_position: right, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'JMHZGG,JBVAFC'}
-    components:
-    - name: card_content_container_1
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-  - name: bottom_image
-    properties: {visible: true, image_position: bottom, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      image_width: '', image_height: ''}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'DIRHOD,JNSUOC'}
-    components:
-    - name: card_content_container_5
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
+          - name: heading_1_copy_copy_copy
+            properties: {text: Title}
+            type: form:Components.Heading
+            layout_properties: {width: 184.28125}
+          - name: icon_button_1_copy_copy_copy
+            properties: {align: right, icon: more_vert}
+            type: form:Components.IconButton
+        - name: text_3_copy_copy_copy
+          properties: {text: Sub Title, style: label, scale: small}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_4_copy_copy_copy
+          properties: {text: Material is a design system - backed by open source code - that helps teams build high-quality digital experiences.}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: button_2_copy_copy_copy
+          properties: {appearance: tonal, text: Learn more, align: right}
+          type: form:Components.Button
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: top_filled
+      properties: {appearance: outlined, image_position: top, image_height: 120px,
+        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        rounded_image: true}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'VUJILW,YAEOWI WZVJAU,BNRZFC'}
       components:
-      - name: text_1_copy_4
-        properties: {text: World Impact, style: label, scale: medium}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: text_2_copy_4
-        properties: {scale: small, style: label, text: 30.2 MB, text_color: 'theme:On
-            Disabled'}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-  - name: no_image
-    properties: {visible: true, image_position: none, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'FLDLFB,SPNRPK'}
-    components:
-    - name: card_content_container_4
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: icon_button_1
-        properties: {align: right, icon: more_vert}
-        type: form:Components.IconButton
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: heading_1
-        properties: {text: Title}
-        type: form:Components.Heading
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: text_3
-        properties: {text: Sub Title, style: label, scale: small}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: text_4
-        properties: {text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Quisque a mollis mi, id consequat nisl. Donec justo sapien, pellentesque
-            nec mi nec, fermentum iaculis urna. Aliquam dolor nibh, aliquam in luctus
-            nec, molestie at lectus. Mauris porta diam id sem bibendum, ut egestas
-            elit sagittis. Aenean facilisis ex sed vehicula feugiat.'}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-    - name: flow_panel_5
-      properties: {align: right}
-      type: FlowPanel
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: button_1_copy
-        properties: {appearance: filled, text: Click}
-        type: form:Components.Button
+      - name: card_content_container_4_copy_copy_copy_2_copy_2
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: heading_1_copy_copy_copy_2_copy_2
+          properties: {text: Virtual Life}
+          type: form:Components.Heading
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_3_copy_copy_copy_2_copy_2
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
+            icon_color: '#fecb3e'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_1
+          properties: {text: Experience life differently through different visual reality games!}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: divider_1
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: card-content-slot}
+      - name: card_content_container_2
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: card-content-slot}
+        components:
+        - name: link_1
+          properties: {text: Expand, align: right}
+          type: form:Components.Link
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
