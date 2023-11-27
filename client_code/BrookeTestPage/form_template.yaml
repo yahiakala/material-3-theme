@@ -37,3 +37,12 @@ components_by_slot:
       margin: [auto, null, null, null]
     type: form:Components.Switch
     layout_properties: {}
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
