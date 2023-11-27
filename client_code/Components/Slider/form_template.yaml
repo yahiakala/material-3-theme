@@ -1,6 +1,6 @@
 properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true}
-- {name: enabled, type: boolean, default_value: true}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled}
 is_package: true
 events: []
 custom_component: true
