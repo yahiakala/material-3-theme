@@ -2,11 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components: []
   - name: link_1
     properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
     type: form:Components.Link

@@ -151,8 +151,11 @@ body {
   }
 }
 
+.anvil-m3-top-app-bar  {
+  display:none;
+}
+
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar {
-    display: none;
     z-index: 1;
     position: fixed;
     transition: background-color .25s;
