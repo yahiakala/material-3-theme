@@ -1,5 +1,10 @@
 /*Inspired by W3 schools slider: https://www.w3schools.com/howto/howto_css_switch.asp*/
 
+element {
+  --anvil-m3-unselected-thumb-color: var(--anvil-m3-outline);
+  --anvil-m3-selected-thumb-color: var(--anvil-m3-on-primary);
+}
+
 .anvil-m3-switch-container {
   display: flex;
 }
@@ -38,7 +43,7 @@
   height: 16px;
   width: 16px;
   margin-left: 6px;
-  background-color: var(--anvil-m3-outline);
+  background-color: var(--anvil-m3-unselected-thumb-color);
   -webkit-transition: height .15s, width .15s, transform .15s .15s;
   transition: height .15s, width .15s, transform .15s .15s;
   border-radius: 50%;
@@ -58,7 +63,7 @@
   -webkit-transform: translate(16px);
   -ms-transform: translate(16px);
   transform: translate(16px);
-  background-color: var(--anvil-m3-on-primary);
+  background-color: var(--anvil-m3-selected-thumb-color);
   height: 24px;
   width: 24px;
 }

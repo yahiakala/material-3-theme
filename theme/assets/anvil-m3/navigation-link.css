@@ -1,3 +1,8 @@
+.anvil-m3-navigation-link-container {
+  display: flex;
+  justify-content: center;
+}
+
 .anvil-m3-navigation-link {
   text-align: center;
   text-decoration: none;
@@ -71,20 +76,26 @@
   border-radius: 6px;
   position: absolute;
   margin-top: -34px;
-  margin-left: 46px;
+  margin-left: 35px;
   font-family: Roboto;
 }
 
 .anvil-m3-navigation-link .anvil-m3-icon-badge.anvil-m3-large-badge {
-  padding: 4px;
-  height: fit-content;
+  padding: 6px;
+  height: 18px;
+  line-height: 7px;
   border-radius: 16px;
   width: fit-content;
   margin-top: -40px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 /*on mobile in drawer*/
+@media(max-width: 600px) {
+.anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container {
+  display: block;
+}
+  
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link {
   display: flex;

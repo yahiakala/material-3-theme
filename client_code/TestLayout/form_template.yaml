@@ -10,7 +10,8 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
   - name: navigation_link_2
-    properties: {material_icon: mail, text: Mail, navigate_to: AnotherPage}
+    properties: {material_icon: mail, text: Mail, navigate_to: AnotherPage, badge: true,
+      badge_count: 11}
     type: form:Components.NavigationLink
     layout_properties: {}
   - name: divider_1
@@ -18,7 +19,7 @@ components_by_slot:
     type: form:Components.Divider
     layout_properties: {}
   - name: navigation_link_3
-    properties: {text: Log out, material_icon: logout}
+    properties: {text: Log out, material_icon: logout, selected: false, badge: false}
     type: form:Components.NavigationLink
     layout_properties: {}
   slot_2: []

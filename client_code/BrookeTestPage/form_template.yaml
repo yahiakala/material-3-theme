@@ -2,33 +2,9 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: file_loader_3
-    properties: {align: left, file_types: .png, text: New Text}
-    type: form:Components.FileLoader
-    layout_properties: {}
-    event_bindings: {}
-  - name: file_loader_2
-    properties: {show_state: true, align: left, border: '', material_icon: file_upload,
-      text_color: '', icon_size: null, font_size: null, font: '', italic: false, background_color: '',
-      bold: false, underline: false, icon_color: ''}
-    type: form:Components.FileLoader
-    layout_properties: {}
-    event_bindings: {change: file_loader_2_change, focus: file_loader_2_focus, lost_focus: file_loader_2_lost_focus}
-  - name: file_loader_1
-    properties: {show_state: true}
-    type: FileLoader
-    layout_properties: {}
-  - name: button_1
-    properties: {appearance: outlined, text: Clear component}
-    type: form:Components.Button
-    layout_properties: {}
-  - name: link_1
+  - name: timer_1
     properties: {}
-    type: form:Components.Link
-    layout_properties: {}
-  - name: card_1
-    properties: {visible: true}
-    type: form:Components.Card
+    type: Timer
     layout_properties: {}
     event_bindings: {click: button_1_click}
   - name: switch_1
