@@ -378,6 +378,7 @@ properties:
   options: [left, center, right, full]
   default_value: left
   designer_hint: align-horizontal
+- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
 is_package: true
 data_bindings: []
 events:
