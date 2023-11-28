@@ -82,6 +82,10 @@ components_by_slot:
     properties: {}
     type: form:Components.DropdownMenu
     layout_properties: {}
+  - name: radio_button_2
+    properties: {text: radio_button_2}
+    type: RadioButton
+    layout_properties: {}
   - name: timer_1
     properties: {}
     type: Timer
