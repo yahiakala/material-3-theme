@@ -379,6 +379,14 @@ properties:
   default_value: left
   designer_hint: align-horizontal
 - {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
+- {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline}
+- {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic}
+- {name: bold, type: boolean, default_value: false, important: true, designer_hint: font-bold}
+- name: icon_align
+  type: enum
+  important: true
+  options: [left edge, left, top, right, right_edge]
+  default_value: left
 is_package: true
 data_bindings: []
 events:
