@@ -16,7 +16,7 @@ properties:
 - {name: font_size, type: number}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic}
-- {name: bold, type: boolean, default_value: false, important: true, designer_hint: font-bold}
+- {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold}
 - name: material_icon
   type: enum
   default_binding_prop: true
