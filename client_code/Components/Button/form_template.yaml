@@ -363,7 +363,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
 - {name: text, type: string, default_value: '', description: Text for the Button}
-- {name: enabled, type: boolean, default_value: true}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled}
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
@@ -375,7 +375,7 @@ properties:
 - name: align
   type: enum
   important: true
-  options: [left, center, right]
+  options: [left, center, right, full]
   default_value: left
   designer_hint: align-horizontal
 is_package: true
