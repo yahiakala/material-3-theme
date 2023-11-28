@@ -50,6 +50,11 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components:
+    - name: navigation_link_1
+      properties: {badge: true, badge_count: 100}
+      type: form:Components.NavigationLink
+      layout_properties: {slot: card-content-slot}
   - name: checkbox_1
     properties: {}
     type: form:Components.Checkbox
