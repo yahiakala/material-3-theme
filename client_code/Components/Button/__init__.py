@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, font_family_property, font_size_property, style_property, property_with_callback
+from ...Functions import color_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property
 from anvil import HtmlTemplate
 import anvil.designer
 
@@ -83,9 +83,12 @@ class Button(ButtonTemplate):
           self.text = "Button"
 
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
-  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   font_family = font_family_property('anvil-m3-button-text')
-  font_size = font_size_property('anvil-m3-button-text' )
+  font_size = font_size_property('anvil-m3-button-text')
+  underline = underline_property('anvil-m3-button-text')
+  italic = italic_property('anvil-m3-button-text')
+  bold = bold_property('anvil-m3-button-text')
+  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   # TODO: Add background color property
 
