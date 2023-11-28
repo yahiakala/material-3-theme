@@ -16,13 +16,26 @@ class Button(ButtonTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
+    self.handle_click = self.handle_click
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    # if not anvil.designer.in_designer:
+    #     id = gen_id()
+    #     self.dom_nodes["anvil-m3-radiobutton-input"].id = id
+    #     self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
+
+  def on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-button'].removeEventListener("click", self.handle_click)
     
   align = style_property('anvil-m3-button-component', 'justifyContent', 'align') 
   visible = HtmlTemplate.visible
   
   def handle_click(self, event):
     event.preventDefault()
-    self.raise_event("click")
+    if self.enabled:
+      self.raise_event("click")
 
   def _anvil_get_interactions_(self):
     return [{

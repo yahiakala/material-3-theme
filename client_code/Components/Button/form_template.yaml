@@ -385,9 +385,10 @@ properties:
 - name: icon_align
   type: enum
   important: true
-  options: [left edge, left, top, right, right_edge]
+  options: [left, right]
   default_value: left
   description: The alignment of the icon on this component. Set to ‘top’ for a centred icon on a component with no text.
+  designer_hint: align-horizontal
 is_package: true
 data_bindings: []
 events:
