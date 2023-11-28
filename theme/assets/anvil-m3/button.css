@@ -19,8 +19,9 @@
   flex-direction: row-reverse;
 }
 
-/* .anvil-m3-icon-padding { padding-right: 16px; } */
+.anvil-m3-icon-padding { padding-right: 16px; }
 /* .anvil-m3-icon-padding.anvil-m3-elevated, .icon-padding.anvil-m3-filled, .icon-padding.anvil-m3-tonal, .icon-padding.anvil-m3-outlined { padding-left: 16px !important; } */
+
 .anvil-m3-button > i {
   padding-right: 8px; 
   font-size: 18px; 
