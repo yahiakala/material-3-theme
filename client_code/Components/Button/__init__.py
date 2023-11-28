@@ -83,12 +83,13 @@ class Button(ButtonTemplate):
   appearance = property_with_callback("appearance", set_appearance)
 
   def form_show(self, **event_args):
-      """This method is called when the HTML panel is shown on the screen"""
-      if not self.text:
-        if anvil.designer.in_designer:
-          self.text = anvil.designer.get_design_name(self)
-        else:
-          self.text = "Button"
+    """This method is called when the HTML panel is shown on the screen"""
+      # if not self.text:
+      #   if anvil.designer.in_designer:
+      #     self.text = anvil.designer.get_design_name(self)
+      #   else:
+      #     self.text = "Button"
+    pass
 
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')
