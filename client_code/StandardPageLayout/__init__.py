@@ -8,7 +8,6 @@ from ..Functions import innerText_property
 from anvil.js import window
 
 
-
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
