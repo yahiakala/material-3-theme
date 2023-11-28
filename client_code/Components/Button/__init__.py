@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
 from ...Functions import color_property, font_family_property, font_size_property, style_property, property_with_callback
-
+from anvil import HtmlTemplate
 import anvil.designer
 
 class Button(ButtonTemplate):
@@ -18,7 +18,8 @@ class Button(ButtonTemplate):
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
     
   align = style_property('anvil-m3-button-component', 'justifyContent', 'align') 
-
+  visible = HtmlTemplate.visible
+  
   def handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
