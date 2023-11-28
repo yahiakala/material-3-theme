@@ -6,7 +6,7 @@ properties:
   options: [left, center, right, full]
   default_value: left
   designer_hint: align-horizontal
-- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
