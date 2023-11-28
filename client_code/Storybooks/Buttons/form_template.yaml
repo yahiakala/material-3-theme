@@ -217,7 +217,11 @@ components:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
+      - name: text_3
+        properties: {text: Default}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: button_6
-        properties: {text: full_align button, appearance: filled, align: full}
+        properties: {}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}

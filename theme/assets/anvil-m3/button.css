@@ -29,8 +29,12 @@
   padding-right: 16px !important; 
 }
 
-.noText {
-  padding: 0 24px; 
+.anvil-m3-button.anvil-m3-icon-padding.noText {
+  padding: 0 24px !important; 
+}
+
+.noText > i {
+  padding: 0 !important;
 }
 
 .anvil-m3-button > i {
