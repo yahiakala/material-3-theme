@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {}
   - name: timer_1
     properties: {}
     type: Timer
