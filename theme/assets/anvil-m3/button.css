@@ -26,6 +26,9 @@
   font-size: 18px; 
   line-height: 40px;
 }
+anvil-m3-button.anvil-m3-right-icon > i {
+    padding-left: 8px; 
+}
 
 .anvil-m3-button:hover { background: var(--anvil-m3-primary-overlay-2); }
 .anvil-m3-button:focus { background: var(--anvil-m3-primary-overlay-3); }
