@@ -22,7 +22,7 @@
 /* .anvil-m3-icon-padding { padding-right: 16px; } */
 /* .anvil-m3-icon-padding.anvil-m3-elevated, .icon-padding.anvil-m3-filled, .icon-padding.anvil-m3-tonal, .icon-padding.anvil-m3-outlined { padding-left: 16px !important; } */
 .anvil-m3-button > i {
-/*   padding-right: 8px;  */
+  padding-right: 8px; 
   font-size: 18px; 
   line-height: 40px;
 }
@@ -30,10 +30,6 @@
 .anvil-m3-right-icon > i {
   padding-left: 8px;
   padding-right: 0px;
-}
-.anvil-m3-left-icon > i {
-  padding-left: 0px;
-  padding-right: 8px;
 }
 
 .anvil-m3-button:hover { background: var(--anvil-m3-primary-overlay-2); }
