@@ -52,13 +52,6 @@ class FileLoader(FileLoaderTemplate):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
     as_anvil_media = anvil.js.to_media(files[0])
     self.raise_event('change', file=as_anvil_media)
-    # file_reader = FileReader()
-    # def onload(e):
-    #   as_buffer = file_reader.result
-    #   as_bytes = Uint8Array(as_buffer)
-    #   self.raise_event('change', file=BlobMedia(content_type=files[0].type, content=as_bytes))
-    # file_reader.onload = onload
-    # file_reader.readAsArrayBuffer(files[0])
     if self.show_state:
       num_files = len(files)
       self.dom_nodes['anvil-m3-fileloader-label'].innerText = "1 file selected" if num_files == 1 else f"{num_files} files selected"
