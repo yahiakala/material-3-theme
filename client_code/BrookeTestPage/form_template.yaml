@@ -41,11 +41,7 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
-    components:
-    - name: file_loader_4
-      properties: {}
-      type: form:Components.FileLoader
-      layout_properties: {slot: card-content-slot}
+    components: []
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
@@ -63,7 +59,7 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
-  - name: button_2
+  - name: file_loader_5
     properties: {}
-    type: form:Components.Button
+    type: form:Components.FileLoader
     layout_properties: {}
