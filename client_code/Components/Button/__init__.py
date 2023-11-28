@@ -62,7 +62,9 @@ class Button(ButtonTemplate):
   material_icon = property_with_callback("material_icon", set_icon)
   
   def set_text(self, value):
+    print(bool(value))
     self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
+    self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
   text = property_with_callback("text", set_text)
 
   def set_enabled(self, value):

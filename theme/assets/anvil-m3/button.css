@@ -22,13 +22,16 @@
 /* .anvil-m3-icon-padding:not(.anvil-m3-right-icon) { padding-left: 16px; }
 .anvil-m3-icon-padding.anvil-m3-right-icon { padding-right: 16px; } */
 
-.anvil-m3-icon-padding.anvil-m3-elevated:not(.anvil-m3-right-icon), .anvil-m3-icon-padding.anvil-m3-filled:not(.anvil-m3-right-icon), .anvil-m3-icon-padding.anvil-m3-tonal:not(.anvil-m3-right-icon), .anvil-m3-icon-padding.anvil-m3-outlined:not(.anvil-m3-right-icon) { 
+.anvil-m3-icon-padding:not(.anvil-m3-right-icon) { 
   padding-left: 16px !important; 
   }
 .anvil-m3-icon-padding.anvil-m3-right-icon {
-  
+  padding-right: 16px !important; 
 }
 
+.noText {
+  padding: 0 24px; 
+}
 
 .anvil-m3-button > i {
   padding-right: 8px; 
