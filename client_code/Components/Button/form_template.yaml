@@ -1,4 +1,5 @@
 properties:
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled}
 - name: material_icon
   type: enum
   default_binding_prop: true
@@ -362,16 +363,15 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
-- {name: text, type: string, default_value: '', description: Text for the Button}
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled}
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
 - {name: text_color, type: color, default_value: ''}
 - {name: icon_color, type: color, default_value: ''}
+- {name: text, type: string, default_value: '', description: Text for the Button}
 - {name: font_family, type: string, default_value: ''}
-- {name: font_size, type: string, default_value: ''}
-- {name: icon_size, type: string, default_value: ''}
+- {name: font_size, type: number}
+- {name: icon_size, type: number}
 - name: align
   type: enum
   important: true
@@ -387,6 +387,7 @@ properties:
   important: true
   options: [left edge, left, top, right, right_edge]
   default_value: left
+  description: The alignment of the icon on this component. Set to ‘top’ for a centred icon on a component with no text.
 is_package: true
 data_bindings: []
 events:
