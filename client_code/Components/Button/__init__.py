@@ -98,7 +98,7 @@ class Button(ButtonTemplate):
   bold = custom_bold_property('anvil-m3-button-text')
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
-  background = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background')
+  background = color_property('anvil-m3-button', 'backgroundColor', 'background')
   # TODO: Add background color property
 
 
