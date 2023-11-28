@@ -39,10 +39,6 @@ components:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
-      - name: button_6
-        properties: {}
-        type: form:Components.Button
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: flow_panel_2
         properties: {}
         type: FlowPanel
