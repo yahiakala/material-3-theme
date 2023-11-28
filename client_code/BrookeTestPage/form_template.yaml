@@ -2,18 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: text_1
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: file_loader_1
-    properties: {}
-    type: form:Components.FileLoader
-    layout_properties: {}
-  - name: heading_1
-    properties: {}
-    type: form:Components.Heading
-    layout_properties: {}
   - name: timer_1
     properties: {}
     type: Timer
