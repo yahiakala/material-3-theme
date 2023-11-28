@@ -104,12 +104,13 @@ def italic_property(dom_node_name, prop_name="italic"):
   return property_with_callback(prop_name, set_italic)
 
 def bold_property(dom_node_name, prop_name="bold"):
-  def set_bold(self, value):
-    if value:
-      self.dom_nodes[dom_node_name].style.fontWeight = 'bold'
-    else:
-      self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
-  return property_with_callback(prop_name, set_bold)
+  # def set_bold(self, value):
+  #   if value:
+  #     self.dom_nodes[dom_node_name].style.fontWeight = 'bold'
+  #   else:
+  #     self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
+  # return property_with_callback(prop_name, set_bold)
+  custom_bold_property(dom_node_name, prop_name, 'bold')
 
 def custom_bold_property(dom_node_name, prop_name="bold", custom_bold="medium"):
   def set_bold(self, value):
