@@ -42,3 +42,19 @@ components_by_slot:
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_5_change}
+  - name: icon_button_1
+    properties: {}
+    type: form:Components.IconButton
+    layout_properties: {}
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+  - name: checkbox_1
+    properties: {}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
