@@ -63,11 +63,7 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
   enabled = property_with_callback("enabled", set_enabled)
 
-  @property
-  def appearance(self):
-    return self._appearance
-
-  def set_appearance
+  def set_appearance(self, value):
     button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
     button.classList.remove('anvil-m3-filled')
@@ -75,6 +71,7 @@ class Button(ButtonTemplate):
     button.classList.remove('anvil-m3-outlined')
     if value:
       button.classList.add(f"anvil-m3-{value}")
+  appearance = property_with_callback("appearance", set_appearance)
 
   def form_show(self, **event_args):
       """This method is called when the HTML panel is shown on the screen"""
