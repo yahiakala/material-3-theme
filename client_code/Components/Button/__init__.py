@@ -87,7 +87,7 @@ class Button(ButtonTemplate):
   font_size = font_size_property('anvil-m3-button-text')
   underline = underline_property('anvil-m3-button-text')
   italic = italic_property('anvil-m3-button-text')
-  bold = bold_property('anvil-m3-button-text')
+  # bold = bold_property('anvil-m3-button-text')
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   # TODO: Add background color property
