@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, font_family_property, font_size_property, style_property
+from ...Functions import color_property, font_family_property, font_size_property, style_property, property_with_callback
 
 import anvil.designer
 
@@ -52,34 +52,22 @@ class Button(ButtonTemplate):
       button_icon.style.display = "none"
       button.classList.remove('anvil-m3-icon-padding')
 
-  @property
-  def text(self):
-    return self._text
-
-  @text.setter
-  def text(self, value):
-    self._text = value
+  def set_text(self, value):
     self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
+  text = property_with_callback("text", set_text)
 
-  @property
-  def enabled(self):
-    return self._enabled
-
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
+  def set_enabled(self, value):
     if value:
       self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
+  enabled = property_with_callback("enabled", set_enabled)
 
   @property
   def appearance(self):
     return self._appearance
 
-  @appearance.setter
-  def appearance(self, value):
-    self._appearance = value
+  def set_appearance
     button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
     button.classList.remove('anvil-m3-filled')
