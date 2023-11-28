@@ -6,3 +6,8 @@ components_by_slot:
     properties: {}
     type: Timer
     layout_properties: {}
+  slot_4:
+  - name: heading_1
+    properties: {text: app name}
+    type: form:Components.Heading
+    layout_properties: {}
