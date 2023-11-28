@@ -163,7 +163,7 @@ components:
             layout_properties: {grid_position: 'FGNTIC,MORUZE'}
             components:
             - name: text_3_copy_2
-              properties: {text: 'No allow_none, no placeholder'}
+              properties: {text: 'No allow_none, no placeholder', bold: false}
               type: form:Components.Text
               layout_properties: {width: 268.1875}
             - name: text_5_copy_2

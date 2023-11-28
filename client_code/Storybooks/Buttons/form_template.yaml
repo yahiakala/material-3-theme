@@ -49,7 +49,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_2
-          properties: {appearance: filled}
+          properties: {appearance: filled, bold: true}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3
@@ -95,6 +95,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy
-          properties: {enabled: false, text: disabled_5}
+          properties: {enabled: false, text: disabled_5, icon_size: 0, material_icon: 2k,
+            text_color: 'theme:On Surface', icon_color: 'theme:On Surface'}
           type: form:Components.Button
           layout_properties: {}
