@@ -38,7 +38,7 @@ components_by_slot:
     type: form:Components.Switch
     layout_properties: {}
   - name: file_loader_5
-    properties: {}
+    properties: {show_state: true}
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_5_change}
