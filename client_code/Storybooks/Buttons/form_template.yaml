@@ -99,3 +99,7 @@ components:
             text_color: 'theme:On Surface', icon_color: 'theme:On Surface'}
           type: form:Components.Button
           layout_properties: {}
+      - name: button_6
+        properties: {align: full}
+        type: form:Components.Button
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
