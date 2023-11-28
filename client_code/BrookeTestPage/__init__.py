@@ -33,6 +33,10 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the FileLoader loses focus"""
     print('im so unfocused')
 
+  def file_loader_5_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    download(file)
+
 
 
 
