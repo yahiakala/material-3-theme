@@ -12,4 +12,3 @@ properties:
   default_value: Full width
   default_binding_prop: true
   options: [Full width, Inset]
-- {name: prop, type: uri, important: true, accept: image/*, designer_hint: asset-upload}
