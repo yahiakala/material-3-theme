@@ -74,10 +74,17 @@ class Button(ButtonTemplate):
       set text
       set padding
     no text, has image, not in designer
-    
+      set icon
+      no text
+      no padding
     has text, no image, not in designer
-
+      no icon
+      set text
+      no padding
     no text, no image, not in designer
+      no icon
+      "Button"
+      no padding
     '''
     #figure out spacing
     #figure out if should be greyed out or normal
