@@ -171,6 +171,10 @@ components:
           properties: {material_icon: 10mp, text: ''}
           type: form:Components.Button
           layout_properties: {}
+        - name: button_5_copy_2_copy_copy
+          properties: {material_icon: null, text: ''}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_1
     properties: {}
     type: form:Components.Card

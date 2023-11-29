@@ -57,6 +57,10 @@ class Button(ButtonTemplate):
       button_icon.style.display = "block"
       button.classList.add('anvil-m3-icon-padding')
     else: 
+      if not self.text:
+        if anvil.designer.in_designer:
+          self.text = anvil.designer.get_design_name(self)
+          
       button_icon.innerText = ""
       button_icon.style.display = "none"
       button.classList.remove('anvil-m3-icon-padding')
@@ -89,6 +93,7 @@ class Button(ButtonTemplate):
     if not (self.text or self.material_icon):
       if anvil.designer.in_designer:
         self.text = anvil.designer.get_design_name(self)
+        .anvil-m3-textlessComponentText
       else:
         self.text = "Button"
     
