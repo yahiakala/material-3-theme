@@ -49,10 +49,7 @@ class Button(ButtonTemplate):
       }
     }]
 
-  def update_button_look(self):
-    
-    # set icon.
-    # set text.
+  def update_button_look(self, value = None):
     '''
     has text, has image, in designer
       set icon
@@ -91,7 +88,7 @@ class Button(ButtonTemplate):
     pass
 
   def set_icon(self, value):
-    pass
+    self.update_button_look()
     # button = self.dom_nodes['anvil-m3-button']
     # button_icon = self.dom_nodes['anvil-m3-button-icon']
     # if value:
@@ -117,10 +114,10 @@ class Button(ButtonTemplate):
     #   button_icon.innerText = ""
     #   button_icon.style.display = "none"
     #   button.classList.remove('anvil-m3-icon-padding')
-  material_icon = property_with_callback("material_icon", set_icon)
+  material_icon = property_with_callback("material_icon", update_button_look)
   
   def set_text(self, value):
-    pass
+    self.update_button_look()
     # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     # if value:
     #   self.dom_nodes['anvil-m3-button-text'].innerHTML = value
@@ -129,7 +126,7 @@ class Button(ButtonTemplate):
     #   if not self.material_icon and anvil.designer.in_designer:
     #     self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
     #     self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
-  text = property_with_callback("text", set_text)
+  text = property_with_callback("text", self.update_button_look)
 
   def set_enabled(self, value):
     if value:
@@ -157,7 +154,7 @@ class Button(ButtonTemplate):
     #     self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     #   else:
     #     self.text = "Button"
-    pass
+    self.update_button_look()
     
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')
