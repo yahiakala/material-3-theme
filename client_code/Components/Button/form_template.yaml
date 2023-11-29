@@ -380,7 +380,7 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
-  default_value: ' 10k'
+  default_value: null
   include_none_option: true
 - {name: icon_color, type: color, default_value: ''}
 - {name: icon_size, type: number}
