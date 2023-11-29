@@ -72,8 +72,9 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button-text'].innerHTML = value
       self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
     else:
-      if 
-      self.dom_nodes['anvil-m3-button-text'].classList.toggle('.anvil-m3-textlessComponentText', not bool(value))
+      if not self.material_icon and anvil.designer.in_designer:
+        self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
+        self.dom_nodes['anvil-m3-button-text'].classList.toggle('.anvil-m3-textlessComponentText', not bool(value))
   text = property_with_callback("text", set_text)
 
   def set_enabled(self, value):
@@ -97,7 +98,8 @@ class Button(ButtonTemplate):
     """This method is called when the HTML panel is shown on the screen"""
     if not (self.text or self.material_icon):
       if anvil.designer.in_designer:
-        self.text = anvil.designer.get_design_name(self)
+        # self.text = anvil.designer.get_design_name(self)
+        self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
         self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
       else:
         self.text = "Button"
