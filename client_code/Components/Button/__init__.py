@@ -53,8 +53,10 @@ class Button(ButtonTemplate):
     if self.material_icon:
       self.dom_nodes['anvil-m3-button-icon'].innerText = self.material_icon
       self.dom_nodes['anvil-m3-button-icon'].style.display = "flex"
-      if self.text or anvil.designer.in_designer:
-        self.dom_nodes['anvil-m3-button'].classList.remove('anvil-m3-icon-padding')
+      if self.text:
+        self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-icon-padding')
+      else:
+        self.dom_nodes['anvil-m3-button'].classList.add('noText')
     else:
       self.dom_nodes['anvil-m3-button-icon'].innerText = ""
       self.dom_nodes['anvil-m3-button-icon'].style.display = "none"
@@ -75,6 +77,7 @@ class Button(ButtonTemplate):
     textNode = self.dom_nodes['anvil-m3-button-text']
     #  reset all styles to nothing
     buttonNode.classList.remove('anvil-m3-icon-padding')
+    buttonNode.classList.remove('noText')
     
     self.set_icon()
     self.set_text()
