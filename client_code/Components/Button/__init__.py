@@ -50,8 +50,12 @@ class Button(ButtonTemplate):
     }]
 
   def update_button_look(self, value = None):
+    buttonNode = self.dom_nodes['anvil-m3-button']
+    iconNode = self.dom_nodes['anvil-m3-button-icon']
+    textNode = self.dom_nodes['anvil-m3-button-text']
+
+    iconNode.innerText = self.material_icon or ""
     
-    print("I did something")
     '''
     has text, has image, in designer
       set icon
