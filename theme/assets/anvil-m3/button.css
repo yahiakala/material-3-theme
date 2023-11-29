@@ -87,3 +87,10 @@
 .anvil-m3-button.anvil-m3-outlined:focus { background-color: var(--anvil-m3-primary-overlay-3); }
 .anvil-m3-button.anvil-m3-outlined:active { background-color: var(--anvil-m3-primary-overlay-3); }
 .anvil-m3-button.anvil-m3-outlined:disabled { background: none; border: 1px solid var(--anvil-m3-on-disabled); }
+
+
+
+
+.full-width {
+  
+}

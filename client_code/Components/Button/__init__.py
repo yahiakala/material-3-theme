@@ -26,7 +26,10 @@ class Button(ButtonTemplate):
 
   def set_align(self, value):
     print(value)
-    # def style_property(dom_node_name, style_prop, prop_name):
+    if value is 'full':
+      pass
+    else:
+      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
       
   # def set_style(self, value):
   #   self.dom_nodes[dom_node_name].style[style_prop] = value
