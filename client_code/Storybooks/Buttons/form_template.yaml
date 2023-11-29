@@ -191,24 +191,25 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_6
-          properties: {appearance: elevated}
+          properties: {appearance: elevated, material_icon: null}
           type: form:Components.Button
           layout_properties: {}
         - name: button_7
-          properties: {appearance: filled}
+          properties: {appearance: filled, material_icon: null}
           type: form:Components.Button
           layout_properties: {}
         - name: button_8
-          properties: {appearance: tonal}
+          properties: {appearance: tonal, material_icon: null}
           type: form:Components.Button
           layout_properties: {}
         - name: button_9
-          properties: {appearance: outlined}
+          properties: {appearance: outlined, material_icon: null}
           type: form:Components.Button
           layout_properties: {}
         - name: button_10
-          properties: {}
+          properties: {material_icon: null}
           type: form:Components.Button
+          layout_properties: {}
   - name: card_1_copy_1_copy
     properties: {visible: true}
     type: form:Components.Card
@@ -256,18 +257,18 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: button_11
-        properties: {appearance: elevated, material_icon: align_horizontal_left, text: Left Button}
+        properties: {appearance: tonal, material_icon: align_horizontal_left, text: Left Button}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: button_12
-        properties: {appearance: elevated, align: center, text: Center Button, material_icon: align_horizontal_center}
+        properties: {appearance: tonal, align: center, text: Center Button, material_icon: align_horizontal_center}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: button_13
-        properties: {appearance: elevated, align: right, text: Right Button, material_icon: align_horizontal_right}
+        properties: {appearance: tonal, align: right, text: Right Button, material_icon: align_horizontal_right}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: button_14
-        properties: {appearance: elevated, align: full, material_icon: menu}
+        properties: {appearance: tonal, align: full, material_icon: menu, text: Full Button}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
