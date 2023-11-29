@@ -50,6 +50,7 @@ class Button(ButtonTemplate):
     }]
 
   def update_look(self):
+    
     # set icon.
     # set text.
     '''
@@ -86,8 +87,7 @@ class Button(ButtonTemplate):
       "Button"
       no padding
     '''
-    #figure out spacing
-    #figure out if should be greyed out or normal
+    
     pass
 
   def set_icon(self, value):
