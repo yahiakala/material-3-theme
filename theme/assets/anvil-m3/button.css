@@ -91,6 +91,9 @@
 
 
 
-.full-width {
-  
+.anvil-m3-button.full-width {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align
 }
