@@ -56,6 +56,10 @@ class Button(ButtonTemplate):
       button_icon.innerText = value
       button_icon.style.display = "block"
       button.classList.add('anvil-m3-icon-padding')
+      if not self.text:
+        if anvil.designer.in_designer:
+          self.dom_nodes['anvil-m3-button-text'].innerHTML = ""
+          # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
     else: 
       if not self.text:
         if anvil.designer.in_designer:
