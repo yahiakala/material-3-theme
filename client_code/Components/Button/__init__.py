@@ -23,8 +23,16 @@ class Button(ButtonTemplate):
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-button'].removeEventListener("click", self.handle_click)
-    
-  align = style_property('anvil-m3-button-component', 'justifyContent', 'align') 
+
+  def set_align(self, value):
+    print(value)
+    # def style_property(dom_node_name, style_prop, prop_name):
+      
+  # def set_style(self, value):
+  #   self.dom_nodes[dom_node_name].style[style_prop] = value
+  # return property_with_callback(prop_name, set_style)
+  # align = style_property('anvil-m3-button-component', 'justifyContent', 'align') 
+  align = property_with_callback('align', set_align)
   visible = HtmlTemplate.visible
   
   def handle_click(self, event):
