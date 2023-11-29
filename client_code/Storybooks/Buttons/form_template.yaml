@@ -152,11 +152,12 @@ components:
         components:
         - name: button_1_copy_2_copy
           properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 10mp, enabled: true, text: ''}
+            material_icon: 12mp, enabled: true, text: ''}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2_copy
-          properties: {appearance: filled, bold: true, material_icon: 11mp, text: ''}
+          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '',
+            icon_align: right}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2_copy

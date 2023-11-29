@@ -55,7 +55,9 @@ class Button(ButtonTemplate):
     if value:
       button_icon.innerText = value
       button_icon.style.display = "block"
-      button.classList.add('anvil-m3-icon-padding')
+      # button.classList.add('anvil-m3-icon-padding')
+      if not anvil.designer.in_designer:
+        self.dom_nodes['anvil-m3-button-icon'].style.paddingRight: '0px'
       if not self.text:
         button.classList.remove('anvil-m3-icon-padding')
         if anvil.designer.in_designer:
