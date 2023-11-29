@@ -49,19 +49,56 @@ class Button(ButtonTemplate):
       }
     }]
 
+  def update_look(self):
+    # set icon.
+    # set text.
+    '''
+    has text, has image, in designer
+      set icon
+      set text
+      set padding
+    no text, has image, in designer
+      set icon
+      no text
+      no padding
+    has text, no image, in designer
+      no icon
+      set text
+      no padding
+    no text, no image, in designer
+      no icon
+      set text to design name
+      no padding
+    has text, has image, not in designer
+      set icon
+      set text
+      set padding
+    no text, has image, not in designer
+    
+    has text, no image, not in designer
+
+    no text, no image, not in designer
+    '''
+    #figure out spacing
+    #figure out if should be greyed out or normal
+    pass
+
   def set_icon(self, value):
     button = self.dom_nodes['anvil-m3-button']
     button_icon = self.dom_nodes['anvil-m3-button-icon']
     if value:
       button_icon.innerText = value
       button_icon.style.display = "block"
+      if self.text:
+        button.classList.add('anvil-m3-icon-padding')
+        
       # button.classList.add('anvil-m3-icon-padding')
-      if not anvil.designer.in_designer:
-        self.dom_nodes['anvil-m3-button-icon'].style.paddingRight: '0px'
-      if not self.text:
-        button.classList.remove('anvil-m3-icon-padding')
-        if anvil.designer.in_designer:
-          self.dom_nodes['anvil-m3-button-text'].innerHTML = ""
+      # if not anvil.designer.in_designer:
+      #   self.dom_nodes['anvil-m3-button-icon'].style.paddingRight: '0px'
+      # if not self.text:
+      #   button.classList.remove('anvil-m3-icon-padding')
+      #   if anvil.designer.in_designer:
+      #     self.dom_nodes['anvil-m3-button-text'].innerHTML = ""
           
           # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
     else: 
