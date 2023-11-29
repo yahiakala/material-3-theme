@@ -69,6 +69,7 @@ class Button(ButtonTemplate):
   def set_text(self, value):
     self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
     self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
+    self.dom_nodes['anvil-m3-button-text'].classList.toggle('.anvil-m3-textlessComponentText', not bool(value))
   text = property_with_callback("text", set_text)
 
   def set_enabled(self, value):
@@ -93,7 +94,7 @@ class Button(ButtonTemplate):
     if not (self.text or self.material_icon):
       if anvil.designer.in_designer:
         self.text = anvil.designer.get_design_name(self)
-        .anvil-m3-textlessComponentText
+        self.dom_nodes['anvil-m3-button-text'].classList.toggle('.anvil-m3-textlessComponentText', True)
       else:
         self.text = "Button"
     
