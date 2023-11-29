@@ -187,7 +187,7 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1_copy
-          properties: {appearance: elevated, visible: false, enabled: false, text: disabled_1}
+          properties: {appearance: elevated, visible: true, enabled: false, text: disabled_1}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy

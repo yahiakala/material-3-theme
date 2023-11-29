@@ -13,16 +13,11 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._text = properties.get('text', '')
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
     self.handle_click = self.handle_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
-    # if not anvil.designer.in_designer:
-    #     id = gen_id()
-    #     self.dom_nodes["anvil-m3-radiobutton-input"].id = id
-    #     self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
@@ -62,7 +57,6 @@ class Button(ButtonTemplate):
   material_icon = property_with_callback("material_icon", set_icon)
   
   def set_text(self, value):
-    print(bool(value))
     self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
     self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
   text = property_with_callback("text", set_text)
