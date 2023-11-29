@@ -19,9 +19,6 @@
   flex-direction: row-reverse;
 }
 
-/* .anvil-m3-icon-padding:not(.anvil-m3-right-icon) { padding-left: 16px; }
-.anvil-m3-icon-padding.anvil-m3-right-icon { padding-right: 16px; } */
-
 .anvil-m3-icon-padding:not(.anvil-m3-right-icon) { 
   padding-left: 16px !important; 
   }
