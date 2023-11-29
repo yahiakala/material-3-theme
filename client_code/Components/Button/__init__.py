@@ -61,10 +61,11 @@ class Button(ButtonTemplate):
     if self.text:
       self.dom_nodes['anvil-m3-button-text'].innerText = self.text
     else:
-      if anvil.designer.in_designer:
-        self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
-      else: 
-        self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
+      if not self.material_icon:
+        if anvil.designer.in_designer:
+          self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
+        else: 
+          self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
       
   def update_button_look(self, value = None):
     buttonNode = self.dom_nodes['anvil-m3-button']
@@ -179,8 +180,8 @@ class Button(ButtonTemplate):
     #     self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     #   else:
     #     self.text = "Button"
-    # self.update_button_look()
-    pass
+    self.update_button_look()
+    # pass
     
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')

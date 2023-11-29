@@ -215,6 +215,10 @@ components:
           properties: {material_icon: null}
           type: form:Components.Button
           layout_properties: {}
+        - name: button_16
+          properties: {text: ''}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_1_copy_1_copy
     properties: {visible: true}
     type: form:Components.Card
