@@ -86,7 +86,6 @@ class Button(ButtonTemplate):
       else:
         self.text = "Button"
     
-
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')
   font_size = font_size_property('anvil-m3-button-text')
@@ -100,7 +99,6 @@ class Button(ButtonTemplate):
   def set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value is 'right')
   icon_align = property_with_callback('icon_align', set_icon_align)
-  # TODO: Add background color property
 
 
 

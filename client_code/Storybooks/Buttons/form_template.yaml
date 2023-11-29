@@ -171,6 +171,44 @@ components:
           properties: {material_icon: 10mp, text: ''}
           type: form:Components.Button
           layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'WKOJWR,EVKOBN'}
+    components:
+    - name: card_content_container_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_3
+        properties: {text: Default}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_6
+          properties: {appearance: elevated}
+          type: form:Components.Button
+          layout_properties: {}
+        - name: button_7
+          properties: {appearance: filled}
+          type: form:Components.Button
+          layout_properties: {}
+        - name: button_8
+          properties: {appearance: tonal}
+          type: form:Components.Button
+          layout_properties: {}
+        - name: button_9
+          properties: {appearance: outlined}
+          type: form:Components.Button
+          layout_properties: {}
+        - name: button_10
+          properties: {}
+          type: form:Components.Button
   - name: card_1_copy_1_copy
     properties: {visible: true}
     type: form:Components.Card
@@ -207,21 +245,3 @@ components:
             text_color: 'theme:On Surface', icon_color: 'theme:On Surface'}
           type: form:Components.Button
           layout_properties: {}
-  - name: card_1
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'MNKDGA,XPLMWV'}
-    components:
-    - name: card_content_container_2
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: text_3
-        properties: {text: Default}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: button_6
-        properties: {}
-        type: form:Components.Button
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
