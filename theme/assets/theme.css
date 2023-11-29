@@ -364,4 +364,5 @@ body {
 .anvil-m3-textlessComponentText {
   font-style: italic !important;
   color: var(--anvil-m3-on-disabled) !important;
+  font-weight: 400;
 }

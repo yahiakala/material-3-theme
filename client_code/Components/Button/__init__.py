@@ -94,7 +94,7 @@ class Button(ButtonTemplate):
     if not (self.text or self.material_icon):
       if anvil.designer.in_designer:
         self.text = anvil.designer.get_design_name(self)
-        self.dom_nodes['anvil-m3-button-text'].classList.toggle('.anvil-m3-textlessComponentText', True)
+        self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
       else:
         self.text = "Button"
     
