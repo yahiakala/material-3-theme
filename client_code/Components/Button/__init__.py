@@ -49,7 +49,7 @@ class Button(ButtonTemplate):
       }
     }]
 
-  def update_look(self):
+  def update_button_look(self):
     
     # set icon.
     # set text.
@@ -91,42 +91,44 @@ class Button(ButtonTemplate):
     pass
 
   def set_icon(self, value):
-    button = self.dom_nodes['anvil-m3-button']
-    button_icon = self.dom_nodes['anvil-m3-button-icon']
-    if value:
-      button_icon.innerText = value
-      button_icon.style.display = "block"
-      if self.text:
-        button.classList.add('anvil-m3-icon-padding')
+    pass
+    # button = self.dom_nodes['anvil-m3-button']
+    # button_icon = self.dom_nodes['anvil-m3-button-icon']
+    # if value:
+    #   button_icon.innerText = value
+    #   button_icon.style.display = "block"
+    #   if self.text:
+    #     button.classList.add('anvil-m3-icon-padding')
         
-      # button.classList.add('anvil-m3-icon-padding')
-      # if not anvil.designer.in_designer:
-      #   self.dom_nodes['anvil-m3-button-icon'].style.paddingRight: '0px'
-      # if not self.text:
-      #   button.classList.remove('anvil-m3-icon-padding')
-      #   if anvil.designer.in_designer:
-      #     self.dom_nodes['anvil-m3-button-text'].innerHTML = ""
+    #   # button.classList.add('anvil-m3-icon-padding')
+    #   # if not anvil.designer.in_designer:
+    #   #   self.dom_nodes['anvil-m3-button-icon'].style.paddingRight: '0px'
+    #   # if not self.text:
+    #   #   button.classList.remove('anvil-m3-icon-padding')
+    #   #   if anvil.designer.in_designer:
+    #   #     self.dom_nodes['anvil-m3-button-text'].innerHTML = ""
           
-          # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
-    else: 
-      if not self.text:
-        if anvil.designer.in_designer:
-          self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
-          self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
-      button_icon.innerText = ""
-      button_icon.style.display = "none"
-      button.classList.remove('anvil-m3-icon-padding')
+    #       # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
+    # else: 
+    #   if not self.text:
+    #     if anvil.designer.in_designer:
+    #       self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
+    #       self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
+    #   button_icon.innerText = ""
+    #   button_icon.style.display = "none"
+    #   button.classList.remove('anvil-m3-icon-padding')
   material_icon = property_with_callback("material_icon", set_icon)
   
   def set_text(self, value):
-    self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
-    if value:
-      self.dom_nodes['anvil-m3-button-text'].innerHTML = value
-      self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
-    else:
-      if not self.material_icon and anvil.designer.in_designer:
-        self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
-        self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
+    pass
+    # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
+    # if value:
+    #   self.dom_nodes['anvil-m3-button-text'].innerHTML = value
+    #   self.dom_nodes['anvil-m3-button'].classList.toggle('noText', not bool(value))
+    # else:
+    #   if not self.material_icon and anvil.designer.in_designer:
+    #     self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
+    #     self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', not bool(value))
   text = property_with_callback("text", set_text)
 
   def set_enabled(self, value):
@@ -148,13 +150,14 @@ class Button(ButtonTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    if not (self.text or self.material_icon):
-      if anvil.designer.in_designer:
-        # self.text = anvil.designer.get_design_name(self)
-        self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
-        self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
-      else:
-        self.text = "Button"
+    # if not (self.text or self.material_icon):
+    #   if anvil.designer.in_designer:
+    #     # self.text = anvil.designer.get_design_name(self)
+    #     self.dom_nodes['anvil-m3-button-text'].innerHTML = anvil.designer.get_design_name(self)
+    #     self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
+    #   else:
+    #     self.text = "Button"
+    pass
     
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')
