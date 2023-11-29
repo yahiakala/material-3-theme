@@ -256,6 +256,18 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: button_11
-        properties: {}
+        properties: {appearance: elevated, material_icon: align_horizontal_left, text: Left Button}
+        type: form:Components.Button
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: button_12
+        properties: {appearance: elevated, align: center, text: Center Button, material_icon: align_horizontal_center}
+        type: form:Components.Button
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: button_13
+        properties: {appearance: elevated, align: right, text: Right Button, material_icon: align_horizontal_right}
+        type: form:Components.Button
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: button_14
+        properties: {appearance: elevated, align: full, material_icon: menu}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
