@@ -49,12 +49,31 @@ class Button(ButtonTemplate):
       }
     }]
 
+  def set_icon(self):
+    if self.material_icon:
+      self.dom_nodes['anvil-m3-button-icon'].innerText = self.material_icon
+      self.dom_nodes['anvil-m3-button-icon'].style.display = "flex"
+    else:
+      self.dom_nodes['anvil-m3-button-icon'].innerText = ""
+      self.dom_nodes['anvil-m3-button-icon'].style.display = "none"
+
+  def set_text(self):
+    if self.text:
+      self.dom_nodes['anvil-m3-button-text'].innerText = self.text
+    else:
+      if anvil.designer.in_designer:
+        self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
+      else: 
+        self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
+      
   def update_button_look(self, value = None):
     buttonNode = self.dom_nodes['anvil-m3-button']
     iconNode = self.dom_nodes['anvil-m3-button-icon']
     textNode = self.dom_nodes['anvil-m3-button-text']
-
-    iconNode.innerText = self.material_icon or ""
+    
+    self.set_icon()
+    self.set_text()
+    
     
     '''
     has text, has image, in designer
@@ -91,10 +110,10 @@ class Button(ButtonTemplate):
       no padding
     '''
     
-    pass
+    # pass
 
-  def set_icon(self, value):
-    self.update_button_look()
+  # def set_icon(self, value):
+    # self.update_button_look()
     # button = self.dom_nodes['anvil-m3-button']
     # button_icon = self.dom_nodes['anvil-m3-button-icon']
     # if value:
@@ -122,8 +141,8 @@ class Button(ButtonTemplate):
     #   button.classList.remove('anvil-m3-icon-padding')
   material_icon = property_with_callback("material_icon", update_button_look)
   
-  def set_text(self, value):
-    self.update_button_look()
+  # def set_text(self, value):
+  #   self.update_button_look()
     # self.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     # if value:
     #   self.dom_nodes['anvil-m3-button-text'].innerHTML = value
