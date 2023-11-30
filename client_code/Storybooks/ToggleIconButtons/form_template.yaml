@@ -70,7 +70,7 @@ components:
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: text_3
-              properties: {text: Unselected Buttons}
+              properties: {text: Unselected Buttons, bold: false}
               type: form:Components.Text
               layout_properties: {}
           - name: flow_panel_3_copy_1
