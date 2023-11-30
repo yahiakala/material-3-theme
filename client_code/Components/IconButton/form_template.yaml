@@ -378,7 +378,7 @@ properties:
   designer_hint: enabled, description: True if this component should allow user interaction,
   group: Interaction}
 - {name: visible, type: boolean, default_value: true, important: true, designerHint: visible,
-  designer_hint: visible}
+  designer_hint: visible, group: Appearance, description: True to display the component. False to hide it completely}
 - {name: border, type: string, default_value: '', group: Appearance, description: Custom border of this component. Can take any valid CSS border value.}
 - {name: background, type: color, default_value: '', important: false, group: Appearance,
   description: The background colour of this component}
