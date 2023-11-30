@@ -1,40 +1,40 @@
 properties:
 - {name: background, type: color, default_value: '', important: false, description: background color of the component,
-  group: Selection Field Style}
+  group: Look and Feel}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold,
-  group: Selection Field Style}
+  group: Label Style}
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
-  group: Attributes, designerHint: enabled, designer_hint: enabled}
+  group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label,
-  group: Selection Field Style}
+  group: Label Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels,
-  group: Selection Field Style}
+  group: Label Style}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color,
-  group: Selection Field Style}
+  group: Label Style}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
-  group: Selection Field Style}
+  group: Label Style}
 - name: items
   type: text[]
   default_value: []
   important: true
   description: The items to display in this dropdown
-  group: Attributes
+  group: Common
   default_binding_prop: true
 - {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None,
-  group: Attributes}
+  group: Common}
 - name: appearance
   type: enum
   important: true
   options: ['', outlined]
   description: Selection field's appearance
-  group: Selection Field Style
+  group: Look and Feel
 - {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime,
-  group: Attributes}
+  group: Interaction}
 - {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
-  group: Selection Field Style}
+  group: Label Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
-  group: Selection Field Style, designerHint: visible, designer_hint: visible}
-- {name: label_text, type: string, default_value: '', important: true, group: Attributes}
+  group: Look and Feel, designerHint: visible, designer_hint: visible}
+- {name: label_text, type: string, default_value: '', important: true, group: Common}
 - {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
@@ -59,7 +59,7 @@ properties:
 - {name: selected_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None,
-  group: Attributes}
+  group: Interaction}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}

@@ -30,10 +30,11 @@ is_package: true
 custom_component: true
 properties:
 - {name: visible, type: boolean, default_value: false, default_binding_prop: true,
-  important: true, designerHint: visible, designer_hint: visible}
+  important: true, designerHint: visible, designer_hint: visible, group: Look and Feel}
 - name: type
   type: enum
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
-- {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
+  group: Common
+- {name: progress, type: number, group: Common, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}

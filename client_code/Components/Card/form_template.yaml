@@ -1,20 +1,22 @@
 properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
-  designer_hint: visible}
+  designer_hint: visible, group: Look and Feel}
 - name: appearance
   type: enum
   important: true
   options: [elevated, filled, outlined]
   default_value: elevated
+  group: Look and Feel
 - {name: card_image, type: uri, important: true, accept: image/*}
 - name: image_position
   type: enum
   important: true
-  options: [none, top, left, right, bottom, full]
-  default_value: none
-- {name: rounded_image, type: boolean, default_value: false, important: true}
-- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height}
-- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width}
+  options: [top, left, right, bottom, full]
+  include_none_option: true
+  default_value: null
+- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style}
+- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height, group: Image Style}
+- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width, group: Image Style}
 is_package: true
 custom_component: true
 components: []
