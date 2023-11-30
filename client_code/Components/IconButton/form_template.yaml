@@ -2,7 +2,11 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: ['', Filled, Filled tonal, Outlined]
+  options: [Filled, Filled tonal, Outlined]
+  default_value: null
+  include_none_option: true
+  description: Predefined style type
+  group: Appearance
 - name: icon
   type: enum
   important: true
@@ -368,8 +372,11 @@ properties:
     zoom_out, zoom_out_map]
   default_value: star_border
   include_none_option: true
+  group: Common
+  priority: 100
 - {name: enabled, type: boolean, default_value: true, important: true, designerHint: enabled,
-  designer_hint: enabled}
+  designer_hint: enabled, description: True if this component should allow user interaction,
+  group: Interaction}
 - {name: visible, type: boolean, default_value: true, important: true, designerHint: visible,
   designer_hint: visible}
 - {name: border, type: string, default_value: '', group: Style}
