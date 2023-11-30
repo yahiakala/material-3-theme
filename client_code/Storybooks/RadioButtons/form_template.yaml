@@ -135,7 +135,7 @@ components:
               layout_properties: {}
             - name: radio_button_1_copy_5_copy_1
               properties: {text: Disabled Selection, group_name: group_2, enabled: false,
-                visible: true}
+                visible: true, selected: true}
               type: form:Components.RadioButton
               layout_properties: {}
   - name: card_2
