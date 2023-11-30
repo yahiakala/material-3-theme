@@ -56,6 +56,7 @@ class Button(ButtonTemplate):
       if self.text:
         self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-icon-padding')
       else:
+        print("no text")
         self.dom_nodes['anvil-m3-button'].classList.add('noText')
     else:
       self.dom_nodes['anvil-m3-button-icon'].innerText = ""
@@ -70,6 +71,8 @@ class Button(ButtonTemplate):
           self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
         else: 
           self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
+      else:
+        self.dom_nodes['anvil-m3-button-text'].innerText = ""
       
   def update_button_look(self, value = None):
     buttonNode = self.dom_nodes['anvil-m3-button']
