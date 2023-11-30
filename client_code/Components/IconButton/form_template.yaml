@@ -380,15 +380,19 @@ properties:
 - {name: visible, type: boolean, default_value: true, important: true, designerHint: visible,
   designer_hint: visible}
 - {name: border, type: string, default_value: '', group: Appearance, description: Custom border of this component. Can take any valid CSS border value.}
-- {name: background, type: color, default_value: '', important: false, group: Style}
-- {name: icon_color, type: color, default_value: '', important: false, group: Style}
-- name: align
-  type: enum
+- {name: background, type: color, default_value: '', important: false, group: Appearance,
+  description: The background colour of this component}
+- {name: icon_color, type: color, default_value: '', important: false, group: Appearance,
+  description: Colour of the icon of this component}
+- default_value: left
+  group: Appearance
   important: true
-  options: [left, center, right]
-  designerHint: align-horizontal
-  default_value: left
+  name: align
+  type: enum
   designer_hint: align-horizontal
+  designerHint: align-horizontal
+  options: [left, center, right]
+  description: Alignment of the component within it's container
 - {name: tooltip, type: string, default_value: '', important: true, group: Attributes}
 is_package: true
 events:
