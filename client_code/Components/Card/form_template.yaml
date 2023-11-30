@@ -14,9 +14,12 @@ properties:
   options: [top, left, right, bottom, full]
   include_none_option: true
   default_value: null
+  none_option_label: No Image
 - {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style}
-- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height, group: Image Style}
-- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width, group: Image Style}
+- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height,
+  group: Image Style}
+- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width,
+  group: Image Style}
 is_package: true
 custom_component: true
 components: []
