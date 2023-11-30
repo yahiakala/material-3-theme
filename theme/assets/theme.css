@@ -84,7 +84,10 @@ body {
 }
 }
   
-
+*:focus-visible {
+    outline-color: var(--anvil-m3-primary);
+}
+  
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-navigation-drawer {
     width: 100%;
@@ -366,3 +369,4 @@ body {
   color: var(--anvil-m3-on-disabled) !important;
   font-weight: 400;
 }
+
