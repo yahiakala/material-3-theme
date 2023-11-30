@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.anvil-m3-radiobutton-hover:hover{
+anvil-m3-radiobutton-container:hover > .anvil-m3-radiobutton-hover{
   background-color: var(--anvil-m3-dark-overlay-1);
 }
 .anvil-m3-radiobutton-input:checked + .anvil-m3-radiobutton-hover:hover{
