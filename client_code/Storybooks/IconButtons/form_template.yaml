@@ -61,9 +61,9 @@ components:
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_2_copy_1
-            properties: {appearance: Outlined}
+            properties: {appearance: Outlined, enabled: true, visible: true}
             type: form:Components.IconButton
-            layout_properties: {}
+            layout_properties: {expand: false}
         - name: flow_panel_2
           properties: {}
           type: FlowPanel
@@ -88,7 +88,7 @@ components:
             - name: icon_button_2_copy_1_copy_1
               properties: {appearance: Outlined, enabled: false}
               type: form:Components.IconButton
-              layout_properties: {}
+              layout_properties: {expand: false}
             - name: text_3_copy_1
               properties: {text: Disabled Buttons}
               type: form:Components.Text

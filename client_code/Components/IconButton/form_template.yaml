@@ -384,7 +384,6 @@ properties:
   description: The background colour of this component}
 - {name: icon_color, type: color, default_value: '', important: false, group: Look and Feel,
   description: Colour of the icon of this component}
-- {name: icon_size, type: number, important: false, group: Look and Feel, description: Colour of the icon of this component}
 - default_value: left
   group: Appearance
   important: true

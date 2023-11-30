@@ -3,7 +3,7 @@ from .IconButton import IconButton
 import anvil.designer
 from ..Functions import property_with_callback, theme_color_to_css
 
-selected_property = {"name": "selected", "type": "boolean", "group": "Common", "important": True, "default_value": False}
+selected_property = {"name": "selected", "type": "boolean", "group": "Interaction", "important": True, "default_value": False}
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
 selected_background_property = {"name": "selected_background", "type": "color", "group": "Toggled Style" , "description": "Background color when component is in the selected state."}
 selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "Icon color when component is in the selected state."}
