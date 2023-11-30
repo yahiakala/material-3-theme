@@ -11,3 +11,6 @@ class Buttons(ButtonsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    alert("BOOP")

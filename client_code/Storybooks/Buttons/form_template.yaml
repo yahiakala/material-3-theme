@@ -49,6 +49,7 @@ components:
             text: '1'}
           type: form:Components.Button
           layout_properties: {}
+          event_bindings: {click: button_1_click}
         - name: button_2
           properties: {appearance: filled, bold: true, text: '2'}
           type: form:Components.Button
@@ -131,7 +132,8 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy_2_copy_2
-          properties: {material_icon: 10mp, text: '5', icon_align: right}
+          properties: {material_icon: 22mp, text: '5', icon_align: right, text_color: 'theme:On
+              Surface Variant', font_size: 30, icon_size: 35, icon_color: 'theme:Error'}
           type: form:Components.Button
           layout_properties: {}
   - name: card_1_copy_1_copy_2_copy
