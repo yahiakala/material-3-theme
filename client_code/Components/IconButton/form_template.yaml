@@ -379,7 +379,7 @@ properties:
   group: Interaction}
 - {name: visible, type: boolean, default_value: true, important: true, designerHint: visible,
   designer_hint: visible}
-- {name: border, type: string, default_value: '', group: Style}
+- {name: border, type: string, default_value: '', group: Appearance, description: Custom border of this component. Can take any valid CSS border value.}
 - {name: background, type: color, default_value: '', important: false, group: Style}
 - {name: icon_color, type: color, default_value: '', important: false, group: Style}
 - name: align
