@@ -62,10 +62,10 @@
 }
 
 /* ACTIVE */
-.anvil-m3-radiobutton-input:not(:checked)+.anvil-m3-radiobutton-hover:active{
+.anvil-m3-radiobutton-input:enabled:not(:checked)+.anvil-m3-radiobutton-hover:active{
   background-color: var(--anvil-m3-primary-overlay-3) !important;
 }
-.anvil-m3-radiobutton-input:checked:active+.anvil-m3-radiobutton-hover {
+.anvil-m3-radiobutton-input:enabled:checked:active+.anvil-m3-radiobutton-hover {
   background-color: var(--anvil-m3-dark-overlay-3) !important;
 }
 
@@ -79,9 +79,8 @@
   color: var(--anvil-m3-on-disabled) !important;
 }
 
-
 .anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:disabled) *:active + .anvil-m3-radiobutton-hover{
-  background-color: blue;
+  background-color: transparent;
 }
 
 /* LABEL */
