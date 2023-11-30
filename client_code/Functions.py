@@ -4,9 +4,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-def m3_alert(title=None, content=None, buttons="OK", icon=None, dividers=False, centered=False):
-  pass
-
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
     color = color.lstrip('theme:')
