@@ -69,6 +69,7 @@ class Button(ButtonTemplate):
       if not self.material_icon:
         if anvil.designer.in_designer:
           self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
+          self.dom_nodes['anvil-m3-button-text'].classList.add('anvil-m3-textlessComponentText')
         else: 
           self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
       else:
@@ -80,6 +81,7 @@ class Button(ButtonTemplate):
     textNode = self.dom_nodes['anvil-m3-button-text']
     #  reset all styles to nothing
     buttonNode.classList.remove('anvil-m3-icon-padding')
+    textNode.classList.remove('anvil-m3-textlessComponentText')
     buttonNode.classList.remove('noText')
     
     self.set_icon()

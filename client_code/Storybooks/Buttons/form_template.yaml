@@ -283,6 +283,6 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: button_15
-        properties: {material_icon: null}
+        properties: {material_icon: null, text: ''}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
