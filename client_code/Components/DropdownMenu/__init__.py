@@ -19,6 +19,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self._design_name = ""
     self.init_components(**properties)
     self._cleanup = noop
+
+    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    self.field = self.dom_nodes['anvil-m3-dropdownMenu-textfield'] #get_dom_node??
     
     # self._window_size = {}
     # self._menu_size = {}
@@ -146,6 +149,8 @@ class DropdownMenu(DropdownMenuTemplate):
     
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
+    document.addEventListener('click', self.body_click)
+    
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('blur', self.handle_selection_field_blur)
@@ -302,6 +307,11 @@ class DropdownMenu(DropdownMenuTemplate):
     #   document.body.removeChild(self.shield)
     #   document.body.style.removeProperty("overflow")
 
+  def body_click(self, event):
+    if self.field.contains(event.target) or self.menuNode.contains(event.target):
+      return
+    self.close_menu()
+      
   def child_clicked(self, event):
     event.stopPropagation()
     self.close_menu()
