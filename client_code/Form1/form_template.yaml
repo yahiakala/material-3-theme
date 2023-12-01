@@ -22,6 +22,6 @@ container:
       anvil-m3-content\" class=\"anvil-designer-only\" style=\"font-style: italic;\"\
       >Add content here</p>\n</div>\n\n<div class=\"anvil-m3-sidesheet\">\n  <div\
       \ anvil-slot=\"anvil-m3-sidesheet\">\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\"\
-      >Add side</p>\n  </div>  \n</div>\n\n"}
+      >Add sidesheet content here</p>\n  </div>  \n</div>\n\n"}
 components: []
 is_package: true
