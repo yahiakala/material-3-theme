@@ -15,7 +15,3 @@ components_by_slot:
     properties: {visible: true}
     type: form:Components.Card
     layout_properties: {}
-  - name: timer_1
-    properties: {}
-    type: Timer
-    layout_properties: {}

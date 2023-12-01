@@ -2,11 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: timer_1
-    properties: {}
-    type: Timer
-    layout_properties: {}
-    event_bindings: {click: button_1_click}
   - name: switch_1
     properties:
       selected: false
