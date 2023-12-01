@@ -186,16 +186,13 @@ class DropdownMenu(DropdownMenuTemplate):
         return
 
       if event.key in ["Tab", "Escape"]:
-        self.close_menu()
+        self.set_menu_visibility(False)
 
       if (event.key is " "): #space key as " " is stupid
         event.preventDefault()
         self.attempt_select()
       if (event.key is "Enter"):
         self.attempt_select()
-        
-  def close_menu(self):
-    self.set_menu_visibility(False)
     
   def iterate_hover(self, inc = True):
     if inc:
@@ -211,7 +208,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def attempt_select(self):
     if not self._hoverIndex is None:
       self._children[self._hoverIndex].raise_event("click")
-    self.close_menu()
+    self.set_menu_visibility(False)
     
   def clear_hover_styles(self):
     if self._children is not None:
@@ -248,11 +245,11 @@ class DropdownMenu(DropdownMenuTemplate):
   def body_click(self, event):
     if self.field.contains(event.target) or self.menuNode.contains(event.target):
       return
-    self.close_menu()
+    self.set_menu_visibility(False)
       
   def child_clicked(self, event):
     event.stopPropagation()
-    self.close_menu()
+    self.set_menu_visibility(False)
     if self.selected_value is None:
       self._hoverIndex = None
     else:
