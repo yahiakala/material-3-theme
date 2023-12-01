@@ -31,8 +31,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
-    document.body.append(get_dom_node(self.menuNode))
+
 
     # # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
     # # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
@@ -48,6 +47,8 @@ class ButtonMenu(ButtonMenuTemplate):
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
+    # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
+    document.body.append(get_dom_node(self.menuNode))
     btn = get_dom_node(self.menu_button).firstElementChild
     self._cleanup = fui.auto_update(btn, self.menuNode)
   
@@ -56,6 +57,8 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
     self._cleanup()
+    # remove the menu node we put on the body
+    self.menuNode.remove()
   
   visible = HtmlTemplate.visible
   
