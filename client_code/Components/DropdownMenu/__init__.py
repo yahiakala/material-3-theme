@@ -11,12 +11,14 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
+from ...utils import fui, noop
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)
+    self._cleanup = noop
     
     self._window_size = {}
     self._menu_size = {}
