@@ -20,6 +20,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.init_components(**properties)
     self._cleanup = noop
 
+    # self.menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.field = get_dom_node(self.selection_field).querySelector("input")
 
