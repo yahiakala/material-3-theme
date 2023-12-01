@@ -20,9 +20,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.init_components(**properties)
     self._cleanup = noop
     
-    self._window_size = {}
-    self._menu_size = {}
-    self._box_positioning = {}
+    # self._window_size = {}
+    # self._menu_size = {}
+    # self._box_positioning = {}
 
     self._hoverIndex = None
     self._children = None
@@ -43,8 +43,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.cursor = "pointer"
     self.selection_field.dom_nodes['text-field-input'].setAttribute("readonly", True)
           
-    self.shield = document.createElement("div")
-    self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    # self.shield = document.createElement("div")
+    # self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
     if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
@@ -149,7 +149,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('blur', self.handle_selection_field_blur)
-    self.shield.addEventListener('click', self.remove_shield_handler)
+    # self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     
   def on_cleanup(self, **event_args):
@@ -157,7 +157,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('blur', self.handle_selection_field_blur)
-    self.shield.removeEventListener('click', self.remove_shield_handler)
+    # self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_selection_field_focus(self, event):
@@ -194,7 +194,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self.attempt_select()
         
   def close_menu(self):
-    self.remove_shield()
+    # self.remove_shield()
     self.set_menu_visibility(False)
     
   def iterate_hover(self, inc = True):
@@ -236,9 +236,9 @@ class DropdownMenu(DropdownMenuTemplate):
       if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = ""
       if not anvil.designer.in_designer:
-        self.place_shield()
+        # self.place_shield()
         self.selection_field.trailing_icon = "arrow_drop_up"
-      self.get_textfield_measurements()
+      # self.get_textfield_measurements()
       # self.update_menu_placement()
     else:
       if not self.label_text and self.placeholder and self.selected_value is None:
@@ -249,55 +249,55 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   # def update_menu_placement(self):
-  #   menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
-  #   menuNode.removeAttribute("style")
-  #   menuNode.style.maxWidth = "unset"
-  #   self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
-  #   self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
-  #   # horizontal placement
-  #   menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
-  #   menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
+    menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
+    menuNode.removeAttribute("style")
+    menuNode.style.maxWidth = "unset"
+    self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
+    self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+    # horizontal placement
+    menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
+    menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
     
-  #   # vertical placement
-  #   menuTop = self._box_positioning['bottom']
-  #   menuBottom = menuTop + self._menu_size['height']
-  #   spaceAtTop = self._box_positioning['top']
-  #   spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
+    # vertical placement
+    menuTop = self._box_positioning['bottom']
+    menuBottom = menuTop + self._menu_size['height']
+    spaceAtTop = self._box_positioning['top']
+    spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
     
-  #   # menu won't fit in the standrd spot under the text field
-  #   if spaceAtBottom < self._menu_size["height"]:
-  #     # place the menu at the bottom
-  #     if spaceAtBottom > spaceAtTop:
-  #       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
-  #       menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
-  #     # place the menu at the top
-  #     else:
-  #       menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
-  #       if spaceAtTop < self._menu_size["height"]:
-  #         menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
-  #   else:
-  #      menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+    # menu won't fit in the standrd spot under the text field
+    if spaceAtBottom < self._menu_size["height"]:
+      # place the menu at the bottom
+      if spaceAtBottom > spaceAtTop:
+        menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+        menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
+      # place the menu at the top
+      else:
+        menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
+        if spaceAtTop < self._menu_size["height"]:
+          menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
+    else:
+       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
       
-  def get_textfield_measurements(self):
-    rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
-    self._box_positioning = {
-      "top": rect.top,
-      "right": rect.right,
-      "bottom": rect.bottom,
-      "left": rect.left,
-      "height": rect.bottom - rect.top,
-      "width": rect.right - rect.left,
-    }
+  # def get_textfield_measurements(self):
+  #   rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
+  #   self._box_positioning = {
+  #     "top": rect.top,
+  #     "right": rect.right,
+  #     "bottom": rect.bottom,
+  #     "left": rect.left,
+  #     "height": rect.bottom - rect.top,
+  #     "width": rect.right - rect.left,
+  #   }
   
-  def place_shield(self):
+  # def place_shield(self):
     if not document.contains(self.shield):
       document.body.appendChild(self.shield)
       document.body.style.overflow = "hidden"
     
-  def remove_shield_handler(self, event):
+  # def remove_shield_handler(self, event):
     self.close_menu()
     
-  def remove_shield(self):
+  # def remove_shield(self):
     if document.contains(self.shield):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
