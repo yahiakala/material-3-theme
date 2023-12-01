@@ -69,6 +69,10 @@ class StandardPageLayout(StandardPageLayoutTemplate):
       self.dom_nodes['anvil-m3-sidesheet'].classList.add('open')
       self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.add('sidesheet-open')
       self.dom_nodes['anvil-m3-content'].classList.add('sidesheet-open')
+    else:
+      self.dom_nodes['anvil-m3-sidesheet'].classList.remove('open')
+      self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.remove('sidesheet-open')
+      self.dom_nodes['anvil-m3-content'].classList.remove('sidesheet-open')
       
       
 
