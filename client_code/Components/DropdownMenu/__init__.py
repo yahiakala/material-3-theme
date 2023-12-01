@@ -52,7 +52,6 @@ class DropdownMenu(DropdownMenuTemplate):
     if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
-    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
     
@@ -150,6 +149,10 @@ class DropdownMenu(DropdownMenuTemplate):
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
     document.addEventListener('click', self.body_click)
+    
+    document.body.append(self.menuNode)
+    
+    self._cleanup = fui.auto_update(self.btnNode, self.menuNode)
     
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
