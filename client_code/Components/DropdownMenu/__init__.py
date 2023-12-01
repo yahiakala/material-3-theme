@@ -21,7 +21,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = noop
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    self.field = self.btnNode = get_dom_node(self.selection_field).querySelector("button")
+    self.field = self.btnNode = get_dom_node(self.selection_field).querySelector("input")
 
     self._hoverIndex = None
     self._children = None
@@ -42,9 +42,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.cursor = "pointer"
     self.selection_field.dom_nodes['text-field-input'].setAttribute("readonly", True)
           
-    # self.shield = document.createElement("div")
-    # self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-
     if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
@@ -153,7 +150,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('blur', self.handle_selection_field_blur)
-    # self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     
   def on_cleanup(self, **event_args):
@@ -161,7 +157,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('blur', self.handle_selection_field_blur)
-    # self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
     self._cleanup()
     self.menuNode.remove()
@@ -200,7 +195,6 @@ class DropdownMenu(DropdownMenuTemplate):
         self.attempt_select()
         
   def close_menu(self):
-    # self.remove_shield()
     self.set_menu_visibility(False)
     
   def iterate_hover(self, inc = True):
