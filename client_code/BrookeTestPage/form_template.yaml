@@ -39,7 +39,8 @@ components_by_slot:
     type: form:Components.Divider
     layout_properties: {}
   - name: button_1
-    properties: {}
+    properties: {text: Open Sidesheet}
     type: form:Components.Button
     layout_properties: {}
+    event_bindings: {click: button_1_click}
   slot_5: []
