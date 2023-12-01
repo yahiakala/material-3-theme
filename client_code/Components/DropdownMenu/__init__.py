@@ -249,34 +249,34 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   # def update_menu_placement(self):
-    menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
-    menuNode.removeAttribute("style")
-    menuNode.style.maxWidth = "unset"
-    self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
-    self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
-    # horizontal placement
-    menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
-    menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
+    # menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
+    # menuNode.removeAttribute("style")
+    # menuNode.style.maxWidth = "unset"
+    # self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
+    # self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+    # # horizontal placement
+    # menuNode.style.left = f"{math.floor(self._box_positioning['left'])}px"
+    # menuNode.style.width = f"{math.floor(self._box_positioning['width'])}px"
     
-    # vertical placement
-    menuTop = self._box_positioning['bottom']
-    menuBottom = menuTop + self._menu_size['height']
-    spaceAtTop = self._box_positioning['top']
-    spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
+    # # vertical placement
+    # menuTop = self._box_positioning['bottom']
+    # menuBottom = menuTop + self._menu_size['height']
+    # spaceAtTop = self._box_positioning['top']
+    # spaceAtBottom = self._window_size['height'] - self._box_positioning['bottom']
     
-    # menu won't fit in the standrd spot under the text field
-    if spaceAtBottom < self._menu_size["height"]:
-      # place the menu at the bottom
-      if spaceAtBottom > spaceAtTop:
-        menuNode.style.top = f"{math.floor(menuTop + 1)}px"
-        menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
-      # place the menu at the top
-      else:
-        menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
-        if spaceAtTop < self._menu_size["height"]:
-          menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
-    else:
-       menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+    # # menu won't fit in the standrd spot under the text field
+    # if spaceAtBottom < self._menu_size["height"]:
+    #   # place the menu at the bottom
+    #   if spaceAtBottom > spaceAtTop:
+    #     menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+    #     menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
+    #   # place the menu at the top
+    #   else:
+    #     menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._box_positioning['top'])}px"
+    #     if spaceAtTop < self._menu_size["height"]:
+    #       menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
+    # else:
+    #    menuNode.style.top = f"{math.floor(menuTop + 1)}px"
       
   # def get_textfield_measurements(self):
   #   rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
@@ -290,17 +290,17 @@ class DropdownMenu(DropdownMenuTemplate):
   #   }
   
   # def place_shield(self):
-    if not document.contains(self.shield):
-      document.body.appendChild(self.shield)
-      document.body.style.overflow = "hidden"
+    # if not document.contains(self.shield):
+    #   document.body.appendChild(self.shield)
+    #   document.body.style.overflow = "hidden"
     
   # def remove_shield_handler(self, event):
-    self.close_menu()
+    # self.close_menu()
     
   # def remove_shield(self):
-    if document.contains(self.shield):
-      document.body.removeChild(self.shield)
-      document.body.style.removeProperty("overflow")
+    # if document.contains(self.shield):
+    #   document.body.removeChild(self.shield)
+    #   document.body.style.removeProperty("overflow")
 
   def child_clicked(self, event):
     event.stopPropagation()
