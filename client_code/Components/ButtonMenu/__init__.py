@@ -19,44 +19,32 @@ class ButtonMenu(ButtonMenuTemplate):
     self._design_name = ""
     self.init_components(**properties)
     self.open = False
-    self._window_size = {}
-    self._menu_size = {}
-    self._button_positioning = {}
     self._cleanup = noop
 
     self.hoverIndex = None
     self.itemIndices = set()
     self.children = None
-    
-    self.shield = document.createElement("div")
-    self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-
-
-    # # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
-    # # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
-    # # To not have to do this, Stu is considering creating a add_event_listener() and remove_event_listener() to anvil.js
-    # self.handle_keyboard_events = self.handle_keyboard_events
-    # self.remove_shield_handler = self.remove_shield_handler
-    # self.child_clicked = self.child_clicked
+    self.btnNode = get_dom_node(self.menu_button).firstElementChild
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
-    self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
+    document.addEventListener('click', self.body_click)
     # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
     # this gets around the whole, anvil containers love to set their overflow to hidden
-    document.body.append(get_dom_node(self.menuNode))
-    btn = get_dom_node(self.menu_button).firstElementChild # get the actual button element
-    self._cleanup = fui.auto_update(btn, self.menuNode)
+    document.body.append(self.menuNode)
+
+    self._cleanup = fui.auto_update(self.btnNode, self.menuNode)
   
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
-    self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
+    document.removeEventListener('click', self.body_click)
     self._cleanup()
     # remove the menu node we put on the body
     self.menuNode.remove()
@@ -92,83 +80,19 @@ class ButtonMenu(ButtonMenuTemplate):
       
     self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
     if self.open:
-      if not anvil.designer.in_designer:
-        self.place_shield()
-      self.get_button_measurements()
-      self.update_menu_placement()
-
       self.get_hover_index_information()
-        
     else:
-      # self.menuNode.removeAttribute("style")
       self.hoverIndex = None
       self.clear_hover_styles()
 
-  def update_menu_placement(self):
-    return
-    # menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    # menuNode.removeAttribute("style")
-    # menuNode.style.maxWidth = "unset"
-    # self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
-    # self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
-    
-    # # horizontal placement
-    # menuLeft = self._button_positioning['left']
-    # menuRight = menuLeft + self._menu_size['width']
-    # if self._window_size['width'] < menuRight:
-    #   menuNode.style.right = '5px'
-    # else:
-    #   menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
-    
-    # # vertical placement
-    # menuTop = self._button_positioning['bottom']
-    # menuBottom = menuTop + self._menu_size['height']
-    # spaceAtTop = self._button_positioning['top']
-    # spaceAtBottom = self._window_size['height'] - self._button_positioning['bottom']
-    
-    # # menu won't fit in the standrd spot under the text field
-    # if spaceAtBottom < self._menu_size["height"]:
-    #   # place the menu at the bottom
-    #   if spaceAtBottom > spaceAtTop:
-    #     menuNode.style.top = f"{math.floor(menuTop + 1)}px"
-    #     menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
-    #   # place the menu at the top
-    #   else:
-    #     menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._button_positioning['top'])}px"
-    #     if spaceAtTop < self._menu_size["height"]:
-    #       menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
-    # else:
-    #   menuNode.style.top = f"{math.floor(menuTop + 1)}px"
-  
-  def get_button_measurements(self):
-    return
-    # rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    # self._button_positioning = {
-    #   "top": rect.top,
-    #   "right": rect.right,
-    #   "bottom": rect.bottom,
-    #   "left": rect.left,
-    #   "height": rect.bottom - rect.top,
-    #   "width": rect.right - rect.left,
-    # }
- 
-  def place_shield(self):
-    if not document.contains(self.shield):
-      pass
-      document.body.appendChild(self.shield)
-    
-  def remove_shield_handler(self, event):
-    self.remove_shield()
-    self.set_visibility(False)
-    
-  def remove_shield(self):
-    if document.contains(self.shield):
-      document.body.removeChild(self.shield)
-      document.body.style.removeProperty("overflow")
     
   def child_clicked(self, event):
     # do the click action. The child should handle this
-    self.remove_shield()
+    self.set_visibility(False)
+
+  def body_click(self, event):
+    if self.btnNode.contains(event.target) or self.menuNode.contains(event.target):
+      return
     self.set_visibility(False)
   
   def get_hover_index_information(self):
@@ -193,7 +117,6 @@ class ButtonMenu(ButtonMenuTemplate):
     # if event.key is "Tab":
     #   pass
     hover = self.hoverIndex #holding value for situation like alerts where it awaits 
-    self.remove_shield()
     self.set_visibility(False)
     
     def attemptSelect():
