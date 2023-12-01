@@ -382,3 +382,14 @@ body {
   top: 0;
   overflow-y: hidden;
 }
+
+.anvil-m3-content.has-sidesheet {
+  width: calc(100% - 480px);
+  transition: width 200ms
+}
+
+@media(max-width: 600px) {
+  .anvil-m3-sidesheet {
+    
+  }
+}
