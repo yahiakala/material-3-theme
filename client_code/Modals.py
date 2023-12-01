@@ -5,7 +5,6 @@ def m3_alert(title=None, content=None, buttons="OK", icon=None, dividers=False, 
   pass
 
 def sidesheet(content=None, dismissable=True, modal=False):
-  def _cleanup_sidesheet():
-    pass
-
+  #need to apend a sidesheet element to the body that is removed when dissmissed or when the form changes
+  document.body
   
