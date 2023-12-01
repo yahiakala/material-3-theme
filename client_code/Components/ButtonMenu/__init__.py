@@ -5,12 +5,13 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from anvil.js import window
+from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
 from ...Functions import property_with_callback
+from ...utils import fui
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
@@ -29,13 +30,14 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    document.body.append(get_dom_node(self.menuNode))
 
-    # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
-    # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
-    # To not have to do this, Stu is considering creating a add_event_listener() and remove_event_listener() to anvil.js
-    self.handle_keyboard_events = self.handle_keyboard_events
-    self.remove_shield_handler = self.remove_shield_handler
-    self.child_clicked = self.child_clicked
+    # # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
+    # # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
+    # # To not have to do this, Stu is considering creating a add_event_listener() and remove_event_listener() to anvil.js
+    # self.handle_keyboard_events = self.handle_keyboard_events
+    # self.remove_shield_handler = self.remove_shield_handler
+    # self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -44,10 +46,15 @@ class ButtonMenu(ButtonMenuTemplate):
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
+    btn = get_dom_node(self.menu_button).firstElementChild
+    print(btn)
+    self._cleanup = fui.autoUpdate(btn, self.menuNode, fui.get_update(btn, self.menuNode))
+  
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
+    self._cleanup()
   
   visible = HtmlTemplate.visible
   
@@ -88,46 +95,48 @@ class ButtonMenu(ButtonMenuTemplate):
       self.get_hover_index_information()
         
     else:
-      self.menuNode.removeAttribute("style")
+      # self.menuNode.removeAttribute("style")
       self.hoverIndex = None
       self.clear_hover_styles()
 
   def update_menu_placement(self):
-    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    menuNode.removeAttribute("style")
-    menuNode.style.maxWidth = "unset"
-    self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
-    self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
+    return
+    # menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    # menuNode.removeAttribute("style")
+    # menuNode.style.maxWidth = "unset"
+    # self._window_size = {"width": window.innerWidth, "height": window.innerHeight}
+    # self._menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     
-    # horizontal placement
-    menuLeft = self._button_positioning['left']
-    menuRight = menuLeft + self._menu_size['width']
-    if self._window_size['width'] < menuRight:
-      menuNode.style.right = '5px'
-    else:
-      menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+    # # horizontal placement
+    # menuLeft = self._button_positioning['left']
+    # menuRight = menuLeft + self._menu_size['width']
+    # if self._window_size['width'] < menuRight:
+    #   menuNode.style.right = '5px'
+    # else:
+    #   menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
     
-    # vertical placement
-    menuTop = self._button_positioning['bottom']
-    menuBottom = menuTop + self._menu_size['height']
-    spaceAtTop = self._button_positioning['top']
-    spaceAtBottom = self._window_size['height'] - self._button_positioning['bottom']
+    # # vertical placement
+    # menuTop = self._button_positioning['bottom']
+    # menuBottom = menuTop + self._menu_size['height']
+    # spaceAtTop = self._button_positioning['top']
+    # spaceAtBottom = self._window_size['height'] - self._button_positioning['bottom']
     
-    # menu won't fit in the standrd spot under the text field
-    if spaceAtBottom < self._menu_size["height"]:
-      # place the menu at the bottom
-      if spaceAtBottom > spaceAtTop:
-        menuNode.style.top = f"{math.floor(menuTop + 1)}px"
-        menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
-      # place the menu at the top
-      else:
-        menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._button_positioning['top'])}px"
-        if spaceAtTop < self._menu_size["height"]:
-          menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
-    else:
-      menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+    # # menu won't fit in the standrd spot under the text field
+    # if spaceAtBottom < self._menu_size["height"]:
+    #   # place the menu at the bottom
+    #   if spaceAtBottom > spaceAtTop:
+    #     menuNode.style.top = f"{math.floor(menuTop + 1)}px"
+    #     menuNode.style.height = f"{math.floor(spaceAtBottom - 10)}px"
+    #   # place the menu at the top
+    #   else:
+    #     menuNode.style.bottom = f"{math.floor(7 + self._window_size['height'] - self._button_positioning['top'])}px"
+    #     if spaceAtTop < self._menu_size["height"]:
+    #       menuNode.style.height = f"{math.floor(spaceAtTop - 10)}px"
+    # else:
+    #   menuNode.style.top = f"{math.floor(menuTop + 1)}px"
   
   def get_button_measurements(self):
+    return
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     self._button_positioning = {
       "top": rect.top,
@@ -140,8 +149,8 @@ class ButtonMenu(ButtonMenuTemplate):
  
   def place_shield(self):
     if not document.contains(self.shield):
+      pass
       document.body.appendChild(self.shield)
-      document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
     self.remove_shield()
