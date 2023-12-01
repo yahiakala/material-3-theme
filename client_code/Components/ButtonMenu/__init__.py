@@ -30,6 +30,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
     document.body.append(get_dom_node(self.menuNode))
 
     # # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 

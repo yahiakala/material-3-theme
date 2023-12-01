@@ -112,6 +112,7 @@
 
 .anvil-m3-buttonMenu-items-container {
   position: absolute;
+/*   position: fixed; */
   inset: 0 0 auto auto;
   width: max-content;
   min-width: 112px;
