@@ -38,4 +38,8 @@ components_by_slot:
     properties: {}
     type: form:Components.Divider
     layout_properties: {}
+  - name: button_1
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
   slot_5: []

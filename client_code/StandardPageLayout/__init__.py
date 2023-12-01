@@ -75,7 +75,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
       self.dom_nodes['anvil-m3-content'].classList.remove('sidesheet-open')
 
   def icon_button_1_click(self, **event_args):
-    pass
+    self.show_sidesheet = False
       
       
 
