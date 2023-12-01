@@ -231,6 +231,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if (value is None):
       value = not self.menu.visible
     self.menu.visible = value
+    print(self.menu.visible)
     if value:
       if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = ""
