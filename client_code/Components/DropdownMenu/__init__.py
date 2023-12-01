@@ -21,8 +21,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = noop
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    # self.field = get_dom_node(self.selection_field).querySelector("input")
-    self.field = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
+    self.field = get_dom_node(self.selection_field).querySelector("input")
 
     self._hoverIndex = None
     self._children = None
@@ -147,7 +146,6 @@ class DropdownMenu(DropdownMenuTemplate):
     document.body.append(self.menuNode)
     
     self._cleanup = fui.auto_update(self.field, self.menuNode, placement="bottom-start")
-    # self._cleanup = fui.auto_update(self.btnNode, self.menuNode, placement="bottom-start")
     
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
@@ -233,7 +231,6 @@ class DropdownMenu(DropdownMenuTemplate):
     if (value is None):
       value = not self.menu.visible
     self.menu.visible = value
-    print(self.menu.visible)
     if value:
       if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = ""
