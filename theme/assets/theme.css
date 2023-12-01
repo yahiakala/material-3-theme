@@ -402,7 +402,8 @@ body {
     border-right: none;
     border-radius: 0 20px 20px 0;
     position: absolute;
-    
+    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+    z-index:10000;
   }
 }
 
