@@ -381,8 +381,14 @@ body {
   right: 0; 
   top: 0;
   overflow-y: hidden;
+  display: none;
 }
 
+@media(min-width:600px) {
+  .anvil-m3-sidesheet.open {
+    display: block;
+  }
+}
 @media(min-width:600px) {
   .anvil-m3-content.has-sidesheet {
   width: calc(100% - 480px);
