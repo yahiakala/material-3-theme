@@ -39,7 +39,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # this gets around the whole, anvil containers love to set their overflow to hidden
     document.body.append(self.menuNode)
 
-    self._cleanup = fui.auto_update(self.btnNode, self.menuNode)
+    self._cleanup = fui.auto_update(self.btnNode, self.menuNode, )
   
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
