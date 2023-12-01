@@ -392,7 +392,7 @@ body {
 
 
 @media(max-width: 600px) {
-  .anvil-m3-sidesheet {
+  .anvil-m3-sidesheet.open {
     display: block;
     padding: 28px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
@@ -404,4 +404,8 @@ body {
     position: absolute;
     
   }
+}
+
+.anvil-m3-navigation-drawer-scrim.sidesheet-open {
+  display:block;
 }
