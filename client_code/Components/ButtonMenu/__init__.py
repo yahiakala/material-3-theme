@@ -11,7 +11,7 @@ import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
 from ...Functions import property_with_callback
-from ...utils import fui
+from ...utils import fui, noop
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
@@ -22,6 +22,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._window_size = {}
     self._menu_size = {}
     self._button_positioning = {}
+    self._cleanup = noop
 
     self.hoverIndex = None
     self.itemIndices = set()
@@ -48,8 +49,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     btn = get_dom_node(self.menu_button).firstElementChild
-    print(btn)
-    self._cleanup = fui.autoUpdate(btn, self.menuNode, fui.get_update(btn, self.menuNode))
+    self._cleanup = fui.auto_update(btn, self.menuNode)
   
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
