@@ -58,4 +58,11 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
     self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
 
+  @property
+  def show_sidesheet(self):
+    return self._show_sidesheet
+
+  @show_sidesheet.setter
+  def show_sidesheet(self, value):
+    self._show_sidesheet = value
 
