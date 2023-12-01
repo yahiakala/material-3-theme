@@ -175,13 +175,15 @@ class DropdownMenu(DropdownMenuTemplate):
       open_keys = set(["ArrowUp", "ArrowDown", " ", "Enter"])
       if not self.menu.visible:
         if event.key in open_keys:
-          self.set_menu_visibility(True)          
+          self.set_menu_visibility(True)  
+          event.preventDefault()
         return
         
       if event.key not in action_keys: #   #TODO: eventually want to use this to jump somewhere in the list
         return
       
       if event.key is "ArrowUp" or event.key is "ArrowDown":
+        event.preventDefault()
         self.iterate_hover(event.key is "ArrowDown")
         return
 
