@@ -48,8 +48,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
+    # this gets around the whole, anvil containers love to set their overflow to hidden
     document.body.append(get_dom_node(self.menuNode))
-    btn = get_dom_node(self.menu_button).firstElementChild
+    btn = get_dom_node(self.menu_button).firstElementChild # get the actual button element
     self._cleanup = fui.auto_update(btn, self.menuNode)
   
   def on_cleanup(self, **event_args):
@@ -141,15 +142,15 @@ class ButtonMenu(ButtonMenuTemplate):
   
   def get_button_measurements(self):
     return
-    rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    self._button_positioning = {
-      "top": rect.top,
-      "right": rect.right,
-      "bottom": rect.bottom,
-      "left": rect.left,
-      "height": rect.bottom - rect.top,
-      "width": rect.right - rect.left,
-    }
+    # rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
+    # self._button_positioning = {
+    #   "top": rect.top,
+    #   "right": rect.right,
+    #   "bottom": rect.bottom,
+    #   "left": rect.left,
+    #   "height": rect.bottom - rect.top,
+    #   "width": rect.right - rect.left,
+    # }
  
   def place_shield(self):
     if not document.contains(self.shield):
