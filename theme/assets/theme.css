@@ -383,11 +383,13 @@ body {
   overflow-y: hidden;
 }
 
-@media(min-width:600px)
-.anvil-m3-content.has-sidesheet {
+@media(min-width:600px) {
+  .anvil-m3-content.has-sidesheet {
   width: calc(100% - 480px);
   transition: width 200ms
 }
+}
+
 
 @media(max-width: 600px) {
   .anvil-m3-sidesheet {
@@ -396,7 +398,7 @@ body {
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     margin: 0;
     top: 0;
-    left: -101%;
+/*     left: -101%; */
     border-right: none;
     border-radius: 0 20px 20px 0;
     position: absolute;
