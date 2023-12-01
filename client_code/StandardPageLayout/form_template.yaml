@@ -12,27 +12,32 @@ properties:
 is_package: true
 slots:
   slot_1:
-    index: 0
+    index: 1
     set_layout_properties: {slot: anvil-m3-navigation-rail-content}
     target: {type: container, name: ''}
   slot_2:
-    index: 0
+    index: 1
     set_layout_properties: {slot: anvil-m3-app-bar-links}
     target: {type: container, name: ''}
   slot_3:
-    index: 0
+    index: 1
     set_layout_properties: {slot: anvil-m3-content}
     target: {type: container, name: ''}
   slot_4:
-    index: 0
+    index: 1
     set_layout_properties: {slot: anvil-m3-app-title}
     target: {type: container, name: ''}
   slot_5:
-    index: 0
+    index: 1
     set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {type: container, name: ''}
 custom_component: true
-components: []
+components:
+- name: icon_button_1
+  properties: {align: right, icon: close}
+  type: form:Components.IconButton
+  layout_properties: {slot: anvil-m3-sidesheet-close-button}
+  event_bindings: {click: icon_button_1_click}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-navigation-rail\" class=\"anvil-m3-navigation-rail\"\
@@ -56,6 +61,7 @@ container:
       \ anvil-slot=\"anvil-m3-content\" anvil-name=\"anvil-m3-content\">\n  <p anvil-if-slot-empty=\"\
       anvil-m3-content\" class=\"anvil-designer-only\" style=\"font-style: italic;\"\
       >Add content here</p>\n</div>\n\n<div class=\"anvil-m3-sidesheet open\" anvil-name=\"\
-      anvil-m3-sidesheet\">\n  <div anvil-slot=\"anvil-m3-sidesheet\">\n    <p anvil-if-slot-empty=\"\
-      anvil-m3-sidesheet\" class=\"anvil-designer-only\">Add sidesheet content here</p>\n\
-      \  </div>  \n</div>\n\n"}
+      anvil-m3-sidesheet\">\n  <div anvil-slot=\"anvil-m3-sidesheet\">\n    <div anvil-slot=\"\
+      anvil-m3-sidesheet-close-button\"></div>\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\"\
+      \ class=\"anvil-designer-only\">Add sidesheet content here</p>\n  </div>  \n\
+      </div>\n\n"}
