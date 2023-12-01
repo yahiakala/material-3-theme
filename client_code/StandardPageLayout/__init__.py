@@ -65,4 +65,10 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   @show_sidesheet.setter
   def show_sidesheet(self, value):
     self._show_sidesheet = value
+    if value:
+      self.dom_nodes['anvil-m3-sidesheet'].classList.add('open')
+      self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.add('sidesheet-open')
+      self.dom_nodes['anvil-m3-content'].classList.add('sidesheet-open')
+      
+      
 
