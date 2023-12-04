@@ -739,11 +739,14 @@ properties:
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction}
 - {name: bold, type: boolean, default_value: false, important: true, designer_hint: font-bold,
   group: Text Style, description: Bold for main text}
-- {name: font, type: string, default_value: '', important: true, group: Text Style}
-- {name: font_size, type: number, default_value: '', important: true, group: Text Style}
-- {name: text_color, type: color, default_value: '', important: true, group: Text Style}
+- {name: font, type: string, default_value: '', important: true, group: Text Style,
+  description: font family of the main text}
+- {name: font_size, type: number, default_value: '', important: true, group: Text Style,
+  description: font size (pixels) of the main text}
+- {name: text_color, type: color, default_value: '', important: true, group: Text Style,
+  description: color of the main text}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
-  group: Text Style}
+  group: Text Style, description: Italicize the main text}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
   group: Text Style, description: Underline the main text}
 - {name: background, type: color, default_value: '', important: true, group: Look and Feel,
