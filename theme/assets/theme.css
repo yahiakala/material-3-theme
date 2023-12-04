@@ -375,7 +375,8 @@ body {
 
 .anvil-m3-sidesheet {
   height: 100%;
-  width: 400px;
+  width: 300px;
+  max-width: 400px;
   position: absolute;
   bottom: 0;
   right: 0; 
@@ -400,16 +401,14 @@ body {
 @media(max-width: 600px) {
   .anvil-m3-sidesheet.open {
     display: block;
-    padding: 28px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     margin: 0;
-    top: 0;
 /*     left: -101%; */
     border-right: none;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px 0px 0px 20px;
     position: absolute;
     background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-    z-index:10000;
+    z-index:10;
   }
 }
 
