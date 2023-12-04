@@ -22,7 +22,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the component is clicked"""
     self.layout.show_sidesheet = True
     print(self.layout.show_sidesheet)
-    print(self.layout)
+    self.layout.navigation_link_1_click()
 
 
   def file_loader_2_focus(self, **event_args):
