@@ -393,7 +393,6 @@ body {
 @media(min-width:600px) {
   .anvil-m3-content.sidesheet-open {
   width: calc(100% - 480px);
-  transition: width 200ms
 }
 }
 
