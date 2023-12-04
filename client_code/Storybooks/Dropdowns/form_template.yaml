@@ -73,9 +73,9 @@ components:
             components:
             - name: dropdown_menu_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: ['dropdown item 1 with a long name ', dropdown item 2, dropdown item 3,
+                  dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7,
+                  dropdown item 8, dropdown item 9]
                 label_text: Dropdown Label 1
                 allow_none: false
                 enabled: true
