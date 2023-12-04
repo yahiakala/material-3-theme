@@ -12,21 +12,17 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    alert(content="Hello")
     
-
-    # Any code you write here will run before the form opens.
-
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     time.sleep(5)
     print(file)
     
-
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
     self.layout.show_sidesheet = True
     print(self.layout.show_sidesheet)
+    self.la
 
   def file_loader_2_focus(self, **event_args):
     """This method is called when the FileLoader gets focus"""

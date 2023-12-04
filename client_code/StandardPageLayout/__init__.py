@@ -65,6 +65,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   @show_sidesheet.setter
   def show_sidesheet(self, value):
     self._show_sidesheet = value
+    print('in setter:', value)
     if value:
       self.dom_nodes['anvil-m3-sidesheet'].classList.add('open')
       self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.add('sidesheet-open')
@@ -76,7 +77,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   def icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
-    print(self.show_sidesheet)
       
       
 
