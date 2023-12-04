@@ -1,30 +1,32 @@
 properties:
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
+  description: True if this component should allow user interaction}
 - name: align
   type: enum
   important: true
   options: [left, center, right, full]
   default_value: left
   designer_hint: align-horizontal
-  description: Look and Feel
+  description: The position of this button in the available space
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
-  group: Look and Feel}
+  group: Look and Feel, description: 'Should this component be displayed?'}
 - name: appearance
   type: enum
   options: [' elevated', filled, tonal, outlined]
   include_none_option: true
   group: Look and Feel
+  description: Predefined style type
 - {name: text, type: string, default_value: '', description: Text for the Button,
   group: Key Properties}
-- {name: text_color, type: color, default_value: '', group: Text Style}
-- {name: font_family, type: string, default_value: '', group: Text Style}
-- {name: font_size, type: number, group: Text Style}
+- {name: text_color, type: color, default_value: '', group: Text Style, description: display text color}
+- {name: font_family, type: string, default_value: '', group: Text Style, description: display text font family}
+- {name: font_size, type: number, group: Text Style, description: display text font size}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
-  group: Text Style}
+  group: Text Style, description: Display this component’s text underlined}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
-  group: Text Style}
+  group: Text Style, description: Display this component’s text in italics}
 - {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold,
-  group: Text Style}
+  group: Text Style, description: Display this component’s text in bold}
 - name: material_icon
   type: enum
   default_binding_prop: true
