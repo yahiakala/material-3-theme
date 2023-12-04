@@ -23,6 +23,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     #self.layout.show_sidesheet = True
     self.layout.layout.show_sidesheet = 'foo'
     print(self.layout.show_sidesheet)
+    print
     print(self.layout.layout)
     #self.layout.navigation_link_1_click()
     self.layout.layout.test_function()
