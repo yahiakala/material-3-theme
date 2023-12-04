@@ -393,8 +393,9 @@ properties:
   default_value: null
   include_none_option: true
   group: Key Properties
-- {name: icon_color, type: color, default_value: '', group: Icon Style}
-- {name: icon_size, type: number, group: Icon Style}
+  description: The icon to display on this component
+- {name: icon_color, type: color, default_value: '', group: Icon Style, description: color of the icon}
+- {name: icon_size, type: number, group: Icon Style, description: size (pixels) of the icon}
 - name: icon_align
   type: enum
   important: true
