@@ -68,11 +68,11 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     print('in setter:', value)
     if value:
       self.dom_nodes['anvil-m3-sidesheet'].classList.add('open')
-      self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.add('sidesheet-open')
+      self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.add('sidesheet-open')
       self.dom_nodes['anvil-m3-content'].classList.add('sidesheet-open')
     else:
       self.dom_nodes['anvil-m3-sidesheet'].classList.remove('open')
-      self.dom_nodes['anvil-m3-navigation-drawer-scrim'].classList.remove('sidesheet-open')
+      self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.remove('sidesheet-open')
       self.dom_nodes['anvil-m3-content'].classList.remove('sidesheet-open')
 
   def icon_button_1_click(self, **event_args):

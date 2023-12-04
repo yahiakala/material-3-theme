@@ -231,7 +231,7 @@ body {
 }
 
 @media(max-width: 600px) {
-  .anvil-m3-navigation-drawer-scrim {
+  .anvil-m3-navigation-drawer-scrim, .anvil-m3-sidesheet-scrim {
     background-color: rgba(0, 0, 0, 0.32);
     position: fixed;
     top: 0px;
@@ -244,13 +244,14 @@ body {
   }
 }
 
+
 @media(max-width: 600px) {
   .anvil-m3-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
     display: block;
   }
 }
 
-.anvil-m3-navigation-drawer-scrim {
+.anvil-m3-navigation-drawer-scrim, .anvil-m3-sidesheet-scrim {
   display:none;
 }
 
@@ -413,7 +414,7 @@ body {
 }
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-drawer-scrim.sidesheet-open {
+.anvil-m3-sidesheet-scrim.sidesheet-open {
   display:block;
 }
 }
