@@ -34,20 +34,24 @@ properties:
   group: Label Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
   group: Look and Feel, designerHint: visible, designer_hint: visible}
-- {name: label_text, type: string, default_value: '', important: true, group: Key Properties}
-- {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
-- {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
-- {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
-- {name: items_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color,
+- {name: label_text, type: string, default_value: '', important: true, group: Key Properties,
+  description: Label text associated with the component. Usually the prompt.}
+- {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
+  description: True if you'd like to bold the menu items}
+- {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
+  description: True if you'd like to italicize the menu items}
+- {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
+  description: True if you'd like to underline the menu items}
+- {name: items_text_color, type: color, default_value: '', important: false, description: Component's menu items' text color,
   group: Dropdown Items Style}
-- {name: items_background, type: color, default_value: '', important: false, description: Component's Input Text Color,
+- {name: items_background, type: color, default_value: '', important: false, description: Component's menu items' background color,
   group: Dropdown Items Style}
 - {name: items_font, type: string, default_value: '', important: false, description: The font family to use for the dropdown items,
   group: Dropdown Items Style}
 - {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels,
   group: Dropdown Items Style}
 - {name: selected_italic_display, type: boolean, default_value: false, important: false,
-  description: Display this component’s text in italics, group: Selection Field Style}
+  group: Selection Field Style}
 - {name: selected_bold_display, type: boolean, default_value: false, important: false,
   description: Display this component’s text in bold, group: Selection Field Style}
 - {name: selected_underline_display, type: boolean, default_value: false, important: false,
