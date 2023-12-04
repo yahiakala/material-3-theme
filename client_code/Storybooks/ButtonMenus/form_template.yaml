@@ -52,7 +52,7 @@ components:
           - name: button_menu_1
             properties: {text: MENU, appearance: elevated}
             type: form:Components.ButtonMenu
-            layout_properties: {}
+            layout_properties: {expand: false}
             components:
             - name: menu_item_1
               properties: {text: Item 1, leading_icon: visibility, enabled: false,

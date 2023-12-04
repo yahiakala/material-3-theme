@@ -156,8 +156,7 @@ components:
             layout_properties: {width: 187.859375}
     - name: top_outlined_copy
       properties: {appearance: outlined, image_position: left, image_height: 65px,
-        card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true, image_width: 65px}
+        card_image: '', rounded_image: true, image_width: 65px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
       components:

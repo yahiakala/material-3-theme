@@ -7,8 +7,8 @@ properties:
   group: Interaction}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button,
   group: Interaction, designerHint: enabled, designer_hint: enabled}
-- {name: text, type: string, default_value: '', group: Key Properties}
-- {name: value, type: string, default_value: '', group: Key Properties}
+- {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component}
+- {name: value, type: string, default_value: '', group: Key Properties, description: The value of the group when this radio button is selected}
 - default_value: left
   group: Look and Feel
   important: true

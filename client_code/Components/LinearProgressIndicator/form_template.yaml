@@ -29,13 +29,15 @@ components: []
 is_package: true
 custom_component: true
 properties:
-- {name: visible, type: boolean, default_value: false, default_binding_prop: true,
-  important: true, designerHint: visible, designer_hint: visible, group: Look and Feel}
+- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
+  type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
+    this component be displayed?'}
 - name: type
   type: enum
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
   group: Key Properties
+  description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}

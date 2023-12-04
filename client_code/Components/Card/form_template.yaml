@@ -1,13 +1,15 @@
 properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
-  designer_hint: visible, group: Look and Feel}
+  designer_hint: visible, group: Look and Feel, description: 'Should this component
+    be displayed?'}
 - name: appearance
   type: enum
   important: true
   options: [elevated, filled, outlined]
   default_value: elevated
   group: Look and Feel
-- {name: card_image, type: uri, important: true, accept: image/*}
+  description: Predefined style type
+- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)}
 - name: image_position
   type: enum
   important: true
@@ -15,7 +17,10 @@ properties:
   include_none_option: true
   default_value: null
   none_option_label: No Image
-- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style}
+  description: How the image in positioned/displayed on the card
+- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style,
+  description: 'For top/bottom/left/right image_positions, if the image will have
+    a rounded edge'}
 - {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height,
   group: Image Style}
 - {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width,
