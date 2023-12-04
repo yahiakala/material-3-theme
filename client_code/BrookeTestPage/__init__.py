@@ -20,9 +20,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
-    pass
-    #self.layout.layout.show_sidesheet = 'True'
-
+    self.layout.layout.show_sidesheet = 'True'
 
   def file_loader_2_focus(self, **event_args):
     """This method is called when the FileLoader gets focus"""
