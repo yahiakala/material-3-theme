@@ -745,8 +745,9 @@ properties:
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
   group: Text Style}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
-  group: Text Style}
-- {name: background, type: color, default_value: '', important: true, group: Look and Feel}
+  group: Text Style, description: Underline the main text}
+- {name: background, type: color, default_value: '', important: true, group: Look and Feel,
+  description: Component background color}
 is_package: true
 events:
 - {name: click, default_event: true}
