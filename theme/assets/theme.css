@@ -377,24 +377,24 @@ body {
 .anvil-m3-sidesheet {
   height: 100%;
   width: 300px;
-  max-width: 400px;
   position: absolute;
   bottom: 0;
   right: -101%; 
   top: 0;
   overflow-y: hidden;
   padding: 24px;
-  display: none;
 }
 
 @media(min-width:600px) {
   .anvil-m3-sidesheet.anvil-m3-open {
+    right: 0px;
+    transition: right 0.25s;
     display: block;
   }
 }
 @media(min-width:600px) {
   .anvil-m3-content.anvil-m3-sidesheet-open {
-  width: calc(100% - 480px);
+  width: calc(100% - 380px);
   transition: width 250ms;
 }
 }

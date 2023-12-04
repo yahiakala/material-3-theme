@@ -67,13 +67,11 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   @property
   def show_sidesheet(self):
-    print('in getter:', self._show_sidesheet)
     return self._show_sidesheet
 
   @show_sidesheet.setter
   def show_sidesheet(self, value):
     self._show_sidesheet = value
-    print('in setter:', value)
     if value:
       self.open_sidesheet()
     else:
@@ -83,16 +81,16 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.dom_nodes['anvil-m3-sidesheet'].style.width = '300px'
     self.dom_nodes['anvil-m3-sidesheet'].style.right = "0px"
     self.dom_nodes['anvil-m3-sidesheet'].classList.add('anvil-m3-open')
-    self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+    self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.add('anvil-m3-sidesheet-open')
     self.dom_nodes['anvil-m3-content'].classList.add('anvil-m3-sidesheet-open')
-    self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    self.dom_nodes['anvil-m3-sidesheet-scrim'].animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
     
   def close_sidesheet(self):
     self.dom_nodes['anvil-m3-sidesheet'].style.right = "-101%"
-    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.sidesheet.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
-    self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
+    self.dom_nodes['anvil-m3-sidesheet-scrim'].animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    window.setTimeout(lambda: self.dom_nodes['anvil-m3-sidesheet'].style.setProperty('width', '0px'), 250)
+    window.setTimeout(lambda: self.dom_nodes['anvil-m3-sidesheet'].classList.remove('anvil-m3-open'), 245)
+    self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.remove('anvil-m3-sidesheet-open')
     self.dom_nodes['anvil-m3-content'].classList.remove('anvil-m3-sidesheet-open')
 
   def icon_button_1_click(self, **event_args):
