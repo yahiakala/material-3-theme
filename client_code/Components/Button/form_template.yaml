@@ -401,7 +401,7 @@ properties:
   important: true
   options: [left, right]
   default_value: left
-  description: The alignment of the icon on this component. Set to ‘top’ for a centred icon on a component with no text.
+  description: The alignment of the icon on this component
   designer_hint: align-horizontal
   group: Icon Style
 is_package: true
