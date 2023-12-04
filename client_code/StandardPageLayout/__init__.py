@@ -18,11 +18,15 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_rail = self.dom_nodes['anvil-m3-navigation-rail']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
+    self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
+    self.sidesheet = self.dom_nodes['anvil-m3-sidesheet']
+    self.content = self.dom_nodes['anvil-m3-content']
 
     window.document.addEventListener('scroll', self.add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
+    self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
 
   def test_function(self):
     print("I'm a function in StandardPageLayout")
@@ -55,11 +59,11 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def navigation_rail_collapse_to(self, value):
     self._navigation_rail_collapse_to = value
     value = value.lower().replace(' ', '-')
-    self.dom_nodes['anvil-m3-navigation-rail'].className = "anvil-m3-navigation-rail"
-    self.dom_nodes['anvil-m3-navigation-rail'].classList.add(f"anvil-m3-{value}")
+    self.nav_rail.className = "anvil-m3-navigation-rail"
+    self.nav_rail.classList.add(f"anvil-m3-{value}")
     #todo: remove the below?
-    self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
-    self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
+    self.content.className = "anvil-m3-content"
+    self.content.classList.add(f"anvil-m3-{value}")
 
   @property
   def show_sidesheet(self):
@@ -71,16 +75,31 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self._show_sidesheet = value
     print('in setter:', value)
     if value:
-      self.dom_nodes['anvil-m3-sidesheet'].classList.add('open')
-      self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.add('sidesheet-open')
-      self.dom_nodes['anvil-m3-content'].classList.add('sidesheet-open')
+      self.open_sidesheet()
     else:
-      self.dom_nodes['anvil-m3-sidesheet'].classList.remove('open')
-      self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.remove('sidesheet-open')
-      self.dom_nodes['anvil-m3-content'].classList.remove('sidesheet-open')
+      self.close_sidesheet()
+
+  def open_sidesheet(self, e):
+    self.sidesheet.style.width = '300px'
+    self.sidesheet.style.right = "0px"
+    self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    self.sidesheet.classList.add('open')
+    self.sidesheet_scrim.classList.add('sidesheet-open')
+    self.content.classList.add('sidesheet-open')
+    
+  def close_sidesheet(self, e):
+    self.nav_rail.style.right = "-101%"
+    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
+    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
+    self.sidesheet.classList.remove('open')
+    self.sidesheet_scrim.classList.remove('sidesheet-open')
+    self.content.classList.remove('sidesheet-open')
+
 
   def icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
+  
       
       
 
