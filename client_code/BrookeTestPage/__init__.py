@@ -22,7 +22,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the component is clicked"""
     self.layout.show_sidesheet = True
     print(self.layout.show_sidesheet)
-    print(self.layout)
+    print(self.layout.layout)
     self.layout.navigation_link_1_click()
 
 
