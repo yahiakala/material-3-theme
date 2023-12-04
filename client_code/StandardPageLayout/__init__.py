@@ -82,20 +82,18 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def open_sidesheet(self, e):
     self.sidesheet.style.width = '300px'
     self.sidesheet.style.right = "0px"
+    self.sidesheet.classList.add('anvil-m3-open')
+    self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+    self.content.classList.add('anvil-m3-sidesheet-open')
     self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
-    self.sidesheet.classList.add('open')
-    self.sidesheet_scrim.classList.add('sidesheet-open')
-    self.content.classList.add('sidesheet-open')
     
   def close_sidesheet(self, e):
-    self.nav_rail.style.right = "-101%"
+    self.sidesheet.style.right = "-101%"
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
-    self.sidesheet.classList.remove('open')
-    self.sidesheet_scrim.classList.remove('sidesheet-open')
-    self.content.classList.remove('sidesheet-open')
-
+    window.setTimeout(lambda: self.sidesheet.style.setProperty('width', '0px'), 250)
+    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
+    self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
+    self.content.classList.remove('anvil-m3-sidesheet-open')
 
   def icon_button_1_click(self, **event_args):
     self.show_sidesheet = False

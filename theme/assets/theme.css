@@ -384,22 +384,24 @@ body {
   top: 0;
   overflow-y: hidden;
   padding: 24px;
+  display: none;
 }
 
 @media(min-width:600px) {
-  .anvil-m3-sidesheet.open {
+  .anvil-m3-sidesheet.anvil-m3-open {
     display: block;
   }
 }
 @media(min-width:600px) {
-  .anvil-m3-content.sidesheet-open {
+  .anvil-m3-content.anvil-m3-sidesheet-open {
   width: calc(100% - 480px);
+  transition: width 250ms;
 }
 }
 
 
 @media(max-width: 600px) {
-  .anvil-m3-sidesheet.open {
+  .anvil-m3-sidesheet.anvil-m3-open {
     right: 0px;
     transition: right 0.25s;
     transition: left 0.25s;
@@ -414,7 +416,7 @@ body {
 }
 
 @media(max-width: 600px) {
-.anvil-m3-sidesheet-scrim.sidesheet-open {
+.anvil-m3-sidesheet-scrim.anvil-m3-sidesheet-open {
   display:block;
 }
 }
