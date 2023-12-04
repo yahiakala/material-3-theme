@@ -20,12 +20,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
-    #self.layout.show_sidesheet = True
-    self.layout.layout.show_sidesheet = 'foo'
-    print(self.layout)
-    print(self.layout.layout)
-    #self.layout.navigation_link_1_click()
-    self.layout.layout.test_function()
+    self.layout.layout.show_sidesheet = 'True'
 
 
   def file_loader_2_focus(self, **event_args):
