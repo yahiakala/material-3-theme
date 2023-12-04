@@ -76,6 +76,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   def icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
+    print(self.show_sidesheet)
       
       
 
