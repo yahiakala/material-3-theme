@@ -73,9 +73,9 @@ components:
             components:
             - name: dropdown_menu_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: ['dropdown item 1 with a long name ', dropdown item 2, dropdown item 3,
+                  dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7,
+                  dropdown item 8, dropdown item 9]
                 label_text: Dropdown Label 1
                 allow_none: false
                 enabled: true
@@ -133,14 +133,6 @@ components:
                 allow_none: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
-        - name: button_menu_1
-          properties: {}
-          type: form:Components.ButtonMenu
-          components:
-          - name: menu_item_1
-            properties: {text: blah blah test item here}
-            type: form:Components.Menu.MenuItem
-            layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1
     properties: {visible: true}
     type: form:Components.Card
