@@ -380,7 +380,7 @@ body {
   max-width: 400px;
   position: absolute;
   bottom: 0;
-  right: 0; 
+  right: -101%; 
   top: 0;
   overflow-y: hidden;
   display: none;
@@ -401,12 +401,11 @@ body {
 
 @media(max-width: 600px) {
   .anvil-m3-sidesheet.open {
-/*         left: 0px;
+    right: 0px;
     transition: right 0.25s;
-    transition: left .25s; */
+    transition: left 0.25s;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     margin: 0;
-/*     left: -101%; */
     border-right: none;
     border-radius: 20px 0px 0px 20px;
     position: absolute;
