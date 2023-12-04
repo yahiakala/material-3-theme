@@ -22,7 +22,10 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.field = get_dom_node(self.selection_field).querySelector("input")
-
+    print("dropdown")
+    print(self.menuNode)
+    print(self.field)
+    
     self._hoverIndex = None
     self._children = None
     self._selected_menuItem = None

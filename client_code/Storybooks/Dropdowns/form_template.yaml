@@ -133,6 +133,14 @@ components:
                 allow_none: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
+        - name: button_menu_1
+          properties: {}
+          type: form:Components.ButtonMenu
+          components:
+          - name: menu_item_1
+            properties: {text: blah blah test item here}
+            type: form:Components.Menu.MenuItem
+            layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1
     properties: {visible: true}
     type: form:Components.Card

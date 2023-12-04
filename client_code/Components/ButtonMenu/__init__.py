@@ -27,6 +27,9 @@ class ButtonMenu(ButtonMenuTemplate):
 
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.btnNode = get_dom_node(self.menu_button).querySelector("button")
+    print("buttonmenu")
+    print(self.menu_button)
+    print(self.btnNode)
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
