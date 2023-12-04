@@ -24,7 +24,8 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
-  self
+  def test_function(self):
+    print("I'm a function in StandardPageLayout")
 
   def open_nav_drawer(self, e):
     self.nav_rail.style.width = '360px'
