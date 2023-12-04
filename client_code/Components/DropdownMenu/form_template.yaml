@@ -51,16 +51,22 @@ properties:
 - {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels,
   group: Dropdown Items Style}
 - {name: selected_italic_display, type: boolean, default_value: false, important: false,
-  group: Selection Field Style}
+  group: Selection Field Style, description: 'True, when there is a selected item,
+    the displayed text in the selection field is italicized'}
 - {name: selected_bold_display, type: boolean, default_value: false, important: false,
-  description: Display this component’s text in bold, group: Selection Field Style}
+  description: 'True, when there is a selected item, the displayed text in the selection
+    field is bold', group: Selection Field Style}
 - {name: selected_underline_display, type: boolean, default_value: false, important: false,
-  description: Display this component’s text in underline, group: Selection Field Style}
-- {name: selected_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text,
-  group: Selection Field Style}
-- {name: selected_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
-  group: Selection Field Style}
-- {name: selected_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
+  description: 'True, when there is a selected item, the displayed text in the selection
+    field is underlined', group: Selection Field Style}
+- {name: selected_font, type: string, default_value: '', important: false, description: 'When
+    there is a selected item, the font-family of the displayed text in the selection
+    field', group: Selection Field Style}
+- {name: selected_font_size, type: number, important: false, description: 'When there
+    is a selected item, the font-size (pixels) of the displayed text in the selection
+    field', group: Selection Field Style}
+- {name: selected_text_color, type: color, default_value: '', important: false, description: 'When
+    there is a selected item, the color of the displayed text in the selection field',
   group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None,
   group: Interaction}
