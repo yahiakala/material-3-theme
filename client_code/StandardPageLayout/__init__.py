@@ -63,6 +63,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
 
   @property
   def show_sidesheet(self):
+    print('in getter:', self._show_sidesheet)
     return self._show_sidesheet
 
   @show_sidesheet.setter
