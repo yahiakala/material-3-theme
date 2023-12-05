@@ -33,9 +33,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     print("I'm a function in StandardPageLayout")
 
   def open_nav_drawer(self, e):
-    self.dom_nodes['anvil-m3-navigation-rail'].style.width = '360px'
-    self.dom_nodes['anvil-m3-navigation-rail'].style.left = "0px"
-    self.dom_nodes['anvil-m3-navigation-rail'].classList.add('anvil-m3-shown')
+    self.nav_rail.style.width = '360px'
+    self.nav_rail.style.left = "0px"
+    self.nav_rail.classList.add('anvil-m3-shown')
     self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
 
   def hide_nav_drawer(self, e):
@@ -60,8 +60,8 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def navigation_rail_collapse_to(self, value):
     self._navigation_rail_collapse_to = value
     value = value.lower().replace(' ', '-')
-    self.dom_nodes['anvil-m3-navigation-rail'].className = "anvil-m3-navigation-rail"
-    self.dom_nodes['anvil-m3-navigation-rail'].classList.add(f"anvil-m3-{value}")
+    self.nav_rail.className = "anvil-m3-navigation-rail"
+    self.nav_rail.classList.add(f"anvil-m3-{value}")
     #todo: remove the below?
     self.dom_nodes['anvil-m3-content'].className = "anvil-m3-content"
     self.dom_nodes['anvil-m3-content'].classList.add(f"anvil-m3-{value}")
