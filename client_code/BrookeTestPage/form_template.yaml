@@ -2,9 +2,25 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: card_2
+  - name: column_panel_1
     properties: {}
-    type: form:Components.Card
+    type: ColumnPanel
     layout_properties: {}
-    components: []
+    components:
+    - name: card_1
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'LCBSMO,CWMFZI'}
+    - name: card_2
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'LCBSMO,KKLOOC'}
+    - name: card_4
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'TPNCFW,XXGABP'}
+    - name: card_3
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'TPNCFW,ZGVWBN'}
   slot_5: []
