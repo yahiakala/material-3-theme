@@ -11,7 +11,7 @@ properties:
   group: Look and Feel}
 - name: appearance
   type: enum
-  options: [' elevated', filled, tonal, outlined]
+  options: [elevated, filled, tonal, outlined]
   include_none_option: true
   group: Look and Feel
 - {name: text, type: string, default_value: '', description: Text for the Button,
