@@ -231,7 +231,7 @@ body {
 }
 
 @media(max-width: 600px) {
-  .anvil-m3-navigation-drawer-scrim {
+  .anvil-m3-navigation-drawer-scrim, .anvil-m3-sidesheet-scrim {
     background-color: rgba(0, 0, 0, 0.32);
     position: fixed;
     top: 0px;
@@ -244,13 +244,14 @@ body {
   }
 }
 
+
 @media(max-width: 600px) {
   .anvil-m3-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
     display: block;
   }
 }
 
-.anvil-m3-navigation-drawer-scrim {
+.anvil-m3-navigation-drawer-scrim, .anvil-m3-sidesheet-scrim {
   display:none;
 }
 
@@ -373,3 +374,72 @@ body {
   font-weight: 400;
 }
 
+.anvil-m3-sidesheet {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  transition: right 250ms;
+  bottom: 0;
+/*   right:0; */
+  right: -301px; 
+  top: 0;
+  overflow-y: hidden;
+  padding: 24px;
+  display: none !important;
+  
+}
+
+@media(min-width:600px) {
+  .anvil-m3-sidesheet.anvil-m3-open {
+    right: 0px;
+/*     transition: right 0.25s; */
+/*     display: block; */
+
+  }
+}
+@media(min-width:600px) {
+  .anvil-m3-sidesheet {
+    border-left: 1px solid var(--anvil-m3-outline-variant);
+  }
+}
+
+.anvil-m3-sidesheet.anvil-m3-display-block {
+    display: block !important;
+  }
+
+@media(min-width:600px) {
+  .anvil-m3-content.anvil-m3-sidesheet-open {
+  width: calc(100% - 380px);
+}
+}
+
+@media(min-width:600px) {
+  .anvil-m3-content.anvil-m3-transition-width {
+  transition: width 250ms;
+}
+}
+
+@media(max-width: 600px) {
+  .anvil-m3-sidesheet {
+    right: -301px;
+    transition: right 0.25s;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    margin: 0;
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+    position: absolute;
+    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+    z-index:10;
+  }
+}
+
+@media(max-width: 600px) {
+  .anvil-m3-sidesheet.anvil-m3-open {
+    right: 0px;
+  }
+
+@media(max-width: 600px) {
+.anvil-m3-sidesheet-scrim.anvil-m3-sidesheet-open {
+  display:block;
+}
+}

@@ -1,6 +1,7 @@
 layout:
   type: form:StandardPageLayout
-  properties: {navigation_rail_collapse_to: Navigation drawer, app_title: Material Design 3}
+  properties: {navigation_rail_collapse_to: Navigation drawer, app_title: Material Design 3,
+    show_sidesheet: true}
 is_package: true
 components_by_slot:
   slot_1:
@@ -24,6 +25,7 @@ components_by_slot:
     layout_properties: {}
   slot_2: []
   slot_3: []
+  slot_5: []
 slots:
   slot_3:
     index: 0
@@ -37,3 +39,7 @@ slots:
     index: 0
     set_layout_properties: {}
     target: {type: slot, name: slot_4}
+  slot_5:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_5}

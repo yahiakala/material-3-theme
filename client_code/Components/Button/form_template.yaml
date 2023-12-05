@@ -12,7 +12,7 @@ properties:
   group: Look and Feel, description: 'Should this component be displayed?'}
 - name: appearance
   type: enum
-  options: [' elevated', filled, tonal, outlined]
+  options: [elevated, filled, tonal, outlined]
   include_none_option: true
   group: Look and Feel
   description: Predefined style type
