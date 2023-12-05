@@ -86,7 +86,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     #self.sidesheet.classList.add('anvil-m3-open')
     self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
     self.content.classList.add('anvil-m3-transition-width')
-    self.content.classList.add('anvil-m3-sidesheet-open')
+    window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
     self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
     
   def close_sidesheet(self):
