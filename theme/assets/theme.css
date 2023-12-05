@@ -385,7 +385,7 @@ body {
   top: 0;
   overflow-y: hidden;
   padding: 24px;
-/*   display: none; */
+  display: none !important;
   
 }
 
@@ -404,7 +404,7 @@ body {
 }
 
 .anvil-m3-sidesheet.anvil-m3-display-block {
-    display: block;
+    display: block !important;
   }
 
 @media(min-width:600px) {

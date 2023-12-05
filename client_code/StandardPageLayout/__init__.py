@@ -100,17 +100,10 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
     self.sidesheet.classList.remove('anvil-m3-open')
-  
     self.content.classList.remove('anvil-m3-sidesheet-open')
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
+    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
   def icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
-
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
-    pass
-  
-      
-      
 

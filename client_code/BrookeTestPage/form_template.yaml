@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_1
-      properties: {text: Open Sidesheet, align: center, appearance: filled}
+      properties: {text: Toggle Sidesheet, align: center, appearance: filled}
       type: form:Components.Button
       layout_properties: {slot: card-content-slot}
       event_bindings: {click: button_1_click}
