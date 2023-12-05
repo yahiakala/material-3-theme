@@ -11,9 +11,7 @@ from anvil.js import window
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    
-    self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
+        self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
     self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_rail = self.dom_nodes['anvil-m3-navigation-rail']
@@ -21,6 +19,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
     self.sidesheet = self.dom_nodes['anvil-m3-sidesheet']
     self.content = self.dom_nodes['anvil-m3-content']
+    self.init_components(**properties)
+    
+
 
     window.document.addEventListener('scroll', self.add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
@@ -80,7 +81,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def open_sidesheet(self):
     self.dom_nodes['anvil-m3-sidesheet'].style.width = '300px'
     self.dom_nodes['anvil-m3-sidesheet'].style.right = "0px"
-    self.dom_nodes['anvil-m3-sidesheet'].classList.add('anvil-m3-open')
+    self.sidesheet.classList.add('anvil-m3-open')
     self.dom_nodes['anvil-m3-sidesheet-scrim'].classList.add('anvil-m3-sidesheet-open')
     self.dom_nodes['anvil-m3-content'].classList.add('anvil-m3-sidesheet-open')
     self.dom_nodes['anvil-m3-sidesheet-scrim'].animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
