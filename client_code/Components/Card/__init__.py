@@ -49,6 +49,7 @@ class Card(CardTemplate):
   # Todo: this will change from string to the URI property
   def set_image(self, value):
     if value:
+      print(value)
       self.dom_nodes['image'].style.backgroundImage = f"url('{value}')";
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
