@@ -25,8 +25,19 @@ class NavigationLink(NavigationLinkTemplate):
       open_form(self.navigate_to)
       self.selected = True
 
-  url = href_property('anvil-m3-navigation-link')
+  def _anvil_get_interactions_(self):
+    return [{
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-navigation-link-text'])
+        }
+      }]
 
+  url = href_property('anvil-m3-navigation-link')
+  visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
 
   @property
