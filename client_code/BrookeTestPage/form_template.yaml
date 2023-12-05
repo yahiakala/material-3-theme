@@ -8,9 +8,18 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: card_1
-      properties: {}
+      properties: {card_image: _/theme/pexels-erik-mclean-10894354.jpg, image_position: top}
       type: form:Components.Card
       layout_properties: {grid_position: 'LCBSMO,CWMFZI'}
+      components:
+      - name: heading_1
+        properties: {style: title, text: Chinese Money Plant}
+        type: form:Components.Heading
+        layout_properties: {slot: card-content-slot}
+      - name: text_1
+        properties: {text: £6}
+        type: form:Components.Text
+        layout_properties: {slot: card-content-slot}
     - name: card_2
       properties: {}
       type: form:Components.Card
