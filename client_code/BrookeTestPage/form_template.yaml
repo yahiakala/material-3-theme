@@ -43,4 +43,8 @@ components_by_slot:
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
+  - name: button_menu_1
+    properties: {}
+    type: form:Components.ButtonMenu
+    layout_properties: {}
   slot_5: []
