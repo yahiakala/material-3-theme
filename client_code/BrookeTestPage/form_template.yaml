@@ -17,7 +17,7 @@ components_by_slot:
         type: form:Components.Heading
         layout_properties: {slot: card-content-slot}
       - name: text_1
-        properties: {text: £6}
+        properties: {text: £15, scale: large}
         type: form:Components.Text
         layout_properties: {slot: card-content-slot}
     - name: card_2
