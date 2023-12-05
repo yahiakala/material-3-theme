@@ -94,7 +94,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.sidesheet.classList.remove('anvil-m3-open')
     # window.setTimeout(lambda: self.sidesheet.style.setProperty('width', '0px'), 250)
     #window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
-    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
+    #window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
     self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
     self.content.classList.remove('anvil-m3-sidesheet-open')
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)

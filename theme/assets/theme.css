@@ -385,7 +385,8 @@ body {
   top: 0;
   overflow-y: hidden;
   padding: 24px;
-  display: none;
+/*   display: none; */
+  
 }
 
 @media(min-width:600px) {
@@ -396,12 +397,12 @@ body {
 
   }
 }
-/* @media(min-width:600px) {
-  .anvil-m3-sidesheet.anvil-m3-display-none {
-    display: none;
+@media(min-width:600px) {
+  .anvil-m3-sidesheet {
+    border-left: 1px solid var(--anvil-m3-outline);
   }
 }
- */
+
 @media(min-width:600px) {
   .anvil-m3-sidesheet.anvil-m3-display-block {
     display: block;
