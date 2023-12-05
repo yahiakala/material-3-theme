@@ -82,6 +82,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     # self.sidesheet.style.width = '300px'
     # self.sidesheet.style.right = "0px"
     self.sidesheet.classList.add('anvil-m3-display-block')
+    window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 50)
     self.sidesheet.classList.add('anvil-m3-open')
     self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
     self.content.classList.add('anvil-m3-transition-width')
