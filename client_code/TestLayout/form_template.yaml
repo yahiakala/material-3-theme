@@ -25,6 +25,11 @@ components_by_slot:
     layout_properties: {}
   slot_2: []
   slot_3: []
+  slot_5:
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {}
 slots:
   slot_3:
     index: 0
