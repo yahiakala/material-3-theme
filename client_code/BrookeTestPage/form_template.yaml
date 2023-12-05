@@ -23,7 +23,7 @@ components_by_slot:
       type: Spacer
       layout_properties: {slot: card-content-slot}
     - name: text_1
-      properties: {text: This is a sidepanel, align: center}
+      properties: {text: This is a sidesheet, align: center}
       type: form:Components.Text
       layout_properties: {slot: card-content-slot}
     - name: spacer_1
