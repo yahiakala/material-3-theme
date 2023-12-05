@@ -381,7 +381,7 @@ body {
   transition: right 250ms;
   bottom: 0;
 /*   right:0; */
-  right: -300px; 
+  right: -301px; 
   top: 0;
   overflow-y: hidden;
   padding: 24px;
@@ -399,7 +399,7 @@ body {
 }
 @media(min-width:600px) {
   .anvil-m3-sidesheet {
-    border-left: 1px solid var(--anvil-m3-outline);
+    border-left: 1px solid var(--anvil-m3-outline-variant);
   }
 }
 

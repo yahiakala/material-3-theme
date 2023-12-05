@@ -19,6 +19,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
     self.sidesheet = self.dom_nodes['anvil-m3-sidesheet']
     self.content = self.dom_nodes['anvil-m3-content']
+    self.sidesheet_previous_state = False
     self.init_components(**properties)
     
 
@@ -74,27 +75,30 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def show_sidesheet(self, value):
     self._show_sidesheet = value
     if value:
-      self.open_sidesheet()
+        self.open_sidesheet()
     else:
       self.close_sidesheet()
 
   def open_sidesheet(self):
-    # self.sidesheet.style.width = '300px'
-    # self.sidesheet.style.right = "0px"
-    self.sidesheet.classList.add('anvil-m3-display-block')
-    window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
-    #self.sidesheet.classList.add('anvil-m3-open')
-    self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
-    self.content.classList.add('anvil-m3-transition-width')
-    window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
-    self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    if self.sidesheet_previous_state:
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.content.classList.add('anvil-m3-transition-width')
+      window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
+      self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    else:
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_scrim.style.opacity = 1
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      self.sidesheet.classList.add('anvil-m3-open')
+      self.content.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_previous_state = True
     
   def close_sidesheet(self):
+    self.content.classList.add('anvil-m3-transition-width')
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     self.sidesheet.classList.remove('anvil-m3-open')
-    # window.setTimeout(lambda: self.sidesheet.style.setProperty('width', '0px'), 250)
-    #window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
-    #window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
     self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
     self.content.classList.remove('anvil-m3-sidesheet-open')
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
