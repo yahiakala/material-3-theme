@@ -11,7 +11,7 @@ from anvil.js import window
 class StandardPageLayout(StandardPageLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-        self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
+    self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
     self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_rail = self.dom_nodes['anvil-m3-navigation-rail']
