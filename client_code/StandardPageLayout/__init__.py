@@ -82,8 +82,8 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     # self.sidesheet.style.width = '300px'
     # self.sidesheet.style.right = "0px"
     self.sidesheet.classList.add('anvil-m3-display-block')
-    window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 50)
-    self.sidesheet.classList.add('anvil-m3-open')
+    window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 5)
+    #self.sidesheet.classList.add('anvil-m3-open')
     self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
     self.content.classList.add('anvil-m3-transition-width')
     self.content.classList.add('anvil-m3-sidesheet-open')
@@ -91,8 +91,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     
   def close_sidesheet(self):
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    self.sidesheet.classList.remove('anvil-m3-open')
     # window.setTimeout(lambda: self.sidesheet.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
+    #window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-open'), 245)
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
     self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
     self.content.classList.remove('anvil-m3-sidesheet-open')
