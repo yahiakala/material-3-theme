@@ -50,7 +50,7 @@ class Card(CardTemplate):
   def set_image(self, value):
     if value:
       print(value)
-      self.dom_nodes['image'].style.backgroundImage = f"url('{value}')";
+      self.dom_nodes['image'].style.backgroundImage = value;
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", set_image)

@@ -13,6 +13,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.layout.layout.show_sidesheet = False
+
     
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""

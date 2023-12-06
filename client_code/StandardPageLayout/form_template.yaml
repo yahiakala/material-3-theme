@@ -9,6 +9,7 @@ properties:
 - {name: background_color, type: string, default_value: ''}
 - {name: text_color, type: string, default_value: ''}
 - {name: show_sidesheet, type: boolean, default_value: true, important: true}
+- {name: sidesheet_item, type: object, important: true}
 is_package: true
 slots:
   slot_1:
