@@ -11,6 +11,7 @@ from ...Functions import property_with_callback, style_property
 class Card(CardTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self.need_tmp_url = False
     self.init_components(**properties)
     if not anvil.designer.in_designer:
       self.dom_nodes['empty-image'].style.display = "none"
@@ -49,8 +50,13 @@ class Card(CardTemplate):
   # Todo: this will change from string to the URI property
   def set_image(self, value):
     if value:
-      print(value)
-      self.dom_nodes['image'].style.backgroundImage = f"url('{value}')";
+      print(type(value))
+      if type(value) is str:
+        self.dom_nodes['image'].style.backgroundImage = f"url('{value}')"
+      elif type(value) is anvil.LazyMedia:
+        self.dom_nodes['image'].style.backgroundImage = f"url('{value.get_url()}')"
+      else:
+        self.need_tmp_url = True
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", set_image)
@@ -58,3 +64,8 @@ class Card(CardTemplate):
   def set_rounded_img(self, value):
      self.dom_nodes['image'].classList.toggle('anvil-m3-card-rounded', value)
   rounded_image = property_with_callback("rounded_image", set_rounded_img)
+
+  def form_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    if self.need_tmp_url == True:
+      self.card_image_url = anvil.Media(.)
