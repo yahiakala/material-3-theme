@@ -39,5 +39,5 @@ container:
       >\n      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
       \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n<!--\
       \ </div> -->"}
-  event_bindings: {show: form_show}
+  event_bindings: {show: form_show, hide: form_hide}
 custom_component_container: true

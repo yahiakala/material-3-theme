@@ -68,4 +68,11 @@ class Card(CardTemplate):
   def form_show(self, **event_args):
     """This method is called when the form is shown on the page"""
     if self.need_tmp_url == True:
-      self.card_image_url = anvil.Media(.)
+      self.card_image_url = anvil.media.TempURl(self.card_image)
+      self.set_image(self.card_image_url.url)
+
+  def form_hide(self, **event_args):
+    """This method is called when the form is removed from the page"""
+    if self.need_tmp_url:
+      self.card_image_url.revoke()
+      
