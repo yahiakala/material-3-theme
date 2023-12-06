@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.media
 import anvil.designer
 from anvil import HtmlTemplate
 from ...Functions import property_with_callback, style_property
@@ -68,7 +69,7 @@ class Card(CardTemplate):
   def form_show(self, **event_args):
     """This method is called when the form is shown on the page"""
     if self.need_tmp_url == True:
-      self.card_image_url = anvil.media.TempURl(self.card_image)
+      self.card_image_url = anvil.media.TempUrl(self.card_image)
       self.set_image(self.card_image_url.url)
 
   def form_hide(self, **event_args):
