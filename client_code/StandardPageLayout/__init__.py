@@ -21,17 +21,12 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
     self.init_components(**properties)
-    
-
 
     window.document.addEventListener('scroll', self.add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
   #   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
-
-  def test_function(self):
-    print("I'm a function in StandardPageLayout")
 
   def open_nav_drawer(self, e):
     self.nav_rail.style.width = '360px'
@@ -45,7 +40,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
 
-        
   def add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
       if window.scrollY == 0:
@@ -67,7 +61,6 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.content.className = "anvil-m3-content"
     self.content.classList.add(f"anvil-m3-{value}")
 
-
   @property
   def show_sidesheet(self):
     return self._show_sidesheet
@@ -80,7 +73,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     else:
       self.close_sidesheet()
 
-  def open_sidesheet(self):
+  def _open_sidesheet(self):
     if self.sidesheet_previous_state:
       self.sidesheet.classList.add('anvil-m3-display-block')
       window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
@@ -96,7 +89,7 @@ class StandardPageLayout(StandardPageLayoutTemplate):
       self.content.classList.add('anvil-m3-sidesheet-open')
       self.sidesheet_previous_state = True
     
-  def close_sidesheet(self):
+  def _close_sidesheet(self):
     self.content.classList.add('anvil-m3-transition-width')
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
@@ -105,6 +98,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
-  def icon_button_1_click(self, **event_args):
+  def _icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
+
+  def open_sidesheet_with_content(self, content):
+    pass
 
