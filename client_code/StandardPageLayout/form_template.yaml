@@ -69,7 +69,7 @@ container:
       \ anvil-name=\"anvil-m3-sidesheet\">\n  <div anvil-slot=\"anvil-m3-sidesheet\"\
       >\n    <div anvil-slot=\"anvil-m3-sidesheet-close-button\"></div>\n    <p anvil-if-slot-empty=\"\
       anvil-m3-sidesheet\" class=\"anvil-designer-only\">Add sidesheet content here</p>\n\
-      \    <div anvil-slot=\"anvil-m3-sidesheet-footer\" class=\"anvil-m3-sidesheet-footer\"\
-      >\n      <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\" class=\"anvil-designer-only\"\
-      >Add sidesheet footer here</p>\n    </div>\n  </div>  \n</div>\n\n"}
+      \  </div>  \n  <div anvil-slot=\"anvil-m3-sidesheet-footer\" class=\"anvil-m3-sidesheet-footer\"\
+      >\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\" class=\"anvil-designer-only\"\
+      >Add sidesheet footer here</p>\n  </div>\n</div>\n\n"}
   event_bindings: {}
