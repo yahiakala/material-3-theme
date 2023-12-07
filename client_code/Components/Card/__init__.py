@@ -49,20 +49,19 @@ class Card(CardTemplate):
   image_width = align = style_property('image', 'width', 'image_width')
   image_height = align = style_property('image', 'height', 'image_height')
 
-  def _set_card_img_from_tempurl(self):
-    self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
-    self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image_temp_url.url}')"
-    
-  def _set_image(self, value):
-    if value:
-      print(type(value))
-      if type(value) is str:
-        self.dom_nodes['image'].style.backgroundImage = f"url('{value}')"
-      elif type(value) is anvil.LazyMedia:
-        self.dom_nodes['image'].style.backgroundImage = f"url('{value.get_url()}')"
+  def _set_card_img(self):
+    if self.card_image:
+      if type(self.card_image) is str:
+        self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image}')"
+      elif type(self.card_image) is anvil.LazyMedia:
+        self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image.get_url()}')"
       else:
         if self._on_page:
-          self._set_card_img_from_tempurl()
+          self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
+          self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image_temp_url.url}')"
+    
+  def _set_image(self, value):
+    self._set_card_img_from_tempurl()
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", _set_image)
