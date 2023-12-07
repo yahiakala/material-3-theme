@@ -387,10 +387,13 @@ body {
   display: none !important; 
 
 }
-.anvil-m3-sidesheet-container {
+.anvil-m3-sidesheet-title-container {
   display: flex;
   justify-content: space-between;
-  height: 
+}
+
+.anvil-m3-sidesheet-content {
+  height: calc(100vh - 176px)
 }
 
 .anvil-m3-sidesheet-title {
@@ -399,7 +402,7 @@ body {
 .anvil-m3-sidesheet-footer {
     position: absolute;
     bottom: 24px;
-    height: 72px
+    height: 64px
 }
 
 

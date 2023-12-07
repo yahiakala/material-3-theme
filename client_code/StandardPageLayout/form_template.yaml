@@ -70,13 +70,14 @@ container:
       \ anvil-slot=\"anvil-m3-content\" anvil-name=\"anvil-m3-content\">\n  <p anvil-if-slot-empty=\"\
       anvil-m3-content\" class=\"anvil-designer-only\" style=\"font-style: italic;\"\
       >Add content here</p>\n</div>\n<div class=\"anvil-m3-sidesheet anvil-m3-open\"\
-      \ anvil-name=\"anvil-m3-sidesheet\">\n  <div class=\"anvil-m3-sidesheet-container\"\
+      \ anvil-name=\"anvil-m3-sidesheet\">\n  <div class=\"anvil-m3-sidesheet-title-container\"\
       >\n    <div anvil-slot=\"anvil-m3-sidesheet-title\">    \n      <p anvil-if-slot-empty=\"\
       anvil-m3-sidesheet-title\" class=\"anvil-designer-only\">Add sidesheet title\
       \ here</p>\n    </div>\n    <div anvil-slot=\"anvil-m3-sidesheet-close-button\"\
-      ></div>\n  </div>\n  <div anvil-slot=\"anvil-m3-sidesheet\">\n    <p anvil-if-slot-empty=\"\
-      anvil-m3-sidesheet\" class=\"anvil-designer-only\">Add sidesheet content here</p>\n\
-      \  </div>  \n  <div anvil-slot=\"anvil-m3-sidesheet-footer\" class=\"anvil-m3-sidesheet-footer\"\
-      >\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\" class=\"anvil-designer-only\"\
-      >Add sidesheet footer here</p>\n  </div>\n</div>\n\n"}
+      ></div>\n  </div>\n  <div anvil-slot=\"anvil-m3-sidesheet\" class=anvil-m3-sidesheet-content>\n\
+      \    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\" class=\"anvil-designer-only\"\
+      >Add sidesheet content here</p>\n  </div>  \n  <div anvil-slot=\"anvil-m3-sidesheet-footer\"\
+      \ class=\"anvil-m3-sidesheet-footer\">\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\"\
+      \ class=\"anvil-designer-only\">Add sidesheet footer here</p>\n  </div>\n</div>\n\
+      \n"}
   event_bindings: {}
