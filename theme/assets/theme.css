@@ -380,13 +380,12 @@ body {
   position: absolute;
   transition: right 250ms;
   bottom: 0;
-/*   right:0; */
   right: -301px; 
   top: 0;
   overflow-y: hidden;
   padding: 24px;
   display: none !important;
-  
+
 }
 
 .anvil-m3-sidesheet-footer {
@@ -398,8 +397,6 @@ body {
 @media(min-width:600px) {
   .anvil-m3-sidesheet.anvil-m3-open {
     right: 0px;
-/*     transition: right 0.25s; */
-/*     display: block; */
 
   }
 }

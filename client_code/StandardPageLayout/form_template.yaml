@@ -31,6 +31,10 @@ slots:
     index: 1
     set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {type: container, name: ''}
+  slot_6:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet-footer}
+    target: {type: container, name: ''}
 custom_component: true
 components:
 - name: icon_button_1
