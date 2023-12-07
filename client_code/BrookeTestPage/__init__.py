@@ -12,7 +12,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.layout.layout.show_sidesheet = False
+    # self.layout.layout.show_sidesheet = False
 
     
   def file_loader_2_change(self, file, **event_args):
