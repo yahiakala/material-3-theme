@@ -49,7 +49,10 @@ class Card(CardTemplate):
   image_width = align = style_property('image', 'width', 'image_width')
   image_height = align = style_property('image', 'height', 'image_height')
 
-
+  def _set_card_img_from_tempurl(self):
+    self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
+    self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image_temp_url.url}')"
+    
   def _set_image(self, value):
     if value:
       print(type(value))
@@ -59,10 +62,7 @@ class Card(CardTemplate):
         self.dom_nodes['image'].style.backgroundImage = f"url('{value.get_url()}')"
       else:
         if self._on_page:
-          self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
-          self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image_temp_url.url()}')"
-          
-        self.need_tmp_url = True
+          self._set_card_img_from_tempurl()
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
   card_image = property_with_callback("card_image", _set_image)
@@ -74,13 +74,13 @@ class Card(CardTemplate):
   def form_show(self, **event_args):
     """This method is called when the form is shown on the page"""
     self._on_page = True
-    if self.need_tmp_url == True:
-      self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
-      self.card_image = self.card_image_temp_url.url
+    if self.card_image and not isinstance(self.card_image, (str, anvil.LazyMedia)):
+      self._set_card_img_from_tempurl()
 
   def form_hide(self, **event_args):
     """This method is called when the form is removed from the page"""
     self._on_page = False
     if self.card_image_temp_url:
       self.card_image_temp_url.revoke()
+      self.card_image_temp_url = None
       
