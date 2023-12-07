@@ -68,6 +68,14 @@ class StandardPageLayout(StandardPageLayoutTemplate):
     self.content.classList.add(f"anvil-m3-{value}")
 
   @property
+  def sidesheet_item(self):
+    return {} or self._item
+
+  @sidesheet_item.setter
+  def sidesheet_item(self, value):
+    self._item = value
+
+  @property
   def show_sidesheet(self):
     return self._show_sidesheet
 
