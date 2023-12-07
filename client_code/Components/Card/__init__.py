@@ -76,6 +76,7 @@ class Card(CardTemplate):
     """This method is called when the form is removed from the page"""
     self._on_page = False
     if self.card_image_temp_url:
+      print("revoking url...")
       self.card_image_temp_url.revoke()
       self.card_image_temp_url = None
       
