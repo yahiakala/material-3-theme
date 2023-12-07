@@ -47,8 +47,8 @@ class Card(CardTemplate):
   image_width = align = style_property('image', 'width', 'image_width')
   image_height = align = style_property('image', 'height', 'image_height')
 
-  # Todo: this will change from string to the URI property
-  def set_image(self, value):
+
+  def _set_image(self, value):
     if value:
       print(type(value))
       if type(value) is str:
@@ -59,22 +59,20 @@ class Card(CardTemplate):
         self.need_tmp_url = True
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
-  card_image = property_with_callback("card_image", set_image)
+  card_image = property_with_callback("card_image", _set_image)
 
-  def set_rounded_img(self, value):
+  def _set_rounded_img(self, value):
      self.dom_nodes['image'].classList.toggle('anvil-m3-card-rounded', value)
-  rounded_image = property_with_callback("rounded_image", set_rounded_img)
+  rounded_image = property_with_callback("rounded_image", _set_rounded_img)
 
   def form_show(self, **event_args):
     """This method is called when the form is shown on the page"""
     if self.need_tmp_url == True:
-      self.card_image_url = anvil.media.TempUrl(self.card_image)
-      self.card_image_url = self.card_image_url.url.lstrip('blob:')
-      self.set_image(self.card_image_url)
-      print(self.card_image_url)
+      self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
+      self.card_image = self.card_image_temp_url.url
 
   def form_hide(self, **event_args):
     """This method is called when the form is removed from the page"""
     if self.need_tmp_url:
-      self.card_image_url.revoke()
+      self.card_image_temp_url.revoke()
       
