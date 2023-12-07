@@ -390,14 +390,13 @@ body {
 
 .anvil-m3-sidesheet-footer {
     position: fixed;
-    bottom: 0;
+    bottom: 24px;
 }
 
 
 @media(min-width:600px) {
   .anvil-m3-sidesheet.anvil-m3-open {
     right: 0px;
-
   }
 }
 @media(min-width:600px) {
