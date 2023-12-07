@@ -443,3 +443,8 @@ body {
   display:block;
 }
 }
+
+.anvil-m3-sidesheet-footer {
+  position: fixed;
+  bottom: 0;
+}
