@@ -3,7 +3,7 @@ from .Card import Card
 import anvil.designer
 from ..Functions import property_with_callback
 
-enabled_property = {"name": "enabled", "type": "boolean", "important": True, "default_value": True, "designerHint": "enabled", "group": "Interaction"}
+enabled_property = {"name": "enabled", "type": "boolean", "important": True, "defaultValue": True, "designerHint": "enabled", "group": "Interaction"}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
 
 class InteractiveCard(Card):
