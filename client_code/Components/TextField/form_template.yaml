@@ -766,6 +766,8 @@ is_package: true
 events:
 - {name: pressed_enter, default_event: true}
 - {name: change}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
 custom_component: true
 components: []
 container:

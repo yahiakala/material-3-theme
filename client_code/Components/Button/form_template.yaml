@@ -404,12 +404,15 @@ properties:
   description: The alignment of the icon on this component
   designer_hint: align-horizontal
   group: Icon Style
+custom_component: true
+toolbox_item:
+  icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
 is_package: true
 data_bindings: []
 events:
 - {name: click, default_event: true, description: When the component is clicked}
-custom_component: true
 components: []
+custom_component_container: false
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-button-component\" style=\"display:flex\"\
@@ -418,4 +421,3 @@ container:
       \ style=\"display: none;\"></i>\n    <span anvil-name=\"anvil-m3-button-text\"\
       ></span>\n  </button>\n</div>"}
   event_bindings: {show: form_show}
-custom_component_container: false
