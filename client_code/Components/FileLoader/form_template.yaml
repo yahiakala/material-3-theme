@@ -417,6 +417,8 @@ events:
   - {name: file, description: The first selected file. Set the 'multiple' property to allow loading more than one file.}
 - {name: focus, description: When the FileLoader gets focus}
 - {name: lost_focus, description: When the FileLoader loses focus}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
 custom_component: true
 components: []
 container:
