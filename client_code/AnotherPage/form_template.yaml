@@ -15,3 +15,7 @@ components_by_slot:
     properties: {visible: true}
     type: form:Components.Card
     layout_properties: {}
+  - name: switch_1
+    properties: {}
+    type: form:Components.Switch
+    layout_properties: {}
