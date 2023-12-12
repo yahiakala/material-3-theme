@@ -10,6 +10,7 @@ toolbox_sections:
   title: Module Components
   items:
   - title: ToggleIconButton
+    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
   - title: InteractiveCard
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
