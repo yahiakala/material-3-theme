@@ -86,10 +86,10 @@ components_by_slot:
           properties: {appearance: filled, text: Add to Cart, align: left}
           type: form:Components.Button
           layout_properties: {grid_position: 'TEFAQX,RIQFRS TRNUXD,NFXZAR'}
-    - name: interactive_card_3
-      properties: {enabled: true}
-      type: form:Components.InteractiveCard
-      layout_properties: {grid_position: 'DPRLRP,INRYOU'}
+    - name: button_2
+      properties: {}
+      type: form:Components.Button
+      layout_properties: {grid_position: 'SQZBPS,WXZJIX'}
   slot_5:
   - name: sidesheet_content_1
     properties: {}
