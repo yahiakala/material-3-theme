@@ -19,3 +19,11 @@ components_by_slot:
     properties: {}
     type: form:Components.Switch
     layout_properties: {}
+  - name: radio_button_1
+    properties: {selected: true}
+    type: form:Components.RadioButton
+    layout_properties: {}
+  - name: checkbox_1
+    properties: {checked: true}
+    type: form:Components.Checkbox
+    layout_properties: {}
