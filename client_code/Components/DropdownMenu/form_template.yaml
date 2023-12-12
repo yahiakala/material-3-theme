@@ -73,6 +73,8 @@ properties:
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
 custom_component: true
 components:
 - name: menu
