@@ -54,10 +54,12 @@ unique_ids:
     TestModule: '1696934771505893542874780.1255'
   assets:
     anvil-m3/radiobutton.css: '1690464669843320825384936.8927'
+    designer_icons/heading.svg: '1702400423890529650884483.46576'
     designer_icons/radio_button.svg: '1702400198430970622020101.5994'
     designer_icons/divider_dark.svg: '1702400004965244117368359.85986'
     designer_icons/radio_button_dark.svg: '1702400214209203276304480.66202'
     anvil-m3/button.css: '1689852840093884237320513.6318'
+    designer_icons/checkbox.svg: '1702400309384165269919129.87256'
     theme.css: ETNISNSUVCSJYUF6AOQQTK6JLIO7LPER
     anvil-m3/iconbutton.css: '1697701698411884267992744.9954'
     designer_icons/link_dark.svg: '1702400172115635452910352.8741'
@@ -71,6 +73,7 @@ unique_ids:
     anvil-m3/switch.css: '1690201930961944613537214.6923'
     anvil-m3/.gitkeep: '1689852830383793423294910.1976'
     designer_icons/divider.svg: '1702399955480171372973951.63232'
+    designer_icons/checkbox_dark.svg: '1702400322560236680041912.2963'
     anvil-m3/checkbox.css: '1689947587450398517756099.98175'
     anvil-m3/progress-indicator.css: '1698248959653759098718122.262'
     designer_icons/file_loader.svg: '1702400079490109842744197.72899'

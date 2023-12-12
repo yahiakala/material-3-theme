@@ -44,6 +44,8 @@ properties:
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
 custom_component: true
 components: []
 container:
