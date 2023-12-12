@@ -25,7 +25,11 @@ components_by_slot:
     layout_properties: {}
   slot_2: []
   slot_3: []
-  slot_5: []
+  slot_5:
+  - name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
+    layout_properties: {}
 slots:
   slot_3:
     index: 0
@@ -40,7 +44,7 @@ slots:
     set_layout_properties: {}
     target: {type: slot, name: slot_4}
   slot_5:
-    index: 0
+    index: 1
     set_layout_properties: {}
     target: {type: slot, name: slot_5}
   slot_6:
