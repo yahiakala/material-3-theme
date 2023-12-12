@@ -69,9 +69,9 @@ class StandardPageLayout(StandardPageLayoutTemplate):
   def show_sidesheet(self, value):
     self._show_sidesheet = value
     if value:
-        self.open_sidesheet()
+      self._open_sidesheet()
     else:
-      self.close_sidesheet()
+      self._close_sidesheet()
 
   def _open_sidesheet(self):
     if self.sidesheet_previous_state:
