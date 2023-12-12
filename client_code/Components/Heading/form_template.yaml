@@ -408,7 +408,7 @@ properties:
     icon. If not set, the icon will be the same colour as the text.', group: Appearance}
 is_package: true
 toolbox_item:
-  icon: {light: 'asset:designer_icons/heading.svg'}
+  icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
 custom_component: true
 components: []
 container:
