@@ -27,3 +27,7 @@ components_by_slot:
     properties: {checked: true}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: file_loader_1
+    properties: {}
+    type: form:Components.FileLoader
+    layout_properties: {}
