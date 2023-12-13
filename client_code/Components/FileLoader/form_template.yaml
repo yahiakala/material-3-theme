@@ -419,6 +419,7 @@ events:
 - {name: lost_focus, description: When the FileLoader loses focus}
 toolbox_item:
   icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
+  group: Form Input
 custom_component: true
 components: []
 container:

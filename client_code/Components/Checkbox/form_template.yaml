@@ -46,6 +46,7 @@ events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
 toolbox_item:
   icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
+  group: Form Input
 custom_component: true
 components: []
 container:

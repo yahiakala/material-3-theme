@@ -760,6 +760,7 @@ events:
 - {name: change, default_event: true, description: When the state of the component is changed}
 toolbox_item:
   icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
+  group: Form Input
 custom_component: true
 components: []
 container:

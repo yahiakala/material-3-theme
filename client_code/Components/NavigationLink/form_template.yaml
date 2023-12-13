@@ -387,12 +387,14 @@ properties:
   group: Common
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
   default_binding_prop: true, default_value: null, group: Common, important: true}
-is_package: true
 event_bindings: {show: form_show}
+custom_component: true
+toolbox_item: {group: Navigation}
+is_package: true
 events:
 - {name: click, description: when the component is clicked, default_event: true}
-custom_component: true
 components: []
+custom_component_container: false
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-navigation-link-container\">\n  <a class=\"\
@@ -404,4 +406,3 @@ container:
       \ anvil-name=\"anvil-m3-navigation-link-text\" class=\"anvil-m3-navigation-link-text\"\
       ></div>\n  </a>\n</div>\n"}
   event_bindings: {}
-custom_component_container: false

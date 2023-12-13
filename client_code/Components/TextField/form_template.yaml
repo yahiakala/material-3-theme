@@ -768,6 +768,7 @@ events:
 - {name: change}
 toolbox_item:
   icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
+  group: Form Input
 custom_component: true
 components: []
 container:

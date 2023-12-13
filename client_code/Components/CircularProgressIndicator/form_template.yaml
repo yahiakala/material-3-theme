@@ -19,6 +19,7 @@ properties:
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
+  group: Feedback
 custom_component: true
 components: []
 container:
