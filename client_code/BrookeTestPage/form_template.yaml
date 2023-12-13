@@ -99,7 +99,7 @@ components_by_slot:
       layout_properties: {grid_position: 'SQZBPS,WXZJIX'}
   - name: link_1
     properties:
-      margin: [auto, null, '20', auto]
+      margin: [auto, null, auto, auto]
     type: form:Components.Link
     layout_properties: {}
   slot_5:
