@@ -9,12 +9,16 @@ toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Module Components
   items:
-  - title: ToggleIconButton
-    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
   - title: InteractiveCard
     icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
+toolbox_sections:
+- packageName: Material_3_Theme_2_0
+  title: Buttons
+  items:
+  - title: ToggleIconButton
+    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
 startup_form: null
