@@ -3,6 +3,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
 
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
@@ -130,13 +131,18 @@ def border_property(dom_node_name, prop_name="border"):
   return property_with_callback(prop_name, set_border)
 
 def margin_property(dom_node_name, prop_name="margin"):
-  def getter(self):
-    return self._props.get('margin')
+  def set_margin(self, value):
+    set_element_margin(self.dom_nodes[dom_node_name], value)
+  return property_with_callback(prop_name, set_margin)
 
-  def setter(self, value):
-    self._props['margin'] = value
-    #value = value
-    self.dom_nodes[dom_node_name].style.margin = f"{value}px"
+# def margin_property(dom_node_name, prop_name="margin"):
+#   def getter(self):
+#     return self._props.get('margin')
+
+#   def setter(self, value):
+#     self._props['margin'] = value
+#     #value = value
+#     self.dom_nodes[dom_node_name].style.margin = f"{value}px"
     
   return property(getter, setter)
   
