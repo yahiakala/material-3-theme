@@ -25,6 +25,7 @@ properties:
   group: Image Style}
 - {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width,
   group: Image Style}
+- {name: spacing, type: spacing, important: true}
 is_package: true
 custom_component: true
 components: []
