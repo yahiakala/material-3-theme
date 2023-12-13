@@ -409,6 +409,7 @@ properties:
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
+  group: Typography
 custom_component: true
 components: []
 container:

@@ -41,6 +41,7 @@ events:
 - {name: clicked, default_event: true}
 toolbox_item:
   icon: {light: 'asset:designer_icons/radio_button.svg', dark: 'asset:designer_icons/radio_button_dark.svg'}
+  group: Forms
 custom_component: true
 components: []
 container:
