@@ -400,6 +400,7 @@ events:
 - {name: click, default_event: true}
 toolbox_item:
   icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
+  group: Buttons
 custom_component: true
 components: []
 container:

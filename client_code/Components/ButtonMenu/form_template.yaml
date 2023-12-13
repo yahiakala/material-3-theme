@@ -15,6 +15,7 @@ is_package: true
 data_bindings: []
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
+  group: Menus
 custom_component: true
 components:
 - name: menu_button
