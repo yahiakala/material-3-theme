@@ -41,6 +41,7 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   description: Align this component’s text
+- {name: margin, type: margin, important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
