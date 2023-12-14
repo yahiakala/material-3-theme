@@ -395,6 +395,7 @@ properties:
   options: [left, center, right]
   description: Alignment of the component within it's container
 - {name: tooltip, type: string, default_value: '', important: true, group: Attributes}
+- {name: margin, type: margin, important: true}
 is_package: true
 events:
 - {name: click, default_event: true}

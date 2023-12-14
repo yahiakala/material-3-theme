@@ -404,6 +404,10 @@ properties:
   description: The alignment of the icon on this component
   designer_hint: align-horizontal
   group: Icon Style
+- name: margin
+  type: margin
+  important: true
+  default_value: ['8', '8', '8', '8']
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}

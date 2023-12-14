@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property
+from ...Functions import color_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property
 from anvil import HtmlTemplate
 import anvil.designer
 
@@ -117,6 +117,7 @@ class Button(ButtonTemplate):
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   background = color_property('anvil-m3-button', 'backgroundColor', 'background')
+  margin = margin_property('anvil-m3-button-component')
 
   def set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value is 'right')

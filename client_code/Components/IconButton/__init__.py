@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
-from ...Functions import innerText_property, enabled_property, color_property, style_property, property_with_callback, border_property
+from ...Functions import innerText_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
 from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
@@ -50,10 +50,10 @@ class IconButton(IconButtonTemplate):
   icon = innerText_property('anvil-m3-iconbutton-icon', 'icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
   align = style_property('anvil-m3-iconbutton-component', 'justifyContent', 'align')
-  
   border = border_property('anvil-m3-iconbutton-container')
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color', 'icon_color')
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background')
+  margin = margin_property('anvil-m3-button-component')
 
   # def _anvil_get_interactions_(self): 
   #   return  [

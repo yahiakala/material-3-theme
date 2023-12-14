@@ -10,7 +10,7 @@
   border: none;
   color: var(--anvil-m3-primary);
   padding: 0 12px;
-  margin: 10px; /*  Do I want to add a margin? */
+  /* margin: 10px;  Do I want to add a margin? */
   cursor: pointer;
   border-radius: 100px;
 }

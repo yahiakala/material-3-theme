@@ -1,7 +1,7 @@
 layout:
   type: form:StandardPageLayout
   properties: {navigation_rail_collapse_to: Navigation drawer, app_title: Material Design 3,
-    show_sidesheet: true}
+    show_sidesheet: false}
 is_package: true
 components_by_slot:
   slot_1:
