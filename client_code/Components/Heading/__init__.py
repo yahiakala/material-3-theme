@@ -37,7 +37,6 @@ class Heading(HeadingTemplate):
     el_name = f'anvil-m3-heading-{self.style}'
     anvil.designer.start_inline_editing(self, "text", self.dom_nodes[el_name])
 
-    
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
   border = border_property('anvil-m3-heading-container')
@@ -164,4 +163,11 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-headline'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
+
+  @property
+  def margin(self):
+    return self._margin
+
+  @margin.setter
+  def margin
 
