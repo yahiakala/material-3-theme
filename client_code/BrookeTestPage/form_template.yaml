@@ -102,6 +102,10 @@ components_by_slot:
       margin: [auto, null, auto, auto]
     type: form:Components.Link
     layout_properties: {}
+  - name: heading_3
+    properties: {text: Heading}
+    type: form:Components.Heading
+    layout_properties: {}
   slot_5:
   - name: sidesheet_content_1
     properties: {}
