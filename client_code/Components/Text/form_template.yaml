@@ -407,6 +407,7 @@ properties:
     not set, the icon will scale with the text.', group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.', group: Appearance}
+- {name: margin, type: margin, important: true}
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
