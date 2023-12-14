@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
@@ -76,6 +76,7 @@ class FileLoader(FileLoaderTemplate):
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
   border = style_property('anvil-m3-fileloader-container', 'border', 'border')
+  margin = margin_property('anvil-m3-fileloader-form')
 
   @property
   def show_state(self):

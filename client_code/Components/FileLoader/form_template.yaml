@@ -408,6 +408,7 @@ properties:
   group: Appearance
   designer_hint: align-horizontal
 - {name: border, type: string, default_value: '', important: false, group: Appearance}
+- {name: margin, type: margin, important: true}
 is_package: true
 events:
 - name: change
