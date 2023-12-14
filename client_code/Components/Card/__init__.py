@@ -83,6 +83,6 @@ class Card(CardTemplate):
       self.card_image_temp_url = None
 
   margin = margin_property('anvil-m3-card')
-  card_content_padding = padding_property('card-image-slot', 'card_content_padding')
-  card_image_content_padding = padding_property('card-content-slot', 'card_image_content_padding')
+  card_content_padding = padding_property('content', 'card_content_padding')
+  card_image_content_padding = padding_property('image', 'card_image_content_padding')
       
