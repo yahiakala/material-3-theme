@@ -402,7 +402,6 @@ events:
 - {name: click, default_event: true, description: clicked}
 toolbox_item:
   icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
-  group: Typography
 custom_component: true
 components: []
 container:

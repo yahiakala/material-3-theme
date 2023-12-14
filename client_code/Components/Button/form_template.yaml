@@ -407,7 +407,6 @@ properties:
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
-  group: Buttons
 is_package: true
 data_bindings: []
 events:

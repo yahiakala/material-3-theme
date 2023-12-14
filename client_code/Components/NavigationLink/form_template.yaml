@@ -389,7 +389,7 @@ properties:
   default_binding_prop: true, default_value: null, group: Common, important: true}
 event_bindings: {show: form_show}
 custom_component: true
-toolbox_item: {group: Navigation}
+toolbox_item: {}
 is_package: true
 events:
 - {name: click, description: when the component is clicked, default_event: true}

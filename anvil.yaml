@@ -43,7 +43,7 @@ toolbox_sections:
     icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
   - title: CardContentContainer
-    icon: 
+    icon: null
     component: {type: Material_3_Theme_2_0.Components.CardContentContainer}
   - title: SidesheetContainer
     icon: {light: 'asset:designer_icons/sidesheet_container.svg', dark: 'asset:designer_icons/sidesheet_container_dark.svg'}
