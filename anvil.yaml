@@ -18,7 +18,6 @@ toolbox_sections:
   - title: Link
     icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Link}
-toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Buttons
   items:
@@ -34,7 +33,6 @@ toolbox_sections:
   - title: ButtonMenu
     icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
-toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Display
   items:
@@ -53,14 +51,12 @@ toolbox_sections:
   - title: Divider
     icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Divider}
-toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Navigation
   items:
   - title: NavigationLink
     icon: {light: 'asset:designer_icons/navigation_link.svg', dark: 'asset:designer_icons/navigation_link_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.NavigationLink}
-toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Form Input
   items:
@@ -82,7 +78,6 @@ toolbox_sections:
   - title: FileLoader
     icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Switch}
-toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Feedback
   items:
