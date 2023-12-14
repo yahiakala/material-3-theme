@@ -21,15 +21,15 @@ toolbox_sections:
 - packageName: Material_3_Theme_2_0
   title: Buttons
   items:
-  - title: ToggleIconButton
-    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
-  - title: IconButton
-    icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.IconButton}
   - title: Button
     icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Button}
+  - title: IconButton
+    icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.IconButton}
+  - title: ToggleIconButton
+    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
   - title: ButtonMenu
     icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
@@ -46,7 +46,7 @@ toolbox_sections:
     icon: null
     component: {type: Material_3_Theme_2_0.Components.CardContentContainer}
   - title: SidesheetContainer
-    icon: {light: 'asset:designer_icons/sidesheet_container.svg', dark: 'asset:designer_icons/sidesheet_container_dark.svg'}
+    icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.SidesheetContainer}
   - title: Divider
     icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
