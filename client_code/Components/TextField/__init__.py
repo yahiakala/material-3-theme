@@ -70,7 +70,7 @@ class TextField(TextFieldTemplate):
   display_font = font_family_property('text-field-input', 'display_font')
   display_text_color = color_property('text-field-input', 'color', 'display_text_color')
   # display_text = innerText_property('text-field-input')
-  margin = margin_property('anvil-m3-text-field')
+  margin = margin_property('text-field')
   
   # @property
   # def label_text(self):
