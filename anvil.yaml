@@ -45,9 +45,9 @@ toolbox_sections:
   - title: CardContentContainer
     icon: null
     component: {type: Material_3_Theme_2_0.Components.CardContentContainer}
-  - title: SidesheetContainer
+  - title: SidesheetContent
     icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.SidesheetContainer}
+    component: {type: Material_3_Theme_2_0.Components.SidesheetContent}
   - title: Divider
     icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Divider}
