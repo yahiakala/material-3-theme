@@ -762,7 +762,10 @@ properties:
   group: Style}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Style}
-- {name: margin, type: margin, important: true}
+- name: margin
+  type: margin
+  important: true
+  default_value: ['', null, null, null]
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
@@ -774,7 +777,7 @@ components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
-      \ style=\"width: calc(100% - 10px); margin: 10px;\">\n  <div class=\"anvil-m3-text-field-input-container\"\
+      \ style=\"width: calc(100% - 10px)\">\n  <div class=\"anvil-m3-text-field-input-container\"\
       \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       \    <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
       \ type=\"text\" id=\"tfield\" placeholder=\" \" />\n    <div class=\"anvil-m3-border-container\"\
