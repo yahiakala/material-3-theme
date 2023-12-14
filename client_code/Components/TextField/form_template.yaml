@@ -762,6 +762,7 @@ properties:
   group: Style}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Style}
+- {name: margin, type: margin, important: true}
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
