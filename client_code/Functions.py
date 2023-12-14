@@ -137,7 +137,7 @@ def margin_property(dom_node_name, prop_name="margin"):
 
 def spacing_property(dom_node_name, prop_name="spacing"):
   def set_spacing(self, value):
-    set_element_spacing(self.dom_nodes[dom_node_name], value)
+    set_element_spacing(self.dom_nodes[dom_node_name], value or (None, None))
   return property_with_callback(prop_name, set_spacing)
 
 def padding_property(dom_node_name, prop_name="padding"):

@@ -82,6 +82,7 @@ class Card(CardTemplate):
       self.card_image_temp_url.revoke()
       self.card_image_temp_url = None
 
-  margin = margin_property('anvil-m3-card')
-  padding = padding_property('anvil-m3-card')
+  # margin = margin_property('anvil-m3-card')
+  # padding = padding_property('anvil-m3-card')
+  spacing = spacing_property('anvil-m3-card')
       

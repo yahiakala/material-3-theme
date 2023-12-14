@@ -25,8 +25,7 @@ properties:
   group: Image Style}
 - {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width,
   group: Image Style}
-- {name: margin, type: margin, important: true}
-- {name: padding, type: padding, important: true}
+- {name: spacing, type: spacing, important: true}
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}

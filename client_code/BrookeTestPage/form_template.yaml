@@ -55,8 +55,9 @@ components_by_slot:
         enabled: true
         visible: true
         spacing:
-          padding: [auto, '0', auto, null]
-          margin: [null, auto, null, '0']
+          padding: [auto, auto, auto, null]
+          margin: [null, auto, null, auto]
+        padding: ['', null, null, null]
       type: form:Components.InteractiveCard
       layout_properties: {grid_position: 'WFWNVB,KGEKJC'}
       components:
