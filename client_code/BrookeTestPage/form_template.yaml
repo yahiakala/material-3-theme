@@ -98,15 +98,18 @@ components_by_slot:
           properties: {appearance: filled, text: Add to Cart, align: left}
           type: form:Components.Button
           layout_properties: {grid_position: 'TEFAQX,RIQFRS TRNUXD,NFXZAR'}
-  - name: link_1
-    properties:
-      margin: [auto, null, auto, auto]
-    type: form:Components.Link
+  - name: column_panel_5
+    properties: {}
+    type: ColumnPanel
     layout_properties: {}
-  - name: heading_3
-    properties:
-      text: Heading
-      margin: [auto, null, null, null]
-    type: form:Components.Heading
-    layout_properties: {}
+    components:
+    - name: card_1
+      properties: {}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'WHNXFU,VIUOEB'}
+    - name: card_2
+      properties: {card_image: _/theme/pexels-avonne-stalling-6597437.jpg}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'WHNXFU,WMIIAY'}
+      components: []
   slot_5: []
