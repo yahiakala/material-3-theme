@@ -60,45 +60,7 @@ components_by_slot:
         padding: ['', null, null, null]
       type: form:Components.InteractiveCard
       layout_properties: {grid_position: 'WFWNVB,KGEKJC'}
-      components:
-      - name: column_panel_2_copy
-        properties: {col_widths: '{"RIQFRS":70,"DKIXWC":5,"JUQGYR":5}'}
-        type: ColumnPanel
-        layout_properties: {slot: card-content-slot}
-        components:
-        - name: column_panel_4_copy
-          properties: {}
-          type: ColumnPanel
-          layout_properties: {grid_position: 'TEFAQX,JUQGYR'}
-        - name: heading_1_copy
-          properties:
-            style: title
-            text: Monstera
-            scale: large
-            bold: true
-            margin: [null, '', null, '']
-          type: form:Components.Heading
-          layout_properties: {grid_position: 'TEFAQX,RIQFRS GDTHDM,MPDYHB'}
-        - name: text_1_copy
-          properties: {text: £35, scale: large, bold: true}
-          type: form:Components.Text
-          layout_properties: {grid_position: 'TEFAQX,RIQFRS DGPPKN,CEEOGO'}
-        - name: text_2_copy
-          properties: {text: 70-80 cm}
-          type: form:Components.Text
-          layout_properties: {grid_position: 'TEFAQX,RIQFRS STFCFV,LMTINT'}
-        - name: spacer_1_copy
-          properties: {height: 14.6328125}
-          type: Spacer
-          layout_properties: {grid_position: 'TEFAQX,RIQFRS WLEWGV,IITUNP'}
-        - name: column_panel_3_copy
-          properties: {}
-          type: ColumnPanel
-          layout_properties: {grid_position: 'TEFAQX,DKIXWC'}
-        - name: button_1_copy
-          properties: {appearance: filled, text: Add to Cart, align: left}
-          type: form:Components.Button
-          layout_properties: {grid_position: 'TEFAQX,RIQFRS TRNUXD,NFXZAR'}
+      components: []
   - name: column_panel_5
     properties: {}
     type: ColumnPanel
