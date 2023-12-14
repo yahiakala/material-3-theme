@@ -169,5 +169,6 @@ class Heading(HeadingTemplate):
     return self._margin
 
   @margin.setter
-  def margin
+  def margin(self, value):
+    
 
