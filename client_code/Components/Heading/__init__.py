@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
+from anvil.property_utils import set_element_margin
 
 #TODO: figure out what to do with line height
 #TODO: add margin and padding
@@ -164,11 +165,15 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
 
-  @property
-  def margin(self):
-    return self._margin
+  # @property
+  # def margin(self):
+  #   if self.style == 'display':
+  #     return self.dom_nodes['anvil-m3-heading-display'].
+  #   return self._margin
 
-  @margin.setter
-  def margin(self, value):
-    
+  # @margin.setter
+  # def margin(self, value):
+  #   set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
+  #   set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
+  #   set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
 
