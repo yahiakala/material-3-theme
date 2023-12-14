@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
-from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property
+from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, margin_property
 from ...utils import gen_id
 
 class RadioButton(RadioButtonTemplate):
@@ -44,7 +44,7 @@ class RadioButton(RadioButtonTemplate):
   background = color_property('anvil-m3-radiobutton-container', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
   selected = checked_property('anvil-m3-radiobutton-input')
-  margin = margin_property('anvil')
+  # margin = margin_property('anvil')
 
   def set_text(self, value):
     v = value
