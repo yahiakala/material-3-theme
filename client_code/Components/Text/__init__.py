@@ -47,7 +47,7 @@ class Text(TextTemplate):
   text = innerText_property('anvil-m3-text')
   align = style_property('anvil-m3-text-container', 'justifyContent', 'align')
   icon_size = font_size_property('anvil-m3-text-icon', 'icon_size')
-  margin = margin_property('anvil-m3-link')
+  margin = margin_property('anvil-m3-text-container')
 
   @property
   def font_size(self):
