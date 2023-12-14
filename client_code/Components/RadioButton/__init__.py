@@ -44,7 +44,7 @@ class RadioButton(RadioButtonTemplate):
   background = color_property('anvil-m3-radiobutton-container', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
   selected = checked_property('anvil-m3-radiobutton-input')
-  # margin = margin_property('anvil')
+  margin = margin_property('anvil-m3-radiobutton-component')
 
   def set_text(self, value):
     v = value

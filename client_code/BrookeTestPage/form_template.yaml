@@ -105,7 +105,12 @@ components_by_slot:
     components:
     - name: file_loader_1
       properties:
-        margin: ['', null, null, '']
+        margin: ['20', '20', null, '']
+        align: right
       type: form:Components.FileLoader
       layout_properties: {grid_position: 'MCSHOK,OLKNDR'}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextField
+    layout_properties: {}
   slot_5: []
