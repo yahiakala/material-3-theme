@@ -171,15 +171,10 @@ class Heading(HeadingTemplate):
 
   @margin.setter
   def margin(self, value):
-    if value: 
-      set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
-      set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
-      set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
-      self._margin = value
-    else:
-      if self.scale == 'large':
-        set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
-        set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
-        set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
+    set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
+    set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
+    set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
+    self._margin = value
+
       
 
