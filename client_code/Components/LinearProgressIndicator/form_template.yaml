@@ -1,3 +1,21 @@
+properties:
+- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
+  type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
+    this component be displayed?'}
+- name: type
+  type: enum
+  important: true
+  options: [determinate, indeterminate]
+  default_value: indeterminate
+  group: Key Properties
+  description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
+- {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
+  description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
+is_package: true
+toolbox_item:
+  icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-progressindicator-linear\" class=\"\
@@ -25,19 +43,3 @@ container:
       XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"\
       0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      -->\n\
       \    </line> \n  </svg>\n</div>"}
-components: []
-is_package: true
-custom_component: true
-properties:
-- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
-  type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
-    this component be displayed?'}
-- name: type
-  type: enum
-  important: true
-  options: [determinate, indeterminate]
-  default_value: indeterminate
-  group: Key Properties
-  description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
-- {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
-  description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}

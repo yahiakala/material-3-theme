@@ -1,3 +1,8 @@
+is_package: true
+toolbox_item:
+  icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-sidesheet-title-container\">\n  <div anvil-slot=\"\
@@ -10,7 +15,4 @@ container:
       >Add sidesheet content here</p>\n</div>  \n<div anvil-slot=\"anvil-m3-sidesheet-footer\"\
       \ class=\"anvil-m3-sidesheet-footer\">\n  <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\"\
       \ class=\"anvil-designer-only\">Add sidesheet footer here</p>\n</div>"}
-components: []
-is_package: true
-custom_component: true
 custom_component_container: true

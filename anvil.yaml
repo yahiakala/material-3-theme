@@ -7,11 +7,85 @@ package_name: Material_3_Theme_2_0
 allow_embedding: false
 toolbox_sections:
 - packageName: Material_3_Theme_2_0
-  title: Module Components
+  title: Typography
   items:
+  - title: Text
+    icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Text}
+  - title: Heading
+    icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Heading}
+  - title: Link
+    icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Link}
+- packageName: Material_3_Theme_2_0
+  title: Buttons
+  items:
+  - title: Button
+    icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Button}
+  - title: IconButton
+    icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.IconButton}
   - title: ToggleIconButton
+    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
+  - title: ButtonMenu
+    icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
+- packageName: Material_3_Theme_2_0
+  title: Display
+  items:
+  - title: Card
+    icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Card}
   - title: InteractiveCard
+    icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
+  - title: CardContentContainer
+    icon: null
+    component: {type: Material_3_Theme_2_0.Components.CardContentContainer}
+  - title: SidesheetContainer
+    icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.SidesheetContainer}
+  - title: Divider
+    icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Divider}
+- packageName: Material_3_Theme_2_0
+  title: Navigation
+  items:
+  - title: NavigationLink
+    icon: {light: 'asset:designer_icons/navigation_link.svg', dark: 'asset:designer_icons/navigation_link_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.NavigationLink}
+- packageName: Material_3_Theme_2_0
+  title: Form Input
+  items:
+  - title: Checkbox
+    icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Checkbox}
+  - title: RadioButton
+    icon: {light: 'asset:designer_icons/radio_button.svg', dark: 'asset:designer_icons/radio_button_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.RadioButton}
+  - title: TextField
+    icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.TextField}
+  - title: DropdownMenu
+    icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.DropdownMenu}
+  - title: Switch
+    icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Switch}
+  - title: FileLoader
+    icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Switch}
+- packageName: Material_3_Theme_2_0
+  title: Feedback
+  items:
+  - title: LinearProgressIndicator
+    icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.LinearProgressIndicator}
+  - title: CircularProgressIndicator
+    icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}

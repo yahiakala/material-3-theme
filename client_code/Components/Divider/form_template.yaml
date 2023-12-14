@@ -1,14 +1,16 @@
-container:
-  type: HtmlTemplate
-  properties: {html: '<div class="anvil-m3-divider" anvil-name="anvil-m3-divider">
-
-      </div>'}
-components: []
-is_package: true
-custom_component: true
 properties:
 - name: type
   type: enum
   default_value: Full width
   default_binding_prop: true
   options: [Full width, Inset]
+is_package: true
+toolbox_item:
+  icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: '<div class="anvil-m3-divider" anvil-name="anvil-m3-divider">
+
+      </div>'}
