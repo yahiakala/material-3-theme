@@ -165,15 +165,14 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
 
-  # @property
-  # def margin(self):
-  #   if self.style == 'display':
-  #     return self.dom_nodes['anvil-m3-heading-display'].
-  #   return self._margin
+  @property
+  def margin(self):
+    return self._margin
 
-  # @margin.setter
-  # def margin(self, value):
-  #   set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
-  #   set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
-  #   set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
+  @margin.setter
+  def margin(self, value):
+    self._margin = value
+    set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
+    set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
+    set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
 
