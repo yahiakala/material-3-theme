@@ -16,6 +16,7 @@ properties:
   designer_hint: align-horizontal
   default_value: left
   group: Look and Feel
+- {name: margin, type: margin, important: true}
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}

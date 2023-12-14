@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback
+from ...Functions import property_with_callback, margin_property
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -28,3 +28,4 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     self.dom_nodes['anvil-m3-progressindicator-indicator'].setAttribute("x2", f"{v}%")
     
   progress = property_with_callback("progress", update_progress)
+  margin= margin_property('anvil-m3-progressindicator-linear')

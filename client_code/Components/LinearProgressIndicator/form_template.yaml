@@ -11,6 +11,7 @@ properties:
   description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
+- {name: margin, type: margin, important: true}
 is_package: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}

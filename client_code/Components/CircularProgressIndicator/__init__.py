@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import innerText_property, color_property, style_property, property_with_callback
+from ...Functions import innerText_property, color_property, style_property, property_with_callback, margin_property
 from math import pi, cos, sin
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
@@ -16,7 +16,8 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     # Any code you write here will run before the form opens.
 
   visible = HtmlTemplate.visible
-  align = style_property('anvil-m3-progressindicator-component', 'justifyContent', 'align') 
+  align = style_property('anvil-m3-progressindicator-component', 'justifyContent', 'align')
+  margin = margin_property('anvil-m3-progressindicator-component')
 
   def update_determinance(self, value):
     v = value is "determinate"
