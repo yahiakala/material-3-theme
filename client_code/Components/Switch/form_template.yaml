@@ -752,7 +752,11 @@ properties:
   designerHint: align-horizontal
   group: Appearance
   designer_hint: align-horizontal
-- {name: margin, type: margin, default_value: 8, important: true, group: Layout}
+- name: margin
+  type: margin
+  default_value: [auto, auto, auto, auto]
+  important: true
+  group: Layout
 - {name: visible, type: boolean, default_value: true, important: true, group: Appearance,
   designer_hint: visible, description: True if this component should be displayed}
 is_package: true

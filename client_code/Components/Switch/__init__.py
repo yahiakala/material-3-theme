@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
-from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback
+from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 import anvil.designer
 
 
@@ -94,6 +94,8 @@ class Switch(SwitchTemplate):
   unselected_thumb_color = property_with_callback('unselected_thumb_color', set_color_styles)
   unselected_outline_color = property_with_callback('unselected_outline_color', set_color_styles)
   visible = HtmlTemplate.visible
+  margin = margin_property('anvil-m3-switch-container')
+
   
   
 
