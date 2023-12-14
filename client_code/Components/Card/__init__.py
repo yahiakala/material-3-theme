@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, style_property
+from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -81,4 +81,7 @@ class Card(CardTemplate):
       print("revoking url...")
       self.card_image_temp_url.revoke()
       self.card_image_temp_url = None
+
+  margin = margin_property('anvil-m3-card')
+  padding = padding_property('anvil-m3-card')
       

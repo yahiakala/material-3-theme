@@ -135,16 +135,17 @@ def margin_property(dom_node_name, prop_name="margin"):
     set_element_margin(self.dom_nodes[dom_node_name], value)
   return property_with_callback(prop_name, set_margin)
 
-# def margin_property(dom_node_name, prop_name="margin"):
-#   def getter(self):
-#     return self._props.get('margin')
+def spacing_property(dom_node_name, prop_name="spacing"):
+  def set_spacing(self, value):
+    set_element_spacing(self.dom_nodes[dom_node_name], value)
+  return property_with_callback(prop_name, set_spacing)
 
-#   def setter(self, value):
-#     self._props['margin'] = value
-#     #value = value
-#     self.dom_nodes[dom_node_name].style.margin = f"{value}px"
-    
-  return property(getter, setter)
+def padding_property(dom_node_name, prop_name="padding"):
+  def set_padding(self, value):
+    set_element_padding(self.dom_nodes[dom_node_name], value)
+  return property_with_callback(prop_name, set_padding)
+
+
   
   
 
