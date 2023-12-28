@@ -182,4 +182,4 @@ class TextField(TextFieldTemplate):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer:
       if not self.label_text:
-        self.label_text = anvil.designer.get_design_name(self)
+        self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
