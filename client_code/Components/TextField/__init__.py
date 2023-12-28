@@ -102,13 +102,7 @@ class TextField(TextFieldTemplate):
   #     character_count.style.display = "block"
   #     character_count.innerHTML = value
 
-  @property
-  def leading_icon(self):
-    return self._leading_icon
-
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._leading_icon = value
+  def set_leading_icon(self):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -125,6 +119,15 @@ class TextField(TextFieldTemplate):
       leading_icon.innerText = ""
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
+      
+  @property
+  def leading_icon(self):
+    return self._leading_icon
+
+  @leading_icon.setter
+  def leading_icon(self, value):
+    self._leading_icon = value
+    
 
   @property
   def trailing_icon(self):
