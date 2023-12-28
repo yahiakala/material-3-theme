@@ -73,7 +73,7 @@ components:
           type: form:Components.TextField
           layout_properties: {grid_position: 'RHIGNP,BVSLBO'}
         - name: text_field_4
-          properties: {appearance: outlined, placeholder: placeholder, label_text: label}
+          properties: {appearance: outlined, placeholder: placeholder, label_text: LABEL}
           type: form:Components.TextField
           layout_properties: {grid_position: 'RHIGNP,QTDRDY'}
   - name: card_1_copy

@@ -14,9 +14,6 @@ class TextField(TextFieldTemplate):
   def __init__(self, **properties):
     
     self._props = properties
-    # self._label_text = properties.get('label_text', '')
-    # self._trailing_icon = properties.get('trailing_icon', '')
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
@@ -48,9 +45,7 @@ class TextField(TextFieldTemplate):
   #   print(count)
   
   visible = HtmlTemplate.visible
-  
   background = color_property('text-field-input', 'backgroundColor', 'background')
-  
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
@@ -104,6 +99,11 @@ class TextField(TextFieldTemplate):
   #   if value:
   #     character_count.style.display = "block"
   #     character_count.innerHTML = value
+
+  def set_character_limit(self, value):
+    pass
+    # if value is 0 or less, count is essentially non existant. 
+  character_limit = property_with_callback("character_limit", set_character_limit)
 
   def set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
