@@ -119,6 +119,7 @@ class TextField(TextFieldTemplate):
       leading_icon.innerText = ""
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
+      border_container.classList.remove("with-icon")
   leading_icon = property_with_callback("leading_icon", set_leading_icon)    
 
   def set_trailing_icon(self, value):
@@ -147,25 +148,14 @@ class TextField(TextFieldTemplate):
       supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
   enabled = property_with_callback("enabled", set_enabled)
 
-  @property
-  def appearance(self):
-    return self._appearance
-
-  @appearance.setter
-  def appearance(self, value):
-    self._appearance = value
+  def set_appearance(self, value):
     classes = self.dom_nodes['text-field'].classList
     classes.remove("anvil-m3-outlined")
     if value:
       classes.add(f"anvil-m3-{value}")
-
-  @property
-  def error(self):
-    return self._error
-
-  @error.setter
-  def error(self, value):
-    self._error = value
+  appearance = property_with_callback("appearance", set_appearance)
+  
+  def set_error(self, value):
     classes = self.dom_nodes['text-field'].classList
     if value:
       classes.add("anvil-m3-tfield-error")
@@ -173,14 +163,9 @@ class TextField(TextFieldTemplate):
         self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-tfield-error")
+  error = property_with_callback("error", set_error)
 
-  @property
-  def placeholder(self):
-    return self._placeholder
-
-  @placeholder.setter
-  def placeholder(self, value):
-    self._placeholder = value
+  def set_placeholder(self, value):
     input = self.dom_nodes['text-field-input']
     if value:
       input.placeholder = value
@@ -188,6 +173,8 @@ class TextField(TextFieldTemplate):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
+  placeholder = property_with_callback('placeholder', set_placeholder)
+
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
