@@ -18,15 +18,18 @@ class TextField(TextFieldTemplate):
 
     self.on_key_down = self.on_key_down
     self.on_change = self.on_change
+    self.on_input = self.on_input
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
+    self.dom_nodes['text-field-input'].addEventListener("input", self.on_input)
   def on_cleanup(self, **event_args):
     self.dom_nodes['text-field-input'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].removeEventListener("change", self.on_change)
+    self.dom_nodes['text-field-input'].removeEventListener("input", self.on_input)
 
   def _anvil_get_interactions_(self):
     return [{
@@ -45,6 +48,9 @@ class TextField(TextFieldTemplate):
 
   def on_change(self, e):
     self.raise_event("change")
+    
+  def on_input(self, e):
+    self.dom_nodes['text-field-character-amount'].innerText = len(e.target.value);
 
   visible = HtmlTemplate.visible
   background = color_property('text-field-input', 'backgroundColor', 'background')
