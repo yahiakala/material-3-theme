@@ -58,16 +58,15 @@ class TextField(TextFieldTemplate):
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
   
-  # label_text = innerText_property('label-text')
   def set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
       self.dom_nodes['text-field-input'].classList.toggle('has_label_text', True)
     else:
       self.dom_nodes['text-field-input'].classList.toggle('has_label_text', anvil.designer.in_designer);
-        
+
   label_text = property_with_callback("label_text", set_label)
-    
+  
   italic_display = italic_property('text-field-input', 'italic_label')
   bold_display = bold_property('text-field-input', 'bold_display')
   underline_display = underline_property('text-field-input', 'underline_display')
