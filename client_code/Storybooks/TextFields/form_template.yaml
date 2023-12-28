@@ -44,7 +44,8 @@ components:
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2
-        properties: {appearance: outlined, leading_icon: 10k}
+        properties: {appearance: outlined, leading_icon: 10k, label_text: label text,
+          placeholder: placeholder}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1_copy_2
@@ -62,7 +63,27 @@ components:
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2_copy_2
-        properties: {appearance: outlined, placeholder: place holding text, enabled: true}
+        properties: {appearance: outlined, placeholder: no label. only placeholder,
+          enabled: true}
+        type: form:Components.TextField
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+  - name: card_1_copy
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'KESMMM,OWFASP'}
+    components:
+    - name: card_content_container_1_copy
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_field_1_copy
+        properties: {supporting_text: ' ', label_text: prompt, enabled: true}
+        type: form:Components.TextField
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_field_2_copy
+        properties: {appearance: outlined, supporting_text: ' ', label_text: label no placeholder,
+          enabled: true}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1_copy_copy
@@ -80,25 +101,7 @@ components:
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2_copy_copy
-        properties: {appearance: outlined, supporting_text: supporting text}
-        type: form:Components.TextField
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-  - name: card_1_copy
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'JHTOUV,TVZIHE'}
-    components:
-    - name: card_content_container_1_copy
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: text_field_1_copy
-        properties: {supporting_text: ' ', label_text: prompt, enabled: true}
-        type: form:Components.TextField
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: text_field_2_copy
-        properties: {appearance: outlined, supporting_text: ' ', label_text: prompt,
-          enabled: true}
+        properties: {appearance: outlined, supporting_text: no label no placeholder,
+          label_text: ''}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
