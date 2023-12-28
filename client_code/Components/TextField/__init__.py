@@ -14,15 +14,22 @@ class TextField(TextFieldTemplate):
   def __init__(self, **properties):
     
     self._props = properties
-    self._label_text = properties.get('label_text', '')
-    self._trailing_icon = properties.get('trailing_icon', '')
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    self.on_key_down = self.on_key_down
+    self.on_change = self.on_change
+    self.on_input = self.on_input
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
-    # self.dom_nodes['text-field-input'].addEventListener("keydown", self.char_counter)
-
-    # Any code you write here will run before the form opens.
+    self.dom_nodes['text-field-input'].addEventListener("input", self.on_input)
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['text-field-input'].removeEventListener("keydown", self.on_key_down)
+    self.dom_nodes['text-field-input'].removeEventListener("change", self.on_change)
+    self.dom_nodes['text-field-input'].removeEventListener("input", self.on_input)
 
   def _anvil_get_interactions_(self):
     return [{
@@ -41,16 +48,12 @@ class TextField(TextFieldTemplate):
 
   def on_change(self, e):
     self.raise_event("change")
+    
+  def on_input(self, e):
+    self.dom_nodes['text-field-character-amount'].innerText = len(e.target.value);
 
-  # def char_counter(self, e):
-  #   input = self.dom_nodes['text-field-input']
-  #   count = input.value
-  #   print(count)
-  
   visible = HtmlTemplate.visible
-  
   background = color_property('text-field-input', 'backgroundColor', 'background')
-  
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
@@ -58,57 +61,37 @@ class TextField(TextFieldTemplate):
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
   
-  # label_text = innerText_property('label-text')
   def set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
+    if value:
+      self.dom_nodes['text-field-input'].classList.toggle('has_label_text', True)
+    else:
+      self.dom_nodes['text-field-input'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", set_label)
-    
+  
   italic_display = italic_property('text-field-input', 'italic_label')
   bold_display = bold_property('text-field-input', 'bold_display')
   underline_display = underline_property('text-field-input', 'underline_display')
   display_font_size = font_size_property('text-field-input', 'display_font_size')
   display_font = font_family_property('text-field-input', 'display_font')
   display_text_color = color_property('text-field-input', 'color', 'display_text_color')
-  # display_text = innerText_property('text-field-input')
   margin = margin_property('text-field')
-  
-  # @property
-  # def label_text(self):
-  #   return self._label_text
 
-  # @label_text.setter
-  # def label_text(self, value):
-  #   self._label_text = value
-  #   self.dom_nodes['label-text'].innerHTML = value or ""
+  def set_supporting_text(self, value):
+    self.dom_nodes['text-field-supporting'].innerHTML = value
+  supporting_text = property_with_callback("supporting_text", set_supporting_text)
+      
+  def set_character_limit(self, value):
+    if value is None or value < 1:
+      text_field_input = self.dom_nodes['text-field-input'].removeAttribute("maxlength")
+      self.dom_nodes['text-field-character-counter'].style = "display: none";
+    else:
+      text_field_input = self.dom_nodes['text-field-input'].setAttribute("maxlength", value)
+      self.dom_nodes['text-field-character-counter'].style = "display: inline";
+      self.dom_nodes['text-field-character-limit'].innerText = value;
+  character_limit = property_with_callback("character_limit", set_character_limit)
 
-  @property
-  def supporting_text(self):
-    return self.dom_nodes['text-field-supporting'].innerHTML
-
-  @supporting_text.setter
-  def supporting_text(self, value):
-    self._supporting_text = value
-    if value:
-      self.dom_nodes['text-field-supporting'].innerHTML = value
-
-  # @property
-  # def max_characters(self):
-  #   return self._max_characters
-
-  # @max_characters.setter
-  # def max_characters(self, value):
-  #   character_count = self.dom_nodes['text-field-character-count']
-  #   if value:
-  #     character_count.style.display = "block"
-  #     character_count.innerHTML = value
-
-  @property
-  def leading_icon(self):
-    return self._leading_icon
-
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._leading_icon = value
+  def set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -125,14 +108,10 @@ class TextField(TextFieldTemplate):
       leading_icon.innerText = ""
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
+      border_container.classList.remove("with-icon")
+  leading_icon = property_with_callback("leading_icon", set_leading_icon)    
 
-  @property
-  def trailing_icon(self):
-    return self._trailing_icon
-
-  @trailing_icon.setter
-  def trailing_icon(self, value):
-    self._trailing_icon = value
+  def set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -145,13 +124,9 @@ class TextField(TextFieldTemplate):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
+  trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
 
-  @property
-  def enabled(self):
-    return self._enabled
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
+  def set_enabled(self, value):
     input = self.dom_nodes['text-field-input']
     supporting_text = self.dom_nodes['text-field-supporting']
     if value:
@@ -160,26 +135,16 @@ class TextField(TextFieldTemplate):
     else:
       input.setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
+  enabled = property_with_callback("enabled", set_enabled)
 
-  @property
-  def appearance(self):
-    return self._appearance
-
-  @appearance.setter
-  def appearance(self, value):
-    self._appearance = value
+  def set_appearance(self, value):
     classes = self.dom_nodes['text-field'].classList
     classes.remove("anvil-m3-outlined")
     if value:
       classes.add(f"anvil-m3-{value}")
-
-  @property
-  def error(self):
-    return self._error
-
-  @error.setter
-  def error(self, value):
-    self._error = value
+  appearance = property_with_callback("appearance", set_appearance)
+  
+  def set_error(self, value):
     classes = self.dom_nodes['text-field'].classList
     if value:
       classes.add("anvil-m3-tfield-error")
@@ -187,14 +152,9 @@ class TextField(TextFieldTemplate):
         self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-tfield-error")
+  error = property_with_callback("error", set_error)
 
-  @property
-  def placeholder(self):
-    return self._placeholder
-
-  @placeholder.setter
-  def placeholder(self, value):
-    self._placeholder = value
+  def set_placeholder(self, value):
     input = self.dom_nodes['text-field-input']
     if value:
       input.placeholder = value
@@ -202,9 +162,10 @@ class TextField(TextFieldTemplate):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
+  placeholder = property_with_callback('placeholder', set_placeholder)
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer:
       if not self.label_text:
-        self.label_text = anvil.designer.get_design_name(self)
+        self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
