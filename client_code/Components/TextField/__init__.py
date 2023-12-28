@@ -15,11 +15,18 @@ class TextField(TextFieldTemplate):
     
     self._props = properties
     self.init_components(**properties)
+
+    self.on_key_down = self.on_key_down
+    self.on_change = self.on_change
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['text-field-input'].addEventListener("change", self.on_change)
-    # self.dom_nodes['text-field-input'].addEventListener("keydown", self.char_counter)
-
-    # Any code you write here will run before the form opens.
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['text-field-input'].removeEventListener("keydown", self.on_key_down)
+    self.dom_nodes['text-field-input'].removeEventListener("change", self.on_change)
 
   def _anvil_get_interactions_(self):
     return [{
@@ -39,11 +46,6 @@ class TextField(TextFieldTemplate):
   def on_change(self, e):
     self.raise_event("change")
 
-  # def char_counter(self, e):
-  #   input = self.dom_nodes['text-field-input']
-  #   count = input.value
-  #   print(count)
-  
   visible = HtmlTemplate.visible
   background = color_property('text-field-input', 'backgroundColor', 'background')
   italic_label = italic_property('label-text', 'italic_label')
@@ -67,27 +69,11 @@ class TextField(TextFieldTemplate):
   display_font_size = font_size_property('text-field-input', 'display_font_size')
   display_font = font_family_property('text-field-input', 'display_font')
   display_text_color = color_property('text-field-input', 'color', 'display_text_color')
-  # display_text = innerText_property('text-field-input')
   margin = margin_property('text-field')
-  
-  # @property
-  # def label_text(self):
-  #   return self._label_text
 
-  # @label_text.setter
-  # def label_text(self, value):
-  #   self._label_text = value
-  #   self.dom_nodes['label-text'].innerHTML = value or ""
-
-  @property
-  def supporting_text(self):
-    return self.dom_nodes['text-field-supporting'].innerHTML
-
-  @supporting_text.setter
-  def supporting_text(self, value):
-    self._supporting_text = value
-    if value:
-      self.dom_nodes['text-field-supporting'].innerHTML = value
+  def set_supporting_text(self, value):
+    self.dom_nodes['text-field-supporting'].innerHTML = value
+  supporting_text = property_with_callback("supporting_text", set_supporting_text)
       
   def set_character_limit(self, value):
     if value is None or value < 1:
