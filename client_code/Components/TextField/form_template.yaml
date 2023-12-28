@@ -752,7 +752,7 @@ properties:
 - {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined,
   group: Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
-  group: Style}
+  group: Style, designer_hint: visible}
 - {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
   group: Style}
 - {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
@@ -768,7 +768,7 @@ properties:
 - name: margin
   type: margin
   important: true
-  default_value: ['', null, null, null]
+  default_value: [4px, null, null, null]
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
