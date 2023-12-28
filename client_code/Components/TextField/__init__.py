@@ -102,7 +102,7 @@ class TextField(TextFieldTemplate):
   #     character_count.style.display = "block"
   #     character_count.innerHTML = value
 
-  def set_leading_icon(self):
+  def set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -119,23 +119,9 @@ class TextField(TextFieldTemplate):
       leading_icon.innerText = ""
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
-      
-  @property
-  def leading_icon(self):
-    return self._leading_icon
+  leading_icon = property_with_callback("leading_icon", set_leading_icon)    
 
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._leading_icon = value
-    
-
-  @property
-  def trailing_icon(self):
-    return self._trailing_icon
-
-  @trailing_icon.setter
-  def trailing_icon(self, value):
-    self._trailing_icon = value
+  def set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['text-field-input']
@@ -148,13 +134,9 @@ class TextField(TextFieldTemplate):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
+  trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
 
-  @property
-  def enabled(self):
-    return self._enabled
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
+  def set_enabled(self, value):
     input = self.dom_nodes['text-field-input']
     supporting_text = self.dom_nodes['text-field-supporting']
     if value:
@@ -163,6 +145,7 @@ class TextField(TextFieldTemplate):
     else:
       input.setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
+  enabled = property_with_callback("enabled", set_enabled)
 
   @property
   def appearance(self):

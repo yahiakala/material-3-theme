@@ -58,11 +58,11 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: text_field_1_copy_2
-        properties: {leading_icon: ' ', enabled: true, placeholder: place holding text}
+        properties: {leading_icon: null, enabled: true, placeholder: place holding text}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2_copy_2
-        properties: {appearance: outlined, placeholder: place holding text}
+        properties: {appearance: outlined, placeholder: place holding text, enabled: true}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1_copy_copy
@@ -94,10 +94,11 @@ components:
       layout_properties: {slot: card-content-slot}
       components:
       - name: text_field_1_copy
-        properties: {supporting_text: ' ', label_text: prompt}
+        properties: {supporting_text: ' ', label_text: prompt, enabled: true}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2_copy
-        properties: {appearance: outlined, supporting_text: ' ', label_text: prompt}
+        properties: {appearance: outlined, supporting_text: ' ', label_text: prompt,
+          enabled: true}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
