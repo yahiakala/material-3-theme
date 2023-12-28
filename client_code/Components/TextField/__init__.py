@@ -101,7 +101,13 @@ class TextField(TextFieldTemplate):
   #     character_count.innerHTML = value
 
   def set_character_limit(self, value):
-    pass
+    if value > 0:
+      text_field_input = self.dom_nodes['text-field-input'].setAttribute("maxlength", value)
+      self.dom_nodes['text-field-character-count'].style = "display: inline";
+    else:
+      text_field_input = self.dom_nodes['text-field-input'].removeAttribute("maxlength")
+      self.dom_nodes['text-field-character-count'].style = "display: none";
+      
     # if value is 0 or less, count is essentially non existant. 
   character_limit = property_with_callback("character_limit", set_character_limit)
 

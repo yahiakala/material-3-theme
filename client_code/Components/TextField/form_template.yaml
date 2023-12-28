@@ -796,6 +796,6 @@ container:
       \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
       \ </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
       \ \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
-      \ ></span>\n    <span style=\"display: inline-block\" class=\"anvil-m3-text-field-character-count\"\
+      \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
       \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
   event_bindings: {show: form_show}
