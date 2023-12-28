@@ -88,27 +88,15 @@ class TextField(TextFieldTemplate):
     self._supporting_text = value
     if value:
       self.dom_nodes['text-field-supporting'].innerHTML = value
-
-  # @property
-  # def max_characters(self):
-  #   return self._max_characters
-
-  # @max_characters.setter
-  # def max_characters(self, value):
-  #   character_count = self.dom_nodes['text-field-character-count']
-  #   if value:
-  #     character_count.style.display = "block"
-  #     character_count.innerHTML = value
-
-  def set_character_limit(self, value):
-    if value > 0:
-      text_field_input = self.dom_nodes['text-field-input'].setAttribute("maxlength", value)
-      self.dom_nodes['text-field-character-count'].style = "display: inline";
-    else:
-      text_field_input = self.dom_nodes['text-field-input'].removeAttribute("maxlength")
-      self.dom_nodes['text-field-character-count'].style = "display: none";
       
-    # if value is 0 or less, count is essentially non existant. 
+  def set_character_limit(self, value):
+    if value is None or value < 1:
+      text_field_input = self.dom_nodes['text-field-input'].removeAttribute("maxlength")
+      self.dom_nodes['text-field-character-counter'].style = "display: none";
+    else:
+      text_field_input = self.dom_nodes['text-field-input'].setAttribute("maxlength", value)
+      self.dom_nodes['text-field-character-counter'].style = "display: inline";
+      self.dom_nodes['text-field-character-limit'].innerText = value;
   character_limit = property_with_callback("character_limit", set_character_limit)
 
   def set_leading_icon(self, value):

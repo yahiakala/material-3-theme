@@ -769,7 +769,7 @@ properties:
   type: margin
   important: true
   default_value: [5px, null, null, null]
-- {name: character_limit, type: number, important: true, default_value: 0}
+- {name: character_limit, type: number, important: true, default_value: 0, description: Character limit for the textfield. Value must be greater 0. All other values default to no character limit}
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
@@ -797,5 +797,7 @@ container:
       \ </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
       \ \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
       \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
-      \ anvil-name=\"text-field-character-count\">5/20</span>\n  </label>\n</div>"}
+      \ anvil-name=\"text-field-character-counter\">\n      <span anvil-name=\"text-field-character-amount\"\
+      \ >0</span>\n      /\n      <span anvil-name=\"text-field-character-limit\"\
+      \ >10</span>\n    </span>\n  </label>\n</div>"}
   event_bindings: {show: form_show}
