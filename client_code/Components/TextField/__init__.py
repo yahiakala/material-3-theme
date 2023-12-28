@@ -14,8 +14,8 @@ class TextField(TextFieldTemplate):
   def __init__(self, **properties):
     
     self._props = properties
-    self._label_text = properties.get('label_text', '')
-    self._trailing_icon = properties.get('trailing_icon', '')
+    # self._label_text = properties.get('label_text', '')
+    # self._trailing_icon = properties.get('trailing_icon', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
@@ -64,7 +64,6 @@ class TextField(TextFieldTemplate):
       self.dom_nodes['text-field-input'].classList.toggle('has_label_text', True)
     else:
       self.dom_nodes['text-field-input'].classList.toggle('has_label_text', anvil.designer.in_designer);
-
   label_text = property_with_callback("label_text", set_label)
   
   italic_display = italic_property('text-field-input', 'italic_label')

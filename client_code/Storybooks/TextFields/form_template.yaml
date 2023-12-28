@@ -45,7 +45,7 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_2
         properties: {appearance: outlined, leading_icon: 10k, label_text: label text,
-          placeholder: placeholder}
+          placeholder: placeholder, trailing_icon: 10k}
         type: form:Components.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1_copy_2
