@@ -1,8 +1,7 @@
 .anvil-m3-textinput { width: calc(100% - 10px); }
 
 .anvil-m3-textinput-input {
-  position: relative;
-  width: 100%;
+  height: 56px;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
   border: none;
@@ -12,16 +11,12 @@
   letter-spacing: 0.5px;
   color: var(--anvil-m3-on-surface);
   caret-color: var(--anvil-m3-primary);
-
-  height: 56px; /* updates to height with textarea */
+  width: 100%;
 }
 
 .anvil-m3-textinput-label-text {
   grid-column: 2 / span 1; grid-row: 3 / span 1;
 }
-:not(.anvil-m3-textinput-input:placeholder-shown) + .anvil-m3-textinput-border .anvil-m3-textinput-label-text,
-.anvil-m3-textinput-input.anvil-m3-has-placeholder + .anvil-m3-textinput-border .anvil-m3-textinput-label-text { font-size: 12px; padding-top: 8px; transform: translate(0, -15%); }
-
 .anvil-m3-text-input-icon-containter, .anvil-m3-textinput-border {
   position: absolute;
   inset: 0;
@@ -63,12 +58,12 @@
 .anvil-m3-textinput-input.anvil-m3-has-placeholder + .anvil-m3-textinput-border .anvil-m3-textinput-label-text { font-size: 12px; padding-top: 8px; transform: translate(0, -15%); }
 .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border .anvil-m3-textinput-label-text {color: var(--anvil-m3-primary); }
 
-.anvil-m3-border-container, .anvil-m3-text-field .anvil-m3-border-container .anvil-m3-label-text { transition: all 0.15s ease-out; }
-:not(.anvil-m3-text-field-input:placeholder-shown) .anvil-m3-text-field-input { padding-top: 24px; padding-bottom: 8px }
+.anvil-m3-textinput-border, .anvil-m3-textinput-border .anvil-m3-textinput-label-text { transition: all 0.15s ease-out; }
+:not(.anvil-m3-textinput-input:placeholder-shown) .anvil-m3-textinput-input { padding-top: 24px; padding-bottom: 8px }
 
-.anvil-m3-icon-container i { font-size: 20px; font-weight: bold; }
-.anvil-m3-leading-icon { padding-right: 16px }
-.anvil-m3-trailing-icon { position: absolute; right: 12px; }
+.anvil-m3-textinput-icon-container i { font-size: 20px; font-weight: bold; }
+.anvil-m3-textinput-leading-icon { padding-right: 16px }
+.anvil-m3-textinput-trailing-icon { position: absolute; right: 12px; }
 
 
 /* text area specific */
