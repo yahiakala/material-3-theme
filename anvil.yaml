@@ -69,6 +69,9 @@ toolbox_sections:
   - title: TextField
     icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.TextField}
+  - title: TextArea
+    icon: {}
+    component: {type: Material_3_Theme_2_0.Components.TextInput.TextArea}
   - title: DropdownMenu
     icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.DropdownMenu}
