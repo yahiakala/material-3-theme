@@ -2,7 +2,7 @@
   width: calc(100% - 10px);
 }
 
-.anvil-m3-text-field-input-container {
+.anvil-m3-textinput-input-container {
   width: 100%;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
@@ -15,7 +15,7 @@
   caret-color: var(--anvil-m3-primary);
 }
 
-.anvil-m3-text-field-input-container:focus-within {
+.anvil-m3-textinput-input-container:focus-within {
   background-color: lightblue;
 }
 

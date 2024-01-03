@@ -104,11 +104,11 @@ unique_ids:
     designer_icons/switch_dark.svg: '1702400809019398541961546.3368'
     designer_icons/switch.svg: '1702400792497881053389888.2365'
     designer_icons/interactive_card_dark.svg: TJGZBM57QKQSU2A62NHCECY232HTPGVH
-    anvil-m3/xtext-fields.css: '1690380154363843520236981.625'
     designer_icons/linear_progress_indicator_dark.svg: '1702400058154478037195884.5384'
     designer_icons/linear_progress_indicator.svg: '170240004066150768354955.0475'
     designer_icons/sidesheet_dark.svg: '1702402350995637969552697.4349'
     designer_icons/file_loader_dark.svg: '170240009488622243761193.770916'
+    anvil-m3/text-fields.css: '1690380154363843520236981.625'
     designer_icons/textfield.svg: '1702402292135309100614551.32196'
     anvil-m3/fileloader.css: '1699026052050532507046407.12885'
     version-control-tab.png: '1697536727736680027650153.2787'
