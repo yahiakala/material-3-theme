@@ -20,15 +20,24 @@
 }
 
 .anvil-m3-border-container { }
+.anvil-m3-border-container.with-icon { grid-template-columns: 48px auto 1fr; }
+
 .anvil-m3-text-input-border-container-cell-tl { }
 .anvil-m3-text-input-border-container-cell-tl { }
 .anvil-m3-text-input-border-container-cell-tl { }
 .anvil-m3-text-input-border-container-cell-tl { }
 
-.anvil-m3-text-input-label-text {}
+.anvil-m3-label-text { grid-column: 2 / span 1; grid-row: 3 / span 1; }
 
 .anvil-m3-textinput.outlined < .anvil-m3-text-field-input-container {
   background-color:blue;
+}
+
+.anvil-m3-text-input-icon-containter, .anvil-m3-border-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: var(--anvil-m3-on-surface-variant);
 }
 
 .anvil-m3-text-input-icon-containter {}

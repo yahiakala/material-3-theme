@@ -54,7 +54,7 @@ class TextField(TextInput):
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
     border_container = self.dom_nodes['border-container']
-
+    
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value
@@ -71,7 +71,7 @@ class TextField(TextInput):
   
   def set_trailing_icon(self, value):
     icon_container = self.dom_nodes['icon-container']
-    leading_icon = self.dom_nodes['trailing-icon']
+    trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['textfield']
 
     if value:
