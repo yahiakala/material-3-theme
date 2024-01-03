@@ -62,7 +62,7 @@
 .anvil-m3-text-field-input.anvil-m3-has-placeholder + .anvil-m3-border-container .anvil-m3-label-text { font-size: 12px; padding-top: 8px; transform: translate(0, -15%); }
 .anvil-m3-text-field .anvil-m3-text-field-input:focus + .anvil-m3-border-container .anvil-m3-label-text {color: var(--anvil-m3-primary); }
 
-.anvil-m3-text-field .anvil-m3-border-container, .anvil-m3-text-field .anvil-m3-border-container .anvil-m3-label-text  { transition: all 0.15s ease-out; }
+.anvil-m3-text-field .anvil-m3-border-container, .anvil-m3-text-field .anvil-m3-border-container .anvil-m3-label-text { transition: all 0.15s ease-out; }
 :not(.anvil-m3-text-field-input:placeholder-shown) .anvil-m3-text-field-input { padding-top: 24px; padding-bottom: 8px }
 
 .anvil-m3-icon-container i { font-size: 20px; font-weight: bold; }
