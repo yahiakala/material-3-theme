@@ -2,8 +2,11 @@ container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"text-input-component\" class=\"anvil-m3-text-input\"\
       \ style=\"width: calc(100% - 10px)\">\n  <div anvil-name=\"input-container\"\
-      >\n    \n  </div>\n  <div anvil-name=\"supporting-container\">\n    \n  </div>\n\
-      </div>"}
+      >\n    <textarea anvil-name=\"textarea\" class=\"anvil-m3-textarea\" ></textarea>\n\
+      \    <input anvil-name=\"textfield\" class=\"anvil-m3-textfield\" type=\"text\"\
+      \ />\n    <div anvil-name=\"border-container\" class=\"anvil-m3-textinput\"\
+      \ >\n      \n    </div>\n  </div>\n  <div anvil-name=\"supporting-container\"\
+      >\n    \n  </div>\n</div>"}
 components: []
 is_package: true
 custom_component: true
