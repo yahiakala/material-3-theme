@@ -1,7 +1,14 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
-      >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
-      ></div>"}
+  properties: {html: "<div anvil-name=\"text-input-component\" class=\"anvil-m3-text-input\"\
+      \ style=\"width: calc(100% - 10px)\">\n  <div anvil-name=\"input-container\"\
+      >\n    \n  </div>\n  <div anvil-name=\"supporting-container\">\n    \n  </div>\n\
+      </div>"}
 components: []
 is_package: true
+custom_component: true
+properties:
+- {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
+  group: Attributes}
+- {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
+- {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
