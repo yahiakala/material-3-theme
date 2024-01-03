@@ -25,3 +25,9 @@ properties:
 - {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
 - {name: visible, type: boolean, default_value: true, important: true}
+- name: appearance
+  type: enum
+  important: true
+  options: [outlined]
+  default_value: null
+  include_none_option: true

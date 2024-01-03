@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_without_callback
+from ...Functions import property_without_callback, property_with_callback
 from anvil import HtmlTemplate
 
 class TextInput(TextInputTemplate):
@@ -17,5 +17,10 @@ class TextInput(TextInputTemplate):
   label_text = property_without_callback("label_text")
   supporting_text = property_without_callback("supporting_text")
   placeholder = property_without_callback("label_text")
+
+  def set_appearance(self, value):
+    self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))
+    
+  appearance = property_with_callback("appearance", set_appearance)
 
     # Any code you write here will run before the form opens.
