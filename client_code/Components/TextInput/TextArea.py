@@ -9,3 +9,19 @@ class TextArea(TextInput):
     super().__init__(**properties)
     self.init_components(**properties)
     self.dom_nodes['textarea'].classList.remove('anvil-m3-hide-tag')
+    
+  def set_placeholder(self, value):
+    input = self.dom_nodes['textarea']
+    if value:
+      input.placeholder = value
+      input.classList.add('anvil-m3-has-placeholder')
+    else:
+      input.placeholder = " "
+      input.classList.remove('anvil-m3-has-placeholder')
+
+  def set_label(self, value):
+      self.dom_nodes['label-text'].innerText = value or ""
+      if value:
+        self.dom_nodes['textarea'].classList.toggle('has_label_text', True)
+      else:
+        self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);

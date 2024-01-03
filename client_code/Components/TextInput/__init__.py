@@ -14,7 +14,6 @@ class TextInput(TextInputTemplate):
     self.init_components(**properties)
     
   visible = HtmlTemplate.visible
-  label_text = property_without_callback("label_text")
   supporting_text = property_without_callback("supporting_text")
   placeholder = property_without_callback("label_text")
 
@@ -23,11 +22,9 @@ class TextInput(TextInputTemplate):
   appearance = property_with_callback("appearance", set_appearance)
   
   def set_placeholder(self, value):
-    input = self.dom_nodes['text-field-input']
-    if value:
-      input.placeholder = value
-      input.classList.add('anvil-m3-has-placeholder')
-    else:
-      input.placeholder = " "
-      input.classList.remove('anvil-m3-has-placeholder')
+    pass
   placeholder = property_with_callback('placeholder', set_placeholder)
+
+  def set_label(self, value):
+    pass
+  label_text = property_with_callback("label_text", set_label)
