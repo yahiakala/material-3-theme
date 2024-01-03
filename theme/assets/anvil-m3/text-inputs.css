@@ -1,6 +1,7 @@
 .anvil-m3-textinput { width: calc(100% - 10px); }
 
 .anvil-m3-textinput-input-container {
+  position: relative;
   width: 100%;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
@@ -11,9 +12,15 @@
   letter-spacing: 0.5px;
   color: var(--anvil-m3-on-surface);
   caret-color: var(--anvil-m3-primary);
+
+  height: 56px;
 }
 
+.anvil-m3-textinput-label-text {
+  color: blue;
+}
 
+/* 
 .anvil-m3-text-input-icon-containter, .anvil-m3-textinput-border {
   position: absolute;
   inset: 0;
@@ -21,7 +28,7 @@
   color: var(--anvil-m3-on-surface-variant);
 }
 .anvil-m3-text-input-icon-containter { display: flex; align-items: center; padding-left: 16px; }
-.anvil-m3-textinput-border { display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; }
+.anvil-m3-textinput-border { display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; } */
 
 .anvil-m3-textinput-supporting-text, .anvil-m3-textinput-character-count {
   color: var(--anvil-m3-on-surface-variant);
