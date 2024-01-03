@@ -22,6 +22,10 @@
 
 .anvil-m3-text-input-label-text {}
 
+.anvil-m3-textinput.outlined < .anvil-m3-text-field-input-container {
+  background-color:blue;
+}
+
 .anvil-m3-text-input-icon-containter {}
 .anvil-m3-text-input-icon-leading-icon {}
 .anvil-m3-text-input-icon-trailing-icon {}
