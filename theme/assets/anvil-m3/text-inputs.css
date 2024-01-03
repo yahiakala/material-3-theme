@@ -15,6 +15,10 @@
   caret-color: var(--anvil-m3-primary);
 }
 
+.anvil-m3-text-field-input-container:focus-within {
+  background-color: blue;
+}
+
 .anvil-m3-border-container { }
 .anvil-m3-text-input-border-container-cell-tl { }
 .anvil-m3-text-input-border-container-cell-tl { }
