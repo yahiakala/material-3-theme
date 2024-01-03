@@ -126,22 +126,22 @@ class TextInput(TextInputTemplate):
   #     text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
 
-  def set_enabled(self, value):
-    input = self.dom_nodes['text-field-input']
-    supporting_text = self.dom_nodes['text-field-supporting']
-    if value:
-      input.removeAttribute("disabled")
-      supporting_text.classList.remove("anvil-m3-text-field-supporting-disabled")
-    else:
-      input.setAttribute("disabled", " ")
-      supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
-  enabled = property_with_callback("enabled", set_enabled)
+  # def set_enabled(self, value):
+  #   input = self.dom_nodes['text-field-input']
+  #   supporting_text = self.dom_nodes['text-field-supporting']
+  #   if value:
+  #     input.removeAttribute("disabled")
+  #     supporting_text.classList.remove("anvil-m3-text-field-supporting-disabled")
+  #   else:
+  #     input.setAttribute("disabled", " ")
+  #     supporting_text.classList.add("anvil-m3-text-field-supporting-disabled")
+  # enabled = property_with_callback("enabled", set_enabled)
 
   def set_appearance(self, value):
-    classes = self.dom_nodes['text-field'].classList
-    classes.remove("anvil-m3-outlined")
+    classes = self.dom_nodes['text-input'].classList
+    classes.remove("anvil-m3-text-input-outlined")
     if value:
-      classes.add(f"anvil-m3-{value}")
+      classes.add(f"anvil-m3-text-input-{value}")
   appearance = property_with_callback("appearance", set_appearance)
 
   def set_error(self, value):
