@@ -16,6 +16,7 @@ container:
       \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
       \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
       \    </label>\n  </div>\n</div>"}
+  event_bindings: {show: form_show}
 components: []
 is_package: true
 custom_component: true

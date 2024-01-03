@@ -18,6 +18,7 @@ class TextArea(TextInput):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
+  placeholder = property_with_callback('placeholder', set_placeholder)
 
   def set_label(self, value):
       self.dom_nodes['label-text'].innerText = value or ""
@@ -25,3 +26,4 @@ class TextArea(TextInput):
         self.dom_nodes['textarea'].classList.toggle('has_label_text', True)
       else:
         self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
+  label_text = property_with_callback("label_text", set_label)

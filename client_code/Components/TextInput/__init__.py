@@ -20,11 +20,11 @@ class TextInput(TextInputTemplate):
   def set_appearance(self, value):
     self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
   appearance = property_with_callback("appearance", set_appearance)
-  
-  def set_placeholder(self, value):
-    pass
-  placeholder = property_with_callback('placeholder', set_placeholder)
 
-  def set_label(self, value):
-    pass
-  label_text = property_with_callback("label_text", set_label)
+  def form_show(self, **event_args):
+    if anvil.designer.in_designer:
+      if not self.label_text:
+        self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
+
+  
+ 
