@@ -1,12 +1,13 @@
 .anvil-m3-text-input-container {
-  
+  width: 100%;
+  background: lightblue;
 }
 
 .anvil-m3-border-container { }
-.anvil-m3-border-container-cell-tl { }
-.anvil-m3-border-container-cell-t { }
-.anvil-m3-border-container-cell-tr { }
-.anvil-m3-border-container-cell-b { }
+.anvil-m3-text-input-border-container-cell-tl { }
+.anvil-m3-text-input-border-container-cell-tl { }
+.anvil-m3-text-input-border-container-cell-tl { }
+.anvil-m3-text-input-border-container-cell-tl { }
 
 .anvil-m3-text-input-label-text {}
 
@@ -15,6 +16,11 @@
 .anvil-m3-text-input-icon-trailing-icon {}
 
 .anvil-m3-text-input-supporting-text {}
+.anvil-m3-text-input-character-count {}
 
+/* text area specific */
+.anvil-m3-textarea-input {
+  resize: none
+}
 
-.anvil-m3-textarea-input { }
+/*  text field specific */
