@@ -2,9 +2,9 @@ container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"textinput-component\" class=\"anvil-m3-textinput\"\
       >\n  <div class=\"anvil-m3-text-field-input-container\" anvil-name=\"input-container\"\
-      >\n    <textarea anvil-name=\"textarea\" class=\"anvil-m3-textarea\" ></textarea>\n\
+      >\n<!--     <textarea anvil-name=\"textarea\" class=\"anvil-m3-textarea\" ></textarea>\n\
       \    <input anvil-name=\"textfield\" class=\"anvil-m3-textfield\" type=\"text\"\
-      \ />\n    <div anvil-name=\"border-container\" class=\"anvil-m3-textinput-border\"\
+      \ /> -->\n    <div anvil-name=\"border-container\" class=\"anvil-m3-textinput-border\"\
       \ >\n      <div class=\"anvil-m3-textinput-border-container-cell-tl\"></div>\n\
       \      <div class=\"anvil-m3-textinput-border-container-cell-t\"></div>\n  \
       \    <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n   \
@@ -31,4 +31,3 @@ properties:
   options: [outlined]
   default_value: null
   include_none_option: true
-- {name: multiline, type: boolean, default_value: true, important: true}
