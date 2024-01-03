@@ -19,8 +19,11 @@ class TextInput(TextInputTemplate):
   placeholder = property_without_callback("label_text")
 
   def set_appearance(self, value):
-    self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))
-    
+    self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
   appearance = property_with_callback("appearance", set_appearance)
-
+  
+  def set_multiline(self, value):
+    self.dom_nodes['textarea'].classList.toggle('anvil-m3-hide-tag', bool(value))
+    self.dom_nodes['textfield'].classList.toggle('anvil-m3-hide-tag', not bool(value))
+  multiline = property_with_callback("multiline", set_multiline)
     # Any code you write here will run before the form opens.

@@ -31,3 +31,4 @@ properties:
   options: [outlined]
   default_value: null
   include_none_option: true
+- {name: multiline, type: boolean, default_value: true, important: true}

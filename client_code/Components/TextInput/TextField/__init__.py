@@ -1,14 +1,17 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import TextFieldTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import TextInput
 
-class Form1(Form1Template):
+class TextField(TextInput):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
-    self.text_input.
+    # self.text_input.multiline = False
+
 
     # Any code you write here will run before the form opens.
