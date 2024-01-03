@@ -8,7 +8,6 @@ from .. import TextInput
 
 class TextArea(TextInput):
   def __init__(self, **properties):
-    self._props = properties
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
