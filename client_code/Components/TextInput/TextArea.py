@@ -4,11 +4,12 @@ import anvil.designer
 from ...Functions import property_with_callback, theme_color_to_css
 
 class TextArea(TextInput):
-  _anvil_properties_ = [*TextInput._anvil_properties_]
+  # _anvil_properties_ = [*TextInput._anvil_properties_]
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
     self.dom_nodes['textarea'].classList.remove('anvil-m3-hide-tag')
+    # console.log(self)
     
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
@@ -27,3 +28,16 @@ class TextArea(TextInput):
       else:
         self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", set_label)
+
+
+"""
+<script type="text/javascript">
+        textarea = document.querySelector("#autoresizing");
+        textarea.addEventListener('input', autoResize, false);
+ 
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
+    </script>
+"""

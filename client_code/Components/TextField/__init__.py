@@ -162,7 +162,7 @@ class TextField(TextFieldTemplate):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
-  # placeholder = property_with_callback('placeholder', set_placeholder)
+  placeholder = property_with_callback('placeholder', set_placeholder)
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
