@@ -10,16 +10,16 @@ leading_icon_property = {"name": "leading_icon",
                          "options": _m3_icons, 
                          "group": "Attributes", 
                          "important": True, 
-                         "default_value": "null",
-                         "include_none_option": True, 
+                         "default_value": "",
+                         # "include_none_option": True, 
                          "description": "right side icon"}
 trailing_icon_property = {"name": "trailing_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
                          "group": "Attributes", 
                          "important": True, 
-                         "default_value": "null",
-                         "include_none_option": True, 
+                         "default_value": "",
+                         # "include_none_option": True, 
                          "description": "left side icon"}
 
 class TextField(TextInput):
