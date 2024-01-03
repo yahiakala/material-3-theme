@@ -1,12 +1,11 @@
-from ._anvil_designer import TextFieldTemplate
+from ._anvil_designer import TextInputsTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import TextInput
 
-class TextField(TextInput):
+class TextInputs(TextInputsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

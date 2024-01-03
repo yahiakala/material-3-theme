@@ -91,40 +91,40 @@ class TextInput(TextInputTemplate):
       self.dom_nodes['text-field-character-limit'].innerText = value;
   character_limit = property_with_callback("character_limit", set_character_limit)
 
-  def set_leading_icon(self, value):
-    icon_container = self.dom_nodes['anvil-m3-icon-container']
-    leading_icon = self.dom_nodes['leading-icon']
-    text_field_input = self.dom_nodes['text-field-input']
-    border_container = self.dom_nodes['anvil-m3-border-container']
-    self._material_icon = value
-    if value:
-      leading_icon.style.display = "block"
-      leading_icon.innerText = value
-      icon_container.style.paddingLeft = "12px"
-      text_field_input.style.paddingLeft = "48px"
-      border_container.classList.add("with-icon")
-    else:
-      leading_icon.style.display = "none"
-      leading_icon.innerText = ""
-      icon_container.style.paddingLeft = "16px"
-      text_field_input.style.paddingLeft = "16px"
-      border_container.classList.remove("with-icon")
-  leading_icon = property_with_callback("leading_icon", set_leading_icon)
+  # def set_leading_icon(self, value):
+  #   icon_container = self.dom_nodes['anvil-m3-icon-container']
+  #   leading_icon = self.dom_nodes['leading-icon']
+  #   text_field_input = self.dom_nodes['text-field-input']
+  #   border_container = self.dom_nodes['anvil-m3-border-container']
+  #   self._material_icon = value
+  #   if value:
+  #     leading_icon.style.display = "block"
+  #     leading_icon.innerText = value
+  #     icon_container.style.paddingLeft = "12px"
+  #     text_field_input.style.paddingLeft = "48px"
+  #     border_container.classList.add("with-icon")
+  #   else:
+  #     leading_icon.style.display = "none"
+  #     leading_icon.innerText = ""
+  #     icon_container.style.paddingLeft = "16px"
+  #     text_field_input.style.paddingLeft = "16px"
+  #     border_container.classList.remove("with-icon")
+  # leading_icon = property_with_callback("leading_icon", set_leading_icon)
 
-  def set_trailing_icon(self, value):
-    icon_container = self.dom_nodes['anvil-m3-icon-container']
-    trailing_icon = self.dom_nodes['trailing-icon']
-    text_field_input = self.dom_nodes['text-field-input']
-    self._material_icon = value
-    if value:
-      trailing_icon.style.display = "block"
-      trailing_icon.innerText = value
-      text_field_input.style.paddingRight = "48px"
-    else:
-      trailing_icon.style.display = "none"
-      trailing_icon.innerText = ""
-      text_field_input.style.paddingRight = "16px"
-  trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+  # def set_trailing_icon(self, value):
+  #   icon_container = self.dom_nodes['anvil-m3-icon-container']
+  #   trailing_icon = self.dom_nodes['trailing-icon']
+  #   text_field_input = self.dom_nodes['text-field-input']
+  #   self._material_icon = value
+  #   if value:
+  #     trailing_icon.style.display = "block"
+  #     trailing_icon.innerText = value
+  #     text_field_input.style.paddingRight = "48px"
+  #   else:
+  #     trailing_icon.style.display = "none"
+  #     trailing_icon.innerText = ""
+  #     text_field_input.style.paddingRight = "16px"
+  # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
 
   def set_enabled(self, value):
     input = self.dom_nodes['text-field-input']
@@ -148,8 +148,8 @@ class TextInput(TextInputTemplate):
     classes = self.dom_nodes['text-field'].classList
     if value:
       classes.add("anvil-m3-tfield-error")
-      if self.trailing_icon:
-        self.trailing_icon = "error"
+      # if self.trailing_icon:
+      #   self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-tfield-error")
   error = property_with_callback("error", set_error)
