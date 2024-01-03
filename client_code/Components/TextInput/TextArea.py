@@ -1,4 +1,4 @@
-from ._anvil_designer import TextAreaTemplate
+from ._anvil_designer import TextArea_Template
 from anvil import *
 import anvil.server
 import anvil.tables as tables
