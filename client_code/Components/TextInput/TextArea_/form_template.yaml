@@ -1,6 +1,0 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<div>\n  Hello\n</div>"}
-components: []
-is_package: true
-custom_component: true
