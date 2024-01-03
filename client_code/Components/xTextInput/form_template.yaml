@@ -47,7 +47,7 @@ events:
 - {name: change}
 toolbox_item:
   icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
-custom_component: true
+custom_component: false
 components: []
 container:
   type: HtmlTemplate
