@@ -25,6 +25,8 @@
 .anvil-m3-textinput .anvil-m3-textinput-input:focus + .anvil-m3-border-container .anvil-m3-label-text, :not(.anvil-m3-textinput-input:placeholder-shown) + .anvil-m3-border-container .anvil-m3-label-text, .anvil-m3-textinput-input.anvil-m3-has-placeholder + .anvil-m3-border-container .anvil-m3-label-text { font-size: 12px; padding-top: 8px; transform: translate(0, -15%); }
 .anvil-m3-textinput .anvil-m3-textinput-input:focus + .anvil-m3-border-container .anvil-m3-label-text {color: var(--anvil-m3-primary); } */
 
+.anvil-m3-textinput-input.anvil-m3-has-placeholder ~ .anvil-m3-textinput-label-text { font-size: 12px; padding-top: 8px; transform: translate(0, -15%); }
+
 .anvil-m3-border-container { }
 /* .anvil-m3-border-container.with-icon { grid-template-columns: 48px auto 1fr; } */
 
