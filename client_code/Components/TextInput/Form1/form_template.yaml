@@ -1,0 +1,9 @@
+container:
+  type: HtmlTemplate
+  properties: {html: <div anvil-slot="component" anvil-slot-internal></div>}
+components:
+- name: text_input
+  properties: {}
+  type: form:Components.TextInput
+  layout_properties: {slot: component}
+is_package: true

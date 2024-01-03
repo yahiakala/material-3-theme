@@ -1,6 +1,7 @@
 .anvil-m3-textinput {
   width: calc(100% - 10px);
 }
+
 .anvil-m3-text-field-input-container {
   width: 100%;
   padding: 0 16px;
@@ -38,7 +39,16 @@
   resize: none;
   background: transparent;
   width: 100%;
-  color: red;
+  border: none;
 }
 
 /*  text field specific */
+.anvil-m3-textfield {
+  background: transparent;
+  width: 100%;
+  border: none;
+}
+
+.anvil-m3-hide-tag {
+  display: none;
+}
