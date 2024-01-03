@@ -44,8 +44,18 @@
 .anvil-m3-text-input-icon-leading-icon {}
 .anvil-m3-text-input-icon-trailing-icon {}
 
-.anvil-m3-text-input-supporting-text {}
-.anvil-m3-text-input-character-count {}
+.anvil-m3-textinput-supporting-text {}
+.anvil-m3-textinput-character-count {}
+
+.anvil-m3-textinput-supporting-text, .anvil-m3-textinput-character-count {
+  color: var(--anvil-m3-on-surface-variant);
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+}
+
+.anvil-m3-text-input-supporting-text { padding: 4px 16px 0 16px; }
+.anvil-m3-text-input-character-count { padding: 4px 16px 0 0px; }
 
 /* text area specific */
 .anvil-m3-textarea {
