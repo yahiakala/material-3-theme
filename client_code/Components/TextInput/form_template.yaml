@@ -31,3 +31,4 @@ properties:
   options: [outlined]
   default_value: null
   include_none_option: true
+- {name: character_limit, type: number, important: true, default_value: 0}

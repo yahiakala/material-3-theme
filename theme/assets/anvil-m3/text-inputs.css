@@ -16,7 +16,7 @@
 }
 
 .anvil-m3-text-field-input-container:focus-within {
-  background-color: blue;
+  background-color: lightblue;
 }
 
 .anvil-m3-border-container { }
