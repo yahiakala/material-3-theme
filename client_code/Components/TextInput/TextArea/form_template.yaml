@@ -3,14 +3,14 @@ container:
   properties: {html: "<div class=\"anvil-m3-text-input\" anvil-name=\"text-input\"\
       \ style=\"width: calc(100% - 10px)\">\n  <div class=\"anvil-m3-text-input-container\"\
       \ anvil-name=\"input-container\" style=\"position: relative\">\n    <textarea\
-      \ class=\"anvil-m3-textarea-input\" anvil-name=\"textarea-input\" type=\"text\"\
-      \ id=\"tfield\" placeholder=\" \" ></textarea>\n    <div class=\"anvil-m3-border-container\"\
-      \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-text-input-border-container-cell-tl\"\
+      \ class=\"anvil-m3-textarea-input\" anvil-name=\"textarea-input\" id=\"textinputbox\"\
+      \ placeholder=\" \" ></textarea>\n    <div class=\"anvil-m3-border-container\"\
+      \ anvil-name=\"border-container\">\n      <div class=\"anvil-m3-text-input-border-container-cell-tl\"\
       ></div>\n      <div class=\"anvil-m3-text-input-border-container-cell-t\"></div>\n\
       \      <div class=\"anvil-m3-text-input-border-container-cell-tr\"></div>\n\
       \      <div class=\"anvil-m3-text-input-border-container-cell-b\"></div>\n \
       \     <label class=\"anvil-m3-text-input-label-text\" anvil-name=\"label-text\"\
-      \ for=\"tfield\"></label>\n    </div>\n    <div class=\"anvil-m3-text-input-icon-containterr\"\
+      \ for=\"textinputbox\"></label>\n    </div>\n    <div class=\"anvil-m3-text-input-icon-containterr\"\
       \ anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-text-input-icon-leading-icon\
       \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
       ></i>\n      <i class=\"anvil-m3-text-input-icon-trailing-icon material-symbols-outlined\"\
