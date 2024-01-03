@@ -1,4 +1,7 @@
-.anvil-m3-text-input-container {
+.anvil-m3-textinput {
+  width: calc(100% - 10px);
+}
+.anvil-m3-text-field-input-container {
   width: 100%;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
@@ -27,7 +30,7 @@
 .anvil-m3-text-input-character-count {}
 
 /* text area specific */
-.anvil-m3-textarea-input {
+.anvil-m3-textarea {
   resize: none;
   background: transparent;
   width: 100%;

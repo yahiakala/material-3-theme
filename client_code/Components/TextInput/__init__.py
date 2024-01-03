@@ -5,13 +5,15 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import property_without_callback
+from anvil import HtmlTemplate
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
     
     self._props = properties
     self.init_components(**properties)
-
+    
+  visible = HtmlTemplate.visible
   label_text = property_without_callback("label_text")
   supporting_text = property_without_callback("supporting_text")
   placeholder = property_without_callback("label_text")

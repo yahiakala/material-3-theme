@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"textinput-component\" class=\"anvil-m3-textinput\"\
-      \ style=\"width: calc(100% - 10px)\">\n  <div anvil-name=\"input-container\"\
+      >\n  <div class=\"anvil-m3-text-field-input-container\" anvil-name=\"input-container\"\
       >\n    <textarea anvil-name=\"textarea\" class=\"anvil-m3-textarea\" ></textarea>\n\
       \    <input anvil-name=\"textfield\" class=\"anvil-m3-textfield\" type=\"text\"\
       \ />\n    <div anvil-name=\"border-container\" class=\"anvil-m3-textinput-border\"\
@@ -10,13 +10,12 @@ container:
       \    <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n   \
       \   <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n    </div>\n\
       \    <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"label-text\"\
-      \ for=\"\"></label>\n  </div>\n  <div class=\"anvil-m3-textinput-supportin\"\
-      >\n    \n  </div>\n  <label style=\"display:flex; justify-content: space-between\"\
-      \ > \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
-      \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
-      \ anvil-name=\"text-field-character-counter\">\n      <span anvil-name=\"text-field-character-amount\"\
-      \ >0</span>\n      /\n      <span anvil-name=\"text-field-character-limit\"\
-      \ >10</span>\n    </span>\n  </label>\n</div>"}
+      \ for=\"\"></label>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\"\
+      >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
+      \ ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
+      \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
+      \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
+      \    </label>\n  </div>\n</div>"}
 components: []
 is_package: true
 custom_component: true
@@ -25,3 +24,4 @@ properties:
   group: Attributes}
 - {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
+- {name: visible, type: boolean, default_value: true, important: true}
