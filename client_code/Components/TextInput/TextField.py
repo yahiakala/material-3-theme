@@ -10,3 +10,4 @@ class TextField(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
+    self.dom_nodes['textfield'].classList.remove('anvil-m3-hide-tag')

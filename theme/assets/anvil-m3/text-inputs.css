@@ -41,14 +41,14 @@
 /* text area specific */
 .anvil-m3-textarea {
   resize: none;
-  background: transparent;
+  background: lightcoral;
   width: 100%;
   border: none;
 }
 
 /*  text field specific */
 .anvil-m3-textfield {
-  background: transparent;
+  background: lightpink;
   width: 100%;
   border: none;
 }
