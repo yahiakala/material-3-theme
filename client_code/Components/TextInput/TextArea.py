@@ -13,9 +13,18 @@ class TextArea(TextInput):
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
     self.update_height = self.update_height
-    self.resizeObserver.observe(self.dom_nodes['textarea'])
-    dir(self.resizeObserver)
+
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
+    self.dom_nodes['textarea'].addEventListener("keydown", self.update_height)
+    # self.resizeObserver.observe(self.dom_nodes['textarea'])
     
+  def on_cleanup(self, **event_args):
+    self.dom_nodes['textarea'].removeEventListener("keydown", self.update_height)
+    # self.resizeObserver.unobserve(self.dom_nodes['textarea'])
+  
     
 
     # now the the page is loaded, apply your resize observer
@@ -52,18 +61,8 @@ class TextArea(TextInput):
     super().set_id(value)
     self.dom_nodes["textarea"].id = value
 
-  
-  def update_height(self, entries, observer = None):
-    print(entries)
-    print(observer)
-    # for entry in entries:
-    #   print('width', entry.contentRect.width)
-    #   print('height', entry.contentRect.height)
-      
-  resizeObserver = anvil.js.new(ResizeObserver, update_height)
-
-    
-  
+  def update_height(self, event):
+    print(event.target)
   
 
   
