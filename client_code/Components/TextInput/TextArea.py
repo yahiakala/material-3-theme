@@ -18,7 +18,7 @@ class TextArea(TextInput):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    self.dom_nodes['textarea'].addEventListener("keydown", self.update_height)
+    self.dom_nodes['textarea'].addEventListener("input", self.update_height)
     # self.resizeObserver.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
@@ -62,7 +62,10 @@ class TextArea(TextInput):
     self.dom_nodes["textarea"].id = value
 
   def update_height(self, event):
-    print(event.target)
+    h = event.target.scrollHeight
+    self.dom_nodes['textarea'].style.height = f'{h}px'
+    self.dom_nodes['border-container'].style.height = f'{h}px'
+    
   
 
   
