@@ -43,7 +43,11 @@ class TextInput(TextInputTemplate):
       classes.remove("anvil-m3-textinput-error")
   error = property_with_callback("error", set_error)
   
-
+  def set_id(self, value):
+    self.dom_nodes["label-text"].setAttribute("for", value)
+    self.dom_nodes["supporting-text"].setAttribute("for", value)
+    self.dom_nodes["character-amount"].setAttribute("for", value)
+  
   def form_show(self, **event_args):
     id = gen_id();
     self.set_id(id)

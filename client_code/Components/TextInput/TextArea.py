@@ -10,9 +10,6 @@ class TextArea(TextInput):
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
     
-    
-    # todo: add id attribute to input 
-    
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
     if value:
@@ -42,10 +39,8 @@ class TextArea(TextInput):
   enabled = property_with_callback("enabled", set_enabled)
 
   def set_id(self, value):
+    super().set_id(value)
     self.dom_nodes["textarea"].id = value
-    self.dom_nodes["label-text"].setAttribute("for", value)
-    self.dom_nodes["supporting-text"].setAttribute("for", value)
-    self.dom_nodes["character-amount"].setAttribute("for", value)
 
 """
 <script type="text/javascript">

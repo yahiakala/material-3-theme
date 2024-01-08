@@ -60,6 +60,7 @@ class TextField(TextInput):
   enabled = property_with_callback("enabled", set_enabled)
   
   def set_id(self, value):
+    super().set_id(value)
     self.dom_nodes["textfield"].id = value
 
   @anvil_property('enum')
