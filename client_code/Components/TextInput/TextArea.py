@@ -13,6 +13,7 @@ class TextArea(TextInput):
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
     self.update_height = self.update_height
+    self.resizeObserver.observe(self.dom_nodes['textarea'])
     
     
 
@@ -52,8 +53,12 @@ class TextArea(TextInput):
 
   
   def update_height(self, entries, observer = None):
+    console.log('width', entry.contentRect.width);
+    console.log('height', entry.contentRect.height);
+    
     for entry in entries:
-      print(entry)
+      print('width', entry.contentRect.width)
+      print('height', entry.contentRect.height)
       
   resizeObserver = anvil.js.new(ResizeObserver, update_height)
 
