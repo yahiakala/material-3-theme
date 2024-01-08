@@ -16,7 +16,7 @@
 }
 
 .anvil-m3-textinput-icon-container, .anvil-m3-textinput-border {
-  position: absolute;
+  position: relative;
   inset: 0;
   pointer-events: none;
   color: var(--anvil-m3-on-surface-variant);
@@ -158,12 +158,8 @@
 /* text area specific */
 .anvil-m3-textarea {
   resize: none;
-  width: 100%;
-  border: none;
 }
 
 /*  text field specific */
 .anvil-m3-textfield {
-  width: 100%;
-  border: none;
 }
