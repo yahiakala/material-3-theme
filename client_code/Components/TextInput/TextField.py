@@ -23,23 +23,6 @@ trailing_icon_property = {"name": "trailing_icon",
                          "description": "left side icon"}
 
 class TextField(TextInput):
-
-#   from anvil.property_utils import anvil_property
-
-# class MyWidgeB(MyWidgetA):
-#     # _anvil_properties_ = [*MyWidgetA._anvil_properties_]
-#     # by default _anvil_properties_ are inherited from a base class (as above)
-#     # if you do not want to inherit properties you should be explicit
-#     # _anvil_properties_ = []
-
-#     @anvil_property("string")
-#     def foo(self):
-#         return self._foo
-    
-#     @foo.setter
-#     def foo(self, val):
-#         self._foo = val
-  
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
 
   def __init__(self, **properties):
@@ -58,7 +41,6 @@ class TextField(TextInput):
       input.classList.remove('anvil-m3-has-placeholder')
   placeholder = property_with_callback('placeholder', set_placeholder)
       
-
   def set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
@@ -76,14 +58,31 @@ class TextField(TextInput):
       self.dom_nodes['textfield'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
   enabled = property_with_callback("enabled", set_enabled)
-   
+
+  @anvil_property('enum')
+  def leading_icon(self):
+    return self._props.get('leading_icon')
+
+  @leading_icon.setter
+  def leading_icon(self, value):
+    self._props['leading_icon'] = value
+
+  @anvil_property('enum')
+  def trailing_icon(self):
+    return self._props.get('trailing_icon')
+
+  @leading_icon.setter
+  def trailing_icon(self, value):
+    
+    self._props['trailing_icon'] = value
+    
   def set_leading_icon(self, value):
     print("setting icon")
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
     border_container = self.dom_nodes['border-container']
-    print(value)
+
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value
@@ -96,19 +95,19 @@ class TextField(TextInput):
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
-  leading_icon = property_with_callback("leading_icon", set_leading_icon)  
+  # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
-  def set_trailing_icon(self, value):
-    icon_container = self.dom_nodes['icon-container']
-    trailing_icon = self.dom_nodes['trailing-icon']
-    text_field_input = self.dom_nodes['textfield']
+  # def set_trailing_icon(self, value):
+  #   icon_container = self.dom_nodes['icon-container']
+  #   trailing_icon = self.dom_nodes['trailing-icon']
+  #   text_field_input = self.dom_nodes['textfield']
 
-    if value:
-      trailing_icon.style.display = "block"
-      trailing_icon.innerText = value
-      text_field_input.style.paddingRight = "48px"
-    else:
-      trailing_icon.style.display = "none"
-      trailing_icon.innerText = ""
-      text_field_input.style.paddingRight = "16px"
-  trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+  #   if value:
+  #     trailing_icon.style.display = "block"
+  #     trailing_icon.innerText = value
+  #     text_field_input.style.paddingRight = "48px"
+  #   else:
+  #     trailing_icon.style.display = "none"
+  #     trailing_icon.innerText = ""
+  #     text_field_input.style.paddingRight = "16px"
+  # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
