@@ -23,6 +23,23 @@ trailing_icon_property = {"name": "trailing_icon",
                          "description": "left side icon"}
 
 class TextField(TextInput):
+
+#   from anvil.property_utils import anvil_property
+
+# class MyWidgeB(MyWidgetA):
+#     # _anvil_properties_ = [*MyWidgetA._anvil_properties_]
+#     # by default _anvil_properties_ are inherited from a base class (as above)
+#     # if you do not want to inherit properties you should be explicit
+#     # _anvil_properties_ = []
+
+#     @anvil_property("string")
+#     def foo(self):
+#         return self._foo
+    
+#     @foo.setter
+#     def foo(self, val):
+#         self._foo = val
+  
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
 
   def __init__(self, **properties):
