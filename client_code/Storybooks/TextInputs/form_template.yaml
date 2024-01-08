@@ -81,7 +81,7 @@ components:
         components:
         - name: text_area_1_copy_2
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            enabled: false}
+            enabled: true, appearance: outlined}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy
@@ -89,11 +89,11 @@ components:
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy
-          properties: {label_text: label only}
+          properties: {label_text: label only, appearance: outlined}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy
-          properties: {placeholder: placeholder_only}
+          properties: {placeholder: placeholder_only, appearance: outlined}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
     - name: divider_1
@@ -115,7 +115,7 @@ components:
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy
-          properties: {appearance: outlined, label_text: lab, placeholder: plac, supporting_text: sup}
+          properties: {appearance: null, label_text: lab, placeholder: plac, supporting_text: sup}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2
@@ -147,20 +147,20 @@ components:
         components:
         - name: text_field_1_copy_2
           properties: {placeholder: '', label_text: label, leading_icon: 11mp, trailing_icon: '',
-            supporting_text: support}
+            supporting_text: support, appearance: outlined}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy_copy
           properties: {appearance: outlined, label_text: lab, placeholder: pac, supporting_text: sup,
-            leading_icon: 12mp, enabled: false}
+            leading_icon: 12mp, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
-          properties: {label_text: label_only, leading_icon: 13mp}
+          properties: {label_text: label_only, leading_icon: 13mp, appearance: outlined}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy
-          properties: {placeholder: placeholder_only, leading_icon: 13mp}
+          properties: {placeholder: placeholder_only, leading_icon: 13mp, appearance: outlined}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
     - name: divider_2
@@ -183,7 +183,7 @@ components:
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy
-          properties: {appearance: outlined, label_text: lab, placeholder: pac, supporting_text: sup,
+          properties: {appearance: null, label_text: lab, placeholder: pac, supporting_text: sup,
             leading_icon: ''}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}

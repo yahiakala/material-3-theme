@@ -27,6 +27,7 @@ class TextInput(TextInputTemplate):
   def set_appearance(self, value):
     self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
   appearance = property_with_callback("appearance", set_appearance)
+  
   def set_supporting_text(self, value):
     self.dom_nodes['supporting-text'].innerHTML = value
   supporting_text = property_with_callback("supporting_text", set_supporting_text)
