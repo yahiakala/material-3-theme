@@ -50,13 +50,6 @@ class TextField(TextInput):
       self.dom_nodes['textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", set_label)
 
-  def set_leading_icon(self, value):
-    print("setting icon")
-    icon_container = self.dom_nodes['icon-container']
-    leading_icon = self.dom_nodes['leading-icon']
-    text_field_input = self.dom_nodes['textfield']
-    border_container = self.dom_nodes['border-container']
-
   def set_enabled(self, value):
     supporting_text = self.dom_nodes['subcontent']
     if value:
@@ -66,19 +59,26 @@ class TextField(TextInput):
       self.dom_nodes['textfield'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
   enabled = property_with_callback("enabled", set_enabled)
-    
-    # if value:
-    #   leading_icon.style.display = "block"
-    #   leading_icon.innerText = value
-    #   icon_container.style.paddingLeft = "12px"
-    #   text_field_input.style.paddingLeft = "48px"
-    #   border_container.classList.add("with-icon")
-    # else:
-    #   leading_icon.style.display = "none"
-    #   leading_icon.innerText = ""
-    #   icon_container.style.paddingLeft = "16px"
-    #   text_field_input.style.paddingLeft = "16px"
-    #   border_container.classList.remove("with-icon")
+   
+  def set_leading_icon(self, value):
+    print("setting icon")
+    icon_container = self.dom_nodes['icon-container']
+    leading_icon = self.dom_nodes['leading-icon']
+    text_field_input = self.dom_nodes['textfield']
+    border_container = self.dom_nodes['border-container']
+    print(value)
+    if value:
+      leading_icon.style.display = "block"
+      leading_icon.innerText = value
+      icon_container.style.paddingLeft = "12px"
+      text_field_input.style.paddingLeft = "48px"
+      border_container.classList.add("with-icon")
+    else:
+      leading_icon.style.display = "none"
+      leading_icon.innerText = ""
+      icon_container.style.paddingLeft = "16px"
+      text_field_input.style.paddingLeft = "16px"
+      border_container.classList.remove("with-icon")
   leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
   def set_trailing_icon(self, value):

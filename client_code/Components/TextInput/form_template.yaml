@@ -40,4 +40,5 @@ properties:
 - {name: character_limit, type: number, important: true, default_value: 0}
 - {name: enabled, type: boolean, default_value: true, important: true, group: Attributes,
   designer_hint: enabled}
-- {name: error, type: boolean, default_value: false, important: true, group: Attributes}
+- {name: error, type: boolean, default_value: false, important: true, group: Attributes,
+  designer_hint: toggle}
