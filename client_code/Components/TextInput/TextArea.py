@@ -12,6 +12,10 @@ class TextArea(TextInput):
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
+    self.update_height = self.update_height
+    
+    
+
     # now the the page is loaded, apply your resize observer
     
   def set_placeholder(self, value):
@@ -46,13 +50,13 @@ class TextArea(TextInput):
     super().set_id(value)
     self.dom_nodes["textarea"].id = value
 
-  resizeObserver = anvil.js.new(ResizeObserver, self.callback)
+  
+  def update_height(self, entries, observer = None):
+    for entry in entries:
+      print(entry)
+  resizeObserver = anvil.js.new(ResizeObserver, update_height)
 
-  def callback(self, entries, observer):
-    # for (const entry of entries) {
-    # // Do something to each entry
-    # // and possibly something to the observer itself
-    pass
+    
   
   
 
