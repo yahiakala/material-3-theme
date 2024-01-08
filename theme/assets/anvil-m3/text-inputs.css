@@ -59,7 +59,7 @@
 .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-border { color: var(--anvil-m3-on-disabled); }
 .anvil-m3-text-field-supporting-disabled { color: var(--anvil-m3-on-disabled); } /*todo: remember to update this for disabled state*/
 
-.anvil-m3-textinput-input:focus { box-shadow: inset 0 -2px 0 var(--anvil-m3-primary); padding-top: 24px; padding-bottom: 8px;}
+.anvil-m3-textinput-input:focus.has_label_text { box-shadow: inset 0 -2px 0 var(--anvil-m3-primary); padding-top: 24px; padding-bottom: 8px;}
 .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border,
 :not(.anvil-m3-textinput-input:placeholder-shown) + .anvil-m3-textinput-border,
 .anvil-m3-textinput-input.anvil-m3-has-placeholder + .anvil-m3-textinput-border { grid-template-rows: 4px 0fr auto 1fr 4px; }
@@ -75,7 +75,7 @@
 /* :not(.anvil-m3-textinput-input:placeholder-shown) .anvil-m3-textinput-input { padding-top: 24px; padding-bottom: 8px } */
 /* .anvil-m3-text-field-input:focus:not(.anvil-m3-has-placeholder).has_label_text */
 
-.anvil-m3-textfield:placeholder-shown
+/* .anvil-m3-textfield:placeholder-shown */
 
 
 .anvil-m3-textinput-icon-container i { font-size: 20px; font-weight: bold; }
