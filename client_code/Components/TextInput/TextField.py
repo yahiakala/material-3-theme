@@ -57,18 +57,18 @@ class TextField(TextInput):
     text_field_input = self.dom_nodes['textfield']
     border_container = self.dom_nodes['border-container']
     
-    if value:
-      leading_icon.style.display = "block"
-      leading_icon.innerText = value
-      icon_container.style.paddingLeft = "12px"
-      text_field_input.style.paddingLeft = "48px"
-      border_container.classList.add("with-icon")
-    else:
-      leading_icon.style.display = "none"
-      leading_icon.innerText = ""
-      icon_container.style.paddingLeft = "16px"
-      text_field_input.style.paddingLeft = "16px"
-      border_container.classList.remove("with-icon")
+    # if value:
+    #   leading_icon.style.display = "block"
+    #   leading_icon.innerText = value
+    #   icon_container.style.paddingLeft = "12px"
+    #   text_field_input.style.paddingLeft = "48px"
+    #   border_container.classList.add("with-icon")
+    # else:
+    #   leading_icon.style.display = "none"
+    #   leading_icon.innerText = ""
+    #   icon_container.style.paddingLeft = "16px"
+    #   text_field_input.style.paddingLeft = "16px"
+    #   border_container.classList.remove("with-icon")
   leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
   def set_trailing_icon(self, value):
