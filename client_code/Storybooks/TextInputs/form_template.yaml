@@ -29,37 +29,6 @@ components:
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
-  - name: card_1
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'FRNFSQ,IXAZLO'}
-    components:
-    - name: card_content_container_1
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_1
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_field_2
-          properties: {placeholder: placeholder, supporting_text: support text}
-          type: form:Components.TextField
-          layout_properties: {grid_position: 'FVWMJM,XHJLLS'}
-        - name: text_field_2_copy_2
-          properties: {placeholder: placeholder, appearance: outlined}
-          type: form:Components.TextField
-          layout_properties: {grid_position: 'FVWMJM,KHCALG'}
-        - name: text_field_2_copy
-          properties: {label_text: asdf, supporting_text: bottom text}
-          type: form:Components.TextField
-          layout_properties: {grid_position: 'IEWEHE,UYJWZV'}
-        - name: text_field_2_copy_copy
-          properties: {label_text: asdf, appearance: outlined}
-          type: form:Components.TextField
-          layout_properties: {grid_position: 'IEWEHE,BAOPIV'}
   - name: card_1_copy
     properties: {visible: true}
     type: form:Components.Card
