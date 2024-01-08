@@ -29,7 +29,16 @@ class TextArea(TextInput):
       else:
         self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", set_label)
-
+  
+  def set_enabled(self, value):
+    supporting_text = self.dom_nodes['subcontent']
+    if value:
+      self.dom_nodes['textarea'].removeAttribute("disabled")
+      supporting_text.classList.remove("anvil-m3-textinput-disabled")
+    else:
+      self.dom_nodes['textarea'].setAttribute("disabled", " ")
+      supporting_text.classList.add("anvil-m3-textinput-disabled")
+  enabled = property_with_callback("enabled", set_enabled)
 
 """
 <script type="text/javascript">

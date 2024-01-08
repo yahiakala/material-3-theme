@@ -56,6 +56,16 @@ class TextField(TextInput):
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
     border_container = self.dom_nodes['border-container']
+
+  def set_enabled(self, value):
+    supporting_text = self.dom_nodes['subcontent']
+    if value:
+      self.dom_nodes['textfield'].removeAttribute("disabled")
+      supporting_text.classList.remove("anvil-m3-textinput-disabled")
+    else:
+      self.dom_nodes['textfield'].setAttribute("disabled", " ")
+      supporting_text.classList.add("anvil-m3-textinput-disabled")
+  enabled = property_with_callback("enabled", set_enabled)
     
     # if value:
     #   leading_icon.style.display = "block"

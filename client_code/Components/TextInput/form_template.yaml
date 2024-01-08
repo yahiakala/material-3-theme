@@ -15,9 +15,9 @@ container:
       \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
       ></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
       \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
-      \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\">\n    <label class=\"\
-      anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\" ></label>\n\
-      \    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
+      \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
+      >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
+      \ ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
       \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
       \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
       \    </label>\n  </div>\n  \n</div>"}
@@ -38,3 +38,5 @@ properties:
   default_value: null
   include_none_option: true
 - {name: character_limit, type: number, important: true, default_value: 0}
+- {name: enabled, type: boolean, default_value: true, important: true, group: Attributes,
+  designer_hint: enabled}
