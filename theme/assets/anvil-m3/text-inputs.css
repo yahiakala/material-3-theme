@@ -139,6 +139,12 @@
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-border { border-color: var(--anvil-m3-disabled-container); }
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-icon-container { color: var(--anvil-m3-on-disabled); }
 
+.anvil-m3-textinput-input:focus.has_label_text, 
+.anvil-m3-textinput.outlined .anvil-m3-textarea:placeholder-shown, 
+.anvil-m3-textinput.outlined .anvil-m3-textarea.has_label_text:not(:placeholder-shown) 
+{ padding-top: 16px; padding-bottom: 8px;}
+
+.anvil-m3-textinput.outlined .anvil-m3-textfield { padding-top: unset !important }
 /* .anvil-m3-textinput.outlined :not(.anvil-m3-textinput-input:placeholder-shown) .anvil-m3-textinput-input { padding: 0; } */
 
 /* .anvil-m3-textinput.outlined */
