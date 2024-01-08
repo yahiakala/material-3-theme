@@ -32,6 +32,16 @@ class TextInput(TextInputTemplate):
     self.dom_nodes['supporting-text'].innerHTML = value
   supporting_text = property_with_callback("supporting_text", set_supporting_text)
 
+  def set_error(self, value):
+    classes = self.dom_nodes['textinput-component'].classList
+    if value:
+      classes.add("anvil-m3-textinput-error")
+      # if self.trailing_icon:
+      #   self.trailing_icon = "error"
+    else:
+      classes.remove("anvil-m3-textinput-error")
+  error = property_with_callback("error", set_error)
+
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
       if not self.label_text:

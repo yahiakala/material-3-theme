@@ -30,7 +30,7 @@ properties:
   group: Attributes}
 - {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
-- {name: visible, type: boolean, default_value: true, important: true}
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
 - name: appearance
   type: enum
   important: true
@@ -40,3 +40,4 @@ properties:
 - {name: character_limit, type: number, important: true, default_value: 0}
 - {name: enabled, type: boolean, default_value: true, important: true, group: Attributes,
   designer_hint: enabled}
+- {name: error, type: boolean, default_value: false, important: true, group: Attributes}
