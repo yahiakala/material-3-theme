@@ -124,3 +124,11 @@ components:
             leading_icon: ''}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
+        - name: text_field_3
+          properties: {label_text: label_only}
+          type: form:Components.TextInput.TextField
+          layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
+        - name: text_field_4
+          properties: {placeholder: placeholder_only}
+          type: form:Components.TextInput.TextField
+          layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
