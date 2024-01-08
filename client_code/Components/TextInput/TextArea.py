@@ -9,7 +9,6 @@ class TextArea(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
-    # self.dom_nodes['textarea'].classList.remove('anvil-m3-hide-tag')
     
     # todo: add id attribute to input 
     
