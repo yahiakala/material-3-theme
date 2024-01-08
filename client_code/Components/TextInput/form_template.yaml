@@ -17,7 +17,7 @@ container:
       \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
       \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
       >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
-      \ ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
+      ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
       \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
       \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
       \    </label>\n  </div>\n  \n</div>"}

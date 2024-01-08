@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import property_without_callback, property_with_callback
 from anvil import HtmlTemplate
+from ...utils import gen_id
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
@@ -41,8 +42,12 @@ class TextInput(TextInputTemplate):
     else:
       classes.remove("anvil-m3-textinput-error")
   error = property_with_callback("error", set_error)
+  
 
   def form_show(self, **event_args):
+    id = gen_id();
+    self.set_id(id)
+    
     if anvil.designer.in_designer:
       if not self.label_text:
         self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)

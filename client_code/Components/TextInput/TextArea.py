@@ -41,6 +41,12 @@ class TextArea(TextInput):
       supporting_text.classList.add("anvil-m3-textinput-disabled")
   enabled = property_with_callback("enabled", set_enabled)
 
+  def set_id(self, value):
+    self.dom_nodes["textarea"].id = value
+    self.dom_nodes["label-text"].setAttribute("for", value)
+    self.dom_nodes["supporting-text"].setAttribute("for", value)
+    self.dom_nodes["character-amount"].setAttribute("for", value)
+
 """
 <script type="text/javascript">
         textarea = document.querySelector("#autoresizing");

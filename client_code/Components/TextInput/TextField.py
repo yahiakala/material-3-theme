@@ -58,6 +58,9 @@ class TextField(TextInput):
       self.dom_nodes['textfield'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
   enabled = property_with_callback("enabled", set_enabled)
+  
+  def set_id(self, value):
+    self.dom_nodes["textfield"].id = value
 
   @anvil_property('enum')
   def leading_icon(self):
