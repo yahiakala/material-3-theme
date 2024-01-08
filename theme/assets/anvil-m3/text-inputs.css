@@ -72,12 +72,15 @@
 .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border .anvil-m3-textinput-label-text {color: var(--anvil-m3-primary); }
 
 .anvil-m3-textinput-border, .anvil-m3-textinput-border .anvil-m3-textinput-label-text  { transition: all 0.15s ease-out; }
-:not(.anvil-m3-textinput-input:placeholder-shown) .anvil-m3-textinput-input { padding-top: 24px; padding-bottom: 8px }
+/* :not(.anvil-m3-textinput-input:placeholder-shown) .anvil-m3-textinput-input { padding-top: 24px; padding-bottom: 8px } */
+/* .anvil-m3-text-field-input:focus:not(.anvil-m3-has-placeholder).has_label_text */
+
+.anvil-m3-textfield:placeholder-shown
+
 
 .anvil-m3-textinput-icon-container i { font-size: 20px; font-weight: bold; }
 .anvil-m3-textinput-leading-icon { padding-right: 16px }
 .anvil-m3-textinput-trailing-icon { position: absolute; right: 12px; }
-
 
 /* 
 .anvil-m3-textinput-input {
