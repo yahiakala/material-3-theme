@@ -50,20 +50,21 @@ components:
         components:
         - name: text_area_1_copy_2
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            enabled: true, appearance: outlined, error: true}
+            enabled: false, appearance: outlined, error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy
           properties: {appearance: outlined, label_text: TTTTT, placeholder: plac,
-            supporting_text: sup, visible: true, error: true}
+            supporting_text: sup, visible: true, error: true, enabled: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy
-          properties: {label_text: label only, appearance: outlined, error: true}
+          properties: {label_text: label only, appearance: outlined, error: true,
+            enabled: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy
-          properties: {placeholder: placeholder_only, appearance: outlined, enabled: true,
+          properties: {placeholder: placeholder_only, appearance: outlined, enabled: false,
             error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
