@@ -28,7 +28,8 @@ class TextField(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    self.dom_nodes['textfield'].classList.remove('anvil-m3-hide-tag')
+    hiddenInput = self.dom_nodes['textarea']
+    self.dom_nodes['input-container'].removeChild(hiddenInput)
 
   def set_placeholder(self, value):
     input = self.dom_nodes['textfield']
