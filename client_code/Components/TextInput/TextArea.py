@@ -11,7 +11,8 @@ class TextArea(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
-    
+
+    # now the the page is loaded, apply your resize observer
     
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
@@ -45,6 +46,18 @@ class TextArea(TextInput):
     super().set_id(value)
     self.dom_nodes["textarea"].id = value
 
+  resizeObserver = anvil.js.new(ResizeObserver, self.callback)
+
+  def callback(self, entries, observer):
+    # for (const entry of entries) {
+    # // Do something to each entry
+    # // and possibly something to the observer itself
+    pass
+  
+  
+
+  
+
 """
 
 const h1Elem = document.querySelector("h1");
@@ -59,8 +72,7 @@ slider.addEventListener("input", () => {
   divElem.style.width = `${slider.value}px`;
 });
 
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
+const resizeObserver = new ResizeObserver((entry) => {
     if (entry.contentBoxSize) {
       const contentBoxSize = entry.contentBoxSize[0];
       h1Elem.style.fontSize = `${Math.max(
@@ -78,8 +90,6 @@ const resizeObserver = new ResizeObserver((entries) => {
       )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
-  }
-
   console.log("Size changed");
 });
 
