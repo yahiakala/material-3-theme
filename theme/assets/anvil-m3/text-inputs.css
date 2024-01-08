@@ -141,7 +141,9 @@
 
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus.has_label_text, .anvil-m3-textinput.outlined .anvil-m3-textarea:placeholder-shown, .anvil-m3-textinput.outlined .anvil-m3-textarea.has_label_text:not(:placeholder-shown) { padding-top: 18px; padding-bottom: 8px;}
 .anvil-m3-textinput.outlined .anvil-m3-textarea, .anvil-m3-textinput.outlined .anvil-m3-textarea:placeholder-shown:not(.has_label_text) { padding-top: 18px; }
-/* .anvil-m3-textinput.outlined .anvil-m3-textfield { padding-top: 18px; } */
+.anvil-m3-textinput.outlined .anvil-m3-textfield.has_label_text { padding-top: unset; }
+.anvil-m3-textinput.outlined .anvil-m3-textfield.has_label_text:focus { padding-top: 8px;}
+/* .anvil-m3-textinput.outlined .anvil-m3-textfield.has_label_text { padding-top: unset; } */
 
 /* .anvil-m3-textinput.outlined .anvil-m3-textfield { padding-top: unset;}
 .anvil-m3-textinput.outlined .anvil-m3-textfield:focus { padding-top: 2px; color: pink} */
