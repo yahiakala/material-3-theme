@@ -51,6 +51,7 @@ class TextField(TextInput):
   label_text = property_with_callback("label_text", set_label)
 
   def set_leading_icon(self, value):
+    print("setting icon")
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
