@@ -93,7 +93,7 @@ components:
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy
-          properties: {placeholder: placeholder_only, appearance: outlined}
+          properties: {placeholder: placeholder_only, appearance: outlined, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
     - name: divider_1
@@ -160,7 +160,8 @@ components:
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy
-          properties: {placeholder: placeholder_only, leading_icon: 13mp, appearance: outlined}
+          properties: {placeholder: placeholder_only, leading_icon: 13mp, appearance: outlined,
+            enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
     - name: divider_2
