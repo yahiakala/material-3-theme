@@ -3,7 +3,7 @@ container:
   properties: {html: "<div anvil-name=\"textinput-component\" class=\"anvil-m3-textinput\"\
       >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"input-container\"\
       >\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"\
-      1\" anvil-name=\"textarea\" ></textarea>\n    <input class=\"anvil-m3-textinput-input\
+      1\" anvil-name=\"textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input\
       \ anvil-m3-textfield\" type=\"text\" anvil-name=\"textfield\" />\n    <div class=\"\
       anvil-m3-textinput-border\"anvil-name=\"border-container\"  >\n      <div class=\"\
       anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"\

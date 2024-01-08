@@ -10,6 +10,7 @@ class TextArea(TextInput):
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
     
+    
     # todo: add id attribute to input 
     
   def set_placeholder(self, value):
