@@ -66,15 +66,16 @@ class TextField(TextInput):
   @leading_icon.setter
   def leading_icon(self, value):
     self._props['leading_icon'] = value
+    self.set_leading_icon(value)
 
   @anvil_property('enum')
   def trailing_icon(self):
     return self._props.get('trailing_icon')
 
-  @leading_icon.setter
+  @trailing_icon.setter
   def trailing_icon(self, value):
-    
     self._props['trailing_icon'] = value
+    self.set_trailing_icon(value)
     
   def set_leading_icon(self, value):
     print("setting icon")
@@ -97,17 +98,17 @@ class TextField(TextInput):
       border_container.classList.remove("with-icon")
   # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
-  # def set_trailing_icon(self, value):
-  #   icon_container = self.dom_nodes['icon-container']
-  #   trailing_icon = self.dom_nodes['trailing-icon']
-  #   text_field_input = self.dom_nodes['textfield']
+  def set_trailing_icon(self, value):
+    icon_container = self.dom_nodes['icon-container']
+    trailing_icon = self.dom_nodes['trailing-icon']
+    text_field_input = self.dom_nodes['textfield']
 
-  #   if value:
-  #     trailing_icon.style.display = "block"
-  #     trailing_icon.innerText = value
-  #     text_field_input.style.paddingRight = "48px"
-  #   else:
-  #     trailing_icon.style.display = "none"
-  #     trailing_icon.innerText = ""
-  #     text_field_input.style.paddingRight = "16px"
+    if value:
+      trailing_icon.style.display = "block"
+      trailing_icon.innerText = value
+      text_field_input.style.paddingRight = "48px"
+    else:
+      trailing_icon.style.display = "none"
+      trailing_icon.innerText = ""
+      text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
