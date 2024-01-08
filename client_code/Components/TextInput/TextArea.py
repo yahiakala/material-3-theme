@@ -19,16 +19,10 @@ class TextArea(TextInput):
 
   def on_mount(self, **event_args):
     self.dom_nodes['textarea'].addEventListener("input", self.update_height)
-    # self.resizeObserver.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("keydown", self.update_height)
-    # self.resizeObserver.unobserve(self.dom_nodes['textarea'])
   
-    
-
-    # now the the page is loaded, apply your resize observer
-    
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
     if value:
@@ -62,7 +56,7 @@ class TextArea(TextInput):
     self.dom_nodes["textarea"].id = value
 
   def update_height(self, event):
-    self.dom_nodes['textarea'].style.height = '56px'
+    self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
     h = event.target.scrollHeight;
     self.dom_nodes['textarea'].style.height = f'{h}px'
     self.dom_nodes['border-container'].style.height = f'{h}px'
