@@ -54,6 +54,7 @@ class TextArea(TextInput):
   def update_height(self, entries, observer = None):
     for entry in entries:
       print(entry)
+      
   resizeObserver = anvil.js.new(ResizeObserver, update_height)
 
     
