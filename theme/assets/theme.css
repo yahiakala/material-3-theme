@@ -383,14 +383,17 @@ body {
   right: -301px; 
   top: 0;
   overflow-y: hidden;
-  padding: 24px;
+  padding: 24px 24px 24px 16px;
   display: none !important; 
 
 }
 .anvil-m3-sidesheet-title-container {
   display: flex;
   justify-content: space-between;
-  height: 64px;
+  align-items: center;
+  column-gap: 12px;
+  padding-bottom: 24px;
+
 }
 
 .anvil-m3-sidesheet-content {
