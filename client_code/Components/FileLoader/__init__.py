@@ -8,7 +8,7 @@ from ...Functions import underline_property, italic_property, style_property, co
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
-#todo: fix focus state
+#todo: fix focus state within column panel
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
