@@ -11,6 +11,10 @@
   font-size: inherit;
 }
 
+.anvil-m3-text-icon {
+  overflow: hidden;
+}
+
 /*HEADING*/
 .anvil-m3-heading-display, .anvil-m3-heading-headline, .anvil-m3-heading-title{
   font-weight: 400;
