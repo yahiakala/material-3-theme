@@ -86,7 +86,7 @@ toolbox_sections:
     component: {type: Material_3_Theme_2_0.Components.LinearProgressIndicator}
   - title: CircularProgressIndicator
     icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
+    component: {type: Material_3_Theme_2_0.Components.CircularProgressIndicator}
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
 startup_form: null
