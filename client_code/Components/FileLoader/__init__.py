@@ -51,10 +51,10 @@ class FileLoader(FileLoaderTemplate):
 
   def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
-    # file_list = []
-    print(len(files))
-    as_anvil_media = anvil.js.to_media(files[0])
-    self.raise_event('change', file=as_anvil_media)
+    file_list = [anvil.js.to_media(file) for file in files]
+    # if len(file_list) == 1:
+    #   file_list = file_list[0]
+    self.raise_event('change', file=file_list[0], files=file_list)
     if self.show_state:
       num_files = len(files)
       self.dom_nodes['anvil-m3-fileloader-label'].innerText = "1 file selected" if num_files == 1 else f"{num_files} files selected"

@@ -13,13 +13,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # self.layout.layout.show_sidesheet = False
-
-    
-  def file_loader_2_change(self, file, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
-    time.sleep(5)
-    print(file)
-    
+        
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
     self.layout.layout.show_sidesheet = not self.layout.layout.show_sidesheet
@@ -39,11 +33,15 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def interactive_card_1_click(self, **event_args):
     """This method is called when the component is clicked"""
 
-  def file_loader_1_change(self, file, **event_args):
+  def file_loader_1_change(self, file, files, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    print(file)
-    
-    
+    print(files)
+
+  def file_loader_2_change(self, file, files, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    print(files)
+
+
 
 
 
