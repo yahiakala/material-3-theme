@@ -111,6 +111,13 @@ class FileLoader(FileLoaderTemplate):
   @property
   def multiple(self):
     return self._props.get("multiple")
+
+  @multiple.setter
+  def multiple(self, value):
+    self._props["multiple"] = value
+    self.dom_nodes['anvil-m3-fileloader-input'].multiple = value
+
+
     
 
   
