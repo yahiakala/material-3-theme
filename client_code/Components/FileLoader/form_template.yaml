@@ -431,5 +431,5 @@ container:
       \  <label anvil-name=\"anvil-m3-fileloader-label\" class=\"anvil-m3-fileloader-label\"\
       >\n       Upload a file\n    </label>\n    <input style=\"display: none\" class=\"\
       anvil-m3-fileloader-input\" anvil-name=\"anvil-m3-fileloader-input\" type=\"\
-      file\" accept/>\n  </a>\n</form>"}
+      file\" multiple=\"false\" accept/>\n  </a>\n</form>"}
 custom_component_container: false
