@@ -397,11 +397,11 @@ body {
 }
 
 .anvil-m3-sidesheet-content {
-  height: calc(100vh - 176px)
+/*   height: calc(100vh - 176px) */
 }
 
 .anvil-m3-sidesheet-footer {
-    /*position: absolute;*/
+    position: absolute;
     bottom: 24px;
     height: 64px
 }
