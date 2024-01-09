@@ -8,7 +8,6 @@ from ...Functions import underline_property, italic_property, style_property, co
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
-#Currently can only accept one file at a time 
 #todo: fix focus state
 
 class FileLoader(FileLoaderTemplate):
@@ -52,8 +51,6 @@ class FileLoader(FileLoaderTemplate):
   def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
     file_list = [anvil.js.to_media(file) for file in files]
-    # if len(file_list) == 1:
-    #   file_list = file_list[0]
     self.raise_event('change', file=file_list[0], files=file_list)
     if self.show_state:
       num_files = len(files)

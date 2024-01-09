@@ -85,8 +85,7 @@ components_by_slot:
       layout_properties: {grid_position: 'SOHQWO,TQFMQV'}
       event_bindings: {change: file_loader_1_change}
   - name: file_loader_2
-    properties: {multiple: true}
-    type: FileLoader
+    properties: {}
+    type: form:Components.FileLoader
     layout_properties: {}
-    event_bindings: {change: file_loader_2_change}
   slot_5: []
