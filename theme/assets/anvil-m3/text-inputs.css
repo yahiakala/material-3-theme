@@ -24,6 +24,11 @@
   color: var(--anvil-m3-on-surface-variant);
 }
 
+.anvil-m3-textinput-icon-container-spacer {
+  flex: 1 1 auto;
+  pointer-events: none;
+}
+
 .anvil-m3-textinput-icon-container { display: flex; align-items: center; padding-left: 16px; }
 .anvil-m3-textinput-border { height: 56px; display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; }
 /* .anvil-m3-border-container { display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; } */
