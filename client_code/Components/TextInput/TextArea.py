@@ -2,7 +2,6 @@ import anvil.server
 from . import TextInput
 import anvil.designer
 import anvil.js
-from anvil.js.window import ResizeObserver
 from ...Functions import property_with_callback, theme_color_to_css
 
 class TextArea(TextInput):

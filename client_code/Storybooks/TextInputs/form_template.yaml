@@ -121,12 +121,12 @@ components:
         components:
         - name: text_field_1_copy_2
           properties: {placeholder: '', label_text: label, leading_icon: 18mp, trailing_icon: '',
-            supporting_text: support, appearance: outlined, error: false, enabled: true}
+            supporting_text: support, appearance: outlined, error: true, enabled: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy_copy
           properties: {appearance: outlined, label_text: TTTTT, placeholder: pac,
-            supporting_text: sup, leading_icon: 12mp, enabled: true, error: false}
+            supporting_text: sup, leading_icon: 12mp, enabled: false, error: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
