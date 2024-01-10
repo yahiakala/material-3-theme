@@ -56,6 +56,5 @@ class TextInput(TextInputTemplate):
       if not self.label_text:
         self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
 
-  
   def on_input(self, e):
     self.dom_nodes['character-amount'].innerText = len(e.target.value);
