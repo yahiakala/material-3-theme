@@ -20,7 +20,7 @@ class InteractiveCard(Card):
 
   def set_enabled(self, value): #why not being set in the beginning??
     self.dom_nodes['anvil-m3-card'].classList.toggle('disabled', not value)
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", set_enabled)vda
   
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-card'].addEventListener("click", self.handle_click)
