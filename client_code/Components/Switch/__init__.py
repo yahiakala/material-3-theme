@@ -21,24 +21,19 @@ class Switch(SwitchTemplate):
     
 
   def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self.handle_change)
+    self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self._handle_change)
     
   def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self.handle_change)
+    self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self._handle_change)
 
-  def handle_change(self, event):
-    print('changed')
+  def _handle_change(self, event):
     if self.enabled:
-      print('enabled')
       #self.dom_nodes['anvil-m3-switch-input'].focus()
-      print('self.selected before:', self.selected)
       self.selected = not self.selected
-      print('self.selected after:', self.selected)
       self.raise_event("change")
 
-  def set_color_styles(self, value=None):
+  def _set_color_styles(self, value=None):
     if self.selected:
-      print('setting color styles')
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
       if self.selected_thumb_color:
         self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', theme_color_to_css(self.selected_thumb_color))
@@ -90,24 +85,20 @@ class Switch(SwitchTemplate):
 
   @selected.setter
   def selected(self, value):
-    print('selected value:', value)
     self._props['selected'] = value
     self.dom_nodes['anvil-m3-switch-input'].checked = value
-    self.set_color_styles()
+    self._set_color_styles()
       
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
-  selected_background_color = property_with_callback('selected_background_color', set_color_styles)
-  unselected_background_color = property_with_callback('unselected_background_color', set_color_styles)
-  selected_thumb_color = property_with_callback('selected_thumb_color', set_color_styles)
-  unselected_thumb_color = property_with_callback('unselected_thumb_color', set_color_styles)
-  unselected_outline_color = property_with_callback('unselected_outline_color', set_color_styles)
+  selected_background_color = property_with_callback('selected_background_color', _set_color_styles)
+  unselected_background_color = property_with_callback('unselected_background_color', _set_color_styles)
+  selected_thumb_color = property_with_callback('selected_thumb_color', _set_color_styles)
+  unselected_thumb_color = property_with_callback('unselected_thumb_color', _set_color_styles)
+  unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-switch-container')
 
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
-    print('in the actual form show:', self.selected)
 
   
   
