@@ -13,6 +13,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # self.layout.layout.show_sidesheet = False
+    print('in the init:', self.switch_1.selected)
         
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
@@ -40,6 +41,10 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def file_loader_2_change(self, file, files, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     print(files)
+
+  def button_3_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    self.switch_1.selected = not self.switch_1.selected
 
 
 
