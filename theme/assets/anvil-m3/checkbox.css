@@ -134,3 +134,7 @@ input.anvil-m3-checkbox:checked:active + .anvil-m3-checkbox-wrapper > .anvil-m3-
   color: var(--anvil-m3-on-surface);
   font-style: normal;
 }
+
+input.anvil-m3-checkbox:focus-visible + .anvil-m3-checkbox-wrapper {
+  outline
+}
