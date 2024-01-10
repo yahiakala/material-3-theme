@@ -85,11 +85,13 @@ class Switch(SwitchTemplate):
 
   @property
   def selected(self):
-    return self.dom_nodes['anvil-m3-switch-input'].checked
+    return self._props.get('selected')
+    # return self.dom_nodes['anvil-m3-switch-input'].checked
 
   @selected.setter
   def selected(self, value):
     print('selected value:', value)
+    self._props['selected'] = value
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self.set_color_styles()
       
