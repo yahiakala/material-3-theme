@@ -89,7 +89,6 @@ class TextField(TextInput):
     self.set_trailing_icon(value)
     
   def set_leading_icon(self, value):
-    print("setting icon")
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
