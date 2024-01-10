@@ -64,6 +64,13 @@ class TextField(TextInput):
     super().set_id(value)
     self.dom_nodes["textfield"].id = value
 
+  def set_error(self, value):
+    super().set_error(value)
+    if value:
+      self.dom_nodes['trailing-icon'].innerText = "error"
+    else:
+      self.dom_nodes['trailing-icon'].innerText = trailing_icon
+
   @anvil_property('enum')
   def leading_icon(self):
     return self._props.get('leading_icon')
