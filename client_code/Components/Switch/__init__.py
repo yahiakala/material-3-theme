@@ -37,6 +37,7 @@ class Switch(SwitchTemplate):
 
   def set_color_styles(self, value=None):
     if self.selected:
+      print('setting color styles')
       self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
       if self.selected_thumb_color:
         self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-selected-thumb-color', theme_color_to_css(self.selected_thumb_color))
