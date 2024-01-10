@@ -155,7 +155,7 @@
   display: flex;
 }
 
-.anvil-m3-link{
+.anvil-m3-link, .anvil-m3-link:focus {
   color: var(--anvil-m3-primary);
 }
 
@@ -163,9 +163,8 @@
   color: var(--anvil-m3-on-primary-container)
 }
 
-.anvil-m3-link:focus .anvil-m3-link-text {
+.anvil-m3-link:focus .anvil-m3-link-text, .anvil-m3-link:focus-visible .anvil-m3-link-text {
   text-decoration: underline 2px !important;
-
 }
 
 .anvil-m3-link:focus:hover .anvil-m3-link-icon-container {
