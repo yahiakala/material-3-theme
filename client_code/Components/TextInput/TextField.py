@@ -65,15 +65,10 @@ class TextField(TextInput):
     self.dom_nodes["textfield"].id = value
 
   def set_error(self, value):
-    # classes = self.dom_nodes['textinput-component'].classList
-    if value:
-      print("is error")
-      # classes.add("anvil-m3-textinput-error")
-      # if self.trailing_icon:
-      #   self.trailing_icon = "error"
-    else:
-      print("is not error")
-      # classes.remove("anvil-m3-textinput-error")
+    super().set_error(value)
+    icon = "error" if value else self.trailing_icon
+    self.set_trailing_icon(icon)
+  error = property_with_callback("error", set_error)
 
   @anvil_property('enum')
   def leading_icon(self):

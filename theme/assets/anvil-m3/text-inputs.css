@@ -175,13 +175,13 @@
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t,
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error :not(.anvil-m3-textinput-input:placeholder-shown) + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t { border-color: transparent; }
 
-/*.anvil-m3-tfield-error .material-symbols-outlined.anvil-m3-trailing-icon  {
+.anvil-m3-tfield-error .material-symbols-outlined.anvil-m3-trailing-icon  {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
-} */
+}
 
 
 /* text area specific */
