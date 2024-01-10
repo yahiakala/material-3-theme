@@ -11,3 +11,6 @@ class InteractiveCards(InteractiveCardsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def full_outline_click(self, **event_args):
+    alert("Clicked")
