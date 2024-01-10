@@ -136,5 +136,5 @@ input.anvil-m3-checkbox:checked:active + .anvil-m3-checkbox-wrapper > .anvil-m3-
 }
 
 input.anvil-m3-checkbox:focus-visible + .anvil-m3-checkbox-wrapper {
-  outline
+  outline: 1px;
 }
