@@ -63,13 +63,13 @@ input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbo
 }
 
 /*Disabled states*/
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
   color: var(--anvil-m3-on-disabled) !important;
 }
 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover:hover {
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover:hover {
   background-color: transparent !important;
   cursor: not-allowed;
 }

@@ -94,8 +94,8 @@ components_by_slot:
       layout_properties: {grid_position: 'SOHQWO,TQFMQV'}
       event_bindings: {change: file_loader_1_change}
     - name: checkbox_1
-      properties: {text: check me out, allow_indeterminate: false, error: false, enabled: false,
-        checked: false}
+      properties: {align: left, error: false, enabled: true, allow_indeterminate: true,
+        text: check me out, italic: false, bold: false, checked: false, underline: false}
       type: form:Components.Checkbox
       layout_properties: {grid_position: 'LEPALN,LRVDFF'}
   slot_5: []

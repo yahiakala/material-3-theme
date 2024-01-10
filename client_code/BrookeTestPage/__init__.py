@@ -13,7 +13,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # self.layout.layout.show_sidesheet = False
-    print('in the init:', self.switch_1.selected)
+    # self.checkbox_1.checked = None
         
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
