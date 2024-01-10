@@ -59,3 +59,13 @@ class TextArea(TextInput):
     h = event.target.scrollHeight;
     self.dom_nodes['textarea'].style.height = f'{h}px'
     self.dom_nodes['border-container'].style.height = f'{h}px'
+
+  def set_character_limit(self, value):
+    if value is None or value < 1:
+      text_field_input = self.dom_nodes['textarea'].removeAttribute("maxlength")
+      self.dom_nodes['character-counter'].style = "display: none";
+    else:
+      text_field_input = self.dom_nodes['textarea'].setAttribute("maxlength", value)
+      self.dom_nodes['character-counter'].style = "display: inline";
+      self.dom_nodes['character-limit'].innerText = int(value);
+  character_limit = property_with_callback("character_limit", set_character_limit)

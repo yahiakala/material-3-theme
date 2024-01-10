@@ -50,7 +50,7 @@ components:
         components:
         - name: text_area_1_copy_2
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            enabled: true, appearance: outlined, error: false}
+            enabled: true, appearance: outlined, error: false, character_limit: 100}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy
@@ -121,7 +121,7 @@ components:
         components:
         - name: text_area_1_copy_2_copy
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            enabled: false, appearance: outlined, error: false}
+            enabled: false, appearance: outlined, error: false, character_limit: 30}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy_copy
@@ -192,7 +192,7 @@ components:
         components:
         - name: text_area_1_copy_2_copy_2
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            enabled: true, appearance: outlined, error: true}
+            enabled: true, appearance: outlined, error: true, character_limit: 30}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy_copy_2
@@ -405,8 +405,9 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_2_copy
-          properties: {placeholder: '', label_text: label, leading_icon: 21mp, trailing_icon: 16mp,
-            supporting_text: support, appearance: outlined, error: false, enabled: false}
+          properties: {label_text: label, appearance: outlined, supporting_text: support,
+            placeholder: '', error: false, enabled: false, leading_icon: 21mp, character_limit: 3,
+            trailing_icon: 16mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy_copy_copy
@@ -476,8 +477,9 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_2_copy_2
-          properties: {placeholder: '', label_text: label, leading_icon: 21mp, trailing_icon: 14mp,
-            supporting_text: support, appearance: outlined, error: true, enabled: true}
+          properties: {label_text: label, appearance: outlined, supporting_text: support,
+            placeholder: '', error: true, enabled: true, leading_icon: 21mp, character_limit: 3,
+            trailing_icon: 14mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy_copy_copy_2

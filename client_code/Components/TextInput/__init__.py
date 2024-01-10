@@ -37,8 +37,6 @@ class TextInput(TextInputTemplate):
     classes = self.dom_nodes['textinput-component'].classList
     if value:
       classes.add("anvil-m3-textinput-error")
-      # if self.trailing_icon:
-      #   self.trailing_icon = "error"
     else:
       classes.remove("anvil-m3-textinput-error")
   error = property_with_callback("error", set_error)
