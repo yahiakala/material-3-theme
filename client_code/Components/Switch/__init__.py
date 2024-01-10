@@ -105,7 +105,7 @@ class Switch(SwitchTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the form is shown on the page"""
-    print('in the actual component init:', self.selected)
+    print('in the actual form show:', self.selected)
 
   
   
