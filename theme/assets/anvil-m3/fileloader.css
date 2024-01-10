@@ -31,7 +31,7 @@ input.anvil-m3-fileloader-input:disabled ~ *{
   color: var(--anvil-m3-primary);
 }
 
-.anvil-m3-fileloader-containter:focus .anvil-m3-fileloader-label {
+.anvil-m3-fileloader-container:focus .anvil-m3-fileloader-label {
   text-decoration: underline 2px;
 }
 
