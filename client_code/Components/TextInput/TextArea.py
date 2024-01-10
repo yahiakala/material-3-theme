@@ -12,6 +12,8 @@ class TextArea(TextInput):
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
     self.update_height = self.update_height
+    self.on_key_down = self.on_key_down
+    self.on_change = self.on_change
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -19,10 +21,14 @@ class TextArea(TextInput):
   def on_mount(self, **event_args):
     self.dom_nodes['textarea'].addEventListener("input", self.update_height)
     self.dom_nodes['textarea'].addEventListener("input", self.on_input)
+    self.dom_nodes['textarea'].addEventListener("input", self.on_key_down)
+    self.dom_nodes['textarea'].addEventListener("input", self.on_change)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("keydown", self.update_height)
     self.dom_nodes['textarea'].removeEventListener("keydown", self.on_input)
+    self.dom_nodes['textarea'].removeEventListener("keydown", self.on_key_down)
+    self.dom_nodes['textarea'].removeEventListener("keydown", self.on_change)
   
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
@@ -35,11 +41,11 @@ class TextArea(TextInput):
   placeholder = property_with_callback('placeholder', set_placeholder)
 
   def set_label(self, value):
-      self.dom_nodes['label-text'].innerText = value or ""
-      if value:
-        self.dom_nodes['textarea'].classList.toggle('has_label_text', True)
-      else:
-        self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
+    self.dom_nodes['label-text'].innerText = value or ""
+    if value:
+      self.dom_nodes['textarea'].classList.toggle('has_label_text', True)
+    else:
+      self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", set_label)
   
   def set_enabled(self, value):

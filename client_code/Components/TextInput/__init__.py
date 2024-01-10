@@ -24,6 +24,7 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('label-text', 'label_font_size')
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
+  margin = margin_property('textinput-component')
   
   def set_appearance(self, value):
     self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
@@ -56,3 +57,22 @@ class TextInput(TextInputTemplate):
 
   def on_input(self, e):
     self.dom_nodes['character-amount'].innerText = len(e.target.value);
+
+  def on_key_down(self, e):
+    if e.key == "Enter":
+      self.raise_event("pressed_enter")
+
+  def on_change(self, e):
+    self.raise_event("change")
+
+  def _anvil_get_interactions_(self):
+    return [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
+      }
+    }]
+    

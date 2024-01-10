@@ -31,15 +31,22 @@ class TextField(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['textarea']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
+    
+    self.on_key_down = self.on_key_down
+    self.on_change = self.on_change
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
     self.dom_nodes['textfield'].addEventListener("input", self.on_input)
+    self.dom_nodes['textfield'].addEventListener("input", self.on_key_down)
+    self.dom_nodes['textfield'].addEventListener("input", self.on_change)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_input)
+    self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
+    self.dom_nodes['textfield'].removeEventListener("keydown", self.on_change)
   
 
   def set_placeholder(self, value):

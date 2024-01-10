@@ -1,30 +1,3 @@
-container:
-  type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"textinput-component\" class=\"anvil-m3-textinput\"\
-      >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"input-container\"\
-      >\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"\
-      1\" anvil-name=\"textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input\
-      \ anvil-m3-textfield\" type=\"text\" anvil-name=\"textfield\" />\n    <div class=\"\
-      anvil-m3-textinput-border\"anvil-name=\"border-container\"  >\n      <div class=\"\
-      anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"\
-      ></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n\
-      \      <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n  \
-      \    <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"label-text\"\
-      \ for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\"\
-      \ anvil-name=\"icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
-      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
-      ></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
-      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
-      \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
-      >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
-      ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
-      \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
-      \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
-      \    </label>\n  </div>\n  \n</div>"}
-  event_bindings: {show: form_show}
-components: []
-is_package: true
-custom_component: true
 properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
   group: Attributes}
@@ -54,3 +27,34 @@ properties:
   designer_hint: enabled}
 - {name: error, type: boolean, default_value: false, important: true, group: Attributes,
   designer_hint: toggle}
+- {name: margin, type: margin, important: true}
+is_package: true
+events:
+- {name: pressed_enter, default_event: true}
+- {name: change}
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<div anvil-name=\"textinput-component\" class=\"anvil-m3-textinput\"\
+      >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"input-container\"\
+      >\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"\
+      1\" anvil-name=\"textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input\
+      \ anvil-m3-textfield\" type=\"text\" anvil-name=\"textfield\" />\n    <div class=\"\
+      anvil-m3-textinput-border\"anvil-name=\"border-container\"  >\n      <div class=\"\
+      anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"\
+      ></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n\
+      \      <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n  \
+      \    <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"label-text\"\
+      \ for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\"\
+      \ anvil-name=\"icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
+      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
+      ></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
+      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
+      \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
+      >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
+      ></label>\n    \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
+      \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
+      \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
+      \    </label>\n  </div>\n  \n</div>"}
+  event_bindings: {show: form_show}
