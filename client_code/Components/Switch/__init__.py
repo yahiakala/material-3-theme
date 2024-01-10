@@ -26,6 +26,7 @@ class Switch(SwitchTemplate):
     self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self.handle_change)
 
   def handle_change(self, event):
+    print('changed')
     if self.enabled:
       #self.dom_nodes['anvil-m3-switch-input'].focus()
       self.selected = not self.selected
