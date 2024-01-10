@@ -152,7 +152,7 @@ components:
         components:
         - name: text_field_1
           properties: {placeholder: '', label_text: label, leading_icon: 18_up_rating,
-            trailing_icon: 13mp, supporting_text: support, error: false}
+            trailing_icon: 13mp, supporting_text: support, error: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
         - name: text_field_1_copy
