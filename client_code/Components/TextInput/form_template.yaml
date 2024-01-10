@@ -28,6 +28,18 @@ custom_component: true
 properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
   group: Attributes}
+- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
+  group: Style}
+- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
+  group: Style}
+- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined,
+  group: Style}
+- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels,
+  group: Style}
+- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label,
+  group: Style}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
+  group: Style}
 - {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
 - {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
