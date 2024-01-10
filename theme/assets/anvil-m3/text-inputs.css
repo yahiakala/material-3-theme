@@ -157,7 +157,7 @@
 .anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-icon-container .anvil-m3-textinput-trailing-icon { color: var(--anvil-m3-error); }
 .anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-input:not(:disabled) { box-shadow: inset 0 -1px 0 var(--anvil-m3-error); caret-color: var(--anvil-m3-error); }
 
-.anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-input:hover:not(:disabled) { box-shadow: inset 0 -1px 0 var(--anvil-m3-on-error-container);}
+.anvil-m3-textinput.anvil-m3-textinput-error:not(.outlined) .anvil-m3-textinput-input:hover:not(:disabled) { box-shadow: inset 0 -1px 0 var(--anvil-m3-on-error-container);}
 .anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-input.has_label_text:hover:not(:disabled) + .anvil-m3-textinput-border { color: var(--anvil-m3-on-error-container); }
 
 .anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-input:hover ~ .anvil-m3-textinput-icon-container .anvil-m3-textinput-trailing-icon { color: var(--anvil-m3-on-error-container); }

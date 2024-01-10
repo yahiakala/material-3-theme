@@ -122,3 +122,13 @@ class TextField(TextInput):
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+
+  def set_character_limit(self, value):
+    if value is None or value < 1:
+      text_field_input = self.dom_nodes['textfield'].removeAttribute("maxlength")
+      self.dom_nodes['character-counter'].style = "display: none";
+    else:
+      text_field_input = self.dom_nodes['textfield'].setAttribute("maxlength", value)
+      self.dom_nodes['character-counter'].style = "display: inline";
+      self.dom_nodes['character-limit'].innerText = int(value);
+  character_limit = property_with_callback("character_limit", set_character_limit)
