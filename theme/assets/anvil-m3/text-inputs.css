@@ -96,6 +96,15 @@
 .anvil-m3-textinput-icon-container i { font-size: 20px; font-weight: bold; }
 .anvil-m3-textinput-leading-icon { padding-right: 16px }
 .anvil-m3-textinput-trailing-icon { position: absolute; right: 12px; }
+.anvil-m3-textinput-trailing-icon-container{
+  display: flex;
+  align-items: center;
+}
+.anvil-m3-textinput-trailing-icon-container:hover {
+  background-color: pink
+  
+}
+
 
 .anvil-m3-textinput-disabled > * { color: var(--anvil-m3-on-disabled) !important; }
 
