@@ -67,7 +67,7 @@ components:
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3
-              properties: {appearance: Outlined}
+              properties: {appearance: Outlined, background: pink, border: 1px solid blue}
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: text_3
@@ -117,9 +117,9 @@ components:
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3_copy_2
-              properties: {appearance: Outlined, selected: true}
+              properties: {appearance: Outlined, selected: true, background: '', selected_background: pink}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
+              layout_properties: {width: 38.78906899414063}
             - name: text_3_copy_2
               properties: {text: Selected Buttons}
               type: form:Components.Text
