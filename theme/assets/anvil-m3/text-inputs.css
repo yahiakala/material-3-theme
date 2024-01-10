@@ -82,7 +82,7 @@
 .anvil-m3-textinput-leading-icon { padding-right: 16px }
 .anvil-m3-textinput-trailing-icon { position: absolute; right: 12px; }
 
-.anvil-m3-textinput-disabled > * { color: var(--anvil-m3-on-disabled); }
+/* .anvil-m3-textinput-disabled > * { color: var(--anvil-m3-on-disabled); } */
 
 /* Outlined */
 .anvil-m3-textinput.outlined {padding-top: 5px;}
