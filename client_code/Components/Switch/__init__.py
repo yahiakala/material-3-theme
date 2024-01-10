@@ -30,9 +30,9 @@ class Switch(SwitchTemplate):
     if self.enabled:
       print('enabled')
       #self.dom_nodes['anvil-m3-switch-input'].focus()
-      print(self.selected)
+      print('self.selected before:', self.selected)
       self.selected = not self.selected
-      print(se;)
+      print('self.selected after:', self.selected)
       self.raise_event("change")
 
   def set_color_styles(self, value=None):
@@ -87,7 +87,7 @@ class Switch(SwitchTemplate):
 
   @selected.setter
   def selected(self, value):
-    print(value)
+    print('selected value:', value)
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self.set_color_styles()
       
