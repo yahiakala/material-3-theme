@@ -164,12 +164,13 @@
 }
 
 .anvil-m3-link:focus .anvil-m3-link-text {
-  text-decoration-thickness: 2px;
+  text-decoration: underline 2px !important;
 
 }
 
 .anvil-m3-link:focus:hover .anvil-m3-link-icon-container {
   color: var(--anvil-m3-on-primary-container)
+  
 }
 
 /* .anvil-m3-link:focus {
