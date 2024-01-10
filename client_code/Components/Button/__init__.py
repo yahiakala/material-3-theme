@@ -14,7 +14,7 @@ class Button(ButtonTemplate):
     self._props = properties
     self._text = properties.get('text', '')
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
+    
     self.handle_click = self.handle_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
