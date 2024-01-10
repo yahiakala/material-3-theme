@@ -17,7 +17,7 @@ class TextInput(TextInputTemplate):
   # supporting_text = property_without_callback("supporting_text")
   # placeholder = property_without_callback("label_text")
   """
-  # background = color_property('text-field-input', 'backgroundColor', 'background')
+  background = color_property('text-field-input', 'backgroundColor', 'background')
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
