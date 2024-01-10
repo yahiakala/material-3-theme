@@ -18,6 +18,7 @@ class Switch(SwitchTemplate):
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    
 
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self.handle_change)
@@ -101,6 +102,10 @@ class Switch(SwitchTemplate):
   unselected_outline_color = property_with_callback('unselected_outline_color', set_color_styles)
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-switch-container')
+
+  def form_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    print('in the actual component init:', self.selected)
 
   
   
