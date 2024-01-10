@@ -17,7 +17,7 @@ class TextInput(TextInputTemplate):
     
   visible = HtmlTemplate.visible
   
-  # background = color_property('text-field-input', 'backgroundColor', 'background')
+  # background = color_property('text-field-input', 'backgroundColor', 'background') #put this in the children
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
