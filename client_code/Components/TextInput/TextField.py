@@ -23,9 +23,12 @@ trailing_icon_property = {"name": "trailing_icon",
                          # "include_none_option": True, 
                          "description": "left side icon"}
 
+click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
+
 class TextField(TextInput):
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
-
+  _anvil_events_ = [click_event, *TextInput._anvil_events_]
+  
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
@@ -34,6 +37,7 @@ class TextField(TextInput):
     
     self.on_key_down = self.on_key_down
     self.on_change = self.on_change
+    self.handle_click = self.handle_click
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
