@@ -54,6 +54,10 @@
   color: var(--anvil-m3-on-disabled) !important;
 }
 
+.anvil-m3-textinput-input:disabled::placeholder {
+  color: var(--anvil-m3-on-disabled);
+}
+
 .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-icon-container, 
 .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-border { color: var(--anvil-m3-on-disabled); }
 .anvil-m3-textinput.anvil-m3-textinput-error .anvil-m3-textinput-subcontent > * { color: var(--anvil-m3-on-disabled) !important; }
