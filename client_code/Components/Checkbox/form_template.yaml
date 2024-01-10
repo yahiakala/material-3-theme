@@ -54,12 +54,13 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-checkbox-component\" style=\"display:flex\"\
       >\n  <div anvil-name=\"anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\"\
       >\n    <input class=\"anvil-m3-checkbox\" anvil-name=\"anvil-m3-checkbox\" type=\"\
-      checkbox\">\n    <div class=\"anvil-m3-checkbox-hover\" anvil-name=\"anvil-m3-checkbox-hover\"\
-      >\n      <span class=\"material-symbols-outlined anvil-m3-checkbox-unchecked\"\
-      \ anvil-name=\"anvil-m3-checkbox-unchecked\">check_box_outline_blank</span>\n\
-      \      <span class=\"material-symbols-outlined anvil-m3-checkbox-checked\" anvil-name=\"\
-      anvil-m3-checkbox-checked\">check_box</span>\n      <span class=\"material-symbols-outlined\
+      checkbox\">\n    <div class=\"anvil-m3-checkbox-wrapper\">\n      <div class=\"\
+      anvil-m3-checkbox-hover\" anvil-name=\"anvil-m3-checkbox-hover\">\n        <span\
+      \ class=\"material-symbols-outlined anvil-m3-checkbox-unchecked\" anvil-name=\"\
+      anvil-m3-checkbox-unchecked\">check_box_outline_blank</span>\n        <span\
+      \ class=\"material-symbols-outlined anvil-m3-checkbox-checked\" anvil-name=\"\
+      anvil-m3-checkbox-checked\">check_box</span>\n        <span class=\"material-symbols-outlined\
       \ anvil-m3-checkbox-indeterminate\" anvil-name=\"anvil-m3-checkbox-indeterminate\"\
-      >indeterminate_check_box</span>\n    </div>\n    <label class=\"anvil-m3-checkbox-label\"\
-      \ anvil-name=\"anvil-m3-checkbox-label\"></label>\n  </div>\n</div>\n"}
+      >indeterminate_check_box</span>\n      </div>\n      <label class=\"anvil-m3-checkbox-label\"\
+      \ anvil-name=\"anvil-m3-checkbox-label\"></label>\n    </div>\n  </div>\n</div>\n"}
   event_bindings: {show: form_show}

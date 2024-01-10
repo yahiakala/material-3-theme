@@ -32,7 +32,7 @@ input.anvil-m3-fileloader-input:disabled ~ *{
 }
 
 .anvil-m3-fileloader-container:focus .anvil-m3-fileloader-label {
-  text-decoration: underline 2px;
+  text-decoration: underline 2px !important;
 }
 
 /* .anvil-m3-fileloader-container:focus {
