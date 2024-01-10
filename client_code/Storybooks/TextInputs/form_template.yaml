@@ -84,20 +84,20 @@ components:
         components:
         - name: text_area_1
           properties: {placeholder: '', label_text: label, supporting_text: support,
-            error: false, enabled: false}
+            error: true, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy
           properties: {appearance: null, label_text: TTTTT, placeholder: plac, supporting_text: sup,
-            error: false, enabled: false}
+            error: true, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2
-          properties: {label_text: label only, enabled: false}
+          properties: {label_text: label only, enabled: true, error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3
-          properties: {placeholder: placeholder_only, enabled: false}
+          properties: {placeholder: placeholder_only, enabled: true, error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy
