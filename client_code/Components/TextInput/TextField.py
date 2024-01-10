@@ -46,11 +46,13 @@ class TextField(TextInput):
     self.dom_nodes['textfield'].addEventListener("input", self.on_input)
     self.dom_nodes['textfield'].addEventListener("input", self.on_key_down)
     self.dom_nodes['textfield'].addEventListener("input", self.on_change)
+    self.dom_nodes['trailing-icon'].addEventListener("click", self.handle_click)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_input)
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_change)
+    self.dom_nodes['trailing-icon'].removeEventListener("click", self.handle_click)
   
 
   def set_placeholder(self, value):
@@ -153,4 +155,8 @@ class TextField(TextInput):
       self.dom_nodes['character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", set_character_limit)
+
+  def handle_click(self, event):
+    event.preventDefault()
+    self.raise_event("click")
 

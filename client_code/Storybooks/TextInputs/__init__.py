@@ -11,3 +11,6 @@ class TextInputs(TextInputsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def text_field_1_copy_2_click(self, **event_args):
+    alert("teehee")
