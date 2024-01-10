@@ -13,6 +13,8 @@ class TextInput(TextInputTemplate):
     self._props = properties
     self.init_components(**properties)
     
+    self.on_input = self.on_input
+    
   visible = HtmlTemplate.visible
   # supporting_text = property_without_callback("supporting_text")
   # placeholder = property_without_callback("label_text")
@@ -55,4 +57,5 @@ class TextInput(TextInputTemplate):
         self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
 
   
- 
+  def on_input(self, e):
+    self.dom_nodes['character-amount'].innerText = len(e.target.value);

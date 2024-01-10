@@ -31,8 +31,6 @@ class TextField(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['textarea']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
-    
-    self.on_input = self.on_input
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -145,5 +143,3 @@ class TextField(TextInput):
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", set_character_limit)
 
-  def on_input(self, e):
-    self.dom_nodes['character-amount'].innerText = len(e.target.value);

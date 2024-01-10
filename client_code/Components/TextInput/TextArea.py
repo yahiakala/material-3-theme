@@ -18,9 +18,11 @@ class TextArea(TextInput):
 
   def on_mount(self, **event_args):
     self.dom_nodes['textarea'].addEventListener("input", self.update_height)
+    self.dom_nodes['textarea'].addEventListener("input", self.on_input)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("keydown", self.update_height)
+    self.dom_nodes['textarea'].removeEventListener("keydown", self.on_input)
   
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
