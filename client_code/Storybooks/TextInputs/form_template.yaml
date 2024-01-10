@@ -54,8 +54,8 @@ components:
             appearance: outlined
             label_font_size: 30
             spacing:
-              padding: [null, 30px, null, null]
-              margin: [null, 10px, null, null]
+              padding: [null, auto, null, null]
+              margin: [null, auto, null, null]
             margin: [20px, 200px, null, '0']
             supporting_text: support
             placeholder: ''
