@@ -54,7 +54,6 @@ class TextArea(TextInput):
   def set_id(self, value):
     super().set_id(value)
     self.dom_nodes["textarea"].id = value
-    print("textfield is sett")
 
   def update_height(self, event):
     self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
