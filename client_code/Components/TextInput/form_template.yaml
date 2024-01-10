@@ -27,7 +27,12 @@ properties:
   designer_hint: enabled}
 - {name: error, type: boolean, default_value: false, important: true, group: Attributes,
   designer_hint: toggle}
-- {name: margin, type: margin, important: true}
+- name: spacing
+  type: spacing
+  important: true
+  default_value:
+    padding: [auto, null, null, null]
+    margin: [auto, null, null, null]
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}

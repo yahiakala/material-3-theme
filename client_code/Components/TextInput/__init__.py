@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, margin_property
+from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property
 from anvil import HtmlTemplate
 from ...utils import gen_id
 
@@ -24,7 +24,7 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('label-text', 'label_font_size')
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
-  margin = margin_property('textinput-component')
+  spacing = spacing_property('textinput-component')
   
   def set_appearance(self, value):
     self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
