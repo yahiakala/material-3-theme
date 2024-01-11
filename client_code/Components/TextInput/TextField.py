@@ -8,7 +8,6 @@ from ...utils import _m3_icons
 """
 Remaining tasks on hold for DEV: 
 - property "NONE" enum selection for icons
-- properties being set in init -> Once this is done we will have to do all the style props for the textarea
 """
 
 leading_icon_property = {"name": "leading_icon", 
@@ -28,13 +27,6 @@ trailing_icon_property = {"name": "trailing_icon",
                          "default_value": "",
                          # "include_none_option": True, 
                          "description": "left side icon"}
-
-# italic_display_property = {"name": "italic_display", "type": "boolean", "default_value": False, "important": False," description": "Display this component’s text in italics", "group": "Style"}
-# bold_display_property = {"name": "bold_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in bold", "group": "Style"}
-# underline_display_property = {"name": "underline_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in underline", "group": "Style"}
-# display_font_property = {"name": "display_font", "type": "string", "default_value": '', "important": False, "description": "The font family to use for this component’s text", "group": "Style"}
-# display_font_size_property = {"name": "display_font_size", "type": "number", "important": False, "description": "The height of text displayed on this component’s text in pixels", "group": "Style"}
-# display_text_color_property = {"name": "display_text_color", "type": "color", "default_value": '', "important": False, "description": "Component’s Input Text Color",  "group": "Style"}
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 

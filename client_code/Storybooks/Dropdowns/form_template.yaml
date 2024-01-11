@@ -91,6 +91,9 @@ components:
                 label_text: Dropdown Label 2
                 appearance: outlined
                 allow_none: false
+                italic_items: true
+                label_text_color: blue
+                underline_label: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
           - name: flow_panel_4_copy_1

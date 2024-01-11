@@ -4,11 +4,6 @@ import anvil.designer
 import anvil.js
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
-"""
-Remaining tasks on hold for DEV: 
-- properties being set in init -> Once this is done we will have to do all the style props for the input box and then set the props for the dropdown
-"""
-
 class TextArea(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
