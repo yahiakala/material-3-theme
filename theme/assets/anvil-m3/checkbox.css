@@ -1,4 +1,4 @@
-.anvil-m3-checkbox-wrapper {
+.anvil-m3-checkbox-container {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,23 +35,23 @@ input.anvil-m3-checkbox {
 }
 
 /* TOGGLING */
-input.anvil-m3-checkbox + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
+input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
   display: none;
 }
 
-input.anvil-m3-checkbox + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
+input.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
   display: none;
 }
 
-.anvil-m3-checkbox + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
+.anvil-m3-checkbox + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
   display: inline;
 }
 
-input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
+input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked {
   display: inline;
 }
 
-input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
+input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-unchecked {
   display: none;
 }
 
@@ -63,13 +63,13 @@ input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbo
 }
 
 /*Disabled states*/
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-checked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover >  .anvil-m3-checkbox-unchecked, 
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-indeterminate {
   color: var(--anvil-m3-on-disabled) !important;
 }
 
-input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover:hover {
+input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-hover:hover {
   background-color: transparent !important;
   cursor: not-allowed;
 }
@@ -93,7 +93,7 @@ input.anvil-m3-checkbox:disabled ~ label.anvil-m3-checkbox-label {
 .anvil-m3-checkbox-hover:hover{
   background-color: var(--anvil-m3-dark-overlay-1);
 }
-input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover:hover{
+input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover:hover{
   background-color: var(--anvil-m3-primary-overlay-2);
 }
 
@@ -105,27 +105,27 @@ input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-container:hover {
   background-color: transparent;
 }
 
-input.anvil-m3-checkbox:focus:not(:checked) + .anvil-m3-checkbox-wrapper >  .anvil-m3-checkbox-hover{
+input.anvil-m3-checkbox:focus:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-dark-overlay-3);
 }
 
-input.anvil-m3-checkbox:focus:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover {
+input.anvil-m3-checkbox:focus:checked+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
 }
 
-input.anvil-m3-checkbox-error:focus:not(:checked) + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover{
+input.anvil-m3-checkbox-error:focus:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-dark-overlay-3);
 }
 
-input.anvil-m3-checkbox-error:focus:checked + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover {
+input.anvil-m3-checkbox-error:focus:checked+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
 }
 
-input.anvil-m3-checkbox:active:not(:checked) + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover{
+input.anvil-m3-checkbox:active:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-primary-overlay-3) !important;
 }
 
-input.anvil-m3-checkbox:checked:active + .anvil-m3-checkbox-wrapper > .anvil-m3-checkbox-hover {
+input.anvil-m3-checkbox:checked:active+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-dark-overlay-3) !important;
 }
 
@@ -133,9 +133,4 @@ input.anvil-m3-checkbox:checked:active + .anvil-m3-checkbox-wrapper > .anvil-m3-
 .anvil-m3-checkbox-label {
   color: var(--anvil-m3-on-surface);
   font-style: normal;
-}
-
-input.anvil-m3-checkbox:focus-visible + .anvil-m3-checkbox-wrapper {
-  border: 2px solid var(--anvil-m3-primary);
-  border-radius: 3px;
 }
