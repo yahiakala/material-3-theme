@@ -4,6 +4,9 @@ import anvil.designer
 import anvil.js
 from ...Functions import property_with_callback, theme_color_to_css
 
+"""
+"""
+
 class TextArea(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)

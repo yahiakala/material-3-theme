@@ -16,8 +16,6 @@ class TextInput(TextInputTemplate):
     self.on_input = self.on_input
     
   visible = HtmlTemplate.visible
-  
-  # background = color_property('text-field-input', 'backgroundColor', 'background') #put this in the children
   italic_label = italic_property('label-text', 'italic_label')
   bold_label = bold_property('label-text', 'bold_label')
   underline_label = underline_property('label-text', 'underline_label')
@@ -75,4 +73,3 @@ class TextInput(TextInputTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
       }
     }]
-    
