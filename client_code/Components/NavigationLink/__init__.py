@@ -14,12 +14,20 @@ class NavigationLink(NavigationLinkTemplate):
     self._props = properties
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self.handle_click)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    
+
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self._handle_click)
+    
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-navigation-link'].removeEventListener("click", self._handle_click)
     
     if anvil.designer.in_designer:
       anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
-  def handle_click(self, event):
+  def _handle_click(self, event):
     self.raise_event("click")
     if self.navigate_to:
       open_form(self.navigate_to)
