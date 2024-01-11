@@ -43,7 +43,7 @@
 .anvil-m3-navigation-link:focus {
   color: var(--anvil-m3-on-surface);
   text-decoration: none;
-  outline: 0;
+/*   outline: 0; */
 }
 
 .anvil-m3-navigation-link:focus [anvil-name=anvil-m3-navigation-link-icon], .anvil-m3-navigation-link:active [anvil-name=anvil-m3-navigation-link-icon]{

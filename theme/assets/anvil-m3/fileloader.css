@@ -26,12 +26,16 @@ input.anvil-m3-fileloader-input:disabled ~ *{
   text-decoration: none;
 }
 
-.anvil-m3-fileloader-container:focus {
-  outline: 0;
-  
+.anvil-m3-fileloader-container:focus  {
+  text-decoration: none;
+  color: var(--anvil-m3-primary);
 }
 
-.anvil-m3-fileloader-container:focus {
+.anvil-m3-fileloader-container:focus .anvil-m3-fileloader-label {
+  text-decoration: underline 2px !important;
+}
+
+/* .anvil-m3-fileloader-container:focus {
   border: 1px solid var(--anvil-m3-primary);
   color: var(--anvil-m3-primary);
   border-radius: 4px;
@@ -40,7 +44,7 @@ input.anvil-m3-fileloader-input:disabled ~ *{
   padding-right: 3px;
   outline: 0;
   text-decoration: none;
-}
+} */
 
 .anvil-m3-fileloader-container:focus:hover {
   color: var(--anvil-m3-on-primary-container)

@@ -410,6 +410,6 @@ container:
       \ class=\"anvil-m3-link\">\n  <div class=\"anvil-m3-link-icon-container\"> \
       \   \n    <span anvil-name=\"anvil-m3-link-icon\" class=\"material-symbols-outlined\
       \ anvil-m3-link-icon\"></span>\n    <span anvil-name=\"anvil-m3-link-text\"\
-      ></span>\n  </div>\n</a>"}
+      \ class=\"anvil-m3-link-text\"></span>\n  </div>\n</a>"}
   event_bindings: {show: form_show}
 custom_component_container: true
