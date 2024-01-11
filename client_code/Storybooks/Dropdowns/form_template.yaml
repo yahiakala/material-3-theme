@@ -280,3 +280,7 @@ components:
             enabled: false
           type: form:Components.DropdownMenu
           layout_properties: {width: 273}
+  - name: dropdown_menu_copy_1
+    properties: {}
+    type: form:Components.DropdownMenu_copy
+    layout_properties: {grid_position: 'ZZLGZH,KKDSIH'}
