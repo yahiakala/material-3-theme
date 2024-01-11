@@ -133,6 +133,10 @@ element {
   outline: 1px auto var(--anvil-m3-primary);
 }
 
-.anvil-m3-switch-input:focus + .anvil-m3-switch-slider {
-  
+.anvil-m3-switch-input:focus:checked + .anvil-m3-switch-slider {
+  background: var(--anvil-m3-primary-overlay-3);
+}
+
+.anvil-m3-switch-input:focus:checked + .anvil-m3-switch-slider {
+  background: var(--anvil-m3-primary-overlay-3);
 }
