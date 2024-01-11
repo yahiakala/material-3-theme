@@ -29,6 +29,8 @@ trailing_icon_property = {"name": "trailing_icon",
                          # "include_none_option": True, 
                          "description": "left side icon"}
 
+
+
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
 class TextField(TextInput):
