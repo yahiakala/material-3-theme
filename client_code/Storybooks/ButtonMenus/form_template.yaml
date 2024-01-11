@@ -180,3 +180,4 @@ components:
             properties: {text: Menu 4, appearance: outlined, enabled: false}
             type: form:Components.ButtonMenu
             layout_properties: {}
+custom_component: false
