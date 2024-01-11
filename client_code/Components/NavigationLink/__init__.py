@@ -43,9 +43,20 @@ class NavigationLink(NavigationLinkTemplate):
         }
       }]
 
-  url = href_property('anvil-m3-navigation-link')
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
+
+  @property
+  def url(self):
+    return self._props.get('url')
+
+  @url.setter
+  def url(self, value):
+    if value:
+      self._props['url'] = value
+      self.dom_nodes['anvil-m3-navigation-link'].href = value
+    else:
+      self.dom_nodes['anvil-m3-navigation-link'].href = 'javascript:void(0)'
 
   @property
   def icon(self):
