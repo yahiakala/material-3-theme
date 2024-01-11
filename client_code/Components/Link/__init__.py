@@ -61,8 +61,9 @@ class Link(LinkTemplate):
   def url(self, value):
     if value:
       self._props['url'] = value
-      self.dom
+      self.dom_nodes['anvil-m3-link']
     else:
+      pass
 
   @property
   def icon_size(self):
