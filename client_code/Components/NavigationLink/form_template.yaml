@@ -397,8 +397,8 @@ components: []
 custom_component_container: false
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-navigation-link-container\">\n  <a class=\"\
-      anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\" href=\"javascript:void(0)\"\
+  properties: {html: "<div class=\"anvil-m3-navigation-link-container\">\n  <a href=\"\
+      javascript:void(0)\" class=\"anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\"\
       \ onclick=\"\">\n  <!--   <i anvil-name=\"navigation-link-icon\" class=\"fa\
       \ fa-star\">\n    </i> -->\n    <span anvil-name=\"anvil-m3-navigation-link-icon\"\
       \ class=\"material-symbols-outlined\">star</span>\n    <span anvil-name=\"anvil-m3-icon-badge\"\
