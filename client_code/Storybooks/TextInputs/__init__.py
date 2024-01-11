@@ -13,4 +13,7 @@ class TextInputs(TextInputsTemplate):
     # Any code you write here will run before the form opens.
 
   def text_field_1_copy_2_click(self, **event_args):
-    alert("teehee")
+    alert("clicked outlined style")
+
+  def text_field_1_click(self, **event_args):
+    alert("clicked filled style")

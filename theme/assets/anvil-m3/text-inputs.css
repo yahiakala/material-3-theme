@@ -101,8 +101,8 @@
 
 .anvil-m3-textfield:not(.has_label_text) { padding-top: unset}
 
-.anvil-m3-textinput-icon-container > i { font-size: 20px; font-weight: bold; }
-.anvil-m3-textinput-leading-icon { padding-right: 16px }
+.anvil-m3-textinput-icon-container > i { font-size: 20px; font-weight: bold;}
+.anvil-m3-textinput-leading-icon { padding-right: 16px; pointer-events: none; }
 .anvil-m3-textinput-trailing-icon { position: absolute; right: 12px; cursor: pointer; pointer-events: auto;}
 
 .anvil-m3-textinput-disabled > * { color: var(--anvil-m3-on-disabled) !important; }
