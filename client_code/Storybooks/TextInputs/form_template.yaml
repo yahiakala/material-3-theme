@@ -356,8 +356,10 @@ components:
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_copy_2_click}
         - name: text_field_1_copy_copy
-          properties: {appearance: outlined, label_text: TTTTT, placeholder: pac,
-            supporting_text: sup, leading_icon: 12mp, enabled: true, error: false}
+          properties: {label_text: TTTTT, appearance: outlined, bold_display: true,
+            supporting_text: sup, italic_display: true, display_text_color: cyan,
+            placeholder: pac, error: false, enabled: true, display_font: verdana,
+            leading_icon: 12mp, underline_label: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
@@ -415,6 +417,8 @@ components:
             spacing:
               padding: ['0', null, null, null]
               margin: [0px, null, null, null]
+            display_font_size: 40
+            bold_display: true
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
   - name: card_1_copy_copy_copy

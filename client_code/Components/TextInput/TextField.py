@@ -1,7 +1,7 @@
 import anvil.server
 from . import TextInput
 import anvil.designer
-from ...Functions import property_with_callback, theme_color_to_css
+from ...Functions import property_with_callback, theme_color_to_css, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
@@ -39,7 +39,7 @@ display_text_color_property = {"name": "display_text_color", "type": "color", "d
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [leading_icon_property, trailing_icon_property, italic_display_property, bold_display_property, underline_display_property, display_font_property, display_font_size_property, display_text_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
@@ -158,6 +158,13 @@ class TextField(TextInput):
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+
+  italic_display = italic_property('textfield', 'italic_label')
+  bold_display = bold_property('textfield', 'bold_display')
+  underline_display = underline_property('textfield', 'underline_display')
+  display_font_size = font_size_property('textfield', 'display_font_size')
+  display_font = font_family_property('textfield', 'display_font')
+  display_text_color = color_property('textfield', 'color', 'display_text_color')
 
   def set_character_limit(self, value):
     if value is None or value < 1:
