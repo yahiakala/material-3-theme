@@ -83,7 +83,7 @@
   background-color: transparent;
 }
 
-input.anvil-m3-radiobutton:focus-visible + .anvil-m3-checkbox-hover {
+input.anvil-m3-radiobutton-input:focus-visible + .anvil-m3-radiobutton-hover {
   border: 2px solid var(--anvil-m3-primary);
 }
 
