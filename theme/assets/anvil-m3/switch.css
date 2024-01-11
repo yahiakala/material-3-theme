@@ -133,3 +133,6 @@ element {
   outline: 1px auto var(--anvil-m3-primary);
 }
 
+.anvil-m3-switch-input:focus + .anvil-m3-switch-slider {
+  
+}
