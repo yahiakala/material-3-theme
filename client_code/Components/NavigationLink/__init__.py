@@ -17,7 +17,6 @@ class NavigationLink(NavigationLinkTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     
-
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-navigation-link'].addEventListener("click", self._handle_click)
     
@@ -28,6 +27,7 @@ class NavigationLink(NavigationLinkTemplate):
       anvil.designer.register_interaction(self, self.dom_nodes['anvil-m3-navigation-link'], 'dblclick', lambda x: anvil.designer.start_editing_form(self.navigate_to))
 
   def _handle_click(self, event):
+    event.preventDefault
     self.raise_event("click")
     if self.navigate_to:
       open_form(self.navigate_to)
