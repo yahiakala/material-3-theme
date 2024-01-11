@@ -129,3 +129,7 @@ element {
   background-color: var(--anvil-m3-surface)
 }
 
+.anvil-m3-switch-input:focus-visible + .anvil-m3-switch-slider, .anvil-m3-switch-input:focus-visible + .anvil-m3-switch-slider::before {
+  outline: 1px auto var(--anvil-m3-primary);
+}
+
