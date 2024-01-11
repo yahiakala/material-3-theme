@@ -35,6 +35,8 @@ class Menu(MenuTemplate):
       currVal = self.visible
       self.visible = not currVal
 
+  
+
   def _anvil_get_interactions_(self):
     return [
       {
