@@ -89,7 +89,7 @@ components:
                   dropdown item 9]
                 placeholder: placeholder
                 label_text: Dropdown Label 2
-                appearance: outlined
+                appearance: ''
                 allow_none: false
               type: form:Components.DropdownMenu_deprecated
               layout_properties: {width: 273}
@@ -129,7 +129,7 @@ components:
                 include_placeholder: ''
                 placeholder: placeholder
                 label_text: Dropdown Label 4
-                appearance: outlined
+                appearance: ''
                 allow_none: true
               type: form:Components.DropdownMenu_deprecated
               layout_properties: {width: 273}
