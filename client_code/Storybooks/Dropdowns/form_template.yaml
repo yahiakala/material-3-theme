@@ -133,9 +133,6 @@ components:
                 allow_none: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
-        - name: icon_button_1
-          properties: {}
-          type: form:Components.IconButton
   - name: card_1_copy_1
     properties: {visible: true}
     type: form:Components.Card
