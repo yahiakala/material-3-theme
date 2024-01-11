@@ -80,7 +80,7 @@ components:
                 allow_none: false
                 enabled: true
                 visible: true
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
             - name: dropdown_menu_2
               properties:
@@ -91,7 +91,7 @@ components:
                 label_text: Dropdown Label 2
                 appearance: outlined
                 allow_none: false
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
           - name: flow_panel_4_copy_1
             properties: {}
@@ -119,7 +119,7 @@ components:
                 include_placeholder: ''
                 label_text: Dropdown Label 3
                 allow_none: true
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
             - name: dropdown_menu_4
               properties:
@@ -131,7 +131,7 @@ components:
                 label_text: Dropdown Label 4
                 appearance: outlined
                 allow_none: true
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
   - name: card_1_copy_1
     properties: {visible: true}
@@ -184,7 +184,7 @@ components:
                 allow_none: false
                 enabled: true
                 visible: true
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
             - name: dropdown_menu_2_copy_1
               properties:
@@ -195,7 +195,7 @@ components:
                 label_text: ''
                 appearance: outlined
                 allow_none: false
-              type: form:Components.dropdownMenu_copy
+              type: form:Components.DropdownMenu_copy
               layout_properties: {width: 273}
       - name: flow_panel_4_copy_1_copy_1
         properties: {}
@@ -223,7 +223,7 @@ components:
             include_placeholder: ''
             label_text: ''
             allow_none: true
-          type: form:Components.dropdownMenu_copy
+          type: form:Components.DropdownMenu_copy
           layout_properties: {width: 273}
         - name: dropdown_menu_4_copy_2
           properties:
@@ -235,7 +235,7 @@ components:
             label_text: ''
             appearance: outlined
             allow_none: true
-          type: form:Components.dropdownMenu_copy
+          type: form:Components.DropdownMenu_copy
           layout_properties: {width: 273}
   - name: card_2
     properties: {visible: true}
@@ -265,7 +265,7 @@ components:
             label_text: Dropdown Label 3
             allow_none: true
             enabled: false
-          type: form:Components.dropdownMenu_copy
+          type: form:Components.DropdownMenu_copy
           layout_properties: {width: 273}
         - name: dropdown_menu_4_copy_1
           properties:
@@ -278,5 +278,5 @@ components:
             appearance: outlined
             allow_none: true
             enabled: false
-          type: form:Components.dropdownMenu_copy
+          type: form:Components.DropdownMenu_copy
           layout_properties: {width: 273}
