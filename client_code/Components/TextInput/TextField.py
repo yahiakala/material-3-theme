@@ -8,7 +8,7 @@ from ...utils import _m3_icons
 """
 Remaining tasks on hold for DEV: 
 - property "NONE" enum selection for icons
-- properties being set in init
+- properties being set in init -> Once this is done we will have to do all the style props for the textarea
 """
 
 leading_icon_property = {"name": "leading_icon", 

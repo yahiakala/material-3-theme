@@ -5,6 +5,8 @@ import anvil.js
 from ...Functions import property_with_callback, theme_color_to_css
 
 """
+Remaining tasks on hold for DEV: 
+- properties being set in init -> Once this is done we will have to do all the style props for the input box and then set the props for the dropdown
 """
 
 class TextArea(TextInput):
