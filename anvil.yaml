@@ -2,7 +2,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: BrookeTestPage}
+startup: {type: form, module: Storybooks.TextInputs}
 package_name: Material_3_Theme_2_0
 allow_embedding: false
 toolbox_sections:
@@ -66,9 +66,15 @@ toolbox_sections:
   - title: RadioButton
     icon: {light: 'asset:designer_icons/radio_button.svg', dark: 'asset:designer_icons/radio_button_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.RadioButton}
-  - title: TextField
+  - title: TextField_original
     icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.TextField}
+  - title: TextArea
+    icon: {}
+    component: {type: Material_3_Theme_2_0.Components.TextInput.TextArea}
+  - title: TextField
+    icon: {}
+    component: {type: Material_3_Theme_2_0.Components.TextInput.TextField}
   - title: DropdownMenu
     icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.DropdownMenu}

@@ -14,9 +14,9 @@ class InteractiveCard(Card):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-card'].classList.toggle('interactive', True)
     self.handle_click = self.handle_click
+    self.enabled = self.enabled
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
-    self.enabled = self.enabled
 
   def set_enabled(self, value): #why not being set in the beginning??
     self.dom_nodes['anvil-m3-card'].classList.toggle('disabled', not value)

@@ -1,4 +1,4 @@
-from ._anvil_designer import TextFieldTemplate
+from ._anvil_designer import TextField_deprecatedTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -10,7 +10,7 @@ import anvil.designer
 
 # Todo: region interactions
 
-class TextField(TextFieldTemplate):
+class TextField_deprecated(TextField_deprecatedTemplate):
   def __init__(self, **properties):
     
     self._props = properties
@@ -19,6 +19,7 @@ class TextField(TextFieldTemplate):
     self.on_key_down = self.on_key_down
     self.on_change = self.on_change
     self.on_input = self.on_input
+    
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 

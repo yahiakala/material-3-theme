@@ -57,6 +57,7 @@ components:
           properties: {appearance: filled, text: Get started, align: center}
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
+      event_bindings: {click: full_outline_click}
     - name: none_outlined
       properties: {appearance: outlined, enabled: true}
       type: form:Components.InteractiveCard

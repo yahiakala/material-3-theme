@@ -75,6 +75,7 @@ events:
 - {name: change, default_event: true, description: when an item is selected}
 toolbox_item:
   icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
+  hidden: true
 custom_component: true
 components:
 - name: menu
@@ -85,7 +86,7 @@ components:
 - name: selection_field
   properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '',
     placeholder: '', supporting_text: ' '}
-  type: form:Components.TextInput.TextField
+  type: form:Components.TextField_deprecated
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
 container:
   type: HtmlTemplate
