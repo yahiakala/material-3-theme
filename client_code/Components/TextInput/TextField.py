@@ -1,7 +1,7 @@
 import anvil.server
 from . import TextInput
 import anvil.designer
-from ...Functions import property_with_callback, theme_color_to_css, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
@@ -29,17 +29,17 @@ trailing_icon_property = {"name": "trailing_icon",
                          # "include_none_option": True, 
                          "description": "left side icon"}
 
-italic_display_property = {"name": "italic_display", "type": "boolean", "default_value": False, "important": False," description": "Display this component’s text in italics", "group": "Style"}
-bold_display_property = {"name": "bold_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in bold", "group": "Style"}
-underline_display_property = {"name": "underline_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in underline", "group": "Style"}
-display_font_property = {"name": "display_font", "type": "string", "default_value": '', "important": False, "description": "The font family to use for this component’s text", "group": "Style"}
-display_font_size_property = {"name": "display_font_size", "type": "number", "important": False, "description": "The height of text displayed on this component’s text in pixels", "group": "Style"}
-display_text_color_property = {"name": "display_text_color", "type": "color", "default_value": '', "important": False, "description": "Component’s Input Text Color",  "group": "Style"}
+# italic_display_property = {"name": "italic_display", "type": "boolean", "default_value": False, "important": False," description": "Display this component’s text in italics", "group": "Style"}
+# bold_display_property = {"name": "bold_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in bold", "group": "Style"}
+# underline_display_property = {"name": "underline_display", "type": "boolean", "default_value": False, "important": False, "description": "Display this component’s text in underline", "group": "Style"}
+# display_font_property = {"name": "display_font", "type": "string", "default_value": '', "important": False, "description": "The font family to use for this component’s text", "group": "Style"}
+# display_font_size_property = {"name": "display_font_size", "type": "number", "important": False, "description": "The height of text displayed on this component’s text in pixels", "group": "Style"}
+# display_text_color_property = {"name": "display_text_color", "type": "color", "default_value": '', "important": False, "description": "Component’s Input Text Color",  "group": "Style"}
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, italic_display_property, bold_display_property, underline_display_property, display_font_property, display_font_size_property, display_text_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):

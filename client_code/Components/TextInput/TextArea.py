@@ -2,7 +2,7 @@ import anvil.server
 from . import TextInput
 import anvil.designer
 import anvil.js
-from ...Functions import property_with_callback, theme_color_to_css
+from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
 """
 Remaining tasks on hold for DEV: 
@@ -35,6 +35,14 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['textarea'].removeEventListener("change", self.on_change)
   
+  
+  italic_display = italic_property('textarea', 'italic_label')
+  bold_display = bold_property('textarea', 'bold_display')
+  underline_display = underline_property('textarea', 'underline_display')
+  display_font_size = font_size_property('textarea', 'display_font_size')
+  display_font = font_family_property('textarea', 'display_font')
+  display_text_color = color_property('textarea', 'color', 'display_text_color')
+
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
     if value:
