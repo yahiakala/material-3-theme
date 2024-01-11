@@ -19,6 +19,7 @@ class TextField(TextFieldTemplate):
     self.on_key_down = self.on_key_down
     self.on_change = self.on_change
     self.on_input = self.on_input
+    
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 

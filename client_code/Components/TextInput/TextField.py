@@ -44,14 +44,14 @@ class TextField(TextInput):
 
   def on_mount(self, **event_args):
     self.dom_nodes['textfield'].addEventListener("input", self.on_input)
-    self.dom_nodes['textfield'].addEventListener("input", self.on_key_down)
-    self.dom_nodes['textfield'].addEventListener("input", self.on_change)
+    self.dom_nodes['textfield'].addEventListener("keydown", self.on_key_down)
+    self.dom_nodes['textfield'].addEventListener("change", self.on_change)
     self.dom_nodes['trailing-icon'].addEventListener("click", self.handle_click)
     
   def on_cleanup(self, **event_args):
-    self.dom_nodes['textfield'].removeEventListener("keydown", self.on_input)
+    self.dom_nodes['textfield'].removeEventListener("input", self.on_input)
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
-    self.dom_nodes['textfield'].removeEventListener("keydown", self.on_change)
+    self.dom_nodes['textfield'].removeEventListener("change", self.on_change)
     self.dom_nodes['trailing-icon'].removeEventListener("click", self.handle_click)
   
 

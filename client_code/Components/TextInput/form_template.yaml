@@ -54,8 +54,8 @@ container:
       \ for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\"\
       \ anvil-name=\"icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
       \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
-      ></i>\n      <div class=\"anvil-m3-textinput-icon-container-spacer\"></div>\n\
-      \      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
+      ></i>\n<!--       <div class=\"anvil-m3-textinput-icon-container-spacer\"></div>\
+      \ -->\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
       \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
       \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
       >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
