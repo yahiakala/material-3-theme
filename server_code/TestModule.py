@@ -17,3 +17,4 @@ def get_jobs():
     'items': [(row['Titles'], row) for row in rows],
     'selected': rows[1]
   }
+  
