@@ -39,7 +39,7 @@ class Link(LinkTemplate):
     }]
 
   text = innerText_property('anvil-m3-link-text')
-  url = href_property('anvil-m3-link')
+  # url = href_property('anvil-m3-link')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
@@ -52,6 +52,17 @@ class Link(LinkTemplate):
   icon_color = color_property('anvil-m3-link-icon', 'color', 'icon_color')
   border = style_property('anvil-m3-link', 'border', 'border')
   margin = margin_property('anvil-m3-link')
+
+  @property
+  def url(self):
+    return self._props.get('url')
+
+  @url.setter
+  def url(self, value):
+    if value:
+      self._props['url'] = value
+      self.dom
+    else:
 
   @property
   def icon_size(self):
