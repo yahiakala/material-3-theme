@@ -134,11 +134,11 @@ element {
 }
 
 .anvil-m3-switch-input:focus:not(:checked) + .anvil-m3-switch-slider {
-  background: var(--anvil-m3-primary-overlay-3);
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2), var(--anvil-m3-dark-overlay-2)), var(--anvil-m3-surface-container-highest)
 }
 
 .anvil-m3-switch-input:focus:checked + .anvil-m3-switch-slider {
-  background: var(--anvil-m3-primary-overlay-3);
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary);
 }
 
 
