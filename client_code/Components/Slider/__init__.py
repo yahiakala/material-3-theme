@@ -6,6 +6,7 @@ from ...Functions import enabled_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
