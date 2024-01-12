@@ -11,47 +11,6 @@ components_by_slot:
     type: form:Components.Slider
     layout_properties: {}
   slot_3:
-  - name: flow_panel_1
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: slider_1
-      properties: {}
-      type: form:Components.Slider
-      layout_properties: {width: 381}
-  - name: slider_3
-    properties: {has_label: true, show_label: true}
-    type: form:Components.Slider
-    layout_properties: {}
-  - name: column_panel_1
-    properties: {col_widths: '{}'}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: slider_5
-      properties: {}
-      type: form:Components.Slider
-      layout_properties: {grid_position: 'DZLKDC,UGINYI'}
-  - name: card_1
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
-    components:
-    - name: slider_4
-      properties: {enabled: false}
-      type: form:Components.Slider
-      layout_properties: {grid_position: 'TSVZAY,ESBPPZ'}
-    - name: slider_5
-      properties: {}
-      type: form:Components.Slider
-      layout_properties: {grid_position: 'TSVZAY,GLAFYI'}
-      layout_properties: {width: 312}
-  - name: slider_2
-    properties: {has_label: true}
-    type: form:Components.Slider
-    layout_properties: {}
-  slot_3:
   - name: link_1
     properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
     type: form:Components.Link

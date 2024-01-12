@@ -4,7 +4,6 @@ from anvil.js.window import document
 import anvil.js
 from ...Functions import enabled_property
 
-# todo: does this work on a free plan?
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
