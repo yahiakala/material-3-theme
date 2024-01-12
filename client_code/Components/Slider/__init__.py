@@ -1,6 +1,6 @@
 from ._anvil_designer import SliderTemplate
 from anvil import *
-from anvil.js.window import document
+from anvil.js.window import document, ResizeObserver
 import anvil.js
 from ...Functions import enabled_property
 
@@ -22,17 +22,16 @@ class Slider(SliderTemplate):
   def on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
-    anvil.js.window.addEventListener("resize", self.on_window_resize)
-
+    #anvil.js.window.addEventListener("resize", self.on_window_resize)
+    self.resize_observer = ResizeObserver(self.on_window_resize)
+    self.resize_observer.observe(self.dom_nodes['anvil-m3-slider-track-container'])
+  
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
-    anvil.js.window.removeEventListener("resize", self.on_window_resize)
+    #anvil.js.window.removeEventListener("resize", self.on_window_resize)
+    self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider-track-container'])
     
-
-  def on_resize(self, *args, **kwargs):
-    pass
-
   def on_input(self, event):
     self.update_progress()
 
