@@ -98,6 +98,7 @@ class Slider(SliderTemplate):
       input.setAttribute("disabled", " ")
       full_slider.classList.add("anvil-m3-slider-disabled")
 
+
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
