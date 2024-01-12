@@ -8,8 +8,8 @@ class Slider(SliderTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
@@ -17,13 +17,13 @@ class Slider(SliderTemplate):
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
 
-  def on_mount(self, **event_args):
+  def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
     self.resize_observer = ResizeObserver(self.on_window_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
   
-  def on_cleanup(self, **event_args):
+  def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
