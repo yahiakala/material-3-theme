@@ -36,6 +36,9 @@ class FileLoader(FileLoaderTemplate):
   def focus(self):
     self.dom_nodes['anvil-m3-fileloader-container'].focus()
 
+  def open_file_selector(self):
+    self.dom_nodes['anvil-m3-fileloader-input'].click()
+
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self._handle_change)
     self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("focus", self._handle_focus)

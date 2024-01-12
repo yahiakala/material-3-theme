@@ -46,6 +46,10 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the component is clicked"""
     self.switch_1.selected = not self.switch_1.selected
 
+  def button_4_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    self.file_loader_1.open_file_selector()
+
 
 
 

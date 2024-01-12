@@ -24,7 +24,7 @@ components_by_slot:
       url: 'https://anvil.works'}
     type: form:Components.NavigationLink
     layout_properties: {}
-    event_bindings: {click: navigation_link_3_click}
+    event_bindings: {}
   slot_2: []
   slot_3: []
   slot_5: []

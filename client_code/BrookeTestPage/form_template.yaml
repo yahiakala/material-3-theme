@@ -80,6 +80,7 @@ components_by_slot:
       properties: {appearance: outlined, text: Button}
       type: form:Components.Button
       layout_properties: {grid_position: 'AHKZIS,RTBMXD ONEZKS,GIVMEQ'}
+      event_bindings: {click: button_4_click}
     - name: switch_1
       properties: {selected: true}
       type: form:Components.Switch
