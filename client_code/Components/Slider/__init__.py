@@ -4,14 +4,11 @@ from anvil.js.window import document, ResizeObserver
 import anvil.js
 from ...Functions import enabled_property
 
-
 class Slider(SliderTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
-    # todo: put this in a resize observer
-    # anvil.js.window.addEventListener("resize", self.on_window_resize)
     
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
@@ -22,15 +19,13 @@ class Slider(SliderTemplate):
   def on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
-    #anvil.js.window.addEventListener("resize", self.on_window_resize)
     self.resize_observer = ResizeObserver(self.on_window_resize)
-    self.resize_observer.observe(self.dom_nodes['anvil-m3-slider-track-container'])
+    self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
   
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
-    #anvil.js.window.removeEventListener("resize", self.on_window_resize)
-    self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider-track-container'])
+    self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
     
   def on_input(self, event):
     self.update_progress()
@@ -43,7 +38,7 @@ class Slider(SliderTemplate):
     self.do_hide_label()
     document.removeEventListener("mouseup", self.on_mouse_up)
 
-  def on_window_resize(self, event):
+  def on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
     
   def update_progress(self):
