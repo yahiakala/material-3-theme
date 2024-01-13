@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
-from ...utils import fui
+from ...utils import fui, noop
 
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
@@ -17,6 +17,9 @@ class Text(TextTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self.init_components(**properties)
+    self._cleanup = noop
+
+  self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
@@ -115,5 +118,8 @@ class Text(TextTemplate):
     self._props['tooltip'] = value
     if value:
       pass
+      #add a div to the body to be the floating tooltip that only appears on hover after some time
+      #add the value to the innerText of the dv
+      #set self._cleanup to be fui.auto_update()
 
 

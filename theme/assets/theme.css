@@ -461,3 +461,9 @@ body {
   }
 }
 
+.anvil-m3-tooltip {
+  background-color: %color:Inverse Surface%;
+  color: %color:Inverse On Surface%;
+  min-height
+}
+
