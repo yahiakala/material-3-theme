@@ -19,10 +19,10 @@ class Text(TextTemplate):
     self._props = properties
     self._cleanup = noop
     self.tooltip_events = {
-    'mouseenter': showTooltip,
-    'mouseleave': hideTooltip,
-    'focus': showTooltip,
-    'blur': hideTooltip
+    'mouseenter': self.show_tooltip,
+    'mouseleave': self.hide_tooltip,
+    'focus': self.show_tooltip,
+    'blur': self.hide_tooltip
     }
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-removed", self._cleanup)
@@ -134,6 +134,13 @@ class Text(TextTemplate):
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node)
     else:
       self._cleanup()
+
+  def show_tooltip(self, tooltip_node):
+    tooltip_node.style.opacity = 1
+
+  def hide_tooltip(self, tooltip_node):
+    tooltip_node.style.opacity = 0
+    
       
 
   
