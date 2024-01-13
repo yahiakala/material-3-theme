@@ -18,6 +18,12 @@ class Text(TextTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self._cleanup = noop
+    self.tooltip_events = {
+    'mouseenter': showTooltip,
+    'mouseleave': hideTooltip,
+    'focus': showTooltip,
+    'blur': hideTooltip
+    }
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
@@ -123,10 +129,11 @@ class Text(TextTemplate):
       self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
-      print(self.reference_element.classList)
-      self.dom_nodes['anvil-m3-text-container'].classList.add('anvil-m3-tooltip-target')
+      for event in self.tooltip_events:
+        self.reference_element.addEventListener(event, event.value)
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node)
     else:
       self._cleanup()
       
 
+  

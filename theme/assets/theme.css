@@ -473,7 +473,3 @@ body {
   transition-delay: 0.5s;
 }
 
-.anvil-m3-tooltip-target:hover .anvil-m3-tooltip {
-  opacity: 1;
-}
-
