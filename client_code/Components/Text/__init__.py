@@ -18,12 +18,6 @@ class Text(TextTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self._cleanup = noop
-    self.tooltip_events = {
-    'mouseenter': self.show_tooltip,
-    'mouseleave': self.hide_tooltip,
-    'focus': self.show_tooltip,
-    'blur': self.hide_tooltip
-    }
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
@@ -129,17 +123,27 @@ class Text(TextTemplate):
       self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
-      for event in self.tooltip_events:
-        self.reference_element.addEventListener(event, event.value)
-      self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node)
+      
+      def show_tooltip(e):
+        self.tooltip_node.style.opacity = 1
+
+      def hide_tooltip(e):
+        self.tooltip_node.style.opacity = 0
+        
+      tooltip_events = {
+        'mouseenter': show_tooltip,
+        'mouseleave': hide_tooltip,
+        'focus': show_tooltip,
+        'blur': hide_tooltip
+        }
+      for event, listener in tooltip_events.items():
+        self.reference_element.addEventListener(event, listener)
+        
+      self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
       self._cleanup()
 
-  def show_tooltip(self, tooltip_node):
-    tooltip_node.style.opacity = 1
 
-  def hide_tooltip(self, tooltip_node):
-    tooltip_node.style.opacity = 0
     
       
 
