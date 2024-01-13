@@ -117,6 +117,9 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
+      self.tooltip_node = <di
+      document.body.append(self.tooltip_node)
+      
       pass
       #add a div to the body to be the floating tooltip that only appears on hover after some time
       #add the value to the innerText of the dv

@@ -464,6 +464,9 @@ body {
 .anvil-m3-tooltip {
   background-color: %color:Inverse Surface%;
   color: %color:Inverse On Surface%;
-  min-height
+  min-height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
 }
 
