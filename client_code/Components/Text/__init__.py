@@ -7,10 +7,9 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
+from ...utils import fui
 
 #TODO: figure out what to do with line height
-#TODO: add margin and padding
-
 #TODO: figure out default icon sizes 
 
 class Text(TextTemplate):
@@ -106,5 +105,15 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
     self.dom_nodes['anvil-m3-text-container'].classList.add(f'anvil-m3-text-{value}')
+
+  @property
+  def tooltip(self):
+    return self._props['tooltip']
+
+  @tooltip.setter
+  def tooltip(self, value):
+    self._props['tooltip'] = value
+    if value:
+      pass
 
 
