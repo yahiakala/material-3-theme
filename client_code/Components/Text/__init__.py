@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
+from anvil.js.window import document
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
 
@@ -16,10 +17,9 @@ class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self.init_components(**properties)
     self._cleanup = noop
-
-  self.add_event_handler("x-anvil-page-removed", self._cleanup)
+    self.init_components(**properties)
+    self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
@@ -117,15 +117,16 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
+      print(self.text, 'has a tooltip')
       self.tooltip_node = document.createElement('div')
       self.tooltip_node.innerText = value
       self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
-      self.dom_nodes['anvil-m3-text-container'].classList.add('')
+      self.reference_element = self.dom_nodes['anvil-m3-text-container']
+      print(self.reference_element.classList)
+      self.dom_nodes['anvil-m3-text-container'].classList.add('anvil-m3-tooltip-target')
+      self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node)
+    else:
+      self._cleanup()
       
-      pass
-      #add a div to the body to be the floating tooltip that only appears on hover after some time
-      #add the value to the innerText of the dv
-      #set self._cleanup to be fui.auto_update()
-
 
