@@ -117,8 +117,11 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
-      self.tooltip_node = <di
+      self.tooltip_node = document.createElement('div')
+      self.tooltip_node.innerText = value
+      self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
+      self.dom_nodes['anvil-m3-text-container'].classList.add('')
       
       pass
       #add a div to the body to be the floating tooltip that only appears on hover after some time
