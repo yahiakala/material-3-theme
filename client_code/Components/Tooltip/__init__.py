@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import innerText_property
+
 
 class Tooltip(TooltipTemplate):
   def __init__(self, **properties):
@@ -19,6 +19,12 @@ class Tooltip(TooltipTemplate):
   def hide_tooltip(self, e):
     self.dom_nodes['anvil-m3-tooltip'].style.opacity = 0
 
-  text = innerText_property('anvil-m3-tooltip')
+  @property
+  def text(self):
+    return self._props.get(text)
 
+  @text.setter
+  def text(self, value):
+    self._props['text'] = value
+    self.dom_nodes['anvil-m3-tooltip'].innerText = value
 

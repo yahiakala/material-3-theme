@@ -3,7 +3,10 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil.js.window import document
 from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
+from .utils import noop, fui
+from .Components.Tooltip import Tooltip
 
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
@@ -145,6 +148,32 @@ def padding_property(dom_node_name, prop_name="padding"):
     set_element_padding(self.dom_nodes[dom_node_name], value)
   return property_with_callback(prop_name, set_padding)
 
+def tooltip_property(dom_node_name, prop_name="tooltip"):
+  #To use this property, add self.tooltip_node = None to the init of your component
+  def set_tooltip(self, value):
+    self._cleanup = noop
+    reference_element = self.dom_nodes[dom_node_name]
+    if value:
+      print(value)
+      tooltip_el = Tooltip(text=value)
+      self.tooltip_node = tooltip_el.tooltip_node
+      document.body.append(self.tooltip_node)
+
+      tooltip_events = {
+        'mouseenter': tooltip_el.show_tooltip,
+        'mouseleave': tooltip_el.hide_tooltip,
+        'focus': tooltip_el.show_tooltip,
+        'blur': tooltip_el.hide_tooltip
+        }
+      for event, listener in tooltip_events.items():
+        reference_element.addEventListener(event, listener)
+      self._cleanup = fui.auto_update(reference_element, self.tooltip_node, placement="bottom-start")
+    else:
+      if self.tooltip_node:
+        self.tooltip_node.remove()
+        self._cleanup()
+        self._cleanup = noop
+  return property_with_callback(prop_name, set_tooltip)
 
   
   

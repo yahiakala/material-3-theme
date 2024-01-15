@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.js.window import document
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
+from ...Functions import tooltip_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
 import time
 from ..Tooltip import Tooltip
@@ -19,7 +19,6 @@ class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self._cleanup = noop
     self.tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-removed", self._cleanup)
@@ -53,6 +52,7 @@ class Text(TextTemplate):
   align = style_property('anvil-m3-text-container', 'justifyContent', 'align')
   icon_size = font_size_property('anvil-m3-text-icon', 'icon_size')
   margin = margin_property('anvil-m3-text-container')
+  tooltip = tooltip_property('anvil-m3-text-container')
 
   @property
   def font_size(self):
@@ -111,38 +111,6 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
     self.dom_nodes['anvil-m3-text-container'].classList.add(f'anvil-m3-text-{value}')
-
-  @property
-  def tooltip(self):
-    return self._props['tooltip']
-
-  @tooltip.setter
-  def tooltip(self, value):
-    self._props['tooltip'] = value
-    if value:
-      print(value)
-      self.tooltip_el = Tooltip(text=value)
-      self.tooltip_node = self.tooltip_el.tooltip_node
-      document.body.append(self.tooltip_node)
-      self.reference_element = self.dom_nodes['anvil-m3-text-container']
-
-      tooltip_events = {
-        'mouseenter': self.tooltip_el.show_tooltip,
-        'mouseleave': self.tooltip_el.hide_tooltip,
-        'focus': self.tooltip_el.show_tooltip,
-        'blur': self.tooltip_el.hide_tooltip
-        }
-      for event, listener in tooltip_events.items():
-        self.reference_element.addEventListener(event, listener)
-      print('reference:', self.reference_element, 'floating:', self.tooltip_node)
-      self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
-      
-    else:
-      if self.tooltip_node:
-        print('cleaning up')
-        self.tooltip_node.remove()
-        self._cleanup()
-        self._cleanup = noop
 
       
 
