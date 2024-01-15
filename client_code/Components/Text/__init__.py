@@ -142,6 +142,8 @@ class Text(TextTemplate):
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
       self._cleanup()
+      # if self.tooltip_node:
+      #   document.body.remove(self.tooltip_node)
 
 
     
