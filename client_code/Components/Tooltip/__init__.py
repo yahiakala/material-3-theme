@@ -20,6 +20,7 @@ class Tooltip(TooltipTemplate):
 
   @opacity.setter
   def opacity(self, value):
-    self._
+    self._props.get('opacity')
+    self.dom_nodes['anvil-m3-tooltip'].style.opacity = value
 
 

@@ -126,10 +126,10 @@ class Text(TextTemplate):
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
       def show_tooltip(e):
-        self.tooltip_node.style.opacity = 1
+        self.tooltip_el.opacity = 1
 
       def hide_tooltip(e):
-        self.tooltip_node.style.opacity = 0
+        self.tooltip_el.opacity = 0
         
       tooltip_events = {
         'mouseenter': show_tooltip,
