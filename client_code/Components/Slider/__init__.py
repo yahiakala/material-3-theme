@@ -73,8 +73,6 @@ class Slider(SliderTemplate):
 
   def do_hide_label(self):
     self.label_container.remove()
-    
-  # value = value_property()
 
   @property
   def value(self):
@@ -83,7 +81,7 @@ class Slider(SliderTemplate):
   @value.setter
   def value(self, value):
     self.dom_nodes["anvil-m3-slider-input"].value = value
-    self.update_progress()
+    # self.update_progress()
   
   @property
   def show_label(self):
