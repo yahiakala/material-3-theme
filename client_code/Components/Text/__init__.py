@@ -9,6 +9,7 @@ import anvil.designer
 from anvil.js.window import document
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
+import time
 
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
@@ -145,9 +146,12 @@ class Text(TextTemplate):
     else:
       print('cleaning up')
       self._cleanup()
+      self._cleanup = noop
       if self.tooltip_node:
+        # time.sleep(10)
         print('removing')
         document.body.remove(self.tooltip_node)
+      
 
 
     
