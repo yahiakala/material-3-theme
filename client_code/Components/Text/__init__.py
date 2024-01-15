@@ -117,7 +117,7 @@ class Text(TextTemplate):
   @tooltip.setter
   def tooltip(self, value):
     self._props['tooltip'] = value
-    print(value)
+    print('value:', value)
     if value:
       print(self.text, 'has a tooltip')
       self.tooltip_node = document.createElement('div')
@@ -140,7 +140,7 @@ class Text(TextTemplate):
         }
       for event, listener in tooltip_events.items():
         self.reference_element.addEventListener(event, listener)
-        
+      'starting fui'  
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
       print('cleaning up')
