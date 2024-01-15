@@ -75,6 +75,8 @@ class Slider(SliderTemplate):
     self.label_container.remove()
     
   value = value_property("anvil-m3-slider-input")
+  # store previous value
+  # if value doesn't equal previous value then update progress
   
   @property
   def show_label(self):
