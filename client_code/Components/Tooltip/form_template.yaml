@@ -2,7 +2,7 @@ properties:
 - {name: text, type: string, default_value: '', important: true, default_binding_prop: true}
 - {name: background_color, type: color, default_value: '', important: true}
 - {name: color, type: color, important: true, default_value: ''}
-- {name: prop, type: string, default_value: '', important: true}
+- {name: opacity, type: number, important: true}
 is_package: true
 events: []
 custom_component: true
