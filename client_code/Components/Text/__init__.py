@@ -144,13 +144,14 @@ class Text(TextTemplate):
       'starting fui'  
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
-      print('cleaning up')
-      self._cleanup()
-      self._cleanup = noop
       if self.tooltip_node:
         # time.sleep(10)
         print('removing')
         document.body.remove(self.tooltip_node)
+      print('cleaning up')
+      self._cleanup()
+      self._cleanup = noop
+
       
 
 
