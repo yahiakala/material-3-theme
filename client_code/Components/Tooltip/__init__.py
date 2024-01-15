@@ -12,15 +12,12 @@ class Tooltip(TooltipTemplate):
     self._props = properties
     self.init_components(**properties)
 
+  def show_tooltip(self, e):
+    self.dom_nodes['anvil-m3-tooltip'].style.opacity = 1
+  
+  def hide_tooltip(self, e):
+    self.dom_nodes['anvil-m3-tooltip'].style.opacity = 0
+
   text = innerText_property('anvil-m3-tooltip')
-
-  @property
-  def opacity(self):
-    return self._props['opacity']
-
-  @opacity.setter
-  def opacity(self, value):
-    self._props.get('opacity')
-    self.dom_nodes['anvil-m3-tooltip'].style.opacity = value
 
 

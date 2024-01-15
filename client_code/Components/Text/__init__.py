@@ -120,22 +120,17 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
-      self.tooltip_el = Tooltip()
+      self.tooltip_el = Tooltip(text=value)
       self.tooltip_node = anvil.js.get_dom_node(self.tooltip_el)
-      self.tooltip_el.text = value
+      print(self.tooltip_node)
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
-      def show_tooltip(e):
-        self.tooltip_el.opacity = 1
-
-      def hide_tooltip(e):
-        self.tooltip_el.opacity = 0
         
       tooltip_events = {
-        'mouseenter': show_tooltip,
-        'mouseleave': hide_tooltip,
-        'focus': show_tooltip,
-        'blur': hide_tooltip
+        'mouseenter': self.tooltip_el.show_tooltip,
+        'mouseleave': self.tooltip_el.hide_tooltip,
+        'focus': self.tooltip_el.show_tooltip,
+        'blur': self.tooltip_el.hide_tooltip
         }
       for event, listener in tooltip_events.items():
         self.reference_element.addEventListener(event, listener)  
