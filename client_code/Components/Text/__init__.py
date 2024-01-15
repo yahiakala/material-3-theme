@@ -18,6 +18,7 @@ class Text(TextTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self._cleanup = noop
+    self.tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
@@ -116,7 +117,7 @@ class Text(TextTemplate):
   @tooltip.setter
   def tooltip(self, value):
     self._props['tooltip'] = value
-    self.tooltip_node = None
+    print(value)
     if value:
       print(self.text, 'has a tooltip')
       self.tooltip_node = document.createElement('div')
@@ -142,8 +143,10 @@ class Text(TextTemplate):
         
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
+      print('cleaning up')
       self._cleanup()
       if self.tooltip_node:
+        print('removing')
         document.body.remove(self.tooltip_node)
 
 
