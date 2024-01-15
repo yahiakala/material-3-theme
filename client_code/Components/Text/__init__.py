@@ -146,7 +146,7 @@ class Text(TextTemplate):
     else:
       if self.tooltip_node:
         print('removing')
-        document.body.remove(self.tooltip_node)
+        # document.body.remove(self.tooltip_node)
         print('cleaning up')
         self._cleanup()
         self._cleanup = noop
