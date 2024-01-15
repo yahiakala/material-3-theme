@@ -19,6 +19,10 @@ components_by_slot:
         properties: {text: Monstera, bold: true, style: headline}
         type: form:Components.Heading
         layout_properties: {slot: card-content-slot}
+      - name: toolip
+        properties: {text: tooltip, tooltip: tooltip}
+        type: form:Components.Text
+        layout_properties: {slot: card-content-slot}
       - name: text_3
         properties: {text: £35, bold: true, scale: large, tooltip: test}
         type: form:Components.Text
