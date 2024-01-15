@@ -116,6 +116,7 @@ class Text(TextTemplate):
   @tooltip.setter
   def tooltip(self, value):
     self._props['tooltip'] = value
+    self.tooltip_node = None
     if value:
       print(self.text, 'has a tooltip')
       self.tooltip_node = document.createElement('div')
@@ -142,8 +143,8 @@ class Text(TextTemplate):
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
       self._cleanup()
-      # if self.tooltip_node:
-      #   document.body.remove(self.tooltip_node)
+      if self.tooltip_node:
+        document.body.remove(self.tooltip_node)
 
 
     
