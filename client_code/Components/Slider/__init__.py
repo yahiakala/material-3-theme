@@ -2,7 +2,7 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
-from ...Functions import enabled_property
+from ...Functions import enabled_property, value_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -74,6 +74,8 @@ class Slider(SliderTemplate):
   def do_hide_label(self):
     self.label_container.remove()
     
+  value = value_property("anvil-m3-slider-input")
+  
   @property
   def show_label(self):
     return self._show_label
@@ -97,7 +99,6 @@ class Slider(SliderTemplate):
     else:
       input.setAttribute("disabled", " ")
       full_slider.classList.add("anvil-m3-slider-disabled")
-
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
