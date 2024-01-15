@@ -475,6 +475,7 @@ body {
   position:absolute;
   border-radius: 4px;
   display: flex;
-  align-items: center
+  align-items: center;
+  pointer-events: none;
 }
 
