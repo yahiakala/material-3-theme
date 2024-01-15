@@ -118,9 +118,7 @@ class Text(TextTemplate):
   @tooltip.setter
   def tooltip(self, value):
     self._props['tooltip'] = value
-    print('value:', value)
     if value:
-      print(self.text, 'has a tooltip')
       self.tooltip_node = document.createElement('div')
       self.tooltip_node.innerText = value
       self.tooltip_node.classList.add('anvil-m3-tooltip')
@@ -140,14 +138,11 @@ class Text(TextTemplate):
         'blur': hide_tooltip
         }
       for event, listener in tooltip_events.items():
-        self.reference_element.addEventListener(event, listener)
-      'starting fui'  
+        self.reference_element.addEventListener(event, listener)  
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
     else:
       if self.tooltip_node:
-        print('removing')
-        document.body.remove(self.tooltip_node)
-        print('cleaning up')
+        self.tooltip_node.remove()
         self._cleanup()
         self._cleanup = noop
 
