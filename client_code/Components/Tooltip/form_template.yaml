@@ -1,5 +1,12 @@
+properties:
+- {name: text, type: string, default_value: '', important: true, default_binding_prop: true}
+- {name: background_color, type: color, default_value: '', important: true}
+- {name: color, type: color, important: true, default_value: ''}
+- {name: prop, type: string, default_value: '', important: true}
+is_package: true
+events: []
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
-  properties: {html: <div class="anvil-m3-tooltip"></div>}
-components: []
-is_package: true
+  properties: {html: <div class="anvil-m3-tooltip" anvil-name="anvil-m3-tooltip"></div>}

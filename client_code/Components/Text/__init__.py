@@ -120,9 +120,9 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
-      self.tooltip_node = Tooltip()
-      self.tooltip_node = anvil.js.get_dom_node(self.tooltip_node)
-      self.tooltip_node.innerText = value
+      self.tooltip_el = Tooltip()
+      self.tooltip_node = anvil.js.get_dom_node(self.tooltip_el)
+      self.tooltip_el.text = value
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
       def show_tooltip(e):
