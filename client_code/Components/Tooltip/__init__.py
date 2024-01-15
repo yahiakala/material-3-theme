@@ -9,8 +9,17 @@ from ...Functions import innerText_property
 class Tooltip(TooltipTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
 
   text = innerText_property('anvil-m3-tooltip')
+
+  @property
+  def opacity(self):
+    return self._props['opacity']
+
+  @opacity.setter
+  def opacity(self, value):
+    self._
 
 
