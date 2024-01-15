@@ -10,6 +10,7 @@ from anvil.js.window import document
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
 import time
+from ..Tooltip import Tooltip
 
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
@@ -119,12 +120,11 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
-      self.tooltip_node = document.createElement('div')
+      self.tooltip_node = Tooltip()
+      self.tooltip_node = anvil.js.get_dom_node(self.tooltip_node)
       self.tooltip_node.innerText = value
-      self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
-      
       def show_tooltip(e):
         self.tooltip_node.style.opacity = 1
 

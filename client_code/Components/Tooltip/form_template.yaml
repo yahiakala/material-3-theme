@@ -1,0 +1,5 @@
+container:
+  type: HtmlTemplate
+  properties: {html: <div class="anvil-m3-tooltip"></div>}
+components: []
+is_package: true
