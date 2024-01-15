@@ -11,6 +11,7 @@ class Tooltip(TooltipTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self.init_components(**properties)
+    self.tooltip_node = self.dom_nodes['anvil-m3-tooltip']
 
   def show_tooltip(self, e):
     self.dom_nodes['anvil-m3-tooltip'].style.opacity = 1

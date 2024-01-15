@@ -46,7 +46,7 @@ components_by_slot:
         image_height: 300px
         card_content_padding: ['16', '28', '16', '28']
       type: form:Components.Card
-      layout_properties: {grid_position: 'WFWNVB,GWTWMU'}
+      layout_properties: {grid_position: 'WFWNVB,GWTWMU FEZGBU,LSAKVY'}
       components:
       - name: heading_2_copy
         properties: {text: Chinese Money Plant, bold: true, style: headline}
@@ -70,6 +70,15 @@ components_by_slot:
           align: left
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
+    - name: button_menu_1
+      properties: {}
+      type: form:Components.ButtonMenu
+      layout_properties: {grid_position: 'WFWNVB,GWTWMU WJNLYN,CXSCZI'}
+      components:
+      - name: text_1
+        properties: {visible: true, text: I'm inside the button menu}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: button_1
       properties: {text: Button, appearance: elevated}
       type: form:Components.Button

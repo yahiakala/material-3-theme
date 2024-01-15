@@ -120,12 +120,12 @@ class Text(TextTemplate):
   def tooltip(self, value):
     self._props['tooltip'] = value
     if value:
+      print(value)
       self.tooltip_el = Tooltip(text=value)
-      self.tooltip_node = anvil.js.get_dom_node(self.tooltip_el)
-      print(self.tooltip_node)
+      self.tooltip_node = self.tooltip_el.tooltip_node
       document.body.append(self.tooltip_node)
       self.reference_element = self.dom_nodes['anvil-m3-text-container']
-        
+
       tooltip_events = {
         'mouseenter': self.tooltip_el.show_tooltip,
         'mouseleave': self.tooltip_el.hide_tooltip,
@@ -133,10 +133,13 @@ class Text(TextTemplate):
         'blur': self.tooltip_el.hide_tooltip
         }
       for event, listener in tooltip_events.items():
-        self.reference_element.addEventListener(event, listener)  
+        self.reference_element.addEventListener(event, listener)
+      print('reference:', self.reference_element, 'floating:', self.tooltip_node)
       self._cleanup = fui.auto_update(self.reference_element, self.tooltip_node, placement="bottom-start")
+      
     else:
       if self.tooltip_node:
+        print('cleaning up')
         self.tooltip_node.remove()
         self._cleanup()
         self._cleanup = noop
