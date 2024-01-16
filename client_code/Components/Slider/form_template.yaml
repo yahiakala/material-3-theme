@@ -2,7 +2,8 @@ properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
-- {name: value, type: number, important: true, default_value: null}
+- {name: value, type: number, important: true, default_value: null, description: The value of the slider,
+  group: Key properties}
 - {name: progress_color, type: color, default_value: '', important: true, description: Color of the pogress bar}
 - {name: track_color, type: color, default_value: '', important: true, description: Color of the track}
 - {name: thumb_color, type: color, default_value: '', important: true, description: Color of the slider thumb}
@@ -10,7 +11,7 @@ properties:
 - {name: label_text_color, type: color, default_value: '', important: true, description: Color of the text of the label}
 - {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
   group: Key properties}
-- {name: max, type: number, important: true, default_value: 100, description: The maximum value of the slider,
+- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider,
   group: Key properties}
 - {name: step, type: number, important: true, description: The stepping interval for the slider,
   group: Key properties}
@@ -27,5 +28,5 @@ container:
       >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
       ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
       \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
-      \ type=\"range\" min=\"0\" max=\"100\">\n</div>\n"}
+      \ type=\"range\" min=\"0\" max=\"10\">\n</div>\n"}
   event_bindings: {show: form_show}
