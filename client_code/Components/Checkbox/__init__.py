@@ -12,6 +12,7 @@ import anvil.designer
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self.tooltip_node = None
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -80,7 +81,7 @@ class Checkbox(CheckboxTemplate):
   text = innerText_property('anvil-m3-checkbox-label')
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
   margin = margin_property('anvil-m3-checkbox-component')
-  tooltip = tooltip_property('')
+  tooltip = tooltip_property('anvil-m3-checkbox-container')
 
   @property
   def checkbox_color(self):

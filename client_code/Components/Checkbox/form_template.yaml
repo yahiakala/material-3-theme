@@ -42,9 +42,12 @@ properties:
   options: [left, center, right]
   description: Align this component’s text
 - {name: margin, type: margin, important: true}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
+- {name: show}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
 custom_component: true

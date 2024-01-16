@@ -5,6 +5,9 @@ properties:
   default_binding_prop: true
   options: [Full width, Inset]
 is_package: true
+events:
+- {name: show, default_event: true}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
 custom_component: true

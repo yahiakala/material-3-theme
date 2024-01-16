@@ -393,6 +393,8 @@ toolbox_item: {}
 is_package: true
 events:
 - {name: click, description: when the component is clicked, default_event: true}
+- {name: show}
+- {name: hide}
 components: []
 custom_component_container: false
 container:
