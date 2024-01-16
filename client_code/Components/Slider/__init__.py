@@ -75,7 +75,8 @@ class Slider(SliderTemplate):
   def do_hide_label(self):
     self.label_container.remove()
 
-  thumb_color = color_property('anvil-m3-button-text', 'color', 'text_color')
+  progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
+  track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
 
   # @property
   # def value(self):
