@@ -21,7 +21,10 @@ properties:
   group: Key properties}
 - {name: step, type: number, important: true, description: The stepping interval for the slider,
   group: Key properties}
-- {name: margin, type: margin, important: true}
+- name: margin
+  type: margin
+  important: true
+  default_value: ['10', '10', '10', '10']
 is_package: true
 slots: {}
 events: []
