@@ -19,7 +19,7 @@ components:
 - name: slider_4
   properties: {min: 0, track_color: 'theme:Tertiary Container', thumb_color: 'theme:Error',
     progress_color: 'theme:Primary Container', show_label: true, label_color: 'theme:Tertiary
-      Container', value: 5, label_text_color: 'theme:Tertiary Container', step: null}
+      Container', value: 5, label_text_color: 'theme:Primary', step: null}
   type: form:Components.Slider
   layout_properties: {grid_position: 'DGEFUT,UPMBMR'}
   data_bindings: []
