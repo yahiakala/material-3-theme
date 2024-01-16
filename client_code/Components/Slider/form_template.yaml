@@ -8,9 +8,12 @@ properties:
 - {name: thumb_color, type: color, default_value: '', important: true, description: Color of the slider thumb}
 - {name: label_color, type: color, default_value: '', important: true, description: Color of the background of the label}
 - {name: label_text_color, type: color, default_value: '', important: true, description: Color of the text of the label}
-- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider}
-- {name: max, type: number, important: true, default_value: 100, description: The maximum value of the slider}
-- {name: step, type: number, important: true, description: The stepping interval for the slider}
+- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
+  group: Key properties}
+- {name: max, type: number, important: true, default_value: 100, description: The maximum value of the slider,
+  group: Key properties}
+- {name: step, type: number, important: true, description: The stepping interval for the slider,
+  group: Key properties}
 is_package: true
 slots: {}
 events: []
