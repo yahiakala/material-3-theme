@@ -7,6 +7,7 @@ from anvil.js.window import document
 from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
 from .utils import noop, fui
 from .Components.Tooltip import Tooltip
+import anvil.designer
 
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
@@ -151,7 +152,8 @@ def padding_property(dom_node_name, prop_name="padding"):
 def tooltip_property(dom_node_name, prop_name="tooltip"):
   #To use this property, add self.tooltip_node = None to the init of your component
   def set_tooltip(self, value):
-    if anvil.in_d
+    if anvil.designer.in_designer:
+      return
     self._cleanup = noop
     reference_element = self.dom_nodes[dom_node_name]
     if value:
