@@ -1,4 +1,6 @@
-
+element {
+  --anvil-m3-slider-thumb-color: var(--anvil-m3-primary);
+}
 
 .anvil-m3-slider { position: relative; margin: 20px; z-index: 1; }
 .anvil-m3-slider input {
@@ -33,7 +35,7 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: var(--anvil-m3-primary);
+  background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -8px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
@@ -43,7 +45,7 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: var(--anvil-m3-primary);
+  background: var(--anvil-m3-thumb-color);
   cursor: pointer;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
 }
@@ -52,7 +54,7 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: var(--anvil-m3-primary);
+  background: var(--anvil-m3-thumb-color);
   cursor: pointer;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
 }
