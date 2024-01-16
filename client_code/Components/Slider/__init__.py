@@ -78,14 +78,14 @@ class Slider(SliderTemplate):
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
 
-  # @property
-  # def value(self):
-  #   return self._value
+  @property
+  def value(self):
+    return self._value
 
-  # @value.setter
-  # def value(self, value):
-  #   self.dom_nodes["anvil-m3-slider-input"].value = value
-  #   # self.update_progress()
+  @value.setter
+  def value(self, value):
+    self.dom_nodes["anvil-m3-slider-input"].value = value
+    # self.update_progress()
   
   @property
   def show_label(self):
