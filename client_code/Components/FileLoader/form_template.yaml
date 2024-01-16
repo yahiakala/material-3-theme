@@ -13,7 +13,7 @@ properties:
 - {name: show_state, type: boolean, default_value: false, important: false, description: 'If
     True, display a message describing selected files.', group: Other}
 - {name: text, type: string, default_value: File upload, important: true, description: The text displayed on this component,
-  group: Common}
+  group: Key Properties}
 - name: material_icon
   type: enum
   important: true
@@ -378,7 +378,7 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: file_upload
-  group: Common
+  group: Key Properties
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.,
   designerHint: enabled, group: Interaction, designer_hint: enabled}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
@@ -412,7 +412,9 @@ properties:
   type: margin
   important: true
   default_value: ['8', '8', '8', '8']
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
+  group: Layout
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 is_package: true
 events:
 - name: change

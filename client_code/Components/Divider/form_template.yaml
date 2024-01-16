@@ -4,6 +4,8 @@ properties:
   default_value: Full width
   default_binding_prop: true
   options: [Full width, Inset]
+  group: Key Properties
+  important: true
 is_package: true
 events:
 - {name: show, default_event: true}

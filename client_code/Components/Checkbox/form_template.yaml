@@ -13,7 +13,7 @@ properties:
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.,
   group: Interaction, important: true}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
-  designerHint: visible, important: true, group: Appearance, designer_hint: visible}
+  designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined,
   designerHint: font-underline, designer_hint: font-underline, group: Text}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
@@ -41,8 +41,9 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   description: Align this component’s text
-- {name: margin, type: margin, important: true}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
+- {name: margin, type: margin, important: true, group: Layout}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
