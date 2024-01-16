@@ -5,7 +5,7 @@ properties:
 - {name: value, type: number, important: true, default_value: 50}
 - {name: progress_color, type: color, default_value: '', important: true, description: Color of the pogress bar}
 - {name: track_color, type: color, default_value: '', important: true, description: Color of the track}
-- {name: thumb_color, type: color, default_value: '', important: true}
+- {name: thumb_color, type: color, default_value: '', important: true, description: Color of the slider thumb}
 is_package: true
 slots: {}
 events: []

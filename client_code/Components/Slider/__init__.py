@@ -2,7 +2,7 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
-from ...Functions import enabled_property, value_property, color_property
+from ...Functions import enabled_property, value_property, color_property, property_with_callback
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -76,14 +76,14 @@ class Slider(SliderTemplate):
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
 
-  # selected_background_color = property_with_callback('selected_background_color', _set_thumb_color)
 
   def _set_thumb_color(self, value=None):
-    if self.selected:
-      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.selected_background_color) if self.selected_background_color else None
+    if self.thumb_color:
+      document.body.style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.selected_thumb_color))
     else:
-      self.dom_nodes['anvil-m3-switch-slider'].style.backgroundColor = theme_color_to_css(self.unselected_background_color) if self.unselected_background_color else None
-      self.dom_nodes['anvil-m3-switch-slider'].style.borderColor = theme_color_to_css(self.unselected_outline_color) if self.unselected_outline_color else None
+      document.body.style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-on-primary)')
+
+  thumb_color = property_with_callback('thumb_color', _set_thumb_color)
 
   @property
   def value(self):
