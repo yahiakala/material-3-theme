@@ -1,22 +1,22 @@
 properties:
 - {name: url, type: string, default_value: '', group: Other, important: false, description: The target URL of the link}
-- {name: icon, type: icon, default_value: 'fa:star'}
+- {name: icon, type: icon, default_value: 'fa:star', group: Other}
 - {name: text, type: string, default_value: Label, description: Text for the Link,
-  group: Common, important: true}
+  group: Key Properties, important: true}
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
-  important: true, group: Appearance}
+  important: true, group: Interaction}
 - {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
-  group: Other}
+  group: Key Properties}
 - {name: badge_count, type: number, default_value: '', description: The number to display on the badge,
-  group: Other}
+  group: Key Properties}
 - {name: text_color, type: color, default_value: '', description: Color of the text,
-  group: Appearance}
+  group: Look and Feel}
 - {name: font_size, type: string, default_value: '', description: Size of the font,
   group: Text}
 - {name: font_family, type: string, default_value: '', description: Font family of the text,
   group: Text}
 - {name: icon_color, type: color, default_value: '', description: Color of the icon,
-  group: Appearance}
+  group: Look and Feel}
 - {name: icon_size, type: string, default_value: '', description: Size of the icon in pixels,
   group: Icon}
 - name: material_icon
@@ -384,9 +384,9 @@ properties:
     zoom_out, zoom_out_map, '']
   description: The icon to display on this component
   important: true
-  group: Common
+  group: Key Properties
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
-  default_binding_prop: true, default_value: null, group: Common, important: true}
+  default_binding_prop: true, default_value: null, group: Key Properties, important: true}
 event_bindings: {show: form_show}
 custom_component: true
 toolbox_item: {}

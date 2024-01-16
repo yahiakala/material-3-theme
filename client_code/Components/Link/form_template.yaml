@@ -1,14 +1,14 @@
 properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component,
-  multiline: true, group: Common, important: true}
+  multiline: true, group: Key Properties, important: true}
 - {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.,
-  group: Common, important: true}
+  group: Key Properties, important: true}
 - name: align
   type: enum
   options: [left, center, right]
   default_value: left
   designerHint: align-horizontal
-  group: Appearance
+  group: Layout
   important: true
   designer_hint: align-horizontal
 - {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
@@ -388,16 +388,18 @@ properties:
 - {name: underline, type: boolean, default_value: true, designerHint: font-underline,
   description: Display this component’s text underlined, group: Text, designer_hint: font-underline}
 - {name: visible, type: boolean, default_value: true, description: 'Should this component
-    be displayed?', group: Appearance, designerHint: visible, important: true, designer_hint: visible}
-- {name: text_color, type: color, default_value: '', group: Appearance, description: The color of this component's text,
+    be displayed?', group: Look and Feel, designerHint: visible, important: true,
+  designer_hint: visible}
+- {name: text_color, type: color, default_value: '', group: Look and Feel, description: The color of this component's text,
   important: true}
-- {name: icon_color, type: color, default_value: '', group: Appearance, description: The color of the icon,
+- {name: icon_color, type: color, default_value: '', group: Look and Feel, description: The color of the icon,
   important: false}
 - {name: icon_size, type: number, default_value: 24, group: Icon, description: The size of the icon in pixels}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
-  group: Appearance}
-- {name: margin, type: margin, important: true}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
+  group: Look and Feel}
+- {name: margin, type: margin, important: true, group: Layout}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}

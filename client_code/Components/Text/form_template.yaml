@@ -1,36 +1,35 @@
 properties:
 - name: style
   type: enum
-  default_binding_prop: true
   options: [body, label]
   default_value: body
   important: true
-  group: Appearance
+  group: Look and Feel
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
-  group: Appearance
+  group: Look and Feel
   important: true
 - name: align
   type: enum
   options: [left, center, right]
   default_value: left
   important: true
-  group: Appearance
+  group: Layout
   designer_hint: align-horizontal
 - {name: background_color, type: color, default_value: '', description: The background colour of this component.,
-  group: Appearance}
+  group: Look and Feel}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
   group: Text, designer_hint: font-bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
-  group: Appearance}
+  group: Look and Feel}
 - {name: font, type: string, default_value: '', description: The font to use for this component.,
   group: Text}
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels,
   group: Text, important: true}
 - {name: text_color, type: color, default_value: '', description: The colour of the text,
-  group: Appearance}
+  group: Look and Feel}
 - name: material_icon
   type: enum
   options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -398,7 +397,7 @@ properties:
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,
   group: Text, designer_hint: font-italic}
 - {name: text, type: string, default_value: '', description: The text displayed on this component,
-  multiline: true, group: Common}
+  multiline: true, group: Key Properties, default_binding_prop: true}
 - {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined,
   designer_hint: font-underline, group: Text}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component should be displayed on the page.,
