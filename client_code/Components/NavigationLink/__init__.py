@@ -5,13 +5,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, href_property, innerHTML_property, font_family_property, font_size_property
+from ...Functions import color_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self.tooltip_node = None
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
@@ -141,6 +142,8 @@ class NavigationLink(NavigationLinkTemplate):
   font_size = font_size_property('anvil-m3-navigation-link-text', 'font_size')
   
   icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
+
+  tooltip = tooltip_property('anvil-m3-navigation-link-container')
 
   
 
