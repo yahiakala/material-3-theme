@@ -121,6 +121,8 @@ class Slider(SliderTemplate):
   def step(self, value):
     self._props['step'] = value
     self.dom_nodes["anvil-m3-slider-input"].step = value
+    if not value:
+      value = 1
     self._update_progress()
   
   @property
