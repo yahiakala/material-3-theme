@@ -9,8 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: text_1_copy_1_copy_1
-    properties: {text: Checkbox Component, font_size: 25, text_color: 'rgb(103, 80,
-        164)'}
+    properties: {text: Checkbox Component, font_size: 25, text_color: 'theme:Primary'}
     type: form:Components.Text
     layout_properties: {grid_position: ''}
   - name: text_2_copy_1_copy_1
