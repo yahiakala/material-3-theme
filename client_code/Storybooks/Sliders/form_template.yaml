@@ -13,9 +13,9 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_3
-  properties: {show_label: true, enabled: true, value: 0}
+  properties: {show_label: true, enabled: true, value: 0, test_label: true}
   type: form:Components.Slider
-  layout_properties: {grid_position: 'XJRGGW,EWNWOA'}
+  layout_properties: {grid_position: 'ZTSDXV,QAGLHX'}
 - name: slider_4
   properties: {progress_color: 'theme:Primary Container', track_color: 'theme:Tertiary
       Container', value: 50, thumb_color: 'theme:Error'}
