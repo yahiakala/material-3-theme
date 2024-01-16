@@ -3,7 +3,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
 - {name: value, type: number, important: true, default_value: 50}
-- {name: thumb_color, type: color, default_value: '', important: true, description: Color of the thumb}
+- {name: thumb_color, type: color, default_value: '', important: true, description: Color of the pogress bar}
 is_package: true
 slots: {}
 events: []
