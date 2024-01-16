@@ -21,7 +21,6 @@ class Text(TextTemplate):
     self._props = properties
     self.tooltip_node = None
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-removed", self._cleanup)
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
