@@ -2,7 +2,7 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
-from ...Functions import enabled_property, value_property
+from ...Functions import enabled_property, value_property, color_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -75,14 +75,16 @@ class Slider(SliderTemplate):
   def do_hide_label(self):
     self.label_container.remove()
 
-  @property
-  def value(self):
-    return self._value
+  thumb_color = color_property('anvil-m3-button-text', 'color', 'text_color')
 
-  @value.setter
-  def value(self, value):
-    self.dom_nodes["anvil-m3-slider-input"].value = value
-    # self.update_progress()
+  # @property
+  # def value(self):
+  #   return self._value
+
+  # @value.setter
+  # def value(self, value):
+  #   self.dom_nodes["anvil-m3-slider-input"].value = value
+  #   # self.update_progress()
   
   @property
   def show_label(self):

@@ -5,7 +5,7 @@ components:
   type: form:Components.Text
   layout_properties: {grid_position: 'NLZEXB,ZFMOMV'}
 - name: slider_1
-  properties: {value: 100, show_label: false, enabled: true}
+  properties: {value: 50, show_label: false, enabled: true}
   type: form:Components.Slider
   layout_properties: {grid_position: 'SBBPDL,GHVCFV'}
 - name: slider_2
