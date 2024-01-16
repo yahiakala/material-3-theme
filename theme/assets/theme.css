@@ -58,6 +58,7 @@
   --anvil-m3-on-surface-variant-overlay-2: %color:On Surface Variant Overlay 2%;
   --anvil-m3-inverse-on-surface-overlay-1: %color:Inverse On Surface Overlay 1%;
   --anvil-m3-inverse-on-surface-overlay-2: %color:Inverse On Surface Overlay 2%;
+  --anvil-m3-slider-thumb-color: var(--anvil-m3-primary);
 
 }
 
