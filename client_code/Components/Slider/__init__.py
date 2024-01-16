@@ -50,6 +50,7 @@ class Slider(SliderTemplate):
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
     progress_right, progress_top = self.check_position()
+    if self._show_label:
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
     self.label_container.style.top = str(progress_top) + "px"
@@ -69,7 +70,7 @@ class Slider(SliderTemplate):
     if self.show_label:
       self.label_container.remove()
       document.body.appendChild(self.label_container)
-      self.update_progress()
+      # self.update_progress()
 
   def do_hide_label(self):
     self.label_container.remove()
@@ -81,7 +82,7 @@ class Slider(SliderTemplate):
   @value.setter
   def value(self, value):
     self.dom_nodes["anvil-m3-slider-input"].value = value
-    self.update_progress()
+    # self.update_progress()
   
   @property
   def show_label(self):
