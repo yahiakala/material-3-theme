@@ -82,6 +82,10 @@ class Slider(SliderTemplate):
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
+
+  @property
+  def label_color(self):
+    
   
   @property
   def value(self):
