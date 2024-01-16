@@ -19,7 +19,7 @@ class Slider(SliderTemplate):
   def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
-    self.resize_observer = ResizeObserver(self.on_window_resize)
+    self.resize_observer = ResizeObserver(self._on_window_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
   
   def _on_cleanup(self, **event_args):
@@ -31,14 +31,14 @@ class Slider(SliderTemplate):
     self.update_progress()
 
   def on_mouse_down(self, event):
-    self.do_show_label()
+    self._do_show_label()
     document.addEventListener("mouseup", self.on_mouse_up)
 
   def on_mouse_up(self, event):
-    self.do_hide_label()
+    self._do_hide_label()
     document.removeEventListener("mouseup", self.on_mouse_up)
 
-  def on_window_resize(self, *args):
+  def _on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
     
   def update_progress(self):
@@ -64,13 +64,13 @@ class Slider(SliderTemplate):
     progress_top = progress_rect.top
     return progress_right, progress_top
 
-  def do_show_label(self):
+  def _do_show_label(self):
     if self.show_label:
       self.label_container.remove()
       document.body.appendChild(self.label_container)
       self.update_progress()
 
-  def do_hide_label(self):
+  def _do_hide_label(self):
     self.label_container.remove()
 
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
