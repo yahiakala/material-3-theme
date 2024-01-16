@@ -6,16 +6,15 @@ from ...Functions import enabled_property, value_property, color_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
-    self._props = properties
-    self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-    
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
     self.label = document.createElement('div')
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
+    self._props = properties
+    self.init_components(**properties)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
