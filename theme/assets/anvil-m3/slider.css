@@ -2,7 +2,7 @@ element {
   --anvil-m3-slider-thumb-color: var(--anvil-m3-primary);
 }
 
-.anvil-m3-slider { position: relative; margin: 20px; z-index: 1; }
+.anvil-m3-slider { position: relative; margin: 10px; z-index: 1; }
 .anvil-m3-slider input {
   width: 100%;
   height: 100%;
@@ -94,6 +94,7 @@ element {
   transform: rotate(225deg);
   margin-top: -50px;
   margin-left: -14px;
+  z-index: 100;
 }
 
 .anvil-m3-slider-label { transform: rotate(135deg); }

@@ -9,7 +9,9 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'SBBPDL,GHVCFV'}
 - name: slider_2
-  properties: {enabled: false}
+  properties:
+    enabled: false
+    margin: ['6', '5', '6', '5']
   type: form:Components.Slider
   layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_3
@@ -17,9 +19,17 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'ZTSDXV,QAGLHX'}
 - name: slider_4
-  properties: {min: 0, track_color: 'theme:Tertiary Container', thumb_color: 'theme:Error',
-    progress_color: 'theme:Primary Container', show_label: true, label_color: 'theme:Tertiary
-      Container', value: 5, label_text_color: 'theme:Primary', step: null}
+  properties:
+    min: 0
+    track_color: theme:Tertiary Container
+    margin: ['6', '5', '0', '5']
+    thumb_color: theme:Error
+    progress_color: theme:Primary Container
+    show_label: true
+    label_color: theme:Tertiary Container
+    value: 5
+    label_text_color: theme:Primary
+    step: null
   type: form:Components.Slider
   layout_properties: {grid_position: 'DGEFUT,UPMBMR'}
   data_bindings: []

@@ -2,7 +2,7 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
-from ...Functions import enabled_property, value_property, color_property, property_with_callback, theme_color_to_css
+from ...Functions import enabled_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -82,6 +82,7 @@ class Slider(SliderTemplate):
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
+  # margin = margin_property("anvil-m3-slider")
 
   @property
   def label_color(self):
