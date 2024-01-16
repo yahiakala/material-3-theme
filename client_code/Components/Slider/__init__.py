@@ -81,7 +81,7 @@ class Slider(SliderTemplate):
     if self.thumb_color:
       document.body.style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.selected_thumb_color))
     else:
-      document.body.style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-on-primary)')
+      document.body.style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
 
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
 
