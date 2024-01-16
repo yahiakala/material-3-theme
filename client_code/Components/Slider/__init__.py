@@ -50,10 +50,9 @@ class Slider(SliderTemplate):
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
     progress_right, progress_top = self.check_position()
-    if self._show_label:
-      self.label.textContent = slider.value
-      self.label_container.style.left = str(progress_right) + "px"
-      self.label_container.style.top = str(progress_top) + "px"
+    self.label.textContent = slider.value
+    self.label_container.style.left = str(progress_right) + "px"
+    self.label_container.style.top = str(progress_top) + "px"
 
   def get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
