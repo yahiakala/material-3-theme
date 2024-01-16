@@ -763,6 +763,8 @@ properties:
 is_package: true
 events:
 - {name: change, default_event: true, description: When the state of the component is changed}
+- {name: show}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
 custom_component: true
