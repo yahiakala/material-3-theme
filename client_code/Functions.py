@@ -154,6 +154,7 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
   def set_tooltip(self, value):
     if anvil.designer.in_designer:
       return
+      
     self._cleanup = noop
     reference_element = self.dom_nodes[dom_node_name]
     if value:
