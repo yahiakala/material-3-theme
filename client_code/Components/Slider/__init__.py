@@ -112,6 +112,16 @@ class Slider(SliderTemplate):
     self._props['max'] = value
     self.dom_nodes["anvil-m3-slider-input"].max = value
     self._update_progress()
+
+  @property
+  def step(self):
+    return self._props.get('step')
+
+  @step.setter
+  def step(self, value):
+    self._props['step'] = value
+    self.dom_nodes["anvil-m3-slider-input"].step = value
+    self._update_progress()
   
   @property
   def show_label(self):
