@@ -70,7 +70,7 @@ components_by_slot:
           align: left
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
-        event_bindings: {show: button_2_copy_show}
+        event_bindings: {}
     - name: button_1
       properties: {text: Button, appearance: elevated}
       type: form:Components.Button

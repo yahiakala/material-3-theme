@@ -6,7 +6,6 @@ from anvil.tables import app_tables
 from anvil.js.window import document
 from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
 from .utils import noop, fui
-from .Components.Tooltip import Tooltip
 import anvil.designer
 
 def theme_color_to_css(color:str):
@@ -158,21 +157,23 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
     self._cleanup = noop
     reference_element = self.dom_nodes[dom_node_name]
     if value:
-      tooltip_el = Tooltip(text=value)
-      self.tooltip_node = tooltip_el.tooltip_node
+      self.tooltip_node = document.createElement('div')
+      self.tooltip_node.innerText = value
+      self.tooltip_node.classList.add('anvil-m3-tooltip')
       document.body.append(self.tooltip_node)
+      self.reference_element = self.dom_nodes[dom_node_name]
+      
+      def show_tooltip(e):
+        self.tooltip_node.style.opacity = 1
 
-      def show_tooltip(self, e):
-        self.dom_nodes['anvil-m3-tooltip'].style.opacity = 1
-  
-      def hide_tooltip(self, e):
-        self.dom_nodes['anvil-m3-tooltip'].style.opacity = 0
+      def hide_tooltip(e):
+        self.tooltip_node.style.opacity = 0
 
       tooltip_events = {
-        'mouseenter': tooltip_el.show_tooltip,
-        'mouseleave': tooltip_el.hide_tooltip,
-        'focus': tooltip_el.show_tooltip,
-        'blur': tooltip_el.hide_tooltip
+        'mouseenter': show_tooltip,
+        'mouseleave': hide_tooltip,
+        'focus': show_tooltip,
+        'blur': hide_tooltip
         }
       for event, listener in tooltip_events.items():
         reference_element.addEventListener(event, listener)

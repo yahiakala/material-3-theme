@@ -10,8 +10,6 @@ from anvil.js.window import document
 from ...Functions import tooltip_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
 import time
-from ..Tooltip import Tooltip
-
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
 
