@@ -18,6 +18,9 @@ properties:
   group: Look and Feel
 - {name: margin, type: margin, important: true}
 is_package: true
+events:
+- {name: show, default_event: true}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
 custom_component: true

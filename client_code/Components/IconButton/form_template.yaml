@@ -399,6 +399,8 @@ properties:
 is_package: true
 events:
 - {name: click, default_event: true}
+- {name: show}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
 custom_component: true

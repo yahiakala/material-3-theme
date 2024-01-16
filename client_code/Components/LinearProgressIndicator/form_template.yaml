@@ -13,6 +13,9 @@ properties:
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
 - {name: margin, type: margin, important: true}
 is_package: true
+events:
+- {name: show, default_event: true}
+- {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
 custom_component: true

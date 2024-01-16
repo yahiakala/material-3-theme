@@ -11,17 +11,21 @@ properties:
   group: Interaction}
 - {name: visible, type: boolean, default_value: true, designerHint: visible, designer_hint: visible,
   group: Look and Feel}
-is_package: true
-data_bindings: []
+custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
-custom_component: true
+is_package: true
+data_bindings: []
+events:
+- {name: show, default_event: true}
+- {name: hide}
 components:
 - name: menu_button
   properties: {}
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
+custom_component_container: true
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
@@ -32,4 +36,3 @@ container:
       >\n      <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
       \ #BBB;\"><i>Menu items go here</i></p>\n  </div>\n</div>"}
   event_bindings: {show: form_show}
-custom_component_container: true

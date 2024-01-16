@@ -49,6 +49,8 @@ is_package: true
 events:
 - {name: pressed_enter, default_event: true}
 - {name: change}
+- {name: show}
+- {name: hide}
 toolbox_item: {hidden: true}
 custom_component: true
 components: []
