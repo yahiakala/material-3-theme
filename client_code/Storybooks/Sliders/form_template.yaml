@@ -18,7 +18,7 @@ components:
   layout_properties: {grid_position: 'ZTSDXV,QAGLHX'}
 - name: slider_4
   properties: {progress_color: 'theme:Primary Container', track_color: 'theme:Tertiary
-      Container', value: 50, thumb_color: 'theme:Error'}
+      Container', value: 50, thumb_color: 'theme:Error', min: 0, show_label: true}
   type: form:Components.Slider
   layout_properties: {grid_position: 'DGEFUT,UPMBMR'}
   data_bindings: []

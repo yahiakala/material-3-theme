@@ -2,12 +2,14 @@ properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
-- {name: value, type: number, important: true, default_value: 50}
+- {name: value, type: number, important: true, default_value: null}
 - {name: progress_color, type: color, default_value: '', important: true, description: Color of the pogress bar}
 - {name: track_color, type: color, default_value: '', important: true, description: Color of the track}
 - {name: thumb_color, type: color, default_value: '', important: true, description: Color of the slider thumb}
 - {name: label_color, type: color, default_value: '', important: true, description: Color of the background of the label}
 - {name: label_text_color, type: color, default_value: '', important: true, description: Color of the text of the label}
+- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider}
+- {name: max, type: number, important: true, default_value: 100, description: The maximum value of the slider}
 is_package: true
 slots: {}
 events: []
@@ -21,5 +23,5 @@ container:
       >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
       ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
       \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
-      \ type=\"range\" min=\"0\" max=\"100\" step=\"0.1\">\n</div>\n"}
+      \ type=\"range\" min=\"0\" max=\"100\">\n</div>\n"}
   event_bindings: {show: form_show}
