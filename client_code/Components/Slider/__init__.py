@@ -99,7 +99,7 @@ class Slider(SliderTemplate):
   @label_text_color.setter
   def label_text_color(self, value):
     self._props['label_text_color'] = value
-    
+    self.label_container.style.color = theme_color_to_css(value)
 
   @property
   def value(self):
