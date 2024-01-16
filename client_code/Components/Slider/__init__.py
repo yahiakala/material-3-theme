@@ -80,20 +80,21 @@ class Slider(SliderTemplate):
 
   @property
   def value(self):
-    return self._value
+    return self._props.get('value')
 
   @value.setter
   def value(self, value):
+    self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
     self.update_progress()
   
   @property
   def show_label(self):
-    return self._show_label
+    return self._props.get('show_label')
 
   @show_label.setter
   def show_label(self, value):
-    self._show_label = value
+    self._props['show_label'] = value
 
   @property
   def enabled(self):
