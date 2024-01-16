@@ -2,13 +2,13 @@ properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
-- {name: value, type: number, important: true, default_value: null, description: The value of the slider,
-  group: Key properties}
 - {name: progress_color, type: color, default_value: '', important: true, description: Color of the pogress bar}
 - {name: track_color, type: color, default_value: '', important: true, description: Color of the track}
 - {name: thumb_color, type: color, default_value: '', important: true, description: Color of the slider thumb}
 - {name: label_color, type: color, default_value: '', important: true, description: Color of the background of the label}
 - {name: label_text_color, type: color, default_value: '', important: true, description: Color of the text of the label}
+- {name: value, type: number, important: true, default_value: 5, description: The value of the slider,
+  group: Key properties}
 - {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
   group: Key properties}
 - {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider,
