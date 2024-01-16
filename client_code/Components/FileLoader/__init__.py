@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
+from ...Functions import underline_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
@@ -14,6 +14,7 @@ class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
+    self.tooltip_node = None
     self.init_components(**properties)
 
     self._handle_change = self._handle_change
@@ -78,6 +79,7 @@ class FileLoader(FileLoaderTemplate):
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
   border = style_property('anvil-m3-fileloader-container', 'border', 'border')
   margin = margin_property('anvil-m3-fileloader-form')
+  tooltip = tooltip_property('anvil-m3-fileloader-form')
 
   @property
   def show_state(self):
