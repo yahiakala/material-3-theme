@@ -162,6 +162,12 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
       self.tooltip_node = tooltip_el.tooltip_node
       document.body.append(self.tooltip_node)
 
+      def show_tooltip(self, e):
+        self.dom_nodes['anvil-m3-tooltip'].style.opacity = 1
+  
+      def hide_tooltip(self, e):
+        self.dom_nodes['anvil-m3-tooltip'].style.opacity = 0
+
       tooltip_events = {
         'mouseenter': tooltip_el.show_tooltip,
         'mouseleave': tooltip_el.hide_tooltip,
