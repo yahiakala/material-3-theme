@@ -4,13 +4,13 @@ properties:
   default_binding_prop: true
   options: [display, headline, title]
   default_value: headline
-  group: Common
+  group: Key Properties
   important: true
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
-  group: Appearance
+  group: Key Properties
   important: true
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels,
   group: Text, important: true}
@@ -391,22 +391,22 @@ properties:
   group: Icon
   important: true
 - {name: text_color, type: color, default_value: '', description: The foreground colour of this component.,
-  group: Appearance}
+  group: Look and Feel}
 - {name: background_color, type: color, default_value: '', description: The background colour of this component.,
-  group: Appearance}
+  group: Look and Feel}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
-  group: Appearance}
+  group: Look and Feel}
 - name: align
   type: enum
   options: [left, center, right]
   designer_hint: align-horizontal
-  group: Appearance
+  group: Layout
   important: true
 - {name: icon_size, type: number, description: 'The size in pixels of the icon. ',
   group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.', group: Appearance}
-- {name: margin, type: margin, important: true}
+- {name: margin, type: margin, important: true, group: Layout}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:

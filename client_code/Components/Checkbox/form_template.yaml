@@ -23,15 +23,15 @@ properties:
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,
   designerHint: font-bold, group: Text, designer_hint: font-bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
-  group: Appearance}
+  group: Look and Feel}
 - {name: font, type: string, default_value: '', description: The font family to use for this component.,
   group: Text}
 - {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox,
-  group: Appearance}
+  group: Look and Feel}
 - {name: text_color, type: color, default_value: '', description: The color of the component's label,
-  group: Appearance}
+  group: Look and Feel}
 - {name: background, type: color, default_value: '', description: The background colour of this component.,
-  group: Appearance}
+  group: Look and Feel}
 - default_value: left
   group: Layout
   important: true

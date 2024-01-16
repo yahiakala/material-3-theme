@@ -378,15 +378,15 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
   default_value: file_upload
-  group: Key Properties
+  group: Icon
 - {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction.,
   designerHint: enabled, group: Interaction, designer_hint: enabled}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?', designerHint: visible, group: Appearance, designer_hint: visible}
+    this component be displayed?', designerHint: visible, group: Look and Feel, designer_hint: visible}
 - {name: text_color, type: color, default_value: '', important: true, description: The color of the component's text.,
-  group: Appearance}
-- {name: icon_color, type: color, default_value: '', important: false, group: Appearance}
-- {name: background_color, type: color, default_value: '', important: false, group: Appearance}
+  group: Look and Feel}
+- {name: icon_color, type: color, default_value: '', important: false, group: Look and Feel}
+- {name: background_color, type: color, default_value: '', important: false, group: Look and Feel}
 - {name: underline, type: boolean, default_value: false, important: true, designerHint: font-underline,
   description: Display this component’s text underlined, group: Text, designer_hint: font-underline}
 - {name: italic, type: boolean, default_value: false, important: true, designerHint: font-italic,
@@ -405,9 +405,9 @@ properties:
   options: [left, center, right]
   designerHint: align-horizontal
   default_value: left
-  group: Appearance
+  group: Layout
   designer_hint: align-horizontal
-- {name: border, type: string, default_value: '', important: false, group: Appearance}
+- {name: border, type: string, default_value: '', important: false, group: Look and Feel}
 - name: margin
   type: margin
   important: true
