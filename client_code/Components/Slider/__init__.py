@@ -2,7 +2,7 @@ from ._anvil_designer import SliderTemplate
 from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
-from ...Functions import enabled_property, value_property, color_property, property_with_callback
+from ...Functions import enabled_property, value_property, color_property, property_with_callback, theme_color_to_css
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -79,7 +79,7 @@ class Slider(SliderTemplate):
 
   def _set_thumb_color(self, value=None):
     if self.thumb_color:
-      document.body.style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.selected_thumb_color))
+      document.body.style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color))
     else:
       document.body.style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
 

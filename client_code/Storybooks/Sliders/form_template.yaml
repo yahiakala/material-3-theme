@@ -18,7 +18,8 @@ components:
   layout_properties: {grid_position: 'XJRGGW,EWNWOA'}
 - name: slider_4
   properties: {progress_color: 'theme:Primary', track_color: 'theme:Tertiary Container',
-    value: 50, thumb_color: ''}
+    value: 50, thumb_color: 'theme:Secondary Container'}
   type: form:Components.Slider
   layout_properties: {grid_position: 'DGEFUT,UPMBMR'}
+  data_bindings: []
 is_package: true
