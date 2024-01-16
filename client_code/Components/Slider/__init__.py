@@ -28,7 +28,7 @@ class Slider(SliderTemplate):
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
     
   def on_input(self, event):
-    self.update_progress()
+    self._update_progress()
 
   def on_mouse_down(self, event):
     self._do_show_label()
@@ -39,26 +39,26 @@ class Slider(SliderTemplate):
     document.removeEventListener("mouseup", self.on_mouse_up)
 
   def _on_window_resize(self, *args):
-    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
+    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     
-  def update_progress(self):
+  def _update_progress(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]
     progress = self.dom_nodes["anvil-m3-slider-progress"]
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
-    progress_right, progress_top = self.check_position()
+    progress_right, progress_top = self._check_position()
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
     self.label_container.style.top = str(progress_top) + "px"
 
-  def get_track_width(self):
+  def _get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
     input_width = input.getBoundingClientRect().width
     return str(input_width - 20) + "px"
 
-  def check_position(self):
+  def _check_position(self):
     progress_rect = self.dom_nodes["anvil-m3-slider-progress"].getBoundingClientRect()
     progress_right = progress_rect.right
     progress_top = progress_rect.top
@@ -68,7 +68,7 @@ class Slider(SliderTemplate):
     if self.show_label:
       self.label_container.remove()
       document.body.appendChild(self.label_container)
-      self.update_progress()
+      self._update_progress()
 
   def _do_hide_label(self):
     self.label_container.remove()
@@ -84,7 +84,7 @@ class Slider(SliderTemplate):
   def value(self, value):
     self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
-    self.update_progress()
+    self._update_progress()
   
   @property
   def show_label(self):
@@ -112,7 +112,7 @@ class Slider(SliderTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self.get_track_width()
+    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
 
 
 
