@@ -13,7 +13,7 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_3
-  properties: {show_label: true, enabled: true}
+  properties: {show_label: true, enabled: true, value: 100}
   type: form:Components.Slider
   layout_properties: {grid_position: 'XJRGGW,EWNWOA'}
 - name: slider_4
