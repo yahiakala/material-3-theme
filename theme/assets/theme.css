@@ -461,3 +461,21 @@ body {
   }
 }
 
+.anvil-m3-tooltip {
+  background-color: %color:Inverse Surface%;
+  color: %color:Inverse On Surface%;
+  min-height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
+  max-width: 280px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  transition-delay: 0.5s;
+  position:absolute;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+

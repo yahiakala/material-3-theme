@@ -397,6 +397,7 @@ properties:
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
   group: Appearance}
 - {name: margin, type: margin, important: true}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:
 - {name: click, default_event: true, description: clicked}

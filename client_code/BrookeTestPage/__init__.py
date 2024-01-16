@@ -12,7 +12,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # self.layout.layout.show_sidesheet = False
+    self.layout.layout.show_sidesheet = False
     # self.checkbox_1.checked = None
         
   def button_1_click(self, **event_args):
@@ -48,7 +48,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
 
   def button_4_click(self, **event_args):
     """This method is called when the component is clicked"""
-    self.file_loader_1.open_file_selector()
+    self.text_3.tooltip = ""
 
 
 

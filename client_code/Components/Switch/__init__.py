@@ -7,13 +7,14 @@ from anvil.tables import app_tables
 from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
-from ...Functions import theme_color_to_css, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
+from ...Functions import theme_color_to_css, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 import anvil.designer
 
 
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.tooltip_node = None
     self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
@@ -98,6 +99,7 @@ class Switch(SwitchTemplate):
   unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-switch-container')
+  tooltip = tooltip_property('anvil-m3-switch-container')
 
 
   

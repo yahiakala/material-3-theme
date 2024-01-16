@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
-from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
+from ...Functions import underline_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 from anvil.property_utils import set_element_margin
 
 #TODO: figure out what to do with line height
@@ -15,6 +15,7 @@ from anvil.property_utils import set_element_margin
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self.tooltip_node = None
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -46,6 +47,7 @@ class Heading(HeadingTemplate):
   icon_color = color_property('anvil-m3-heading-icon', 'color', 'icon_color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor', 'background_color')
   align = style_property('anvil-m3-heading-container', 'justifyContent', 'align')
+  tooltip = tooltip_property('anvil-m3-heading-container')
 
   @property
   def font_size(self):
