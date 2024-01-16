@@ -412,6 +412,7 @@ properties:
   type: margin
   important: true
   default_value: ['8', '8', '8', '8']
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:
 - name: change
