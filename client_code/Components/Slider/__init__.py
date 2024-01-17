@@ -110,6 +110,8 @@ class Slider(SliderTemplate):
   def value(self, value):
     self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
+    if not value:
+      value = 0
     self._update_progress()
 
   @property
