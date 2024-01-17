@@ -175,7 +175,7 @@ class Slider(SliderTemplate):
     range = self.max - self.min
     # spacing = float(self.step)
     marker_count = (range / self.step) + 1
-    print
+    print(marker_count
     # for i in range(marker_count):
     #   print(i)
   
