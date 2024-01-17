@@ -144,5 +144,5 @@ element {
 .anvil-m3-slider-marker {
   width: 2px;
   height: 2px;
-  background: black;
+  background: var(--anvil-m3-surface);
 }
