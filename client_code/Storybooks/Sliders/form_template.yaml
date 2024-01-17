@@ -30,7 +30,7 @@ components:
     label_color: theme:Tertiary Container
     value: 5
     label_text_color: theme:Primary
-    step: null
+    step: 1
   type: form:Components.Slider
   layout_properties: {grid_position: 'DGEFUT,UPMBMR'}
   data_bindings: []

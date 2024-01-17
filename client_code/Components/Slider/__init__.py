@@ -140,10 +140,10 @@ class Slider(SliderTemplate):
 
   @step.setter
   def step(self, value):
-    self._props['step'] = value
-    self.dom_nodes["anvil-m3-slider-input"].step = value
     if not value:
       value = 1
+    self._props['step'] = value
+    self.dom_nodes["anvil-m3-slider-input"].step = value
     self._update_progress()
   
   @property
@@ -173,8 +173,7 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
     range = self.max - self.min
-    print(range)
-    print
+    print(self.step)
     # marker_count = (range / float(self.step)) + 1
     # for i in range(marker_count):
       # print(i)
