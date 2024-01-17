@@ -136,3 +136,9 @@ element {
   display: flex;
   justify-content: space-between;
 }
+
+.anvil-m3-slider-marker {
+  width: 2px;
+  height: 2px;
+  background: ba
+}
