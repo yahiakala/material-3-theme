@@ -482,18 +482,16 @@ body {
 .anvil-datepicker input {
   font-size: 16px;
   line-height: 1.5;
-  border-radius: 4px 4px 0 0;
-  background-color: %color:Surface Variant%;
-  color: %color:On Surface Variant%;
   box-shadow: none;
   padding: 8px 16px;
-  border: 0;
-  border-bottom: 1px solid %color:Outline%;
   margin-bottom: 4px;
+  background-color: transparent;
+  border: 1px solid %color:Outline%;
+  border-radius: 4px;
+  color: %color:On Surface%;
 }
 
 .anvil-datepicker input:hover, .anvil-datepicker input:focus {
-  border-bottom: 2px solid %color:Primary%;
-  padding-bottom: 7px;
-  box-shadow: none;
+  border: 2px solid %color:Primary%;
+  padding: 7px 15px;
 }
