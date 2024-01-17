@@ -82,7 +82,7 @@ class Slider(SliderTemplate):
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
-  # margin = margin_property("anvil-m3-slider")
+  margin = margin_property("anvil-m3-slider")
 
   @property
   def label_color(self):
@@ -173,8 +173,3 @@ class Slider(SliderTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
-
-
-
-
-  
