@@ -490,11 +490,19 @@ body {
   border: 1px solid %color:Outline%;
   border-radius: 4px;
   color: %color:On Surface%;
-  height: 56px;
+  height: 56px !important;
   letter-spacing: 0.5px;
 }
 
-.anvil-datepicker input:hover, .anvil-datepicker input:focus {
+.anvil-datepicker input + i.fa-calendar::before {
+  content: none;
+} 
+
+.anvil-datepicker input:hover {
+  border-color: var(--anvil-m3-on-surface);
+}
+
+.anvil-datepicker input:focus {
   border-color: var(--anvil-m3-primary);
   border-width: 2px; 
   padding: 7px 15px;
