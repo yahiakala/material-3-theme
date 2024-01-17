@@ -485,13 +485,13 @@ body {
   box-shadow: none;
   vertical-align: middle;
   padding: 0px 16px;
-  margin-bottom: 4px;
   background-color: transparent;
   border: 1px solid %color:Outline%;
   border-radius: 4px;
   color: %color:On Surface%;
   height: 56px !important;
   letter-spacing: 0.5px;
+
 }
 
 .anvil-datepicker input + i.fa-calendar::before {
@@ -499,8 +499,12 @@ body {
   font-family: "Material Symbols Outlined";
   content: "calendar_today";
   font-size: 24px;
-  bottom: 14px;
+  color: %color:On Surface Variant%;
 } 
+
+.anvil-datepicker input + i.fa-calendar {
+  bottom: 15px;
+}
 
 .anvil-datepicker input:hover {
   border-color: var(--anvil-m3-on-surface);
