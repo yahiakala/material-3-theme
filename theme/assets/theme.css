@@ -491,16 +491,19 @@ body {
   color: %color:On Surface%;
   height: 56px !important;
   letter-spacing: 0.5px;
-
+  transition: all 0.15s ease-out;
 }
 
 .anvil-datepicker input + i.fa-calendar::before {
-  content: none;
   font-family: "Material Symbols Outlined";
   content: "calendar_today";
   font-size: 24px;
   color: %color:On Surface Variant%;
 } 
+
+.anvil-datepicker input + i.fa-calendar:hover::before{
+  background-color: purple;
+}
 
 .anvil-datepicker input + i.fa-calendar {
   bottom: 15px;
