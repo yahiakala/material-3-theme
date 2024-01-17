@@ -133,6 +133,10 @@ element {
 .anvil-m3-slider input:disabled::-ms-thumb:active { outline: none; }
 
 .anvil-m3-slider-markers-container {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 1px;
   display: flex;
   justify-content: space-between;
 }
