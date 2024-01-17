@@ -145,5 +145,5 @@ element {
   width: 3px;
   height: 3px;
   border-radius: 100%;
-  background: var(--anvil-m3-surface);
+  background: var(--anvil-m3-on-surface);
 }
