@@ -27,7 +27,8 @@ properties:
   default_value: ['10', '10', '10', '10']
 - {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
 is_package: true
-events: []
+events:
+- {name: change, default_event: true, description: When the value of the component is changed}
 custom_component: true
 components: []
 container:
