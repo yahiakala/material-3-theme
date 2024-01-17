@@ -136,13 +136,14 @@ element {
   position: absolute;
   width: 100%;
   z-index: 1;
-  top: 1px;
+  top: 0.5px;
   display: flex;
   justify-content: space-between;
 }
 
 .anvil-m3-slider-marker {
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
   background: var(--anvil-m3-surface);
 }
