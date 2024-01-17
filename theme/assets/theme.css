@@ -496,6 +496,10 @@ body {
 
 .anvil-datepicker input + i.fa-calendar::before {
   content: none;
+  font-family: "Material Symbols Outlined";
+  content: "calendar_today";
+  font-size: 24px;
+  bottom: 14px;
 } 
 
 .anvil-datepicker input:hover {
