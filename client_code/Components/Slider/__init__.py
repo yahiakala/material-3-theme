@@ -170,6 +170,22 @@ class Slider(SliderTemplate):
       input.setAttribute("disabled", " ")
       full_slider.classList.add("anvil-m3-slider-disabled")
 
+  def _set_markers(self):
+    markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
+    range = self.max - self.min
+    marker_count = (range / float(self.step)) + 1
+    for i in range(marker_count):
+  
+  @property
+  def show_markers(self):
+    return self._props.get('show_markers')
+
+  @show_markers.setter
+  def show_markers(self, value):
+    self._props['show_markers'] = value
+    if value:
+      self._set_markers()
+
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()

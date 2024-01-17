@@ -1,6 +1,6 @@
 properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true,
-  group: Label, important: true}
+  group: Label, important: true, description: Display a label above the thumb}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
 - {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar,
@@ -25,8 +25,8 @@ properties:
   type: margin
   important: true
   default_value: ['10', '10', '10', '10']
+- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
 is_package: true
-slots: {}
 events: []
 custom_component: true
 components: []
@@ -35,7 +35,8 @@ container:
   properties: {html: "<!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->\n\
       \n<div class=\"anvil-m3-slider\" anvil-name=\"anvil-m3-slider\">\n  <div class=\"\
       anvil-m3-slider-track-container\" anvil-name=\"anvil-m3-slider-track-container\"\
-      >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
+      >\n    <div class=\"anvil-m3-slider-markers-container\" anvil-name=\"anvil-m3-slider-markers-container\"\
+      ></div>\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
       ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
       \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
       \ type=\"range\" min=\"0\" max=\"10\">\n</div>\n"}

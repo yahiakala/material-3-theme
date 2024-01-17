@@ -131,3 +131,8 @@ element {
 .anvil-m3-slider input:disabled::-webkit-slider-thumb:active { outline: none; }
 .anvil-m3-slider input:disabled::-moz-range-thumb:active { outline: none; }
 .anvil-m3-slider input:disabled::-ms-thumb:active { outline: none; }
+
+.anvil-m3-slider-markers-container {
+  display: flex;
+  justify-content: space-between;
+}
