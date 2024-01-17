@@ -483,15 +483,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   box-shadow: none;
-  padding: 8px 16px;
+  vertical-align: middle;
+  padding: 0px 16px;
   margin-bottom: 4px;
   background-color: transparent;
   border: 1px solid %color:Outline%;
   border-radius: 4px;
   color: %color:On Surface%;
+  height: 56px;
+  letter-spacing: 0.5px;
 }
 
 .anvil-datepicker input:hover, .anvil-datepicker input:focus {
-  border: 2px solid %color:Primary%;
+  border-color: var(--anvil-m3-primary);
+  border-width: 2px; 
   padding: 7px 15px;
 }
