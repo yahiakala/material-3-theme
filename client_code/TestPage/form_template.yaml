@@ -1,6 +1,15 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
+  slot_1:
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {}
+  - name: slider_2
+    properties: {has_label: true}
+    type: form:Components.Slider
+    layout_properties: {}
   slot_3:
   - name: link_1
     properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}

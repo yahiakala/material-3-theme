@@ -75,7 +75,7 @@ components:
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: column_panel_2
-        properties: {col_widths: '{}'}
+        properties: {col_widths: '{"GFZEWW":20,"DYCYXB":20,"KRPVFE":20}'}
         type: ColumnPanel
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:

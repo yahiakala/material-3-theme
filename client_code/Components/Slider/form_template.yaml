@@ -1,0 +1,46 @@
+properties:
+- {name: show_label, type: boolean, default_value: false, default_binding_prop: true,
+  group: Label, important: true, description: Display a label above the thumb}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
+  description: True if this component should allow user interaction}
+- {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar,
+  group: Look and feel}
+- {name: track_color, type: color, default_value: '', important: false, description: Color of the track,
+  group: Look and feel}
+- {name: thumb_color, type: color, default_value: '', important: false, description: Color of the slider thumb,
+  group: Look and feel}
+- {name: label_color, type: color, default_value: '', important: false, description: Color of the background of the label,
+  group: Label}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label,
+  group: Label}
+- {name: value, type: number, important: true, default_value: 5, description: The value of the slider,
+  group: Key properties}
+- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
+  group: Key properties}
+- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider,
+  group: Key properties}
+- {name: step, type: number, important: true, description: The stepping interval for the slider,
+  group: Key properties}
+- name: margin
+  type: margin
+  important: true
+  default_value: ['10', '10', '10', '10']
+- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
+is_package: true
+events:
+- {name: change, default_event: true, description: When the value of the component is changed}
+- {name: show, description: When the component is shown on the screen}
+- {name: hide, description: When the component is removed from the screen}
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->\n\
+      \n<div class=\"anvil-m3-slider\" anvil-name=\"anvil-m3-slider\">\n  <div class=\"\
+      anvil-m3-slider-track-container\" anvil-name=\"anvil-m3-slider-track-container\"\
+      >\n    <div class=\"anvil-m3-slider-markers-container\" anvil-name=\"anvil-m3-slider-markers-container\"\
+      ></div>\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
+      ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
+      \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
+      \ type=\"range\" min=\"0\" max=\"10\">\n</div>\n"}
+  event_bindings: {show: form_show}
