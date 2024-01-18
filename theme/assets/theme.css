@@ -628,9 +628,17 @@ th.month select.monthselect {
   padding: 20px 12px 12px 12px;
 }
 
-@media(min-width: 564px)
-.daterangepicker .drp-calendar.left .calendar-table {
-  padding-right: 0px;
+@media(min-width: 564px) {
+  .daterangepicker .drp-calendar.left .calendar-table {
+    padding-right: 0px;
+  }
+}
+
+
+@media (min-width: 564px) {
+.daterangepicker .drp-calendar.right .calendar-table {
+    border: none;
+  }
 }
 
 /* th.month select.monthselect:after, th.month select.yearselect:after {
