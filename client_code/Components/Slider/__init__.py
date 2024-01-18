@@ -114,6 +114,8 @@ class Slider(SliderTemplate):
     self.dom_nodes["anvil-m3-slider-input"].value = value
     if not value:
       value = 0
+    if value > self.max:
+      raise Exception()
     self._update_progress()
 
   @property

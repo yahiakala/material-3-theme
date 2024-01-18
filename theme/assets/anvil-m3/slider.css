@@ -7,6 +7,7 @@
   -webkit-appearance: none;
   background: transparent;  
   transform: translate(0, -90%);
+/*   --anvil-m3-slider-thumb-color: red; */
 }
 
 .anvil-m3-slider-track-container {
