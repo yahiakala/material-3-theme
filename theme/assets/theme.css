@@ -556,11 +556,11 @@ body {
   height: 40px;
   width: 40px;
   letter-spacing: 0.5px;
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .daterangepicker td.start-date.end-date {
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .daterangepicker td.available:hover {
@@ -575,4 +575,12 @@ body {
 
 .daterangepicker .drp-calendar {
   max-width: fit-content;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+  border: none;
+  background-color: transparent;
+  color: var(--anvil-m3-on-surface-variant);
+  font-size: 14px;
+  font-weight: 500;
 }
