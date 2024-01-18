@@ -43,6 +43,7 @@
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -13.5px;
+  transition: 0.3s all;
 }
 
 .anvil-m3-slider input::-moz-range-thumb {
@@ -71,12 +72,27 @@
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
   width: 2px;
 }
-.anvil-m3-slider input:focus::-moz-range-thumb { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
-.anvil-m3-slider input:focus::-ms-thumb { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
+.anvil-m3-slider input:focus::-moz-range-thumb { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px;
+}
+.anvil-m3-slider input:focus::-ms-thumb { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px; 
+}
 
-.anvil-m3-slider input::-webkit-slider-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
-.anvil-m3-slider input::-moz-range-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
-.anvil-m3-slider input::-ms-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
+.anvil-m3-slider input::-webkit-slider-thumb:active { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px;
+}
+.anvil-m3-slider input::-moz-range-thumb:active { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px;
+}
+.anvil-m3-slider input::-ms-thumb:active { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px;
+}
 
 .anvil-m3-slider input::-webkit-slider-runnable-track {
   width: 100%;
