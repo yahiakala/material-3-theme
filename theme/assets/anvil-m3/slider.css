@@ -4,10 +4,8 @@
   position: relative; 
   margin: 10px; 
   z-index: 1; 
-  display: flex;f
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 0;
+  display: flex;
+  padding: 15px 10px;
 }
 .anvil-m3-slider input {
   width: 100%;
