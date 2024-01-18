@@ -35,6 +35,7 @@
   background-color: var(--anvil-m3-surface-container-highest); 
   position: absolute;
   right: 0;
+  overflow: hidden;
 }
 
 .anvil-m3-slider input::-webkit-slider-thumb {
@@ -143,6 +144,7 @@
 /*   top: 0.5px; */
   display: flex;
   justify-content: space-between;
+  right: 0;
 }
 
 .anvil-m3-slider-marker {

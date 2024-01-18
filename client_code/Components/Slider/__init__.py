@@ -63,6 +63,7 @@ class Slider(SliderTemplate):
     bg_width_px = background.getBoundingClientRect().width
     new_progress_width = progress_width_px - 6
     new_bg_width = bg_width_px - 6
+    # TODO: do max instead
     if new_progress_width > 0:
       progress.style.width = str(new_progress_width) + "px"
     else:
