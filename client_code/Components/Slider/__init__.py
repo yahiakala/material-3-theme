@@ -59,11 +59,17 @@ class Slider(SliderTemplate):
     progress.style.width = str(percent) + "%"
     background.style.width = str(100-percent) + "%"
     progress_width_px = progress.getBoundingClientRect().width
+    bg_width_px = background.getBoundingClientRect().width
     new_progress_width = progress_width_px - 6
+    new_bg_width = bg_width_px - 6
     if new_progress_width > 0:
       progress.style.width = str(new_progress_width) + "px"
     else:
       progress.style.width = "0px"
+    if new_bg_width > 0:
+      background.style.width = str(new_bg_width) + "px"
+    else:
+      background.style.width = "0px"
     progress_right, progress_top = self._check_position()
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
