@@ -562,3 +562,7 @@ body {
 .daterangepicker td.available:hover {
   background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-1), var(--anvil-m3-on-surface-variant-overlay-1)),  var(--anvil-m3-surface-container-high)
 }
+
+.daterangepicker td {
+  padding: 4px;
+}
