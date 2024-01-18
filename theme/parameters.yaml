@@ -37,6 +37,7 @@ color_scheme:
       - {name: Outline Variant, color: '#C4C7C5'}
       - {name: On Error, color: '#FFFFFF'}
       - {name: Surface Container Low, color: '#F7F2FA'}
+      - {name: Surface Container High, color: '#ECE6F0'}
       - {name: Surface Container Highest, color: '#E6E0E9'}
       - {name: Disabled Container 2, color: 'rgba(29, 27, 32, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(179, 38, 30, 0.08)'}
@@ -84,6 +85,7 @@ color_scheme:
       - {name: Outline Variant, color: '#49454F'}
       - {name: On Error, color: '#601410'}
       - {name: Surface Container Low, color: '#1D1B20'}
+      - {name: Surface Container High, color: '#2B2930'}
       - {name: Surface Container Highest, color: '#36343B'}
       - {name: Disabled Container 2, color: 'rgba(230, 224, 233, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(242, 184, 181, 0.08)'}
@@ -131,6 +133,7 @@ color_scheme:
       - {name: Outline Variant, color: '#C0C9C1'}
       - {name: On Error, color: '#FFFFFF'}
       - {name: Surface Container Low, color: '#F2F4F0'}
+      - {name: Surface Container High, color: '#E4EAE3'}
       - {name: Surface Container Highest, color: '#E1E3DF'}
       - {name: Disabled Container 2, color: 'rgba(25, 28, 26, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
@@ -178,6 +181,7 @@ color_scheme:
       - {name: Outline Variant, color: '#404943'}
       - {name: On Error, color: '#690005'}
       - {name: Surface Container Low, color: '#191C1A'}
+      - {name: Surface Container High, color: '#262B27'}
       - {name: Surface Container Highest, color: '#323633'}
       - {name: Disabled Container 2, color: 'rgba(225, 227, 223, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
@@ -225,6 +229,7 @@ color_scheme:
       - {name: Outline Variant, color: '#BFC8CA'}
       - {name: On Error, color: '#FFFFFF'}
       - {name: Surface Container Low, color: '#F2F4F4'}
+      - {name: Surface Container High, color: '#E3E9EA'}
       - {name: Surface Container Highest, color: '#E1E3E3'}
       - {name: Disabled Container 2, color: 'rgba(25, 28, 29, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
@@ -272,6 +277,7 @@ color_scheme:
       - {name: Outline Variant, color: '#3F484A'}
       - {name: On Error, color: '#690005'}
       - {name: Surface Container Low, color: '#191C1D'}
+      - {name: Surface Container High, color: '#252B2C'}
       - {name: Surface Container Highest, color: '#323536'}
       - {name: Disabled Container 2, color: 'rgba(225, 227, 227, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
@@ -319,6 +325,7 @@ color_scheme:
       - {name: Outline Variant, color: '#D8C2BB'}
       - {name: On Error, color: '#FFFFFF'}
       - {name: Surface Container Low, color: '#FEF1ED'}
+      - {name: Surface Container High, color: '#F7E4DF'}
       - {name: Surface Container Highest, color: '#EDE0DC'}
       - {name: Disabled Container 2, color: 'rgba(32, 26, 24, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
@@ -366,6 +373,7 @@ color_scheme:
       - {name: Outline Variant, color: '#53433E'}
       - {name: On Error, color: '#690005'}
       - {name: Surface Container Low, color: '#201A18'}
+      - {name: Surface Container High, color: '#322824'}
       - {name: Surface Container Highest, color: '#3B3331'}
       - {name: Disabled Container 2, color: 'rgba(237, 224, 220, 0.04)'}
       - {name: Error Overlay 1, color: 'rgba(255, 180, 171, 0.08)'}
@@ -412,6 +420,7 @@ color_scheme:
   - {name: Outline Variant, color: '#C0C9C1'}
   - {name: On Error, color: '#FFFFFF'}
   - {name: Surface Container Low, color: '#F2F4F0'}
+  - {name: Surface Container High, color: '#E4EAE3'}
   - {name: Surface Container Highest, color: '#E1E3DF'}
   - {name: Disabled Container 2, color: 'rgba(25, 28, 26, 0.04)'}
   - {name: Error Overlay 1, color: 'rgba(186, 26, 26, 0.08)'}
@@ -425,4 +434,3 @@ color_scheme:
   - {name: On Surface Variant Overlay 2, color: 'rgba(25,28,26, 0.12)'}
   - {name: Inverse On Surface Overlay 1, color: 'rgba(239,241,237, 0.08)'}
   - {name: Inverse On Surface Overlay 2, color: 'rgba(239,241,237, 0.12)'}
-  - {name: Surface Container High, color: '#ECE6F0'}
