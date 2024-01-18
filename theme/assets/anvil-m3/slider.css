@@ -4,7 +4,7 @@
   position: relative; 
   margin: 10px; 
   z-index: 1; 
-  display: flex;
+  display: flex;f
   flex-direction: column;
   justify-content: center;
   padding: 10px 0;
@@ -137,13 +137,23 @@
 .anvil-m3-slider input:disabled::-moz-range-thumb:active { outline: none; }
 .anvil-m3-slider input:disabled::-ms-thumb:active { outline: none; }
 
-.anvil-m3-slider-markers-container {
+.anvil-m3-slider-markers-container-bg {
   position: absolute;
   z-index: 1;
   top: 6px;
   display: flex;
   justify-content: space-between;
   right: 0;
+}
+
+.anvil-m3-slider-markers-container-progress {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  overflow: hidden;
 }
 
 .anvil-m3-slider-marker {

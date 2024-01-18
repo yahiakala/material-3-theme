@@ -200,8 +200,10 @@ class Slider(SliderTemplate):
       full_slider.classList.add("anvil-m3-slider-disabled")
 
   def _set_markers(self):
-    markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
-    markers_container.style.width = "950px"
+    markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
+    markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
+    markers_container_bg.style.width = "950px"
+    markers_container_progress.style.width = "950px"
     slider_range = self.max - self.min
     if self.step:
       marker_count = int(slider_range / self.step)
@@ -210,7 +212,9 @@ class Slider(SliderTemplate):
     for i in range(marker_count + 1):
       marker = document.createElement('span')
       marker.classList.add('anvil-m3-slider-marker')
-      markers_container.appendChild(marker)
+      markers_container_bg.appendChild(marker)
+      markers_container_progress.appendChild(marker)
+      
   
   @property
   def show_markers(self):
@@ -222,7 +226,8 @@ class Slider(SliderTemplate):
     if value:
       self._set_markers()
     else:
-      self.dom_nodes["anvil-m3-slider-markers-container"].innerHTML = ''
+      self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
+      self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
