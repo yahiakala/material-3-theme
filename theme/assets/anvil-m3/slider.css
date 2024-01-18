@@ -21,7 +21,7 @@
 .anvil-m3-slider-track-container {
   height: 16px;
   position: absolute;
-  left: 10px;
+/*   left: 10px; */
 /*   bottom: 28%; */
   z-index: -1;
 /*   transform: translate(0, -28%); */
