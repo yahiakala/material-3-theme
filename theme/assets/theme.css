@@ -538,3 +538,7 @@ body {
   background-color: var(--anvil-m3-surface-container-high);
   color: var(--anvil-m3-on-surface-variant);
 }
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: var(--anvil-m3-primary)
+}
