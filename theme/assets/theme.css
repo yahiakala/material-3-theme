@@ -593,7 +593,7 @@ body {
   max-width: fit-content;
 }
 
-.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+.daterangepicker select.monthselect, .daterangepicker select.yearselect, .daterangepicker select.hourselect, .daterangepicker select.minuteselect {
   border: none;
   background-color: transparent;
   color: var(--anvil-m3-on-surface);
@@ -602,10 +602,9 @@ body {
   width: 70px;
 }
 
-.daterangepicker select.hourselect, .daterangepicker select.minuteselect {
-  
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+  width: 70px;
 }
-
 
 th.month select.monthselect {
   margin-right: 60px
