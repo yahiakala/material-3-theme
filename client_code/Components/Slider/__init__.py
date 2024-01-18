@@ -47,14 +47,17 @@ class Slider(SliderTemplate):
 
   def _on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._update_progress()
     
   def _update_progress(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]
     progress = self.dom_nodes["anvil-m3-slider-progress"]
+    background = self.dom_nodes["anvil-m3-slider-background"]
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
+    background.style.width = str(100-percent) + "%"
     progress_width_px = progress.getBoundingClientRect().width
     new_progress_width = progress_width_px - 6
     if new_progress_width > 0:
