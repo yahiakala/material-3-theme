@@ -15,13 +15,13 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_3
-  properties: {show_label: true, enabled: true, value: 0, test_label: true, show_markers: true}
+  properties: {show_label: true, enabled: true, value: 0, test_label: true, show_markers: false}
   type: form:Components.Slider
   layout_properties: {grid_position: 'ZTSDXV,QAGLHX'}
 - name: slider_4
   properties:
     min: 0
-    show_markers: true
+    show_markers: false
     track_color: ''
     margin: ['10', '10', '10', '10']
     thumb_color: ''
