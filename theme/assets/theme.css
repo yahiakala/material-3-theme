@@ -519,3 +519,8 @@ body {
   border-width: 2px; 
   padding: 7px 15px;
 }
+
+.daterangepicker {
+  background-color: var(--anvil-m3-surface-container-high);
+  
+}
