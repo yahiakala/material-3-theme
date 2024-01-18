@@ -553,7 +553,7 @@ body {
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
   font-weight: normal;
   font-size: 16px;
-  height: 32px;
+  height: 40px;
   width: 40px;
   letter-spacing: 0.5px;
   border-radius: 18px;
@@ -567,12 +567,9 @@ body {
   background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-1), var(--anvil-m3-on-surface-variant-overlay-1)),  var(--anvil-m3-surface-container-high)
 }
 
-.daterangepicker td {
-  margin: 4px;
-}
 
 .daterangepicker .calendar-table table {
-  border-spacing: 8px;
+  border-spacing: 4px;
   border-collapse: unset;
 }
 
