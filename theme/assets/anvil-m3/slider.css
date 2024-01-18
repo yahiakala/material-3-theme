@@ -3,20 +3,20 @@
 .anvil-m3-slider { position: relative; margin: 10px; z-index: 1; }
 .anvil-m3-slider input {
   width: 100%;
-  height: 100%;
+  height: 16px;
   -webkit-appearance: none;
   background: transparent;  
-  transform: translate(0, -90%);
+/*   transform: translate(0, -90%); */
 /*   --anvil-m3-slider-thumb-color: red; */
 }
 
 .anvil-m3-slider-track-container {
-  height: 4px;
+  height: 16px;
   position: absolute;
   left: 10px;
   bottom: 28%;
   z-index: -1;
-  transform: translate(0, -90%);
+  transform: translate(0, -28%);
 }
 
 .anvil-m3-slider-progress, .anvil-m3-slider-background {
@@ -31,31 +31,31 @@
 
 .anvil-m3-slider input::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
+  height: 44px;
+  width: 4px;
+  border-radius: 4px;
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -8px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+/*   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30); */
 }
 
 .anvil-m3-slider input::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
+  height: 44px;
+  width: 4px;
+  border-radius: 4px;
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+/*   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30); */
 }
 
 .anvil-m3-slider input::-ms-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
+  height: 44px;
+  width: 4px;
+  border-radius: 4px;
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30);
+/*   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.30); */
 }
 
 .anvil-m3-slider input::-webkit-slider-thumb:hover { outline: 10px solid var(--anvil-m3-primary-overlay-2); }
@@ -72,7 +72,7 @@
 
 .anvil-m3-slider input::-webkit-slider-runnable-track {
   width: 100%;
-  height: 4px;
+  height: 16px;
   cursor: pointer;
   background: transparent;
 }
