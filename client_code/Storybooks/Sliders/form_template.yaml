@@ -27,9 +27,9 @@ components:
     thumb_color: ''
     progress_color: ''
     show_label: true
-    label_color: theme:Tertiary Container
+    label_color: ''
     value: 4
-    label_text_color: theme:Primary
+    label_text_color: ''
     step: 2
   type: form:Components.Slider
   layout_properties: {grid_position: 'QLTJSU,JACHJT'}

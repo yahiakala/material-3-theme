@@ -23,7 +23,6 @@ class Slider(SliderTemplate):
     self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self.on_change)
     self.resize_observer = ResizeObserver(self._on_window_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
-    
   
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
