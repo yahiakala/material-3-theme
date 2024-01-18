@@ -616,7 +616,7 @@ th.month select.monthselect {
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
-  color: var(--anvil-m3-primary)
+  color: var(--anvil-m3-primary);
 }
 
 .daterangepicker .drp-buttons {
