@@ -554,15 +554,17 @@ body {
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
 }
 
-.daterangepicker td.today {
+/* .daterangepicker td.today {
   background-color: transparent;
   border: 1px solid var(--anvil-m3-primary);
   color: var(--anvil-m3-primary);
 }
 
 .daterangepicker td.today:hover {
-  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-1), var(--anvil-m3-primary-overlay-1))),  transparent !important;
-}
+  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-1), var(--anvil-m3-primary-overlay-1)),  transparent !important;
+  color: var(--anvil-m3-primary) !important;
+  border: 1px solid var(--anvil-m3-primary)
+} */
 
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
   font-weight: normal;
@@ -597,18 +599,19 @@ body {
   color: var(--anvil-m3-on-surface);
   font-size: 14px;
   font-weight: 500;
+  width: 70px;
 }
 
-th.month select.monthselect, th.month select.yearselect {
-  width: 70px;
-  appearance: none;
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect {
+  
 }
+
 
 th.month select.monthselect {
   margin-right: 60px
 }
 
-th.month select.monthselect:after, th.month select.yearselect:after {
+/* th.month select.monthselect:after, th.month select.yearselect:after {
   font-family: "Material Symbols Outlined";
   content: "calendar_today";
-}
+} */
