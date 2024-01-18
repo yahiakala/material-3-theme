@@ -177,7 +177,10 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
     slider_range = self.max - self.min
-    marker_count = int(slider_range / self.step)
+    if self.step:
+      marker_count = int(slider_range / self.step)
+    else:
+      marker_count = slider_range
     for i in range(marker_count + 1):
       marker = document.createElement('span')
       marker.classList.add('anvil-m3-slider-marker')
