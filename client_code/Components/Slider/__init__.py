@@ -218,7 +218,6 @@ class Slider(SliderTemplate):
       marker_progress.classList.add('anvil-m3-slider-marker-progress')
       markers_container_progress.appendChild(marker_progress)
       
-  
   @property
   def show_markers(self):
     return self._props.get('show_markers')
