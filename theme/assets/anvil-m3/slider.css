@@ -43,7 +43,7 @@
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -13.5px;
-  transition: 0.3s all;
+  transition: 0.1s all;
 }
 
 .anvil-m3-slider input::-moz-range-thumb {
