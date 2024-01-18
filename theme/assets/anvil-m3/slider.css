@@ -32,7 +32,7 @@
 .anvil-m3-slider-background { 
   width: 100%; 
   border-radius: 2px 16px 16px 2px;
-  background-color: var(--anvil-m3-surface-container-highest); 
+  background-color: var(--anvil-m3-primary-container); 
   position: absolute;
   right: 0;
   overflow: hidden;
@@ -141,15 +141,15 @@
   position: absolute;
 /*   width: 100%; */
   z-index: 1;
-/*   top: 0.5px; */
+  top: 6px;
   display: flex;
   justify-content: space-between;
   right: 0;
 }
 
 .anvil-m3-slider-marker {
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   border-radius: 100%;
-  background: var(--anvil-m3-on-primary-container);
+  background: var(--anvil-m3-on-surface-variant);
 }
