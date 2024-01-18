@@ -552,6 +552,7 @@ body {
   height: 36px;
   width: 40px;
   letter-spacing: 0.5px;
+  border-radius: 18px;
 }
 
 .daterangepicker td.start-date.end-date {
