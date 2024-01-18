@@ -415,7 +415,7 @@ events:
 - {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
-custom_component: false
+custom_component: true
 components: []
 container:
   type: HtmlTemplate
