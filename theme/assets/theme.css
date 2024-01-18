@@ -580,7 +580,7 @@ body {
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   border: none;
   background-color: transparent;
-  color: var(--anvil-m3-on-surface-variant);
+  color: var(--anvil-m3-on-surface);
   font-size: 14px;
   font-weight: 500;
 }
