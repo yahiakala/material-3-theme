@@ -26,6 +26,7 @@ properties:
   important: true
   default_value: ['10', '10', '10', '10']
 - {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}

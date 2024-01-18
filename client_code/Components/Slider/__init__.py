@@ -3,7 +3,7 @@ from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property
+from ...Functions import enabled_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -13,6 +13,7 @@ class Slider(SliderTemplate):
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
     self._props = properties
+    self.tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -89,6 +90,7 @@ class Slider(SliderTemplate):
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
   margin = margin_property("anvil-m3-slider")
+  tooltip = tooltip_property('anvil-m3-slider')
   visible = HtmlTemplate.visible
 
   @property
