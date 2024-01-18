@@ -584,3 +584,11 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+
+th.month select.monthselect, th.month select.yearselect {
+  width: 70px;
+}
+
+th.month select.monthselect {
+  margin-right: 60px
+}
