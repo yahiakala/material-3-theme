@@ -21,7 +21,7 @@ components:
 - name: slider_4
   properties:
     min: 0
-    show_markers: true
+    show_markers: false
     track_color: ''
     margin: ['10', '10', '10', '10']
     thumb_color: ''
