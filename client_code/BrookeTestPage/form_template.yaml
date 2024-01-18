@@ -80,7 +80,7 @@ components_by_slot:
       type: form:Components.TextInput.TextField
       layout_properties: {grid_position: 'IQRFMU,VUNQTV'}
     - name: date_picker_1
-      properties: {}
+      properties: {pick_time: true}
       type: DatePicker
       layout_properties: {grid_position: 'NJTYMG,NNHXFD'}
     - name: divider_1

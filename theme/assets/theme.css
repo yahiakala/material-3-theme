@@ -546,8 +546,22 @@ body {
   color: var(--anvil-m3-on-surface-variant);
 }
 
-.daterangepicker td.active, .daterangepicker td.active:hover {
+.daterangepicker td.active {
   background-color: var(--anvil-m3-primary)
+}
+
+.daterangepicker td.active:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
+}
+
+.daterangepicker td.today {
+  background-color: transparent;
+  border: 1px solid var(--anvil-m3-primary);
+  color: var(--anvil-m3-primary);
+}
+
+.daterangepicker td.today:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
 }
 
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
