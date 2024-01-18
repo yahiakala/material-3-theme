@@ -610,10 +610,11 @@ th.month select.monthselect {
   margin-right: 60px
 }
 
-.daterangepicker .drp-buttons button {
+.daterangepicker .drp-buttons button.btn {
   background-color: transparent;
   border: none;
   font-family: inherit;
+  font-weight: 500
 }
 
 /* th.month select.monthselect:after, th.month select.yearselect:after {
