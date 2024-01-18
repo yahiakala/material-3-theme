@@ -15,7 +15,7 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_3
-  properties: {show_label: true, enabled: true, value: 0, test_label: true}
+  properties: {show_label: true, enabled: true, value: 0, test_label: true, show_markers: true}
   type: form:Components.Slider
   layout_properties: {grid_position: 'ZTSDXV,QAGLHX'}
 - name: slider_4
