@@ -110,12 +110,12 @@ class Slider(SliderTemplate):
 
   @value.setter
   def value(self, value):
+    if value > self.max:
+      raise ValueError("Value cannot be more than max")
     self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
     if not value:
       value = 0
-    if value > self.max:
-      raise Exception()
     self._update_progress()
 
   @property
