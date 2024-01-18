@@ -27,7 +27,7 @@
   --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
   --anvil-m3-surface-container: %color:Surface Container%;
   --anvil-m3-surface-container-highest: %color:Surface Container Highest%;
-  --anvil-m3-surface-container-highe: %color:Surface Container High%;
+  --anvil-m3-surface-container-high: %color:Surface Container High%;
   --anvil-m3-surface-container-low: %color:Surface Container Low%;
   --anvil-m3-surface: %color:Surface%;
   --anvil-m3-on-surface: %color:On Surface%;
@@ -503,7 +503,7 @@ body {
 } 
 
 .anvil-datepicker input + i.fa-calendar:hover::before{
-  background-color: purple;
+/*   background-color: purple; */
 }
 
 .anvil-datepicker input + i.fa-calendar {
@@ -522,5 +522,5 @@ body {
 
 .daterangepicker {
   background-color: var(--anvil-m3-surface-container-high);
-  
+  border-radius: 16px;
 }
