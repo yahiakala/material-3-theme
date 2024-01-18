@@ -215,3 +215,4 @@ class Slider(SliderTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._update_progress()
