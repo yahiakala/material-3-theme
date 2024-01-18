@@ -577,5 +577,5 @@ body {
 }
 
 .daterangepicker .drp-calendar {
-  
+  max-width: fit-content;
 }
