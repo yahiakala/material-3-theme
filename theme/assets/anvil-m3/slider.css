@@ -139,7 +139,6 @@
 
 .anvil-m3-slider-markers-container {
   position: absolute;
-/*   width: 100%; */
   z-index: 1;
   top: 6px;
   display: flex;
