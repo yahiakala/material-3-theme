@@ -144,6 +144,7 @@
   display: flex;
   justify-content: space-between;
   right: 0;
+  overflow: hidden;
 }
 
 .anvil-m3-slider-markers-container-progress {
