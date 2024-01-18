@@ -43,7 +43,8 @@
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -13.5px;
-  transition: 0.1s all;
+  transition-property: width;
+  transition-duration: 0.1s;
 }
 
 .anvil-m3-slider input::-moz-range-thumb {
@@ -68,15 +69,15 @@
 .anvil-m3-slider input::-moz-range-thumb:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)), var(--anvil-m3-primary); }
 .anvil-m3-slider input::-ms-thumb:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)), var(--anvil-m3-primary); }
 
-.anvil-m3-slider input:focus::-webkit-slider-thumb { 
+.anvil-m3-slider input:focus-visible::-webkit-slider-thumb { 
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
   width: 2px;
 }
-.anvil-m3-slider input:focus::-moz-range-thumb { 
+.anvil-m3-slider input:focus-visible::-moz-range-thumb { 
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
   width: 2px;
 }
-.anvil-m3-slider input:focus::-ms-thumb { 
+.anvil-m3-slider input:focus-visible::-ms-thumb { 
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
   width: 2px; 
 }

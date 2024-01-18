@@ -56,15 +56,13 @@ class Slider(SliderTemplate):
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
-    progress.style.width = str(percent) + "%"
+    progress_width = f"calc({percent}% + 6px)"
     # TODO: make this a calc instead
     background.style.width = str(100-percent) + "%"
-    progress_width_px = progress.getBoundingClientRect().width
     bg_width_px = background.getBoundingClientRect().width
-    new_progress_width = progress_width_px - 6
     new_bg_width = bg_width_px - 6
     # TODO: do max instead
-    if new_progress_width > 0:
+    if progress_width > 0:
       progress.style.width = str(new_progress_width) + "px"
     else:
       progress.style.width = "0px"
