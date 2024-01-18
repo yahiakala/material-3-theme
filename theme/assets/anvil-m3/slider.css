@@ -67,13 +67,16 @@
 .anvil-m3-slider input::-moz-range-thumb:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)), var(--anvil-m3-primary); }
 .anvil-m3-slider input::-ms-thumb:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)), var(--anvil-m3-primary); }
 
-.anvil-m3-slider input:focus::-webkit-slider-thumb { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
+.anvil-m3-slider input:focus::-webkit-slider-thumb { 
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); 
+  width: 2px;
+}
 .anvil-m3-slider input:focus::-moz-range-thumb { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
 .anvil-m3-slider input:focus::-ms-thumb { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
 
 .anvil-m3-slider input::-webkit-slider-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
 .anvil-m3-slider input::-moz-range-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
-.anvil-m3-slider input::-ms-thumb:active { outline: 10px solid var(--anvil-m3-primary-overlay-3); }
+.anvil-m3-slider input::-ms-thumb:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary); }
 
 .anvil-m3-slider input::-webkit-slider-runnable-track {
   width: 100%;
