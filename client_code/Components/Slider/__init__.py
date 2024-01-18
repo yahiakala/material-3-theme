@@ -199,6 +199,7 @@ class Slider(SliderTemplate):
 
   def _set_markers(self):
     markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
+    markers_container.style.width = self._get_track_width()
     slider_range = self.max - self.min
     if self.step:
       marker_count = int(slider_range / self.step)
