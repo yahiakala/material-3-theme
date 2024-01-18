@@ -561,7 +561,7 @@ body {
 }
 
 .daterangepicker td.today:hover {
-  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
+  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-1), var(--anvil-m3-primary-overlay-1))),  transparent !important;
 }
 
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
