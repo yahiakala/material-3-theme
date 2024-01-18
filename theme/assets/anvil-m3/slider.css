@@ -20,6 +20,7 @@
   height: 16px;
   position: absolute;
   z-index: -1;
+  left: 2px;
 }
 
 .anvil-m3-slider-progress, .anvil-m3-slider-background {

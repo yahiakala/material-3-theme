@@ -57,6 +57,7 @@ class Slider(SliderTemplate):
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
+    # TODO: make this a calc instead
     background.style.width = str(100-percent) + "%"
     progress_width_px = progress.getBoundingClientRect().width
     bg_width_px = background.getBoundingClientRect().width
@@ -79,7 +80,7 @@ class Slider(SliderTemplate):
     input = self.dom_nodes["anvil-m3-slider-input"]
     input_width = input.getBoundingClientRect().width
     # return str(input_width - 20) + "px"
-    return str(input_width) + "px"
+    return str(input_width - 4) + "px"
 
   def _check_position(self):
     progress_rect = self.dom_nodes["anvil-m3-slider-progress"].getBoundingClientRect()
