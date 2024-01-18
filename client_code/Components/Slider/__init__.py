@@ -55,6 +55,7 @@ class Slider(SliderTemplate):
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
     progress.style.width = str(percent) + "%"
+    progress_width_px = progress.getBoundingClientRect().width
     progress_right, progress_top = self._check_position()
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
