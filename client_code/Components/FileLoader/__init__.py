@@ -79,7 +79,7 @@ class FileLoader(FileLoaderTemplate):
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
   border = style_property('anvil-m3-fileloader-container', 'border', 'border')
   margin = margin_property('anvil-m3-fileloader-form')
-  tooltip = tooltip_property('anvil-m3-fileloader-form')
+  tooltip = tooltip_property('anvil-m3-fileloader-container')
 
   @property
   def show_state(self):

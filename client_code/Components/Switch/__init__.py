@@ -99,7 +99,7 @@ class Switch(SwitchTemplate):
   unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-switch-container')
-  tooltip = tooltip_property('anvil-m3-switch-container')
+  tooltip = tooltip_property('anvil-m3-switch')
 
 
   
