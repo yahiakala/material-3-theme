@@ -27,7 +27,10 @@ class Slider(SliderTemplate):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
-    
+
+  def on_change(self, event):
+    self.raise_event("change")
+  
   def on_input(self, event):
     self._update_progress()
 
