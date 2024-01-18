@@ -56,21 +56,8 @@ class Slider(SliderTemplate):
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
-    progress_width = f"calc({percent}% + 6px)"
-    print(progress_width)
-    # TODO: make this a calc instead
-    background.style.width = str(100-percent) + "%"
-    bg_width_px = background.getBoundingClientRect().width
-    new_bg_width = bg_width_px - 6
-    # TODO: do max instead
-    # if progress_width > 0:
-    #   progress.style.width = str(new_progress_width) + "px"
-    # else:
-    #   progress.style.width = "0px"
-    if new_bg_width > 0:
-      background.style.width = str(new_bg_width) + "px"
-    else:
-      background.style.width = "0px"
+    progress.style.width = f"max(calc({percent}% - 6px), 0px)"
+    background.style.width = f"max(calc({100-percent}% - 6px), 0px)"
     progress_right, progress_top = self._check_position()
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
