@@ -37,7 +37,7 @@ components:
   layout_properties: {grid_position: 'VOEONV,RMOPOU'}
   data_bindings: []
 - name: slider_6
-  properties: {show_markers: true}
+  properties: {show_markers: true, show_label: true}
   type: form:Components.Slider
   layout_properties: {grid_position: 'VNCVPB,EUPPEN'}
 - name: slider_3
