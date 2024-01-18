@@ -500,7 +500,7 @@ body {
   content: "calendar_today";
   font-size: 24px;
   color: %color:On Surface Variant%;
-  padding: 8px;
+  padding: 6px 8px;
   border-radius: 24px;
 } 
 
