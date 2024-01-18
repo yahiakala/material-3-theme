@@ -542,3 +542,9 @@ body {
 .daterangepicker td.active, .daterangepicker td.active:hover {
   background-color: var(--anvil-m3-primary)
 }
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+  font-weight: normal;
+  font-size: 16px;
+  
+}
