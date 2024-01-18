@@ -26,7 +26,7 @@ components:
     margin: ['', '', '', '']
     thumb_color: ''
     progress_color: ''
-    show_label: true
+    show_label: false
     label_color: ''
     value: 4
     label_text_color: ''
