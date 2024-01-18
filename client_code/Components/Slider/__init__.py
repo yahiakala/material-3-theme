@@ -64,7 +64,7 @@ class Slider(SliderTemplate):
   def _get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
     input_width = input.getBoundingClientRect().width
-    return str(input_width) + "px"
+    return str(input_width - 20) + "px"
 
   def _check_position(self):
     progress_rect = self.dom_nodes["anvil-m3-slider-progress"].getBoundingClientRect()
