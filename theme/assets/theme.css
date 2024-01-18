@@ -614,9 +614,23 @@ th.month select.monthselect {
   background-color: transparent;
   border: none;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   color: var(--anvil-m3-primary)
+}
+
+.daterangepicker .drp-buttons {
+  border-top: none;
+  padding-bottom: 12px;
+}
+
+.daterangepicker.show-calendar .drp-calendar {
+  padding: 20px 12px 12px 12px;
+}
+
+@media(min-width: 564px)
+.daterangepicker .drp-calendar.left .calendar-table {
+  padding-right: 0px;
 }
 
 /* th.month select.monthselect:after, th.month select.yearselect:after {
