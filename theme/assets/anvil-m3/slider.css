@@ -44,6 +44,7 @@
   background: var(--anvil-m3-slider-thumb-color);
   cursor: pointer;
   margin-top: -13.5px;
+  border: 6px solid transparent;
 }
 
 .anvil-m3-slider input::-moz-range-thumb {
