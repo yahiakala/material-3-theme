@@ -30,7 +30,7 @@ components:
     label_color: ''
     value: 4
     label_text_color: ''
-    step: 2
+    step: 1
   type: form:Components.Slider
   layout_properties: {grid_position: 'QLTJSU,JACHJT'}
   data_bindings: []
