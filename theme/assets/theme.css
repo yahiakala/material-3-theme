@@ -575,3 +575,7 @@ body {
   border-spacing: 8px;
   border-collapse: unset;
 }
+
+.daterangepicker .drp-calendar {
+  
+}
