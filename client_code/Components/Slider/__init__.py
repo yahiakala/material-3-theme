@@ -177,7 +177,7 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
     slider_range = self.max - self.min
-    marker_count = slider_range // self.step
+    marker_count = int(slider_range / self.step)
     for i in range(marker_count + 1):
       marker = document.createElement('span')
       marker.classList.add('anvil-m3-slider-marker')
@@ -192,6 +192,8 @@ class Slider(SliderTemplate):
     self._props['show_markers'] = value
     if value:
       self._set_markers()
+    else:
+      self.dom_nodes["anvil-m3-slider-markers-container"].innerHTML = ''
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
