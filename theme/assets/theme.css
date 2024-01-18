@@ -524,3 +524,11 @@ body {
   background-color: var(--anvil-m3-surface-container-high);
   border-radius: 16px;
 }
+
+.daterangepicker .calendar-table {
+  background-color: var(--anvil-m3-surface-container-high);
+}
+
+.daterangepicker:after, .daterangepicker:before {
+  display:none;
+}
