@@ -1,9 +1,5 @@
 /* Inspired by: https://codepen.io/viestursm/pen/BayEjaN */
 
-element {
-  --anvil-m3-slider-thumb-color: var(--anvil-m3-primary);
-}
-
 .anvil-m3-slider { position: relative; margin: 10px; z-index: 1; }
 .anvil-m3-slider input {
   width: 100%;
