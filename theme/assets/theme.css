@@ -462,6 +462,8 @@ body {
   }
 }
 
+/*TOOLTIP PROPERTY*/
+
 .anvil-m3-tooltip {
   background-color: %color:Inverse Surface%;
   color: %color:Inverse On Surface%;
@@ -479,6 +481,8 @@ body {
   align-items: center;
   pointer-events: none;
 }
+
+/*ANVIL DATEPICKER COMPONENT*/
 
 .anvil-datepicker input {
   font-size: 16px;
@@ -549,7 +553,7 @@ body {
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
   font-weight: normal;
   font-size: 16px;
-  height: 36px;
+  height: 32px;
   width: 40px;
   letter-spacing: 0.5px;
   border-radius: 18px;
@@ -565,4 +569,9 @@ body {
 
 .daterangepicker td {
   margin: 4px;
+}
+
+.daterangepicker .calendar-table table {
+  border-spacing: 8px;
+  border-collapse: unset;
 }
