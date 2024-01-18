@@ -587,8 +587,14 @@ body {
 
 th.month select.monthselect, th.month select.yearselect {
   width: 70px;
+  appearance: none;
 }
 
 th.month select.monthselect {
   margin-right: 60px
+}
+
+th.month select.monthselect:after, th.month select.yearselect:after {
+  font-family: "Material Symbols Outlined";
+  content: "calendar_today";
 }
