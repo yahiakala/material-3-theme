@@ -532,3 +532,7 @@ body {
 .daterangepicker:after, .daterangepicker:before {
   display:none;
 }
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+  background-color: var(--anvil-m3-surface-container-high);
+}
