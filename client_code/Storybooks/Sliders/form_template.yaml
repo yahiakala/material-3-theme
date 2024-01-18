@@ -5,9 +5,21 @@ components:
   type: form:Components.Text
   layout_properties: {grid_position: 'NLZEXB,ZFMOMV'}
 - name: slider_1
-  properties: {value: 5, show_label: false, enabled: true, max: 100, min: 0}
+  properties: {}
   type: form:Components.Slider
-  layout_properties: {grid_position: 'SBBPDL,GHVCFV'}
+  layout_properties: {grid_position: 'EOAUAL,SXQICU'}
+- name: slider_5
+  properties: {show_label: true}
+  type: form:Components.Slider
+  layout_properties: {grid_position: 'DNLVXQ,LXIKWE'}
+- name: slider_2
+  properties:
+    enabled: false
+    margin: [auto, auto, auto, auto]
+    max: 100
+    value: 50
+  type: form:Components.Slider
+  layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
 - name: slider_4
   properties:
     min: 0
@@ -18,20 +30,18 @@ components:
     progress_color: ''
     show_label: false
     label_color: ''
-    value: 4
+    value: 5
     label_text_color: ''
     step: 1
   type: form:Components.Slider
-  layout_properties: {grid_position: 'SBBPDL,IBCKYG'}
+  layout_properties: {grid_position: 'VOEONV,RMOPOU'}
   data_bindings: []
-- name: slider_2
-  properties:
-    enabled: false
-    margin: [auto, auto, auto, auto]
+- name: slider_6
+  properties: {show_markers: true}
   type: form:Components.Slider
-  layout_properties: {grid_position: 'FNYRLQ,JHCLWR'}
+  layout_properties: {grid_position: 'VNCVPB,EUPPEN'}
 - name: slider_3
-  properties: {show_label: true, enabled: true, value: 0, test_label: true, show_markers: false}
+  properties: {show_label: true, enabled: false, value: 5, test_label: true, show_markers: true}
   type: form:Components.Slider
-  layout_properties: {grid_position: 'FNYRLQ,HIYTKC'}
+  layout_properties: {grid_position: 'YREOHH,OLZKUJ'}
 is_package: true

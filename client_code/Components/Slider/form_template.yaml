@@ -26,7 +26,8 @@ properties:
   important: true
   default_value: ['', '', '', '']
   group: Layout
-- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
+- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers,
+  group: Look and feel}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
 is_package: true
