@@ -47,6 +47,7 @@ class Slider(SliderTemplate):
 
   def _on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._set_markers()
     self._update_progress()
     
   def _update_progress(self):
@@ -192,6 +193,8 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
     markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
+    markers_container_bg.innerHTML = ''
+    markers_container_progress.innerHTML = ''
     markers_container_bg.style.width = self._get_track_width()
     markers_container_progress.style.width = self._get_track_width()
     slider_range = self.max - self.min
@@ -199,13 +202,14 @@ class Slider(SliderTemplate):
       marker_count = int(slider_range / self.step)
     else:
       marker_count = slider_range
-    for i in range(marker_count + 1):
-      marker_bg = document.createElement('span')
-      marker_progress = document.createElement('span')
-      marker_bg.classList.add('anvil-m3-slider-marker-bg')
-      marker_progress.classList.add('anvil-m3-slider-marker-progress')
-      markers_container_bg.appendChild(marker_bg)
-      markers_container_progress.appendChild(marker_progress)
+    if self.show_markers:
+      for i in range(marker_count + 1):
+        marker_bg = document.createElement('span')
+        marker_progress = document.createElement('span')
+        marker_bg.classList.add('anvil-m3-slider-marker-bg')
+        marker_progress.classList.add('anvil-m3-slider-marker-progress')
+        markers_container_bg.appendChild(marker_bg)
+        markers_container_progress.appendChild(marker_progress)
       
       
   @property
@@ -223,10 +227,11 @@ class Slider(SliderTemplate):
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    if self.show_markers == True:
-      self._set_markers()
-    else:
-      self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
-      self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
+    # if self.show_markers == True:
+    #   self._set_markers()
+    # else:
+    #   self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
+    #   self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
+    self._set_markers()
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     self._update_progress()

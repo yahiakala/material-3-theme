@@ -9,7 +9,7 @@ components:
   type: form:Components.Slider
   layout_properties: {grid_position: 'EOAUAL,SXQICU'}
 - name: slider_5
-  properties: {show_label: true, max: 100}
+  properties: {show_label: true, max: 100, show_markers: false}
   type: form:Components.Slider
   layout_properties: {grid_position: 'DNLVXQ,LXIKWE'}
 - name: slider_2
