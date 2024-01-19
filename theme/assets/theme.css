@@ -604,7 +604,7 @@ body {
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   width: 70px;
-  appearance: none;
+/*   appearance: none; */
 }
 
 th.month select.monthselect {
@@ -633,24 +633,13 @@ th.month select.monthselect::after {
   padding: 20px 12px 12px 12px;
 }
 
-@media(min-width: 564px) {
-  .daterangepicker .drp-calendar.left .calendar-table {
+.daterangepicker .drp-calendar.left .calendar-table {
     padding-right: 0px;
-  }
 }
 
 
-@media (min-width: 564px) {
+
 .daterangepicker .drp-calendar.right .calendar-table {
     border: none;
   }
-}
 
-th.month select.monthselect:after, th.month select.yearselect:after {
-    content: "";
-    justify-self: end;
-    width: 0.8em;
-    height: 0.5em;
-    background-color: var(--select-arrow);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-}
