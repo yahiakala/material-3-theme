@@ -13,7 +13,7 @@ properties:
   group: Label}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label,
   group: Label}
-- {name: value, type: number, important: true, default_value: 5, description: The value of the slider,
+- {name: value, type: number, important: true, default_value: null, description: The value of the slider,
   group: Key properties}
 - {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
   group: Key properties}
