@@ -136,13 +136,13 @@
 .anvil-m3-slider input:disabled::-moz-range-thumb:hover { outline: none; }
 .anvil-m3-slider input:disabled::-ms-thumb:hover { outline: none; }
 
-.anvil-m3-slider input:disabled:focus::-webkit-slider-thumb { outline: none; }
-.anvil-m3-slider input:disabled:focus::-moz-range-thumb { outline: none; }
-.anvil-m3-slider input:disabled:focus::-ms-thumb { outline: none; }
+.anvil-m3-slider input:disabled:focus::-webkit-slider-thumb { width: 4px; }
+.anvil-m3-slider input:disabled:focus::-moz-range-thumb { width: 4px; }
+.anvil-m3-slider input:disabled:focus::-ms-thumb { width: 4px; }
 
-.anvil-m3-slider input:disabled::-webkit-slider-thumb:active { outline: none; }
-.anvil-m3-slider input:disabled::-moz-range-thumb:active { outline: none; }
-.anvil-m3-slider input:disabled::-ms-thumb:active { outline: none; }
+.anvil-m3-slider input:disabled::-webkit-slider-thumb:active { width: 4px; }
+.anvil-m3-slider input:disabled::-moz-range-thumb:active { width: 4px; }
+.anvil-m3-slider input:disabled::-ms-thumb:active { width: 4px; }
 
 .anvil-m3-slider-markers-container-bg, .anvil-m3-slider-markers-container-progress {
   position: absolute;
