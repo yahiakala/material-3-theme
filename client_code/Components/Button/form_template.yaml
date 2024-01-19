@@ -419,8 +419,8 @@ toolbox_item:
 is_package: true
 data_bindings: []
 events:
-- {name: click, default_event: true, description: When the button is clicked.}
-- {name: show, description: When the button is shown on the screen.}
+- {name: click, default_event: true, description: When the component is clicked.}
+- {name: show, description: When the component is shown on the screen.}
 - {name: hide, description: When the component is removed from the screen.}
 components: []
 custom_component_container: false
