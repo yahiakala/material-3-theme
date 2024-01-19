@@ -647,6 +647,10 @@ th.month select.monthselect::after {
 }
 
 th.month select.monthselect:after, th.month select.yearselect:after {
-  font-family: "Material Symbols Outlined";
-  content: "calendar_today";
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
