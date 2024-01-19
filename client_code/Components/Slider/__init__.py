@@ -63,9 +63,10 @@ class Slider(SliderTemplate):
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
     self.label_container.style.top = str(progress_top) + "px"
-    if self.value == 0:
-      self.label_container.style.marginLeft = '25px'
-    
+    if slider.value == slider.min:
+      self.label_container.style.marginLeft = '-25px'
+    else:
+      self.label_container.style.marginLeft = '-18px'
 
   def _get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
