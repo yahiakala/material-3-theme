@@ -201,12 +201,12 @@ class Slider(SliderTemplate):
       marker_count = slider_range
     for i in range(marker_count + 1):
       marker_bg = document.createElement('span')
-      marker_bg.classList.add('anvil-m3-slider-marker-bg')
-      markers_container_bg.appendChild(marker_bg)
-    for j in range(marker_count + 1):
       marker_progress = document.createElement('span')
+      marker_bg.classList.add('anvil-m3-slider-marker-bg')
       marker_progress.classList.add('anvil-m3-slider-marker-progress')
+      markers_container_bg.appendChild(marker_bg)
       markers_container_progress.appendChild(marker_progress)
+      
       
   @property
   def show_markers(self):
