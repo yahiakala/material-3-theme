@@ -10,7 +10,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled,
   group: Interaction, description: True if this component should allow user interaction.}
 - {name: visible, type: boolean, default_value: true, designerHint: visible, designer_hint: visible,
-  group: Look and Feel}
+  group: Look and Feel, description: 'Should this component be displayed?'}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
