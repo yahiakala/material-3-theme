@@ -604,10 +604,15 @@ body {
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   width: 70px;
+  appearance: none;
 }
 
 th.month select.monthselect {
-  margin-right: 60px
+  margin-right: 60px;
+}
+
+th.month select.monthselect::after {
+  
 }
 
 .daterangepicker .drp-buttons button.btn {
@@ -641,7 +646,7 @@ th.month select.monthselect {
   }
 }
 
-/* th.month select.monthselect:after, th.month select.yearselect:after {
+th.month select.monthselect:after, th.month select.yearselect:after {
   font-family: "Material Symbols Outlined";
   content: "calendar_today";
-} */
+}
