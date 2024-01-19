@@ -1,13 +1,13 @@
 properties:
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
-  description: True if this component should allow user interaction}
+  description: True if this component should allow user interaction.}
 - name: align
   type: enum
   important: true
   options: [left, center, right, full]
   default_value: left
   designer_hint: align-horizontal
-  description: The position of this button in the available space
+  description: The position of this button in the available space.
   group: Layout
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
   group: Look and Feel, description: 'Should this component be displayed?'}
@@ -16,18 +16,18 @@ properties:
   options: [elevated, filled, tonal, outlined]
   include_none_option: true
   group: Look and Feel
-  description: Predefined style type
-- {name: text, type: string, default_value: '', description: Text for the Button,
+  description: Predefined style type.
+- {name: text, type: string, default_value: '', description: Text displayed on this component.,
   group: Key Properties, important: true}
-- {name: text_color, type: color, default_value: '', group: Text Style, description: display text color}
-- {name: font_family, type: string, default_value: '', group: Text Style, description: display text font family}
-- {name: font_size, type: number, group: Text Style, description: display text font size}
+- {name: text_color, type: color, default_value: '', group: Text Style, description: Color of the text on the component.}
+- {name: font_family, type: string, default_value: '', group: Text Style, description: Font family to use for this component.}
+- {name: font_size, type: number, group: Text Style, description: Font size of text displayed on this component.}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
-  group: Text Style, description: Display this component’s text underlined}
+  group: Text Style, description: Display this component’s text underlined.}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
-  group: Text Style, description: Display this component’s text in italics}
+  group: Text Style, description: Display this component’s text in italics.}
 - {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold,
-  group: Text Style, description: Display this component’s text in bold}
+  group: Text Style, description: Display this component’s text in bold.}
 - name: material_icon
   type: enum
   default_binding_prop: true
@@ -394,15 +394,15 @@ properties:
   default_value: null
   include_none_option: true
   group: Key Properties
-  description: The icon to display on this component
-- {name: icon_color, type: color, default_value: '', group: Icon Style, description: color of the icon}
-- {name: icon_size, type: number, group: Icon Style, description: size (pixels) of the icon}
+  description: The icon to display on this component.
+- {name: icon_color, type: color, default_value: '', group: Icon Style, description: Color of the icon displayed on this component.}
+- {name: icon_size, type: number, group: Icon Style, description: Size (pixels) of the icon displayed on this component.}
 - name: icon_align
   type: enum
   important: true
   options: [left, right]
   default_value: left
-  description: The alignment of the icon on this component
+  description: The alignment of the icon on this component.
   designer_hint: align-horizontal
   group: Icon Style
 - name: margin
@@ -410,17 +410,18 @@ properties:
   important: false
   default_value: ['8', '8', '8', '8']
   group: Layout
+  description: 'Margin (pixels) of the component. '
 - {name: background, type: color, default_value: '', important: false, group: Look and Feel,
-  description: Color of the background}
+  description: Color of the background of this component.}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
 is_package: true
 data_bindings: []
 events:
-- {name: click, default_event: true, description: When the component is clicked}
-- {name: show, description: When the component is shown on the screen}
-- {name: hide, description: When the component is removed from the screen}
+- {name: click, default_event: true, description: When the button is clicked.}
+- {name: show, description: When the button is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 components: []
 custom_component_container: false
 container:
