@@ -7,6 +7,7 @@ from ...Functions import enabled_property, value_property, color_property, prope
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
+    self._shown = False
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
     self.label = document.createElement('div')
@@ -47,23 +48,32 @@ class Slider(SliderTemplate):
 
   def _on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._set_markers()
+    self._update_progress()
     
   def _update_progress(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]
     progress = self.dom_nodes["anvil-m3-slider-progress"]
+    background = self.dom_nodes["anvil-m3-slider-background"]
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
     percent = (abs_value / range) * 100;
-    progress.style.width = str(percent) + "%"
+    progress.style.width = f"max(calc({percent}% - 6px), 0px)"
+    background.style.width = f"max(calc({100-percent}% - 6px), 0px)"
     progress_right, progress_top = self._check_position()
     self.label.textContent = slider.value
     self.label_container.style.left = str(progress_right) + "px"
     self.label_container.style.top = str(progress_top) + "px"
+    if slider.value == slider.min:
+      self.label_container.style.marginLeft = '-25px'
+    else:
+      self.label_container.style.marginLeft = '-18px'
 
   def _get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
     input_width = input.getBoundingClientRect().width
-    return str(input_width - 20) + "px"
+    # return str(input_width - 20) + "px"
+    return str(input_width - 4) + "px"
 
   def _check_position(self):
     progress_rect = self.dom_nodes["anvil-m3-slider-progress"].getBoundingClientRect()
@@ -117,12 +127,12 @@ class Slider(SliderTemplate):
 
   @value.setter
   def value(self, value):
-    if value > self.max:
-      raise ValueError("Value cannot be more than max")
+    if value is None:
+      value = 0
+    if value > self.max or value < self.min:
+      raise ValueError("Value cannot be outside min-max range")
     self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
-    if not value:
-      value = 0
     self._update_progress()
 
   @property
@@ -131,6 +141,8 @@ class Slider(SliderTemplate):
 
   @min.setter
   def min(self, value):
+    if value > self.max:
+      raise ValueError("Min cannot be more than max")
     self._props['min'] = value
     self.dom_nodes["anvil-m3-slider-input"].min = value
     self._update_progress()
@@ -141,6 +153,8 @@ class Slider(SliderTemplate):
 
   @max.setter
   def max(self, value):
+    if value < self.min:
+      raise ValueError("Max cannot be less than min")
     self._props['max'] = value
     self.dom_nodes["anvil-m3-slider-input"].max = value
     self._update_progress()
@@ -182,17 +196,27 @@ class Slider(SliderTemplate):
       full_slider.classList.add("anvil-m3-slider-disabled")
 
   def _set_markers(self):
-    markers_container = self.dom_nodes["anvil-m3-slider-markers-container"]
+    markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
+    markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
+    markers_container_bg.innerHTML = ''
+    markers_container_progress.innerHTML = ''
+    markers_container_bg.style.width = self._get_track_width()
+    markers_container_progress.style.width = self._get_track_width()
     slider_range = self.max - self.min
     if self.step:
       marker_count = int(slider_range / self.step)
     else:
       marker_count = slider_range
-    for i in range(marker_count + 1):
-      marker = document.createElement('span')
-      marker.classList.add('anvil-m3-slider-marker')
-      markers_container.appendChild(marker)
-  
+    if self.show_markers:
+      for i in range(marker_count + 1):
+        marker_bg = document.createElement('span')
+        marker_progress = document.createElement('span')
+        marker_bg.classList.add('anvil-m3-slider-marker-bg')
+        marker_progress.classList.add('anvil-m3-slider-marker-progress')
+        markers_container_bg.appendChild(marker_bg)
+        markers_container_progress.appendChild(marker_progress)
+      
+      
   @property
   def show_markers(self):
     return self._props.get('show_markers')
@@ -200,11 +224,12 @@ class Slider(SliderTemplate):
   @show_markers.setter
   def show_markers(self, value):
     self._props['show_markers'] = value
-    if value:
+    if self._shown:
       self._set_markers()
-    else:
-      self.dom_nodes["anvil-m3-slider-markers-container"].innerHTML = ''
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
+    self._shown = True
+    self._set_markers()
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._update_progress()

@@ -13,7 +13,7 @@ properties:
   group: Label}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label,
   group: Label}
-- {name: value, type: number, important: true, default_value: 5, description: The value of the slider,
+- {name: value, type: number, important: true, default_value: null, description: The value of the slider,
   group: Key properties}
 - {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
   group: Key properties}
@@ -24,14 +24,19 @@ properties:
 - name: margin
   type: margin
   important: true
-  default_value: ['10', '10', '10', '10']
-- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
+  default_value: ['', '', '', '']
+  group: Layout
+- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers,
+  group: Look and feel}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}
 - {name: show, description: When the component is shown on the screen}
 - {name: hide, description: When the component is removed from the screen}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/slider.png', dark: 'asset:designer_icons/slider_dark.png'}
 custom_component: true
 components: []
 container:
@@ -39,9 +44,11 @@ container:
   properties: {html: "<!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->\n\
       \n<div class=\"anvil-m3-slider\" anvil-name=\"anvil-m3-slider\">\n  <div class=\"\
       anvil-m3-slider-track-container\" anvil-name=\"anvil-m3-slider-track-container\"\
-      >\n    <div class=\"anvil-m3-slider-markers-container\" anvil-name=\"anvil-m3-slider-markers-container\"\
-      ></div>\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
-      ></div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"anvil-m3-slider-progress\"\
-      \ style=\"width: 50%;\"></div>\n  </div>\n  <input anvil-name=\"anvil-m3-slider-input\"\
-      \ type=\"range\" min=\"0\" max=\"10\">\n</div>\n"}
+      >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
+      >\n      <div class=\"anvil-m3-slider-markers-container-bg\" anvil-name=\"anvil-m3-slider-markers-container-bg\"\
+      ></div>\n    </div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"\
+      anvil-m3-slider-progress\" style=\"width: 50%;\">\n      <div class=\"anvil-m3-slider-markers-container-progress\"\
+      \ anvil-name=\"anvil-m3-slider-markers-container-progress\"></div>\n    </div>\n\
+      \  </div>\n  <input anvil-name=\"anvil-m3-slider-input\" type=\"range\" min=\"\
+      0\" max=\"10\">\n</div>\n"}
   event_bindings: {show: form_show}
