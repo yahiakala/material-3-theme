@@ -508,7 +508,6 @@ body {
   border-radius: 24px;
 } 
 
-
 .anvil-datepicker input + i.fa-calendar:hover::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-dark-overlay-1) }
 .anvil-datepicker input + i.fa-calendar:focus::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
 .anvil-datepicker input + i.fa-calendar:active::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
@@ -532,6 +531,7 @@ body {
   border-radius: 16px;
   color: var(--anvil-m3-on-surface);
   font-family: inherit;
+  width: auto;
 }
 
 .daterangepicker .calendar-table {
