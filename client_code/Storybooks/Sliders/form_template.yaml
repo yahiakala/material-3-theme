@@ -60,11 +60,12 @@ components:
       show_markers: true
       track_color: ''
       margin: ['', '', '', '']
+      max: 10
       thumb_color: ''
       progress_color: ''
       show_label: false
       label_color: ''
-      value: 5
+      value: 8
       label_text_color: ''
       step: 1
     type: form:Components.Slider

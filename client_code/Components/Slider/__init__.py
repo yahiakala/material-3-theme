@@ -7,6 +7,7 @@ from ...Functions import enabled_property, value_property, color_property, prope
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
+    self._shown = False
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
     self.label = document.createElement('div')
@@ -126,11 +127,11 @@ class Slider(SliderTemplate):
 
   @value.setter
   def value(self, value):
-    self._props['value'] = value
-    if not value:
+    if value is None:
       value = 0
     if value > self.max or value < self.min:
       raise ValueError("Value cannot be outside min-max range")
+    self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
     self._update_progress()
 
@@ -140,9 +141,9 @@ class Slider(SliderTemplate):
 
   @min.setter
   def min(self, value):
-    self._props['min'] = value
     if value > self.max:
       raise ValueError("Min cannot be more than max")
+    self._props['min'] = value
     self.dom_nodes["anvil-m3-slider-input"].min = value
     self._update_progress()
 
@@ -152,9 +153,9 @@ class Slider(SliderTemplate):
 
   @max.setter
   def max(self, value):
-    self._props['max'] = value
     if value < self.min:
       raise ValueError("Max cannot be less than min")
+    self._props['max'] = value
     self.dom_nodes["anvil-m3-slider-input"].max = value
     self._update_progress()
 
@@ -223,19 +224,12 @@ class Slider(SliderTemplate):
   @show_markers.setter
   def show_markers(self, value):
     self._props['show_markers'] = value
-    # if value:
-    #   self._set_markers()
-    # else:
-    #   self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
-    #   self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
+    if self._shown:
+      self._set_markers()
 
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    # if self.show_markers == True:
-    #   self._set_markers()
-    # else:
-    #   self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
-    #   self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
+    self._shown = True
     self._set_markers()
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     self._update_progress()
