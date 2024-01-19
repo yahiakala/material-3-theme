@@ -17,8 +17,8 @@ toolbox_item:
 is_package: true
 data_bindings: []
 events:
-- {name: show, default_event: true}
-- {name: hide}
+- {name: show, default_event: true, description: When the component is shown on the screen}
+- {name: hide, description: When the component is removed from the screen}
 components:
 - name: menu_button
   properties: {}

@@ -29,6 +29,7 @@ properties:
   type: margin
   important: true
   default_value: [8px, 8px, 8px, 8px]
+  group: Layout
 - name: card_content_padding
   type: padding
   important: true
@@ -36,8 +37,8 @@ properties:
 - {name: card_image_content_padding, type: padding, important: true}
 is_package: true
 events:
-- {name: show, default_event: true}
-- {name: hide}
+- {name: show, default_event: true, description: When the component is shown on the screen}
+- {name: hide, description: When the component is removed from the screen}
 toolbox_item:
   icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
 custom_component: true
