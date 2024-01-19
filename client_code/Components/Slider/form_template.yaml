@@ -35,6 +35,8 @@ events:
 - {name: change, default_event: true, description: When the value of the component is changed}
 - {name: show, description: When the component is shown on the screen}
 - {name: hide, description: When the component is removed from the screen}
+toolbox_item:
+  icon: {light: 'asset:designer_icons/slider.png', dark: 'asset:designer_icons/slider_dark.png'}
 custom_component: true
 components: []
 container:
