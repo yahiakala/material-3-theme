@@ -5,11 +5,11 @@ components:
   type: form:Components.Text
   layout_properties: {grid_position: 'NLZEXB,ZFMOMV'}
 - name: slider_1
-  properties: {}
+  properties: {max: 100}
   type: form:Components.Slider
   layout_properties: {grid_position: 'EOAUAL,SXQICU'}
 - name: slider_5
-  properties: {show_label: true}
+  properties: {show_label: true, max: 100}
   type: form:Components.Slider
   layout_properties: {grid_position: 'DNLVXQ,LXIKWE'}
 - name: slider_2

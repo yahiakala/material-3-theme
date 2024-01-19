@@ -170,3 +170,5 @@
 }
 .anvil-m3-slider-marker-bg { background: var(--anvil-m3-primary); }
 .anvil-m3-slider-marker-progress { background: var(--anvil-m3-primary-container); }
+
+.anvil-m3-slider-disabled .anvil-m3-slider-marker-bg { background: var(--anvil-m3-primary); }
