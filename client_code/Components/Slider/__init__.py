@@ -192,8 +192,8 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
     markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
-    markers_container_bg.style.width = "970px"
-    markers_container_progress.style.width = "970px"
+    markers_container_bg.style.width = self._get_track_width()
+    markers_container_progress.style.width = self._get_track_width()
     slider_range = self.max - self.min
     if self.step:
       marker_count = int(slider_range / self.step)
@@ -215,13 +215,18 @@ class Slider(SliderTemplate):
   @show_markers.setter
   def show_markers(self, value):
     self._props['show_markers'] = value
-    if value:
+    # if value:
+    #   self._set_markers()
+    # else:
+    #   self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
+    #   self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
+
+  def form_show(self, **event_args):
+    """This method is called when the HTML panel is shown on the screen"""
+    if self.show_markers == True:
       self._set_markers()
     else:
       self.dom_nodes["anvil-m3-slider-markers-container-bg"].innerHTML = ''
       self.dom_nodes["anvil-m3-slider-markers-container-progress"].innerHTML = ''
-
-  def form_show(self, **event_args):
-    """This method is called when the HTML panel is shown on the screen"""
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     self._update_progress()
