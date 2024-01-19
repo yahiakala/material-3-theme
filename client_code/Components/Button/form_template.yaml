@@ -8,6 +8,7 @@ properties:
   default_value: left
   designer_hint: align-horizontal
   description: The position of this button in the available space
+  group: Layout
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
   group: Look and Feel, description: 'Should this component be displayed?'}
 - name: appearance
@@ -17,7 +18,7 @@ properties:
   group: Look and Feel
   description: Predefined style type
 - {name: text, type: string, default_value: '', description: Text for the Button,
-  group: Key Properties}
+  group: Key Properties, important: true}
 - {name: text_color, type: color, default_value: '', group: Text Style, description: display text color}
 - {name: font_family, type: string, default_value: '', group: Text Style, description: display text font family}
 - {name: font_size, type: number, group: Text Style, description: display text font size}
@@ -406,8 +407,11 @@ properties:
   group: Icon Style
 - name: margin
   type: margin
-  important: true
+  important: false
   default_value: ['8', '8', '8', '8']
+  group: Layout
+- {name: background, type: color, default_value: '', important: false, group: Look and Feel,
+  description: Color of the background}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
@@ -415,7 +419,8 @@ is_package: true
 data_bindings: []
 events:
 - {name: click, default_event: true, description: When the component is clicked}
-- {name: show}
+- {name: show, description: When the component is shown on the screen}
+- {name: hide, description: When the component is removed from the screen}
 components: []
 custom_component_container: false
 container:
