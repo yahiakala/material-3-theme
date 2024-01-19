@@ -1,14 +1,14 @@
 properties:
-- {name: text, type: string, default_value: '', default_binding_prop: true, description: Text on Button,
+- {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on the button.,
   group: Key Properties}
 - name: appearance
   type: enum
   options: [elevated, filled, tonal, outlined]
-  description: Predefined style type of button.
+  description: Predefined style type of the button.
   default_value: elevated
   group: Look and Feel
 - {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled,
-  group: Interaction}
+  group: Interaction, description: True if this component should allow user interaction.}
 - {name: visible, type: boolean, default_value: true, designerHint: visible, designer_hint: visible,
   group: Look and Feel}
 custom_component: true
