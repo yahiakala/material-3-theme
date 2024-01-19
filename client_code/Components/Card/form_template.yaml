@@ -37,8 +37,8 @@ properties:
 - {name: card_image_content_padding, type: padding, important: true}
 is_package: true
 events:
-- {name: show, default_event: true, description: When the component is shown on the screen}
-- {name: hide, description: When the component is removed from the screen}
+- {name: show, default_event: true, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
 custom_component: true

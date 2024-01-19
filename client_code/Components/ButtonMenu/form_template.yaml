@@ -4,7 +4,7 @@ properties:
 - name: appearance
   type: enum
   options: [elevated, filled, tonal, outlined]
-  description: Style of Button
+  description: Predefined style type of button.
   default_value: elevated
   group: Look and Feel
 - {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled,
