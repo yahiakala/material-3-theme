@@ -104,7 +104,10 @@ native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.
     rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />'}
+    />
+
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    -->'}
 db_schema:
   jobs:
     client: search

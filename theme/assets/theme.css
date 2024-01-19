@@ -28,6 +28,7 @@
   --anvil-m3-on-tertiary-container: %color:On Tertiary Container%;
   --anvil-m3-surface-container: %color:Surface Container%;
   --anvil-m3-surface-container-highest: %color:Surface Container Highest%;
+  --anvil-m3-surface-container-high: %color:Surface Container High%;
   --anvil-m3-surface-container-low: %color:Surface Container Low%;
   --anvil-m3-surface: %color:Surface%;
   --anvil-m3-on-surface: %color:On Surface%;
@@ -463,6 +464,8 @@ body {
   }
 }
 
+/*TOOLTIP PROPERTY*/
+
 .anvil-m3-tooltip {
   background-color: %color:Inverse Surface%;
   color: %color:Inverse On Surface%;
@@ -480,4 +483,165 @@ body {
   align-items: center;
   pointer-events: none;
 }
+
+/*ANVIL DATEPICKER COMPONENT*/
+
+.anvil-datepicker input {
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: none;
+  vertical-align: middle;
+  padding: 0px 16px;
+  background-color: transparent;
+  border: 1px solid %color:Outline%;
+  border-radius: 4px;
+  color: %color:On Surface%;
+  height: 56px !important;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease-out;
+}
+
+.anvil-datepicker input + i.fa-calendar::before {
+  font-family: "Material Symbols Outlined";
+  content: "calendar_today";
+  font-size: 24px;
+  color: %color:On Surface Variant%;
+  padding: 6px 8px;
+  border-radius: 24px;
+} 
+
+.anvil-datepicker input + i.fa-calendar:hover::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-dark-overlay-1) }
+.anvil-datepicker input + i.fa-calendar:focus::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
+.anvil-datepicker input + i.fa-calendar:active::before { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)),  var(--anvil-m3-dark-overlay-2) }
+
+.anvil-datepicker input + i.fa-calendar {
+  bottom: 15px;
+}
+
+.anvil-datepicker input:hover {
+  border-color: var(--anvil-m3-on-surface);
+}
+
+.anvil-datepicker input:focus {
+  border-color: var(--anvil-m3-primary);
+  border-width: 2px; 
+  padding: 7px 15px;
+}
+
+.daterangepicker {
+  background-color: var(--anvil-m3-surface-container-high);
+  border-radius: 16px;
+  color: var(--anvil-m3-on-surface);
+  font-family: inherit;
+  width: auto;
+}
+
+.daterangepicker .calendar-table {
+  background-color: var(--anvil-m3-surface-container-high);
+}
+
+.daterangepicker:after, .daterangepicker:before {
+  display:none;
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+  background-color: var(--anvil-m3-surface-container-high);
+  color: var(--anvil-m3-on-surface-variant);
+}
+
+.daterangepicker td.active {
+  background-color: var(--anvil-m3-primary)
+}
+
+.daterangepicker td.active:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
+}
+
+/* .daterangepicker td.today {
+  background-color: transparent;
+  border: 1px solid var(--anvil-m3-primary);
+  color: var(--anvil-m3-primary);
+}
+
+.daterangepicker td.today:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-1), var(--anvil-m3-primary-overlay-1)),  transparent !important;
+  color: var(--anvil-m3-primary) !important;
+  border: 1px solid var(--anvil-m3-primary)
+} */
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+  font-weight: normal;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+}
+
+.daterangepicker td.start-date.end-date {
+  border-radius: 20px;
+}
+
+.daterangepicker td.available:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-on-surface-variant-overlay-1), var(--anvil-m3-on-surface-variant-overlay-1)),  var(--anvil-m3-surface-container-high)
+}
+
+
+.daterangepicker .calendar-table table {
+  border-spacing: 4px;
+  border-collapse: unset;
+}
+
+.daterangepicker .drp-calendar {
+  max-width: fit-content;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect, .daterangepicker select.hourselect, .daterangepicker select.minuteselect {
+  border: none;
+  background-color: transparent;
+  color: var(--anvil-m3-on-surface);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+  width: 70px;
+/*   appearance: none; */
+}
+
+th.month select.monthselect {
+  margin-right: 60px;
+}
+
+th.month select.monthselect::after {
+  
+}
+
+.daterangepicker .drp-buttons button.btn {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--anvil-m3-primary);
+}
+
+.daterangepicker .drp-buttons {
+  border-top: none;
+  padding-bottom: 12px;
+}
+
+.daterangepicker.show-calendar .drp-calendar {
+  padding: 20px 12px 12px 12px;
+}
+
+.daterangepicker .drp-calendar.left .calendar-table {
+    padding-right: 0px;
+}
+
+
+
+.daterangepicker .drp-calendar.right .calendar-table {
+    border: none;
+  }
 
