@@ -35,6 +35,7 @@ properties:
   important: true
   default_value: [16px, 16px, 16px, 16px]
 - {name: card_image_content_padding, type: padding, important: true}
+- {name: background, type: color, default_value: '', important: false, group: Look and Feel}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}

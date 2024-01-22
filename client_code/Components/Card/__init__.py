@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property
+from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -47,6 +47,7 @@ class Card(CardTemplate):
 
   image_width = align = style_property('image', 'width', 'image_width')
   image_height = align = style_property('image', 'height', 'image_height')
+  background = color_property('anvil-m3-card', 'backgroundColor', 'background')
 
   def _set_card_img(self, *_args):
     if self.card_image:

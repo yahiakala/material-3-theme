@@ -33,7 +33,7 @@ components:
     - name: full_outline
       properties: {rounded_image: false, appearance: outlined, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: 250p}
+        image_height: 250p, background: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ ETYKRM,BWCZNC'}
       components:
@@ -347,7 +347,7 @@ components:
     - name: full_filled
       properties: {rounded_image: false, appearance: filled, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: '', image_width: ''}
+        image_height: '', image_width: '', background: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI BWFXIR,JIWAFR'}
       components:
