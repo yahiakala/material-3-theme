@@ -44,7 +44,7 @@ toolbox_sections:
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
   - title: CardContentContainer
     icon: null
-    component: {type: Material_3_Theme_2_0.Components.CardContentContainer}
+    component: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}
   - title: SidesheetContent
     icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
     component: {type: Material_3_Theme_2_0.SidesheetContent}
