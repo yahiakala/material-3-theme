@@ -1,12 +1,13 @@
 layout:
   type: form:StandardPageLayout
-  properties: {navigation_rail_collapse_to: Navigation drawer, app_title: Material Design 3,
+  properties: {navigation_rail_collapse_to: Bottom app bar, app_title: Material Design 3,
     show_sidesheet: false}
 is_package: true
 components_by_slot:
   slot_1:
   - name: navigation_link_1
-    properties: {text: Home, material_icon: home, selected: true, navigate_to: TestPage}
+    properties: {text: Home, material_icon: home, selected: true, navigate_to: TestPage,
+      badge: true}
     type: form:Components.NavigationLink
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
