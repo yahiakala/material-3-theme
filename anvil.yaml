@@ -84,6 +84,9 @@ toolbox_sections:
   - title: FileLoader
     icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.FileLoader}
+  - title: Slider
+    icon: {light: 'asset:designer_icons/slider.svg', dark: 'asset:designer_icons/slider_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.Slider}
 - packageName: Material_3_Theme_2_0
   title: Feedback
   items:
