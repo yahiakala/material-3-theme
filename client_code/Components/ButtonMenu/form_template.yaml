@@ -14,6 +14,7 @@ properties:
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
+  hidden: true
 is_package: true
 data_bindings: []
 events:

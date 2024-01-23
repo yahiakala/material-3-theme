@@ -18,6 +18,7 @@ events:
 - {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
+  hidden: true
 custom_component: true
 components: []
 container:
