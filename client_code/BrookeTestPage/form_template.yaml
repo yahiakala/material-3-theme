@@ -133,6 +133,10 @@ components_by_slot:
       properties: {text: radio out, tooltip: radio button}
       type: form:Components.RadioButton
       layout_properties: {grid_position: 'VDESZV,FPAHBO'}
+    - name: plot_1
+      properties: {}
+      type: Plot
+      layout_properties: {grid_position: 'EHQECG,CPXNHE'}
     - name: dropdown_menu_1
       properties: {}
       type: form:Components.DropdownMenu

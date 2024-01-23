@@ -13,6 +13,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.layout.layout.show_sidesheet = False
+    self.plot_1.data = go.Bar(y=[1,2,3])
     # self.checkbox_1.checked = None
         
   def button_1_click(self, **event_args):
