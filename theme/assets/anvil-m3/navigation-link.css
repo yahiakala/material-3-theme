@@ -71,8 +71,8 @@
   color: var(--anvil-m3-on-error);
   display: block;
   background-color: var(--anvil-m3-error);
-  height: 10px;
-  width: 10px;
+  height: 6px;
+  width: 6px;
   border-radius: 6px;
   position: absolute;
   margin-top: -34px;
@@ -88,6 +88,11 @@
   width: fit-content;
   margin-top: -40px;
   margin-left: 30px;
+}
+
+.anvil-m3-navigation-link-icon-container {
+  margin: auto;
+  width: 56px;
 }
 
 /*on mobile in drawer*/
