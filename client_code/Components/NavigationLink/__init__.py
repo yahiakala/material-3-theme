@@ -60,21 +60,6 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['anvil-m3-navigation-link'].href = 'javascript:void(0)'
 
   @property
-  def icon(self):
-    return self._icon
-
-  @icon.setter
-  def icon(self, value):
-    link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
-    self._icon = value
-    # value = value.replace(":", "-")
-    # if value:
-    #   link_icon.className = ""
-    #   link_icon.classList.add("fa")
-    #   link_icon.classList.add(value)
-    
-
-  @property
   def material_icon(self):
     return self._material_icon
 

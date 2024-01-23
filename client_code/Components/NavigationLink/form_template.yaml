@@ -1,6 +1,5 @@
 properties:
 - {name: url, type: string, default_value: '', group: Other, important: false, description: The target URL of the link}
-- {name: icon, type: icon, default_value: 'fa:star', group: Other}
 - {name: text, type: string, default_value: Label, description: Text for the Link,
   group: Key Properties, important: true}
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
