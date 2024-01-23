@@ -31,7 +31,7 @@ components:
     - name: column_panel_1
       properties: {}
       type: ColumnPanel
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: navigation_link_1
         properties: {text: Default}
