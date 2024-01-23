@@ -28,7 +28,7 @@ components:
     - name: card_content_container_2
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1
         properties: {}
@@ -71,7 +71,7 @@ components:
     - name: card_content_container_1
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: anvil-m3-card-slot}
+      layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2
         properties: {col_widths: '{"GFZEWW":20,"DYCYXB":20,"KRPVFE":20}'}
