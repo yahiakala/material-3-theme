@@ -63,7 +63,7 @@ components:
             error: false
             enabled: true
             label_font: ''
-            character_limit: 100
+            character_limit: 10
             label_text_color: ''
             bold_label: false
             underline_label: false
@@ -76,12 +76,12 @@ components:
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy
-          properties: {label_text: label only, appearance: outlined, error: false,
+          properties: {label_text: Label only, appearance: outlined, error: false,
             enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy
-          properties: {placeholder: placeholder_only, appearance: outlined, enabled: true,
+          properties: {placeholder: Placeholder only, appearance: outlined, enabled: true,
             error: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
@@ -100,21 +100,21 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_1
-          properties: {placeholder: '', label_text: label, supporting_text: support,
-            error: false, enabled: true}
+          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text,
+            error: false, enabled: true, appearance: null, character_limit: 10}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy
-          properties: {appearance: null, label_text: TTTTT, placeholder: plac, supporting_text: sup,
-            error: false, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
+            supporting_text: Supporting text, error: false, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2
-          properties: {label_text: label only, enabled: true, error: false}
+          properties: {label_text: Label only, enabled: true, error: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3
-          properties: {placeholder: placeholder_only, enabled: true, error: false}
+          properties: {placeholder: Placeholder only, enabled: true, error: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy_2
@@ -364,18 +364,18 @@ components:
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
-          properties: {label_text: label_only, leading_icon: 13mp, appearance: outlined,
+          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined,
             error: false, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy
           properties:
-            placeholder: placeholder_only
+            placeholder: Placeholder only
             leading_icon: 13mp
             appearance: outlined
             enabled: true
             error: false
-            label_text: TABLE
+            label_text: ''
             margin: [auto, '', null, null]
             spacing:
               padding: [auto, null, null, null]
@@ -396,30 +396,30 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1
-          properties: {placeholder: '', label_text: label, leading_icon: 10k, trailing_icon: 13mp,
-            supporting_text: support, error: false, enabled: true}
+          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp,
+            supporting_text: Supporting text, error: false, enabled: true, character_limit: 10}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_click}
         - name: text_field_1_copy
-          properties: {appearance: null, label_text: TTTTT, placeholder: pac, supporting_text: sup,
-            leading_icon: '', error: false, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
+            supporting_text: Supporting text, leading_icon: '', error: false, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3
-          properties: {label_text: label_only, error: false, enabled: true}
+          properties: {label_text: Label only, error: false, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4
           properties:
-            placeholder: placeholder_only
+            placeholder: Placeholder only
             error: false
             enabled: true
             spacing:
               padding: ['0', null, null, null]
               margin: [0px, null, null, null]
-            display_font_size: 40
-            bold_display: true
+            display_font_size: null
+            bold_display: false
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
   - name: card_1_copy_copy_copy
