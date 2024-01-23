@@ -13,43 +13,17 @@ class BrookeTestPage(BrookeTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.layout.layout.show_sidesheet = False
-    self.plot_1.data = go.Bar(y=[1,2,3])
     # self.checkbox_1.checked = None
         
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
     self.layout.layout.show_sidesheet = not self.layout.layout.show_sidesheet
 
-  def file_loader_2_focus(self, **event_args):
-    """This method is called when the FileLoader gets focus"""
-    print('im so focused rn')
-
-  def file_loader_2_lost_focus(self, **event_args):
-    """This method is called when the FileLoader loses focus"""
-    print('im so unfocused')
-
-  def file_loader_5_change(self, file, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
-    download(file)
-
-  def interactive_card_1_click(self, **event_args):
-    """This method is called when the component is clicked"""
-
-  def file_loader_1_change(self, file, files, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
-    print(files)
-
-  def file_loader_2_change(self, file, files, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
-    print(files)
-
   def button_3_click(self, **event_args):
     """This method is called when the component is clicked"""
     self.switch_1.selected = not self.switch_1.selected
 
-  def button_4_click(self, **event_args):
-    """This method is called when the component is clicked"""
-    self.text_3.tooltip = ""
+
 
 
 
