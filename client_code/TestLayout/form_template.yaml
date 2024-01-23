@@ -1,7 +1,7 @@
 layout:
   type: form:StandardPageLayout
   properties: {navigation_rail_collapse_to: Bottom app bar, app_title: Material Design 3,
-    show_sidesheet: false}
+    show_sidesheet: true}
 is_package: true
 components_by_slot:
   slot_1:
@@ -28,7 +28,11 @@ components_by_slot:
     event_bindings: {}
   slot_2: []
   slot_3: []
-  slot_5: []
+  slot_5:
+  - name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
+    layout_properties: {}
 slots:
   slot_3:
     index: 0
@@ -43,6 +47,22 @@ slots:
     set_layout_properties: {}
     target: {type: slot, name: slot_4}
   slot_5:
-    index: 0
+    index: 1
     set_layout_properties: {}
     target: {type: slot, name: slot_5}
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {type: container, name: sidesheet_content_1}
+  slot_6:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet-title}
+    target: {type: container, name: sidesheet_content_1}
+  slot_7:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet-close-button}
+    target: {type: container, name: sidesheet_content_1}
+  slot_8:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet-footer}
+    target: {type: container, name: sidesheet_content_1}
