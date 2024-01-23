@@ -37,6 +37,7 @@ events:
 - {name: hide, description: When the component is removed from the screen}
 toolbox_item:
   icon: {light: 'asset:designer_icons/slider.svg', dark: 'asset:designer_icons/slider_dark.svg'}
+  hidden: true
 custom_component: true
 components: []
 container:

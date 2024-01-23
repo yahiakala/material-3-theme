@@ -415,6 +415,7 @@ events:
 - {name: hide}
 toolbox_item:
   icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
+  hidden: true
 custom_component: true
 components: []
 container:
