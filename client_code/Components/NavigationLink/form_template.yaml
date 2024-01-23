@@ -386,6 +386,8 @@ properties:
   group: Key Properties
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
   default_binding_prop: true, default_value: null, group: Key Properties, important: true}
+- {name: margin, type: margin, important: true}
+- {name: tooltip, type: string, default_value: '', important: true}
 event_bindings: {show: form_show}
 custom_component: true
 toolbox_item: {}
