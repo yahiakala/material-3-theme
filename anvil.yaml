@@ -18,6 +18,9 @@ toolbox_sections:
   - title: Link
     icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Link}
+  - title: RichText
+    icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
+    component: {type: anvil.RichText}
 - packageName: Material_3_Theme_2_0
   title: Buttons
   items:
