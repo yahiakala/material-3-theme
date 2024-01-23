@@ -1,7 +1,7 @@
 from anvil.js import import_from
 
 # https://floating-ui.com/
-# can't import from cdn, need to fix before release
+# can't import from cdn, load js file in assets and import from there
 fui = import_from("https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.5.3/+esm")
 
 _static_arrow_position = {
