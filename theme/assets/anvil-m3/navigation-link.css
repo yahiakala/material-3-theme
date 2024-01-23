@@ -97,6 +97,12 @@
 }
 }
 
+.anvil-m3-navigation-rail.anvil-m3-bottom-app-bar .anvil-m3-navigation-link-icon-container {
+  margin: auto;
+  width: 56px;
+}
+
+
 /*on mobile in drawer*/
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container {
