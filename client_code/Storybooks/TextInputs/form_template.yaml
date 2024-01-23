@@ -50,7 +50,7 @@ components:
         components:
         - name: text_area_1_copy_2
           properties:
-            label_text: LABEL
+            label_text: ''
             appearance: outlined
             label_font_size: 30
             spacing:

@@ -19,7 +19,7 @@ toolbox_sections:
     icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.Link}
   - title: RichText
-    icon: {light: '/ide/img/toolbox/RichText.svg', dark: '/ide/img/toolbox/RichText.dark.svg'}
+    icon: {light: /ide/img/toolbox/RichText.svg, dark: /ide/img/toolbox/RichText.dark.svg}
     component: {type: anvil.RichText}
 - packageName: Material_3_Theme_2_0
   title: Buttons
@@ -100,16 +100,16 @@ toolbox_sections:
   title: Integrations
   items:
   - title: Plot
-    icon: {light: '/ide/img/toolbox/Plot.svg', dark: '/ide/img/toolbox/Plot.dark.svg'}
+    icon: {light: /ide/img/toolbox/Plot.svg, dark: /ide/img/toolbox/Plot.dark.svg}
     component: {type: anvil.Plot}
   - title: YouTube Video
-    icon: {light: '/ide/img/toolbox/YouTubeVideo.svg', dark: '/ide/img/toolbox/YouTubeVideo.dark.svg'}
+    icon: {light: /ide/img/toolbox/YouTubeVideo.svg, dark: /ide/img/toolbox/YouTubeVideo.dark.svg}
     component: {type: anvil.YouTubeVideo}
   - title: Google Map
-    icon: {light: '/ide/img/toolbox/GoogleMap.svg', dark: '/ide/img/toolbox/GoogleMap.dark.svg'}
+    icon: {light: /ide/img/toolbox/GoogleMap.svg, dark: /ide/img/toolbox/GoogleMap.dark.svg}
     component: {type: anvil.GoogleMap}
   - title: Canvas
-    icon: {light: '/ide/img/toolbox/Canvas.svg', dark: '/ide/img/toolbox/Canvas.dark.svg'}
+    icon: {light: /ide/img/toolbox/Canvas.svg, dark: /ide/img/toolbox/Canvas.dark.svg}
     component: {type: anvil.Canvas}
 name: Material 3 Theme 2.0
 runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
