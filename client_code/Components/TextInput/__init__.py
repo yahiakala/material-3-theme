@@ -25,7 +25,10 @@ class TextInput(TextInputTemplate):
   spacing = spacing_property('textinput-component')
   
   def set_appearance(self, value):
-    self.dom_nodes['textinput-component'].classList.toggle('outlined', bool(value))  
+    if value == 'outlined':
+      self.dom_nodes['textinput-component'].classList.toggle('outlined', True) 
+    else:
+      self.dom_nodes['textinput-component'].classList.toggle('outlined', False)
   appearance = property_with_callback("appearance", set_appearance)
   
   def set_supporting_text(self, value):
