@@ -289,3 +289,4 @@ components:
         properties: {material_icon: null, text: ''}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+custom_component: false
