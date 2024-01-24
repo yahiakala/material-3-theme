@@ -60,8 +60,10 @@ components:
       show_markers: true
       track_color: ''
       margin: ['', '', '', '']
+      tooltip: ''
       max: 10
       thumb_color: ''
+      enabled: true
       progress_color: ''
       show_label: false
       label_color: ''
@@ -71,6 +73,7 @@ components:
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
     data_bindings: []
+    event_bindings: {change: slider_4_change}
   - name: text_6
     properties: {text: 'With label, enabled'}
     type: form:Components.Text
