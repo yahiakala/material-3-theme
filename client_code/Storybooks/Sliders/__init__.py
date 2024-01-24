@@ -15,4 +15,4 @@ class Sliders(SlidersTemplate):
 
   def slider_4_change(self, **event_args):
     """This method is called when the value of the component is changed"""
-    print(value)
+    print(self.slider_4.value)
