@@ -34,9 +34,9 @@ properties:
   options: [filled, outlined]
   default_value: filled
 - {name: character_limit, type: number, important: true, default_value: 0}
-- {name: enabled, type: boolean, default_value: true, important: true, group: Attributes,
+- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction,
   designer_hint: enabled}
-- {name: error, type: boolean, default_value: false, important: true, group: Attributes,
+- {name: error, type: boolean, default_value: false, important: false, group: Interaction,
   designer_hint: toggle}
 - name: spacing
   type: spacing
@@ -44,6 +44,7 @@ properties:
   default_value:
     padding: [auto, null, null, null]
     margin: [auto, null, null, null]
+  group: Layout
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
