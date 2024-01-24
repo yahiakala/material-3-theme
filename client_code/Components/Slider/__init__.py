@@ -141,11 +141,12 @@ class Slider(SliderTemplate):
 
   @min.setter
   def min(self, value):
-    if value > self.max:
-      raise ValueError("Min cannot be more than max")
-    self._props['min'] = value
-    self.dom_nodes["anvil-m3-slider-input"].min = value
-    self._update_progress()
+    if value:
+      if value > self._props['max']:
+        raise ValueError("Min cannot be more than max")
+      self._props['min'] = value
+      self.dom_nodes["anvil-m3-slider-input"].min = value
+      self._update_progress()
 
   @property
   def max(self):
@@ -153,8 +154,7 @@ class Slider(SliderTemplate):
 
   @max.setter
   def max(self, value):
-    print(value)
-    if value < self.min:
+    if value < self._props['min']:
       raise ValueError("Max cannot be less than min")
     self._props['max'] = value
     self.dom_nodes["anvil-m3-slider-input"].max = value

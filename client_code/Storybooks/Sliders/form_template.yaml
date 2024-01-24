@@ -59,7 +59,7 @@ components:
       min: 0
       show_markers: true
       track_color: ''
-      margin: ['', '', '', '']
+      margin: [auto, '', auto, '']
       tooltip: ''
       max: 10
       thumb_color: ''
