@@ -1,9 +1,10 @@
 properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
-  group: Key Properties}
+  group: Key Properties, description: Text displayed on the label of this component.}
 - {name: placeholder, type: string, default_value: '', important: true, group: Key Properties,
   description: The text to be displayed when the component is empty.}
-- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties}
+- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties,
+  description: Text displayed underneath this component.}
 - {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
 - name: appearance
   type: enum
@@ -41,7 +42,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true, important: true, group: Interaction,
   designer_hint: enabled, description: True if this component should allow user interaction.}
 - {name: error, type: boolean, default_value: false, important: false, group: Interaction,
-  designer_hint: toggle}
+  designer_hint: toggle, description: Whether or not the checkbox is in an error state.}
 - name: spacing
   type: spacing
   important: true
@@ -49,6 +50,7 @@ properties:
     padding: [auto, null, null, null]
     margin: [auto, null, null, null]
   group: Layout
+  description: The margin and padding of this component. Default value is in pixels.
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}

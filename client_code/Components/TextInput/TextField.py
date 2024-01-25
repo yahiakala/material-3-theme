@@ -18,7 +18,7 @@ leading_icon_property = {"name": "leading_icon",
                          "default_value": "",
                          # "include_none_option": True, 
                          # "none_option_label": "None", 
-                         "description": "right side icon"}
+                         "description": "The icon to display on the right side of this component."}
 trailing_icon_property = {"name": "trailing_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
@@ -26,7 +26,7 @@ trailing_icon_property = {"name": "trailing_icon",
                          "important": True, 
                          "default_value": "",
                          # "include_none_option": True, 
-                         "description": "left side icon"}
+                         "description": "The icon to display on the left side of this component."}
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
