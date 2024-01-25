@@ -1,7 +1,8 @@
 properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
   group: Key Properties}
-- {name: placeholder, type: string, default_value: '', important: true, group: Key Properties}
+- {name: placeholder, type: string, default_value: '', important: true, group: Key Properties,
+  description: The text to be displayed when the component is empty.}
 - {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties}
 - {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
 - name: appearance
@@ -11,7 +12,7 @@ properties:
   default_value: filled
   group: Look and Feel
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
-  group: Look and Feel}
+  group: Look and Feel, description: 'Should this component be displayed?'}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
   group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
@@ -37,7 +38,7 @@ properties:
 - {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
   group: Text}
 - {name: enabled, type: boolean, default_value: true, important: true, group: Interaction,
-  designer_hint: enabled}
+  designer_hint: enabled, description: True if this component should allow user interaction.}
 - {name: error, type: boolean, default_value: false, important: false, group: Interaction,
   designer_hint: toggle}
 - name: spacing
