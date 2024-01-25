@@ -18,6 +18,7 @@ components_by_slot:
   - name: card_1
     properties:
       card_content_padding: [16px, 16px, 16px, '16']
+      margin: [8px, 8px, 8px, '0']
     type: form:Components.Card
     layout_properties: {}
   - name: text_field_1
@@ -31,6 +32,18 @@ components_by_slot:
   - name: linear_progress_indicator_1
     properties: {}
     type: form:Components.LinearProgressIndicator
+    layout_properties: {}
+  - name: dropdown_menu_1
+    properties: {}
+    type: form:Components.DropdownMenu
+    layout_properties: {}
+  - name: divider_1
+    properties: {}
+    type: form:Components.Divider
+    layout_properties: {}
+  - name: button_1
+    properties: {appearance: filled, text: Button, align: left}
+    type: form:Components.Button
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
