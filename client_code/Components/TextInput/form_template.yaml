@@ -1,6 +1,21 @@
 properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
-  group: Attributes}
+  group: Key Properties}
+- {name: placeholder, type: string, default_value: '', important: true, group: Key Properties}
+- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties}
+- name: appearance
+  type: enum
+  important: true
+  options: [filled, outlined]
+  default_value: filled
+  group: Look and Feel
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
+  group: Look and Feel}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
+  group: Look and Feel}
+- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
+  group: Look and Feel}
+- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
   group: Style}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
@@ -10,8 +25,6 @@ properties:
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels,
   group: Style}
 - {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label,
-  group: Style}
-- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
   group: Style}
 - {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
   group: Style}
@@ -23,17 +36,6 @@ properties:
   group: Style}
 - {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
   group: Style}
-- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
-  group: Style}
-- {name: supporting_text, type: string, default_value: '', important: true, group: Attributes}
-- {name: placeholder, type: string, default_value: '', important: true, group: Attributes}
-- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
-- name: appearance
-  type: enum
-  important: true
-  options: [filled, outlined]
-  default_value: filled
-- {name: character_limit, type: number, important: true, default_value: 0}
 - {name: enabled, type: boolean, default_value: true, important: true, group: Interaction,
   designer_hint: enabled}
 - {name: error, type: boolean, default_value: false, important: false, group: Interaction,
