@@ -15,5 +15,22 @@ components_by_slot:
     properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
     type: form:Components.Link
     layout_properties: {}
+  - name: card_1
+    properties:
+      card_content_padding: [16px, 16px, 16px, '16']
+    type: form:Components.Card
+    layout_properties: {}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextInput.TextField
+    layout_properties: {}
+  - name: text_area_1
+    properties: {}
+    type: form:Components.TextInput.TextArea
+    layout_properties: {}
+  - name: linear_progress_indicator_1
+    properties: {}
+    type: form:Components.LinearProgressIndicator
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
