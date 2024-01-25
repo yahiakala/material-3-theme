@@ -33,7 +33,7 @@ components:
     - name: full_outline
       properties: {rounded_image: false, appearance: outlined, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: 250p, background: ''}
+        image_height: 250p, background: '', tooltip: '', visible: true}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ ETYKRM,BWCZNC'}
       components:
@@ -94,7 +94,7 @@ components:
     - name: top_outlined
       properties: {appearance: outlined, image_position: top, image_height: 120px,
         card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true}
+        rounded_image: true, tooltip: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ CBIXCJ,NZLDUT'}
       components:

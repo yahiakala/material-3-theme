@@ -40,6 +40,8 @@ properties:
 - {name: card_image_content_padding, type: padding, important: false, group: Image Style}
 - {name: background, type: color, default_value: '', important: false, group: Look and Feel,
   description: Card Background color}
+- {name: tooltip, type: string, default_value: '', important: false, description: Text to display when the mouse is hovered over this component.,
+  group: Other}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}

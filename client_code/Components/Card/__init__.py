@@ -6,13 +6,14 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property
+from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property, tooltip_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.card_image_temp_url = None
     self._on_page = False
+    self.tooltip_node = None
     self.init_components(**properties)
     if not anvil.designer.in_designer:
       self.dom_nodes['empty-image'].style.display = "none"
@@ -86,4 +87,5 @@ class Card(CardTemplate):
   margin = margin_property('anvil-m3-card')
   card_content_padding = padding_property('content', 'card_content_padding')
   card_image_content_padding = padding_property('image', 'card_image_content_padding')
+  tooltip = tooltip_property('anvil-m3-card')
       
