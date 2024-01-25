@@ -18,7 +18,7 @@ components_by_slot:
   - name: card_1
     properties:
       card_content_padding: [16px, 16px, 16px, '16']
-      margin: [8px, 8px, 8px, '0']
+      margin: ['4', '4', '4', '4']
     type: form:Components.Card
     layout_properties: {}
   - name: text_field_1
