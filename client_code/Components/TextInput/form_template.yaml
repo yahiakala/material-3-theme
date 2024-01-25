@@ -5,7 +5,8 @@ properties:
   description: The text to be displayed when the component is empty.}
 - {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties,
   description: Text displayed underneath this component.}
-- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
+- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties,
+  description: Limit the amount of characters that can be entered into this box.}
 - name: appearance
   type: enum
   important: true
@@ -53,10 +54,10 @@ properties:
   description: The margin and padding of this component. Default value is in pixels.
 is_package: true
 events:
-- {name: pressed_enter, default_event: true}
-- {name: change}
-- {name: show}
-- {name: hide}
+- {name: pressed_enter, default_event: true, description: When the user presses enter in this component.}
+- {name: change, description: When the text in this component is edited.}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item: {hidden: true}
 custom_component: true
 components: []
