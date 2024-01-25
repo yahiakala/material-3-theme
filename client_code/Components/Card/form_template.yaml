@@ -9,14 +9,16 @@ properties:
   default_value: elevated
   group: Look and Feel
   description: Predefined style type.
-- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....).}
-- name: image_position
-  type: enum
-  important: true
-  options: [top, left, right, bottom, full]
+- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....).,
+  group: Image Style}
+- default_value: null
   include_none_option: true
-  default_value: null
+  group: Image Style
+  important: true
+  name: image_position
+  type: enum
   none_option_label: No Image
+  options: [top, left, right, bottom, full]
   description: How the image in positioned/displayed on the card.
 - {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style,
   description: 'For top/bottom/left/right image_positions, if the image will have
@@ -28,7 +30,7 @@ properties:
 - name: margin
   type: margin
   important: true
-  default_value: [8px, 8px, 8px, 8px]
+  default_value: [4px, 4px, 4px, 4px]
   group: Layout
 - name: card_content_padding
   type: padding
