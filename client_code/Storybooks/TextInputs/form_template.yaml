@@ -275,7 +275,7 @@ components:
           properties: {label_text: Label, appearance: outlined, bold_display: false,
             supporting_text: Supporting text, italic_display: false, display_text_color: '',
             placeholder: Placeholder, error: false, enabled: true, display_font: '',
-            leading_icon: 12mp, underline_label: false}
+            leading_icon: 12mp, character_limit: null, underline_label: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy

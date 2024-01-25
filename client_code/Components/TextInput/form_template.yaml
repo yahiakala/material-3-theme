@@ -2,6 +2,7 @@ properties:
 - {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
   group: Key Properties}
 - {name: placeholder, type: string, default_value: '', important: true, group: Key Properties}
+- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
 - {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties}
 - name: appearance
   type: enum
@@ -15,7 +16,6 @@ properties:
   group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Look and Feel}
-- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
   group: Style}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
