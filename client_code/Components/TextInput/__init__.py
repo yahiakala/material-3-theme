@@ -4,13 +4,14 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property
+from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property, tooltip_property
 from anvil import HtmlTemplate
 from ...utils import gen_id
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self.tooltip_node = None
     self.init_components(**properties)
     
     self.on_input = self.on_input
@@ -23,6 +24,7 @@ class TextInput(TextInputTemplate):
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
   spacing = spacing_property('textinput-component')
+  tooltip = tooltip_property('textinput-component')
   
   def set_appearance(self, value):
     if value == 'outlined':

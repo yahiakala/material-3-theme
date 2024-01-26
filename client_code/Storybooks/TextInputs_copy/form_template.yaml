@@ -266,8 +266,8 @@ components:
         components:
         - name: text_field_1_copy_2
           properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text,
-            placeholder: '', error: false, enabled: true, leading_icon: 2k_plus, character_limit: 10,
-            trailing_icon: 10mp}
+            tooltip: Hello, placeholder: '', error: false, enabled: true, leading_icon: 2k_plus,
+            character_limit: 10, trailing_icon: 10mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_copy_2_click}
