@@ -62,6 +62,12 @@ class TextInput(TextInputTemplate):
   def on_change(self, e):
     self.raise_event("change")
 
+  def on_focus(self, e):
+    self.raise_event("focus")
+
+  def on_lost_focus(self, e):
+    self.raise_event("lost_focus")
+
   def _anvil_get_interactions_(self):
     return [{
       "type": "whole_component",

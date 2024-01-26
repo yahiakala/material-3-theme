@@ -59,6 +59,8 @@ events:
 - {name: change, description: When the text in this component is edited.}
 - {name: show, description: When the component is shown on the screen.}
 - {name: hide, description: When the component is removed from the screen.}
+- {name: focus}
+- {name: lost_focus}
 toolbox_item: {hidden: true}
 custom_component: true
 components: []

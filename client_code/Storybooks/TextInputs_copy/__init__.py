@@ -22,4 +22,8 @@ class TextInputs_copy(TextInputs_copyTemplate):
     """This method is called when the component is clicked."""
     self.text_field_3_copy.hide_text =  not self.text_field_3_copy.hide_text
 
+  def text_field_3_copy_pressed_enter(self, **event_args):
+    """This method is called when the user presses enter in this component."""
+    alert("Done")
+
   

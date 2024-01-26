@@ -73,7 +73,10 @@ class TextField(TextInput):
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['textfield'].removeEventListener("change", self.on_change)
     self.dom_nodes['trailing-icon'].removeEventListener("click", self.handle_click)
-  
+
+  def on_key_down(self, e):
+    if e.key == "Enter":
+      self.raise_event("pressed_enter")
 
   def set_placeholder(self, value):
     input = self.dom_nodes['textfield']
