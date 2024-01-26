@@ -37,6 +37,7 @@ class TextArea(TextInput):
   display_font_size = font_size_property('textarea', 'display_font_size')
   display_font = font_family_property('textarea', 'display_font')
   display_text_color = color_property('textarea', 'color', 'display_text_color')
+  background = color_property('textarea', 'backgroundColor', 'background')
 
   def set_placeholder(self, value):
     input = self.dom_nodes['textarea']
