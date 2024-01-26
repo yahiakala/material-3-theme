@@ -1,0 +1,23 @@
+layout:
+  type: form:StandardPageLayout
+  properties: {show_sidesheet: false}
+is_package: true
+components_by_slot:
+  slot_1:
+  - name: navigation_link_1
+    properties: {}
+    type: form:Components.NavigationLink
+    layout_properties: {}
+  slot_3:
+  - name: button_1
+    properties: {appearance: elevated, text: Hi}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_2
+    properties: {appearance: filled, text: Hello}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_3
+    properties: {text: Hi}
+    type: form:Components.Button
+    layout_properties: {}
