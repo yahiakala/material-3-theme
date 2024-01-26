@@ -157,6 +157,7 @@ class TextField(TextInput):
   display_font_size = font_size_property('textfield', 'display_font_size')
   display_font = font_family_property('textfield', 'display_font')
   display_text_color = color_property('textfield', 'color', 'display_text_color')
+  background = color_property('textfield', 'backgroundColor', 'background' )
 
   def set_character_limit(self, value):
     if value is None or value < 1:
