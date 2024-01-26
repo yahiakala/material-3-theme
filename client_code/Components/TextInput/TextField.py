@@ -58,6 +58,8 @@ class TextField(TextInput):
     self.on_key_down = self.on_key_down
     self.on_change = self.on_change
     self.handle_click = self.handle_click
+    self.on_focus = self.on_focus
+    self.on_lost_focus = self.on_lost_focus
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -67,12 +69,16 @@ class TextField(TextInput):
     self.dom_nodes['textfield'].addEventListener("keydown", self.on_key_down)
     self.dom_nodes['textfield'].addEventListener("change", self.on_change)
     self.dom_nodes['trailing-icon'].addEventListener("click", self.handle_click)
+    self.dom_nodes['textfield'].addEventListener("focus", self.on_focus)
+    self.dom_nodes['textfield'].addEventListener("blur", self.on_lost_focus)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textfield'].removeEventListener("input", self.on_input)
     self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['textfield'].removeEventListener("change", self.on_change)
     self.dom_nodes['trailing-icon'].removeEventListener("click", self.handle_click)
+    self.dom_nodes['textfield'].removeEventListener("focus", self.on_focus)
+    self.dom_nodes['textfield'].removeEventListener("blur", self.on_lost_focus)
 
   def on_key_down(self, e):
     if e.key == "Enter":

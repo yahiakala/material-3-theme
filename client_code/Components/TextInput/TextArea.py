@@ -12,7 +12,6 @@ class TextArea(TextInput):
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
     self.update_height = self.update_height
-    # self.on_key_down = self.on_key_down
     self.on_change = self.on_change
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
@@ -26,7 +25,6 @@ class TextArea(TextInput):
   def on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("input", self.update_height)
     self.dom_nodes['textarea'].removeEventListener("input", self.on_input)
-    # self.dom_nodes['textarea'].removeEventListener("keydown", self.on_key_down)
     self.dom_nodes['textarea'].removeEventListener("change", self.on_change)
   
   
