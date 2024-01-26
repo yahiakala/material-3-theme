@@ -177,6 +177,10 @@ class TextField(TextInput):
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", set_character_limit)
 
+  def set_type(self, value):
+    self.dom_nodes['textfield'].setAttribute("type", value)
+  type = property_with_callback("type", set_type)
+
   def handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
