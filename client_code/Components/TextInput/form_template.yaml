@@ -52,7 +52,7 @@ properties:
     margin: [auto, null, null, null]
   group: Layout
   description: The margin and padding of this component. Default value is in pixels.
-- {name: background_color, type: color, default_value: '', important: false, description: The background color of this component.,
+- {name: background, type: color, default_value: '', important: false, description: The background color of this component.,
   group: Look and Feel}
 is_package: true
 events:
