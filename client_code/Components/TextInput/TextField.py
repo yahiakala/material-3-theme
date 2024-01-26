@@ -34,12 +34,19 @@ type_property = {"name": "type",
                          "important": False, 
                          "default_value": "text",
                          "description": "What type of data will be entered into this box?"}
+hide_text_property = {"name": "type", 
+                         "type": "bool", 
+                         # "options": ["text", "number", "email", "tel", "url"], 
+                         "group": "Other", 
+                         "important": False, 
+                         "default_value": False,
+                         "description": "Display stars instead of the text entered into this component."}
 
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
