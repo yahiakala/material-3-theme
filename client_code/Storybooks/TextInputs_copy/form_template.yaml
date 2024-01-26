@@ -280,13 +280,14 @@ components:
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
           properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined,
-            error: false, enabled: true, type: number}
+            error: false, enabled: true, type: text}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: button_1
-          properties: {}
+          properties: {text: set}
           type: form:Components.Button
           layout_properties: {grid_position: 'FHZGZE,YWNQFI'}
+          event_bindings: {click: button_1_click}
         - name: text_field_4_copy
           properties:
             placeholder: Placeholder only

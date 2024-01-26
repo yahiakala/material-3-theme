@@ -59,10 +59,6 @@ class TextInput(TextInputTemplate):
   def on_input(self, e):
     self.dom_nodes['character-amount'].innerText = len(e.target.value);
 
-  def on_key_down(self, e):
-    if e.key == "Enter":
-      self.raise_event("pressed_enter")
-
   def on_change(self, e):
     self.raise_event("change")
 

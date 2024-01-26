@@ -42,11 +42,12 @@ hide_text_property = {"name": "type",
                          "description": "Display stars instead of the text entered into this component."}
 
 
-click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
+click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked."}
+pressed_enter_event = {"name": "pressed_enter", "defaultEvent": False, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, *TextInput._anvil_properties_]
-  _anvil_events_ = [click_event, *TextInput._anvil_events_]
+  _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
     super().__init__(**properties)

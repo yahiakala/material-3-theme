@@ -17,3 +17,9 @@ class TextInputs_copy(TextInputs_copyTemplate):
 
   def text_field_1_click(self, **event_args):
     alert("clicked filled style")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the component is clicked."""
+    self.text_field_3_copy.hide_text =  not self.text_field_3_copy.hide_text
+
+  
