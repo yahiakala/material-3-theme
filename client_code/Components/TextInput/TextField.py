@@ -27,11 +27,19 @@ trailing_icon_property = {"name": "trailing_icon",
                          "default_value": "",
                          # "include_none_option": True, 
                          "description": "The icon to display on the left side of this component."}
+type_property = {"name": "type", 
+                         "type": "enum", 
+                         "options": ["text", "number", "email", "tel", "url"], 
+                         "group": "Other", 
+                         "important": False, 
+                         "default_value": "text",
+                         "description": "What type of data will be entered into this box?"}
+
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked"}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
