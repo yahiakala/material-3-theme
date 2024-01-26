@@ -35,8 +35,7 @@ type_property = {"name": "type",
                          "default_value": "text",
                          "description": "What type of data will be entered into this box?"}
 hide_text_property = {"name": "type", 
-                         "type": "bool", 
-                         # "options": ["text", "number", "email", "tel", "url"], 
+                         "type": "boolean", 
                          "group": "Other", 
                          "important": False, 
                          "default_value": False,
@@ -187,6 +186,10 @@ class TextField(TextInput):
   def set_type(self, value):
     self.dom_nodes['textfield'].setAttribute("type", value)
   type = property_with_callback("type", set_type)
+
+  def set_hide_text(self, value):
+    self.dom_nodes['textfield'].setAttribute("type", self.type if value else "password")
+  hide_text = property_with_callback("hide_text", set_hide_text)
 
   def handle_click(self, event):
     event.preventDefault()
