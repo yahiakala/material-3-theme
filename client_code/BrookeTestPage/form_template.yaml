@@ -80,7 +80,8 @@ components_by_slot:
       type: DataGrid
       components:
       - name: repeating_panel_1
-        properties: {item_template: BrookeTestPage.RowTemplate2}
+        properties: {item_template: BrookeTestPage.RowTemplate2, visible: true}
         type: RepeatingPanel
+        layout_properties: {}
       layout_properties: {grid_position: 'CBQESC,AFZVDN'}
   slot_5: []
