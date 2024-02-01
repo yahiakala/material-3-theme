@@ -40,6 +40,15 @@ hide_text_property = {"name": "type",
                          "important": False, 
                          "default_value": False,
                          "description": "Display stars instead of the text entered into this component."}
+leading_icon_color_property = {"name": "leading_icon_color", 
+                               "type": "enum", 
+                               "options": _m3_icons, 
+                               "group": "Icon", 
+                               "important": True, 
+                               "default_value": "",
+                               # "include_none_option": True, 
+                               # "none_option_label": "None", 
+                               "description": "The icon to display on the right side of this component."}
 
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked."}
