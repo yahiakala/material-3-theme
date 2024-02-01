@@ -33,7 +33,6 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].removeEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].removeEventListener("blur", self.on_lost_focus)
   
-  
   italic_display = italic_property('textarea', 'italic_label')
   bold_display = bold_property('textarea', 'bold_display')
   underline_display = underline_property('textarea', 'underline_display')
