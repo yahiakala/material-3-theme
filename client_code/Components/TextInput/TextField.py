@@ -216,7 +216,7 @@ class TextField(TextInput):
   type = property_with_callback("type", set_type)
 
   def set_hide_text(self, value):
-    self.dom_nodes['textfield'].setAttribute("type", self.type if value else "password")
+    self.dom_nodes['textfield'].setAttribute("type", "password" if value else self.type)
   hide_text = property_with_callback("hide_text", set_hide_text)
 
   def handle_click(self, event):
