@@ -20,6 +20,8 @@ properties:
   group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Look and Feel}
+- {name: supporting_text_color, type: color, default_value: '', important: false,
+  description: The color of this component's supporting text., group: Look and Feel}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
   group: Text}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
@@ -55,6 +57,10 @@ properties:
 - {name: background, type: color, default_value: '', important: false, description: The background color of this component.,
   group: Look and Feel}
 - {name: tooltip, type: string, default_value: '', important: false, group: Other}
+- {name: supporting_text_font, type: string, default_value: '', important: false,
+  description: The font family to use for this component’s supporting text., group: Text}
+- {name: supporting_text_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels.,
+  group: Text}
 is_package: true
 events:
 - {name: change, description: When the text in this component is edited.}
