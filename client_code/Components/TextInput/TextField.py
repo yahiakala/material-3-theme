@@ -41,21 +41,28 @@ hide_text_property = {"name": "type",
                          "default_value": False,
                          "description": "Display stars instead of the text entered into this component."}
 leading_icon_color_property = {"name": "leading_icon_color", 
-                               "type": "enum", 
-                               "options": _m3_icons, 
+                               "type": "color", 
                                "group": "Icon", 
                                "important": True, 
                                "default_value": "",
                                # "include_none_option": True, 
                                # "none_option_label": "None", 
-                               "description": "The icon to display on the right side of this component."}
+                               "description": "The color of the leading icon."}
+trailing_icon_color_property = {"name": "trailing_icon_color", 
+                               "type": "color", 
+                               "group": "Icon", 
+                               "important": True, 
+                               "default_value": "",
+                               # "include_none_option": True, 
+                               # "none_option_label": "None", 
+                               "description": "The color of the trailing icon."}
 
 
 click_event = {"name": "click", "defaultEvent": True, "description": "When the trailing icon is clicked."}
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": False, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
@@ -191,6 +198,8 @@ class TextField(TextInput):
   display_font = font_family_property('textfield', 'display_font')
   display_text_color = color_property('textfield', 'color', 'display_text_color')
   background = color_property('textfield', 'backgroundColor', 'background' )
+  leading_icon_color = color_property('leading-icon', 'color', 'leading_icon_color')
+  trailing_icon_color = color_property('trailing-icon', 'color', 'trailing_icon_color')
 
   def set_character_limit(self, value):
     if value is None or value < 1:
