@@ -26,7 +26,8 @@ class TextInput(TextInputTemplate):
   spacing = spacing_property('textinput-component')
   tooltip = tooltip_property('textinput-component')
   supporting_text_color = color_property('supporting-text', 'color', 'supporting_text_color')
-  supporting_text_font = font_
+  supporting_text_font = font_family_property('supporting-text', 'supporting_text_font')
+  supporting_text_font_size = font_size_property('supporting-text', 'supporting_text_font_size')
   
   def set_appearance(self, value):
     if value == 'outlined':
