@@ -31,7 +31,11 @@ class TextInputs_copy(TextInputs_copyTemplate):
     alert("Done")
 
   def update_tf1_icon(self):
-    if self.text_field_1_copy.hide_text == True:
+    if self.text_field_1.hide_text == True:
       self.text_field_1.trailing_icon = 'visibility'
     else:
       self.text_field_1.trailing_icon = 'visibility_off'
+
+  def text_field_1_copy_copy_click(self, **event_args):
+    """This method is called when the trailing icon is clicked."""
+    pass

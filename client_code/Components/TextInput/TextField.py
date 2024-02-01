@@ -34,7 +34,7 @@ type_property = {"name": "type",
                          "important": False, 
                          "default_value": "text",
                          "description": "What type of data will be entered into this box?"}
-hide_text_property = {"name": "type", 
+hide_text_property = {"name": "hide_text", 
                          "type": "boolean", 
                          "group": "Other", 
                          "important": False, 
