@@ -636,17 +636,18 @@ th.month select.monthselect::after {
 }
 
 .daterangepicker .drp-calendar.left .calendar-table {
-    padding-right: 0px;
+  padding-right: 0px;
 }
 
 .daterangepicker .drp-calendar.right .calendar-table {
-    border: none;
+  border: none;
   }
 
 /* Data Grids */
-.anvil-data-grid > .data-grid-child-panel>div.anvil-auto-grid-header {
+.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header {
   background: %color:Surface Container Low%;
-  border-bottom: 1px solid %color:Surface Variant%;
+  border-bottom: 1px solid %color:On Surface Variant%;
+  color: %color:On Surface Variant%;
   border-radius: 24px 24px 0 0;
 }
 
