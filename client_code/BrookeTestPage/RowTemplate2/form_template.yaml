@@ -1,3 +1,9 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: text_1
+  properties: {}
+  type: form:Components.Text
+  layout_properties: {column: AUINYA}
+  data_bindings:
+  - {property: text, code: 'self.item[''Job''][''Titles'']', writeback: false}

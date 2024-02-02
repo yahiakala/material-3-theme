@@ -77,7 +77,6 @@ components_by_slot:
         - {id: SSPCYS, data_key: ID, title: ID}
         - {id: BEMEZA, data_key: Name, title: Name}
         - {id: AUINYA, data_key: Job, title: Job}
-        - {id: DXGVFK, data_key: blah, title: blah}
       type: DataGrid
       components:
       - name: repeating_panel_1
