@@ -657,12 +657,17 @@ th.month select.monthselect::after {
 
 .anvil-data-grid > .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col {
   padding: 12px;
+  margin: 0;
+  border-right: 1px solid %color:Surface Variant%;
+  display: flex;
+  align-items: center;
+}
+
+.anvil-data-grid > .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col div {
   text-align: center !important;
   font-size: 16px;
   color: %color:On Surface Variant%;
   font-weight: 500;
-  margin: 0;
-  border-right: 1px solid %color:Surface Variant%;
 }
 
 .anvil-data-grid > .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col span.anvil-label-text {
@@ -677,10 +682,16 @@ th.month select.monthselect::after {
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col {
   border-right: 1px solid %color:Surface Variant%;
   border-bottom: 1px solid %color:Surface Variant%;
+  display: flex;
+  align-items: center;
 }
 
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col:last-child {
   border-right: 0;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel {
+  margin: 0;
 }
 
 .anvil-data-grid > .data-grid-child-panel>div.auto-grid-header div.data-row-col {
