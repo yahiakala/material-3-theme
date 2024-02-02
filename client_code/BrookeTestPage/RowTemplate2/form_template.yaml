@@ -14,7 +14,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''Name'']', writeback: false}
 - name: text_3
-  properties: {}
+  properties: {font_size: 16}
   type: form:Components.Text
   layout_properties: {column: SSPCYS}
   data_bindings:
