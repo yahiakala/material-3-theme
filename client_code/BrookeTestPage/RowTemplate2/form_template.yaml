@@ -2,7 +2,7 @@ is_package: true
 container: {type: DataRowPanel}
 components:
 - name: text_1
-  properties: {}
+  properties: {font_size: 16}
   type: form:Components.Text
   layout_properties: {column: AUINYA}
   data_bindings:
