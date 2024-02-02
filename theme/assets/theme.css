@@ -646,7 +646,7 @@ th.month select.monthselect::after {
 /* Data Grids */
 .anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header {
   background: %color:Surface Container Low%;
-  border-bottom: 1px solid %color:On Surface Variant%;
+  border-bottom: 1px solid %color:Surface Variant%;
   color: %color:On Surface Variant%;
   border-radius: 24px 24px 0 0;
 }
@@ -658,6 +658,10 @@ th.month select.monthselect::after {
   color: %color:On Surface Variant%;
   font-weight: 500;
   margin: 0;
+}
+
+.anvil-data-grid > .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col span.anvil-label-text {
+  padding: 0;
 }
 
 .anvil-data-grid {

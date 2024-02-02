@@ -14,6 +14,9 @@ class BrookeTestPage(BrookeTestPageTemplate):
     self.init_components(**properties)
     #self.layout.layout.show_sidesheet = False
 
+  def icon_button_1_click(self, **event_args):
+    self.layout.layout.show_sidesheet = False
+
 
 
 
