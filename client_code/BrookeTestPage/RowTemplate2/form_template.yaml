@@ -1,15 +1,3 @@
 is_package: true
 container: {type: DataRowPanel}
-components:
-- name: text_1
-  properties: {text: blah}
-  type: form:Components.Text
-  layout_properties: {column: JKSDUP}
-- name: text_2
-  properties: {text: blah}
-  type: form:Components.Text
-  layout_properties: {column: VJQQOR}
-- name: text_3
-  properties: {text: blah}
-  type: form:Components.Text
-  layout_properties: {column: OJLQEN}
+components: []

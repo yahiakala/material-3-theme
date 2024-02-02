@@ -74,9 +74,10 @@ components_by_slot:
     - name: data_grid_1
       properties:
         columns:
-        - {id: JKSDUP, title: Title, data_key: column_1}
-        - {id: VJQQOR, title: Title, data_key: column_2}
-        - {id: OJLQEN, title: Title, data_key: column_3}
+        - {id: SSPCYS, data_key: ID, title: ID}
+        - {id: BEMEZA, data_key: Name, title: Name}
+        - {id: AUINYA, data_key: Job, title: Job}
+        - {id: DXGVFK, data_key: blah, title: blah}
       type: DataGrid
       components:
       - name: repeating_panel_1
