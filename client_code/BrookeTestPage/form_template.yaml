@@ -29,13 +29,14 @@ components_by_slot:
           margin: [null, null, '12', null]
         type: form:Components.Text
         layout_properties: {slot: card-content-slot}
-      - name: button_2
+      - name: button_1
         properties:
           appearance: filled
           text: Add to cart
           margin: ['8', '8', '8', '0']
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
+        event_bindings: {click: button_1_click}
     - name: card_1_copy
       properties:
         card_image: _/theme/pexels-erik-mclean-10894354.jpg

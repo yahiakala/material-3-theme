@@ -90,6 +90,19 @@
   margin-left: 30px;
 }
 
+@media(min-width: 600px) {
+.anvil-m3-navigation-link-icon-container {
+  margin: auto;
+  width: 56px;
+}
+}
+
+.anvil-m3-navigation-rail.anvil-m3-bottom-app-bar .anvil-m3-navigation-link-icon-container {
+  margin: auto;
+  width: 56px;
+}
+
+
 /*on mobile in drawer*/
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container {
@@ -173,14 +186,14 @@
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-icon-badge {
-  margin-top: -24px;
+/*   margin-top: -24px; */
   margin-left: 34px;
 }
 }
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-icon-badge.anvil-m3-large-badge {
-  margin-top: -23px;
+/*   margin-top: -23px; */
   margin-left: 28px;
 }
 }

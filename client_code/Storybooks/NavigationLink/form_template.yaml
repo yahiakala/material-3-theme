@@ -46,7 +46,7 @@ components:
         type: form:Components.NavigationLink
         layout_properties: {grid_position: 'MENMFF,WPBQDG'}
       - name: navigation_link_4
-        properties: {text: With Badge and Number, badge: true, badge_count: 10}
+        properties: {text: With Badge and Number, badge: true, badge_count: null}
         type: form:Components.NavigationLink
         layout_properties: {grid_position: 'MENMFF,BTEOSR'}
       - name: navigation_link_5
