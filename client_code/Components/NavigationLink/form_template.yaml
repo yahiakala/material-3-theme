@@ -18,10 +18,14 @@ properties:
   group: Look and Feel}
 - {name: icon_size, type: string, default_value: '', description: Size of the icon in pixels,
   group: Icon}
-- name: material_icon
+- default_value: star
+  include_none_option: true
+  group: Key Properties
+  important: true
+  name: material_icon
   type: enum
-  default_value: star
-  options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
+  none_option_label: No icon
+  options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
     3p, 4g_mobiledata, 4g_plus_mobiledata, 4k, 4k_plus, 4mp, 5g, 5k, 5k_plus, 5mp,
@@ -382,12 +386,10 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
   description: The icon to display on this component
-  important: true
-  group: Key Properties
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
   default_binding_prop: true, default_value: null, group: Key Properties, important: true}
-- {name: margin, type: margin, important: true}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
+- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
+- {name: tooltip, type: string, default_value: '', important: true}
 event_bindings: {show: form_show}
 custom_component: true
 toolbox_item: {hidden: true}
@@ -400,11 +402,12 @@ components: []
 custom_component_container: false
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-navigation-link-container\">\n  <a href=\"\
-      javascript:void(0)\" class=\"anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\"\
-      \ onclick=\"\">\n  <!--   <i anvil-name=\"navigation-link-icon\" class=\"fa\
-      \ fa-star\">\n    </i> -->\n    <div class=anvil-m3-navigation-link-icon-container>\n\
-      \      <span anvil-name=\"anvil-m3-navigation-link-icon\" class=\"material-symbols-outlined\"\
+  properties: {html: "<div anvil-name=\"anvil-m3-navigation-link-container\" class=\"\
+      anvil-m3-navigation-link-container\">\n  <a href=\"javascript:void(0)\" class=\"\
+      anvil-m3-navigation-link\" anvil-name=\"anvil-m3-navigation-link\" onclick=\"\
+      \">\n  <!--   <i anvil-name=\"navigation-link-icon\" class=\"fa fa-star\">\n\
+      \    </i> -->\n    <div class=anvil-m3-navigation-link-icon-container>\n   \
+      \   <span anvil-name=\"anvil-m3-navigation-link-icon\" class=\"material-symbols-outlined\"\
       >star</span>\n      <span anvil-name=\"anvil-m3-icon-badge\" class=\"anvil-m3-icon-badge\"\
       \ style=\"display: none\"></span>\n    </div>\n    <div anvil-name=\"anvil-m3-navigation-link-text\"\
       \ class=\"anvil-m3-navigation-link-text\"></div>\n  </a>\n</div>\n"}

@@ -6,10 +6,11 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property, tooltip_property
+from ...Functions import tooltip_property, property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
+    self.tooltip_node = None
     self._props = properties
     self.card_image_temp_url = None
     self._on_page = False
