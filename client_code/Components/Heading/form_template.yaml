@@ -404,6 +404,7 @@ properties:
   designer_hint: align-horizontal
   group: Layout
   important: true
+  description: The position of this component in the available space.
 - {name: icon_size, type: number, description: 'The size in pixels of the icon. ',
   group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the

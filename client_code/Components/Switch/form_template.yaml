@@ -747,14 +747,15 @@ properties:
   group: Look and Feel}
 - {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled,
   group: Interaction, description: True if this component should allow user interaction}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right]
-  default_value: left
-  designerHint: align-horizontal
+- default_value: left
   group: Layout
+  important: true
+  name: align
+  type: enum
   designer_hint: align-horizontal
+  designerHint: align-horizontal
+  options: [left, center, right]
+  description: The position of this component in the available space.
 - name: margin
   type: margin
   default_value: ['8', '8', '8', '8']

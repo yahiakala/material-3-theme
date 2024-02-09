@@ -6,6 +6,8 @@ properties:
   options: [Full width, Inset]
   group: Key Properties
   important: true
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
+    this component be displayed?'}
 is_package: true
 events:
 - {name: show, default_event: true}

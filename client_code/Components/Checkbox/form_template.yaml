@@ -40,7 +40,7 @@ properties:
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: Align this component’s text.
+  description: The position of this component in the available space.
 - {name: margin, type: margin, important: true, group: Layout, description: Padding (pixels) of the card content}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}

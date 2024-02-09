@@ -10,6 +10,8 @@ class Divider(DividerTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  visible = HtmlTemplate.visible
+  
   @property
   def type(self):
     return self._type

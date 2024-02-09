@@ -3,14 +3,15 @@ properties:
   multiline: true, group: Key Properties, important: true}
 - {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object.,
   group: Key Properties, important: true}
-- name: align
-  type: enum
-  options: [left, center, right]
-  default_value: left
-  designerHint: align-horizontal
+- default_value: left
   group: Layout
   important: true
+  name: align
+  type: enum
   designer_hint: align-horizontal
+  designerHint: align-horizontal
+  options: [left, center, right]
+  description: The position of this component in the available space.
 - {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold,
   group: Text, designer_hint: font-bold}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics,

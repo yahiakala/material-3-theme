@@ -18,6 +18,7 @@ properties:
   important: true
   group: Layout
   designer_hint: align-horizontal
+  description: The position of this component in the available space.
 - {name: background_color, type: color, default_value: '', description: The background colour of this component.,
   group: Look and Feel}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,

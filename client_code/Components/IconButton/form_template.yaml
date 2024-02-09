@@ -394,15 +394,15 @@ properties:
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: Alignment of the component within it's container
+  description: The position of this component in the available space.
 - {name: tooltip, type: string, default_value: '', important: true, group: Attributes,
   description: Text to display when you hover the mouse over this component.}
 - {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
 is_package: true
 events:
 - {name: click, default_event: true}
-- {name: show}
-- {name: hide}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
   hidden: true
