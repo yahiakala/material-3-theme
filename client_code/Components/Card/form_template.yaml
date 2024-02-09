@@ -37,6 +37,7 @@ properties:
 - {name: card_image_content_padding, type: padding, important: true}
 - {name: background, type: color, default_value: '', important: false, group: Look and Feel,
   description: Card Background color}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when you hover the mouse over this component}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}

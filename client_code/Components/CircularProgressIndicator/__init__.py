@@ -5,11 +5,12 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import innerText_property, color_property, style_property, property_with_callback, margin_property
+from ...Functions import tooltip_property, innerText_property, color_property, style_property, property_with_callback, margin_property
 from math import pi, cos, sin
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   def __init__(self, **properties):
+    self.tooltip_node = None
     self._props = properties
     self.init_components(**properties)
 
@@ -18,6 +19,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-progressindicator-component', 'justifyContent', 'align')
   margin = margin_property('anvil-m3-progressindicator-component')
+  tooltip = tooltip_property('anvil-m3-progressindicator')
 
   def update_determinance(self, value):
     v = value is "determinate"
