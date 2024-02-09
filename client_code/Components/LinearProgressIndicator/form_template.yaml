@@ -2,6 +2,14 @@ properties:
 - {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
   type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
     this component be displayed?'}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right, full]
+  default_value: left
+  designer_hint: align-horizontal
+  description: The position of this component in the available space.
+  group: Layout
 - name: type
   type: enum
   important: true
@@ -11,8 +19,8 @@ properties:
   description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
-- {name: margin, type: margin, important: true}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when you hover the mouse over this component}
+- {name: margin, type: margin, group: Layout, important: true, description: Margin (pixels) of the component.}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when you hover the mouse over this component}
 is_package: true
 events:
 - {name: show, default_event: true}

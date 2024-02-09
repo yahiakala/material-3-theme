@@ -13,6 +13,14 @@ properties:
   group: Label Style}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
   group: Label Style}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right, full]
+  default_value: left
+  designer_hint: align-horizontal
+  description: The position of this component in the available space.
+  group: Layout
 - name: items
   type: text[]
   default_value: []
@@ -70,7 +78,7 @@ properties:
   group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None,
   group: Interaction}
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.,
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.,
   group: Layout}
 is_package: true
 events:

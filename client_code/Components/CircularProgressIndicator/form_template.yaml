@@ -15,8 +15,8 @@ properties:
   options: [left, center, right]
   designer_hint: align-horizontal
   default_value: left
-  group: Look and Feel
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.,
+  group: Layout
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.,
   group: Layout}
 - {name: tooltip, type: string, default_value: '', important: true, group: Other,
   description: Text to display when you hover the mouse over this component.}

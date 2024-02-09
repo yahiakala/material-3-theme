@@ -2,6 +2,14 @@ properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
   designer_hint: visible, group: Look and Feel, description: 'Should this component
     be displayed?'}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right, full]
+  default_value: left
+  designer_hint: align-horizontal
+  description: The position of this component in the available space.
+  group: Layout
 - name: appearance
   type: enum
   important: true

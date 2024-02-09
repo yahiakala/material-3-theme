@@ -7,6 +7,14 @@ properties:
   description: Text displayed underneath this component.}
 - {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties,
   description: Limit the amount of characters that can be entered into this box.}
+- name: align
+  type: enum
+  options: [left, center, right]
+  default_value: left
+  important: true
+  group: Layout
+  designer_hint: align-horizontal
+  description: The position of this component in the available space.
 - name: appearance
   type: enum
   important: true

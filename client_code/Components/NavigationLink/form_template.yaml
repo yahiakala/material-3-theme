@@ -388,8 +388,9 @@ properties:
   description: The icon to display on this component
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
   default_binding_prop: true, default_value: null, group: Key Properties, important: true}
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true}
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 event_bindings: {show: form_show}
 custom_component: true
 toolbox_item: {hidden: true}

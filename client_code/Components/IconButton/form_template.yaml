@@ -395,9 +395,9 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   description: The position of this component in the available space.
-- {name: tooltip, type: string, default_value: '', important: true, group: Attributes,
+- {name: tooltip, type: string, default_value: '', important: true, group: Other,
   description: Text to display when you hover the mouse over this component.}
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
 is_package: true
 events:
 - {name: click, default_event: true}
