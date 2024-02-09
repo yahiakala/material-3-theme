@@ -391,6 +391,7 @@ properties:
   important: true
   description: The icon to display on this component.
   include_none_option: true
+  none_option_label: No icon
 - {name: text_color, type: color, default_value: '', description: The foreground colour of this component.,
   group: Look and Feel}
 - {name: background_color, type: color, default_value: '', description: The background colour of this component.,
