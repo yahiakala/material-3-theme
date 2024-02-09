@@ -50,6 +50,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
+  margin = margin_property('')
 
   def set_background(self, value):
     self.selection_field.background = value
