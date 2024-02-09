@@ -3,7 +3,7 @@ properties:
   description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and
     may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores
     ("_"), colons (":"), and periods (".").', group: Key Properties}
-- {name: selected, type: boolean, default_value: false, description: Radio button option for html <input> checked property,
+- {name: selected, type: boolean, default_value: false, description: True if this radio button is selected.,
   group: Interaction}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button,
   group: Interaction, designerHint: enabled, designer_hint: enabled}
