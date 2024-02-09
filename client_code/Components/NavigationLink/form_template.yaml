@@ -387,14 +387,15 @@ properties:
   group: Key Properties
 - {name: navigate_to, type: form, description: Form to navigate to when the link is clicked,
   default_binding_prop: true, default_value: null, group: Key Properties, important: true}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component}
 event_bindings: {show: form_show}
 custom_component: true
 toolbox_item: {hidden: true}
 is_package: true
 events:
 - {name: click, description: when the component is clicked, default_event: true}
-- {name: show}
-- {name: hide}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 components: []
 custom_component_container: false
 container:

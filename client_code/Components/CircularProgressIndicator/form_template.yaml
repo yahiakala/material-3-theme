@@ -16,11 +16,11 @@ properties:
   designer_hint: align-horizontal
   default_value: left
   group: Look and Feel
-- {name: margin, type: margin, important: true}
+- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
 is_package: true
 events:
-- {name: show, default_event: true}
-- {name: hide}
+- {name: show, default_event: true, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
   hidden: true

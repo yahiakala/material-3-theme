@@ -73,8 +73,8 @@ properties:
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
-- {name: show}
-- {name: hide}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
   hidden: true

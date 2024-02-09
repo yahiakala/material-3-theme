@@ -413,6 +413,7 @@ properties:
   important: true
   default_value: ['8', '8', '8', '8']
   group: Layout
+  description: Margin (pixels) of the component.
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
 is_package: true
@@ -424,8 +425,8 @@ events:
   - {name: file, description: The first selected file. Set the 'multiple' property to allow loading more than one file.}
 - {name: focus, description: When the FileLoader gets focus}
 - {name: lost_focus, description: When the FileLoader loses focus}
-- {name: show}
-- {name: hide}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
   hidden: true
