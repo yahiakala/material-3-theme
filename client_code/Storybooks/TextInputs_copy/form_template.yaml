@@ -266,10 +266,10 @@ components:
         components:
         - name: text_field_1_copy_2
           properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text,
-            tooltip: Hello, placeholder: '', error: false, enabled: true, character_limit_color: 'theme:Error',
-            leading_icon: 2k_plus, character_limit: 10, leading_icon_color: 'theme:Primary',
-            trailing_icon: 10mp, type: number, character_limit_font_size: 15, character_limit_font: times new roman,
-            trailing_icon_color: 'theme:Tertiary Container'}
+            tooltip: Hello, placeholder: '', error: false, enabled: true, character_limit_color: '',
+            leading_icon: 2k_plus, character_limit: 10, leading_icon_color: '', trailing_icon: 10mp,
+            type: number, character_limit_font_size: -2, character_limit_font: '',
+            trailing_icon_color: ''}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_copy_2_click}
@@ -284,16 +284,11 @@ components:
           event_bindings: {click: text_field_1_copy_copy_click}
         - name: text_field_3_copy
           properties: {label_text: Label only, appearance: outlined, label_font_size: null,
-            tooltip: hello, error: false, enabled: true, leading_icon: 13mp, label_text_color: 'theme:Tertiary
-              Container', type: number}
+            tooltip: hello, error: false, enabled: true, leading_icon: 13mp, label_text_color: '',
+            type: number}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
           event_bindings: {pressed_enter: text_field_3_copy_pressed_enter}
-        - name: button_1
-          properties: {text: set}
-          type: form:Components.Button
-          layout_properties: {grid_position: 'FHZGZE,YWNQFI'}
-          event_bindings: {click: button_1_click}
         - name: text_field_4_copy
           properties:
             placeholder: Placeholder only
