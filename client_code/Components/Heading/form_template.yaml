@@ -27,7 +27,7 @@ properties:
   group: Look and Feel, important: true, designer_hint: visible}
 - name: material_icon
   type: enum
-  options: ['', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
+  options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
     18mp, 19mp, 1k, 1k_plus, 1x_mobiledata, 20mp, 21mp, 22mp, 23mp, 24mp, 2k, 2k_plus,
     2mp, 30fps, 30fps_select, '360', 3d_rotation, 3g_mobiledata, 3k, 3k_plus, 3mp,
     3p, 4g_mobiledata, 4g_plus_mobiledata, 4k, 4k_plus, 4mp, 5g, 5k, 5k_plus, 5mp,
@@ -389,6 +389,8 @@ properties:
     zoom_out, zoom_out_map]
   group: Icon
   important: true
+  description: The icon to display on this component.
+  include_none_option: true
 - {name: text_color, type: color, default_value: '', description: The foreground colour of this component.,
   group: Look and Feel}
 - {name: background_color, type: color, default_value: '', description: The background colour of this component.,
@@ -405,13 +407,13 @@ properties:
   group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the
     icon. If not set, the icon will be the same colour as the text.', group: Look and Feel}
-- {name: margin, type: margin, important: true, group: Layout}
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
 is_package: true
 events:
-- {name: show, default_event: true}
-- {name: hide}
+- {name: show, default_event: true, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
 custom_component: true

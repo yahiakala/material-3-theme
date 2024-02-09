@@ -756,6 +756,7 @@ properties:
   default_value: ['8', '8', '8', '8']
   important: true
   group: Layout
+  description: Margin (pixels) of the component.
 - {name: visible, type: boolean, default_value: true, important: true, group: Look and Feel,
   designer_hint: visible, description: True if this component should be displayed}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
@@ -763,8 +764,8 @@ properties:
 is_package: true
 events:
 - {name: change, default_event: true, description: When the state of the component is changed}
-- {name: show}
-- {name: hide}
+- {name: show, description: When the component is shown on the screen.}
+- {name: hide, description: When the component is removed from the screen.}
 toolbox_item:
   icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
 custom_component: true
