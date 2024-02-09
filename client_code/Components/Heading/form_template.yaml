@@ -415,7 +415,6 @@ events:
 toolbox_item:
   icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
   hidden: true
-  group: Typography
 custom_component: true
 components: []
 container:
