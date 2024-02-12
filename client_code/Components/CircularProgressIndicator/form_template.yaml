@@ -19,6 +19,7 @@ properties:
 - {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
 - {name: tooltip, type: string, default_value: '', important: true, group: Other,
   description: Text to display when you hover the mouse over this component.}
+- {name: color, type: color, default_value: '', important: true, description: The color of this component.}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}
@@ -34,9 +35,10 @@ container:
       display:flex\">\n  <div anvil-name=\"anvil-m3-progressindicator\" class=\"anvil-m3-progressindicator-component\"\
       >\n    <svg anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"\
       anvil-m3-progressindicator-circular\" style=\"transform: scaleX(-1)\">\n   \
-      \   <path class=\"anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"\
-      M 42 23 A 18 18 358 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"\
-      anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-circular\
-      \ anvil-m3-progressindicator-hidden\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc\"\
-      \ class=\"anvil-m3-progressindicator-arc\" d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429\
-      \ 6.089925024995534\">\n      </path>\n    </svg> \n  </div>\n</div>"}
+      \   <path anvil-name=\"anvil-m3-progressindicator-arc-indeterminate\" class=\"\
+      anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"M 42 23 A 18 18 358\
+      \ 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"anvil-m3-progressindicator-determinate\"\
+      \ class=\"anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden\"\
+      >\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\"\
+      \ d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429 6.089925024995534\">\n   \
+      \   </path>\n    </svg> \n  </div>\n</div>"}

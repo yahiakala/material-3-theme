@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, property_with_callback, margin_property
+from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -17,6 +17,18 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
 
   visible = HtmlTemplate.visible
   tooltip = tooltip_property('anvil-m3-progressindicator-linear')
+  
+  @property
+  def color(self):
+    return self._props.get('color')
+
+  @color.setter
+  def color(self, value):
+    if value: value = theme_color_to_css(value)
+    self.dom_nodes['anvil-m3-progressindicator-indicator'].style['stroke'] = value
+    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate'].style['stroke'] = value
+    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate-2'].style['stroke'] = value
+    self._props['color'] = value
 
   def update_determinance(self, value):
     v = value is "determinate"
