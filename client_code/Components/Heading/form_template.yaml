@@ -5,12 +5,14 @@ properties:
   default_value: headline
   group: Key Properties
   important: true
+  description: 'Role of the heading component: display, headline or title'
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
   group: Key Properties
   important: true
+  description: Size of the heading component
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels,
   group: Text, important: true}
 - {name: font, type: string, default_value: '', description: The font to use for this component.,

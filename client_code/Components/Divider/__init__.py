@@ -4,13 +4,16 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ...Functions import color_property
 
 class Divider(DividerTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
 
   visible = HtmlTemplate.visible
+  color = color_property('anvil-m3-divider', 'border-color', 'color')
   
   @property
   def type(self):

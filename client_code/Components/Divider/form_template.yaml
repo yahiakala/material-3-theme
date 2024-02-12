@@ -8,6 +8,7 @@ properties:
   important: true
 - {name: visible, type: boolean, default_value: true, important: true, description: 'Should
     this component be displayed?', group: Look and Feel}
+- {name: color, type: color, default_value: '', important: true}
 is_package: true
 events:
 - {name: show, default_event: true}

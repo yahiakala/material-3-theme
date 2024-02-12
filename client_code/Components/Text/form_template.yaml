@@ -5,12 +5,14 @@ properties:
   default_value: body
   important: true
   group: Look and Feel
+  description: 'Role of the text component: body or label'
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
   group: Look and Feel
   important: true
+  description: Size of the text component
 - name: align
   type: enum
   options: [left, center, right]
