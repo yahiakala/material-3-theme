@@ -78,8 +78,7 @@ properties:
   group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None,
   group: Interaction}
-- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.,
-  group: Layout}
+- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}

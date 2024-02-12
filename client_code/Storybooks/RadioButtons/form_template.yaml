@@ -23,7 +23,7 @@ components:
         layout_properties: {width: 427}
         components:
         - name: text_1
-          properties: {text: ButtonMenu Component, font_size: 25, text_color: 'theme:Primary'}
+          properties: {text: RadioButton Component, font_size: 25, text_color: 'theme:Primary'}
           type: form:Components.Text
           layout_properties: {}
         - name: text_2

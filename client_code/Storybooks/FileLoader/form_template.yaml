@@ -1,0 +1,11 @@
+container: {type: ColumnPanel}
+components:
+- name: text_1
+  properties: {text: Fileloader Component, font_size: 25, text_color: 'theme:Primary'}
+  type: form:Components.Text
+  layout_properties: {grid_position: 'VOWGTS,MKSYCW'}
+- name: text_2
+  properties: {text: Description. Properties. Link to docs. Etc}
+  type: form:Components.Text
+  layout_properties: {grid_position: 'JZJKII,IPUFNC'}
+is_package: true

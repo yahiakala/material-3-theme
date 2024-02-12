@@ -37,7 +37,8 @@ properties:
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
   group: Look and Feel, designerHint: visible, designer_hint: visible}
 - {name: margin, type: margin, important: true, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when the mouse is hovered over this component}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other,
+  description: Text to display when the mouse is hovered over this component}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is selected or unselected}

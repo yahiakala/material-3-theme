@@ -20,7 +20,8 @@ properties:
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
 - {name: margin, type: margin, group: Layout, important: true, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when you hover the mouse over this component}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other,
+  description: Text to display when you hover the mouse over this component}
 is_package: true
 events:
 - {name: show, default_event: true}
