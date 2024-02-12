@@ -49,7 +49,3 @@ components:
         properties: {text: With Badge and Number, badge: true, badge_count: 30}
         type: form:Components.NavigationLink
         layout_properties: {grid_position: 'MENMFF,BTEOSR'}
-      - name: navigation_link_5
-        properties: {badge: false}
-        type: form:Components.NavigationLink
-        layout_properties: {grid_position: 'RFCZXR,IPPALH'}

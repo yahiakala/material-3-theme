@@ -1,10 +1,14 @@
-input.anvil-m3-fileloader-input:disabled ~ *{
+.anvil-m3-fileloader-form:has(input.anvil-m3-fileloader-input:disabled) a.anvil-m3-fileloader-container span.anvil-m3-fileloader-icon, 
+.anvil-m3-fileloader-form:has(input.anvil-m3-fileloader-input:disabled) a.anvil-m3-fileloader-container label.anvil-m3-fileloader-label,
+.anvil-m3-fileloader-form:has(input.anvil-m3-fileloader-input:disabled) a.anvil-m3-fileloader-container {
+  color: var(--anvil-m3-on-disabled);
   cursor: not-allowed;
 }
 
-input.anvil-m3-fileloader-input:disabled ~ *{
-  color: var(--anvil-m3-on-disabled);
+.anvil-m3-fileloader-form:has(input.anvil-m3-fileloader-input:disabled) a.anvil-m3-fileloader-container:focus .anvil-m3-fileloader-label{
+  text-decoration: none !important;
 }
+
 .anvil-m3-fileloader-form {
   display: flex;
   
