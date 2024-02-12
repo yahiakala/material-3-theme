@@ -21,14 +21,6 @@ properties:
   group: Key properties}
 - {name: step, type: number, important: true, description: The stepping interval for the slider,
   group: Key properties}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right, full]
-  default_value: left
-  designer_hint: align-horizontal
-  description: The position of this component in the available space.
-  group: Layout
 - name: margin
   type: margin
   important: true

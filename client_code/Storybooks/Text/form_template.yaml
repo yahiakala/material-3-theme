@@ -114,3 +114,7 @@ components:
           properties: {text: Display Small, scale: small}
           type: form:Components.Heading
           layout_properties: {grid_position: 'FWYGVF,SDUGJR THVLGL,CKHDME'}
+    - name: text_7
+      properties: {align: center}
+      type: form:Components.Text
+      layout_properties: {slot: card-content-slot}

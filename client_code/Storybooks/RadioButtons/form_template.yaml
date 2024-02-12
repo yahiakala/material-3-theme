@@ -153,6 +153,11 @@ components:
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: radio_button_6
-        properties: {text: radio button with text, group_name: groupx, selected: true}
+        properties:
+          text: radio button with text
+          group_name: groupx
+          selected: true
+          background: ''
+          margin: [null, auto, null, null]
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-content-container-slot}
