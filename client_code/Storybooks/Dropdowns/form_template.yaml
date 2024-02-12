@@ -95,7 +95,7 @@ components:
                 label_text_color: blue
                 underline_label: true
               type: form:Components.DropdownMenu
-              layout_properties: {width: 273}
+              layout_properties: {width: 273, expand: false}
           - name: flow_panel_4_copy_1
             properties: {}
             type: FlowPanel
