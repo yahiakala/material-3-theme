@@ -105,20 +105,28 @@ input.anvil-m3-checkbox:disabled + .anvil-m3-checkbox-container:hover {
   background-color: transparent;
 }
 
+input.anvil-m3-checkbox:focus +.anvil-m3-checkbox-hover {
+  border: none
+}
+
 input.anvil-m3-checkbox:focus:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-dark-overlay-3);
+   border: none;
 }
 
 input.anvil-m3-checkbox:focus:checked+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
+  border: none;
 }
 
 input.anvil-m3-checkbox-error:focus:not(:checked)+.anvil-m3-checkbox-hover{
   background-color: var(--anvil-m3-dark-overlay-3);
+  border: none;
 }
 
 input.anvil-m3-checkbox-error:focus:checked+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
+  border: none;
 }
 
 input.anvil-m3-checkbox:active:not(:checked)+.anvil-m3-checkbox-hover{

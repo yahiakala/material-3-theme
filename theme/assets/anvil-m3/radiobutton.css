@@ -56,9 +56,11 @@
 /* FOCUS */
 .anvil-m3-radiobutton-input:focus:not(:checked)+.anvil-m3-radiobutton-hover{
   background-color: var(--anvil-m3-dark-overlay-3);
+  border: none;
 }
 .anvil-m3-radiobutton-input:focus:checked+.anvil-m3-radiobutton-hover {
   background-color: var(--anvil-m3-primary-overlay-3);
+  border: none;
 }
 
 /* ACTIVE */
