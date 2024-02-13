@@ -53,6 +53,8 @@ properties:
   description: Card Background color}
 - {name: tooltip, type: string, default_value: '', important: false, description: Text to display when the mouse is hovered over this component.,
   group: Other}
+- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
+  group: Look and Feel}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}
