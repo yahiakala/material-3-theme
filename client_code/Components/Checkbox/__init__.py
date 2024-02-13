@@ -77,7 +77,7 @@ class Checkbox(CheckboxTemplate):
   border = border_property('anvil-m3-checkbox-container')
   font = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color', 'text_color')
-  background = color_property('anvil-m3-checkbox-container', 'backgroundColor', 'background')
+  background = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
   text = innerText_property('anvil-m3-checkbox-label')
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
   margin = margin_property('anvil-m3-checkbox-component')
