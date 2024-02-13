@@ -47,6 +47,18 @@ class RadioButton(RadioButtonTemplate):
   selected = checked_property('anvil-m3-radiobutton-input')
   margin = margin_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
+  
+  @property
+  def radio_color(self):
+    return self._props.get('radio_color')
+
+  @radio_color.setter
+  def radio_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self.dom_nodes['anvil-m3-radiobutton-checked'].style['color'] = value
+    self.dom_nodes['anvil-m3-radiobutton-unchecked'].style['color'] = value
+    self._props['radio_color'] = value
+
 
   def set_text(self, value):
     v = value
