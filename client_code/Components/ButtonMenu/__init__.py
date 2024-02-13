@@ -64,6 +64,10 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.appearance = value
   appearance = property_with_callback("appearance", set_appearance)
 
+  def set_tooltip(self, value):
+    self.menu_button.tooltip = value
+  tooltip = property_with_callback("tooltip", set_tooltip)
+
   def set_enabled(self, value):
     self.menu_button.enabled = value
   enabled = property_with_callback("enabled", set_enabled)
