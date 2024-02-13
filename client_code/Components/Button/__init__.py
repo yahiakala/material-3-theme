@@ -118,6 +118,7 @@ class Button(ButtonTemplate):
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   background = color_property('anvil-m3-button', 'backgroundColor', 'background')
   margin = margin_property('anvil-m3-button-component')
+  border = style_property('anvil-m3-button', 'border', 'border')
 
   def set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value is 'right')

@@ -413,6 +413,8 @@ properties:
   description: 'Margin (pixels) of the component. '
 - {name: background, type: color, default_value: '', important: false, group: Look and Feel,
   description: Color of the background of this component.}
+- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
+  group: Look and Feel}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
