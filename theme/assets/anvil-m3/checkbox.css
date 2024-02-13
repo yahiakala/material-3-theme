@@ -137,10 +137,10 @@ input.anvil-m3-checkbox:checked:active+.anvil-m3-checkbox-hover {
   background-color: var(--anvil-m3-dark-overlay-3) !important;
 }
 
-input.anvil-m3-checkbox:focus-visible + .anvil-m3-checkbox-hover {
+/* input.anvil-m3-checkbox:focus-visible + .anvil-m3-checkbox-hover {
   border: 2px solid var(--anvil-m3-primary);
 }
-
+ */
 /* LABEL */
 .anvil-m3-checkbox-label {
   color: var(--anvil-m3-on-surface);

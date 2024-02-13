@@ -84,10 +84,10 @@
 .anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:disabled) *:active + .anvil-m3-radiobutton-hover{
   background-color: transparent;
 }
-
+/* 
 input.anvil-m3-radiobutton-input:focus-visible + .anvil-m3-radiobutton-hover {
   border: 2px solid var(--anvil-m3-primary);
-}
+} */
 
 /* LABEL */
 .anvil-m3-radiobutton-label {
