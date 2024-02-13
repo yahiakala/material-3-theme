@@ -1,4 +1,6 @@
-roles: []
+roles:
+- name: test
+  components: []
 color_scheme:
   preset_groups:
   - name: Colour Scheme
