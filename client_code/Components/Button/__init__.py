@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property 
+from ...Functions import color_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property 
 from anvil import HtmlTemplate
 import anvil.designer
 
@@ -13,6 +13,7 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._text = properties.get('text', '')
+    self.tooltip_node = None
     self.init_components(**properties)
     
     self.handle_click = self.handle_click
@@ -30,6 +31,7 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+      
   align = property_with_callback('align', set_align)
   visible = HtmlTemplate.visible
   
@@ -85,6 +87,7 @@ class Button(ButtonTemplate):
     
     self.set_icon()
     self.set_text()
+    
   material_icon = property_with_callback("material_icon", update_button_look)
   text = property_with_callback("text", update_button_look)
 
@@ -93,6 +96,7 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
+      
   enabled = property_with_callback("enabled", set_enabled)
 
   def set_appearance(self, value):
@@ -103,6 +107,7 @@ class Button(ButtonTemplate):
     button.classList.remove('anvil-m3-outlined')
     if value:
       button.classList.add(f"anvil-m3-{value}")
+      
   appearance = property_with_callback("appearance", set_appearance)
 
   def form_show(self, **event_args):
@@ -119,9 +124,11 @@ class Button(ButtonTemplate):
   background = color_property('anvil-m3-button', 'backgroundColor', 'background')
   margin = margin_property('anvil-m3-button-component')
   border = style_property('anvil-m3-button', 'border', 'border')
+  tooltip = tooltip_property('anvil-m3-button')
 
   def set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value is 'right')
+    
   icon_align = property_with_callback('icon_align', set_icon_align)
 
 

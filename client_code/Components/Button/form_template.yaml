@@ -415,6 +415,8 @@ properties:
   description: Color of the background of this component.}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
   group: Look and Feel}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
+  group: Other}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}

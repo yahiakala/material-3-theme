@@ -71,6 +71,7 @@ components_by_slot:
           margin: ['8', '8', '8', '0']
           align: left
           border: ''
+          tooltip: Hello
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
