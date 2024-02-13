@@ -1,6 +1,5 @@
 roles:
-- name: test
-  components: []
+- {name: test, components: null, display_in_toolbox: false}
 color_scheme:
   preset_groups:
   - name: Colour Scheme
