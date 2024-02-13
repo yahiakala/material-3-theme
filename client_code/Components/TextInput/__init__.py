@@ -16,27 +16,27 @@ class TextInput(TextInputTemplate):
     self.on_input = self.on_input
     
   visible = HtmlTemplate.visible
-  italic_label = italic_property('label-text', 'italic_label')
-  bold_label = bold_property('label-text', 'bold_label')
-  underline_label = underline_property('label-text', 'underline_label')
-  label_font_size = font_size_property('label-text', 'label_font_size')
-  label_font = font_family_property('label-text', 'label_font')
-  label_text_color = color_property('label-text', 'color', 'label_text_color')
-  spacing = spacing_property('textinput-component')
+  italic_label = italic_property('anvil-m3-label-text', 'italic_label')
+  bold_label = bold_property('anvil-m3-label-text', 'bold_label')
+  underline_label = underline_property('anvil-m3-label-text', 'underline_label')
+  label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
+  label_font = font_family_property('anvil-m3-label-text', 'label_font')
+  label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
+  spacing = spacing_property('anvil-m3-textinput-component')
   
   def set_appearance(self, value):
     if value == 'outlined':
-      self.dom_nodes['textinput-component'].classList.toggle('outlined', True) 
+      self.dom_nodes['anvil-m3-textinput-component'].classList.toggle('outlined', True) 
     else:
-      self.dom_nodes['textinput-component'].classList.toggle('outlined', False)
+      self.dom_nodes['anvil-m3-textinput-component'].classList.toggle('outlined', False)
   appearance = property_with_callback("appearance", set_appearance)
   
   def set_supporting_text(self, value):
-    self.dom_nodes['supporting-text'].innerHTML = value
+    self.dom_nodes['anvil-m3-supporting-text'].innerHTML = value
   supporting_text = property_with_callback("supporting_text", set_supporting_text)
 
   def set_error(self, value):
-    classes = self.dom_nodes['textinput-component'].classList
+    classes = self.dom_nodes['anvil-m3-textinput-component'].classList
     if value:
       classes.add("anvil-m3-textinput-error")
     else:
@@ -44,9 +44,9 @@ class TextInput(TextInputTemplate):
   error = property_with_callback("error", set_error)
   
   def set_id(self, value):
-    self.dom_nodes["label-text"].setAttribute("for", value)
-    self.dom_nodes["supporting-text"].setAttribute("for", value)
-    self.dom_nodes["character-amount"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-label-text"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-supporting-text"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-character-amount"].setAttribute("for", value)
   
   def form_show(self, **event_args):
     id = gen_id();
@@ -54,10 +54,10 @@ class TextInput(TextInputTemplate):
     
     if anvil.designer.in_designer:
       if not self.label_text:
-        self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)
+        self.dom_nodes['anvil-m3-label-text'].innerText = anvil.designer.get_design_name(self)
 
   def on_input(self, e):
-    self.dom_nodes['character-amount'].innerText = len(e.target.value);
+    self.dom_nodes['anvil-m3-character-amount'].innerText = len(e.target.value);
 
   def on_key_down(self, e):
     if e.key == "Enter":
@@ -73,6 +73,6 @@ class TextInput(TextInputTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['anvil-m3-label-text'])
       }
     }]

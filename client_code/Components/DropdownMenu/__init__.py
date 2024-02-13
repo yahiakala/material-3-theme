@@ -38,12 +38,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
-    self.selection_field.dom_nodes['textfield'].style.caretColor = 'transparent'
-    self.selection_field.dom_nodes['textfield'].style.cursor = "pointer"
-    self.selection_field.dom_nodes['textfield'].setAttribute("readonly", True)
+    self.selection_field.dom_nodes['anvil-m3-textfield'].style.caretColor = 'transparent'
+    self.selection_field.dom_nodes['anvil-m3-textfield'].style.cursor = "pointer"
+    self.selection_field.dom_nodes['anvil-m3-textfield'].setAttribute("readonly", True)
 
     if not self.label_text and self.placeholder:
-      self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
+      self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
 
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways.
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
@@ -114,18 +114,18 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def set_label_text(self, value):
     v = value or ""
-    self.selection_field.dom_nodes['label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
+    self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
-      self.selection_field.dom_nodes['label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
+      self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.selection_field.label_text = v
   label_text = property_with_callback("label_text", set_label_text)
 
   def set_selected_value(self, value):
     if type(value) is list:
-      self.selection_field.dom_nodes['textfield'].value = value[0]
+      self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
-      self.selection_field.dom_nodes['textfield'].value = value
+      self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
     self.raise_event("change")
   selected_value = property_with_callback("selected_value", set_selected_value)
 
@@ -149,15 +149,15 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = fui.auto_update(self.field, self.menuNode, placement="bottom-start")
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
-    self.selection_field.dom_nodes['textfield'].addEventListener('focus', self.handle_selection_field_focus)
-    self.selection_field.dom_nodes['textfield'].addEventListener('blur', self.handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self.handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self.handle_selection_field_blur)
     self.menuNode.addEventListener('click', self.child_clicked)
 
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
-    self.selection_field.dom_nodes['textfield'].removeEventListener('focus', self.handle_selection_field_focus)
-    self.selection_field.dom_nodes['textfield'].removeEventListener('blur', self.handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self.handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self.handle_selection_field_blur)
     self.menuNode.removeEventListener('click', self.child_clicked)
     self._cleanup()
     self.menuNode.remove()
@@ -234,12 +234,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menu.visible = value
     if value:
       if not self.label_text and self.placeholder:
-        self.selection_field.dom_nodes['label-text'].innerText = ""
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
     else:
       if not self.label_text and self.placeholder and self.selected_value is None:
-        self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
       if self.selected_value is None:
         self._hoverIndex = None
@@ -265,7 +265,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
       if not self.label_text:
-        self.selection_field.dom_nodes['label-text'].innerText = self._design_name
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self._design_name
 
   def create_menu_items(self):
     p = MenuItem()
@@ -321,6 +321,6 @@ class DropdownMenu(DropdownMenuTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['label-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['anvil-m3-label-text'])
       }
     }]
