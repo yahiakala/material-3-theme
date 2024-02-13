@@ -4,7 +4,7 @@ properties:
     may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores
     ("_"), colons (":"), and periods (".").', group: Key Properties}
 - {name: selected, type: boolean, default_value: false, description: True if this radio button is selected.,
-  group: Interaction}
+  group: Interaction, designer_hint: toggle}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button,
   group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component}
