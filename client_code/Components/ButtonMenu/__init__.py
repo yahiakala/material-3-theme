@@ -89,7 +89,6 @@ class ButtonMenu(ButtonMenuTemplate):
       self.hoverIndex = None
       self.clear_hover_styles()
 
-    
   def child_clicked(self, event):
     # do the click action. The child should handle this
     self.set_visibility(False)

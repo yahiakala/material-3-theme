@@ -76,6 +76,8 @@ components_by_slot:
           align: left
           border: ''
           tooltip: Hello
+          material_icon: 15mp
+          icon_align: left
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
