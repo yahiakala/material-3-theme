@@ -87,7 +87,7 @@ class RadioButton(RadioButtonTemplate):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True
-      self.raise_event("clicked")
+      self.raise_event("change")
     
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
