@@ -12,7 +12,7 @@ class TextArea(TextInput):
     hiddenInput = self.dom_nodes['textfield']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
 
-    self.update_height = self.update_height
+    # self.update_height = self.update_height
     self.on_change = self.on_change
     self.on_focus = self.on_focus
     self.on_lost_focus = self.on_lost_focus
@@ -21,16 +21,16 @@ class TextArea(TextInput):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    self.dom_nodes['textarea'].addEventListener("input", self.update_height)
+    self.dom_nodes['textarea'].addEventListener("input", self._update_height)
     self.dom_nodes['textarea'].addEventListener("input", self.on_input)
     self.dom_nodes['textarea'].addEventListener("change", self.on_change)
     self.dom_nodes['textarea'].addEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].addEventListener("blur", self.on_lost_focus)
-    self.resize_observer = ResizeObserver(self.update_height_two)
+    self.resize_observer = ResizeObserver(self._on_resize)
     self.resize_observer.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
-    self.dom_nodes['textarea'].removeEventListener("input", self.update_height)
+    self.dom_nodes['textarea'].removeEventListener("input", self._update_height)
     self.dom_nodes['textarea'].removeEventListener("input", self.on_input)
     self.dom_nodes['textarea'].removeEventListener("change", self.on_change)
     self.dom_nodes['textarea'].removeEventListener("focus", self.on_focus)
@@ -76,18 +76,17 @@ class TextArea(TextInput):
     super().set_id(value)
     self.dom_nodes["textarea"].id = value
 
-  def update_height(self, event):
+  def _update_height(self, event):
     self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
     h = event.target.scrollHeight;
-    self.dom_nodes['textarea'].style.height = f'{h}px'
-    self.dom_nodes['border-container'].style.height = f'{h}px'
+    self._set_height(h)
 
   def _on_resize(self, entries, observer):
     for entry in entries:
       h = entry.target.scrollHeight
-    self.update_height(h)
+    self._set_height(h)
 
-  def update_height(self, h):
+  def _set_height(self, h):
     self.dom_nodes['textarea'].style.height = f'{h}px'
     self.dom_nodes['border-container'].style.height = f'{h}px'
 
