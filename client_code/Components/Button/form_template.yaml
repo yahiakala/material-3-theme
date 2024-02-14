@@ -1,8 +1,8 @@
 properties:
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction.}
-- {name: role, type: role, default_value: '', group: Look and Feel,
-  description: Choose how this component can appear, based on css rules you've written for your app}
+- {name: role, type: role, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app: null}
 - name: align
   type: enum
   important: true

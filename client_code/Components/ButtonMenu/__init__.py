@@ -60,17 +60,21 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.text = v
   text = property_with_callback("text", set_text)
 
-  def set_appearance(self, value):
+  def _set_appearance(self, value):
     self.menu_button.appearance = value
-  appearance = property_with_callback("appearance", set_appearance)
+  appearance = property_with_callback("appearance", _set_appearance)
 
-  def set_tooltip(self, value):
+  def _set_tooltip(self, value):
     self.menu_button.tooltip = value
-  tooltip = property_with_callback("tooltip", set_tooltip)
+  tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def set_enabled(self, value):
+  def _set_enabled(self, value):
     self.menu_button.enabled = value
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", _set_enabled)
+
+  def _set_bold(self, value):
+    self.menu_button.bold = value
+  enabled = property_with_callback("bold", _set_bold)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
