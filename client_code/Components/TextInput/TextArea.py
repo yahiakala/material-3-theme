@@ -36,7 +36,6 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].removeEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].removeEventListener("blur", self.on_lost_focus)
 
-
   def update_height_two(self, entries, observer):
     # self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
     for entry in entries:
