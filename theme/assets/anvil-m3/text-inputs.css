@@ -2,6 +2,7 @@
 .anvil-m3-textinput-input-container {position: relative;}
 .anvil-m3-textinput-input {
   height: 56px;
+  min-height: 56px;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
   border: none;
