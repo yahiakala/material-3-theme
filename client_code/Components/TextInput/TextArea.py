@@ -86,8 +86,9 @@ class TextArea(TextInput):
     self.dom_nodes['border-container'].style.height = f'{h}px'
 
   def update_height_two(self, entries, *args):
-    self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
-    print("hi")
+    # self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
+    for entry in entries:
+      print(entry.target.style.width)
     # h = entries.target.scrollHeight;
     # self.dom_nodes['textarea'].style.height = f'{h}px'
     # self.dom_nodes['border-container'].style.height = f'{h}px'
