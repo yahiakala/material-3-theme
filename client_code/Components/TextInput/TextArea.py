@@ -26,7 +26,7 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].addEventListener("change", self.on_change)
     self.dom_nodes['textarea'].addEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].addEventListener("blur", self.on_lost_focus)
-    self.resize_observer = ResizeObserver(self.update_height)
+    self.resize_observer = ResizeObserver(self.update_height())
     self.resize_observer.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
