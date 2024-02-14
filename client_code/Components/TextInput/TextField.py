@@ -71,36 +71,36 @@ class TextField(TextInput):
     hiddenInput = self.dom_nodes['textarea']
     self.dom_nodes['input-container'].removeChild(hiddenInput)
     
-    self.on_key_down = self.on_key_down
-    self.on_change = self.on_change
-    self.handle_click = self.handle_click
-    self.on_focus = self.on_focus
-    self.on_lost_focus = self.on_lost_focus
+    self._on_key_down = self._on_key_down
+    self._on_change = self._on_change
+    self._handle_click = self._handle_click
+    self._on_focus = self._on_focus
+    self._on_lost_focus = self._on_lost_focus
 
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['textfield'].addEventListener("input", self.on_input)
-    self.dom_nodes['textfield'].addEventListener("keydown", self.on_key_down)
-    self.dom_nodes['textfield'].addEventListener("change", self.on_change)
-    self.dom_nodes['trailing-icon'].addEventListener("click", self.handle_click)
-    self.dom_nodes['textfield'].addEventListener("focus", self.on_focus)
-    self.dom_nodes['textfield'].addEventListener("blur", self.on_lost_focus)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['textfield'].addEventListener("input", self._on_input)
+    self.dom_nodes['textfield'].addEventListener("keydown", self._on_key_down)
+    self.dom_nodes['textfield'].addEventListener("change", self._on_change)
+    self.dom_nodes['trailing-icon'].addEventListener("click", self._handle_click)
+    self.dom_nodes['textfield'].addEventListener("focus", self._on_focus)
+    self.dom_nodes['textfield'].addEventListener("blur", self._on_lost_focus)
     
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['textfield'].removeEventListener("input", self.on_input)
-    self.dom_nodes['textfield'].removeEventListener("keydown", self.on_key_down)
-    self.dom_nodes['textfield'].removeEventListener("change", self.on_change)
-    self.dom_nodes['trailing-icon'].removeEventListener("click", self.handle_click)
-    self.dom_nodes['textfield'].removeEventListener("focus", self.on_focus)
-    self.dom_nodes['textfield'].removeEventListener("blur", self.on_lost_focus)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['textfield'].removeEventListener("input", self._on_input)
+    self.dom_nodes['textfield'].removeEventListener("keydown", self._on_key_down)
+    self.dom_nodes['textfield'].removeEventListener("change", self._on_change)
+    self.dom_nodes['trailing-icon'].removeEventListener("click", self._handle_click)
+    self.dom_nodes['textfield'].removeEventListener("focus", self._on_focus)
+    self.dom_nodes['textfield'].removeEventListener("blur", self._on_lost_focus)
 
-  def on_key_down(self, e):
+  def _on_key_down(self, e):
     if e.key == "Enter":
       self.raise_event("pressed_enter")
 
-  def set_placeholder(self, value):
+  def _set_placeholder(self, value):
     input = self.dom_nodes['textfield']
     if value:
       input.placeholder = value
@@ -108,17 +108,17 @@ class TextField(TextInput):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
-  placeholder = property_with_callback('placeholder', set_placeholder)
+  placeholder = property_with_callback('placeholder', _set_placeholder)
       
-  def set_label(self, value):
+  def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
       self.dom_nodes['textfield'].classList.toggle('has_label_text', True)
     else:
       self.dom_nodes['textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
-  label_text = property_with_callback("label_text", set_label)
+  label_text = property_with_callback("label_text", _set_label)
 
-  def set_enabled(self, value):
+  def _set_enabled(self, value):
     supporting_text = self.dom_nodes['subcontent']
     if value:
       self.dom_nodes['textfield'].removeAttribute("disabled")
@@ -126,17 +126,17 @@ class TextField(TextInput):
     else:
       self.dom_nodes['textfield'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", _set_enabled)
   
-  def set_id(self, value):
-    super().set_id(value)
+  def _set_id(self, value):
+    super()._set_id(value)
     self.dom_nodes["textfield"].id = value
 
-  def set_error(self, value):
-    super().set_error(value)
+  def _set_error(self, value):
+    super()._set_error(value)
     icon = "error" if value else self.trailing_icon
-    self.set_trailing_icon(icon)
-  error = property_with_callback("error", set_error)
+    self._set_trailing_icon(icon)
+  error = property_with_callback("error", _set_error)
 
   @anvil_property('enum')
   def leading_icon(self):
@@ -145,7 +145,7 @@ class TextField(TextInput):
   @leading_icon.setter
   def leading_icon(self, value):
     self._props['leading_icon'] = value
-    self.set_leading_icon(value)
+    self._set_leading_icon(value)
 
   @anvil_property('enum')
   def trailing_icon(self):
@@ -154,9 +154,9 @@ class TextField(TextInput):
   @trailing_icon.setter
   def trailing_icon(self, value):
     self._props['trailing_icon'] = value
-    self.set_trailing_icon(value)
+    self._set_trailing_icon(value)
     
-  def set_leading_icon(self, value):
+  def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['textfield']
@@ -176,7 +176,7 @@ class TextField(TextInput):
       border_container.classList.remove("with-icon")
   # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
-  def set_trailing_icon(self, value):
+  def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['textfield']
@@ -201,7 +201,7 @@ class TextField(TextInput):
   leading_icon_color = color_property('leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('trailing-icon', 'color', 'trailing_icon_color')
 
-  def set_character_limit(self, value):
+  def _set_character_limit(self, value):
     if value is None or value < 1:
       text_field_input = self.dom_nodes['textfield'].removeAttribute("maxlength")
       self.dom_nodes['character-counter'].style = "display: none";
@@ -209,17 +209,17 @@ class TextField(TextInput):
       text_field_input = self.dom_nodes['textfield'].setAttribute("maxlength", value)
       self.dom_nodes['character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
-  character_limit = property_with_callback("character_limit", set_character_limit)
+  character_limit = property_with_callback("character_limit", _set_character_limit)
 
-  def set_type(self, value):
+  def _set_type(self, value):
     self.dom_nodes['textfield'].setAttribute("type", value)
-  type = property_with_callback("type", set_type)
+  type = property_with_callback("type", _set_type)
 
-  def set_hide_text(self, value):
+  def _set_hide_text(self, value):
     self.dom_nodes['textfield'].setAttribute("type", "password" if value else self.type)
-  hide_text = property_with_callback("hide_text", set_hide_text)
+  hide_text = property_with_callback("hide_text", _set_hide_text)
 
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
 
