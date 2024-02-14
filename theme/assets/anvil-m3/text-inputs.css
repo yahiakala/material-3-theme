@@ -1,7 +1,7 @@
 .anvil-m3-textinput { width: 100%; }
 .anvil-m3-textinput-input-container {position: relative;}
 .anvil-m3-textinput-input {
-  min-height: 56px;
+  height: 56px;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
   border: none;
@@ -33,7 +33,7 @@
 } */
 
 .anvil-m3-textinput-icon-container { display: flex; align-items: center; padding-left: 16px; position: absolute;}
-.anvil-m3-textinput-border { height: 56px; display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; }
+.anvil-m3-textinput-border { height: 56px; display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 15px auto 1fr 4px; }
 /* .anvil-m3-border-container { display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; } */
 
 .anvil-m3-textinput-border.with-icon { grid-template-columns: 48px auto 1fr; }
@@ -207,9 +207,9 @@
 
 
 /* text area specific */
-/* .anvil-m3-textarea {
-  resize: none;
-} */
+.anvil-m3-textarea {
+  resize: vertical;
+}
 
 /*  text field specific */
 .anvil-m3-textfield {
