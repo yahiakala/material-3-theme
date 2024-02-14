@@ -26,7 +26,7 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].addEventListener("change", self.on_change)
     self.dom_nodes['textarea'].addEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].addEventListener("blur", self.on_lost_focus)
-    self.resize_observer = ResizeObserver(self.update_height)
+    self.resize_observer = ResizeObserver(self._on_resize)
     self.resize_observer.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
@@ -35,6 +35,9 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].removeEventListener("change", self.on_change)
     self.dom_nodes['textarea'].removeEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].removeEventListener("blur", self.on_lost_focus)
+
+  def _on_resize(self, *args):
+    print("I'm resized")
   
   italic_display = italic_property('textarea', 'italic_label')
   bold_display = bold_property('textarea', 'bold_display')
@@ -81,6 +84,13 @@ class TextArea(TextInput):
     h = event.target.scrollHeight;
     self.dom_nodes['textarea'].style.height = f'{h}px'
     self.dom_nodes['border-container'].style.height = f'{h}px'
+
+  def update_height_two(self, entries, *args):
+    self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
+    print("hi")
+    # h = entries.target.scrollHeight;
+    # self.dom_nodes['textarea'].style.height = f'{h}px'
+    # self.dom_nodes['border-container'].style.height = f'{h}px'
 
   def set_character_limit(self, value):
     if value is None or value < 1:
