@@ -15,6 +15,10 @@ properties:
   group: Other}
 - {name: bold, type: boolean, default_value: true, important: true, description: Display this component’s text in bold.,
   designer_hint: font-bold, group: Text}
+- {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
+  group: Text, description: Display this component’s text in italics.}
+- {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
+  group: Text Style, description: Display this component’s text underlined.}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
