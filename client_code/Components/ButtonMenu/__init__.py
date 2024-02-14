@@ -28,10 +28,10 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.btnNode = get_dom_node(self.menu_button).querySelector("button")
 
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
+  def _on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.menuNode.addEventListener('click', self.child_clicked)
     document.addEventListener('click', self.body_click)
@@ -41,7 +41,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
     self._cleanup = fui.auto_update(self.btnNode, self.menuNode, placement="bottom-start")
   
-  def on_cleanup(self, **event_args):
+  def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.menuNode.removeEventListener('click', self.child_clicked)
     document.removeEventListener('click', self.body_click)
@@ -51,14 +51,15 @@ class ButtonMenu(ButtonMenuTemplate):
   
   visible = HtmlTemplate.visible
   
-  def set_text(self, value):
+  def _set_text(self, value):
     v = value
     self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.menu_button.text = v
-  text = property_with_callback("text", set_text)
+    
+  text = property_with_callback("text", _set_text)
 
   def _set_appearance(self, value):
     self.menu_button.appearance = value
@@ -74,7 +75,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _set_bold(self, value):
     self.menu_button.bold = value
-  enabled = property_with_callback("bold", _set_bold)
+  bold = property_with_callback("bold", _set_bold)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()

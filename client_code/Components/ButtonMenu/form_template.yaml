@@ -14,7 +14,7 @@ properties:
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
 - {name: bold, type: boolean, default_value: true, important: true, description: Display this component’s text in bold.,
-  designer_hint: font-bold}
+  designer_hint: font-bold, group: Text}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
@@ -26,7 +26,7 @@ events:
 - {name: hide, description: When the component is removed from the screen}
 components:
 - name: menu_button
-  properties: {}
+  properties: {bold: true}
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
