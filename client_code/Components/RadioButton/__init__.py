@@ -44,7 +44,7 @@ class RadioButton(RadioButtonTemplate):
   text_color = color_property('anvil-m3-radiobutton-label', 'color', 'text_color')
   background = color_property('anvil-m3-radiobutton-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
-  selected = checked_property('anvil-m3-radiobutton-input')
+  # selected = checked_property('anvil-m3-radiobutton-input')
   margin = margin_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
   
@@ -59,17 +59,13 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-unchecked'].style['color'] = value
     self._props['radio_color'] = value
 
-  # @property
-  # def selected(self):
-  #   return self._props.get('selected')
+  @property
+  def selected(self):
+    return self.dom_nodes['anvil-m3-radiobutton-input'].checked
 
-  # @selected.setter
-  # def selected(self, value):
-  #   selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
-  #   if value and selected_item:
-  #     selected_item.removeAttribute('checked')
-  #   self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
-  #   self._props['selected'] = value
+  @selected.setter
+  def selected(self, value):
+    self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
 
   def _set_text(self, value):
     v = value
@@ -78,6 +74,7 @@ class RadioButton(RadioButtonTemplate):
       v = self._design_name
       self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
+    
   text = property_with_callback("text", _set_text)
   
   # Class Functions
@@ -103,21 +100,15 @@ class RadioButton(RadioButtonTemplate):
     ]
 
   def _toggle_selected(self):
-    print(self.selected)
     self.selected = not self.selected
-    print(self.selected)
     anvil.designer.update_component_properties(self, {'selected': self.selected})
    
   def _handle_click(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
-      self.selected = True
+      self.selected = True 
       self.raise_event("change")
 
-  def _handle_input(self, event):
-    print('triggered handle input')
-    self.selected = self.dom_nodes['anvil-m3-radiobutton-input'].checked
-    
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)

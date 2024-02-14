@@ -72,11 +72,11 @@ components:
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_3
-              properties: {text: Selection 4, group_name: group_1, selected: false}
+              properties: {text: Selection 4, group_name: group_1, selected: true}
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_4
-              properties: {text: Selection 5, group_name: group_1, selected: false}
+              properties: {text: Selection 5, group_name: group_1, selected: true}
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_5
