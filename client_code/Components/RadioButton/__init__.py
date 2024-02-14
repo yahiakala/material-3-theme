@@ -26,7 +26,7 @@ class RadioButton(RadioButtonTemplate):
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
-    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("input", self._handle_input)
+
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
     
@@ -115,6 +115,7 @@ class RadioButton(RadioButtonTemplate):
       self.raise_event("change")
 
   def _handle_input(self, event):
+    print('triggered handle input')
     self.selected = self.dom_nodes['anvil-m3-radiobutton-input'].checked
     
   def form_show(self, **event_args):
