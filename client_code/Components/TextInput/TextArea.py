@@ -17,10 +17,10 @@ class TextArea(TextInput):
     self.on_focus = self.on_focus
     self.on_lost_focus = self.on_lost_focus
 
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
+  def _on_mount(self, **event_args):
     self.dom_nodes['textarea'].addEventListener("input", self._update_height)
     self.dom_nodes['textarea'].addEventListener("input", self.on_input)
     self.dom_nodes['textarea'].addEventListener("change", self.on_change)
@@ -29,12 +29,13 @@ class TextArea(TextInput):
     self.resize_observer = ResizeObserver(self._on_resize)
     self.resize_observer.observe(self.dom_nodes['textarea'])
     
-  def on_cleanup(self, **event_args):
+  def _on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("input", self._update_height)
     self.dom_nodes['textarea'].removeEventListener("input", self.on_input)
     self.dom_nodes['textarea'].removeEventListener("change", self.on_change)
     self.dom_nodes['textarea'].removeEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].removeEventListener("blur", self.on_lost_focus)
+    self.resize_observer.unobserve(self.dom_nodes['textarea'])
   
   italic_display = italic_property('textarea', 'italic_label')
   bold_display = bold_property('textarea', 'bold_display')
