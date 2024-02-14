@@ -101,6 +101,22 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.font_size = value
   button_font_size = property_with_callback("button_font_size", _set_button_font_size)
 
+  def _set_icon(self, value):
+    self.menu_button.icon = value
+  icon = property_with_callback("icon", _set_icon)
+
+  def _set_icon_color(self, value):
+    self.menu_button.icon_color = value
+  icon_color = property_with_callback("icon_color", _set_icon_color)
+
+  def _set_icon_size(self, value):
+    self.menu_button.icon_size = value
+  icon_size = property_with_callback("icon_size", _set_icon_size)
+
+  def _set_icon_align(self, value):
+    self.menu_button.icon_align = value
+  icon_size = property_with_callback("icon_size", _set_icon_size)
+
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
 
