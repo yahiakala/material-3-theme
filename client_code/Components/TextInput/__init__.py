@@ -32,24 +32,24 @@ class TextInput(TextInputTemplate):
   character_limit_font = font_family_property('character-counter', 'character_limit_font')
   character_limit_font_size = font_size_property('character-counter', 'character_limit_font_size')
   
-  def set_appearance(self, value):
+  def _set_appearance(self, value):
     if value == 'outlined':
       self.dom_nodes['textinput-component'].classList.toggle('outlined', True) 
     else:
       self.dom_nodes['textinput-component'].classList.toggle('outlined', False)
-  appearance = property_with_callback("appearance", set_appearance)
+  appearance = property_with_callback("appearance", _set_appearance)
   
-  def set_supporting_text(self, value):
+  def _set_supporting_text(self, value):
     self.dom_nodes['supporting-text'].innerHTML = value
-  supporting_text = property_with_callback("supporting_text", set_supporting_text)
+  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
-  def set_error(self, value):
+  def _set_error(self, value):
     classes = self.dom_nodes['textinput-component'].classList
     if value:
       classes.add("anvil-m3-textinput-error")
     else:
       classes.remove("anvil-m3-textinput-error")
-  error = property_with_callback("error", set_error)
+  error = property_with_callback("error", _set_error)
   
   def set_id(self, value):
     self.dom_nodes["label-text"].setAttribute("for", value)
