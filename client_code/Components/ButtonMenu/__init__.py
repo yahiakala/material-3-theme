@@ -71,23 +71,35 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _set_enabled(self, value):
     self.menu_button.enabled = value
-    
   enabled = property_with_callback("enabled", _set_enabled)
 
   def _set_bold(self, value):
     self.menu_button.bold = value
-    
   bold = property_with_callback("bold", _set_bold)
 
   def _set_italic(self, value):
     self.menu_button.italic = value
-    
   italic = property_with_callback("italic", _set_italic)
  
   def _set_underline(self, value):
     self.menu_button.underline = value
-    
   underline = property_with_callback("underline", _set_underline)
+
+  def _set_button_border(self, value):
+    self.menu_button.border = value
+  button_border = property_with_callback("button_border", _set_button_border)
+
+  def _set_button_background(self, value):
+    self.menu_button.background = value
+  button_background = property_with_callback("button_background", _set_button_background)
+
+  def _set_button_text_color(self, value):
+    self.menu_button.text_color = value
+  button_text_color = property_with_callback("button_text_color", _set_button_text_color)
+
+  def _set_button_font_size(self, value):
+    self.menu_button.font_size = value
+  button_font_size = property_with_callback("button_font_size", _set_button_font_size)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()

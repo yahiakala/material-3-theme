@@ -34,6 +34,7 @@ components_by_slot:
           appearance: filled
           text: Add to cart
           margin: ['8', '8', '8', '0']
+          role: null
         type: form:Components.Button
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
