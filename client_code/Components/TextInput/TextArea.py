@@ -2,6 +2,7 @@ import anvil.server
 from . import TextInput
 import anvil.designer
 import anvil.js
+from anvil.js.window import ResizeObserver
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
 class TextArea(TextInput):
@@ -25,6 +26,8 @@ class TextArea(TextInput):
     self.dom_nodes['textarea'].addEventListener("change", self.on_change)
     self.dom_nodes['textarea'].addEventListener("focus", self.on_focus)
     self.dom_nodes['textarea'].addEventListener("blur", self.on_lost_focus)
+    self.resize_observer = ResizeObserver(self.update_height)
+    self.resize_observer.observe(self.dom_nodes['textarea'])
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['textarea'].removeEventListener("input", self.update_height)
