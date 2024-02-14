@@ -17,18 +17,18 @@ class RadioButton(RadioButtonTemplate):
     self._design_name = "" 
     self.init_components(**properties)
     
-    self.handle_click = self.handle_click
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self.handle_click)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("input", self._handle_input)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
     
   # Properties 
   visible = HtmlTemplate.visible
@@ -59,15 +59,26 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-unchecked'].style['color'] = value
     self._props['radio_color'] = value
 
+  # @property
+  # def selected(self):
+  #   return self._props.get('selected')
 
-  def set_text(self, value):
+  # @selected.setter
+  # def selected(self, value):
+  #   selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
+  #   if value and selected_item:
+  #     selected_item.removeAttribute('checked')
+  #   self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
+  #   self._props['selected'] = value
+
+  def _set_text(self, value):
     v = value
     self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
-  text = property_with_callback("text", set_text)
+  text = property_with_callback("text", _set_text)
   
   # Class Functions
   def _anvil_get_interactions_(self):
@@ -86,20 +97,25 @@ class RadioButton(RadioButtonTemplate):
         "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
         "sensitivity": 0,
         "callbacks": {
-          "execute": self.toggle_selected
+          "execute": self._toggle_selected
         }
       }
     ]
 
-  def toggle_selected(self):
+  def _toggle_selected(self):
+    print(self.selected)
     self.selected = not self.selected
+    print(self.selected)
     anvil.designer.update_component_properties(self, {'selected': self.selected})
    
-  def handle_click(self, event):
+  def _handle_click(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True
       self.raise_event("change")
+
+  def _handle_input(self, event):
+    self.selected = self.dom_nodes['anvil-m3-radiobutton-input'].checked
     
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
@@ -108,5 +124,5 @@ class RadioButton(RadioButtonTemplate):
         self.dom_nodes['anvil-m3-radiobutton-label'].innerText = self._design_name
 
   def get_group_value(self):
-    selectedItem = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
-    return selectedItem.value
+    selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
+    return selected_item.value
