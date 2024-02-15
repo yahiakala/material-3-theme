@@ -2,6 +2,8 @@ properties:
 - {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
   type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
     this component be displayed?'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app.}
 - name: align
   type: enum
   important: true

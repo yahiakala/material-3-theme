@@ -15,6 +15,8 @@ properties:
   description: Size of the heading component
 - {name: font_size, type: number, description: The height of text displayed on this component in pixels,
   group: Text, important: true}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app.}
 - {name: font, type: string, default_value: '', description: The font to use for this component.,
   group: Text}
 - {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold,

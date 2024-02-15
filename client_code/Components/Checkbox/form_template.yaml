@@ -1,6 +1,8 @@
 properties:
 - {default_value: false, group: Key Properties, important: true, name: checked, default_binding_prop: true,
   type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked.}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app.}
 - {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction.,
   designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state.,

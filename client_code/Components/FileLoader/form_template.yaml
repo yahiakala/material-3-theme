@@ -14,6 +14,8 @@ properties:
     True, display a message describing selected files.', group: Other}
 - {name: text, type: string, default_value: File upload, important: true, description: The text displayed on this component,
   group: Key Properties}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app.}
 - name: material_icon
   type: enum
   important: true

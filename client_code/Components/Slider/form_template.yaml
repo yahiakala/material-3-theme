@@ -1,6 +1,8 @@
 properties:
 - {name: show_label, type: boolean, default_value: false, default_binding_prop: true,
   group: Label, important: true, description: Display a label above the thumb}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
+  based on css rules you've written for your app.}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
   description: True if this component should allow user interaction}
 - {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar,
