@@ -55,6 +55,14 @@ class TextArea(TextInput):
       input.classList.remove('anvil-m3-has-placeholder')
   placeholder = property_with_callback('placeholder', _set_placeholder)
 
+  @property
+  def text(self):
+    return self.dom_nodes['textfield'].value
+
+  @text.setter
+  def text(self, value):
+    self.dom_nodes['textfield'].value = value
+
   def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
