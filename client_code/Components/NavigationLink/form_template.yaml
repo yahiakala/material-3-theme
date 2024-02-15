@@ -5,7 +5,7 @@ properties:
 - {name: selected, type: boolean, default_value: false, description: Is this link selected/active,
   important: true, group: Interaction}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - {name: badge, type: boolean, default_value: false, description: Display a notification badge on the icon,
   group: Key Properties}
 - {name: badge_count, type: number, default_value: '', description: The number to display on the badge,

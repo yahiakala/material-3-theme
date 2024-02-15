@@ -3,7 +3,7 @@ properties:
   type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
     this component be displayed?'}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - name: align
   type: enum
   important: true

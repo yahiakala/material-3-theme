@@ -2,7 +2,7 @@ properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on the button.,
   group: Key Properties}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - name: appearance
   type: enum
   options: [elevated, filled, tonal, outlined]

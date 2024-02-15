@@ -34,7 +34,7 @@ properties:
 - {name: text_color, type: color, default_value: '', description: The colour of the text,
   group: Look and Feel}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - name: material_icon
   type: enum
   options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,

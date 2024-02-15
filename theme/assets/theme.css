@@ -700,3 +700,7 @@ th.month select.monthselect::after {
   border-bottom: 0;
   border-right: 0;
 }
+
+.anvil-role-test {
+  border: 2px dotted magenta
+}

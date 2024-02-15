@@ -34,6 +34,9 @@ class Button(ButtonTemplate):
       
   align = property_with_callback('align', set_align)
   visible = HtmlTemplate.visible
+
+  @property
+  def 
   
   def handle_click(self, event):
     event.preventDefault()

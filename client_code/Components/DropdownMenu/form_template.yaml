@@ -14,7 +14,7 @@ properties:
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
   group: Label Style}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - name: align
   type: enum
   important: true

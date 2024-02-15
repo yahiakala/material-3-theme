@@ -8,7 +8,7 @@ properties:
 - {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties,
   description: Limit the amount of characters that can be entered into this box.}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.}
+  based on css rules you've written for your app.: null}
 - name: align
   type: enum
   options: [left, center, right]
