@@ -34,7 +34,7 @@ components_by_slot:
           appearance: filled
           text: Add to cart
           margin: ['8', '8', '8', '0']
-          role: null
+          role: [test, test-test]
           icon: 13mp
           icon_align: right
         type: form:Components.Button
@@ -90,6 +90,7 @@ components_by_slot:
         layout_properties: {slot: card-content-slot}
       - name: button_2_copy
         properties:
+          role: test
           appearance: filled
           align: left
           margin: ['8', '8', '8', '0']

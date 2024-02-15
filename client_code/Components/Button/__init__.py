@@ -36,7 +36,17 @@ class Button(ButtonTemplate):
   visible = HtmlTemplate.visible
 
   @property
-  def 
+  def role(self):
+    return self._props.get('role')
+
+  @role.setter
+  def role(self, value):
+    print('role: ', value, type(value))
+    self.dom_nodes['anvil-m3-button'].classList.remove()
+    if value:
+      if type(value) is str:
+        self.dom_nodes['anvil-m3-button'].classList.add(value)
+    self._props['role'] = value
   
   def handle_click(self, event):
     event.preventDefault()
