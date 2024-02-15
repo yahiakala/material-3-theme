@@ -42,10 +42,19 @@ class Button(ButtonTemplate):
   @role.setter
   def role(self, value):
     print('role: ', value, type(value))
-    self.dom_nodes['anvil-m3-button'].classList.remove()
+    element = self.dom_nodes['anvil-m3-button']
+    class_list = element.classList
+    for c in class_list:
+      if c.startswith('anvil-role'):
+        element.classList.remove(c)
     if value:
+      element.setAttribute('anvil-role', value)
       if type(value) is str:
-        self.dom_nodes['anvil-m3-button'].classList.add(value)
+        element.classList.add(value)
+        element.setAttribute('anvil-role', value)
+      elif type(value) is list:
+        for role in value:
+          element.classList.add(role)
     self._props['role'] = value
   
   def handle_click(self, event):

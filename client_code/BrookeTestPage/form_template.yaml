@@ -29,17 +29,6 @@ components_by_slot:
           margin: [null, null, '12', null]
         type: form:Components.Text
         layout_properties: {slot: card-content-slot}
-      - name: button_1
-        properties:
-          appearance: filled
-          text: Add to cart
-          margin: ['8', '8', '8', '0']
-          role: [test, test-test]
-          icon: 13mp
-          icon_align: right
-        type: form:Components.Button
-        layout_properties: {slot: card-content-slot}
-        event_bindings: {}
     - name: button_menu_1
       properties:
         button_background: ''
@@ -107,6 +96,12 @@ components_by_slot:
       properties: {}
       type: DatePicker
       layout_properties: {grid_position: 'RNRDTI,OHEQEL'}
+    - name: button_2
+      properties:
+        text: button_2
+        role: [test-test, test]
+      type: Button
+      layout_properties: {grid_position: 'ORYRIJ,BSNDSF'}
     - name: checkbox_1
       properties: {background: '', text: hello, role: test}
       type: form:Components.Checkbox
