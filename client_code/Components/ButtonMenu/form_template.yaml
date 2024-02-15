@@ -410,8 +410,9 @@ properties:
   group: Layout
 - {name: button_font_family, type: string, default_value: '', important: false, group: Text}
 - {name: menu_background, type: color, default_value: '', important: false, group: Look and Feel,
-  description: The color of the Menu'}
-- {name: menu_border, type: string, default_value: '', important: true, description: The border of the Menu. Can take any valid CSS border value.}
+  description: The color of the background of the Menu}
+- {name: menu_border, type: string, default_value: '', important: false, description: The border of the Menu. Can take any valid CSS border value.,
+  group: Look and Feel}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
@@ -421,6 +422,7 @@ data_bindings: []
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen}
 - {name: hide, description: When the component is removed from the screen}
+- {name: click, description: When the Button is clicked}
 components:
 - name: menu_button
   properties: {bold: true}

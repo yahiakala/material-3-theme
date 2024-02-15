@@ -10,7 +10,7 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
-from ...Functions import property_with_callback
+from ...Functions import property_with_callback, color_property, border_property
 from ...utils import fui, noop
 
 class ButtonMenu(ButtonMenuTemplate):
@@ -60,6 +60,8 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.text = v
     
   text = property_with_callback("text", _set_text)
+  menu_background = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background')
+  menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
 
   def _set_appearance(self, value):
     self.menu_button.appearance = value

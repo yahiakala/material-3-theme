@@ -51,7 +51,9 @@ components_by_slot:
         text: Text
         icon_align: right
         italic: false
+        menu_background: ''
         button_text_color: ''
+        menu_border: ''
         bold: true
         underline: false
         icon_color: ''
