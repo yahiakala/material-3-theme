@@ -38,6 +38,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
     # this gets around the whole, anvil containers love to set their overflow to hidden
     document.body.append(self.menuNode)
+    self.menu_button.addEventListener("click", self._handle_click)
 
     self._cleanup = fui.auto_update(self.btnNode, self.menuNode, placement="bottom-start")
   
@@ -48,7 +49,13 @@ class ButtonMenu(ButtonMenuTemplate):
     self._cleanup()
     # remove the menu node we put on the body
     self.menuNode.remove()
-  
+    self.menu_button.removeEventListener("click", self._handle_click)
+
+  def _handle_click(self, **event_args):
+    pass
+    
+  menu_background = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background')
+  menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
   visible = HtmlTemplate.visible
   
   def _set_text(self, value):
@@ -58,10 +65,8 @@ class ButtonMenu(ButtonMenuTemplate):
       v = self._design_name
       self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.menu_button.text = v
-    
   text = property_with_callback("text", _set_text)
-  menu_background = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background')
-  menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
+
 
   def _set_appearance(self, value):
     self.menu_button.appearance = value
