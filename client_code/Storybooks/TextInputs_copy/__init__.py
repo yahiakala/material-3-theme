@@ -10,7 +10,6 @@ class TextInputs_copy(TextInputs_copyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.update_tf1_icon()
-    self.text_field_5.text = "Hello!"
   
     # Any code you write here will run before the form opens.
 
@@ -40,3 +39,8 @@ class TextInputs_copy(TextInputs_copyTemplate):
   def text_field_1_copy_copy_click(self, **event_args):
     """This method is called when the trailing icon is clicked."""
     pass
+
+  def text_field_5_pressed_enter(self, **event_args):
+    """This method is called when the user presses enter in this component."""
+    pass
+

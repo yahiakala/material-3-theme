@@ -110,23 +110,23 @@ class TextField(TextInput):
       input.classList.remove('anvil-m3-has-placeholder')
   placeholder = property_with_callback('placeholder', _set_placeholder)
 
-  # def _set_text(self, value):
-  #   input = self.dom_nodes['textfield']
-  #   if value:
-  #     input.text = value
-  #   else:
-  #     input.text = ""
-  #     # input.classList.remove('anvil-m3-has-placeholder')
-  # text = property_with_callback('text', _set_text)
+  def _set_text(self, value):
+    input = self.dom_nodes['textfield']
+    if value:
+      input.value = value
+    else:
+      input.value = ""
+      # input.classList.remove('anvil-m3-has-placeholder')
+  text = property_with_callback('text', _set_text)
 
-  @property
-  def text(self):
-    return self._props.get('text')
+  # @property
+  # def text(self):
+  #   return self._props.get('text')
 
-  @text.setter
-  def text(self, value):
-    self._props['text'] = value
-    self.dom_nodes['textfield'].text = value
+  # @text.setter
+  # def text(self, value):
+  #   self._props['text'] = value
+  #   self.dom_nodes['textfield'].text = value
       
   def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
