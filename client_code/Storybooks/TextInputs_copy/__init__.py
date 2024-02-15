@@ -10,6 +10,7 @@ class TextInputs_copy(TextInputs_copyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.update_tf1_icon()
+
   
     # Any code you write here will run before the form opens.
 
