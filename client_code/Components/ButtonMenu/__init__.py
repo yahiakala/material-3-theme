@@ -152,6 +152,8 @@ class ButtonMenu(ButtonMenuTemplate):
   def child_clicked(self, event):
     # do the click action. The child should handle this
     self.set_visibility(False)
+    if self.enabled:
+      self.raise_event("click")
 
   def body_click(self, event):
     if self.btnNode.contains(event.target) or self.menuNode.contains(event.target):

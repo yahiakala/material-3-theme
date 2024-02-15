@@ -18,6 +18,10 @@ class BrookeTestPage(BrookeTestPageTemplate):
   def icon_button_1_click(self, **event_args):
     self.layout.layout.show_sidesheet = False
 
+  def button_menu_1_click(self, **event_args):
+    """This method is called when the Button is clicked"""
+    print('clicked')
+
 
 
 
