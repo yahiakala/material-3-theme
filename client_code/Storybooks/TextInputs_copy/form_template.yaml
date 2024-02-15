@@ -266,7 +266,7 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_5
         properties: {label_text: Label, placeholder: Placeholder, supporting_text: Supporting text,
-          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp, text: hi}
+          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp, text: ''}
         type: form:Components.TextInput.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         event_bindings: {pressed_enter: text_field_5_pressed_enter}
