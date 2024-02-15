@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, margin_property, font_family_property, border_property
+from ...Functions import enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, margin_property, font_family_property, border_property
 from ...utils import gen_id
 import anvil.designer
 
@@ -82,6 +82,7 @@ class Checkbox(CheckboxTemplate):
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
   margin = margin_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
+  role = role_property('anvil-m3-checkbox-container')
 
   @property
   def checkbox_color(self):

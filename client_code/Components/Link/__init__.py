@@ -1,7 +1,7 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
 import anvil.designer
-from ...Functions import tooltip_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, margin_property
+from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, margin_property
 
 from anvil import HtmlTemplate
 
@@ -54,6 +54,7 @@ class Link(LinkTemplate):
   border = style_property('anvil-m3-link', 'border', 'border')
   margin = margin_property('anvil-m3-link')
   tooltip = tooltip_property('anvil-m3-link')
+  role = role_property('anvil-m3-link')
 
   @property
   def url(self):

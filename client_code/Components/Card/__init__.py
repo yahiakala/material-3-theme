@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property, border_property
+from ...Functions import tooltip_property, role_property, property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property, border_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -90,4 +90,5 @@ class Card(CardTemplate):
   card_image_content_padding = padding_property('image', 'card_image_content_padding')
   tooltip = tooltip_property('anvil-m3-card')
   border = style_property('anvil-m3-card', 'border', 'border')
+  role = role_property('anvil-m3-card')
       
