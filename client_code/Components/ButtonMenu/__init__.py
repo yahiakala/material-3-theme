@@ -34,6 +34,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.menuNode.addEventListener('click', self.child_clicked)
+    self.btnNode.addE
     document.addEventListener('click', self.body_click)
     # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
     # this gets around the whole, anvil containers love to set their overflow to hidden
