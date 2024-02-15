@@ -10,8 +10,10 @@ class TextInputs_copy(TextInputs_copyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.update_tf1_icon()
+    self.text_field_5.text = "Hello!"
   
     # Any code you write here will run before the form opens.
+
 
   def text_field_1_copy_2_click(self, **event_args):
     alert("clicked outlined style")
