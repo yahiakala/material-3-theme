@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
-from ...Functions import theme_color_to_css, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
+from ...Functions import theme_color_to_css, role_property, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 import anvil.designer
 
 
@@ -100,6 +100,7 @@ class Switch(SwitchTemplate):
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-switch-container')
   tooltip = tooltip_property('anvil-m3-switch')
+  role = role_property('anvil-m3-switch')
 
 
   

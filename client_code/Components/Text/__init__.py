@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.js.window import document
-from ...Functions import tooltip_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
+from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
 from ...utils import fui, noop
 import time
 #TODO: figure out what to do with line height
@@ -50,6 +50,7 @@ class Text(TextTemplate):
   icon_size = font_size_property('anvil-m3-text-icon', 'icon_size')
   margin = margin_property('anvil-m3-text-container')
   tooltip = tooltip_property('anvil-m3-text-container')
+  role = role_property('anvil-m3-text-container')
 
   @property
   def font_size(self):
