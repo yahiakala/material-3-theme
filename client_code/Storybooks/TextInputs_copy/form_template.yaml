@@ -269,7 +269,7 @@ components:
           appearance: outlined, leading_icon: 10k, trailing_icon: 10mp, text: ''}
         type: form:Components.TextInput.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
-        event_bindings: {}
+        event_bindings: {pressed_enter: text_field_5_pressed_enter}
       - name: text_field_2
         properties: {label_text: Label only, appearance: outlined, leading_icon: 10k,
           trailing_icon: 10mp}
