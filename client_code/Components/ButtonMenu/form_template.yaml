@@ -402,6 +402,13 @@ properties:
   include_none_option: true
   group: Key Properties
   description: The icon to display on the Button.
+- name: margin
+  type: margin
+  important: true
+  description: 'Margin (pixels) of the component. '
+  default_value: ['8', '8', '8', '8']
+  group: Layout
+- {name: button_font_family, type: string, default_value: '', important: false, group: Text}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}

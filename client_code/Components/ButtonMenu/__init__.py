@@ -115,7 +115,15 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _set_icon_align(self, value):
     self.menu_button.icon_align = value
-  icon_size = property_with_callback("icon_size", _set_icon_size)
+  icon_align = property_with_callback("icon_align", _set_icon_align)
+
+  def _set_margin(self, value):
+    self.menu_button.margin = value
+  margin = property_with_callback("margin", _set_margin)
+
+  def _set_button_font_family(self, value):
+    self.menu_button.font_family = value
+  button_font_family = property_with_callback("button_font_family", _set_button_font_family)
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
