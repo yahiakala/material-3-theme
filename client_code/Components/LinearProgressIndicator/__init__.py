@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css
+from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css, role_property
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -17,6 +17,7 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
 
   visible = HtmlTemplate.visible
   tooltip = tooltip_property('anvil-m3-progressindicator-linear')
+  role = role_property('anvil-m3-progressindicator-linear')
   
   @property
   def color(self):

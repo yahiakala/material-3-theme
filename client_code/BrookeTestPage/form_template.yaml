@@ -80,6 +80,10 @@ components_by_slot:
       properties: {visible: true, role: null}
       type: form:Components.CircularProgressIndicator
       layout_properties: {grid_position: 'UOEOXV,UGDHPT'}
+    - name: linear_progress_indicator_1
+      properties: {role: null}
+      type: form:Components.LinearProgressIndicator
+      layout_properties: {grid_position: 'PYAFSO,BSUFMQ'}
     - name: icon_button_2
       properties: {role: null}
       type: form:Components.IconButton
