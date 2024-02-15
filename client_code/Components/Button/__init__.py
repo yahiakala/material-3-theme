@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property 
+from ...Functions import color_property, role_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property 
 from anvil import HtmlTemplate
 import anvil.designer
 
@@ -34,29 +34,8 @@ class Button(ButtonTemplate):
       
   align = property_with_callback('align', set_align)
   visible = HtmlTemplate.visible
+  role = role_property('anvil-m3-button')
 
-  @property
-  def role(self):
-    return self._props.get('role')
-
-  @role.setter
-  def role(self, value):
-    print('role: ', value, type(value))
-    element = self.dom_nodes['anvil-m3-button']
-    class_list = element.classList
-    for c in class_list:
-      if c.startswith('anvil-role'):
-        element.classList.remove(c)
-    if value:
-      element.setAttribute('anvil-role', value)
-      if type(value) is str:
-        element.classList.add(value)
-        element.setAttribute('anvil-role', value)
-      elif type(value) is list:
-        for role in value:
-          element.classList.add(role)
-    self._props['role'] = value
-  
   def handle_click(self, event):
     event.preventDefault()
     if self.enabled:

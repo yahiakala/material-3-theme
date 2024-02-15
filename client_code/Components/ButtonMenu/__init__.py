@@ -10,7 +10,7 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
-from ...Functions import property_with_callback, color_property, border_property
+from ...Functions import property_with_callback, color_property, border_property, role_property
 from ...utils import fui, noop
 
 class ButtonMenu(ButtonMenuTemplate):
