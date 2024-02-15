@@ -409,6 +409,9 @@ properties:
   default_value: ['8', '8', '8', '8']
   group: Layout
 - {name: button_font_family, type: string, default_value: '', important: false, group: Text}
+- {name: menu_background, type: color, default_value: '', important: false, group: Look and Feel,
+  description: The color of the Menu'}
+- {name: menu_border, type: string, default_value: '', important: true, description: The border of the Menu. Can take any valid CSS border value.}
 custom_component: true
 toolbox_item:
   icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
