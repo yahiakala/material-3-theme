@@ -57,11 +57,11 @@ class TextArea(TextInput):
 
   @property
   def text(self):
-    return self.dom_nodes['textfield'].value
+    return self.dom_nodes['textarea'].value
 
   @text.setter
   def text(self, value):
-    self.dom_nodes['textfield'].value = value
+    self.dom_nodes['textarea'].value = value
 
   def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""

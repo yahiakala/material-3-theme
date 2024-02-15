@@ -45,3 +45,7 @@ class TextInputs_copy(TextInputs_copyTemplate):
     """This method is called when the user presses enter in this component."""
     print(self.text_field_5.text)
     print(self.text_field_5.dom_nodes['textfield'].value)
+
+  def text_area_4_change(self, **event_args):
+    """This method is called when the text in this component is edited."""
+    print(self.text_area_4.text)
