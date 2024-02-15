@@ -259,36 +259,26 @@ components:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
+      - name: text_field_6
+        properties: {label_text: Label, supporting_text: Supporting text, character_limit: 10,
+          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp}
+        type: form:Components.TextInput.TextField
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_field_5
+        properties: {label_text: Label, placeholder: Placeholder, supporting_text: Supporting text,
+          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp}
+        type: form:Components.TextInput.TextField
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_field_2
+        properties: {label_text: Label only, appearance: outlined, leading_icon: 10k,
+          trailing_icon: 10mp}
+        type: form:Components.TextInput.TextField
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: column_panel_2_copy
         properties: {}
         type: ColumnPanel
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
-        - name: text_field_1_copy_2
-          properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text,
-            tooltip: Hello, placeholder: '', error: false, enabled: true, character_limit_color: '',
-            leading_icon: 2k_plus, character_limit: 10, leading_icon_color: '', trailing_icon: 10mp,
-            type: number, character_limit_font_size: -2, character_limit_font: '',
-            trailing_icon_color: ''}
-          type: form:Components.TextInput.TextField
-          layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
-          event_bindings: {click: text_field_1_copy_2_click}
-        - name: text_field_1_copy_copy
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, italic_display: false, supporting_text_font_size: null,
-            display_text_color: '', placeholder: Placeholder, error: false, enabled: true,
-            supporting_text_color: '', display_font: '', leading_icon: 12mp, character_limit: null,
-            underline_label: false, type: number, background: ''}
-          type: form:Components.TextInput.TextField
-          layout_properties: {grid_position: 'ORPGYO,JKONFE'}
-          event_bindings: {click: text_field_1_copy_copy_click}
-        - name: text_field_3_copy
-          properties: {label_text: Label only, appearance: outlined, label_font_size: null,
-            tooltip: hello, error: false, enabled: true, leading_icon: 13mp, label_text_color: '',
-            type: number}
-          type: form:Components.TextInput.TextField
-          layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
-          event_bindings: {pressed_enter: text_field_3_copy_pressed_enter}
         - name: text_field_4_copy
           properties:
             placeholder: Placeholder only
