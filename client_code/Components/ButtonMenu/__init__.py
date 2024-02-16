@@ -18,7 +18,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)
-    self.open = False
+    self._open = False
     self._cleanup = noop
 
     self._hoverIndex = None
@@ -137,8 +137,8 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.role = value
   role = property_with_callback("role", set_role)
 
-  def toggle_menu_visibility(self, **event_args):
-    self.set_visibility()
+  def _toggle_menu_visibility(self, **event_args):
+    self._set_visibility()
 
   def _set_visibility(self, value = None):
     classes = self._menuNode.classList
@@ -147,9 +147,9 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
       
-    self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
-    if self.open:
-      self.get_hover_index_information()
+    self._open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
+    if self._open:
+      self._get_hover_index_information()
     else:
       self._hoverIndex = None
       self._clear_hover_styles()
@@ -165,14 +165,14 @@ class ButtonMenu(ButtonMenuTemplate):
       return
     self.set_visibility(False)
   
-  def get_hover_index_information(self):
+  def _get_hover_index_information(self):
     self._children = self.get_components()[1:]
     for i in range(0, len(self._children)):
       if isinstance(self._children[i], MenuItem):
         self._itemIndices.add(i)
    
-  def handle_keyboard_events(self, event):
-    if not self.open:
+  def _handle_keyboard_events(self, event):
+    if not self._open:
       return
 
     action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
@@ -214,7 +214,7 @@ class ButtonMenu(ButtonMenuTemplate):
         self._hoverIndex -= 1
         if self._hoverIndex in self._itemIndices:
           break; 
-    self.update_hover_styles();
+    self._update_hover_styles();
 
   def _clear_hover_styles(self):
     if self._children is not None:
