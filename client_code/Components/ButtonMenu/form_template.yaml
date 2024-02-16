@@ -432,7 +432,7 @@ components:
   properties: {bold: true}
   type: form:Components.Button
   layout_properties: {slot: button}
-  event_bindings: {click: toggle_menu_visibility}
+  event_bindings: {click: _toggle_menu_visibility}
 custom_component_container: true
 container:
   type: HtmlTemplate

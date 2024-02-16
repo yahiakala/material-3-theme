@@ -16,7 +16,7 @@ class IconButton(IconButtonTemplate):
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
-    self.appearance = ""
+    self._appearance = ""
     self.init_components(**properties)
     
     self._handle_click = self._handle_click
@@ -42,6 +42,7 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
     if value is not None:
+      print(value)
       class_name = self._appearance_css_classes[value]
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
