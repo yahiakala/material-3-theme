@@ -31,11 +31,11 @@ class Heading(HeadingTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": self.start_inline_editing
+        "execute": self._start_inline_editing
       }
     }]
 
-  def start_inline_editing(self):
+  def _start_inline_editing(self):
     el_name = f'anvil-m3-heading-{self.style}'
     anvil.designer.start_inline_editing(self, "text", self.dom_nodes[el_name])
 

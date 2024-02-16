@@ -16,24 +16,24 @@ class IconButton(IconButtonTemplate):
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
       "Outlined": "outlined"}
-    self._appearance = ""
+    self.appearance = ""
     self.init_components(**properties)
     
-    self.handle_click = self.handle_click
+    self._handle_click = self._handle_click
 
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self.handle_click)
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self.handle_click)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self._handle_click)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self._handle_click)
   
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
 
-  def appearance_setter(self, value):
+  def _appearance_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
@@ -46,7 +46,7 @@ class IconButton(IconButtonTemplate):
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
 
-  appearance = property_with_callback("appearance", appearance_setter)
+  appearance = property_with_callback("appearance", _appearance_setter)
   visible = HtmlTemplate.visible
   icon = innerText_property('anvil-m3-iconbutton-icon', 'icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')

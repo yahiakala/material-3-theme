@@ -52,86 +52,86 @@ class DropdownMenu(DropdownMenuTemplate):
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textfield')
 
-  def set_background_color(self, value):
+  def _set_background_color(self, value):
     self.selection_field.background_color = value
-  background_color = property_with_callback("background_color", set_background_color)
+  background_color = property_with_callback("background_color", _set_background_color)
 
-  def set_bold_label(self, value):
+  def _set_bold_label(self, value):
     self.selection_field.bold_label = value
-  bold_label = property_with_callback("bold_label", set_bold_label)
+  bold_label = property_with_callback("bold_label", _set_bold_label)
 
-  def set_label_font(self, value):
+  def _set_label_font(self, value):
     self.selection_field.label_font = value
-  label_font = property_with_callback("label_font", set_label_font)
+  label_font = property_with_callback("label_font", _set_label_font)
 
-  def set_label_font_size(self, value):
+  def _set_label_font_size(self, value):
     self.selection_field.label_font_size = value
-  label_font_size = property_with_callback("label_font_size", set_label_font_size)
+  label_font_size = property_with_callback("label_font_size", _set_label_font_size)
 
-  def set_label_text_color(self, value):
+  def _set_label_text_color(self, value):
     self.selection_field.label_text_color = value
-  label_text_color = property_with_callback("label_text_color", set_label_text_color)
+  label_text_color = property_with_callback("label_text_color", _set_label_text_color)
 
-  def set_italic_label(self, value):
+  def _set_italic_label(self, value):
     self.selection_field.italic_label = value
-  italic_label = property_with_callback("italic_label", set_italic_label)
+  italic_label = property_with_callback("italic_label", _set_italic_label)
 
-  def set_underline_label(self, value):
+  def _set_underline_label(self, value):
     self.selection_field.underline_label = value
-  underline_label = property_with_callback("underline_label", set_underline_label)
+  underline_label = property_with_callback("underline_label", _set_underline_label)
 
-  def set_enabled(self, value):
+  def _set_enabled(self, value):
     self.selection_field.enabled = value
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", _set_enabled)
 
-  def set_appearance(self, value):
+  def _set_appearance(self, value):
     self.selection_field.appearance = value
-  appearance = property_with_callback("appearance", set_appearance)
+  appearance = property_with_callback("appearance", _set_appearance)
 
-  def set_role(self, value):
+  def _set_role(self, value):
     self.selection_field.role = value
-  role = property_with_callback("role", set_role)
+  role = property_with_callback("role", _set_role)
 
-  def set_selected_italic_display(self, value):
+  def _set_selected_italic_display(self, value):
     self.selection_field.selected_italic_display = value
-  selected_italic_display = property_with_callback("selected_italic_display", set_selected_italic_display)
+  selected_italic_display = property_with_callback("selected_italic_display", _set_selected_italic_display)
 
-  def set_selected_bold_display(self, value):
+  def _set_selected_bold_display(self, value):
     self.selection_field.selected_bold_display = value
-  selected_bold_display = property_with_callback("selected_bold_display", set_selected_bold_display)
+  selected_bold_display = property_with_callback("selected_bold_display", _set_selected_bold_display)
 
-  def set_selected_underline_display(self, value):
+  def _set_selected_underline_display(self, value):
     self.selection_field.selected_underline_display = value
-  selected_underline_display = property_with_callback("selected_underline_display", set_selected_underline_display)
+  selected_underline_display = property_with_callback("selected_underline_display", _set_selected_underline_display)
 
-  def set_selected_font(self, value):
+  def _set_selected_font(self, value):
     self.selection_field.selected_font = value
-  selected_font = property_with_callback("selected_font", set_selected_font)
+  selected_font = property_with_callback("selected_font", _set_selected_font)
 
-  def set_selected_font_size(self, value):
+  def _set_selected_font_size(self, value):
     self.selection_field.selected_font_size = value
-  selected_font_size = property_with_callback("selected_font_size", set_selected_font_size)
+  selected_font_size = property_with_callback("selected_font_size", _set_selected_font_size)
 
-  def set_selected_text_color(self, value):
+  def _set_selected_text_color(self, value):
     self.selection_field.selected_text_color = value
-  selected_text_color = property_with_callback("selected_text_color", set_selected_text_color)
+  selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
-  def set_label_text(self, value):
+  def _set_label_text(self, value):
     v = value or ""
     self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.selection_field.label_text = v
-  label_text = property_with_callback("label_text", set_label_text)
+  label_text = property_with_callback("label_text", _set_label_text)
 
-  def set_selected_value(self, value):
+  def _set_selected_value(self, value):
     if type(value) is list:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
     self.raise_event("change")
-  selected_value = property_with_callback("selected_value", set_selected_value)
+  selected_value = property_with_callback("selected_value", _set_selected_value)
 
   placeholder = property_without_callback("placeholder")
   items = property_without_callback("items")
@@ -309,11 +309,11 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         selection.text = item
 
-      def handle_selection_click(value = item, menuItem = selection, **e):
+      def _handle_selection_click(value = item, menuItem = selection, **e):
         self.selected_value = value
         self._selected_menuItem = menuItem
 
-      selection.add_event_handler('click', handle_selection_click)
+      selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
 
 # DESIGNER INTERACTIONS
