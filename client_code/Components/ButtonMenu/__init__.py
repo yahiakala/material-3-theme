@@ -181,7 +181,7 @@ class ButtonMenu(ButtonMenuTemplate):
       return
     
     if event.key in ["ArrowUp", "ArrowDown"]:
-      self.iterate_hover(event.key is "ArrowDown")
+      self._iterate_hover(event.key is "ArrowDown")
       return
       
     # if event.key is "Tab":
@@ -199,7 +199,7 @@ class ButtonMenu(ButtonMenuTemplate):
     if (event.key is "Enter"):
       attemptSelect()
       
-  def iterate_hover(self, inc = True):
+  def _iterate_hover(self, inc = True):
     if inc:
       if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
         self._hoverIndex = -1
@@ -222,7 +222,7 @@ class ButtonMenu(ButtonMenuTemplate):
         if isinstance(child, MenuItem):
           child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
-  def update_hover_styles(self):
+  def _update_hover_styles(self):
     self._clear_hover_styles()
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
@@ -246,10 +246,10 @@ class ButtonMenu(ButtonMenuTemplate):
     ]
 
   def _on_select_descendent(self):
-    self.set_visibility(True)
+    self._set_visibility(True)
 
   def _on_select_other(self):
-    self.set_visibility(False)
+    self._set_visibility(False)
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
