@@ -166,7 +166,7 @@ def role_property(dom_node_name, prop_name="role"):
   return property_with_callback(prop_name, set_role)
 
 def tooltip_property(dom_node_name, prop_name="tooltip"):
-  #To use this property, add self.tooltip_node = None to the init of your component
+  #To use this property, add self._tooltip_node = None to the init of your component
   def set_tooltip(self, value):
     if anvil.designer.in_designer:
       return
@@ -174,17 +174,17 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
     self._cleanup = noop
     reference_element = self.dom_nodes[dom_node_name]
     if value:
-      self.tooltip_node = document.createElement('div')
-      self.tooltip_node.innerText = value
-      self.tooltip_node.classList.add('anvil-m3-tooltip')
-      document.body.append(self.tooltip_node)
+      self._tooltip_node = document.createElement('div')
+      self._tooltip_node.innerText = value
+      self._tooltip_node.classList.add('anvil-m3-tooltip')
+      document.body.append(self._tooltip_node)
       self.reference_element = self.dom_nodes[dom_node_name]
       
       def show_tooltip(e):
-        self.tooltip_node.style.opacity = 1
+        self._tooltip_node.style.opacity = 1
 
       def hide_tooltip(e):
-        self.tooltip_node.style.opacity = 0
+        self._tooltip_node.style.opacity = 0
 
       tooltip_events = {
         'mouseenter': show_tooltip,
@@ -194,10 +194,10 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
         }
       for event, listener in tooltip_events.items():
         reference_element.addEventListener(event, listener)
-      self._cleanup = fui.auto_update(reference_element, self.tooltip_node, placement="bottom-start")
+      self._cleanup = fui.auto_update(reference_element, self._tooltip_node, placement="bottom-start")
     else:
-      if self.tooltip_node:
-        self.tooltip_node.remove()
+      if self._tooltip_node:
+        self._tooltip_node.remove()
         self._cleanup()
         self._cleanup = noop
   return property_with_callback(prop_name, set_tooltip)

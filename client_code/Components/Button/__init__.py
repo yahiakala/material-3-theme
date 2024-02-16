@@ -13,30 +13,30 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._text = properties.get('text', '')
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     
-    self.handle_click = self.handle_click
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self._handle_click = self._handle_click
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-button'].removeEventListener("click", self.handle_click)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-button'].addEventListener("click", self._handle_click)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-button'].removeEventListener("click", self._handle_click)
 
-  def set_align(self, value):
+  def _set_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', False)
     if value is 'full':
       self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
       
-  align = property_with_callback('align', set_align)
+  align = property_with_callback('align', _set_align)
   visible = HtmlTemplate.visible
   role = role_property('anvil-m3-button')
 
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
     if self.enabled:
       self.raise_event("click")
@@ -52,7 +52,7 @@ class Button(ButtonTemplate):
       }
     }]
 
-  def set_icon(self):
+  def _set_icon(self):
     if self.icon:
       self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon
       self.dom_nodes['anvil-m3-button-icon'].style.display = "flex"
@@ -64,7 +64,7 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button-icon'].innerText = ""
       self.dom_nodes['anvil-m3-button-icon'].style.display = "none"
 
-  def set_text(self):
+  def _set_text(self):
     if self.text:
       self.dom_nodes['anvil-m3-button-text'].innerText = self.text
     else:
@@ -77,7 +77,7 @@ class Button(ButtonTemplate):
       else:
         self.dom_nodes['anvil-m3-button-text'].innerText = ""
       
-  def update_button_look(self, value = None):
+  def _update_button_look(self, value = None):
     buttonNode = self.dom_nodes['anvil-m3-button']
     iconNode = self.dom_nodes['anvil-m3-button-icon']
     textNode = self.dom_nodes['anvil-m3-button-text']
@@ -86,21 +86,21 @@ class Button(ButtonTemplate):
     textNode.classList.remove('anvil-m3-textlessComponentText')
     buttonNode.classList.remove('noText')
     
-    self.set_icon()
-    self.set_text()
+    self._set_icon()
+    self._set_text()
     
   icon = property_with_callback("icon", update_button_look)
   text = property_with_callback("text", update_button_look)
 
-  def set_enabled(self, value):
+  def _set_enabled(self, value):
     if value:
       self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
       
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", _set_enabled)
 
-  def set_appearance(self, value):
+  def _set_appearance(self, value):
     button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
     button.classList.remove('anvil-m3-filled')
@@ -109,7 +109,7 @@ class Button(ButtonTemplate):
     if value:
       button.classList.add(f"anvil-m3-{value}")
       
-  appearance = property_with_callback("appearance", set_appearance)
+  appearance = property_with_callback("appearance", _set_appearance)
 
   def form_show(self, **event_args):
     self.update_button_look()
@@ -127,10 +127,10 @@ class Button(ButtonTemplate):
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
 
-  def set_icon_align(self, value):
+  def _set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value is 'right')
     
-  icon_align = property_with_callback('icon_align', set_icon_align)
+  icon_align = property_with_callback('icon_align', _set_icon_align)
 
 
 

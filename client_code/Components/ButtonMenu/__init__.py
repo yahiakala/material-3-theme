@@ -21,34 +21,34 @@ class ButtonMenu(ButtonMenuTemplate):
     self.open = False
     self._cleanup = noop
 
-    self.hoverIndex = None
-    self.itemIndices = set()
-    self.children = None
+    self._hoverIndex = None
+    self._itemIndices = set()
+    self._children = None
 
-    self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    self.btnNode = get_dom_node(self.menu_button).querySelector("button")
+    self._menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self._btnNode = get_dom_node(self.menu_button).querySelector("button")
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
-    document.addEventListener('keydown', self.handle_keyboard_events)
-    self.menuNode.addEventListener('click', self.child_clicked)
-    self.btnNode.addEventListener('click', self._handle_click)
-    document.addEventListener('click', self.body_click)
+    document.addEventListener('keydown', self._handle_keyboard_events)
+    self._menuNode.addEventListener('click', self._child_clicked)
+    self._btnNode.addEventListener('click', self._handle_click)
+    document.addEventListener('click', self._body_click)
     # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
     # this gets around the whole, anvil containers love to set their overflow to hidden
-    document.body.append(self.menuNode)
+    document.body.append(self._menuNode)
 
-    self._cleanup = fui.auto_update(self.btnNode, self.menuNode, placement="bottom-start")
+    self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
   
   def _on_cleanup(self, **event_args):
-    document.removeEventListener('keydown', self.handle_keyboard_events)
-    self.menuNode.removeEventListener('click', self.child_clicked)
-    document.removeEventListener('click', self.body_click)
+    document.removeEventListener('keydown', self._handle_keyboard_events)
+    self._menuNode.removeEventListener('click', self._child_clicked)
+    document.removeEventListener('click', self._body_click)
     self._cleanup()
     # remove the menu node we put on the body
-    self.menuNode.remove()
+    self._menuNode.remove()
 
 
   def _handle_click(self, event):
@@ -140,8 +140,8 @@ class ButtonMenu(ButtonMenuTemplate):
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
 
-  def set_visibility(self, value = None):
-    classes = self.menuNode.classList
+  def _set_visibility(self, value = None):
+    classes = self._menuNode.classList
     if value is not None:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
@@ -151,25 +151,25 @@ class ButtonMenu(ButtonMenuTemplate):
     if self.open:
       self.get_hover_index_information()
     else:
-      self.hoverIndex = None
-      self.clear_hover_styles()
+      self._hoverIndex = None
+      self._clear_hover_styles()
 
-  def child_clicked(self, event):
+  def _child_clicked(self, event):
     # do the click action. The child should handle this
-    self.set_visibility(False)
+    self._set_visibility(False)
     if self.enabled:
       self.raise_event("click")
 
-  def body_click(self, event):
-    if self.btnNode.contains(event.target) or self.menuNode.contains(event.target):
+  def _body_click(self, event):
+    if self._btnNode.contains(event.target) or self._menuNode.contains(event.target):
       return
     self.set_visibility(False)
   
   def get_hover_index_information(self):
-    self.children = self.get_components()[1:]
-    for i in range(0, len(self.children)):
-      if isinstance(self.children[i], MenuItem):
-        self.itemIndices.add(i)
+    self._children = self.get_components()[1:]
+    for i in range(0, len(self._children)):
+      if isinstance(self._children[i], MenuItem):
+        self._itemIndices.add(i)
    
   def handle_keyboard_events(self, event):
     if not self.open:
@@ -186,13 +186,13 @@ class ButtonMenu(ButtonMenuTemplate):
       
     # if event.key is "Tab":
     #   pass
-    hover = self.hoverIndex #holding value for situation like alerts where it awaits 
+    hover = self._hoverIndex #holding value for situation like alerts where it awaits 
     self.set_visibility(False)
     
     def attemptSelect():
       event.preventDefault();
       if not hover is None:
-        self.children[hover].raise_event("click")
+        self._children[hover].raise_event("click")
     
     if (event.key is " "): #space key as " " is stupid
       attemptSelect()
@@ -201,30 +201,30 @@ class ButtonMenu(ButtonMenuTemplate):
       
   def iterate_hover(self, inc = True):
     if inc:
-      if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):
-        self.hoverIndex = -1
+      if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
+        self._hoverIndex = -1
       while True:
-        self.hoverIndex += 1
-        if self.hoverIndex in self.itemIndices:
+        self._hoverIndex += 1
+        if self._hoverIndex in self._itemIndices:
           break;
     else:
-      if self.hoverIndex is None or self.hoverIndex is 0:
-        self.hoverIndex = len(self.children)
+      if self._hoverIndex is None or self._hoverIndex is 0:
+        self._hoverIndex = len(self._children)
       while True:
-        self.hoverIndex -= 1
-        if self.hoverIndex in self.itemIndices:
+        self._hoverIndex -= 1
+        if self._hoverIndex in self._itemIndices:
           break; 
     self.update_hover_styles();
 
-  def clear_hover_styles(self):
-    if self.children is not None:
-      for child in self.children:
+  def _clear_hover_styles(self):
+    if self._children is not None:
+      for child in self._children:
         if isinstance(child, MenuItem):
           child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
   def update_hover_styles(self):
-    self.clear_hover_styles()
-    self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+    self._clear_hover_styles()
+    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
   def _anvil_get_interactions_(self):
     return [
