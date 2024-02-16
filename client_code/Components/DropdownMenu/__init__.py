@@ -20,7 +20,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.init_components(**properties)
     self._cleanup = noop
 
-    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.field = get_dom_node(self.selection_field).querySelector("input")
 
     self._hoverIndex = None
@@ -46,7 +46,7 @@ class DropdownMenu(DropdownMenuTemplate):
       self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
 
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways.
-      self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+      self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
   #properties
   visible = HtmlTemplate.visible
@@ -148,23 +148,23 @@ class DropdownMenu(DropdownMenuTemplate):
     document.addEventListener('keydown', self.handle_keyboard_events)
     document.addEventListener('click', self.body_click)
 
-    document.body.append(self.menuNode)
+    document.body.append(self._menuNode)
 
-    self._cleanup = fui.auto_update(self.field, self.menuNode, placement="bottom-start")
+    self._cleanup = fui.auto_update(self.field, self._menuNode, placement="bottom-start")
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self.handle_selection_field_blur)
-    self.menuNode.addEventListener('click', self.child_clicked)
+    self._menuNode.addEventListener('click', self.child_clicked)
 
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self.handle_selection_field_blur)
-    self.menuNode.removeEventListener('click', self.child_clicked)
+    self._menuNode.removeEventListener('click', self.child_clicked)
     self._cleanup()
-    self.menuNode.remove()
+    self._menuNode.remove()
 
   def handle_selection_field_focus(self, event):
     self._has_focus = True
@@ -249,7 +249,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   def body_click(self, event):
-    if self.field.contains(event.target) or self.menuNode.contains(event.target):
+    if self.field.contains(event.target) or self._menuNode.contains(event.target):
       return
     self.set_menu_visibility(False)
 
