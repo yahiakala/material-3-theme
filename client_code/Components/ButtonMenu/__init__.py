@@ -163,7 +163,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def _body_click(self, event):
     if self._btnNode.contains(event.target) or self._menuNode.contains(event.target):
       return
-    self.set_visibility(False)
+    self._set_visibility(False)
   
   def _get_hover_index_information(self):
     self._children = self.get_components()[1:]

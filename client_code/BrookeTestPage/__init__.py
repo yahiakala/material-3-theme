@@ -22,6 +22,9 @@ class BrookeTestPage(BrookeTestPageTemplate):
     """This method is called when the Button is clicked"""
     print('clicked')
 
+  def toggle_icon_button_1_click(self, **event_args):
+    print('hello')
+
 
 
 

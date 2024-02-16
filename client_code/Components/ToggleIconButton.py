@@ -22,7 +22,7 @@ class ToggleIconButton(IconButton):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", self.selected)
     
   # Properties 
-  def apply_styles(self, value):
+  def _apply_styles(self, value):
     if value:
       self.dom_nodes['anvil-m3-iconbutton-container'].style.backgroundColor = theme_color_to_css(self.selected_background) if self.selected_background else None
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.selected_border
@@ -32,20 +32,20 @@ class ToggleIconButton(IconButton):
       self.dom_nodes['anvil-m3-iconbutton-container'].style.border = self.border
       self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = theme_color_to_css(self.icon_color) if self.icon_color else None 
 
-  def selected_setter(self, value):
+  def _selected_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
-    self.apply_styles(value)
+    self._apply_styles(value)
     
-  border = property_with_callback("border", apply_styles)
-  icon_color = property_with_callback("icon_color", apply_styles)
-  background = property_with_callback("background", apply_styles)
-  selected_border = property_with_callback("selected_border", apply_styles)
-  selected_background = property_with_callback("selected_background", apply_styles)
-  selected_icon_color = property_with_callback("selected_icon_color", apply_styles)
-  selected = property_with_callback("selected", selected_setter)
+  border = property_with_callback("border", _apply_styles)
+  icon_color = property_with_callback("icon_color", _apply_styles)
+  background = property_with_callback("background", _apply_styles)
+  selected_border = property_with_callback("selected_border", _apply_styles)
+  selected_background = property_with_callback("selected_background", _apply_styles)
+  selected_icon_color = property_with_callback("selected_icon_color", _apply_styles)
+  selected = property_with_callback("selected", _selected_setter)
     
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
     self.selected = not self.selected
     self.raise_event("click")
@@ -57,12 +57,12 @@ class ToggleIconButton(IconButton):
         "bounds": self.dom_nodes['anvil-m3-iconbutton-component-container'],
         "sensitivity": 0,
         "callbacks": {
-          "execute": self.toggle_selected
+          "execute": self._toggle_selected
         }
       }
     ]
 
-  def toggle_selected(self):
+  def _toggle_selected(self):
     self.selected = not self.selected
     anvil.designer.update_component_properties(self, {'selected': self.selected})
     
