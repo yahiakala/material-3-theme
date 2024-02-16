@@ -12,7 +12,7 @@ class Card(CardTemplate):
   def __init__(self, **properties):
     self.tooltip_node = None
     self._props = properties
-    self.card_image_temp_url = None
+    self._card_image_temp_url = None
     self._on_page = False
     self._tooltip_node = None
     self.init_components(**properties)
@@ -23,28 +23,28 @@ class Card(CardTemplate):
   # align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
 
-  def set_nodes_class_by_image(self, image_position, val):
+  def _set_nodes_class_by_image(self, image_position, val):
     self.dom_nodes['anvil-m3-card'].classList.toggle(f'{image_position}-image', val)
     self.dom_nodes['content'].classList.toggle(f'{image_position}-image', val)
     self.dom_nodes['image'].classList.toggle(f'{image_position}-image', val)
     
-  def set_image_position(self, value):
+  def _set_image_position(self, value):
     for position in [None, 'top', 'bottom', 'left', 'right', 'full']:
-      self.set_nodes_class_by_image(position or 'none', False)
+      self._set_nodes_class_by_image(position or 'none', False)
     
-    self.set_nodes_class_by_image(value or 'none', True)
-  image_position = property_with_callback("image_position", set_image_position)
+    self._set_nodes_class_by_image(value or 'none', True)
+  image_position = property_with_callback("image_position", _set_image_position)
 
-  def set_class_of_nodes(self, appearance, val):
+  def _set_class_of_nodes(self, appearance, val):
     self.dom_nodes['anvil-m3-card'].classList.toggle(f'anvil-m3-{appearance}', val)
     self.dom_nodes['image'].classList.toggle(f'anvil-m3-{appearance}', val)
     self.dom_nodes['content'].classList.toggle(f'anvil-m3-{appearance}', val)
     
   def set_appearance(self, value):
     for appearance in ['outlined', 'filled', 'elevated']:
-      self.set_class_of_nodes(appearance, False)
+      self._set_class_of_nodes(appearance, False)
 
-    self.set_class_of_nodes(value, True)
+    self._set_class_of_nodes(value, True)
   appearance = property_with_callback("appearance", set_appearance)
 
   image_width = align = style_property('image', 'width', 'image_width')
@@ -61,8 +61,8 @@ class Card(CardTemplate):
         self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image.get_url()}')"
       else:
         if self._on_page:
-          self.card_image_temp_url = anvil.media.TempUrl(self.card_image)
-          self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image_temp_url.url}')"
+          self._card_image_temp_url = anvil.media.TempUrl(self.card_image)
+          self.dom_nodes['image'].style.backgroundImage = f"url('{self._card_image_temp_url.url}')"
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
 
@@ -80,10 +80,10 @@ class Card(CardTemplate):
   def form_hide(self, **event_args):
     """This method is called when the form is removed from the page"""
     self._on_page = False
-    if self.card_image_temp_url:
+    if self._card_image_temp_url:
       print("revoking url...")
-      self.card_image_temp_url.revoke()
-      self.card_image_temp_url = None
+      self._card_image_temp_url.revoke()
+      self._card_image_temp_url = None
 
   margin = margin_property('anvil-m3-card')
   card_content_padding = padding_property('content', 'card_content_padding')
