@@ -89,8 +89,8 @@ class Button(ButtonTemplate):
     self._set_icon()
     self._set_text()
     
-  icon = property_with_callback("icon", update_button_look)
-  text = property_with_callback("text", update_button_look)
+  icon = property_with_callback("icon", _update_button_look)
+  text = property_with_callback("text", _update_button_look)
 
   def _set_enabled(self, value):
     if value:
@@ -112,7 +112,7 @@ class Button(ButtonTemplate):
   appearance = property_with_callback("appearance", _set_appearance)
 
   def form_show(self, **event_args):
-    self.update_button_look()
+    self._update_button_look()
     
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   font_family = font_family_property('anvil-m3-button-text')

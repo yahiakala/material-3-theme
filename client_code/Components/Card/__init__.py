@@ -14,7 +14,7 @@ class Card(CardTemplate):
     self._props = properties
     self.card_image_temp_url = None
     self._on_page = False
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     if not anvil.designer.in_designer:
       self.dom_nodes['empty-image'].style.display = "none"

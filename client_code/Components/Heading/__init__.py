@@ -15,7 +15,7 @@ from anvil.property_utils import set_element_margin
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

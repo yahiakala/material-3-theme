@@ -14,7 +14,7 @@ class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
 
     self._handle_change = self._handle_change

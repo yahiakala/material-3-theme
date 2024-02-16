@@ -9,7 +9,7 @@ class Link(LinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)

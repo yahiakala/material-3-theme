@@ -12,7 +12,7 @@ import anvil.designer
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self._on_mount)

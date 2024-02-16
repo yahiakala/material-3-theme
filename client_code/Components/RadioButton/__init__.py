@@ -13,7 +13,7 @@ from ...utils import gen_id
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self._design_name = "" 
     self.init_components(**properties)
     

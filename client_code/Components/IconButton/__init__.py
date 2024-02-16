@@ -5,12 +5,13 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.designer
-from ...Functions import innerText_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
+from ...Functions import innerText_property, tooltip_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
 from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
+    self._tooltip_node = None
     self._appearance_css_classes = {
       "Filled": "filled",
       "Filled tonal": "filled-tonal",
@@ -55,6 +56,7 @@ class IconButton(IconButtonTemplate):
   background = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background')
   margin = margin_property('anvil-m3-iconbutton-component')
   role = role_property('anvil-m3-iconbutton-container')
+  tooltip = tooltip_property('anvil-m3-iconbutton-component')
 
   # def _anvil_get_interactions_(self): 
   #   return  [

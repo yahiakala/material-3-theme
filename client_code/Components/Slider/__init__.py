@@ -14,7 +14,7 @@ class Slider(SliderTemplate):
     self.label.classList.add('anvil-m3-slider-label')
     self.label_container.appendChild(self.label)
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)

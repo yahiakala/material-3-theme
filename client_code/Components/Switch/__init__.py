@@ -14,7 +14,7 @@ import anvil.designer
 class Switch(SwitchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.tooltip_node = None
+    self._tooltip_node = None
     self._props = properties
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self.on_mount)

@@ -17,7 +17,7 @@ class Text(TextTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     
   def form_show(self, **event_args):
