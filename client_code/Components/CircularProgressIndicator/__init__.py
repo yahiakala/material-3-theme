@@ -41,10 +41,10 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
 
   def _update_progress(self, value):
     v = max(min(value or 0, 100), 0)
-    self.draw_path(v)
+    self._draw_path(v)
   progress = property_with_callback("progress", _update_progress)
 
-  def draw_path(self, percent):
+  def _draw_path(self, percent):
     cx, cy = 24, 24 #center of circle
     rx, ry = 18, 18 #major/minor radius
     t1 = 3 * pi / 2 #start angle in radians
@@ -56,32 +56,32 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     if percent < 100:
       radian = pi * percent /  50
       delta = radian # Angle to sweep in radians (positive)
-      d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
+      d = self._f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
       
       self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("d", d)
     else:
       radian = pi * 99 /  50
       delta = radian # Angle to sweep in radians (positive)
-      d = self.f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
+      d = self._f_svg_ellipse_arc(cx, cy, rx, ry, t1, delta)
       self.dom_nodes['anvil-m3-progressindicator-arc'].setAttribute("d", d + " Z")
 
-  def f_matrix_times(self, matrix, vector):
+  def _f_matrix_times(self, matrix, vector):
     a, b, c, d = matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]
     x, y = vector[0], vector[1]
     return [a * x + b * y, c * x + d * y]
 
-  def f_rotate_matrix(self, x):
+  def _f_rotate_matrix(self, x):
     return [[cos(x), -sin(x)],
             [sin(x), cos(x)]]
 
-  def f_vec_add(self, vector1, vector2):
+  def _f_vec_add(self, vector1, vector2):
     return [vector1[0] + vector2[0], vector1[1] + vector2[1]]
 
-  def f_svg_ellipse_arc(self, cx, cy, rx, ry, t1, delta, phi = 0):
+  def _f_svg_ellipse_arc(self, cx, cy, rx, ry, t1, delta, phi = 0):
     delta = delta % (2 * pi)
-    rotMatrix = self.f_rotate_matrix(phi)
-    sX, sY = self.f_vec_add(self.f_matrix_times(rotMatrix, [rx * cos(t1), ry * sin(t1)]), [cx, cy])
-    eX, eY = self.f_vec_add(self.f_matrix_times(rotMatrix, [rx * cos(t1 + delta), ry * sin(t1 + delta)]), [cx, cy])
+    rotMatrix = self._f_rotate_matrix(phi)
+    sX, sY = self._f_vec_add(self._f_matrix_times(rotMatrix, [rx * cos(t1), ry * sin(t1)]), [cx, cy])
+    eX, eY = self._f_vec_add(self._f_matrix_times(rotMatrix, [rx * cos(t1 + delta), ry * sin(t1 + delta)]), [cx, cy])
     fA = 1 if delta > pi else 0
     fS = 1 if delta > 0 else 0
     return f"M {sX} {sY} A {rx} {ry} {(phi / (2 * pi)) * 360} {fA} {fS} {eX} {eY}"
