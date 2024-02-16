@@ -21,7 +21,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = noop
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    self.field = get_dom_node(self.selection_field).querySelector("input")
+    self._field = get_dom_node(self.selection_field).querySelector("input")
 
     self._hoverIndex = None
     self._children = None
@@ -150,7 +150,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     document.body.append(self._menuNode)
 
-    self._cleanup = fui.auto_update(self.field, self._menuNode, placement="bottom-start")
+    self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start")
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self.handle_selection_field_focus)
@@ -249,7 +249,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   def body_click(self, event):
-    if self.field.contains(event.target) or self._menuNode.contains(event.target):
+    if self._field.contains(event.target) or self._menuNode.contains(event.target):
       return
     self.set_menu_visibility(False)
 
