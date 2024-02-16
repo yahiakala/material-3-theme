@@ -16,18 +16,18 @@ class Checkbox(CheckboxTemplate):
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-checkbox"].id = id
       self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self.handle_change)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self._handle_change)
 
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self.handle_change)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self._handle_change)
 
   def focus(self):
     self.dom_nodes['anvil-m3-checkbox'].focus()
@@ -53,16 +53,16 @@ class Checkbox(CheckboxTemplate):
         "bounds": self.dom_nodes['anvil-m3-checkbox-hover'],
         "sensitivity": 0,
         "callbacks": {
-          "execute": self.toggle_checked
+          "execute": self._toggle_checked
         }
       }
     ]
 
-  def toggle_checked(self):
+  def _toggle_checked(self):
     self.checked = not self.checked
     anvil.designer.update_component_properties(self, {'checked': self.checked})
 
-  def handle_change(self, event):
+  def _handle_change(self, event):
     if self.enabled:
       self.dom_nodes['anvil-m3-checkbox'].focus()
       self.checked = not self.checked
@@ -86,11 +86,11 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def checkbox_color(self):
-    return self._checkbox_color
+    return self._props.get('checkbox_color')
 
   @checkbox_color.setter
   def checkbox_color(self, value):
-    self._checkbox_color = value
+    self._props['checkbox_color'] = value
     if value:
       value = theme_color_to_css(value)
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
@@ -99,12 +99,12 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def checked(self):
-    return self._checked
+    return self._props.get('checked')
 
   @checked.setter
   def checked(self, value):
-    self._checked = value
-    if self._checked == None and self.allow_indeterminate:
+    self._props['checked'] = value
+    if value == None and self.allow_indeterminate:
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
@@ -114,21 +114,21 @@ class Checkbox(CheckboxTemplate):
 
   @property
   def allow_indeterminate(self):
-    return self._allow_indeterminate
+    return self._props.get('allow_indeterminate')
 
   @allow_indeterminate.setter
   def allow_indeterminate(self, value):
-    self._allow_indeterminate = value
+    self._props['allow_indeterminate'] = value
 
   @property
   def error(self):
-    return self._error
+    return self._props.get('error')
 
   @error.setter
   def error(self, value):
     self.dom_nodes['anvil-m3-checkbox-container'].classList.remove('anvil-m3-checkbox-error')
-    self._error = value
+    self._props['error'] = value
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
-      self._error = value
+
 

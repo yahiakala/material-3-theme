@@ -33,16 +33,16 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     self.dom_nodes['anvil-m3-progressindicator-arc-indeterminate'].style['stroke'] = value
     self._props['color'] = value
 
-  def update_determinance(self, value):
+  def _update_determinance(self, value):
     v = value is "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle('anvil-m3-progressindicator-hidden', v)
     self.dom_nodes['anvil-m3-progressindicator-determinate'].classList.toggle('anvil-m3-progressindicator-hidden', not v)
-  type = property_with_callback("type", update_determinance)
+  type = property_with_callback("type", _update_determinance)
 
-  def update_progress(self, value):
+  def _update_progress(self, value):
     v = max(min(value or 0, 100), 0)
     self.draw_path(v)
-  progress = property_with_callback("progress", update_progress)
+  progress = property_with_callback("progress", _update_progress)
 
   def draw_path(self, percent):
     cx, cy = 24, 24 #center of circle

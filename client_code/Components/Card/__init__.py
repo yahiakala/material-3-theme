@@ -40,12 +40,12 @@ class Card(CardTemplate):
     self.dom_nodes['image'].classList.toggle(f'anvil-m3-{appearance}', val)
     self.dom_nodes['content'].classList.toggle(f'anvil-m3-{appearance}', val)
     
-  def set_appearance(self, value):
+  def _set_appearance(self, value):
     for appearance in ['outlined', 'filled', 'elevated']:
       self._set_class_of_nodes(appearance, False)
 
     self._set_class_of_nodes(value, True)
-  appearance = property_with_callback("appearance", set_appearance)
+  appearance = property_with_callback("appearance", _set_appearance)
 
   image_width = align = style_property('image', 'width', 'image_width')
   image_height = align = style_property('image', 'height', 'image_height')
