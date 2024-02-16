@@ -12,7 +12,7 @@ import anvil.designer
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
