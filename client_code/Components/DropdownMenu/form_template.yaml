@@ -1,5 +1,5 @@
 properties:
-- {name: background, type: color, default_value: '', important: false, description: background color of the component,
+- {name: background_color, type: color, default_value: '', important: false, description: background color of the component,
   group: Look and Feel}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold,
   group: Label Style}

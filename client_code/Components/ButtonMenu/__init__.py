@@ -133,6 +133,10 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.font_family = value
   button_font_family = property_with_callback("button_font_family", _set_button_font_family)
 
+  def set_role(self, value):
+    self.menu_button.role = value
+  role = property_with_callback("role", set_role)
+
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
 

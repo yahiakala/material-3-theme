@@ -52,9 +52,9 @@ class DropdownMenu(DropdownMenuTemplate):
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textfield')
 
-  def set_background(self, value):
-    self.selection_field.background = value
-  background = property_with_callback("background", set_background)
+  def set_background_color(self, value):
+    self.selection_field.background_color = value
+  background_color = property_with_callback("background_color", set_background_color)
 
   def set_bold_label(self, value):
     self.selection_field.bold_label = value
@@ -87,6 +87,10 @@ class DropdownMenu(DropdownMenuTemplate):
   def set_appearance(self, value):
     self.selection_field.appearance = value
   appearance = property_with_callback("appearance", set_appearance)
+
+  def set_role(self, value):
+    self.selection_field.role = value
+  role = property_with_callback("role", set_role)
 
   def set_selected_italic_display(self, value):
     self.selection_field.selected_italic_display = value
