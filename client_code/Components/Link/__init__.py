@@ -11,21 +11,21 @@ class Link(LinkTemplate):
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-link'].addEventListener("click", self.handle_click)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-link'].removeEventListener("click", self.handle_click)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-link'].removeEventListener("click", self._handle_click)
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text and not self.get_components():
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
     
-  def handle_click(self, event):
+  def _handle_click(self, event):
     self.raise_event("click")
 
   def _anvil_get_interactions_(self):

@@ -13,20 +13,20 @@ class InteractiveCard(Card):
     super().__init__(**properties)
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-card'].classList.toggle('interactive', True)
-    self.handle_click = self.handle_click
+    self._handle_click = self._handle_click
     self.enabled = self.enabled
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-  def set_enabled(self, value): #why not being set in the beginning??
+  def _set_enabled(self, value): #why not being set in the beginning??
     self.dom_nodes['anvil-m3-card'].classList.toggle('disabled', not value)
-  enabled = property_with_callback("enabled", set_enabled)
+  enabled = property_with_callback("enabled", _set_enabled)
   
-  def on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-card'].addEventListener("click", self.handle_click)
-  def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-card'].removeEventListener("click", self.handle_click)
+  def _on_mount(self, **event_args):
+    self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes['anvil-m3-card'].removeEventListener("click", self._handle_click)
 
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")

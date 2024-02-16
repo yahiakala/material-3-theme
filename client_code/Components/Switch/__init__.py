@@ -17,14 +17,14 @@ class Switch(SwitchTemplate):
     self._tooltip_node = None
     self._props = properties
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     
 
-  def on_mount(self, **event_args):
+  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self._handle_change)
     
-  def on_cleanup(self, **event_args):
+  def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self._handle_change)
 
   def _handle_change(self, event):
