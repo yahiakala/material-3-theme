@@ -53,7 +53,7 @@ components:
         type: TextBox
         layout_properties: {slot: slot}
       - name: text_field_7
-        properties: {}
+        properties: {supporting_text: hello there, character_limit: 50}
         type: form:Components.TextInput.TextField
         layout_properties: {slot: blah}
     - name: rich_text_2
