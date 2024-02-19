@@ -95,7 +95,7 @@ components:
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2
-          properties: {label_text: Label only, enabled: true, error: false}
+          properties: {label_text: Label only, enabled: true, error: false, border_color: 'theme:Error'}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3
@@ -246,7 +246,8 @@ components:
           event_bindings: {click: text_field_1_click}
         - name: text_field_1_copy
           properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, leading_icon: '', error: false, enabled: true}
+            supporting_text: Supporting text, leading_icon: '', error: false, enabled: true,
+            border_color: 'theme:Primary Container'}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3
