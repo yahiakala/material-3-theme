@@ -50,7 +50,7 @@ components:
         components:
         - name: text_area_4
           properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text,
-            label_text: Label, text: ''}
+            label_text: Label, text: '', border_color: 'theme:Tertiary Container'}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'ZKYVEF,HZUOQJ'}
           event_bindings: {change: text_area_4_change}
@@ -195,7 +195,8 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_field_5
         properties: {label_text: Label, placeholder: Placeholder, supporting_text: Supporting text,
-          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp, text: ''}
+          appearance: outlined, leading_icon: 10k, trailing_icon: 10mp, text: '',
+          border_color: pink}
         type: form:Components.TextInput.TextField
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         event_bindings: {pressed_enter: text_field_5_pressed_enter}

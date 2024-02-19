@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property, tooltip_property
+from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property, tooltip_property, theme_color_to_css
 from anvil import HtmlTemplate
 from ...utils import gen_id
 
@@ -58,7 +58,14 @@ class TextInput(TextInputTemplate):
 
   def _set_border_color(self, value):
     if self.border_color:
-      
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', theme_color_to_css(self.border_color))
+    else:
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', 'var(--anvil-m3-outline)')
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', 'var(--anvil-m3-on-surface)')
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', 'var(--anvil-m3-primary)')
+  border_color = property_with_callback('border_color', _set_border_color)
   
   def form_show(self, **event_args):
     id = gen_id();

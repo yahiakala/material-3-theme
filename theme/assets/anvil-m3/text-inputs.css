@@ -2,6 +2,9 @@ element {
   --anvil-m3-outlined-border: var(--anvil-m3-outline);
   --anvil-m3-outlined-border-hover: var(--anvil-m3-on-surface);
   --anvil-m3-outlined-border-focus: var(--anvil-m3-primary);
+  --anvil-m3-filled-border: var(--anvil-m3-on-surface-variant);
+  --anvil-m3-filled-border-hover: var(--anvil-m3-on-surface);
+  --anvil-m3-filled-border-focus: var(--anvil-m3-primary);
 }
 
 .anvil-m3-textinput { width: 100%; }
