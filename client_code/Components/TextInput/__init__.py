@@ -61,10 +61,16 @@ class TextInput(TextInputTemplate):
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', theme_color_to_css(self.border_color))
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', theme_color_to_css(self.border_color))
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-hover', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-focus', theme_color_to_css(self.border_color))
     else:
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', 'var(--anvil-m3-outline)')
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', 'var(--anvil-m3-on-surface)')
       self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', 'var(--anvil-m3-primary)')
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border', 'var(--anvil-m3-on-surface-variant)')
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-hover', theme_color_to_css(self.border_color))
+      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-focus', theme_color_to_css(self.border_color))
   border_color = property_with_callback('border_color', _set_border_color)
   
   def form_show(self, **event_args):
