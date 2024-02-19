@@ -55,6 +55,10 @@ class TextInput(TextInputTemplate):
     self.dom_nodes["label-text"].setAttribute("for", value)
     self.dom_nodes["supporting-text"].setAttribute("for", value)
     self.dom_nodes["character-amount"].setAttribute("for", value)
+
+  def _set_border_color(self, value):
+    if self.border_color:
+      
   
   def form_show(self, **event_args):
     id = gen_id();

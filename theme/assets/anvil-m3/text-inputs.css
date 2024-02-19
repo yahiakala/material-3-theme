@@ -1,3 +1,9 @@
+element {
+  --anvil-m3-outlined-border: var(--anvil-m3-outline);
+  --anvil-m3-outlined-border-hover: var(--anvil-m3-on-surface);
+  --anvil-m3-outlined-border-focus: var(--anvil-m3-primary);
+}
+
 .anvil-m3-textinput { width: 100%; }
 .anvil-m3-textinput-input-container {position: relative;}
 .anvil-m3-textinput-input {
@@ -113,7 +119,7 @@
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input {box-shadow: none; background: none; }
 
 .anvil-m3-textinput.outlined .anvil-m3-textinput-border {
-  border-color: var(--anvil-m3-outline);
+  border-color: var(--anvil-m3-outlined-border);
   border-radius: 4px;
 /*   pointer-events: none; */
 }
@@ -148,7 +154,7 @@
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-tl,
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t,
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-tr,
-.anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-b { border-color: var(--anvil-m3-primary); border-width: 2px; }
+.anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-b { border-color: var(--anvil-m3-outlined-border-focus); border-width: 2px; }
 
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t,
 .anvil-m3-textinput.outlined :not(.anvil-m3-textinput-input:placeholder-shown) + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t,
@@ -159,7 +165,7 @@
 .anvil-m3-textinput.outlined .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t  { transition: all 0.15s ease-out; }
 
 
-.anvil-m3-textinput.outlined .anvil-m3-textinput-input:hover + .anvil-m3-textinput-border { border-color: var(--anvil-m3-on-surface); }
+.anvil-m3-textinput.outlined .anvil-m3-textinput-input:hover + .anvil-m3-textinput-border { border-color: var(--anvil-m3-outlined-border-hover); }
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:hover + .anvil-m3-textinput-icon-container { color: var(--anvil-m3-on-surface); }
 
 .anvil-m3-textinput.outlined .anvil-m3-textinput-input:disabled + .anvil-m3-textinput-border { border-color: var(--anvil-m3-disabled-container) !important; }
