@@ -78,7 +78,7 @@ components_by_slot:
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
     - name: text_field_1
-      properties: {role: null}
+      properties: {role: null, label_text: hello, placeholder: ''}
       type: form:Components.TextInput.TextField
       layout_properties: {grid_position: 'NWAPGT,JRLJNH'}
     - name: toggle_icon_button_1
