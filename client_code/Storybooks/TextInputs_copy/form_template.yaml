@@ -34,6 +34,20 @@ components:
       type: RichText
       layout_properties: {}
       components:
+      - name: text_3
+        properties: {text: hello, text_color: '', background_color: 'theme:Tertiary
+            Container'}
+        type: form:Components.Text
+        layout_properties: {slot: blah}
+      - name: label_1
+        properties: {text: hi, background: 'theme:Tertiary Container'}
+        type: Label
+        layout_properties: {slot: slot}
+    - name: rich_text_1_copy
+      properties: {content: '{blah} bla bla bla {slot}'}
+      type: RichText
+      layout_properties: {}
+      components:
       - name: text_box_1
         properties: {}
         type: TextBox
@@ -42,6 +56,19 @@ components:
         properties: {}
         type: form:Components.TextInput.TextField
         layout_properties: {slot: blah}
+    - name: rich_text_2
+      properties: {content: '{hi} asdfasd {hello}'}
+      type: RichText
+      layout_properties: {}
+      components:
+      - name: button_1
+        properties: {appearance: filled, text: hi}
+        type: form:Components.Button
+        layout_properties: {slot: hi}
+      - name: button_2
+        properties: {text: button_2}
+        type: Button
+        layout_properties: {slot: hello}
   - name: card_1_copy
     properties: {visible: true}
     type: form:Components.Card
