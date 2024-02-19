@@ -60,15 +60,7 @@ components:
       properties: {content: '{hi} asdfasd {hello}'}
       type: RichText
       layout_properties: {}
-      components:
-      - name: button_1
-        properties: {appearance: filled, text: hi}
-        type: form:Components.Button
-        layout_properties: {slot: hi}
-      - name: button_2
-        properties: {text: button_2}
-        type: Button
-        layout_properties: {slot: hello}
+      components: []
   - name: card_1_copy
     properties: {visible: true}
     type: form:Components.Card
