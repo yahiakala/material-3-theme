@@ -29,42 +29,6 @@ components:
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
-    - name: rich_text_1
-      properties: {content: '{blah} bla bla bla {slot} '}
-      type: RichText
-      layout_properties: {}
-      components:
-      - name: text_3
-        properties: {text: hello, text_color: '', background_color: 'theme:Tertiary
-            Container'}
-        type: form:Components.Text
-        layout_properties: {slot: blah}
-      - name: label_1
-        properties: {text: hi, background: 'theme:Tertiary Container'}
-        type: Label
-        layout_properties: {slot: slot}
-    - name: rich_text_1_copy
-      properties: {content: '{blah} bla bla bla {slot}'}
-      type: RichText
-      layout_properties: {}
-      components:
-      - name: text_box_1
-        properties: {}
-        type: TextBox
-        layout_properties: {slot: slot}
-      - name: text_field_7
-        properties: {supporting_text: hello there, character_limit: 50}
-        type: form:Components.TextInput.TextField
-        layout_properties: {slot: blah}
-    - name: rich_text_2
-      properties: {content: '{hi} asdfasd {hello}'}
-      type: RichText
-      layout_properties: {}
-      components:
-      - name: switch_1
-        properties: {}
-        type: form:Components.Switch
-        layout_properties: {slot: hello}
   - name: card_1_copy
     properties: {visible: true}
     type: form:Components.Card
