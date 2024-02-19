@@ -35,9 +35,10 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: ['', outlined]
+  options: [filled, outlined]
   description: Selection field's appearance
   group: Look and Feel
+  default_value: filled
 - {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime,
   group: Interaction}
 - {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
