@@ -6,7 +6,7 @@ properties:
   default_value: null
   include_none_option: true
   description: Predefined style type
-  group: Look and Feel
+  group: Key Properties
 - priority: 100
   default_value: star_border
   include_none_option: true
