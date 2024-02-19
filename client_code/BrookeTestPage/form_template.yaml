@@ -129,6 +129,7 @@ components_by_slot:
       properties:
         margin: ['20', '20', '20', '20']
         role: null
+        appearance: filled
       type: form:Components.DropdownMenu
       layout_properties: {grid_position: 'HBKHOJ,NXQYAI'}
     - name: data_grid_1

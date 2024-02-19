@@ -37,7 +37,7 @@ properties:
   important: true
   options: [filled, outlined]
   description: Selection field's appearance
-  group: Look and Feel
+  group: Key Properties
   default_value: filled
 - {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime,
   group: Interaction}

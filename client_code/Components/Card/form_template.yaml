@@ -17,7 +17,7 @@ properties:
   important: true
   options: [elevated, filled, outlined]
   default_value: elevated
-  group: Look and Feel
+  group: Key Properties
   description: Predefined style type.
 - {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....).,
   group: Image Style}
