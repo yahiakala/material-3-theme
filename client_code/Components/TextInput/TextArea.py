@@ -21,32 +21,32 @@ class TextArea(TextInput):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['textarea'].addEventListener("input", self._update_height)
-    self.dom_nodes['textarea'].addEventListener("input", self._on_input)
-    self.dom_nodes['textarea'].addEventListener("change", self._on_change)
-    self.dom_nodes['textarea'].addEventListener("focus", self._on_focus)
-    self.dom_nodes['textarea'].addEventListener("blur", self._on_lost_focus)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._update_height)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._on_input)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("change", self._on_change)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("focus", self._on_focus)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("blur", self._on_lost_focus)
     self.resize_observer = ResizeObserver(self._on_resize)
-    self.resize_observer.observe(self.dom_nodes['textarea'])
+    self.resize_observer.observe(self.dom_nodes['anvil-m3-textarea'])
     
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['textarea'].removeEventListener("input", self._update_height)
-    self.dom_nodes['textarea'].removeEventListener("input", self._on_input)
-    self.dom_nodes['textarea'].removeEventListener("change", self._on_change)
-    self.dom_nodes['textarea'].removeEventListener("focus", self._on_focus)
-    self.dom_nodes['textarea'].removeEventListener("blur", self._on_lost_focus)
-    self.resize_observer.unobserve(self.dom_nodes['textarea'])
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._update_height)
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._on_input)
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("change", self._on_change)
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("focus", self._on_focus)
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("blur", self._on_lost_focus)
+    self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
   
-  italic_display = italic_property('textarea', 'italic_label')
-  bold_display = bold_property('textarea', 'bold_display')
-  underline_display = underline_property('textarea', 'underline_display')
-  display_font_size = font_size_property('textarea', 'display_font_size')
-  display_font = font_family_property('textarea', 'display_font')
+  italic_display = italic_property('anvil-m3-textarea', 'italic_label')
+  bold_display = bold_property('anvil-m3-textarea', 'bold_display')
+  underline_display = underline_property('anvil-m3-textarea', 'underline_display')
+  display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
+  display_font = font_family_property('anvil-m3-textarea', 'display_font')
   display_text_color = color_property('textarea', 'color', 'display_text_color')
   background = color_property('textarea', 'backgroundColor', 'background')
 
   def _set_placeholder(self, value):
-    input = self.dom_nodes['textarea']
+    input = self.dom_nodes['anvil-m3-textarea']
     if value:
       input.placeholder = value
       input.classList.add('anvil-m3-has-placeholder')
@@ -57,18 +57,18 @@ class TextArea(TextInput):
 
   @property
   def text(self):
-    return self.dom_nodes['textarea'].value
+    return self.dom_nodes['anvil-m3-textarea'].value
 
   @text.setter
   def text(self, value):
-    self.dom_nodes['textarea'].value = value
+    self.dom_nodes['anvil-m3-textarea'].value = value
 
   def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
     else:
-      self.dom_nodes['textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
+      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", _set_label)
   
   def _set_enabled(self, value):
@@ -83,10 +83,10 @@ class TextArea(TextInput):
 
   def _set_id(self, value):
     super()._set_id(value)
-    self.dom_nodes["textarea"].id = value
+    self.dom_nodes["anvil-m3-textarea"].id = value
 
   def _update_height(self, event):
-    self.dom_nodes['textarea'].style.height = '56px' #min-height based off specs
+    self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #min-height based off specs
     h = event.target.scrollHeight;
     self._set_height(h)
 
@@ -96,7 +96,7 @@ class TextArea(TextInput):
     self._set_height(h)
 
   def _set_height(self, h):
-    self.dom_nodes['textarea'].style.height = f'{h}px'
+    self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
     self.dom_nodes['border-container'].style.height = f'{h}px'
 
   def _set_character_limit(self, value):
@@ -104,7 +104,7 @@ class TextArea(TextInput):
       text_field_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
-      text_field_input = self.dom_nodes['textarea'].setAttribute("maxlength", value)
+      text_field_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
       self.dom_nodes['character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
