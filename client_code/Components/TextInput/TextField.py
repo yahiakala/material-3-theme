@@ -163,7 +163,7 @@ class TextField(TextInput):
     
   def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
-    leading_icon = self.dom_nodes['leading-icon']
+    leading_icon = self.dom_nodes['anvil-m3-leading-icon']
     text_field_input = self.dom_nodes['anvil-m3-textfield']
     border_container = self.dom_nodes['anvil-m3-border-container']
 
@@ -183,7 +183,7 @@ class TextField(TextInput):
   
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
-    trailing_icon = self.dom_nodes['trailing-icon']
+    trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     text_field_input = self.dom_nodes['anvil-m3-textfield']
 
     if value:
@@ -203,8 +203,8 @@ class TextField(TextInput):
   display_font = font_family_property('anvil-m3-textfield', 'display_font')
   display_text_color = color_property('anvil-m3-textfield', 'color', 'display_text_color')
   background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
-  leading_icon_color = color_property('leading-icon', 'color', 'leading_icon_color')
-  trailing_icon_color = color_property('trailing-icon', 'color', 'trailing_icon_color')
+  leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
+  trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
 
   def _set_character_limit(self, value):
     if value is None or value < 1:
