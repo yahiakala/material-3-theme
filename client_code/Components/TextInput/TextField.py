@@ -162,7 +162,7 @@ class TextField(TextInput):
     self._set_trailing_icon(value)
     
   def _set_leading_icon(self, value):
-    icon_container = self.dom_nodes['icon-container']
+    icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['anvil-m3-textfield']
     border_container = self.dom_nodes['anvil-m3-border-container']
@@ -182,7 +182,7 @@ class TextField(TextInput):
   # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
   
   def _set_trailing_icon(self, value):
-    icon_container = self.dom_nodes['icon-container']
+    icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
     text_field_input = self.dom_nodes['anvil-m3-textfield']
 
