@@ -18,10 +18,9 @@ class TextInputs_copy(TextInputs_copyTemplate):
   def text_field_1_copy_2_click(self, **event_args):
     alert("clicked outlined style")
 
-  def text_field_1_click(self, **event_args):
+  def text_field_1_icon_click(self, **event_args):
     self.text_field_1.hide_text = not self.text_field_1.hide_text 
     self.update_tf1_icon()
-    
 
   def update_tf1_icon(self):
     if self.text_field_1.hide_text == True:
