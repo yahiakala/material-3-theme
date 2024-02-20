@@ -41,16 +41,12 @@ leading_icon_color_property = {"name": "leading_icon_color",
                                "group": "Icon", 
                                "important": True, 
                                "default_value": "",
-                               # "includeNone_option": True, 
-                               # "none_option_label": "None", 
                                "description": "The color of the leading icon."}
 trailing_icon_color_property = {"name": "trailing_icon_color", 
                                "type": "color", 
                                "group": "Icon", 
                                "important": True, 
                                "default_value": "",
-                               # "include_none_option": True, 
-                               # "none_option_label": "None", 
                                "description": "The color of the trailing icon."}
 
 
