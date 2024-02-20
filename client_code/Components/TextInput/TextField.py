@@ -76,7 +76,7 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("keydown", self._on_key_down)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("change", self._on_change)
-    self.dom_nodes['trailing-icon'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-trailing-icon'].addEventListener("click", self._handle_click)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("blur", self._on_lost_focus)
     
@@ -84,7 +84,7 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("keydown", self._on_key_down)
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("change", self._on_change)
-    self.dom_nodes['trailing-icon'].removeEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-trailing-icon'].removeEventListener("click", self._handle_click)
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("blur", self._on_lost_focus)
 
@@ -124,7 +124,7 @@ class TextField(TextInput):
   label_text = property_with_callback("anvil-m3-label-text", _set_label)
 
   def _set_enabled(self, value):
-    supporting_text = self.dom_nodes['subcontent']
+    supporting_text = self.dom_nodes['anvil-m3-subcontent']
     if value:
       self.dom_nodes['anvil-m3-textfield'].removeAttribute("disabled")
       supporting_text.classList.remove("anvil-m3-textinput-disabled")
@@ -213,7 +213,7 @@ class TextField(TextInput):
     else:
       text_field_input = self.dom_nodes['anvil-m3-textfield'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
-      self.dom_nodes['character-limit'].innerText = int(value);
+      self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
 
   def _set_type(self, value):

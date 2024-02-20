@@ -72,7 +72,7 @@ class TextArea(TextInput):
   label_text = property_with_callback("label_text", _set_label)
   
   def _set_enabled(self, value):
-    supporting_text = self.dom_nodes['subcontent']
+    supporting_text = self.dom_nodes['anvil-m3-subcontent']
     if value:
       self.dom_nodes['anvil-m3-textarea'].removeAttribute("disabled")
       supporting_text.classList.remove("anvil-m3-textinput-disabled")
@@ -106,5 +106,5 @@ class TextArea(TextInput):
     else:
       text_field_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
-      self.dom_nodes['character-limit'].innerText = int(value);
+      self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)

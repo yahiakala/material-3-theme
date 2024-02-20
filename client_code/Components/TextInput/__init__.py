@@ -25,9 +25,9 @@ class TextInput(TextInputTemplate):
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
   spacing = spacing_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
-  supporting_text_color = color_property('supporting-text', 'color', 'supporting_text_color')
-  supporting_text_font = font_family_property('supporting-text', 'supporting_text_font')
-  supporting_text_font_size = font_size_property('supporting-text', 'supporting_text_font_size')
+  supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
+  supporting_text_font = font_family_property('anvil-m3-supporting-text', 'supporting_text_font')
+  supporting_text_font_size = font_size_property('anvil-m3-supporting-text', 'supporting_text_font_size')
   character_limit_color = color_property('anvil-m3-character-counter', 'color', 'charcter_limit_color')
   character_limit_font = font_family_property('anvil-m3-character-counter', 'character_limit_font')
   character_limit_font_size = font_size_property('anvil-m3-character-counter', 'character_limit_font_size')
@@ -40,7 +40,7 @@ class TextInput(TextInputTemplate):
   appearance = property_with_callback("appearance", _set_appearance)
   
   def _set_supporting_text(self, value):
-    self.dom_nodes['supporting-text'].innerHTML = value
+    self.dom_nodes['anvil-m3-supporting-text'].innerHTML = value
   supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
   def _set_error(self, value):
@@ -53,8 +53,8 @@ class TextInput(TextInputTemplate):
   
   def _set_id(self, value):
     self.dom_nodes["anvil-m3-label-text"].setAttribute("for", value)
-    self.dom_nodes["supporting-text"].setAttribute("for", value)
-    self.dom_nodes["character-amount"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-supporting-text"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-character-amount"].setAttribute("for", value)
 
   def _set_border_color(self, value):
     if self.border_color:
@@ -81,7 +81,7 @@ class TextInput(TextInputTemplate):
         self.dom_nodes['anvil-m3-label-text'].innerText = anvil.designer.get_design_name(self)
 
   def _on_input(self, e):
-    self.dom_nodes['character-amount'].innerText = len(e.target.value);
+    self.dom_nodes['anvil-m3-character-amount'].innerText = len(e.target.value);
 
   def _on_change(self, e):
     self.raise_event("change")
