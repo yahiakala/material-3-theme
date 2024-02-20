@@ -124,7 +124,8 @@ class Slider(SliderTemplate):
 
   @property
   def value(self):
-    return self._props.get('value')
+    # return self._props.get('value')
+    return self.dom_nodes['anvil-m3-slider-input'].value
 
   @value.setter
   def value(self, value):
@@ -132,7 +133,7 @@ class Slider(SliderTemplate):
       value = 0
     if value > self.max or value < self.min:
       raise ValueError("Value cannot be outside min-max range")
-    self._props['value'] = value
+    # self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
     self._update_progress()
 
