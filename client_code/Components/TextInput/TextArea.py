@@ -64,7 +64,7 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
   def _set_label(self, value):
-    self.dom_nodes['label-text'].innerText = value or ""
+    self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
     else:

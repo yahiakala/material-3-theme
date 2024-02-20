@@ -73,20 +73,20 @@ class TextField(TextInput):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['textfield'].addEventListener("input", self._on_input)
-    self.dom_nodes['textfield'].addEventListener("keydown", self._on_key_down)
-    self.dom_nodes['textfield'].addEventListener("change", self._on_change)
+    self.dom_nodes['anvil-m3-textfield'].addEventListener("input", self._on_input)
+    self.dom_nodes['anvil-m3-textfield'].addEventListener("keydown", self._on_key_down)
+    self.dom_nodes['anvil-m3-textfield'].addEventListener("change", self._on_change)
     self.dom_nodes['trailing-icon'].addEventListener("click", self._handle_click)
-    self.dom_nodes['textfield'].addEventListener("focus", self._on_focus)
-    self.dom_nodes['textfield'].addEventListener("blur", self._on_lost_focus)
+    self.dom_nodes['anvil-m3-textfield'].addEventListener("focus", self._on_focus)
+    self.dom_nodes['anvil-m3-textfield'].addEventListener("blur", self._on_lost_focus)
     
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['textfield'].removeEventListener("input", self._on_input)
-    self.dom_nodes['textfield'].removeEventListener("keydown", self._on_key_down)
-    self.dom_nodes['textfield'].removeEventListener("change", self._on_change)
+    self.dom_nodes['anvil-m3-textfield'].removeEventListener("input", self._on_input)
+    self.dom_nodes['anvil-m3-textfield'].removeEventListener("keydown", self._on_key_down)
+    self.dom_nodes['anvil-m3-textfield'].removeEventListener("change", self._on_change)
     self.dom_nodes['trailing-icon'].removeEventListener("click", self._handle_click)
-    self.dom_nodes['textfield'].removeEventListener("focus", self._on_focus)
-    self.dom_nodes['textfield'].removeEventListener("blur", self._on_lost_focus)
+    self.dom_nodes['anvil-m3-textfield'].removeEventListener("focus", self._on_focus)
+    self.dom_nodes['anvil-m3-textfield'].removeEventListener("blur", self._on_lost_focus)
 
   def _on_key_down(self, e):
     if e.key == "Enter":
@@ -109,18 +109,18 @@ class TextField(TextInput):
 
   @property
   def text(self):
-    return self.dom_nodes['textfield'].value
+    return self.dom_nodes['anvil-m3-textfield'].value
 
   @text.setter
   def text(self, value):
-    self.dom_nodes['textfield'].value = value
+    self.dom_nodes['anvil-m3-textfield'].value = value
       
   def _set_label(self, value):
     self.dom_nodes['label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', True)
     else:
-      self.dom_nodes['textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
+      self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
   label_text = property_with_callback("label_text", _set_label)
 
   def _set_enabled(self, value):
@@ -135,7 +135,7 @@ class TextField(TextInput):
   
   def _set_id(self, value):
     super()._set_id(value)
-    self.dom_nodes["textfield"].id = value
+    self.dom_nodes["anvil-m3-textfield"].id = value
 
   def _set_error(self, value):
     super()._set_error(value)
@@ -164,7 +164,7 @@ class TextField(TextInput):
   def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
-    text_field_input = self.dom_nodes['textfield']
+    text_field_input = self.dom_nodes['anvil-m3-textfield']
     border_container = self.dom_nodes['border-container']
 
     if value:
@@ -184,7 +184,7 @@ class TextField(TextInput):
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['icon-container']
     trailing_icon = self.dom_nodes['trailing-icon']
-    text_field_input = self.dom_nodes['textfield']
+    text_field_input = self.dom_nodes['anvil-m3-textfield']
 
     if value:
       trailing_icon.style.display = "block"
@@ -196,13 +196,13 @@ class TextField(TextInput):
       text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
 
-  italic_display = italic_property('textfield', 'italic_label')
-  bold_display = bold_property('textfield', 'bold_display')
-  underline_display = underline_property('textfield', 'underline_display')
-  display_font_size = font_size_property('textfield', 'display_font_size')
-  display_font = font_family_property('textfield', 'display_font')
-  display_text_color = color_property('textfield', 'color', 'display_text_color')
-  background = color_property('textfield', 'backgroundColor', 'background' )
+  italic_display = italic_property('anvil-m3-textfield', 'italic_label')
+  bold_display = bold_property('anvil-m3-textfield', 'bold_display')
+  underline_display = underline_property('anvil-m3-textfield', 'underline_display')
+  display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
+  display_font = font_family_property('anvil-m3-textfield', 'display_font')
+  display_text_color = color_property('anvil-m3-textfield', 'color', 'display_text_color')
+  background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
   leading_icon_color = color_property('leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('trailing-icon', 'color', 'trailing_icon_color')
 
@@ -211,17 +211,17 @@ class TextField(TextInput):
       text_field_input = self.dom_nodes['anvil-m3-textfield'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none";
     else:
-      text_field_input = self.dom_nodes['textfield'].setAttribute("maxlength", value)
+      text_field_input = self.dom_nodes['anvil-m3-textfield'].setAttribute("maxlength", value)
       self.dom_nodes['character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
 
   def _set_type(self, value):
-    self.dom_nodes['textfield'].setAttribute("type", value)
+    self.dom_nodes['anvil-m3-textfield'].setAttribute("type", value)
   type = property_with_callback("type", _set_type)
 
   def _set_hide_text(self, value):
-    self.dom_nodes['textfield'].setAttribute("type", "password" if value else self.type)
+    self.dom_nodes['anvil-m3-textfield'].setAttribute("type", "password" if value else self.type)
   hide_text = property_with_callback("hide_text", _set_hide_text)
 
   def _handle_click(self, event):
