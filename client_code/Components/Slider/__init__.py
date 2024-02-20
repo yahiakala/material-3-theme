@@ -20,31 +20,31 @@ class Slider(SliderTemplate):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self.on_input)
-    self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self.on_mouse_down)
-    self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self.on_change)
+    self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self._on_input)
+    self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self._on_mouse_down)
+    self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self._on_change)
     self.resize_observer = ResizeObserver(self._on_window_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
   
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self.on_input)
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self.on_mouse_down)
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener("change", self.on_change)
+    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self._on_input)
+    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self._on_mouse_down)
+    self.dom_nodes['anvil-m3-slider-input'].removeEventListener("change", self._on_change)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
 
-  def on_change(self, event):
+  def _on_change(self, event):
     self.raise_event("change")
   
-  def on_input(self, event):
+  def _on_input(self, event):
     self._update_progress()
 
-  def on_mouse_down(self, event):
+  def _on_mouse_down(self, event):
     self._do_show_label()
-    document.addEventListener("mouseup", self.on_mouse_up)
+    document.addEventListener("mouseup", self._on_mouse_up)
 
-  def on_mouse_up(self, event):
+  def _on_mouse_up(self, event):
     self._do_hide_label()
-    document.removeEventListener("mouseup", self.on_mouse_up)
+    document.removeEventListener("mouseup", self._on_mouse_up)
 
   def _on_window_resize(self, *args):
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()

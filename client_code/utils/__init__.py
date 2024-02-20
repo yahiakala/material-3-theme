@@ -9,7 +9,7 @@ def gen_id():
 def noop(*args, **kws):
   pass
 #first one is empty cuz I can't figure out how to have none option in modules
-_m3_icons = ["", "10k", "10mp", "11mp", "'123'", "12mp", "13mp", "14mp", "15mp", "16mp", "17mp", "18_up_rating",
+_m3_icons = ["10k", "10mp", "11mp", "'123'", "12mp", "13mp", "14mp", "15mp", "16mp", "17mp", "18_up_rating",
     "18mp", "19mp", "1k", "1k_plus", "1x_mobiledata", "20mp", "21mp", "22mp", "23mp", "24mp", "2k", "2k_plus",
     "2mp", "30fps", "30fps_select", "'360'", "3d_rotation", "3g_mobiledata", "3k", "3k_plus", "3mp",
     "3p", "4g_mobiledata", "4g_plus_mobiledata", "4k", "4k_plus", "4mp", "5g", "5k", "5k_plus", "5mp",

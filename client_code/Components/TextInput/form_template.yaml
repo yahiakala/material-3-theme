@@ -22,7 +22,7 @@ properties:
   important: true
   options: [filled, outlined]
   default_value: filled
-  group: Look and Feel
+  group: Key Properties
   description: Predefined style type.
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
   group: Look and Feel, description: 'Should this component be displayed?'}
@@ -30,6 +30,8 @@ properties:
   group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
   group: Look and Feel}
+- {name: supporting_text_color, type: color, default_value: '', important: false,
+  description: The color of this component's supporting text., group: Look and Feel}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
   group: Text}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
@@ -62,14 +64,28 @@ properties:
     margin: [auto, null, null, null]
   group: Layout
   description: The margin and padding of this component. Default value is in pixels.
-- {name: background_color, type: color, default_value: '', important: false, description: The background color of this component.,
+- {name: background, type: color, default_value: '', important: false, description: The background color of this component.,
   group: Look and Feel}
+- {name: tooltip, type: string, default_value: '', important: false, group: Other}
+- {name: supporting_text_font, type: string, default_value: '', important: false,
+  description: The font family to use for this component’s supporting text., group: Text}
+- {name: supporting_text_font_size, type: number, important: false, description: The height of text displayed on this component’s supporting text in pixels.,
+  group: Text}
+- {name: character_limit_color, type: color, default_value: '', important: false,
+  description: The color of the character limit's text., group: Look and Feel}
+- {name: character_limit_font, type: string, default_value: '', important: false,
+  description: The font family to use for this component’s character limit., group: Text}
+- {name: character_limit_font_size, type: number, important: false, description: The height of text displayed on this component’s character limit in pixels.,
+  group: Text}
+- {name: text, type: string, default_value: '', important: true, description: The text displayed on this property}
+- {name: border_color, type: color, default_value: '', important: true, description: The color of the component's border}
 is_package: true
 events:
-- {name: pressed_enter, default_event: true, description: When the user presses enter in this component.}
 - {name: change, description: When the text in this component is edited.}
 - {name: show, description: When the component is shown on the screen.}
 - {name: hide, description: When the component is removed from the screen.}
+- {name: focus, description: When the component gets focus.}
+- {name: lost_focus, description: When the component loses focus.}
 toolbox_item: {hidden: true}
 custom_component: true
 components: []
@@ -87,16 +103,15 @@ container:
       \   <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n     \
       \ <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"anvil-m3-label-text\"\
       \ for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\"\
-      \ anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
-      \ material-symbols-outlined\" anvil-name=\"anvil-m3-leading-icon\" style=\"\
-      display: none;\"></i>\n<!--       <div class=\"anvil-m3-textinput-icon-container-spacer\"\
-      ></div> -->\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
-      \ anvil-name=\"anvil-m3-trailing-icon\" style=\"display: none;\"></i>\n  \t\
-      </div>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"\
-      anvil-m3-subcontent\">\n    <label class=\"anvil-m3-textinput-supporting-text\"\
-      \ anvil-name=\"anvil-m3-supporting-text\"></label>\n    \n    <label style=\"\
-      display: none\" class=\"anvil-m3-textinput-character-count\" anvil-name=\"anvil-m3-character-counter\"\
-      >\n      <span anvil-name=\"anvil-m3-character-amount\" >0</span>\n      /\n\
-      \      <span anvil-name=\"anvil-m3-character-limit\" >10</span>\n    </label>\n\
-      \  </div>\n  \n</div>"}
+      \ anvil-name=\"icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
+      \ material-symbols-outlined\" anvil-name=\"leading-icon\" style=\"display: none;\"\
+      ></i>\n<!--       <div class=\"anvil-m3-textinput-icon-container-spacer\"></div>\
+      \ -->\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
+      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
+      \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
+      >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
+      ></label> \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
+      \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
+      \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
+      \    </label>\n  </div>\n</div>"}
   event_bindings: {show: form_show}
