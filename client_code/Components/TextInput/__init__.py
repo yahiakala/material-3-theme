@@ -17,12 +17,12 @@ class TextInput(TextInputTemplate):
     self._on_input = self._on_input
     
   visible = HtmlTemplate.visible
-  italic_label = italic_property('label-text', 'italic_label')
-  bold_label = bold_property('label-text', 'bold_label')
-  underline_label = underline_property('label-text', 'underline_label')
-  label_font_size = font_size_property('label-text', 'label_font_size')
-  label_font = font_family_property('label-text', 'label_font')
-  label_text_color = color_property('label-text', 'color', 'label_text_color')
+  italic_label = italic_property('anvil-m3-label-text', 'italic_label')
+  bold_label = bold_property('anvil-m3-label-text', 'bold_label')
+  underline_label = underline_property('anvil-m3-label-text', 'underline_label')
+  label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
+  label_font = font_family_property('anvil-m3-label-text', 'label_font')
+  label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
   spacing = spacing_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('supporting-text', 'color', 'supporting_text_color')
@@ -52,7 +52,7 @@ class TextInput(TextInputTemplate):
   error = property_with_callback("error", _set_error)
   
   def _set_id(self, value):
-    self.dom_nodes["label-text"].setAttribute("for", value)
+    self.dom_nodes["anvil-m3-label-text"].setAttribute("for", value)
     self.dom_nodes["supporting-text"].setAttribute("for", value)
     self.dom_nodes["character-amount"].setAttribute("for", value)
 

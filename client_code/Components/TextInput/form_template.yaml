@@ -111,7 +111,7 @@ container:
       \ </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"subcontent\"\
       >\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"supporting-text\"\
       ></label> \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\"\
-      \ anvil-name=\"character-counter\">\n      <span anvil-name=\"character-amount\"\
+      \ anvil-name=\"anvil-m3-character-counter\">\n      <span anvil-name=\"character-amount\"\
       \ >0</span>\n      /\n      <span anvil-name=\"character-limit\" >10</span>\n\
       \    </label>\n  </div>\n</div>"}
   event_bindings: {show: form_show}
