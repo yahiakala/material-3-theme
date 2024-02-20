@@ -11,7 +11,7 @@ from ...utils import gen_id
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
     self._props = properties
-    self.tooltip_node = None
+    self._tooltip_node = None
     self.init_components(**properties)
     
     self._on_input = self._on_input
