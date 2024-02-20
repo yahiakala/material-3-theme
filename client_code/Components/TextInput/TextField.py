@@ -165,7 +165,7 @@ class TextField(TextInput):
     icon_container = self.dom_nodes['icon-container']
     leading_icon = self.dom_nodes['leading-icon']
     text_field_input = self.dom_nodes['anvil-m3-textfield']
-    border_container = self.dom_nodes['border-container']
+    border_container = self.dom_nodes['anvil-m3-border-container']
 
     if value:
       leading_icon.style.display = "block"
@@ -212,7 +212,7 @@ class TextField(TextInput):
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none";
     else:
       text_field_input = self.dom_nodes['anvil-m3-textfield'].setAttribute("maxlength", value)
-      self.dom_nodes['character-counter'].style = "display: inline";
+      self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
 

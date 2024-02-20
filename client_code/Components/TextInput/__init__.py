@@ -28,9 +28,9 @@ class TextInput(TextInputTemplate):
   supporting_text_color = color_property('supporting-text', 'color', 'supporting_text_color')
   supporting_text_font = font_family_property('supporting-text', 'supporting_text_font')
   supporting_text_font_size = font_size_property('supporting-text', 'supporting_text_font_size')
-  character_limit_color = color_property('character-counter', 'color', 'charcter_limit_color')
-  character_limit_font = font_family_property('character-counter', 'character_limit_font')
-  character_limit_font_size = font_size_property('character-counter', 'character_limit_font_size')
+  character_limit_color = color_property('anvil-m3-character-counter', 'color', 'charcter_limit_color')
+  character_limit_font = font_family_property('anvil-m3-character-counter', 'character_limit_font')
+  character_limit_font_size = font_size_property('anvil-m3-character-counter', 'character_limit_font_size')
   
   def _set_appearance(self, value):
     if value == 'outlined':

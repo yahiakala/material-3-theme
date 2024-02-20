@@ -42,8 +42,8 @@ class TextArea(TextInput):
   underline_display = underline_property('anvil-m3-textarea', 'underline_display')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
-  display_text_color = color_property('textarea', 'color', 'display_text_color')
-  background = color_property('textarea', 'backgroundColor', 'background')
+  display_text_color = color_property('anvil-m3-textarea', 'color', 'display_text_color')
+  background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
 
   def _set_placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textarea']
@@ -97,7 +97,7 @@ class TextArea(TextInput):
 
   def _set_height(self, h):
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
-    self.dom_nodes['border-container'].style.height = f'{h}px'
+    self.dom_nodes['anvil-m3-border-container'].style.height = f'{h}px'
 
   def _set_character_limit(self, value):
     if value is None or value < 1:
@@ -105,6 +105,6 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
       text_field_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
-      self.dom_nodes['character-counter'].style = "display: inline";
+      self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
