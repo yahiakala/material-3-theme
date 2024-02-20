@@ -11,12 +11,7 @@ class TextInputs_copy(TextInputs_copyTemplate):
     self.init_components(**properties)
     self.update_tf1_icon()
 
-  
     # Any code you write here will run before the form opens.
-
-
-  def text_field_1_copy_2_click(self, **event_args):
-    alert("clicked outlined style")
 
   def text_field_1_icon_click(self, **event_args):
     self.text_field_1.hide_text = not self.text_field_1.hide_text 
@@ -27,10 +22,6 @@ class TextInputs_copy(TextInputs_copyTemplate):
       self.text_field_1.trailing_icon = 'visibility'
     else:
       self.text_field_1.trailing_icon = 'visibility_off'
-
-  def text_field_1_copy_copy_click(self, **event_args):
-    """This method is called when the trailing icon is clicked."""
-    pass
 
   def text_field_5_pressed_enter(self, **event_args):
     """This method is called when the user presses enter in this component."""
