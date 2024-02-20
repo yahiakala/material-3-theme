@@ -12,7 +12,7 @@ properties:
   important: true
   options: [filled, outlined]
   default_value: filled
-  group: Look and Feel
+  group: Key Properties
   description: Predefined style type.
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
   group: Look and Feel, description: 'Should this component be displayed?'}
