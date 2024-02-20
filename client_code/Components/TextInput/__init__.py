@@ -76,7 +76,6 @@ class TextInput(TextInputTemplate):
   def form_show(self, **event_args):
     id = gen_id();
     self._set_id(id)
-    
     if anvil.designer.in_designer:
       if not self.label_text:
         self.dom_nodes['label-text'].innerText = anvil.designer.get_design_name(self)

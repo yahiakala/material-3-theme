@@ -5,27 +5,23 @@ from ...Functions import property_with_callback, italic_property, bold_property,
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
-"""
-Remaining tasks on hold for DEV: 
-- property "NONE" enum selection for icons
-"""
-
 leading_icon_property = {"name": "leading_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
                          "group": "Icon", 
                          "important": True, 
-                         "default_value": "",
-                         # "include_none_option": True, 
-                         # "none_option_label": "None", 
+                         "default_value": "None",
+                         "includeNoneOption": True, # This might change to snake case at some point
+                         "noneOptionLabel": "None", 
                          "description": "The icon to display on the right side of this component."}
 trailing_icon_property = {"name": "trailing_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
                          "group": "Icon", 
                          "important": True, 
-                         "default_value": "",
-                         # "include_none_option": True, 
+                         "default_value": "None",
+                         "includeNoneOption": True,
+                         "noneOptionLabel": "None",
                          "description": "The icon to display on the left side of this component."}
 type_property = {"name": "type", 
                          "type": "enum", 
@@ -45,7 +41,7 @@ leading_icon_color_property = {"name": "leading_icon_color",
                                "group": "Icon", 
                                "important": True, 
                                "default_value": "",
-                               # "include_none_option": True, 
+                               # "includeNone_option": True, 
                                # "none_option_label": "None", 
                                "description": "The color of the leading icon."}
 trailing_icon_color_property = {"name": "trailing_icon_color", 
