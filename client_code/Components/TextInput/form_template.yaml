@@ -91,8 +91,8 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-textinput-component\" class=\"anvil-m3-textinput\"\
-      >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\"\
+  properties: {html: "<div class=\"anvil-m3-textinput\" anvil-name=\"anvil-m3-textinput\"\
+      \ >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\"\
       >\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"\
       1\" anvil-name=\"anvil-m3-textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input\
       \ anvil-m3-textfield\" type=\"text\" anvil-name=\"anvil-m3-textfield\" />\n\

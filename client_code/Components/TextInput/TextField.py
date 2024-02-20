@@ -121,7 +121,7 @@ class TextField(TextInput):
       self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', True)
     else:
       self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
-  label_text = property_with_callback("label_text", _set_label)
+  label_text = property_with_callback("anvil-m3-label-text", _set_label)
 
   def _set_enabled(self, value):
     supporting_text = self.dom_nodes['subcontent']

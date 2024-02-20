@@ -23,8 +23,8 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('label-text', 'label_font_size')
   label_font = font_family_property('label-text', 'label_font')
   label_text_color = color_property('label-text', 'color', 'label_text_color')
-  spacing = spacing_property('textinput-component')
-  tooltip = tooltip_property('textinput-component')
+  spacing = spacing_property('anvil-m3-textinput')
+  tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('supporting-text', 'color', 'supporting_text_color')
   supporting_text_font = font_family_property('supporting-text', 'supporting_text_font')
   supporting_text_font_size = font_size_property('supporting-text', 'supporting_text_font_size')
@@ -34,9 +34,9 @@ class TextInput(TextInputTemplate):
   
   def _set_appearance(self, value):
     if value == 'outlined':
-      self.dom_nodes['anvil-m3-textinput-component'].classList.toggle('outlined', True) 
+      self.dom_nodes['anvil-m3-textinput'].classList.toggle('outlined', True) 
     else:
-      self.dom_nodes['textinput-component'].classList.toggle('outlined', False)
+      self.dom_nodes['anvil-m3-textinput'].classList.toggle('outlined', False)
   appearance = property_with_callback("appearance", _set_appearance)
   
   def _set_supporting_text(self, value):
@@ -44,7 +44,7 @@ class TextInput(TextInputTemplate):
   supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
   def _set_error(self, value):
-    classes = self.dom_nodes['textinput-component'].classList
+    classes = self.dom_nodes['anvil-m3-textinput'].classList
     if value:
       classes.add("anvil-m3-textinput-error")
     else:
@@ -58,19 +58,19 @@ class TextInput(TextInputTemplate):
 
   def _set_border_color(self, value):
     if self.border_color:
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', theme_color_to_css(self.border_color))
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', theme_color_to_css(self.border_color))
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', theme_color_to_css(self.border_color))
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border', theme_color_to_css(self.border_color))
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-hover', theme_color_to_css(self.border_color))
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-focus', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border-hover', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border-focus', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border-hover', theme_color_to_css(self.border_color))
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border-focus', theme_color_to_css(self.border_color))
     else:
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border', 'var(--anvil-m3-outline)')
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-hover', 'var(--anvil-m3-on-surface)')
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-outlined-border-focus', 'var(--anvil-m3-primary)')
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border', 'var(--anvil-m3-on-surface-variant)')
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-hover', 'var(--anvil-m3-on-surface)')
-      self.dom_nodes["textinput-component"].style.setProperty('--anvil-m3-filled-border-focus', 'var(--anvil-m3-primary)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border', 'var(--anvil-m3-outline)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border-hover', 'var(--anvil-m3-on-surface)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-outlined-border-focus', 'var(--anvil-m3-primary)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border', 'var(--anvil-m3-on-surface-variant)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border-hover', 'var(--anvil-m3-on-surface)')
+      self.dom_nodes["anvil-m3-textinput"].style.setProperty('--anvil-m3-filled-border-focus', 'var(--anvil-m3-primary)')
   border_color = property_with_callback('border_color', _set_border_color)
   
   def form_show(self, **event_args):
