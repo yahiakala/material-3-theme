@@ -129,8 +129,8 @@ class Slider(SliderTemplate):
 
   @value.setter
   def value(self, value):
-    if value is None:
-      value = 0
+    # if value is None:
+    #   value = 0
     if value > self.max or value < self.min:
       raise ValueError("Value cannot be outside min-max range")
     # self._props['value'] = value
