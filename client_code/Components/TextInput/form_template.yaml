@@ -78,7 +78,8 @@ properties:
 - {name: character_limit_font_size, type: number, important: false, description: The height of text displayed on this component’s character limit in pixels.,
   group: Text}
 - {name: text, type: string, default_value: '', important: true, description: The text displayed on this property}
-- {name: border_color, type: color, default_value: '', important: true, description: The color of the component's border}
+- {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border,
+  group: Look and Feel}
 is_package: true
 events:
 - {name: change, description: When the text in this component is edited.}
