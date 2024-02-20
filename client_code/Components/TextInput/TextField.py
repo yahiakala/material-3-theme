@@ -226,5 +226,5 @@ class TextField(TextInput):
 
   def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("click")
+    self.raise_event("icon_click")
 
