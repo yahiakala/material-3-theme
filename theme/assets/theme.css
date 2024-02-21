@@ -704,3 +704,7 @@ th.month select.monthselect::after {
 .anvil-role-test {
   border: 2px dotted magenta
 }
+
+.anvil-panel-row {
+  align-items:center
+}
