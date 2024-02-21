@@ -124,8 +124,8 @@ class Slider(SliderTemplate):
 
   @property
   def value(self):
-    return self._props.get('value')
-    # return self.dom_nodes['anvil-m3-slider-input'].value
+    # return self._props.get('value')
+    return self.dom_nodes['anvil-m3-slider-input'].value
 
   @value.setter
   def value(self, value):

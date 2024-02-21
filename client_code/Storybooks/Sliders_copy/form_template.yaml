@@ -21,6 +21,7 @@ components:
     properties: {max: 10, value: 5}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
+    event_bindings: {change: slider_1_change}
   - name: text_3
     properties: {text: 'With label, enabled'}
     type: form:Components.Text
