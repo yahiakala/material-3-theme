@@ -95,7 +95,7 @@ class TextArea(TextInput):
   def _on_resize(self, entries, observer):
     for entry in entries:
       h = entry.target.scrollHeight
-    requestAnimationFrame(lambda x: self._set_height(h))
+    # requestAnimationFrame(lambda x: self._set_height(h))
 
   def _set_height(self, h):
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
