@@ -4,6 +4,7 @@ from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
+from anvil.designer import in_designer
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -160,8 +161,9 @@ class Slider(SliderTemplate):
     # if value < self._props.get('min'):
     #   raise ValueError("Max cannot be less than min")
     # self._props['max'] = value
-    self.dom_nodes["anvil-m3-slider-input"].max = value
-    self._update_progress()
+    if value is not None or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].max = value
+      self._update_progress()
 
   @property
   def step(self):
