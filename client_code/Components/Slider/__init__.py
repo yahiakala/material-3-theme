@@ -208,7 +208,7 @@ class Slider(SliderTemplate):
     markers_container_progress.style.width = self._get_track_width()
     slider_range = float(self.max) - float(self.min)
     if self.step:
-      marker_count = int(slider_range / float(self.step)
+      marker_count = int(slider_range / float(self.step))
     else:
       marker_count = slider_range
     if self.show_markers:
