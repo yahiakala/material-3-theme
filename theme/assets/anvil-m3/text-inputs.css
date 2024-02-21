@@ -8,7 +8,7 @@ element {
 }
 
 .anvil-m3-textinput { width: 100%; }
-.anvil-m3-textinput-input-container {position: relative; overflow: hidden; }
+.anvil-m3-textinput-input-container {position: relative; overflow: visible; }
 .anvil-m3-textinput-input {
   height: 56px;
   min-height: 56px;
