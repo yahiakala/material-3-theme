@@ -32,6 +32,8 @@ properties:
   group: Look and feel}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
+    this component be displayed?', group: Look and Feel, designer_hint: visible}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}
