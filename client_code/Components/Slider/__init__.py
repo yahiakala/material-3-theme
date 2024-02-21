@@ -125,7 +125,7 @@ class Slider(SliderTemplate):
   @property
   def value(self):
     # return self._props.get('value')
-    return self.dom_nodes['anvil-m3-slider-input'].value
+    return float(self.dom_nodes['anvil-m3-slider-input'].value)
 
   @value.setter
   def value(self, value):
@@ -140,7 +140,7 @@ class Slider(SliderTemplate):
   @property
   def min(self):
     # return self._props.get('min')
-    return self.dom_nodes['anvil-m3-slider-input'].min
+    return float(self.dom_nodes['anvil-m3-slider-input'].min)
 
   @min.setter
   def min(self, value):
@@ -153,7 +153,7 @@ class Slider(SliderTemplate):
   @property
   def max(self):
     # return self._props.get('max')
-    return self.dom_nodes['anvil-m3-slider-input'].max
+    return float(self.dom_nodes['anvil-m3-slider-input'].max)
 
   @max.setter
   def max(self, value):
