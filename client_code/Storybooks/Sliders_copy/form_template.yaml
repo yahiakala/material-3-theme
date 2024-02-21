@@ -13,15 +13,14 @@ components:
     properties: {text: Continuous (no track marks)}
     type: form:Components.Heading
     layout_properties: {slot: card-content-slot}
+  - name: slider_1
+    properties: {max: '100'}
+    type: form:Components.Slider
+    layout_properties: {slot: card-content-slot}
   - name: text_2
     properties: {scale: medium, text: 'No label, enabled'}
     type: form:Components.Text
     layout_properties: {slot: card-content-slot}
-  - name: slider_1
-    properties: {max: '100', value: 5}
-    type: form:Components.Slider
-    layout_properties: {slot: card-content-slot}
-    event_bindings: {change: slider_1_change}
   - name: slider_5
     properties: {show_label: true, max: 100, show_markers: false, value: 50}
     type: form:Components.Slider
