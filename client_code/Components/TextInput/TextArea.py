@@ -27,7 +27,6 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("blur", self._on_lost_focus)
     self.resize_observer = ResizeObserver(self._on_resize)
-    print('observing')
     self.resize_observer.observe(self.dom_nodes['anvil-m3-textarea'])
     
   def _on_cleanup(self, **event_args):
@@ -36,7 +35,6 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("blur", self._on_lost_focus)
-    print('unobserving')
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
   
   italic_display = italic_property('anvil-m3-textarea', 'italic_label')
@@ -95,7 +93,7 @@ class TextArea(TextInput):
   def _on_resize(self, entries, observer):
     for entry in entries:
       h = entry.target.scrollHeight
-    # requestAnimationFrame(lambda x: self._set_height(h))
+    requestAnimationFrame(lambda _: self._set_height(h))
 
   def _set_height(self, h):
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
