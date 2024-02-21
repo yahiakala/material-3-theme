@@ -2,7 +2,10 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 16px;
+}
+
+.anvil-m3-checkbox-label {
+  margin-left: 16px;
 }
 
 .anvil-m3-checkbox-checked.material-symbols-outlined, 
