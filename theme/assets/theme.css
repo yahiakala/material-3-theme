@@ -687,6 +687,10 @@ th.month select.monthselect::after {
   padding: 16px 24px;
 }
 
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col > * {
+  flex-grow: 1;
+}
+
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col:last-child {
   border-right: 0;
 }
