@@ -144,6 +144,8 @@ class Slider(SliderTemplate):
 
   @min.setter
   def min(self, value):
+    if value is None:
+      value = 0
     if value > self._props.get('max'):
       raise ValueError("Min cannot be more than max")
     self._props['min'] = value
@@ -157,6 +159,8 @@ class Slider(SliderTemplate):
 
   @max.setter
   def max(self, value):
+    if value is None:
+      value = 1
     if value < self._props.get('min'):
       raise ValueError("Max cannot be less than min")
     self._props['max'] = value
