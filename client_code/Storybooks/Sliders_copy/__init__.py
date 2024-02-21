@@ -19,4 +19,4 @@ class Sliders_copy(Sliders_copyTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked."""
-    print(self.slider_1.value)
+    print(type(self.slider_7.value))
