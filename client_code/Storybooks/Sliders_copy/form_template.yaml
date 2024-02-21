@@ -18,18 +18,9 @@ components:
     type: form:Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {max: 20, value: '10', show_markers: false, enabled: true, align: right}
+    properties: {max: 100}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
-  - name: slider_7
-    properties: {value: '5'}
-    type: form:Components.Slider
-    layout_properties: {slot: card-content-slot}
-  - name: button_1
-    properties: {text: click me, appearance: filled}
-    type: form:Components.Button
-    layout_properties: {slot: card-content-slot}
-    event_bindings: {click: button_1_click}
   - name: text_3
     properties: {text: 'With label, enabled'}
     type: form:Components.Text
