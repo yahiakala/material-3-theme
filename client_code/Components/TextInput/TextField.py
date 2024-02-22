@@ -101,12 +101,7 @@ class TextField(TextInput):
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
   placeholder = property_with_callback('placeholder', _set_placeholder)
-
-  # def _set_text(self, value):
-  #   input = self.dom_nodes['textfield']
-  #   input.value = value
-  # text = property_with_callback('text', _set_text)
-
+  
   @property
   def text(self):
     if self._props.get('type') == "number":
