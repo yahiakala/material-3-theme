@@ -141,12 +141,12 @@ class TextField(TextInput):
   def _set_error(self, value):
     super()._set_error(value)
     if value:
+      print("hi")
       icon = "error"
       self._set_trailing_icon(icon)
       self.dom_nodes["anvil-m3-trailing-icon"].classList.add("anvil-m3-stop-click")
     else:
       icon = self.trailing_icon
-      
       self._set_trailing_icon(icon)
       self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-stop-click")
     # icon = "error" if value else self.trailing_icon
