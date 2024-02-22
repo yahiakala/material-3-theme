@@ -17,13 +17,9 @@ components:
     properties: {scale: medium, text: 'No label, enabled'}
     type: form:Components.Text
     layout_properties: {slot: card-content-slot}
-  - name: slider_7
-    properties: {step: '2', value: 6}
-    type: form:Components.Slider
-    layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {max: 30, value: 11, show_markers: false, enabled: true, align: right,
-      min: 11}
+    properties: {max: 10, value: 5, show_markers: false, enabled: true, align: right,
+      min: 0, step: '1'}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_3
