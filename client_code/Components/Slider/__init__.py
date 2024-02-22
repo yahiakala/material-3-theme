@@ -4,7 +4,7 @@ from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
-from anvil.designer import in_designer
+from anvil.designer import in_designer, update_component_properties
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -73,7 +73,6 @@ class Slider(SliderTemplate):
   def _get_track_width(self):
     input = self.dom_nodes["anvil-m3-slider-input"]
     input_width = input.getBoundingClientRect().width
-    # return str(input_width - 20) + "px"
     return str(input_width - 4) + "px"
 
   def _check_position(self):
@@ -125,58 +124,51 @@ class Slider(SliderTemplate):
 
   @property
   def value(self):
-    # return self._props.get('value')
     return float(self.dom_nodes['anvil-m3-slider-input'].value)
 
   @value.setter
   def value(self, value):
-    # if value is None:
-    #   value = 0
-    # if value > self._props.get('max') or value < self._props.get('min'):
-    #   raise ValueError("Value cannot be outside min-max range")
-    # self._props['value'] = value
-    self.dom_nodes["anvil-m3-slider-input"].value = value
-    self._update_progress()
+    if value is not None or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].value = value
+      self._update_progress()
 
   @property
   def min(self):
-    # return self._props.get('min')
     return float(self.dom_nodes['anvil-m3-slider-input'].min)
 
   @min.setter
   def min(self, value):
-    # if value > self._props.get('max'):
-    #   raise ValueError("Min cannot be more than max")
-    # self._props['min'] = value
-    self.dom_nodes["anvil-m3-slider-input"].min = value
-    self._update_progress()
+    if value is not None or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].min = value
+      self._update_progress()
+    if in_designer:
+      update_component_properties(self, {"value": self.value})
 
   @property
   def max(self):
-    # return self._props.get('max')
     return float(self.dom_nodes['anvil-m3-slider-input'].max)
 
   @max.setter
   def max(self, value):
-    # if value < self._props.get('min'):
-    #   raise ValueError("Max cannot be less than min")
-    # self._props['max'] = value
     if value is not None or not in_designer:
       self.dom_nodes["anvil-m3-slider-input"].max = value
       self._update_progress()
+    if in_designer:
+      update_component_properties(self, {"value": self.value})
 
   @property
   def step(self):
-    return self._props.get('step')
-    # return self.dom_nodes['anvil-m3-slider-input'].step
+    # return self._props.get('step')
+    return self.dom_nodes['anvil-m3-slider-input'].step
 
   @step.setter
   def step(self, value):
-    if not value:
-      value = 1
-    self._props['step'] = value
-    self.dom_nodes["anvil-m3-slider-input"].step = value
-    self._update_progress()
+    # if not value:
+    #   value = 1
+    # self._props['step'] = value
+    if value is not None or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].step = value
+      self._update_progress()
   
   @property
   def show_label(self):
@@ -203,15 +195,16 @@ class Slider(SliderTemplate):
       full_slider.classList.add("anvil-m3-slider-disabled")
 
   def _set_markers(self):
+    slider = self.dom_nodes["anvil-m3-slider-input"]
     markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
     markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
     markers_container_bg.innerHTML = ''
     markers_container_progress.innerHTML = ''
     markers_container_bg.style.width = self._get_track_width()
     markers_container_progress.style.width = self._get_track_width()
-    slider_range = int(self.max) - int(self.min)
-    if self._props.get('step'):
-      marker_count = int(slider_range / self._props.get('step'))
+    slider_range = int(slider.max) - int(slider.min)
+    if slider.step is not 'null':
+      marker_count = int(slider_range / int(slider.step))
     else:
       marker_count = slider_range
     if self.show_markers:
