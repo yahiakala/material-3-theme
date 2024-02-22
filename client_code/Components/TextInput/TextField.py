@@ -76,9 +76,9 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("keydown", self._on_key_down)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("change", self._on_change)
-    self.dom_nodes['anvil-m3-trailing-icon'].addEventListener("click", self._handle_click)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textfield'].addEventListener("blur", self._on_lost_focus)
+    self.dom_nodes['anvil-m3-trailing-icon'].addEventListener("click", self._handle_click)
     
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("input", self._on_input)
