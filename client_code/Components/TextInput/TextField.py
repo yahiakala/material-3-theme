@@ -127,11 +127,11 @@ class TextField(TextInput):
     if value:
       self.dom_nodes['anvil-m3-textfield'].removeAttribute("disabled")
       supporting_text.classList.remove("anvil-m3-textinput-disabled")
-      trailing_icon.classList.remove("anvil-m3-stop-click")
+      trailing_icon.classList.remove("anvil-m3-disable-icon")
     else:
       self.dom_nodes['anvil-m3-textfield'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
-      trailing_icon.classList.add("anvil-m3-stop-click")
+      trailing_icon.classList.add("anvil-m3-disable-icon")
   enabled = property_with_callback("enabled", _set_enabled)
   
   def _set_id(self, value):
@@ -144,11 +144,11 @@ class TextField(TextInput):
       print("hi")
       icon = "error"
       self._set_trailing_icon(icon)
-      self.dom_nodes["anvil-m3-trailing-icon"].classList.add("anvil-m3-stop-click")
+      self.dom_nodes["anvil-m3-trailing-icon"].classList.add("anvil-m3-error-icon")
     else:
       icon = self.trailing_icon
       self._set_trailing_icon(icon)
-      self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-stop-click")
+      self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-error-icon")
     # icon = "error" if value else self.trailing_icon
     
   error = property_with_callback("error", _set_error)
