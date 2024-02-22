@@ -166,9 +166,11 @@ class Slider(SliderTemplate):
     # if not value:
     #   value = 1
     # self._props['step'] = value
-    if value is not None or not in_designer:
-      self.dom_nodes["anvil-m3-slider-input"].step = value
-      self._update_progress()
+    # if not in_designer:
+    self.dom_nodes["anvil-m3-slider-input"].step = value
+    self._update_progress()
+    if in_designer:
+      update_component_properties(self, {"value": self.value})
   
   @property
   def show_label(self):

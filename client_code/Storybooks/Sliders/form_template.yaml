@@ -18,7 +18,7 @@ components:
     type: form:Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_7
-    properties: {}
+    properties: {step: '2', value: 6}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: slider_1
