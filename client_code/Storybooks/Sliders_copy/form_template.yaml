@@ -14,11 +14,11 @@ components:
     type: form:Components.Heading
     layout_properties: {slot: card-content-slot}
   - name: slider_7
-    properties: {value: 5, step: '1', max: 5}
+    properties: {value: 5, step: '1', max: 5, min: 0}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {max: '100', visible: true}
+    properties: {max: '100', visible: true, value: 5, step: 'null'}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_2

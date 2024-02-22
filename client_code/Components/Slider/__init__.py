@@ -142,8 +142,9 @@ class Slider(SliderTemplate):
   @min.setter
   def min(self, value):
     if value is not None or not in_designer:
-      self.dom_nodes["anvil-m3-slider-input"].min = value
-      self._update_progress()
+      if value < self.max:
+        self.dom_nodes["anvil-m3-slider-input"].min = value
+        self._update_progress()
     if in_designer and self._mounted:
         anvil.designer.update_component_properties(self, {"value": self.value})
 
@@ -154,8 +155,9 @@ class Slider(SliderTemplate):
   @max.setter
   def max(self, value):
     if value is not None or not in_designer:
-      self.dom_nodes["anvil-m3-slider-input"].max = value
-      self._update_progress()
+      if float(value) > self.min:
+        self.dom_nodes["anvil-m3-slider-input"].max = value
+        self._update_progress()
     if in_designer and self._mounted:
         anvil.designer.update_component_properties(self, {"value": self.value})
 
@@ -166,12 +168,9 @@ class Slider(SliderTemplate):
 
   @step.setter
   def step(self, value):
-    # if not value:
-    #   value = 1
-    # self._props['step'] = value
-    # if not in_designer:
-    self.dom_nodes["anvil-m3-slider-input"].step = value
-    self._update_progress()
+    if value is not 0 or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].step = value
+      self._update_progress()
     if in_designer and self._mounted:
         anvil.designer.update_component_properties(self, {"value": self.value})
   
