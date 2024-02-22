@@ -32,6 +32,8 @@ properties:
   group: Look and feel}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
   group: Other}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
+    this component be displayed?', group: Look and Feel, designer_hint: visible}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}
@@ -50,7 +52,7 @@ container:
       >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
       >\n      <div class=\"anvil-m3-slider-markers-container-bg\" anvil-name=\"anvil-m3-slider-markers-container-bg\"\
       ></div>\n    </div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"\
-      anvil-m3-slider-progress\" style=\"width: 50%;\">\n      <div class=\"anvil-m3-slider-markers-container-progress\"\
+      anvil-m3-slider-progress\">\n      <div class=\"anvil-m3-slider-markers-container-progress\"\
       \ anvil-name=\"anvil-m3-slider-markers-container-progress\"></div>\n    </div>\n\
       \  </div>\n  <input anvil-name=\"anvil-m3-slider-input\" type=\"range\" min=\"\
       0\" max=\"10\">\n</div>\n"}

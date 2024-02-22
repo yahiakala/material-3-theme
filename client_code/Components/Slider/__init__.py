@@ -4,6 +4,7 @@ from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
+from anvil.designer import in_designer
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -124,45 +125,50 @@ class Slider(SliderTemplate):
 
   @property
   def value(self):
-    return self._props.get('value')
+    # return self._props.get('value')
+    return float(self.dom_nodes['anvil-m3-slider-input'].value)
 
   @value.setter
   def value(self, value):
-    if value is None:
-      value = 0
-    if value > self.max or value < self.min:
-      raise ValueError("Value cannot be outside min-max range")
-    self._props['value'] = value
+    # if value is None:
+    #   value = 0
+    # if value > self._props.get('max') or value < self._props.get('min'):
+    #   raise ValueError("Value cannot be outside min-max range")
+    # self._props['value'] = value
     self.dom_nodes["anvil-m3-slider-input"].value = value
     self._update_progress()
 
   @property
   def min(self):
-    return self._props.get('min')
+    # return self._props.get('min')
+    return float(self.dom_nodes['anvil-m3-slider-input'].min)
 
   @min.setter
   def min(self, value):
-    if value > self._props.get('max'):
-      raise ValueError("Min cannot be more than max")
-    self._props['min'] = value
+    # if value > self._props.get('max'):
+    #   raise ValueError("Min cannot be more than max")
+    # self._props['min'] = value
     self.dom_nodes["anvil-m3-slider-input"].min = value
     self._update_progress()
 
   @property
   def max(self):
-    return self._props.get('max')
+    # return self._props.get('max')
+    return float(self.dom_nodes['anvil-m3-slider-input'].max)
 
   @max.setter
   def max(self, value):
-    if value < self._props.get('min'):
-      raise ValueError("Max cannot be less than min")
-    self._props['max'] = value
-    self.dom_nodes["anvil-m3-slider-input"].max = value
-    self._update_progress()
+    # if value < self._props.get('min'):
+    #   raise ValueError("Max cannot be less than min")
+    # self._props['max'] = value
+    if value is not None or not in_designer:
+      self.dom_nodes["anvil-m3-slider-input"].max = value
+      self._update_progress()
 
   @property
   def step(self):
     return self._props.get('step')
+    # return self.dom_nodes['anvil-m3-slider-input'].step
 
   @step.setter
   def step(self, value):
@@ -203,9 +209,9 @@ class Slider(SliderTemplate):
     markers_container_progress.innerHTML = ''
     markers_container_bg.style.width = self._get_track_width()
     markers_container_progress.style.width = self._get_track_width()
-    slider_range = self.max - self.min
-    if self.step:
-      marker_count = int(slider_range / self.step)
+    slider_range = int(self.max) - int(self.min)
+    if self._props.get('step'):
+      marker_count = int(slider_range / self._props.get('step'))
     else:
       marker_count = slider_range
     if self.show_markers:
@@ -216,8 +222,7 @@ class Slider(SliderTemplate):
         marker_progress.classList.add('anvil-m3-slider-marker-progress')
         markers_container_bg.appendChild(marker_bg)
         markers_container_progress.appendChild(marker_progress)
-      
-      
+          
   @property
   def show_markers(self):
     return self._props.get('show_markers')
