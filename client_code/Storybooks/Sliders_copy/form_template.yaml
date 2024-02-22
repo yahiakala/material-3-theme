@@ -13,8 +13,12 @@ components:
     properties: {text: Continuous (no track marks)}
     type: form:Components.Heading
     layout_properties: {slot: card-content-slot}
+  - name: slider_7
+    properties: {}
+    type: form:Components.Slider
+    layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {max: '100'}
+    properties: {}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_2
