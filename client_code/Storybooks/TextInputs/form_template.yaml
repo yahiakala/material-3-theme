@@ -362,7 +362,7 @@ components:
             character_limit: 10, trailing_icon: 10mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
-          event_bindings: {click: text_field_1_copy_2_click}
+          event_bindings: {click: text_field_1_copy_2_click, icon_click: text_field_1_copy_2_copy_3_icon_click}
         - name: text_field_1_copy_copy_copy_3
           properties: {label_text: Label, appearance: outlined, bold_display: false,
             supporting_text: Supporting text, italic_display: false, display_text_color: '',

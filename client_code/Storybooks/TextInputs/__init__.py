@@ -17,3 +17,7 @@ class TextInputs(TextInputsTemplate):
 
   def text_field_1_click(self, **event_args):
     alert("clicked filled style")
+
+  def text_field_1_copy_2_copy_3_icon_click(self, **event_args):
+    """This method is called when the trailing icon is clicked."""
+    alert("hello")
