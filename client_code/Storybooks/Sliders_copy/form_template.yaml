@@ -18,7 +18,7 @@ components:
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {max: '100', visible: true, value: 5, step: 'null'}
+    properties: {}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_2

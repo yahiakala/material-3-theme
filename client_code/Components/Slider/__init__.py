@@ -155,7 +155,7 @@ class Slider(SliderTemplate):
   @max.setter
   def max(self, value):
     if value is not None or not in_designer:
-      if float(value) > self.min:
+      if value > self.min:
         self.dom_nodes["anvil-m3-slider-input"].max = value
         self._update_progress()
     if in_designer and self._mounted:
@@ -163,12 +163,12 @@ class Slider(SliderTemplate):
 
   @property
   def step(self):
-    # return self._props.get('step')
     return self.dom_nodes['anvil-m3-slider-input'].step
 
   @step.setter
   def step(self, value):
-    if value is not 0 or not in_designer:
+    if 
+    if value is not None or not in_designer:
       self.dom_nodes["anvil-m3-slider-input"].step = value
       self._update_progress()
     if in_designer and self._mounted:
