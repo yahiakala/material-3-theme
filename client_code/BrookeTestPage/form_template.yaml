@@ -78,7 +78,7 @@ components_by_slot:
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
     - name: card_2
-      properties: {appearance: filled}
+      properties: {appearance: elevated}
       type: form:Components.Card
       layout_properties: {grid_position: 'FGQTIR,KATWKB'}
       components:
