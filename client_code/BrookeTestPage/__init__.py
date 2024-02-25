@@ -14,16 +14,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     self.init_components(**properties)
     self.layout.layout.show_sidesheet = False
     self.repeating_panel_1.items = app_tables.people.search()
-
-  def icon_button_1_click(self, **event_args):
-    self.layout.layout.show_sidesheet = False
-
-  def button_menu_1_click(self, **event_args):
-    """This method is called when the Button is clicked"""
-    print('clicked')
-
-  def toggle_icon_button_1_click(self, **event_args):
-    print('hello')
+    self.repeating_panel_1_copy.items = app_tables.people.search()
 
 
 
