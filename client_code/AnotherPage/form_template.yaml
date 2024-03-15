@@ -7,27 +7,14 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: text_1
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
   - name: card_1
-    properties: {visible: true}
+    properties:
+      card_content_padding: ['32', 16px, '32', 16px]
+      margin: ['54', '66', '54', '66']
     type: form:Components.Card
     layout_properties: {}
-  - name: switch_1
-    properties: {}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: radio_button_1
-    properties: {selected: true}
-    type: form:Components.RadioButton
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {checked: true}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: file_loader_1
-    properties: {}
-    type: form:Components.FileLoader
-    layout_properties: {}
+    components:
+    - name: button_1
+      properties: {text: Send email, appearance: filled, align: center}
+      type: form:Components.Button
+      layout_properties: {slot: card-content-slot}
