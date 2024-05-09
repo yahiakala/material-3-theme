@@ -66,3 +66,4 @@ slots:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet-footer}
     target: {type: container, name: sidesheet_content_1}
+layout_metadata: {internal: true}
