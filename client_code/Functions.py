@@ -16,26 +16,26 @@ def theme_color_to_css(color:str):
     return color
 
 #REUSABLE PROPERTIES
-def property_with_callback(prop, cb):
+def property_with_callback(prop, cb, default_value=None):
   def getter(self):
-    return self._props.get(prop)
+    return self._props.get(prop, default_value)
   def setter(self, value):
     self._props[prop] = value
     cb(self, value)
   return property(getter, setter)
   
-def property_without_callback(prop):
+def property_without_callback(prop, default_value=None):
   def getter(self):
-    return self._props.get(prop)
+    return self._props.get(prop, default_value)
   def setter(self, value):
     self._props[prop] = value
   return property(getter, setter)
 
-def color_property(dom_node_name, style_prop, prop_name):
+def color_property(dom_node_name, style_prop, prop_name, default_value=None):
   def set_color(self, value):
     if value: value = theme_color_to_css(value)
     self.dom_nodes[dom_node_name].style[style_prop] = value
-  return property_with_callback(prop_name, set_color)
+  return property_with_callback(prop_name, set_color, default_value)
   # def getter(self):
   #   return self.dom_nodes[dom_node_name].style[style_prop]
 
@@ -70,13 +70,13 @@ def checked_property(dom_node_name, prop_name="selected"):
     self.dom_nodes[dom_node_name].checked = value
   return property_with_callback(prop_name, set_checked)
 
-def enabled_property(dom_node_name, prop_name="enabled"):
+def enabled_property(dom_node_name, prop_name="enabled", default_value=True):
   def set_enabled(self, value):
     if value:
       self.dom_nodes[dom_node_name].removeAttribute("disabled")
     else:
       self.dom_nodes[dom_node_name].setAttribute("disabled", " ")
-  return property_with_callback(prop_name, set_enabled)
+  return property_with_callback(prop_name, set_enabled, default_value)
 
 def name_property(dom_node_name, prop_name="name"):
   def set_name(self, value):
