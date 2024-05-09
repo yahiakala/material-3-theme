@@ -3,6 +3,7 @@ from .Card import Card
 import anvil.designer
 from ..Functions import property_with_callback
 
+#todo figure out how to get default value to work
 enabled_property = {"name": "enabled", "type": "boolean", "important": True, "default_value": True, "designer_hint": "enabled", "group": "Interaction"}
 click_event = {"name": "click", "default_event": True, "description": "When the component is clicked"}
 
