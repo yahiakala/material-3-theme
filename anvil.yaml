@@ -112,7 +112,11 @@ toolbox_sections:
     icon: {light: /ide/img/toolbox/Canvas.svg, dark: /ide/img/toolbox/Canvas.dark.svg}
     component: {type: anvil.Canvas}
 name: Material 3 Theme 2.0
-runtime_options: {version: 3, client_version: '3', server_version: python3-full, server_spec: null}
+runtime_options:
+  version: 3
+  client_version: '3'
+  server_version: python3-full
+  server_spec: {base: python310-minimal}
 startup_form: null
 native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.com">
 
