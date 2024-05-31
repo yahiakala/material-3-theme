@@ -13,7 +13,7 @@ components_by_slot:
         image_height: 300px
         card_content_padding: ['16', '28', '16', '28']
         role: null
-        image_position: right
+        image_position: top
       type: form:Components.Card
       layout_properties: {grid_position: 'WFWNVB,SSHCJN'}
       components:
@@ -42,7 +42,7 @@ components_by_slot:
         image_height: 300px
         card_content_padding: ['16', '28', '16', '28']
         border: ''
-        image_position: right
+        image_position: top
       type: form:Components.Card
       layout_properties: {grid_position: 'WFWNVB,GWTWMU'}
       components:

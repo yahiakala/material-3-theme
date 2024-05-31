@@ -55,7 +55,8 @@ class Card(CardTemplate):
   def _set_card_img(self, *_args):
     if self.card_image:
       #set a card position so the image appears
-      self.image_position = 'top'
+      if not self.image_position:
+        self.image_position = 'top'
       if isinstance(self.card_image, str):
         self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image}')"
       elif type(self.card_image) is anvil.LazyMedia:
