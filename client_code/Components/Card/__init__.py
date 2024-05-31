@@ -20,7 +20,7 @@ class Card(CardTemplate):
       self.dom_nodes['empty-image'].style.display = "none"
       self.dom_nodes['empty-content'].style.display = "none"
 
-  # align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
+  align = style_property('anvil-m3-card', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
 
   def _set_nodes_class_by_image(self, image_position, val):
@@ -29,7 +29,6 @@ class Card(CardTemplate):
     self.dom_nodes['image'].classList.toggle(f'{image_position}-image', val)
     
   def _set_image_position(self, value):
-    print(value)
     for position in [None, 'top', 'bottom', 'left', 'right', 'full']:
       self._set_nodes_class_by_image(position or 'none', False)
     
