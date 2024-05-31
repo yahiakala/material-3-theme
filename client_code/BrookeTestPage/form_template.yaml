@@ -13,6 +13,7 @@ components_by_slot:
         image_height: 300px
         card_content_padding: ['16', '28', '16', '28']
         role: null
+        image_position: right
       type: form:Components.Card
       layout_properties: {grid_position: 'WFWNVB,SSHCJN'}
       components:
