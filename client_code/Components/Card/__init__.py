@@ -29,6 +29,7 @@ class Card(CardTemplate):
     self.dom_nodes['image'].classList.toggle(f'{image_position}-image', val)
     
   def _set_image_position(self, value):
+    print(value)
     for position in [None, 'top', 'bottom', 'left', 'right', 'full']:
       self._set_nodes_class_by_image(position or 'none', False)
     
