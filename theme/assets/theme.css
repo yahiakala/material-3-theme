@@ -404,17 +404,13 @@ body {
   margin: 0;
 }
 
-.anvil-m3-sidesheet-content {
-/*   height: calc(100vh - 176px) */
+.anvil-m3-sidesheet div.anvil-html-templated-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-/*TODO: Figure this out*/
-/* .anvil-m3-sidesheet-footer {
-    position: absolute;
-    bottom: 24px;
-    height: 64px
-}
- */
 
 @media(min-width:600px) {
   .anvil-m3-sidesheet.anvil-m3-open {
