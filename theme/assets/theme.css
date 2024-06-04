@@ -394,10 +394,14 @@ body {
 .anvil-m3-sidesheet-title-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   column-gap: 12px;
   padding-bottom: 24px;
 
+}
+
+.anvil-m3-sidesheet-title-container h1, .anvil-m3-sidesheet-title-container h2, .anvil-m3-sidesheet-title-container h3 {
+  margin: 0;
 }
 
 .anvil-m3-sidesheet-content {
