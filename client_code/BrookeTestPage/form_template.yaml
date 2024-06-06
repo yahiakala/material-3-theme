@@ -87,13 +87,14 @@ components_by_slot:
         layout_properties: {slot: card-content-slot}
         event_bindings: {}
     - name: text_field_1
-      properties: {placeholder: Long placeholder text}
+      properties: {placeholder: Long placeholder text, appearance: outlined}
       type: form:Components.TextInput.TextField
       layout_properties: {grid_position: 'ZHBAGJ,AXLSUW'}
     - name: dropdown_menu_1
       properties:
         placeholder: Long placeholder text
         items: [Item 1]
+        appearance: outlined
       type: form:Components.DropdownMenu
       layout_properties: {grid_position: 'DPTAFV,BIUBQY'}
     - name: interactive_card_1
