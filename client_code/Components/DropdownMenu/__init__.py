@@ -42,7 +42,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['anvil-m3-textfield'].style.cursor = "pointer"
     self.selection_field.dom_nodes['anvil-m3-textfield'].setAttribute("readonly", True)
 
-    if not self.label_text and self.placeholder:
+    if not self.label_text and self.placeholder: #when no label, in unfocused state, use the placeholder as the display text.
       self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
 
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways.
@@ -167,10 +167,15 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.remove()
 
   def _handle_selection_field_focus(self, event):
+    if not self.label_text:
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
+    if not self.label_text and self.placeholder and self.selected_value is None:
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
+    
 
   def _handle_keyboard_events(self, event):
     if not self._has_focus:
@@ -237,13 +242,9 @@ class DropdownMenu(DropdownMenuTemplate):
       value = not self.menu.visible
     self.menu.visible = value
     if value:
-      if not self.label_text and self.placeholder:
-        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
     else:
-      if not self.label_text and self.placeholder and self.selected_value is None:
-        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
       if self.selected_value is None:
         self._hoverIndex = None
@@ -256,9 +257,14 @@ class DropdownMenu(DropdownMenuTemplate):
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
+    
     if self.selected_value is None:
+      if not self.label_text and self.placeholder:
+         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self._hoverIndex = None
     else:
+      if not self.label_text:
+          self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       self._hoverIndex = self._children.index(self._selected_menuItem)
     self._update_hover_styles()
 
