@@ -4,13 +4,14 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Functions import innerText_property
+from ..Functions import innerText_property, color_property, theme_color_to_css
 from anvil.js import window
 
 
 class NavigationRailLayout(NavigationRailLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
     self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
@@ -27,6 +28,19 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
   #   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
+
+  navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
+  
+  @property
+  def background_color(self):
+    return self._props.get('background_color')
+
+  @background_color.setter
+  def background_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self._props['background_color'] = value
+    window.document.body.style.backgroundColor = value
+
 
   def open_nav_drawer(self, e):
     self.nav_rail.style.width = '360px'
