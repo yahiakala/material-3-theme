@@ -31,8 +31,8 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   def hide_nav_drawer(self, e):
     self.nav_drawer.style.left = "-101%"
     self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
+    window.setTimeout(lambda: self.nav_drawer.style.setProperty('width', '0px'), 250)
+    window.setTimeout(lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245)
 
   def add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
