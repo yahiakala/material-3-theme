@@ -251,7 +251,10 @@ body {
 }
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-drawer-close-btn span {
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-drawer-close-btn span,
+.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
+.anvil-m3-navigation-drawer .anvil-m3-drawer-close-btn span {
   font-size: 24px;
   }
 }
@@ -261,7 +264,7 @@ body {
   cursor: pointer;
 }
 
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn {
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn, .anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn {
   display: flex;
 }
 
