@@ -27,7 +27,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
-  #   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
+   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
 
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
   
