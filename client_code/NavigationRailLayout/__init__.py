@@ -80,9 +80,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     value = value.lower().replace(' ', '-')
     self.nav_rail.className = "anvil-m3-navigation-rail"
     self.nav_rail.classList.add(f"anvil-m3-{value}")
-    #todo: remove the below?
-    self.content.className = "anvil-m3-content"
-    self.content.classList.add(f"anvil-m3-{value}")
 
   @property
   def navigation_rail_vertical_align(self):
@@ -92,6 +89,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   def navigation_rail_vertical_align(self, value):
     self._props['navigation_rail_vertical_align'] = value
     value = value.lower()
+    for c in ['anvil-m3-align-top', 'anvil-m3-align-center', 'anvil-m3-align-bottom']:
+      self.nav_rail.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-align-{value}")
 
   @property

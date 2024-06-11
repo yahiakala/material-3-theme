@@ -107,12 +107,24 @@ body {
 
 @media(min-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-align-top {
-    
+    justify-content: flex-start;
+  }
+}
+
+@media(min-width: 600px) {
+  .anvil-m3-navigation-rail.anvil-m3-align-center {
+    justify-content: center;
+  }
+}
+
+@media(min-width: 600px) {
+  .anvil-m3-navigation-rail.anvil-m3-align-bottom {
+    justify-content: flex-end;
   }
 }
   
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
+.anvil-m3-navigation-rail.anvil-m3-bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer, .anvil-m3-navigation-drawer {
     width: 100%;
     padding: 12px 8px 16px 8px;
     flex-direction: row;
@@ -128,7 +140,7 @@ body {
 }
 
 @media(max-width: 600px) {
-  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
+  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer, .anvil-m3-navigation-drawer {
     display: block;
 /*     width: 0px; */
     height: 100%;
