@@ -72,17 +72,27 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   
   @property
   def navigation_rail_collapse_to(self):
-    return self._navigation_rail_collapse_to
+    return self._props.get('navigation_rail_collapse_to')
 
   @navigation_rail_collapse_to.setter
   def navigation_rail_collapse_to(self, value):
-    self._navigation_rail_collapse_to = value
+    self._props['navigation_rail_vertical'] = value
     value = value.lower().replace(' ', '-')
     self.nav_rail.className = "anvil-m3-navigation-rail"
     self.nav_rail.classList.add(f"anvil-m3-{value}")
     #todo: remove the below?
     self.content.className = "anvil-m3-content"
     self.content.classList.add(f"anvil-m3-{value}")
+
+  @property
+  def navigation_rail_vertical_align(self):
+    return self._props.get('navigation_rail_vertical_align')
+
+  @navigation_rail_vertical_align.setter
+  def navigation_rail_vertical_align(self, value):
+    self._props['navigation_rail_vertical_align'] = value
+    value = value.lower()
+    self.nav_rail.classList.add(f"anvil-m3-align-{value}")
 
   @property
   def show_sidesheet(self):

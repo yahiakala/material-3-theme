@@ -70,6 +70,10 @@ body {
   margin: 0;
 }
 
+*:focus-visible {
+    outline-color: var(--anvil-m3-primary);
+}
+
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 600px) {
   .anvil-m3-navigation-drawer {
@@ -100,9 +104,11 @@ body {
     height: 100%;
   }
 }
-  
-*:focus-visible {
-    outline-color: var(--anvil-m3-primary);
+
+@media(min-width: 600px) {
+  .anvil-m3-navigation-rail.anvil-m3-align-top {
+    
+  }
 }
   
 @media(max-width: 600px) {
@@ -309,16 +315,16 @@ body {
 }
 
 @media(min-width: 600px) {
-  .anvil-m3-content {
+  .anvil-m3-content.anvil-m3-content-navigation-rail {
     left: 80px;
     width: calc(100% - 80px);
     }
 }
 
 @media(min-width: 600px) {
-  .anvil-m3-content {
-    left: 80px;
-    width: calc(100% - 80px);
+  .anvil-m3-content.anvil-m3-content-navigation-drawer {
+    left: 360px;
+    width: calc(100% - 360px);
     }
 }
 

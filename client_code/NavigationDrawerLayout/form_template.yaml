@@ -25,21 +25,13 @@ container:
       <div anvil-name="anvil-m3-navigation-drawer-scrim" class="anvil-m3-navigation-drawer-scrim"></div>
       <div anvil-name="anvil-m3-sidesheet-scrim" class="anvil-m3-sidesheet-scrim"></div>
 
-      <div class="anvil-m3-content" anvil-slot="anvil-m3-content" anvil-name="anvil-m3-content">
+      <div class="anvil-m3-content anvil-m3-content-navigation-drawer" anvil-slot="anvil-m3-content" anvil-name="anvil-m3-content">
         <p anvil-if-slot-empty="anvil-m3-content" class="anvil-designer-only" style="font-style: italic;">Add content here</p>
       </div>
       <div class="anvil-m3-sidesheet anvil-m3-open" anvil-slot="anvil-m3-sidesheet" anvil-name="anvil-m3-sidesheet">
         <p anvil-if-slot-empty="anvil-m3-sidesheet" class="anvil-designer-only" style="font-style: italic;">Add optional sidesheet content here</p>
       </div>
-components:
-- name: card_1
-  properties: {}
-  type: form:Components.Card
-  layout_properties: {slot: anvil-m3-content}
-- name: navigation_link_1
-  properties: {}
-  type: form:Components.NavigationLink
-  layout_properties: {slot: anvil-m3-navigation-drawer-content}
+components: []
 is_package: true
 slots:
   slot_1:
@@ -47,7 +39,7 @@ slots:
     set_layout_properties: {slot: anvil-m3-content}
     target: {type: container, name: ''}
   slot_2:
-    index: 1
+    index: 0
     set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
     target: {type: container, name: ''}
 properties:

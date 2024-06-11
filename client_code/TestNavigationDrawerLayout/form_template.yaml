@@ -1,2 +1,13 @@
 layout: {type: 'form:NavigationDrawerLayout'}
 is_package: true
+components_by_slot:
+  slot_2:
+  - name: navigation_link_1
+    properties: {}
+    type: form:Components.NavigationLink
+    layout_properties: {}
+  slot_1:
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
