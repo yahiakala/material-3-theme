@@ -41,7 +41,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self._props['background_color'] = value
     window.document.body.style.backgroundColor = value
 
-
   def open_nav_drawer(self, e):
     self.nav_rail.style.width = '360px'
     self.nav_rail.style.left = "0px"
