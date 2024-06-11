@@ -3,7 +3,7 @@ properties:
   type: enum
   default_value: Bottom app bar
   default_binding_prop: true
-  options: [Bottom app bar, Navigation drawer]
+  options: [Bottom app bar, Modal navigation drawer]
   description: How should the side navigation rail collapse on mobile?
 - {name: navigation_rail_color, type: color, default_value: ''}
 - {name: background_color, type: color, default_value: ''}
