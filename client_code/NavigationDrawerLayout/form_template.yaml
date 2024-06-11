@@ -1,0 +1,16 @@
+container:
+  type: HtmlTemplate
+  properties:
+    html: |-
+      <center style="font-style:italic; color:#888; margin: 3em;">
+        (Insert your custom HTML here)
+      </center>
+      <div anvil-slot="default"></div>
+components: []
+is_package: true
+slots: {}
+properties:
+- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true}
+- {name: background_color, type: string, default_value: '', important: true}
+- {name: text_color, type: string, default_value: '', important: true}
+- {name: show_sidesheet, type: boolean, default_value: false, important: true}

@@ -1,4 +1,4 @@
-from ._anvil_designer import StandardPageLayoutTemplate
+from ._anvil_designer import NavigationRailLayoutTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -8,7 +8,7 @@ from ..Functions import innerText_property
 from anvil.js import window
 
 
-class StandardPageLayout(StandardPageLayoutTemplate):
+class NavigationRailLayout(NavigationRailLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']

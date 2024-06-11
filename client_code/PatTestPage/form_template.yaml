@@ -1,5 +1,5 @@
 layout:
-  type: form:StandardPageLayout
+  type: form:NavigationRailLayout
   properties: {show_sidesheet: false}
 is_package: true
 components_by_slot:
