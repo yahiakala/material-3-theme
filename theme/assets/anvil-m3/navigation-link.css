@@ -104,6 +104,12 @@
   width: 56px;
 }
 
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-radius: 100px;
+}
 
 /*on mobile in drawer*/
 @media(max-width: 600px) {
@@ -119,6 +125,7 @@
   border-radius: 100px;
 }
 }
+  
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link .anvil-m3-navigation-link-text {
   margin: 0px;
