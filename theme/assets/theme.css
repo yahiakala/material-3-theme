@@ -71,8 +71,10 @@ body {
 }
 
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
-.anvil-m3-modal-navigation-drawer {
-  
+@media(min-width: 600px) {
+  .anvil-m3-navigation-drawer {
+    
+  }
 }
 
 @media(min-width: 600px) {
