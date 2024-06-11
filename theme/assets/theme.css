@@ -77,7 +77,7 @@ body {
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 600px) {
   .anvil-m3-navigation-drawer {
-    width: 360px;
+    width: 360px !important;
     height: 100%;
     padding: 56px 12px;
   }
@@ -162,24 +162,13 @@ body {
   inherits: false;
 }
 
-
+/*TODO: figure out transition*/
 .anvil-m3-top-app-bar.anvil-m3-scrolled {
+  transition: background-color .25s; 
   background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
 
 }
 
-
-/* @media(max-width: 600px) {
-  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-navigation-rail-content {
-    display: none;
-  }
-} */
-
-/* @media(max-width: 600px) {
-  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
-    display: none;
-  }
-} */
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar {
