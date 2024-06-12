@@ -92,9 +92,9 @@ class NavigationLink(NavigationLinkTemplate):
   @badge.setter
   def badge(self, value):
     if value:
-      self.dom_nodes['anvil-m3-icon-badge'].classList.add('anvil-m3-has-badge')
+      self.dom_nodes['anvil-m3-navigation-link'].classList.add('anvil-m3-has-badge')
     else:
-      self.dom_nodes['anvil-m3-icon-badge'].style.display = "none"
+      self.dom_nodes['anvil-m3-navigation-link'].classList.remove('anvil-m3-has-badge')
     self._badge = value
 
   @property
