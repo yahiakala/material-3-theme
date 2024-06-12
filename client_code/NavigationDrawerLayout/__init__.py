@@ -4,12 +4,14 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Functions import innerText_property, color_property, theme_color_to_css
 from anvil.js import window
 
 
 class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
     self.nav_drawer = self.dom_nodes['anvil-m3-navigation-drawer']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
@@ -21,6 +23,9 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
+
+  navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
+  
 
   def open_nav_drawer(self, e):
     self.nav_drawer.style.width = '360px'
