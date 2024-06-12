@@ -25,7 +25,26 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
   navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
-  
+
+  @property
+  def background_color(self):
+    return self._props.get('background_color')
+
+  @background_color.setter
+  def background_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self._props['background_color'] = value
+    window.document.body.style.backgroundColor = value
+
+  @property
+  def text_color(self):
+    return self._props.get('text_color')
+
+  @text_color.setter
+  def text_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self._props['text_color'] = value
+    window.document.body.style.color = value
 
   def open_nav_drawer(self, e):
     self.nav_drawer.style.width = '360px'
