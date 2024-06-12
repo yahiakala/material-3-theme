@@ -153,14 +153,14 @@
   background: unset;
 }
 
-.anvil-m3-navigation-drawer .anvil-m3-navigation-rail-container{
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link-container{
   align-items: center;
   justify-content: flex-start;
 }
 
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-drawer .anvil-m3-navigation-rail-content {
+.anvil-m3-navigation-drawer .anvil-m3-navigation-drawer-content {
   width:100%;
 }
 }
