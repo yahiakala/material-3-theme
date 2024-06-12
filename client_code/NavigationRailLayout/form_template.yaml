@@ -44,9 +44,9 @@ container:
   properties:
     html: |+
       <div anvil-name="anvil-m3-navigation-rail" class="anvil-m3-navigation-rail">
-        <div anvil-name="anvil-m3-drawer-close-btn" class="anvil-m3-drawer-close-btn">
-          <span class="material-symbols-outlined">menu_open</span>
-        </div>
+        <!-- <div anvil-name="anvil-m3-drawer-close-btn" class="anvil-m3-drawer-close-btn"> -->
+          <!-- <span class="material-symbols-outlined">menu_open</span>
+        </div> -->
         <div class="anvil-m3-navigation-rail-content" anvil-slot="anvil-m3-navigation-rail-content">
             <p anvil-if-slot-empty="anvil-m3-navigation-rail-content" class="anvil-designer-only" style="font-style: italic;">Add navigation links here</p>
         </div>

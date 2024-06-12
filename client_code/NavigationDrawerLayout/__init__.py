@@ -13,13 +13,13 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.init_components(**properties)
     self.nav_drawer = self.dom_nodes['anvil-m3-navigation-drawer']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
-    self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
+    # self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
 
     window.document.addEventListener('scroll', self.add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
-    self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
+    # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
   def open_nav_drawer(self, e):
