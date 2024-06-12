@@ -273,7 +273,7 @@ body {
 
 
 @media(max-width: 600px) {
-  .anvil-m3-modal-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
+  .anvil-m3-modal-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim,   .anvil-m3-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
     display: block;
   }
 }

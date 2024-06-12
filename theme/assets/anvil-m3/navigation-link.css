@@ -167,7 +167,7 @@
 
 /*on mobile in drawer*/
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container {
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container, .anvil-m3-modal-navigation-drawer.anvil-m3-shown {
   display: block;
 }
   
@@ -207,13 +207,13 @@
 }
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.shown .anvil-m3-navigation-link:hover{
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link:hover{
   background-color: var(--anvil-m3-dark-overlay-1);
 }
 }
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.shown .anvil-m3-navigation-link:active, .anvil-m3-navigation-rail.navigation-drawer.shown .anvil-m3-navigation-link:focus{
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link:active, .anvil-m3-navigation-rail.navigation-drawer.shown .anvil-m3-navigation-link:focus{
   background-color: var(--anvil-m3-dark-overlay-2);
 }
 }
