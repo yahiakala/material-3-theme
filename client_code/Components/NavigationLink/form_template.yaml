@@ -44,7 +44,7 @@ container:
             <span anvil-name="anvil-m3-icon-badge" class="anvil-m3-icon-badge" style="display: none"></span>
           </div>
           <div anvil-name="anvil-m3-navigation-link-text" class="anvil-m3-navigation-link-text"></div>
-          <span anvil-name="anvil-m3-navigation-drawer-icon-badge" class="anvil-m3-navigation-drawer-icon-badge" style="display: none"></span>
+          <span anvil-name="anvil-m3-navigation-drawer-icon-badge" class="anvil-m3-navigation-drawer-icon-badge"></span>
         </a>
       </div>
   event_bindings: {}

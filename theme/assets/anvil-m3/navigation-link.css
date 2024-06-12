@@ -106,7 +106,7 @@
   display: none !important;
 }
 
-.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3--navigation-drawer-icon-badge, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3--navigation-drawer-icon-badge {
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge {
   display: block;
 }
 
