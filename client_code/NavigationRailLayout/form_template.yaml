@@ -74,4 +74,4 @@ container:
       </div>
 
   event_bindings: {}
-layout_metadata: {title: NavigationRailLayout, description: A simple layout with a left-side navigation rail and optional right-hand sidepanel, thumbnail: 'asset:designer_icons/material-3-mykonos-theme.png'}
+layout_metadata: {title: NavigationRailLayout, description: A simple layout with a left-side navigation rail and optional right-hand sidepanel, thumbnail: 'asset:designer_icons/navigation-rail-layout.png'}

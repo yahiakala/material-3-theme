@@ -1,3 +1,19 @@
+properties:
+- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true}
+- {name: background_color, type: string, default_value: '', important: true}
+- {name: text_color, type: string, default_value: '', important: true}
+- {name: show_sidesheet, type: boolean, default_value: false, important: true}
+is_package: true
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-content}
+    target: {type: container, name: ''}
+  slot_2:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
+    target: {type: container, name: ''}
+components: []
 container:
   type: HtmlTemplate
   properties:
@@ -31,19 +47,4 @@ container:
       <div class="anvil-m3-sidesheet anvil-m3-open" anvil-slot="anvil-m3-sidesheet" anvil-name="anvil-m3-sidesheet">
         <p anvil-if-slot-empty="anvil-m3-sidesheet" class="anvil-designer-only" style="font-style: italic;">Add optional sidesheet content here</p>
       </div>
-components: []
-is_package: true
-slots:
-  slot_1:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-content}
-    target: {type: container, name: ''}
-  slot_2:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
-    target: {type: container, name: ''}
-properties:
-- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true}
-- {name: background_color, type: string, default_value: '', important: true}
-- {name: text_color, type: string, default_value: '', important: true}
-- {name: show_sidesheet, type: boolean, default_value: false, important: true}
+layout_metadata: {title: NavigationDrawerLayout, description: 'A simple layout with a left-hand navigation drawer and optional sidepanel '}
