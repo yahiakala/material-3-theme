@@ -92,7 +92,7 @@ class NavigationLink(NavigationLinkTemplate):
   @badge.setter
   def badge(self, value):
     if value:
-      self.dom_nodes['anvil-m3-icon-badge'].style.display = "block"
+      self.dom_nodes['anvil-m3-icon-badge'].classList.add('anvil-m3-has-badge')
     else:
       self.dom_nodes['anvil-m3-icon-badge'].style.display = "none"
     self._badge = value
@@ -106,9 +106,13 @@ class NavigationLink(NavigationLinkTemplate):
     if value and self.badge:
       self.dom_nodes['anvil-m3-icon-badge'].innerHTML = value
       self.dom_nodes['anvil-m3-icon-badge'].classList.add("anvil-m3-large-badge")
+      self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].innerHTML = value
+      self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].classList.add("anvil-m3-large-badge")
     else:
       self.dom_nodes['anvil-m3-icon-badge'].innerHTML = ""
       self.dom_nodes['anvil-m3-icon-badge'].classList.remove("anvil-m3-large-badge")
+      self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].innerHTML = ""
+      self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].classList.remove("anvil-m3-large-badge")
     self._badge_count = value
 
   @property
