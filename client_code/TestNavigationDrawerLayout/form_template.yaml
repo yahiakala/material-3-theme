@@ -4,16 +4,16 @@ layout:
 is_package: true
 components_by_slot:
   slot_2:
-  - name: button_1
-    properties: {text: Create, icon: add, appearance: elevated}
-    type: form:Components.Button
-    layout_properties: {}
   - name: navigation_link_2
-    properties: {badge: true, badge_count: 122, selected: true}
+    properties: {badge: false, badge_count: null, selected: true, material_icon: home, text: Home}
     type: form:Components.NavigationLink
     layout_properties: {}
   - name: navigation_link_1
-    properties: {}
+    properties: {material_icon: notifications, text: Notifications, badge: true, badge_count: 2}
+    type: form:Components.NavigationLink
+    layout_properties: {}
+  - name: navigation_link_3
+    properties: {material_icon: schedule, text: Recent}
     type: form:Components.NavigationLink
     layout_properties: {}
   slot_1:
