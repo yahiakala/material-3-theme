@@ -94,7 +94,7 @@
 
 .anvil-m3-navigation-link .anvil-m3-navigation-drawer-icon-badge {
   display: none;
-  background-color: var(--anvil-m3-on-surf;
+  background-color: var(--anvil-m3-error);
   height: 6px;
   width: 6px;
   border-radius: 6px;
