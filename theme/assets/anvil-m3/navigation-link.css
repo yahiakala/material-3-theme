@@ -20,7 +20,7 @@
 }
 
 .anvil-m3-navigation-drawer-icon-badge {
-  padding: 8px 20px;
+  margin: 8px 20px;
 }
 
 .anvil-m3-navigation-link-icon-label {
@@ -94,9 +94,18 @@
 
 .anvil-m3-navigation-link .anvil-m3-navigation-drawer-icon-badge {
   display: none;
+  background-color: var(--anvil-m3-on-surface-variant);
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+}
+
+.anvil-m3-navigation-link .anvil-m3-navigation-drawer-icon-badge.anvil-m3-large-badge {
   color: var(--anvil-m3-on-surface-variant);
+  background-color: transparent;
   font-size: 14px;
 }
+
 
 .anvil-m3-navigation-link .anvil-m3-icon-badge {
   font-size: 11px;
