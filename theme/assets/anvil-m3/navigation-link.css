@@ -16,6 +16,7 @@
 
 .anvil-m3-navigation-drawer .anvil-m3-navigation-link, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link {
   font-size: 14px;
+  justify-content: space-between
 }
 
 .anvil-m3-navigation-link-icon-label {
