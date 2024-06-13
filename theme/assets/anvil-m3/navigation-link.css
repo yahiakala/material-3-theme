@@ -1,9 +1,10 @@
 /* TODO: badges should be at end of link when in drawer */
 
-.anvil-m3-navigation-link-container {
+/*TODO: remove this?*/
+/* .anvil-m3-navigation-link-container {
   display: flex;
   justify-content: center;
-}
+} */
 
 .anvil-m3-navigation-link {
   text-align: center;
@@ -16,6 +17,12 @@
 .anvil-m3-navigation-drawer .anvil-m3-navigation-link, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link {
   font-size: 14px;
 }
+
+.anvil-m3-navigation-link-icon-label {
+  display: flex;
+  align-items: center;
+}
+
 
 .anvil-m3-navigation-link .anvil-m3-navigation-link-text {
   margin-bottom: 14px;
