@@ -12,12 +12,17 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self.init_components(**properties)
+    
     self.nav_drawer = self.dom_nodes['anvil-m3-navigation-drawer']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
     # self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
+    self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
+    self.sidesheet = self.dom_nodes['anvil-m3-sidesheet']
+    self.content = self.dom_nodes['anvil-m3-content']
+    self.sidesheet_previous_state = False
+    self.init_components(**properties)
 
     window.document.addEventListener('scroll', self.add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
@@ -63,4 +68,41 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
       if window.scrollY == 0:
         self.app_bar.classList.remove('anvil-m3-scrolled')
     else:
-      self.app_bar.classList.add('anvil-m3-scrolled')   
+      self.app_bar.classList.add('anvil-m3-scrolled')
+
+  @property
+  def show_sidesheet(self):
+    return self._show_sidesheet
+
+  @show_sidesheet.setter
+  def show_sidesheet(self, value):
+    self._show_sidesheet = value
+    if value:
+      self._open_sidesheet()
+    else:
+      self._close_sidesheet()
+
+  def _open_sidesheet(self):
+    if self.sidesheet_previous_state:
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.content.classList.add('anvil-m3-transition-width')
+      window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
+      self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    else:
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_scrim.style.opacity = 1
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      self.sidesheet.classList.add('anvil-m3-open')
+      self.content.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_previous_state = True
+    
+  def _close_sidesheet(self):
+    self.content.classList.add('anvil-m3-transition-width')
+    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
+    self.sidesheet.classList.remove('anvil-m3-open')
+    self.content.classList.remove('anvil-m3-sidesheet-open')
+    window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
+    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
