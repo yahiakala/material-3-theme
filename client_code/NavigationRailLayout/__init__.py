@@ -76,7 +76,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
   @navigation_rail_collapse_to.setter
   def navigation_rail_collapse_to(self, value):
-    self._props['navigation_rail_vertical'] = value
+    self._props['navigation_rail_collapse_to'] = value
     value = value.lower().replace(' ', '-')
     self.nav_rail.className = "anvil-m3-navigation-rail"
     self.nav_rail.classList.add(f"anvil-m3-{value}")
