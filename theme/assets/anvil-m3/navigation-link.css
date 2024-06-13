@@ -14,9 +14,9 @@
   font-size: 12px;
 }
 
-.anvil-m3-navigation-drawer .anvil-m3-navigation-link, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link {
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link, .anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link {
   font-size: 14px;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .anvil-m3-navigation-drawer-icon-badge {
@@ -26,6 +26,14 @@
 .anvil-m3-navigation-link-icon-label {
   display: flex;
   align-items: center;
+}
+
+.anvil-m3-navigation-rail .anvil-m3-navigation-link-icon-label {
+  flex-direction: column;
+}
+
+.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-icon-label {
+  flex-direction: row;
 }
 
 
@@ -118,11 +126,11 @@
   display: block;
 }
 
-.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-icon-badge, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-icon-badge {
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-icon-badge, .anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-icon-badge {
   display: none !important;
 }
 
-.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge, .anvil-m3-modal-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge {
+.anvil-m3-navigation-drawer .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge, .anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link.anvil-m3-has-badge .anvil-m3-navigation-drawer-icon-badge {
   display: block;
 }
 

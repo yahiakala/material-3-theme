@@ -18,4 +18,4 @@ class TestNavigationDrawerLayout(TestNavigationDrawerLayoutTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked."""
-    pass
+    open_form('BrookeTestPage')
