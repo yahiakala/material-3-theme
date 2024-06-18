@@ -11,3 +11,7 @@ components_by_slot:
     properties: {}
     type: ColumnPanel
     layout_properties: {}
+  - name: canvas_1
+    properties: {height: 100}
+    type: Canvas
+    layout_properties: {}
