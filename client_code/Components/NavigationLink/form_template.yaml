@@ -51,4 +51,5 @@ container:
         </a>
       </div>
   event_bindings: {}
+  data_bindings: []
 custom_component_container: false
