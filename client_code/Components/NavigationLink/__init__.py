@@ -31,7 +31,6 @@ class NavigationLink(NavigationLinkTemplate):
     self.raise_event("click")
     if self.navigate_to:
       open_form(self.navigate_to)
-      self.selected = True
 
   def _anvil_get_interactions_(self):
     return [{
