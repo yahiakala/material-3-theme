@@ -22,7 +22,7 @@ components_by_slot:
       layout_properties: {grid_position: 'OFPDOF,MVZSNJ'}
       components:
       - name: text_1
-        properties: {}
+        properties: {text: Hello}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: icon_button_1
