@@ -10,7 +10,7 @@ class AnotherPage(AnotherPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     print(self.button_menu_1.get_components())
-    self.button_menu_1.add_component(L)
+    self.button_menu_1.add_component(Link(text='a link'), slot="anvil-m3-buttonMenu-slot")
   
 
     # Any code you write here will run before the form opens.
