@@ -784,18 +784,19 @@ th.month select.monthselect::after {
   }
 
 /* Data Grids */
-.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header {
+.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header, .anvil-data-grid>.anvil-data-grid-child-panel div.anvil-role-data-grid-header {
   background: %color:Surface Container Low%;
   border-bottom: 1px solid %color:Outline Variant%;
   color: %color:On Surface Variant%;
   border-radius: 24px 24px 0 0;
 }
 
-.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col:last-child {
+
+.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col:last-child, .anvil-data-grid>.anvil-data-grid-child-panel div.anvil-role-data-grid-header div.anvil-data-row-col:last-child {
   border-right: 0;
 }
 
-.anvil-data-grid > .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col {
+.anvil-data-grid  .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col {
   padding: 12px;
   margin: 0;
   border-right: 1px solid %color:Outline Variant%;
@@ -849,6 +850,3 @@ th.month select.monthselect::after {
   align-items:center
 }
 
-.anvil-role-data-grid-header {
-  
-}

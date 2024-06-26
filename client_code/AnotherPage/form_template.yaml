@@ -54,9 +54,13 @@ components_by_slot:
         type: form:Components.Text
         layout_properties: {column: JKSDUP}
       - name: text_2
-        properties: {}
+        properties: {text: Header 2}
         type: form:Components.Text
         layout_properties: {column: VJQQOR}
+      - name: text_3
+        properties: {text: Header 3}
+        type: form:Components.Text
+        layout_properties: {column: OJLQEN}
     - name: repeating_panel_1
       properties: {item_template: AnotherPage.RowTemplate3}
       type: RepeatingPanel
