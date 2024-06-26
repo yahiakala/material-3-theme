@@ -50,7 +50,7 @@ components_by_slot:
       layout_properties: {pinned: true}
       components:
       - name: text_1
-        properties: {text: Header}
+        properties: {text: Header, bold: true}
         type: form:Components.Text
         layout_properties: {column: JKSDUP}
       - name: text_2
@@ -61,6 +61,10 @@ components_by_slot:
         properties: {text: Header 3}
         type: form:Components.Text
         layout_properties: {column: OJLQEN}
+      - name: icon_button_2
+        properties: {icon: edit}
+        type: form:Components.IconButton
+        layout_properties: {column: JKSDUP}
     - name: repeating_panel_1
       properties: {item_template: AnotherPage.RowTemplate3}
       type: RepeatingPanel
