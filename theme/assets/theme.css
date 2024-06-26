@@ -796,7 +796,7 @@ th.month select.monthselect::after {
   border-right: 0;
 }
 
-.anvil-data-grid  .anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col {
+.anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col, .anvil-data-grid>.anvil-data-grid-child-panel div.anvil-role-data-grid-header div.anvil-data-row-col{
   padding: 12px;
   margin: 0;
   border-right: 1px solid %color:Outline Variant%;
@@ -840,7 +840,7 @@ th.month select.monthselect::after {
   margin: 0;
 }
 
-.anvil-data-grid > .data-grid-child-panel>div.auto-grid-header div.data-row-col {
+.anvil-data-grid > .data-grid-child-panel>div.auto-grid-header div.data-row-col, .anvil-data-grid > .data-grid-child-panel div.anvil-role-data-grid-header div.data-row-col{
   border-top: 0;
   border-bottom: 0;
   border-right: 0;
