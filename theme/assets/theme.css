@@ -83,7 +83,7 @@ body {
   }
 }
 
-@media(min-width: 698px) {
+@media(min-width: 980px) {
   .anvil-m3-navigation-drawer {
     display: flex;
     flex-direction: column;
