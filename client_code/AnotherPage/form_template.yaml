@@ -21,15 +21,16 @@ components_by_slot:
       type: form:Components.ButtonMenu
       layout_properties: {grid_position: 'OFPDOF,MVZSNJ'}
       components:
-      - name: text_1
-        properties: {text: Hello}
-        type: form:Components.Text
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: link_1
         properties: {text: Another option}
         type: form:Components.Link
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
         event_bindings: {click: link_1_click}
+      - name: link_2
+        properties: {text: A different option}
+        type: form:Components.Link
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        event_bindings: {click: link_2_click}
   - name: icon_button_1
     properties: {icon: delete, appearance: null, icon_color: 'theme:Error'}
     type: form:Components.IconButton

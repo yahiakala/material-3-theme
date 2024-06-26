@@ -10,11 +10,14 @@ class AnotherPage(AnotherPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     print(self.button_menu_1.get_components())
-    self.button_menu_1.add_component(Link(text='a link'), slot="anvil-m3-buttonMenu-slot")
   
 
     # Any code you write here will run before the form opens.
 
   def link_1_click(self, sender, **event_args):
+    """This method is called clicked"""
+    self.button_menu_1.text = sender.text
+
+  def link_2_click(self, sender, **event_args):
     """This method is called clicked"""
     self.button_menu_1.text = sender.text
