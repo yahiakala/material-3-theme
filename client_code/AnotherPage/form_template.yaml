@@ -35,3 +35,41 @@ components_by_slot:
     properties: {icon: delete, appearance: null, icon_color: 'theme:Error'}
     type: form:Components.IconButton
     layout_properties: {}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Column 1, data_key: column_1}
+      - {id: VJQQOR, title: Column 2, data_key: column_2}
+      - {id: OJLQEN, title: Column 3, data_key: column_3}
+      auto_header: false
+    type: DataGrid
+    components:
+    - name: data_row_panel_1
+      properties: {role: data-grid-header}
+      type: DataRowPanel
+      layout_properties: {pinned: true}
+      components:
+      - name: text_1
+        properties: {text: Header}
+        type: form:Components.Text
+        layout_properties: {column: JKSDUP}
+      - name: text_2
+        properties: {}
+        type: form:Components.Text
+        layout_properties: {column: VJQQOR}
+    - name: repeating_panel_1
+      properties: {item_template: AnotherPage.RowTemplate3}
+      type: RepeatingPanel
+    layout_properties: {}
+  - name: data_grid_2
+    properties:
+      columns:
+      - {id: JKSDUP, title: Column 1, data_key: column_1}
+      - {id: VJQQOR, title: Column 2, data_key: column_2}
+      - {id: OJLQEN, title: Column 3, data_key: column_3}
+    type: DataGrid
+    components:
+    - name: repeating_panel_2
+      properties: {item_template: AnotherPage.RowTemplate4}
+      type: RepeatingPanel
+    layout_properties: {}

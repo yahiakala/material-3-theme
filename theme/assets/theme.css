@@ -845,10 +845,10 @@ th.month select.monthselect::after {
   border-right: 0;
 }
 
-.anvil-role-test {
-  border: 2px dotted magenta
-}
-
 .anvil-panel-row {
   align-items:center
+}
+
+.anvil-role-data-grid-header {
+  
 }

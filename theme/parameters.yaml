@@ -1,6 +1,6 @@
 roles:
-- {name: test, components: null, display_in_toolbox: false}
-- {name: test-test}
+- name: data-grid-header
+  components: [DataRowPanel]
 color_scheme:
   preset_groups:
   - name: Colour Scheme
