@@ -35,6 +35,10 @@ components_by_slot:
     properties: {vertical_align: middle}
     type: FlowPanel
     layout_properties: {}
+  - name: link_3
+    properties: {text: Link, material_icon: link}
+    type: form:Components.Link
+    layout_properties: {}
   - name: icon_button_1
     properties: {icon: delete, appearance: null, icon_color: 'theme:Error'}
     type: form:Components.IconButton
