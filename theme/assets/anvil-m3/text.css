@@ -155,7 +155,7 @@
   display: flex;
 }
 
-a.anvil-m3-link:hover a.anvil-m3-link:focus {
+a.anvil-m3-link:hover, a.anvil-m3-link:focus {
   text-decoration: none;
 }
 
