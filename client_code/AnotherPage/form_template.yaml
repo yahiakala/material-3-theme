@@ -11,6 +11,11 @@ components_by_slot:
     properties: {}
     type: ColumnPanel
     layout_properties: {}
+  - name: file_loader_1
+    properties: {}
+    type: form:Components.FileLoader
+    layout_properties: {}
+    event_bindings: {change: file_loader_1_change}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel

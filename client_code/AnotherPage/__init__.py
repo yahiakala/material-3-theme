@@ -19,3 +19,7 @@ class AnotherPage(AnotherPageTemplate):
   def link_2_click(self, sender, **event_args):
     """This method is called clicked"""
     self.button_menu_1.text = sender.text
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    print(self.file_loader_1.file)

@@ -23,15 +23,15 @@ properties:
 - {name: font, type: string, default_value: '', important: true, description: The font to use for this component., group: Text}
 - {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels, group: Text}
 - {name: icon_size, type: number, important: true, description: 'The size in pixels of the icon. ', group: Text}
-- default_value: left
+- description: The position of this component in the available space.
   group: Layout
-  important: true
   name: align
   type: enum
+  important: true
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: The position of this component in the available space.
+  default_value: left
 - {name: border, type: string, default_value: '', important: false, group: Look and Feel}
 - name: margin
   type: margin
