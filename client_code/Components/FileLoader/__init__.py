@@ -124,6 +124,7 @@ class FileLoader(FileLoaderTemplate):
     self._props["multiple"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].multiple = value
 
+  #TODO: file should be media object
   @property
   def file(self):
     return self._props.get("file")

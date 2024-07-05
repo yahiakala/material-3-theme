@@ -7,6 +7,11 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
+  - name: button_1
+    properties: {text: clear file loader, appearance: elevated}
+    type: form:Components.Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
