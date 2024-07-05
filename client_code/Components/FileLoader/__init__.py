@@ -30,7 +30,8 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
   def clear(self):
-    self.dom_nodes['anvil-m3-fileloader-input'].files = None
+    self.dom_nodes['anvil-m3-fileloader-input'].value = ''
+    self.file = self.dom_nodes['anvil-m3-fileloader-input'].files
     self.dom_nodes['anvil-m3-fileloader-label'].innerText = self.text
     #update show_state text if present
 
