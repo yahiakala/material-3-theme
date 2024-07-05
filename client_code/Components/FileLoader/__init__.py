@@ -55,6 +55,7 @@ class FileLoader(FileLoaderTemplate):
     print(files)
     file_list = [anvil.js.to_media(file) for file in files]
     print(file_list)
+    self.file = file_list[0]
     self.raise_event('change', file=file_list[0], files=file_list)
     if self.show_state:
       num_files = len(files)
@@ -122,6 +123,14 @@ class FileLoader(FileLoaderTemplate):
   def multiple(self, value):
     self._props["multiple"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].multiple = value
+
+  @property
+  def file(self):
+    return self._props.get("file")
+
+  @file.setter
+  def file(self, value):
+    self._props["file"] = value
 
 
     
