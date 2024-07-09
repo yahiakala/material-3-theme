@@ -61,7 +61,7 @@ class Slider(SliderTemplate):
     background = self.dom_nodes["anvil-m3-slider-background"]
     range = float(slider.max) - float(slider.min)
     abs_value = float(slider.value) - float(slider.min)
-    percent = (abs_value / range) * 100;
+    percent = (abs_value / range) * 100
     progress.style.width = f"max(calc({percent}% - 6px), 0px)"
     background.style.width = f"max(calc({100-percent}% - 6px), 0px)"
     progress_right, progress_top = self._check_position()
@@ -207,9 +207,9 @@ class Slider(SliderTemplate):
     markers_container_progress.innerHTML = ''
     markers_container_bg.style.width = self._get_track_width()
     markers_container_progress.style.width = self._get_track_width()
-    slider_range = int(slider.max) - int(slider.min)
-    if slider.step is not 'null':
-      marker_count = int(slider_range / int(slider.step))
+    slider_range = float(slider.max) - float(slider.min)
+    if slider.step != 'null':
+      marker_count = int(slider_range // float(slider.step))
     else:
       marker_count = slider_range
     if self.show_markers:
