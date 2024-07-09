@@ -51,7 +51,7 @@ trailing_icon_color_property = {"name": "trailing_icon_color",
 
 
 click_event = {"name": "icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
-pressed_enter_event = {"name": "pressed_enter", "defaultEvent": False, "description": "When the user presses enter in this component."}
+pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]

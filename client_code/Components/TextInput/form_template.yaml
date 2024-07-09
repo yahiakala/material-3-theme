@@ -54,7 +54,7 @@ properties:
 - {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border, group: Look and Feel}
 is_package: true
 events:
-- {name: change, description: When the text in this component is edited.}
+- {name: change, description: When the text in this component is edited., default_event: true}
 - {name: show, description: When the component is shown on the screen.}
 - {name: hide, description: When the component is removed from the screen.}
 - {name: focus, description: When the component gets focus.}
