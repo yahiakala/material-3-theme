@@ -828,6 +828,14 @@ th.month select.monthselect::after {
   padding: 16px 24px;
 }
 
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-repeating-panel div.anvil-data-row-col {
+  border-right: 1px solid %color:Outline Variant%;
+  border-bottom: 1px solid %color:Outline Variant%;
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+}
+
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col > * {
   flex-grow: 1;
 }
