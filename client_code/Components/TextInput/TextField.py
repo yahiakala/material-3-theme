@@ -50,7 +50,7 @@ trailing_icon_color_property = {"name": "trailing_icon_color",
                                "description": "The color of the trailing icon."}
 
 
-click_event = {"name": "icon_click", "defaultEvent": True, "description": "When the trailing icon is clicked."}
+click_event = {"name": "icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": False, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
@@ -104,7 +104,7 @@ class TextField(TextInput):
   
   @property
   def text(self):
-    if self._props.get('type') == "number":
+    if self._props.get('type') == "number" and self.dom_nodes['anvil-m3-textfield'].value:
       return float(self.dom_nodes['anvil-m3-textfield'].value)
     else:
       return self.dom_nodes['anvil-m3-textfield'].value
