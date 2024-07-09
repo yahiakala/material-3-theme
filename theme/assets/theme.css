@@ -840,11 +840,23 @@ th.month select.monthselect::after {
   flex-grow: 1;
 }
 
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-repeating-panel div.anvil-data-row-col > * {
+  flex-grow: 1;
+}
+
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel div.anvil-data-row-col:last-child {
   border-right: 0;
 }
 
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-repeating-panel div.anvil-data-row-col:last-child {
+  border-right: 0;
+}
+
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-repeating-panel {
+  margin: 0;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-repeating-panel {
   margin: 0;
 }
 
