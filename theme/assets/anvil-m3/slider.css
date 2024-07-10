@@ -107,7 +107,7 @@
   border-radius: 100%;
   margin-top: -62px;
   margin-left: -18px;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .anvil-m3-slider input:disabled::-webkit-slider-runnable-track { cursor: not-allowed; }
