@@ -10,8 +10,8 @@ text_property = {"name": "text",
                  "default_value": "None",
                  "description": "The text displayed on this component",
                  "allow_binding_writeback": True,
-                 "binding_writeback_events": ["pressed_enter", "change", "lost_focus"]
-                }
+                 "binding_writeback_events": ["pressed_enter", "change", "lost_focus"],
+                 "important": True}
 leading_icon_property = {"name": "leading_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
@@ -61,7 +61,7 @@ click_event = {"name": "icon_click", "defaultEvent": False, "description": "When
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
-  _anvil_properties_ = [leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):

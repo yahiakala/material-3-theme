@@ -50,13 +50,6 @@ properties:
 - {name: character_limit_color, type: color, default_value: '', important: false, description: The color of the character limit's text., group: Look and Feel}
 - {name: character_limit_font, type: string, default_value: '', important: false, description: The font family to use for this component’s character limit., group: Text}
 - {name: character_limit_font_size, type: number, important: false, description: The height of text displayed on this component’s character limit in pixels., group: Text}
-- name: text
-  type: string
-  default_value: ''
-  important: true
-  description: The text displayed on this property
-  binding_writeback_events: [change, lost_focus]
-  allow_binding_writeback: true
 - {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border, group: Look and Feel}
 is_package: true
 events:

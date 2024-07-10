@@ -5,7 +5,17 @@ import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
+text_property = {"name": "text",
+                 "type": "string",
+                 "default_value": "None",
+                 "description": "The text displayed on this component",
+                 "allow_binding_writeback": True,
+                 "binding_writeback_events": ["change", "lost_focus"],
+                 "important": True}
+
 class TextArea(TextInput):
+  _anvil_properties_ = [text_property, *TextInput._anvil_properties_]
+  
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
