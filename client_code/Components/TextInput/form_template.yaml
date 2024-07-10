@@ -55,8 +55,8 @@ properties:
   default_value: ''
   important: true
   description: The text displayed on this property
-  allow_binding_writeback: true
   binding_writeback_events: [change, lost_focus]
+  allow_binding_writeback: true
 - {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border, group: Look and Feel}
 is_package: true
 events:

@@ -5,6 +5,12 @@ from ...Functions import property_with_callback, italic_property, bold_property,
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
+text_property = {"name": "text",
+                "type": "string",
+                "default_value": "None",
+                "description": "The text displayed on this component",
+                 
+                }
 leading_icon_property = {"name": "leading_icon", 
                          "type": "enum", 
                          "options": _m3_icons, 
