@@ -7,6 +7,10 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
+  - name: checkbox_1
+    properties: {align: center, text: ''}
+    type: form:Components.Checkbox
+    layout_properties: {}
   - name: button_1
     properties: {text: clear file loader, appearance: elevated}
     type: form:Components.Button
@@ -16,6 +20,7 @@ components_by_slot:
     properties: {}
     type: ColumnPanel
     layout_properties: {}
+    components: []
   - name: file_loader_1
     properties: {}
     type: form:Components.FileLoader
