@@ -52,7 +52,8 @@ components:
           properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text, label_text: Label}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'ZKYVEF,HZUOQJ'}
-          data_bindings: []
+          data_bindings:
+          - {property: text, code: 'self.item['''']', writeback: false}
         - name: text_area_1_copy_copy
           properties: {underline_display: false, display_font: '', placeholder: Placeholder, bold_display: false, display_text_color: '', label_text: Label, appearance: outlined, error: false, visible: true, enabled: true, supporting_text: Supporting text}
           type: form:Components.TextInput.TextArea
