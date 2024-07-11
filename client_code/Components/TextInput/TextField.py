@@ -9,8 +9,8 @@ text_property = {"name": "text",
                  "type": "string",
                  "default_value": "None",
                  "description": "The text displayed on this component",
-                 "allow_binding_writeback": True,
-                 "binding_writeback_events": ["pressed_enter", "lost_focus"],
+                 "supportsWriteback": True,
+                 # "binding_writeback_events": ["pressed_enter", "lost_focus"],
                  "important": True}
 leading_icon_property = {"name": "leading_icon", 
                          "type": "enum", 
@@ -97,6 +97,7 @@ class TextField(TextInput):
 
   def _on_key_down(self, e):
     if e.key == "Enter":
+      self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
 
   def _set_placeholder(self, value):
