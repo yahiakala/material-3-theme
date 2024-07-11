@@ -10,7 +10,7 @@ text_property = {"name": "text",
                  "default_value": "None",
                  "description": "The text displayed on this component",
                  "allow_binding_writeback": True,
-                 "binding_writeback_events": ["change", "lost_focus"],
+                 "binding_writeback_events": ["lost_focus"],
                  "important": True}
 
 class TextArea(TextInput):
