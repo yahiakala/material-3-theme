@@ -59,7 +59,10 @@ class Text(TextTemplate):
   @align.setter
   def align(self, value):
     self._props['align'] = value
-    self.dom_nodes['anvil-m3-text-container'].style.justifyContent = value
+    if value == 'justify':
+      self.dom_nodes['anvil-m3-text-container'].style.justifyContent = 'left'
+    else:
+      self.dom_nodes['anvil-m3-text-container'].style.justifyContent = value
     self.dom_nodes['anvil-m3-text'].style.textAlign = value
 
   @property
