@@ -7,10 +7,6 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: card_1
-    properties: {card_image: _/theme/pexels-pixabay-67857.jpg, image_width: 10rem, image_height: 10rem}
-    type: form:Components.Card
-    layout_properties: {}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
