@@ -55,7 +55,7 @@ components_by_slot:
     type: FlowPanel
     layout_properties: {}
   - name: link_3
-    properties: {text: Link, material_icon: link}
+    properties: {text: '', material_icon: link}
     type: form:Components.Link
     layout_properties: {}
   - name: icon_button_1

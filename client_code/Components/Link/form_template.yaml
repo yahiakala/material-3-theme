@@ -2,15 +2,15 @@ properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component, multiline: true, group: Key Properties, important: true}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object., group: Key Properties, important: true}
-- default_value: left
+- description: The position of this component in the available space.
   group: Layout
-  important: true
   name: align
   type: enum
+  important: true
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: The position of this component in the available space.
+  default_value: left
 - {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: Display this component’s text in bold, group: Text, designer_hint: font-bold}
 - {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics, group: Text, designerHint: font-italic, designer_hint: font-italic}
 - {name: font, type: string, default_value: '', description: The font to use for this component., group: Text}
