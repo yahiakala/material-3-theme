@@ -78,7 +78,6 @@ class Checkbox(CheckboxTemplate):
   font = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color', 'text_color')
   background = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
-  # text = innerText_property('anvil-m3-checkbox-label')
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
   margin = margin_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
@@ -95,7 +94,6 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-label'].innerText = value
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'block'
     else:
-      print('no text')
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'none'
 
   @property
