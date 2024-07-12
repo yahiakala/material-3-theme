@@ -30,6 +30,10 @@ components_by_slot:
     type: form:Components.FileLoader
     layout_properties: {}
     event_bindings: {change: file_loader_1_change}
+  - name: text_field_1
+    properties: {}
+    type: form:Components.TextInput.TextField
+    layout_properties: {}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
