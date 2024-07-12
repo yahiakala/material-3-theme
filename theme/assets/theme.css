@@ -456,6 +456,7 @@ body {
   padding: 24px;
 }
 
+
 .anvil-modal-header {
   padding: 0;
   padding-bottom: 16px;
@@ -466,10 +467,11 @@ body {
   display: none;
 }
 
-.anvil-modal-title.alert-title {
+.anvil-modal-title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
+  color: %color:On Surface%;
 }
 
 .anvil-modal-body {
