@@ -92,9 +92,11 @@ class Checkbox(CheckboxTemplate):
   def text(self, value):
     self._props['text'] = value
     if value:
-      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
-      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
-      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
+      self.dom_nodes['anvil-m3-checkbox-label'].innerText = value
+      self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'block'
+    else:
+      print('no text')
+      self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'none'
 
   @property
   def checkbox_color(self):
