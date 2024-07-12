@@ -106,7 +106,7 @@
 
 /***** ButtonMenu *****/
 .anvil-m3-buttonMenu-container { 
-  display: inline-block;
+  display: flex;
   position: relative;
 }
 

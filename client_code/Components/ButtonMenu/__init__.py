@@ -130,7 +130,10 @@ class ButtonMenu(ButtonMenuTemplate):
   margin = property_with_callback("margin", _set_margin)
 
   def _set_align(self, value):
-    self.menu_button.align = value
+    if value == 'full':
+      
+    else:
+    self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
   align = property_with_callback("align", _set_align)
 
   def _set_button_font_family(self, value):
