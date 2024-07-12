@@ -7,65 +7,15 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: checkbox_1
-    properties: {align: center, text: checkbox}
-    type: form:Components.Checkbox
-    layout_properties: {}
-  - name: text_4
-    properties: {align: justify, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: button_1
-      properties: {text: Select TextField, appearance: elevated, align: center}
-      type: form:Components.Button
-      layout_properties: {grid_position: 'PSXWFE,DSJBOQ'}
-      event_bindings: {click: button_1_click}
-    - name: text_area_1
-      properties: {}
-      type: form:Components.TextInput.TextArea
-      layout_properties: {grid_position: 'YLAXWZ,ZTTNTD'}
-  - name: file_loader_1
-    properties: {appearance: outlined, align: left}
-    type: form:Components.FileLoader
-    layout_properties: {}
-    event_bindings: {change: file_loader_1_change}
-  - name: text_field_1
-    properties: {}
-    type: form:Components.TextInput.TextField
+  - name: card_1
+    properties: {card_image: _/theme/pexels-pixabay-67857.jpg, image_width: 10rem, image_height: 10rem}
+    type: form:Components.Card
     layout_properties: {}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
     layout_properties: {}
-    components:
-    - name: button_menu_1
-      properties: {appearance: tonal, text: Patricia, icon_align: left, align: full}
-      type: form:Components.ButtonMenu
-      layout_properties: {grid_position: 'OFPDOF,MVZSNJ'}
-      components:
-      - name: link_1
-        properties: {text: Another option}
-        type: form:Components.Link
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: link_1_click}
-      - name: link_2
-        properties: {text: A different option}
-        type: form:Components.Link
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-        event_bindings: {click: link_2_click}
-  - name: flow_panel_1
-    properties: {vertical_align: middle}
-    type: FlowPanel
-    layout_properties: {}
-  - name: link_3
-    properties: {text: '', material_icon: link}
-    type: form:Components.Link
-    layout_properties: {}
+    components: []
   - name: icon_button_1
     properties: {icon: delete, appearance: null, icon_color: 'theme:Error'}
     type: form:Components.IconButton
