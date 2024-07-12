@@ -45,7 +45,8 @@ properties:
   important: true
   options: [elevated, filled, tonal, outlined]
   include_none_option: true
-  group: Look and Feel
+  group: Key Properties
+  description: Predefined style type.
 is_package: true
 events:
 - name: change
