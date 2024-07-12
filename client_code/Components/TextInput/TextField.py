@@ -111,6 +111,9 @@ class TextField(TextInput):
 
   def focus(self):
     self.dom_nodes['anvil-m3-textfield'].focus()
+
+  def select(self):
+    self.dom_nodes['anvil-m3-textfield'].select()
   
   @property
   def text(self):

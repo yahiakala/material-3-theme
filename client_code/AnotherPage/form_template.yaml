@@ -21,7 +21,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_1
-      properties: {text: Focus TextField, appearance: elevated, align: center}
+      properties: {text: Select TextField, appearance: elevated, align: center}
       type: form:Components.Button
       layout_properties: {grid_position: 'PSXWFE,DSJBOQ'}
       event_bindings: {click: button_1_click}

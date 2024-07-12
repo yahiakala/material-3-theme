@@ -59,7 +59,7 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].focus()
 
   def select(self):
-    self.dom_nodes['anvil-m3-textarea'].focus()
+    self.dom_nodes['anvil-m3-textarea'].select()
 
   def _set_placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textarea']
