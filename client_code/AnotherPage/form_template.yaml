@@ -12,7 +12,7 @@ components_by_slot:
     type: form:Components.Checkbox
     layout_properties: {}
   - name: text_4
-    properties: {align: center, text: hello there this is a text component}
+    properties: {align: justify, text: hello there this is a text component}
     type: form:Components.Text
     layout_properties: {}
   - name: column_panel_1
