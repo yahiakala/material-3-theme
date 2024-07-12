@@ -1,5 +1,5 @@
 properties:
-- {default_value: false, group: Key Properties, important: true, name: checked, default_binding_prop: true, type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked.}
+- {description: Whether or not the checkbox is checked., group: Key Properties, name: checked, default_binding_prop: true, type: boolean, important: true, designer_hint: toggle, designerHint: toggle, default_value: false}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction., designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
@@ -22,15 +22,15 @@ properties:
 - {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox., group: Look and Feel}
 - {name: text_color, type: color, default_value: '', description: The color of the component's label., group: Look and Feel}
 - {name: background, type: color, default_value: '', description: The background colour of this component., group: Look and Feel}
-- default_value: left
+- description: The position of this component in the available space.
   group: Layout
-  important: true
   name: align
   type: enum
+  important: true
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: The position of this component in the available space.
+  default_value: left
 - {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of this component}
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
 is_package: true
