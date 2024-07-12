@@ -31,7 +31,6 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
-      print(value)
       
   align = property_with_callback('align', _set_align)
   visible = HtmlTemplate.visible
