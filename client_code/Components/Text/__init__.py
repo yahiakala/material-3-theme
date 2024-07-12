@@ -46,7 +46,6 @@ class Text(TextTemplate):
   icon_color = color_property('anvil-m3-text-icon', 'color', 'icon_color')
   background_color = color_property('anvil-m3-text-container', 'backgroundColor', 'background_color')
   text = innerText_property('anvil-m3-text')
-  # align = style_property('anvil-m3-text-container', 'justifyContent', 'align')
   icon_size = font_size_property('anvil-m3-text-icon', 'icon_size')
   margin = margin_property('anvil-m3-text-container')
   tooltip = tooltip_property('anvil-m3-text-container')

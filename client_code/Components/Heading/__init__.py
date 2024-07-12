@@ -46,9 +46,21 @@ class Heading(HeadingTemplate):
   text_color = color_property('anvil-m3-heading-container', 'color', 'text_color')
   icon_color = color_property('anvil-m3-heading-icon', 'color', 'icon_color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor', 'background_color')
-  align = style_property('anvil-m3-heading-container', 'justifyContent', 'align')
   tooltip = tooltip_property('anvil-m3-heading-container')
   role = role_property('anvil-m3-heading-container')
+
+  @property
+  def align(self):
+    return self._props.get('align')
+
+  @align.setter
+  def align(self, value):
+    self._props['align'] = value
+    if value == 'justify':
+      self.dom_nodes['anvil-m3-heading-container'].style.justifyContent = 'left'
+    else:
+      self.dom_nodes['anvil-m3-heading-container'].style.justifyContent = value
+    self.dom_nodes['anvil-m3-heading-container'].style.textAlign = value
 
   @property
   def font_size(self):

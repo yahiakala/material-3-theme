@@ -34,11 +34,12 @@ properties:
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
 - name: align
   type: enum
-  options: [left, center, right]
+  options: [left, center, right, justify]
   designer_hint: align-horizontal
   group: Layout
   important: true
   description: The position of this component in the available space.
+  default_value: left
 - {name: icon_size, type: number, description: 'The size in pixels of the icon. ', group: Icon}
 - {name: icon_color, type: color, default_value: '', description: 'The colour of the icon. If not set, the icon will be the same colour as the text.', group: Look and Feel}
 - {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
