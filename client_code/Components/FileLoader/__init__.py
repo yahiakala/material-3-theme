@@ -29,6 +29,17 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes["anvil-m3-fileloader-input"].id = id
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
 
+  def _anvil_get_interactions_(self):
+    return [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-fileloader-label'])
+      }
+    }]
+
   def clear(self):
     self.dom_nodes['anvil-m3-fileloader-input'].value = ''
     self.file = None
