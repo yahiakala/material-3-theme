@@ -47,8 +47,10 @@ class Card(CardTemplate):
     self._set_class_of_nodes(value, True)
   appearance = property_with_callback("appearance", _set_appearance)
 
-  image_width = style_property('image', 'width', 'image_width')
-  image_height = style_property('image', 'height', 'image_height')
+  def _set_image_width(self, value)
+  
+  # image_width = style_property('image', 'width', 'image_width')
+  # image_height = style_property('image', 'height', 'image_height')
   background = color_property('anvil-m3-card', 'backgroundColor', 'background')
 
   def _set_card_img(self, *_args):
