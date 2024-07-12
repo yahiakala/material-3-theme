@@ -15,7 +15,7 @@ properties:
   description: Size of the text component
 - name: align
   type: enum
-  options: [left, center, right]
+  options: [left, center, right, justify]
   default_value: left
   important: true
   group: Layout
