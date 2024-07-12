@@ -129,6 +129,10 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.margin = value
   margin = property_with_callback("margin", _set_margin)
 
+  def _set_align(self, value):
+    self.menu_button.align = value
+  align = property_with_callback("align", _set_align)
+
   def _set_button_font_family(self, value):
     self.menu_button.font_family = value
   button_font_family = property_with_callback("button_font_family", _set_button_font_family)
@@ -154,13 +158,6 @@ class ButtonMenu(ButtonMenuTemplate):
       self._hoverIndex = None
       self._clear_hover_styles()
 
-  @property
-  def align(self):
-    return self.menu_button.align
-
-  @align.setter
-  def align(self, value):
-    self.menu_button.align = value
 
   def _child_clicked(self, event):
     # do the click action. The child should handle this
