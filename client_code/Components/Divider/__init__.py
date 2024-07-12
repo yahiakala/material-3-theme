@@ -15,6 +15,7 @@ class Divider(DividerTemplate):
   visible = HtmlTemplate.visible
   color = color_property('anvil-m3-divider', 'border-color', 'color')
   role = role_property('anvil-m3-divider')
+  margin = margin_property('anvil-m3-link')
   
   @property
   def type(self):
