@@ -26,7 +26,6 @@ properties:
   options: [left, right]
   default_value: left
   description: The alignment of the icon on the Button.
-  designer_hint: align-horizontal
   group: Icon
 - include_none_option: true
   description: The icon to display on the Button.
@@ -49,9 +48,11 @@ properties:
 - name: align
   type: enum
   important: true
-  options: [Left, Center, Right]
-  default_value: Left
+  options: [left, center, right, full]
+  default_value: left
   description: The position of this ButtonMenu in the available space.
+  group: Layout
+  designer_hint: align-horizontal
 is_package: true
 data_bindings: []
 events:

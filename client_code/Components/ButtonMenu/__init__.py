@@ -154,6 +154,14 @@ class ButtonMenu(ButtonMenuTemplate):
       self._hoverIndex = None
       self._clear_hover_styles()
 
+  @property
+  def align(self):
+    return self.menu_button.align
+
+  @align.setter
+  def align(self, value):
+    self.menu_button.align = value
+
   def _child_clicked(self, event):
     # do the click action. The child should handle this
     self._set_visibility(False)
