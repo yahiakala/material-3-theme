@@ -40,6 +40,12 @@ properties:
   group: Layout
   description: Margin (pixels) of the component.
 - {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
+- name: appearance
+  type: enum
+  important: true
+  options: [elevated, filled, tonal, outlined]
+  include_none_option: true
+  group: Look and Feel
 is_package: true
 events:
 - name: change
