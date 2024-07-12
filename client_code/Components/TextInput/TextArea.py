@@ -55,6 +55,12 @@ class TextArea(TextInput):
   display_text_color = color_property('anvil-m3-textarea', 'color', 'display_text_color')
   background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
 
+  def focus(self):
+    self.dom_nodes['anvil-m3-textarea'].focus()
+
+  def select(self):
+    self.dom_nodes['anvil-m3-textarea'].focus()
+
   def _set_placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textarea']
     if value:
