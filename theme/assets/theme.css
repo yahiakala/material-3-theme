@@ -499,6 +499,20 @@ body {
   background-image: none;
 }
 
+/*Notifications*/
+.anvil-alert {
+  background-color: %color:Inverse Surface%;
+  color: %color:Inverse On Surface%;
+  border-color: transparent;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  height: 48px;
+  display: flex !important;
+  align-items: center !important;
+  top: unset !important;
+  bottom: 20px;
+}
+
 /*DIVIDER*/
 .anvil-m3-divider {
   border: solid 1px %color:Outline Variant%;
