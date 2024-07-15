@@ -524,8 +524,8 @@ body {
   color: %color:On Primary%
 }
 
-.anvil-alert.anvil-alert-success {
-  background-color:#edb95e;
+.anvil-alert.anvil-alert-warning {
+  background-color:#f7edb6;
   color: #2b2b2b;
 }
 
