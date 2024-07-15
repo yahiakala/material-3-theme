@@ -500,18 +500,23 @@ body {
 }
 
 /*Notifications*/
-.anvil-alert {
+/* .anvil-alert {
   background-color: %color:Inverse Surface%;
   color: %color:Inverse On Surface%;
   border-color: transparent;
   font-size: 14px;
   letter-spacing: 0.25px;
-  height: 48px;
+  min-height: 48px;
   display: flex !important;
-  align-items: center !important;
+  flex-direction: column;
+  justify-items: center !important;
   top: unset !important;
   bottom: 20px;
 }
+
+.anvil-alert.anvil-alert-info {
+  background-color:
+} */
 
 /*DIVIDER*/
 .anvil-m3-divider {
