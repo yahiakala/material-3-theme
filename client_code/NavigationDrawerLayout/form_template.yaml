@@ -55,4 +55,4 @@ container:
       <div class="anvil-m3-sidesheet anvil-m3-open" anvil-slot="anvil-m3-sidesheet" anvil-name="anvil-m3-sidesheet">
         <p anvil-if-slot-empty="anvil-m3-sidesheet" class="anvil-designer-only" style="font-style: italic;">Add optional sidesheet content here</p>
       </div>
-layout_metadata: {title: NavigationDrawerLayout, description: 'A simple layout with a left-hand navigation drawer and optional sidepanel '}
+layout_metadata: {title: NavigationDrawerLayout, description: 'A simple layout with a left-side navigation drawer and optional right-hand sidepanel '}
