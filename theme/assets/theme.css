@@ -500,10 +500,10 @@ body {
 }
 
 /*Notifications*/
-/* .anvil-alert {
+.anvil-alert {
   background-color: %color:Inverse Surface%;
   color: %color:Inverse On Surface%;
-  border-color: transparent;
+  border: none;
   font-size: 14px;
   letter-spacing: 0.25px;
   min-height: 48px;
@@ -514,9 +514,21 @@ body {
   bottom: 20px;
 }
 
-.anvil-alert.anvil-alert-info {
-  background-color:
-} */
+.anvil-alert.anvil-alert-danger {
+  background-color: %color:Error%;
+  color: %color:On Error%
+}
+
+.anvil-alert.anvil-alert-success {
+  background-color: %color:Primary%;
+  color: %color:On Primary%
+}
+
+.anvil-alert.anvil-alert-success {
+  background-color:#edb95e;
+  color: #2b2b2b;
+}
+
 
 /*DIVIDER*/
 .anvil-m3-divider {
