@@ -510,8 +510,8 @@ body {
   display: flex !important;
   flex-direction: column;
   justify-items: center !important;
-  top: unset !important;
-  bottom: 20px;
+  /* top: unset !important;
+  bottom: 20px; */
 }
 
 .anvil-alert.anvil-alert-danger {
