@@ -7,6 +7,14 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
+  - name: link_1
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
+  - name: button_1
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
