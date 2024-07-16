@@ -9,8 +9,13 @@ class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    Notification("This is a notification", timeout=None, title="Notification!", style="info").show()
-    Notification("This is a notification", timeout=None, title="Notification!", style="success").show()
-    Notification("This is a notification", timeout=None, title="Notification!", style="danger").show()
-    Notification("This is a notification", timeout=None, title="Notification!", style="warning").show()
+
+    # Notification("This is a notification", timeout=None, title="Notification!", style="info").show()
+    # Notification("This is a notification", timeout=None, title="Notification!", style="success").show()
+    # Notification("This is a notification", timeout=None, title="Notification!", style="danger").show()
+    # Notification("This is a notification", timeout=None, title="Notification!", style="warning").show()
+
+  def link_1_click(self, **event_args):
+    """This method is called clicked"""
+    self.checkbox_1.scroll_into_view()
 
