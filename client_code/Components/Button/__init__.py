@@ -27,7 +27,7 @@ class Button(ButtonTemplate):
 
   def _set_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', False)
-    if value is 'full':
+    if value == 'full':
       self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value

@@ -93,6 +93,7 @@ class TextInput(TextInputTemplate):
     self.raise_event("x-anvil-write-back-text")
     self.raise_event("lost_focus")
 
+
   def _anvil_get_interactions_(self):
     return [{
       "type": "whole_component",

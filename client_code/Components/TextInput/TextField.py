@@ -108,6 +108,12 @@ class TextField(TextInput):
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
   placeholder = property_with_callback('placeholder', _set_placeholder)
+
+  def focus(self):
+    self.dom_nodes['anvil-m3-textfield'].focus()
+
+  def select(self):
+    self.dom_nodes['anvil-m3-textfield'].select()
   
   @property
   def text(self):

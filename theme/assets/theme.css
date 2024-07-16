@@ -153,7 +153,7 @@ body {
 }
 
 @media(max-width: 600px) {
-  .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer, {
+  .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
     width: 100%;
     padding: 12px 8px 16px 8px;
     flex-direction: row;
@@ -456,6 +456,10 @@ body {
   padding: 24px;
 }
 
+.anvil-modal-dialog:focus-visible {
+  border-radius: 28px
+}
+
 .anvil-modal-header {
   padding: 0;
   padding-bottom: 16px;
@@ -466,10 +470,11 @@ body {
   display: none;
 }
 
-.anvil-modal-title.alert-title {
+.anvil-modal-title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
+  color: %color:On Surface%;
 }
 
 .anvil-modal-body {
@@ -493,6 +498,37 @@ body {
   border: none;
   background-image: none;
 }
+
+/*Notifications*/
+.anvil-alert {
+  background-color: %color:Inverse Surface%;
+  color: %color:Inverse On Surface%;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  min-height: 48px;
+  display: flex !important;
+  flex-direction: column;
+  justify-items: center !important;
+  /* top: unset !important;
+  bottom: 20px; */
+}
+
+.anvil-alert.anvil-alert-danger {
+  background-color: %color:Error%;
+  color: %color:On Error%
+}
+
+.anvil-alert.anvil-alert-success {
+  background-color: %color:Primary%;
+  color: %color:On Primary%
+}
+
+.anvil-alert.anvil-alert-warning {
+  background-color:#f7edb6;
+  color: #2b2b2b;
+}
+
 
 /*DIVIDER*/
 .anvil-m3-divider {

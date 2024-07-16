@@ -60,9 +60,9 @@ events:
 - {name: lost_focus, description: When the component loses focus.}
 toolbox_item: {hidden: true}
 custom_component: true
-components: []
 container:
   type: HtmlTemplate
   properties:
     html: "<div class=\"anvil-m3-textinput\" anvil-name=\"anvil-m3-textinput\" >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\">\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"1\" anvil-name=\"anvil-m3-textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input anvil-m3-textfield\" type=\"text\" anvil-name=\"anvil-m3-textfield\" />\n    <div class=\"anvil-m3-textinput-border\"anvil-name=\"anvil-m3-border-container\"  >\n      <div class=\"anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"anvil-m3-label-text\" for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\" anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon material-symbols-outlined\" anvil-name=\"anvil-m3-leading-icon\" style=\"display: none;\"></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\" anvil-name=\"anvil-m3-trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"anvil-m3-subcontent\">\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"anvil-m3-supporting-text\"></label> \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\" anvil-name=\"anvil-m3-character-counter\">\n      <span anvil-name=\"anvil-m3-character-amount\" >0</span>\n      /\n      <span anvil-name=\"anvil-m3-character-limit\" >10</span>\n    </label>\n  </div>\n</div>"
   event_bindings: {show: form_show}
+components: []

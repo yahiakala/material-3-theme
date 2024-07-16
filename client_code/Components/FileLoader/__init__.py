@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
+from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
@@ -28,6 +28,17 @@ class FileLoader(FileLoaderTemplate):
       id = gen_id()
       self.dom_nodes["anvil-m3-fileloader-input"].id = id
       self.dom_nodes["anvil-m3-fileloader-label"].setAttribute("for", id)
+
+  def _anvil_get_interactions_(self):
+    return [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-fileloader-label'])
+      }
+    }]
 
   def clear(self):
     self.dom_nodes['anvil-m3-fileloader-input'].value = ''
@@ -53,9 +64,7 @@ class FileLoader(FileLoaderTemplate):
 
   def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files
-    print(files)
     file_list = [anvil.js.to_media(file) for file in files]
-    print(file_list)
     self.file = file_list[0]
     self.raise_event('change', file=file_list[0], files=file_list)
     if self.show_state:
@@ -85,6 +94,17 @@ class FileLoader(FileLoaderTemplate):
   margin = margin_property('anvil-m3-fileloader-form')
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
+
+  def _set_appearance(self, value):
+    file_loader = self.dom_nodes['anvil-m3-fileloader-container']
+    file_loader.classList.remove('anvil-m3-elevated')
+    file_loader.classList.remove('anvil-m3-filled')
+    file_loader.classList.remove('anvil-m3-tonal')
+    file_loader.classList.remove('anvil-m3-outlined')
+    if value:
+      file_loader.classList.add(f"anvil-m3-{value}")
+      
+  appearance = property_with_callback("appearance", _set_appearance)
 
   @property
   def show_state(self):

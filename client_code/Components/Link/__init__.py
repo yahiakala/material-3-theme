@@ -62,11 +62,12 @@ class Link(LinkTemplate):
 
   @url.setter
   def url(self, value):
+    self._props['url'] = value
     if value:
-      self._props['url'] = value
       self.dom_nodes['anvil-m3-link'].href = value
     else:
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
+
 
   @property
   def icon_size(self):

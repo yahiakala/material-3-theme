@@ -129,6 +129,10 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.margin = value
   margin = property_with_callback("margin", _set_margin)
 
+  def _set_align(self, value):
+    self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
+  align = property_with_callback("align", _set_align)
+
   def _set_button_font_family(self, value):
     self.menu_button.font_family = value
   button_font_family = property_with_callback("button_font_family", _set_button_font_family)
@@ -153,6 +157,7 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       self._hoverIndex = None
       self._clear_hover_styles()
+
 
   def _child_clicked(self, event):
     # do the click action. The child should handle this
