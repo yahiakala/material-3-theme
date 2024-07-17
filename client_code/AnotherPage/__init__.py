@@ -9,7 +9,7 @@ class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    print(self.layout.layout.navigation_rail_vertical_align)
+
 
     # Notification("This is a notification", timeout=None, title="Notification!", style="info").show()
     # Notification("This is a notification", timeout=None, title="Notification!", style="success").show()
