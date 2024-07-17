@@ -2,67 +2,58 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
-  - name: label_1
-    properties: {text: This is another page}
-    type: Label
+  - name: card_3_copy_2
+    properties:
+      margin: [4px, 4px, '32', 4px]
+      image_position: full
+      image_height: '120'
+    type: form:Components.Card
     layout_properties: {}
+  - name: card_3_copy
+    properties:
+      margin: [4px, 4px, '32', 4px]
+      image_position: full
+      image_height: '120'
+    type: form:Components.Card
+    layout_properties: {}
+  - name: card_3
+    properties:
+      margin: [4px, 4px, '32', 4px]
+      image_position: full
+      image_height: '120'
+    type: form:Components.Card
+    layout_properties: {}
+    components: []
   slot_3:
-  - name: button_1
-    properties: {}
-    type: form:Components.Button
-    layout_properties: {}
-  - name: column_panel_2
+  - name: column_panel_1
     properties: {}
     type: ColumnPanel
     layout_properties: {}
-    components: []
+    components:
+    - name: card_1
+      properties:
+        image_height: '400'
+        image_width: '400'
+        card_image: ''
+        image_position: full
+        margin: ['24', '24', 4px, '24']
+      type: form:Components.Card
+      layout_properties: {grid_position: 'KNROCN,PJLDFX'}
+    - name: card_2
+      properties:
+        image_position: full
+        image_height: '400'
+        image_width: '400'
+        margin: ['24', '24', 4px, '24']
+      type: form:Components.Card
+      layout_properties: {grid_position: 'ASOHSX,HVMMNT'}
+  slot_7:
   - name: icon_button_1
-    properties: {icon: delete, appearance: null, icon_color: 'theme:Error'}
+    properties: {icon: close}
     type: form:Components.IconButton
     layout_properties: {}
-  - name: data_grid_1
-    properties:
-      columns:
-      - {id: JKSDUP, title: Column 1, data_key: column_1}
-      - {id: VJQQOR, title: Column 2, data_key: column_2}
-      - {id: OJLQEN, title: Column 3, data_key: column_3}
-      auto_header: false
-    type: DataGrid
-    components:
-    - name: data_row_panel_1
-      properties: {role: data-grid-header}
-      type: DataRowPanel
-      layout_properties: {pinned: true}
-      components:
-      - name: text_1
-        properties: {text: Header, bold: true}
-        type: form:Components.Text
-        layout_properties: {column: JKSDUP}
-      - name: text_2
-        properties: {text: Header 2}
-        type: form:Components.Text
-        layout_properties: {column: VJQQOR}
-      - name: text_3
-        properties: {text: Header 3}
-        type: form:Components.Text
-        layout_properties: {column: OJLQEN}
-      - name: icon_button_2
-        properties: {icon: edit}
-        type: form:Components.IconButton
-        layout_properties: {column: JKSDUP}
-    - name: repeating_panel_1
-      properties: {item_template: AnotherPage.RowTemplate3}
-      type: RepeatingPanel
-    layout_properties: {}
-  - name: data_grid_2
-    properties:
-      columns:
-      - {id: JKSDUP, title: Column 1, data_key: column_1}
-      - {id: VJQQOR, title: Column 2, data_key: column_2}
-      - {id: OJLQEN, title: Column 3, data_key: column_3}
-    type: DataGrid
-    components:
-    - name: repeating_panel_2
-      properties: {item_template: AnotherPage.RowTemplate4}
-      type: RepeatingPanel
+  slot_6:
+  - name: heading_1
+    properties: {text: Sidesheet, style: title, scale: large, visible: false}
+    type: form:Components.Heading
     layout_properties: {}

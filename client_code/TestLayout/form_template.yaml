@@ -26,11 +26,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {}
   slot_2: []
-  slot_3:
-  - name: card_1
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
+  slot_3: []
   slot_5:
   - name: sidesheet_content_1
     properties: {}
