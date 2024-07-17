@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, margin_property
+from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, margin_property, italic_property, bold_property, underline_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -47,6 +47,9 @@ class NavigationLink(NavigationLinkTemplate):
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
   role = role_property('anvil-m3-navigation-link')
+  italic = italic_property('anvil-m3-navigation-link-text')
+  bold = bold_property('anvil-m3-navigation-link-text')
+  underline = underline_property('anvil-m3-navigation-link-text')
 
   @property
   def url(self):
