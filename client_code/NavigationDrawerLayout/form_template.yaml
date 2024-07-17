@@ -21,6 +21,10 @@ slots:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-title}
     target: {type: container, name: ''}
+  slot_5:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {type: container, name: ''}
 components: []
 container:
   type: HtmlTemplate

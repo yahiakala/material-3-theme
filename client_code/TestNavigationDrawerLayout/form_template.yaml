@@ -17,4 +17,9 @@ components_by_slot:
     type: form:Components.NavigationLink
     layout_properties: {}
   slot_1: []
+  slot_5:
+  - name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
+    layout_properties: {}
 slots: {}

@@ -609,6 +609,12 @@ body {
 }
 
 @media(min-width:600px) {
+  .anvil-m3-content-navigation-drawer.anvil-m3-content.anvil-m3-sidesheet-open {
+    width: calc(100% - 660px);
+  }
+}
+
+@media(min-width:600px) {
   .anvil-m3-content.anvil-m3-transition-width {
     transition: width 250ms;
   }
