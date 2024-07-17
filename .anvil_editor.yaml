@@ -76,6 +76,7 @@ unique_ids:
     TestModule: '1696934771505893542874780.1255'
   assets:
     designer_icons/button.svg: '1702402255403425630787410.6227'
+    designer_icons/navigation-rail-thumb.png: '1721224768028768077144068.4703'
     designer_icons/card.svg: '1702476695777933171902784.5498'
     anvil-m3/radiobutton.css: '1690464669843320825384936.8927'
     clever-layout.html: '1708612629201740530546140.2069'
@@ -94,7 +95,6 @@ unique_ids:
     designer_icons/link_dark.svg: '1702400172115635452910352.8741'
     designer_icons/button_menu_dark.svg: '1702402154939774877876599.7355'
     pexels-avonne-stalling-6597437.jpg: '170179212075071986955156.8757'
-    purple-background.jpg: '1721219120498768389724396.8971'
     designer_icons/button_dark.svg: '1702402268626506072666642.36383'
     anvil-extras.png: '1697536742780477185710766.0367'
     designer_icons/navigation_link_dark.svg: ZSWA5TLCUQ3KSGADN2AOJTLYMMLOL2UE
@@ -107,13 +107,11 @@ unique_ids:
     designer_icons/navigation-drawer-thumb.png: '1721205138041911113351274.6746'
     designer_icons/icon_button.svg: '1702400953813833209612144.3416'
     anvil-m3/menu.css: '1691072818949608942637020.9967'
-    blue-background.jpg: '1721218981545871524052909.6278'
     designer_icons/toggle_icon_button.svg: X3PPQYH2PRT3SVAH6IEOB7A5JEZD5QBO
     icon-512x512.png: '1700150055035744222934586.8975'
     anvil-m3/switch.css: '1690201930961944613537214.6923'
     designer_icons/heading_dark.svg: '1702400441046902759760157.3909'
     designer_icons/toggle_icon_button_dark.svg: 7DAFFO5P4PSMHDQ73R2FXYVFP4ARD7VN
-    designer_icons/material-3-mykonos-theme.png: '1718200924347330166578428.6432'
     anvil-m3/.gitkeep: '1689852830383793423294910.1976'
     pexels-pixabay-67857.jpg: '1720798006487216167362127.67163'
     designer_icons/text_dark.svg: '1702400882367394079289989.5229'
@@ -141,11 +139,9 @@ unique_ids:
     designer_icons/sidesheet.svg: '1702402337578243909380282.08374'
     designer_icons/slider.svg: '1706022423394816379717204.4287'
     designer_icons/icon_button_dark.svg: '1702400976307470181675693.2682'
-    github-integration-thumbnail.png: '1696963663011762739062011.2164'
     designer_icons/slider_dark.svg: '170602243338530759371294.256653'
     designer_icons/text.svg: '1702400867244965436925556.7903'
     anvil-m3/card.css: '1700072176102883618663397.0227'
-    designer_icons/navigation-rail-layout.png: '1718202143381407438606467.68115'
     designer_icons/dropdown_menu.svg: '1702402191558888896893366.5889'
     anvil-m3/text.css: '1691587464344929257845739.1733'
   scripts: {}
