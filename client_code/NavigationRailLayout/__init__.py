@@ -88,10 +88,13 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   @navigation_rail_vertical_align.setter
   def navigation_rail_vertical_align(self, value):
     self._props['navigation_rail_vertical_align'] = value
+    print(value)
     value = value.lower()
     for c in ['anvil-m3-align-top', 'anvil-m3-align-center', 'anvil-m3-align-bottom']:
       self.nav_rail.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-align-{value}")
+    for i in self.nav_rail.classList:
+      print(i)
 
   @property
   def show_sidesheet(self):
