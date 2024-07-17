@@ -56,7 +56,7 @@ trailing_icon_color_property = {"name": "trailing_icon_color",
                                "description": "The color of the trailing icon."}
 
 
-click_event = {"name": "icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
+click_event = {"name": "trailing_icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
@@ -247,5 +247,5 @@ class TextField(TextInput):
 
   def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("icon_click")
+    self.raise_event("trailing_icon_click")
 
