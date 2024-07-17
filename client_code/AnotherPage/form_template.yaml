@@ -7,11 +7,6 @@ components_by_slot:
     type: Label
     layout_properties: {}
   slot_3:
-  - name: link_1
-    properties: {text: Click me to scroll to the checkbox at the bottom of the screen}
-    type: form:Components.Link
-    layout_properties: {}
-    event_bindings: {click: link_1_click}
   - name: button_1
     properties: {}
     type: form:Components.Button
@@ -70,12 +65,4 @@ components_by_slot:
     - name: repeating_panel_2
       properties: {item_template: AnotherPage.RowTemplate4}
       type: RepeatingPanel
-    layout_properties: {}
-  - name: spacer_1
-    properties: {height: '1000'}
-    type: Spacer
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {}
-    type: form:Components.Checkbox
     layout_properties: {}

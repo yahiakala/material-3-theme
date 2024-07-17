@@ -15,7 +15,3 @@ class AnotherPage(AnotherPageTemplate):
     # Notification("This is a notification", timeout=None, title="Notification!", style="danger").show()
     # Notification("This is a notification", timeout=None, title="Notification!", style="warning").show()
 
-  def link_1_click(self, **event_args):
-    """This method is called clicked"""
-    self.checkbox_1.scroll_into_view()
-
