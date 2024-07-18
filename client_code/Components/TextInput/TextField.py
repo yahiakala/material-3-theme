@@ -45,13 +45,13 @@ hide_text_property = {"name": "hide_text",
 leading_icon_color_property = {"name": "leading_icon_color", 
                                "type": "color", 
                                "group": "Icon", 
-                               "important": True, 
+                               "important": False, 
                                "default_value": "",
                                "description": "The color of the leading icon."}
 trailing_icon_color_property = {"name": "trailing_icon_color", 
                                "type": "color", 
                                "group": "Icon", 
-                               "important": True, 
+                               "important": False, 
                                "default_value": "",
                                "description": "The color of the trailing icon."}
 
