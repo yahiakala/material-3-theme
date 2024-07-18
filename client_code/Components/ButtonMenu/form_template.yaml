@@ -53,6 +53,7 @@ properties:
   description: The position of this ButtonMenu in the available space.
   group: Layout
   designer_hint: align-horizontal
+- {name: items, type: object, important: true, group: Other}
 is_package: true
 data_bindings: []
 events:
