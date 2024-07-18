@@ -39,6 +39,7 @@ components_by_slot:
         card_image: ''
         image_position: full
         margin: ['24', '24', 4px, '24']
+        rounded_image: false
       type: form:Components.Card
       layout_properties: {grid_position: 'KNROCN,PJLDFX'}
     - name: card_2
