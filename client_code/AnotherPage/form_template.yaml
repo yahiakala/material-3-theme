@@ -3,11 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: button_1
-    properties: {enabled: true, appearance: filled}
-    type: form:Components.Button
+  - name: icon_button_2
+    properties: {appearance: Outlined}
+    type: form:Components.IconButton
     layout_properties: {}
-    event_bindings: {click: button_1_click}
   - name: heading_2
     properties: {text: Hello!}
     type: form:Components.Heading

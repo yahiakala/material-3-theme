@@ -30,7 +30,5 @@ class AnotherPage(AnotherPageTemplate):
     """This method is called when an item is selected"""
     print(self.drop_down_1.selected_value)
 
-  def button_1_click(self, **event_args):
-    """This method is called when the component is clicked."""
-    pass
+
 
