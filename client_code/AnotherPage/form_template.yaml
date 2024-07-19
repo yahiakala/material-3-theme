@@ -4,7 +4,7 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: icon_button_2
-    properties: {appearance: Outlined}
+    properties: {appearance: Outlined, icon: logout}
     type: form:Components.IconButton
     layout_properties: {}
   - name: heading_2
