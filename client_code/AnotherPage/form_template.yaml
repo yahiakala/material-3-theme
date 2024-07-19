@@ -3,6 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: button_1
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
   - name: heading_2
     properties: {text: Hello!}
     type: form:Components.Heading
