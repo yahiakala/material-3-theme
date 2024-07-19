@@ -7,6 +7,7 @@ components_by_slot:
     properties: {}
     type: form:Components.Button
     layout_properties: {}
+    event_bindings: {click: button_1_click}
   - name: heading_2
     properties: {text: Hello!}
     type: form:Components.Heading
