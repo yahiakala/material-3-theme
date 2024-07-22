@@ -19,6 +19,11 @@ components_by_slot:
     properties: {appearance: outlined, label_text: Name, text: Name}
     type: form:Components.TextInput.TextField
     layout_properties: {}
+  - name: card_4
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+    components: []
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
@@ -45,7 +50,7 @@ components_by_slot:
         image_height: '400'
         image_width: '400'
         card_image: ''
-        image_position: full
+        image_position: top
         margin: ['24', '24', 4px, '24']
         rounded_image: false
       type: form:Components.Card

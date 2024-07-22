@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..Components.Link import Link as M3_Link
+from ..Components.Slider import Slider
 
 class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
@@ -15,6 +16,9 @@ class AnotherPage(AnotherPageTemplate):
     self.button_menu_1.menu_items = [link_1, link_2]
     self.dropdown_menu_1.items = [('Hello', True), ('Goodbye', False)]
     self.drop_down_1.items = [('Hello', True), ('Goodbye', False)]
+
+    slider = Slider()
+    self.card_4.add_component(slider)
 
 
     # Notification("This is a notification", timeout=None, title="Notification!", style="info").show()
