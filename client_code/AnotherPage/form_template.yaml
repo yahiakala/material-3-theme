@@ -3,6 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: slider_1
+    properties: {}
+    type: form:Components.Slider
+    layout_properties: {}
   - name: icon_button_2
     properties: {appearance: Outlined, icon: logout}
     type: form:Components.IconButton

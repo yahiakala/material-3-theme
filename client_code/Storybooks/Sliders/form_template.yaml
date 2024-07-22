@@ -18,7 +18,7 @@ components:
     type: form:Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_1
-    properties: {value: 5, max: 10}
+    properties: {value: 5, max: 10, show_markers: false, show_label: false}
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_3
@@ -57,19 +57,19 @@ components:
   - name: slider_4
     properties:
       min: 0
-      show_markers: true
-      track_color: ''
-      margin: [auto, '', auto, '']
-      tooltip: ''
-      max: 10
-      thumb_color: ''
-      enabled: true
-      progress_color: ''
-      show_label: false
-      label_color: ''
-      value: 5
       label_text_color: ''
+      value: 5
+      progress_color: ''
+      label_color: ''
+      show_label: false
+      thumb_color: ''
+      max: 10
+      track_color: ''
+      show_markers: true
+      enabled: true
       step: 1
+      tooltip: ''
+      margin: [auto, '', auto, '']
     type: form:Components.Slider
     layout_properties: {slot: card-content-slot}
     data_bindings: []
