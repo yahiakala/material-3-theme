@@ -4,7 +4,7 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: slider_1
-    properties: {}
+    properties: {enabled: true, value: 5, show_label: true}
     type: form:Components.Slider
     layout_properties: {}
   - name: icon_button_2
