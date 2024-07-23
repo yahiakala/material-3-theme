@@ -3,9 +3,9 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: heading_2
-    properties: {text: Hello!}
-    type: form:Components.Heading
+  - name: icon_button_2
+    properties: {align: left}
+    type: form:Components.IconButton
     layout_properties: {}
   - name: text_field_1
     properties: {appearance: outlined, label_text: Name, text: Name}

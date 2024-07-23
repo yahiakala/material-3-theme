@@ -25,20 +25,6 @@ class Button(ButtonTemplate):
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-button'].removeEventListener("click", self._handle_click)
 
-  def _set_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', False)
-    if value == 'full':
-      self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
-    else:
-      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
-
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  align = property_with_callback('align', _set_align)
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
-  visible = HtmlTemplate.visible
-  #!defAttr()!1: {name:"visible",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  role = role_property('anvil-m3-button')
-
   def _handle_click(self, event):
     event.preventDefault()
     if self.enabled:
@@ -55,8 +41,13 @@ class Button(ButtonTemplate):
       }
     }]
 
-    
-  
+  def _set_align(self, value):
+    self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', False)
+    if value == 'full':
+      self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
+    else:
+      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+      
   def _set_icon(self):
     if self.icon:
       self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon
@@ -94,20 +85,12 @@ class Button(ButtonTemplate):
     self._set_icon()
     self._set_text()
 
-  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  icon = property_with_callback("icon", _update_button_look)
-  #!defAttr()!1: {name:"text",type:"string",description:"Text displayed on this component"}
-  text = property_with_callback("text", _update_button_look)
-
   def _set_enabled(self, value):
     if value:
       self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
       
-  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  enabled = property_with_callback("enabled", _set_enabled)
-
   def _set_appearance(self, value):
     button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
@@ -117,42 +100,53 @@ class Button(ButtonTemplate):
     if value:
       button.classList.add(f"anvil-m3-{value}")
       
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}    
-  appearance = property_with_callback("appearance", _set_appearance)
-
+  def _set_icon_align(self, value):
+    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
+      
   def form_show(self, **event_args):
     self._update_button_look()
 
+  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!defAttr()!1: {name:"visible",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
   #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  font_family = font_family_property('anvil-m3-button-text')
+  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!defAttr()!1: {name:"text",type:"string",description:"Text displayed on this component"}
   #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  font_size = font_size_property('anvil-m3-button-text')
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  underline = underline_property('anvil-m3-button-text')
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  italic = italic_property('anvil-m3-button-text')
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  bold = custom_bold_property('anvil-m3-button-text')
   #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
-  background = color_property('anvil-m3-button', 'backgroundColor', 'background')
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  margin = margin_property('anvil-m3-button-component')
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  border = style_property('anvil-m3-button', 'border', 'border')
   #!defAttr()!1: {name:"tooltip",type:"string",description:"Text to display when the mouse is hovered over this component."}
-  tooltip = tooltip_property('anvil-m3-button')
-
-  def _set_icon_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
-  
   #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
+  
+  align = property_with_callback('align', _set_align)
+  role = role_property('anvil-m3-button')
+  appearance = property_with_callback("appearance", _set_appearance)
+  enabled = property_with_callback("enabled", _set_enabled)
+  text = property_with_callback("text", _update_button_look)
+  icon = property_with_callback("icon", _update_button_look)
+  text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
+  font_family = font_family_property('anvil-m3-button-text')
+  font_size = font_size_property('anvil-m3-button-text')
+  underline = underline_property('anvil-m3-button-text')
+  italic = italic_property('anvil-m3-button-text')
+  bold = custom_bold_property('anvil-m3-button-text')
+  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
+  icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
+  background = color_property('anvil-m3-button', 'backgroundColor', 'background')
+  margin = margin_property('anvil-m3-button-component')
+  border = style_property('anvil-m3-button', 'border', 'border')
+  tooltip = tooltip_property('anvil-m3-button')
   icon_align = property_with_callback('icon_align', _set_icon_align)
+  visible = HtmlTemplate.visible
 
 #!defClass(material_3,Button)!:
 
