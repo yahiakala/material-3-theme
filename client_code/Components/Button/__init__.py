@@ -36,7 +36,7 @@ class Button(ButtonTemplate):
   align = property_with_callback('align', _set_align)
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
   visible = HtmlTemplate.visible
-  #!defAttr()!1: {name:"visible",type:"themeRole",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"visible",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   role = role_property('anvil-m3-button')
 
   def _handle_click(self, event):
