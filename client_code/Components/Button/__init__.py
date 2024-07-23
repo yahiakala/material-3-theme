@@ -53,8 +53,6 @@ class Button(ButtonTemplate):
     }]
 
     
-    #!defAttr()!1: {name:"appearance",type:"string",description:"The name associated with the address this object represents."}
-    #!defAttr()!1: {name:"icon",type:"string",description:"The full string value of this address."} 
   
   def _set_icon(self):
     if self.icon:
@@ -92,9 +90,10 @@ class Button(ButtonTemplate):
     
     self._set_icon()
     self._set_text()
-    
+
+  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   icon = property_with_callback("icon", _update_button_look)
-  #!defAttr()!1: {name:"text",type:"string",description:"The email address this object represents."}
+  #!defAttr()!1: {name:"text",type:"string",description:"Text displayed on this component"}
   text = property_with_callback("text", _update_button_look)
 
   def _set_enabled(self, value):
@@ -114,6 +113,7 @@ class Button(ButtonTemplate):
     if value:
       button.classList.add(f"anvil-m3-{value}")
       
+  #!defAttr()!1: {name:"appearance",type:"enum",description:"The name associated with the address this object represents."}    
   appearance = property_with_callback("appearance", _set_appearance)
 
   def form_show(self, **event_args):
