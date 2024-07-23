@@ -101,17 +101,17 @@ class Slider(SliderTemplate):
 
   #!defAttr()!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
   #!defAttr()!1: {name:"progress_color",type:"color",description:"The color of the progress bar"}  
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!defAttr()!1: {name:"thumb_color",type:"color",description:"The color of the slider thumb."} 
-  #!defAttr()!1: {name:"label_color",type:"color",description:"The font family to use for this component."}
-  #!defAttr()!1: {name:"label_text_color",type:"color",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"value",type:"number",description:"The text displayed on this component"}
-  #!defAttr()!1: {name:"min",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"max",type:"number",description:"If True, this component’s text will be underlined."}
-  #!defAttr()!1: {name:"step",type:"number",description:"If True, this component’s text will be italic."}
-  #!defAttr()!1: {name:"show_markers",type:"boolean",description:"Size (pixels) of the icon displayed on this component."}
+  #!defAttr()!1: {name:"label_color",type:"color",description:"The color of the background of the label"}
+  #!defAttr()!1: {name:"label_text_color",type:"color",description:"The color of the text of the label"} 
+  #!defAttr()!1: {name:"value",type:"number",description:"The value of the slider."}
+  #!defAttr()!1: {name:"min",type:"number",description:"The minimum value of the slider."}
+  #!defAttr()!1: {name:"max",type:"number",description:"The maximum value of the slider."}
+  #!defAttr()!1: {name:"step",type:"number",description:"The stepping interval for the slider."}
+  #!defAttr()!1: {name:"show_markers",type:"boolean",description:"If True, display discrete markers on the track."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"track_color",type:"color",description:"The color of the slider track."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
@@ -255,3 +255,5 @@ class Slider(SliderTemplate):
     self._set_markers()
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     self._update_progress()
+
+#!defClass(material_3,Slider)!:

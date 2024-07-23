@@ -108,7 +108,7 @@ class Button(ButtonTemplate):
 
   #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 

@@ -59,7 +59,7 @@ class ToggleIconButton(IconButton):
 
   #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
@@ -81,5 +81,5 @@ class ToggleIconButton(IconButton):
   selected_icon_color = property_with_callback("selected_icon_color", _apply_styles)
   selected = property_with_callback("selected", _selected_setter)
 
-
+#!defClass(material_3,ToggleIconButton)!:
     
