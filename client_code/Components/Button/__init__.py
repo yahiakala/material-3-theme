@@ -52,6 +52,10 @@ class Button(ButtonTemplate):
       }
     }]
 
+    
+    #!defAttr()!1: {name:"appearance",type:"string",description:"The name associated with the address this object represents."}
+    #!defAttr()!1: {name:"icon",type:"string",description:"The full string value of this address."} 
+  
   def _set_icon(self):
     if self.icon:
       self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon
@@ -90,6 +94,7 @@ class Button(ButtonTemplate):
     self._set_text()
     
   icon = property_with_callback("icon", _update_button_look)
+  #!defAttr()!1: {name:"text",type:"string",description:"The email address this object represents."}
   text = property_with_callback("text", _update_button_look)
 
   def _set_enabled(self, value):
@@ -132,7 +137,7 @@ class Button(ButtonTemplate):
     
   icon_align = property_with_callback('icon_align', _set_icon_align)
 
-#!defClass(anvil.m3)
+#!defClass(anvil.m3,#Button)!:
 
 
 
