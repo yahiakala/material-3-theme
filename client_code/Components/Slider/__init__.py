@@ -109,16 +109,12 @@ class Slider(SliderTemplate):
   #!defAttr()!1: {name:"label_text_color",type:"enum",description:"The icon to display on this component."} 
   #!defAttr()!1: {name:"value",type:"string",description:"The text displayed on this component"}
   #!defAttr()!1: {name:"min",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"max",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!defAttr()!1: {name:"step",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!defAttr()!1: {name:"show_markers",type:"number",description:"Size (pixels) of the icon displayed on this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!defAttr()!1: {name:"track_color",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
       
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
