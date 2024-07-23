@@ -137,7 +137,7 @@ class Button(ButtonTemplate):
     
   icon_align = property_with_callback('icon_align', _set_icon_align)
 
-#!defClass(anvil.m3,#Button)!:
+#!defClass(material_3,Button)!:
 
 
 
