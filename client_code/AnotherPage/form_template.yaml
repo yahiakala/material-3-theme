@@ -3,14 +3,6 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: slider_1
-    properties: {enabled: true, value: 5, show_label: true}
-    type: form:Components.Slider
-    layout_properties: {}
-  - name: icon_button_2
-    properties: {appearance: Outlined, icon: logout}
-    type: form:Components.IconButton
-    layout_properties: {}
   - name: heading_2
     properties: {text: Hello!}
     type: form:Components.Heading
@@ -19,11 +11,6 @@ components_by_slot:
     properties: {appearance: outlined, label_text: Name, text: Name}
     type: form:Components.TextInput.TextField
     layout_properties: {}
-  - name: card_4
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
-    components: []
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
