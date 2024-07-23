@@ -3,16 +3,12 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: icon_button_2
-    properties: {align: left}
-    type: form:Components.IconButton
-    layout_properties: {}
-  - name: toggle_icon_button_1
+  - name: slider_1
     properties: {}
-    type: form:Components.ToggleIconButton
+    type: form:Components.Slider
     layout_properties: {}
   - name: text_field_1
-    properties: {appearance: outlined, label_text: Name, text: Name}
+    properties: {appearance: outlined, label_text: Name, text: Name, align: left}
     type: form:Components.TextInput.TextField
     layout_properties: {}
   - name: column_panel_1

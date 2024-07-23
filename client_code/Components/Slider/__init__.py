@@ -98,6 +98,27 @@ class Slider(SliderTemplate):
       self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color))
     else:
       self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
+
+  #!defAttr()!1: {name:"show_label",type:"enum",description:"The position of this component in the available space."} 
+  #!defAttr()!1: {name:"progress_color",type:"enum",description:"A predefined style for this component."}  
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If False, the component will not be displayed."} 
+  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!defAttr()!1: {name:"thumb_color",type:"color",description:"The color of the text on the component."} 
+  #!defAttr()!1: {name:"label_color",type:"string",description:"The font family to use for this component."}
+  #!defAttr()!1: {name:"label_text_color",type:"enum",description:"The icon to display on this component."} 
+  #!defAttr()!1: {name:"value",type:"string",description:"The text displayed on this component"}
+  #!defAttr()!1: {name:"min",type:"number",description:"The font size of text displayed on this component."}
+  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
       
   thumb_color = property_with_callback('thumb_color', _set_thumb_color)
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
