@@ -28,7 +28,8 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self._handle_click)
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self._handle_click)
-  
+    
+
   def _handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
