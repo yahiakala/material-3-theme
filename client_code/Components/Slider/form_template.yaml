@@ -2,7 +2,7 @@ properties:
 - {name: show_label, type: boolean, default_value: false, group: Label, important: true, description: Display a label above the thumb}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: True if this component should allow user interaction}
-- {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar, group: Look and feel}
+- {name: progress_color, type: color, default_value: '', important: false, description: Color of the progress bar, group: Look and feel}
 - {name: track_color, type: color, default_value: '', important: false, description: Color of the track, group: Look and feel}
 - {name: thumb_color, type: color, default_value: '', important: false, description: Color of the slider thumb, group: Look and feel}
 - {name: label_color, type: color, default_value: '', important: false, description: Color of the background of the label, group: Label}
