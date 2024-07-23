@@ -158,6 +158,11 @@ class ButtonMenu(ButtonMenuTemplate):
       self._hoverIndex = None
       self._clear_hover_styles()
 
+  def _set_menu_items(self, value=[]):
+    for i in value:
+      self.add_component(i, slot='anvil-m3-buttonMenu-slot')
+  menu_items = property_with_callback('menu_items', _set_menu_items)
+
 
   def _child_clicked(self, event):
     # do the click action. The child should handle this
