@@ -1,5 +1,5 @@
 properties:
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: True if this component should allow user interaction.}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - name: align
   type: enum
@@ -15,7 +15,7 @@ properties:
   options: [elevated, filled, tonal, outlined]
   include_none_option: true
   group: Key Properties
-  description: Predefined style type.
+  description: A predefined style for this component.
 - {name: text, type: string, default_value: '', description: Text displayed on this component., group: Key Properties, important: true}
 - {name: text_color, type: color, default_value: '', group: Look and Feel, description: Color of the text on the component.}
 - {name: font_family, type: string, default_value: '', group: Text, description: Font family to use for this component.}

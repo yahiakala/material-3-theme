@@ -46,7 +46,7 @@ properties:
   options: [elevated, filled, tonal, outlined]
   include_none_option: true
   group: Key Properties
-  description: Predefined style type.
+  description: A predefined style for this component.
 is_package: true
 events:
 - name: change

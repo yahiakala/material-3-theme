@@ -102,6 +102,7 @@ class Button(ButtonTemplate):
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
       
+  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   enabled = property_with_callback("enabled", _set_enabled)
 
   def _set_appearance(self, value):
@@ -113,15 +114,19 @@ class Button(ButtonTemplate):
     if value:
       button.classList.add(f"anvil-m3-{value}")
       
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"The name associated with the address this object represents."}    
+  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}    
   appearance = property_with_callback("appearance", _set_appearance)
 
   def form_show(self, **event_args):
     self._update_button_look()
-    
+
+  #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
+  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   font_family = font_family_property('anvil-m3-button-text')
+  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   font_size = font_size_property('anvil-m3-button-text')
+  #!defAttr()!1: {name:"underline",type:"boolean",description:"The font size of text displayed on this component."}
   underline = underline_property('anvil-m3-button-text')
   italic = italic_property('anvil-m3-button-text')
   bold = custom_bold_property('anvil-m3-button-text')
