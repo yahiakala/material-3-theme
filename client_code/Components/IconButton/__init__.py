@@ -57,7 +57,7 @@ class IconButton(IconButtonTemplate):
   #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"Text to display when the mouse is hovered over this component."}
+  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   
   appearance = property_with_callback("appearance", _appearance_setter)
   visible = HtmlTemplate.visible

@@ -3,10 +3,10 @@ from .IconButton import IconButton
 import anvil.designer
 from ..Functions import property_with_callback, theme_color_to_css
 
-selected_property = {"name": "selected", "type": "boolean", "group": "Interaction", "important": True, "default_value": False, "description": "True if button is in the toggled on state"}
-selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
-selected_background_property = {"name": "selected_background", "type": "color", "group": "Toggled Style" , "description": "Background color when component is in the selected state."}
-selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "Icon color when component is in the selected state."}
+selected_property = {"name": "selected", "type": "boolean", "group": "Interaction", "important": True, "default_value": False, "description": "If True, the component is in the selected state"}
+selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "The border style when the component is in the selected state. Accepts any valid CSS border value."}
+selected_background_property = {"name": "selected_background", "type": "color", "group": "Toggled Style" , "description": "The background color when the component is in the selected state."}
+selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "The icon color when the component is in the selected state."}
     
 class ToggleIconButton(IconButton):
   _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
@@ -67,8 +67,11 @@ class ToggleIconButton(IconButton):
   #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"Text to display when the mouse is hovered over this component."}
-    
+  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!defAttr()!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."}
+  #!defAttr()!1: {name:"selected_border",type:"string",description:"The border style when the component is in the selected state. Accepts any valid CSS border value."}
+  #!defAttr()!1: {name:"selected_background",type:"color",description:"If True, the component is in the selected state."}
+  
   border = property_with_callback("border", _apply_styles)
   icon_color = property_with_callback("icon_color", _apply_styles)
   background = property_with_callback("background", _apply_styles)

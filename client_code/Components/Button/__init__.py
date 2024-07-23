@@ -114,7 +114,7 @@ class Button(ButtonTemplate):
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"text",type:"string",description:"Text displayed on this component"}
+  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
@@ -124,7 +124,7 @@ class Button(ButtonTemplate):
   #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"Text to display when the mouse is hovered over this component."}
+  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
   
   align = property_with_callback('align', _set_align)
