@@ -68,6 +68,24 @@ class Checkbox(CheckboxTemplate):
       self.checked = not self.checked
       self.raise_event("change")
 
+  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
+  
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-checkbox-label')
@@ -143,4 +161,4 @@ class Checkbox(CheckboxTemplate):
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
 
-
+#!defClass(material_3,Button)!:
