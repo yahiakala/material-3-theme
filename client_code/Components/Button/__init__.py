@@ -106,7 +106,7 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  #!componentProp(material_3.Button)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Button)!1: {name:"align",type:"enum", options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
@@ -127,7 +127,6 @@ class Button(ButtonTemplate):
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
 
-  #!eventGroups()!1: {}
   #!componentEvent(material_3.Button)!1: {name: "click", description: "sdfasd", parameters:[]}
   
   align = property_with_callback('align', _set_align)
@@ -151,4 +150,4 @@ class Button(ButtonTemplate):
   icon_align = property_with_callback('icon_align', _set_icon_align)
   visible = HtmlTemplate.visible
 
-#!defClass(material_3,Button, Component)!:
+#!defClass(material_3,Button, anvil.Component)!:
