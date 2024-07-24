@@ -106,7 +106,7 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!defAttr(left, right, center)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
