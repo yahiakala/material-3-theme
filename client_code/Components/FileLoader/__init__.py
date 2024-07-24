@@ -101,7 +101,7 @@ class FileLoader(FileLoaderTemplate):
   #!defAttr()!1: {name:"font",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
   #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"align",type:"enum", options:["a", "b", "c"],description:"The position of this component in the available space."} 
+  #!defComponentProp()!1: {name:"align",type:"enum", options:["a", "b", "c"],description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
