@@ -108,9 +108,9 @@ class Slider(SliderTemplate):
   #!defAttr()!1: {name:"label_color",type:"color",description:"The colour of the background of the label"}
   #!defAttr()!1: {name:"label_text_color",type:"color",description:"The colour of the text of the label"} 
   #!defAttr()!1: {name:"value",type:"number",description:"The value of the slider."}
-  #!defAttr()!1: {name:"min",type:"number",description:"The minimum value of the slider."}
-  #!defAttr()!1: {name:"max",type:"number",description:"The maximum value of the slider."}
-  #!defAttr()!1: {name:"step",type:"number",description:"The stepping interval for the slider."}
+  #!defAttr()!1: {name:"min",type:"number",description:"The minimum value of the Slider."}
+  #!defAttr()!1: {name:"max",type:"number",description:"The maximum value of the Slider."}
+  #!defAttr()!1: {name:"step",type:"number",description:"The stepping interval for the Slider."}
   #!defAttr()!1: {name:"show_markers",type:"boolean",description:"If True, display discrete markers on the track."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"track_color",type:"color",description:"The colour of the slider track."}
