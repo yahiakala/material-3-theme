@@ -89,8 +89,10 @@ class FileLoader(FileLoaderTemplate):
     if value:
       file_loader.classList.add(f"anvil-m3-{value}")
 
-  
-  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader", parameters:[]}
+
+  #!componentProp(material_3.FileLoader)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!defAttr()!1: 
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
@@ -181,4 +183,4 @@ class FileLoader(FileLoaderTemplate):
   def file(self, value):
     self._props["file"] = value
 
-#!defClass(material_3,FileLoader)!:
+#!defClass(material_3,FileLoader, anvil.Component)!:
