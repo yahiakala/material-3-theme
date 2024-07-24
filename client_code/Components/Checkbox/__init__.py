@@ -85,6 +85,8 @@ class Checkbox(CheckboxTemplate):
   #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!defAttr()!1: {name:"checkbox_color",type:"color",description:"The color of the checkbox."}
   #!defAttr()!1: {name:"checked",type:"boolean",description:"Whether or not the checkbox is checked."}
+  #!defAttr()!1: {name:"allow_indeterminate",type:"boolean",description:"If True, supports an indeterminate state. The indeterminate state can only be set in code by setting checked=None."}
+  #!defAttr()!1: {name:"error",type:"boolean",description:"Whether or not the checkbox is in an error state."}
   
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
