@@ -149,7 +149,3 @@ class Button(ButtonTemplate):
   visible = HtmlTemplate.visible
 
 #!defClass(material_3,Button)!:
-
-
-
-  
