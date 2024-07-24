@@ -53,8 +53,8 @@ class IconButton(IconButtonTemplate):
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background",type:"color",description:"The colour of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}

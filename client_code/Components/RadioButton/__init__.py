@@ -40,7 +40,7 @@ class RadioButton(RadioButtonTemplate):
   underline = underline_property('anvil-m3-radiobutton-label')
   font_size = font_size_property('anvil-m3-radiobutton-label')
   border = border_property('anvil-m3-radiobutton-container')
-  font = font_family_property('anvil-m3-radiobutton-label', 'font')
+  font_family = font_family_property('anvil-m3-radiobutton-label', 'font_family')
   text_color = color_property('anvil-m3-radiobutton-label', 'color', 'text_color')
   background = color_property('anvil-m3-radiobutton-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')

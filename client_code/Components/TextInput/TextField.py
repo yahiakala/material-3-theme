@@ -8,7 +8,7 @@ from ...utils import _m3_icons
 text_property = {"name": "text",
                  "type": "string",
                  "default_value": "None",
-                 "description": "The text displayed on this component",
+                 "description": "The text displayed on this component.",
                  "supportsWriteback": True,
                  "important": True}
 leading_icon_property = {"name": "leading_icon",
@@ -35,25 +35,25 @@ type_property = {"name": "type",
                  "group": "Other", 
                  "important": False, 
                  "default_value": "text",
-                 "description": "What type of data will be entered into this box?"}
+                 "description": "The type of data that the user can enter into this box."}
 hide_text_property = {"name": "hide_text", 
                       "type": "boolean", 
                       "group": "Other", 
                       "important": False, 
                       "default_value": False,
-                      "description": "Display stars instead of the text entered into this component."}
+                      "description": "If True, display stars instead of text when the user types input into this component."}
 leading_icon_color_property = {"name": "leading_icon_color", 
                                "type": "color", 
-                               "group": "Icon", 
+                               "group": "Look and Feel", 
                                "important": False, 
                                "default_value": "",
-                               "description": "The color of the leading icon."}
+                               "description": "The colour of the leading icon."}
 trailing_icon_color_property = {"name": "trailing_icon_color", 
                                "type": "color", 
-                               "group": "Icon", 
+                               "group": "Look and Feel", 
                                "important": False, 
                                "default_value": "",
-                               "description": "The color of the trailing icon."}
+                               "description": "The colour of the trailing icon."}
 
 
 click_event = {"name": "trailing_icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}

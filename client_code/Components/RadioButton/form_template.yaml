@@ -1,30 +1,30 @@
 properties:
 - {name: group_name, type: string, default_value: '', default_binding_prop: true, description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores ("_"), colons (":"), and periods (".").', group: Key Properties}
-- {name: selected, type: boolean, default_value: false, description: True if this radio button is selected., group: Interaction, designer_hint: toggle}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, description: Enable radio button, group: Interaction, designerHint: enabled, designer_hint: enabled}
-- {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component}
+- {name: selected, type: boolean, default_value: false, description: If True, the component is in the selected state., group: Interaction, designer_hint: toggle}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: enabled, type: boolean, default_value: true, description: If True, this component allows user interaction., group: Interaction, designerHint: enabled, designer_hint: enabled}
+- {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component.}
 - {name: value, type: string, default_value: '', group: Key Properties, description: The value of the group when this radio button is selected}
-- default_value: left
+- description: The position of this component in the available space.
   group: Look and Feel
-  important: true
   name: align
   type: enum
+  important: true
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: The position of this component in the available space.
-- {name: background, type: color, description: background color of the component, default_value: '', group: Look and Feel}
-- {name: bold, type: boolean, default_value: false, description: Display the component text as bold, group: Text Style}
+  default_value: left
+- {name: background_color, type: color, description: The colour of the background of this component., default_value: '', group: Look and Feel}
+- {name: bold, type: boolean, default_value: false, description: "If True, this component’s text will be bold.", group: Text}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
-- {name: font, type: string, default_value: '', description: The font family to use for this component., group: Text Style}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels, group: Text Style}
-- {name: text_color, type: color, default_value: '', description: Component's Text Color, group: Text Style}
-- {name: italic, type: boolean, default_value: false, description: Display the component text as italic, group: Text Style}
-- {name: underline, type: boolean, default_value: false, description: Display the component text as underlined, group: Text Style}
-- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page, group: Look and Feel, designerHint: visible, designer_hint: visible}
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component., group: Layout}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when the mouse is hovered over this component}
+- {name: font_family, type: string, default_value: '', description: The font family to use for this component., group: Text}
+- {name: font_size, type: number, description: The font size of the text displayed on this component., group: Text}
+- {name: text_color, type: color, default_value: '', description: "The colour of the text on the component.", group: Text}
+- {name: italic, type: boolean, default_value: false, description: "If True, this component’s text will be italic.", group: Text}
+- {name: underline, type: boolean, default_value: false, description: "If True, this component’s text will be underlined.", group: Text}
+- {name: visible, type: boolean, default_value: true, description: If True, the component will be displayed., group: Look and Feel, designerHint: visible, designer_hint: visible}
+- {name: margin, type: margin, important: true, description: The margin (pixels) of the component., group: Layout}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
 - {name: radio_color, type: color, default_value: '', important: true, description: Color of the radio button itself, group: Look and Feel}
 is_package: true
 events:

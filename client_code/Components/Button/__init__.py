@@ -111,17 +111,17 @@ class Button(ButtonTemplate):
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!defAttr()!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
   #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!defAttr()!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
@@ -143,7 +143,7 @@ class Button(ButtonTemplate):
   bold = custom_bold_property('anvil-m3-button-text')
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
-  background = color_property('anvil-m3-button', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
   margin = margin_property('anvil-m3-button-component')
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')

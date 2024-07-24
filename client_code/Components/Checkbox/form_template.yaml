@@ -1,7 +1,7 @@
 properties:
 - {description: Whether or not the checkbox is checked., group: Key Properties, name: checked, default_binding_prop: true, type: boolean, important: true, designer_hint: toggle, designerHint: toggle, default_value: false}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction., designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: enabled, type: boolean, default_value: true, description: If True, this component allows user interaction., designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
 - name: text
   type: string
@@ -12,16 +12,16 @@ properties:
   group: Key Properties
   important: true
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None., group: Interaction, important: true}
-- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page., designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
-- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined., designerHint: font-underline, designer_hint: font-underline, group: Text}
-- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics., designerHint: font-italic, group: Text, designer_hint: font-italic}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels., group: Text, important: true}
-- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold., designerHint: font-bold, group: Text, designer_hint: font-bold}
+- {name: visible, type: boolean, default_value: true, description: If True, the component will be displayed., designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
+- {name: underline, type: boolean, default_value: false, description: "If True, this component’s text will be underlined.", designerHint: font-underline, designer_hint: font-underline, group: Text}
+- {name: italic, type: boolean, default_value: false, description: "If True, this component’s text will be italic.", designerHint: font-italic, group: Text, designer_hint: font-italic}
+- {name: font_size, type: number, description: The font size of the text displayed on this component., group: Text, important: true}
+- {name: bold, type: boolean, default_value: false, description: "If True, this component’s text will be bold.", designerHint: font-bold, group: Text, designer_hint: font-bold}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
-- {name: font, type: string, default_value: '', description: The font family to use for this component., group: Text}
+- {name: font_family, type: string, default_value: '', description: The font family to use for this component., group: Text}
 - {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox., group: Look and Feel}
-- {name: text_color, type: color, default_value: '', description: The color of the component's label., group: Look and Feel}
-- {name: background, type: color, default_value: '', description: The background colour of this component., group: Look and Feel}
+- {name: text_color, type: color, default_value: '', description: "The colour of the text on the component.", group: Look and Feel}
+- {name: background_color, type: color, default_value: '', description: The colour of the background of this component., group: Look and Feel}
 - description: The position of this component in the available space.
   group: Layout
   name: align
@@ -31,8 +31,8 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   default_value: left
-- {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of this component}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
+- {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
+- {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}

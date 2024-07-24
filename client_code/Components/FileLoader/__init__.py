@@ -124,7 +124,7 @@ class FileLoader(FileLoaderTemplate):
   underline = underline_property('anvil-m3-fileloader-label')
   italic = italic_property('anvil-m3-fileloader-label')
   bold = bold_property('anvil-m3-fileloader-label')
-  font = font_family_property('anvil-m3-fileloader-label', 'font')
+  font_family = font_family_property('anvil-m3-fileloader-label', 'font')
   icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')

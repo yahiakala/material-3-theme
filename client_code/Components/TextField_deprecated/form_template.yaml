@@ -12,7 +12,7 @@ properties:
   include_none_option: true
 - {name: label_text, type: string, default_value: '', group: Attributes}
 - {name: supporting_text, type: string, default_value: '', group: Attributes}
-- {name: background, type: color, default_value: '', important: false, description: background color of the component, group: Style}
+- {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Style}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold, group: Style}
 - {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label, group: Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels, group: Style}
@@ -26,7 +26,7 @@ properties:
 - {name: error, type: boolean, default_value: false, group: Style}
 - {name: placeholder, type: string, default_value: '', group: Attributes}
 - {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined, group: Style}
-- {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed, group: Style, designer_hint: visible}
+- {name: visible, type: boolean, default_value: true, important: true, description: If True, the component will be displayed., group: Style, designer_hint: visible}
 - {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics, group: Style}
 - {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold, group: Style}
 - {name: underline_display, type: boolean, default_value: false, important: false, description: Display this component’s text in underline, group: Style}
@@ -37,6 +37,7 @@ properties:
   type: margin
   important: true
   default_value: [5px, null, null, null]
+  description: The margin (pixels) of the component.
 - {name: character_limit, type: number, important: true, default_value: 0, description: Character limit for the textfield. Value must be greater 0. All other values default to no character limit}
 is_package: true
 events:

@@ -3,7 +3,7 @@ properties:
 - {name: placeholder, type: string, default_value: '', important: false, group: Key Properties, description: The text to be displayed when the component is empty.}
 - {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties, description: Text displayed underneath this component.}
 - {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties, description: Limit the amount of characters that can be entered into this box.}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles'}
 - name: align
   type: enum
   options: [left, center, right]
@@ -18,8 +18,8 @@ properties:
   options: [filled, outlined]
   default_value: filled
   group: Key Properties
-  description: Predefined style type.
-- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'Should this component be displayed?'}
+  description: A predefined style for this component.
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color, group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color, group: Look and Feel}
 - {name: supporting_text_color, type: color, default_value: '', important: false, description: The color of this component's supporting text., group: Look and Feel}
@@ -33,7 +33,7 @@ properties:
 - {name: underline_display, type: boolean, default_value: false, important: false, description: Display this component’s text in underline, group: Text, designer_hint: font-underline}
 - {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text, group: Text}
 - {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels, group: Text}
-- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: True if this component should allow user interaction.}
+- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: If True, this component allows user interaction.}
 - {name: error, type: boolean, default_value: false, important: false, group: Interaction, designer_hint: toggle, description: Whether or not the checkbox is in an error state.}
 - name: spacing
   type: spacing
@@ -43,8 +43,8 @@ properties:
     margin: [auto, null, null, null]
   group: Layout
   description: The margin and padding of this component. Default value is in pixels.
-- {name: background, type: color, default_value: '', important: false, description: The background color of this component., group: Look and Feel}
-- {name: tooltip, type: string, default_value: '', important: false, group: Other}
+- {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Look and Feel}
+- {name: tooltip, type: string, default_value: '', important: false, group: Other, description: The text to display when the mouse is hovered over this component.}
 - {name: supporting_text_font, type: string, default_value: '', important: false, description: The font family to use for this component’s supporting text., group: Text}
 - {name: supporting_text_font_size, type: number, important: false, description: The height of text displayed on this component’s supporting text in pixels., group: Text}
 - {name: character_limit_color, type: color, default_value: '', important: false, description: The color of the character limit's text., group: Look and Feel}
