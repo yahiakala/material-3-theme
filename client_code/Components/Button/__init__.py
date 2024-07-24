@@ -120,8 +120,8 @@ class Button(ButtonTemplate):
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background",type:"color",description:"The colour of the background of this component."}
+  #!defAttr()!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
@@ -141,7 +141,7 @@ class Button(ButtonTemplate):
   bold = custom_bold_property('anvil-m3-button-text')
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
-  background = color_property('anvil-m3-button', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
   margin = margin_property('anvil-m3-button-component')
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
