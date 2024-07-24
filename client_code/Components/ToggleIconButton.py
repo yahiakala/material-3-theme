@@ -70,8 +70,8 @@ class ToggleIconButton(IconButton):
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!defAttr()!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."}
   #!defAttr()!1: {name:"selected_border",type:"string",description:"The border style when the component is in the selected state. Accepts any valid CSS border value."}
-  #!defAttr()!1: {name:"selected_background",type:"color",description:"The background color when the component is in the selected state."}
-  #!defAttr()!1: {name:"selected_icon_color",type:"color",description:"The icon color when the component is in the selected state."}
+  #!defAttr()!1: {name:"selected_background",type:"color",description:"The background colour when the component is in the selected state."}
+  #!defAttr()!1: {name:"selected_icon_color",type:"color",description:"The icon colour when the component is in the selected state."}
   
   border = property_with_callback("border", _apply_styles)
   icon_color = property_with_callback("icon_color", _apply_styles)

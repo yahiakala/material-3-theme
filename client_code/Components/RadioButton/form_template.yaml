@@ -5,15 +5,15 @@ properties:
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button, group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component}
 - {name: value, type: string, default_value: '', group: Key Properties, description: The value of the group when this radio button is selected}
-- default_value: left
+- description: The position of this component in the available space.
   group: Look and Feel
-  important: true
   name: align
   type: enum
+  important: true
   designer_hint: align-horizontal
   designerHint: align-horizontal
   options: [left, center, right]
-  description: The position of this component in the available space.
+  default_value: left
 - {name: background, type: color, description: background color of the component, default_value: '', group: Look and Feel}
 - {name: bold, type: boolean, default_value: false, description: Display the component text as bold, group: Text Style}
 - {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}

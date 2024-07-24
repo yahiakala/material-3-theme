@@ -75,7 +75,7 @@ class Checkbox(CheckboxTemplate):
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"font",type:"string",description:"The font family to use for this component."}
+  #!defAttr()!1: {name:"font_famil",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
   #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
@@ -95,7 +95,7 @@ class Checkbox(CheckboxTemplate):
   bold = bold_property('anvil-m3-checkbox-label')
   font_size = font_size_property('anvil-m3-checkbox-label')
   border = border_property('anvil-m3-checkbox-container')
-  font = font_family_property('anvil-m3-checkbox-label', 'font')
+  font_family = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color', 'text_color')
   background = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')

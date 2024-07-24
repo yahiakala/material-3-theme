@@ -34,7 +34,7 @@ class MenuItem(MenuItemTemplate):
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
   font_size = font_size_property('anvil-m3-menuItem-labelText')
-  font = font_family_property('anvil-m3-menuItem-labelText', 'font')
+  font_family = font_family_property('anvil-m3-menuItem-labelText', 'font_family')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   # @property

@@ -42,7 +42,7 @@ class Heading(HeadingTemplate):
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"font",type:"string",description:"The font family to use for this component."}
+  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
   #!defAttr()!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
@@ -62,7 +62,7 @@ class Heading(HeadingTemplate):
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
   border = border_property('anvil-m3-heading-container')
-  font = font_family_property('anvil-m3-heading-container', 'font')
+  font_family = font_family_property('anvil-m3-heading-container')
   text_color = color_property('anvil-m3-heading-container', 'color', 'text_color')
   icon_color = color_property('anvil-m3-heading-icon', 'color', 'icon_color')
   background_color = color_property('anvil-m3-heading-container', 'backgroundColor', 'background_color')

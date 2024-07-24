@@ -92,16 +92,16 @@ class FileLoader(FileLoaderTemplate):
   #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!defAttr()!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
+  #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!defAttr()!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"font",type:"string",description:"The font family to use for this component."}
+  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"align",type:"enum", options:["a", "b", "c"],description:"The position of this component in the available space."} 
+  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
+  #!defAttr()!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
@@ -122,7 +122,7 @@ class FileLoader(FileLoaderTemplate):
   underline = underline_property('anvil-m3-fileloader-label')
   italic = italic_property('anvil-m3-fileloader-label')
   bold = bold_property('anvil-m3-fileloader-label')
-  font = font_family_property('anvil-m3-fileloader-label', 'font')
+  font_family = font_family_property('anvil-m3-fileloader-label', 'font')
   icon_size = font_size_property('anvil-m3-fileloader-icon', 'icon_size')
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
