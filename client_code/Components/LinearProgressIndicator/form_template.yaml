@@ -1,6 +1,6 @@
 properties:
-- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'Should this component be displayed?'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'If True, the component will be displayed.'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
 - name: align
   type: enum
   important: true
@@ -15,10 +15,10 @@ properties:
   options: [determinate, indeterminate]
   default_value: indeterminate
   group: Key Properties
-  description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
-- {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
-- {name: margin, type: margin, group: Layout, important: true, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when you hover the mouse over this component}
+  description: Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time.
+- {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type.}
+- {name: margin, type: margin, group: Layout, important: true, description: The margin (pixels) of the component.}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
 - {name: color, type: color, default_value: '', important: true, description: The color of this component.}
 is_package: true
 events:

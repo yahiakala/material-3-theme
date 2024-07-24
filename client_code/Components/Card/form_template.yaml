@@ -1,6 +1,6 @@
 properties:
-- {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true, designer_hint: visible, group: Look and Feel, description: 'Should this component be displayed?'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
 - name: align
   type: enum
   important: true
@@ -15,7 +15,7 @@ properties:
   options: [elevated, filled, outlined]
   default_value: elevated
   group: Key Properties
-  description: Predefined style type.
+  description: A predefined style for this component.
 - {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style}
 - include_none_option: true
   description: How the image in positioned/displayed on the card.
@@ -34,7 +34,7 @@ properties:
   important: true
   default_value: [4px, 4px, 4px, 4px]
   group: Layout
-  description: 'Margin (pixels) of the component. '
+  description: 'The margin (pixels) of the component.'
 - name: card_content_padding
   type: padding
   important: false
@@ -42,8 +42,8 @@ properties:
   group: Look and Feel
   description: Padding (pixels) of the card content
 - {name: card_image_content_padding, type: padding, important: false, group: Image Style, description: Padding (pixels) of content in the card image}
-- {name: background, type: color, default_value: '', important: false, group: Look and Feel, description: Card Background color}
-- {name: tooltip, type: string, default_value: '', important: false, description: Text to display when the mouse is hovered over this component., group: Other}
+- {name: background_color, type: color, default_value: '', important: false, group: Look and Feel, description: The colour of the background of this component.}
+- {name: tooltip, type: string, default_value: '', important: false, description: The text to display when the mouse is hovered over this component., group: Other}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
 is_package: true
 events:

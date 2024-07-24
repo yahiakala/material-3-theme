@@ -1,12 +1,12 @@
 properties:
 - {name: show_label, type: boolean, default_value: false, group: Label, important: true, description: Display a label above the thumb}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: True if this component should allow user interaction}
-- {name: progress_color, type: color, default_value: '', important: false, description: Color of the progress bar, group: Look and feel}
-- {name: track_color, type: color, default_value: '', important: false, description: Color of the track, group: Look and feel}
-- {name: thumb_color, type: color, default_value: '', important: false, description: Color of the slider thumb, group: Look and feel}
-- {name: label_color, type: color, default_value: '', important: false, description: Color of the background of the label, group: Label}
-- {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label, group: Label}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: If True, this component allows user interaction.}
+- {name: progress_color, type: color, default_value: '', important: false, description: The colour of the progress bar., group: Look and feel}
+- {name: track_color, type: color, default_value: '', important: false, description: The colour of the track., group: Look and feel}
+- {name: thumb_color, type: color, default_value: '', important: false, description: The colour of the Slider thumb., group: Look and feel}
+- {name: label_color, type: color, default_value: '', important: false, description: The colour of the background of the label., group: Label}
+- {name: label_text_color, type: color, default_value: '', important: false, description: The colour of the text of the label., group: Label}
 - name: value
   type: number
   important: true
@@ -15,17 +15,18 @@ properties:
   group: Key properties
   allow_binding_writeback: true
   binding_writeback_events: [change]
-- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider, group: Key properties}
-- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider, group: Key properties}
-- {name: step, type: number, important: true, description: The stepping interval for the slider, group: Key properties}
+- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the Slider., group: Key properties}
+- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the Slider., group: Key properties}
+- {name: step, type: number, important: true, description: The stepping interval for the Slider, group: Key properties}
 - name: margin
   type: margin
   important: true
   default_value: ['', '', '', '']
   group: Layout
-- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers, group: Look and feel}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
-- {name: visible, type: boolean, default_value: true, important: true, description: 'Should this component be displayed?', group: Look and Feel, designer_hint: visible}
+  description: The margin (pixels) of the component.
+- {name: show_markers, type: boolean, default_value: false, important: true, description: If True, display discrete markers on the track., group: Look and feel}
+- {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'If True, the component will be displayed.', group: Look and Feel, designer_hint: visible}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}
