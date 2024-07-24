@@ -89,9 +89,17 @@ class FileLoader(FileLoaderTemplate):
     if value:
       file_loader.classList.add(f"anvil-m3-{value}")
 
-  # !componentProp(FileLoader)!1 {
-  # 
-  }
+  # !componentProps(FileLoader)!1: ["text"], {
+  #     text: {
+  #         name: "text",
+  #         type: "string",
+  #         description: "hello"
+  #     }
+  # }
+
+  # !componentEvents(FileLoader)!1: ["focus"], {
+  #    focus: {name:"change", description: "sdfhasd", parameters: [{name: "fasdf", description: "sdfasd"}]}
+  # }
   
   #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
