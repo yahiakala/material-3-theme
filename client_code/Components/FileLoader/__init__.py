@@ -92,22 +92,24 @@ class FileLoader(FileLoaderTemplate):
   #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!defAttr()!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
   #!defAttr()!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!defAttr()!1: {name:"font",type:"string",description:"The font family to use for this component."}
   #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
-
+  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}
+  #!defAttr()!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
+  #!defAttr()!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!defAttr()!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg "image/png" or "image/*"), or an extension (eg ".png"), or a comma-separated set of them (eg ".png,.jpg,.jpeg")."} 
+  #!defAttr()!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
+  #!defAttr()!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
+  
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
   enabled = enabled_property('anvil-m3-fileloader-input')
