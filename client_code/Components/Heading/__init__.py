@@ -9,8 +9,6 @@ import anvil.designer
 from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 from anvil.property_utils import set_element_margin
 
-#TODO: figure out what to do with line height
-#TODO: add margin and padding
 
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
