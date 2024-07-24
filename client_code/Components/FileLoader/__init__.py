@@ -106,7 +106,7 @@ class FileLoader(FileLoaderTemplate):
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}
+  #!defAttr()!1: {name:"appearance",type:"enum",options:["elevated", "filled", "tonal", "outlined"],description:"A predefined style for this component."}
   #!defAttr()!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
   #!defAttr()!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!defAttr()!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), or an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
