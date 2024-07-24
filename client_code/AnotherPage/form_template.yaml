@@ -4,7 +4,7 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: slider_1
-    properties: {}
+    properties: {value: 5, step: '1', max: 100, show_label: false, show_markers: true}
     type: form:Components.Slider
     layout_properties: {}
   - name: text_field_1
