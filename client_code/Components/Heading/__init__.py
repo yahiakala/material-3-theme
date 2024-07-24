@@ -53,15 +53,11 @@ class Heading(HeadingTemplate):
   #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
   #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  
-  
+  #!defAttr()!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!defAttr()!1: {name:"style",type:"enum",description:"Role of the heading component: display, headline or title."}  
+  #!defAttr()!1: {name:"scale",type:"enum",description:"Size of the heading component."}
   #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
   
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
