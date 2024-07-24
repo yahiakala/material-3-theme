@@ -40,15 +40,18 @@ class FileLoader(FileLoaderTemplate):
       }
     }]
 
+  #!defMethod(_)!2: "Clear any selected files from this FileLoader." ["clear"]
   def clear(self):
     self.dom_nodes['anvil-m3-fileloader-input'].value = ''
     self.file = None
     self.dom_nodes['anvil-m3-fileloader-label'].innerText = self.text
     #update show_state text if present
 
+  #!defMethod(_)!2: "Set the keyboard focus to this FileLoader." ["focus"]
   def focus(self):
     self.dom_nodes['anvil-m3-fileloader-container'].focus()
 
+  #!defMethod(_)!2: "Open the file selector from code, this should be called within a click event handler for another component." ["open_file_selector"]
   def open_file_selector(self):
     self.dom_nodes['anvil-m3-fileloader-input'].click()
 
