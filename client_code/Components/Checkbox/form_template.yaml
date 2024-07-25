@@ -1,7 +1,7 @@
 properties:
 - {description: Whether or not the checkbox is checked., group: Key Properties, name: checked, default_binding_prop: true, type: boolean, important: true, designer_hint: toggle, designerHint: toggle, default_value: false}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {name: enabled, type: boolean, default_value: true, description: If True, this component allows user interaction.: null, designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
+- {description: If True, group: Interaction, name: enabled, type: boolean, important: true, this component allows user interaction.: null, designer_hint: enabled, designerHint: enabled, default_value: true}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
 - name: text
   type: string
@@ -12,7 +12,7 @@ properties:
   group: Key Properties
   important: true
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None., group: Interaction, important: true}
-- {name: visible, type: boolean, default_value: true, description: If True, the component will be displayed.: null, designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
+- {description: If True, group: Look and Feel, name: visible, type: boolean, important: true, designer_hint: visible, the component will be displayed.: null, designerHint: visible, default_value: true}
 - {name: underline, type: boolean, default_value: false, description: 'If True, this component’s text will be underlined.', designerHint: font-underline, designer_hint: font-underline, group: Text}
 - {name: italic, type: boolean, default_value: false, description: 'If True, this component’s text will be italic.', designerHint: font-italic, group: Text, designer_hint: font-italic}
 - {name: font_size, type: number, description: The font size of the text displayed on this component., group: Text, important: true}

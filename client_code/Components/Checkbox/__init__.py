@@ -68,25 +68,25 @@ class Checkbox(CheckboxTemplate):
       self.checked = not self.checked
       self.raise_event("change")
 
-  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"font_famil",type:"string",description:"The font family to use for this component."}
-  #!defAttr()!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!defAttr()!1: {name:"background",type:"color",description:"The color of the background of this component."}
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!defAttr()!1: {name:"checkbox_color",type:"color",description:"The color of the checkbox."}
-  #!defAttr()!1: {name:"checked",type:"boolean",description:"Whether or not the checkbox is checked."}
-  #!defAttr()!1: {name:"allow_indeterminate",type:"boolean",description:"If True, supports an indeterminate state. The indeterminate state can only be set in code by setting checked=None."}
-  #!defAttr()!1: {name:"error",type:"boolean",description:"Whether or not the checkbox is in an error state."}
+  #!componentProp(material_3.Checkbox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.Checkbox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.Checkbox)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.Checkbox)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.Checkbox)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.Checkbox)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.Checkbox)!1: {name:"font_famil",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(material_3.Checkbox)!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Checkbox)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.Checkbox)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.Checkbox)!1: {name:"checkbox_color",type:"color",description:"The color of the checkbox."}
+  #!componentProp(material_3.Checkbox)!1: {name:"checked",type:"boolean",description:"Whether or not the checkbox is checked."}
+  #!componentProp(material_3.Checkbox)!1: {name:"allow_indeterminate",type:"boolean",description:"If True, supports an indeterminate state. The indeterminate state can only be set in code by setting checked=None."}
+  #!componentProp(material_3.Checkbox)!1: {name:"error",type:"boolean",description:"Whether or not the checkbox is in an error state."}
   
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
@@ -163,4 +163,4 @@ class Checkbox(CheckboxTemplate):
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
 
-#!defClass(material_3,Checkbox)!:
+#!defClass(material_3,Checkbox, anvil.Component)!:
