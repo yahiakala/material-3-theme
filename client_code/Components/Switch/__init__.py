@@ -62,7 +62,8 @@ class Switch(SwitchTemplate):
   #!componentProp(material_3.Switch)!1: {name:"unselected_thumb_color",type:"color",description:"The colour of the Switch thumb when toggled off."}
   #!componentProp(material_3.Switch)!1: {name:"unselected_outline_color",type:"color",description:"The colour of the outline of the Switch when toggled off."}
   #!componentProp(material_3.Switch)!1: {name:"selected_icon",type:"enum",description:"Optional icon to appear on the Switch when toggled on."} 
-  #!componentProp(material_3.Switch)!1: {name:"unselected_icon",type:"enum",description:"Optional icon to appear on the Switch when toggled on."} 
+  #!componentProp(material_3.Switch)!1: {name:"unselected_icon",type:"enum",description:"Optional icon to appear on the Switch when toggled off."} 
+  #!componentProp(material_3.Switch)!1: {name:"selected",type:"enum",description:"Optional icon to appear on the Switch when toggled off."} 
   
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
