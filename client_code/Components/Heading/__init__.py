@@ -212,5 +212,5 @@ class Heading(HeadingTemplate):
     set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
     self._margin = value
 
-#!defClass(material_3,Heading, anvil.Component)!:
+#!defClass(material_3, Heading, anvil.Component)!:
       

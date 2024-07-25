@@ -1,9 +1,9 @@
 properties:
 - name: type
   type: enum
-  default_value: Full width
+  default_value: full_width
   default_binding_prop: true
-  options: [Full width, Inset]
+  options: [full_width, inset]
   group: Key Properties
   important: true
   description: Display the Divider across the full width of the container or inset.
