@@ -95,7 +95,6 @@ class FileLoader(FileLoaderTemplate):
   #!componentEvent(material_3.FileLoader)!1: {name: "focus", description: "When the FileLoader gets focus."}
   #!componentEvent(material_3.FileLoader)!1: {name: "lost_focus", description: "When the FileLoader loses focus."}
   
-  
   #!componentProp(material_3.FileLoader)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.FileLoader)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.FileLoader)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}

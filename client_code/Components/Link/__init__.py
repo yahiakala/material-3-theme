@@ -90,4 +90,5 @@ class Link(LinkTemplate):
     else:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-link-icon'].innerText = value
-  
+
+#!defClass(material_3,Link, anvil.Component)!:
