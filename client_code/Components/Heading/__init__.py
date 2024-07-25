@@ -49,15 +49,15 @@ class Heading(HeadingTemplate):
   #!componentProp(material_3.Heading)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Heading)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Heading)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
-  #!componentProp(material_3.Heading)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify']description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Heading)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
   #!componentProp(material_3.Heading)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.Heading)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.Heading)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(material_3.Heading)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(material_3.Heading)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.Heading)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.Heading)!1: {name:"style",type:"enum",description:"Role of the heading component: display, headline or title."}  
-  #!componentProp(material_3.Heading)!1: {name:"scale",type:"enum",description:"The size of the heading component."}
+  #!componentProp(material_3.Heading)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the heading component: display, headline or title."}  
+  #!componentProp(material_3.Heading)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large', ],description:"The size of the heading component."}
   #!componentProp(material_3.Heading)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   
   visible = HtmlTemplate.visible
