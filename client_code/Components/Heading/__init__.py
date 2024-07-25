@@ -213,4 +213,3 @@ class Heading(HeadingTemplate):
     self._margin = value
 
 #!defClass(material_3, Heading, anvil.Component)!:
-      
