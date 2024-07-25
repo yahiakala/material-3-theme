@@ -288,7 +288,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"spacing",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.TextField)!1: {name:"type",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-
+  #!componentProp(material_3.TextField)!1: {name:"text",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"The text to display when the mouse is hovered over this component."}
 
 #!defClass(material_3,TextField, anvil.Component)!:
