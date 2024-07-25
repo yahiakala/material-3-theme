@@ -1,6 +1,6 @@
 properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
 - name: align
   type: enum
   important: true
@@ -34,7 +34,7 @@ properties:
   important: true
   default_value: [4px, 4px, 4px, 4px]
   group: Layout
-  description: 'The margin (pixels) of the component.'
+  description: The margin (pixels) of the component.
 - name: card_content_padding
   type: padding
   important: false

@@ -1,6 +1,6 @@
 properties:
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
 - name: align
   type: enum
   important: true
@@ -17,12 +17,12 @@ properties:
   group: Key Properties
   description: A predefined style for this component.
 - {name: text, type: string, default_value: '', description: The text displayed on this component., group: Key Properties, important: true}
-- {name: text_color, type: color, default_value: '', group: Look and Feel, description: "The colour of the text on the component."}
+- {name: text_color, type: color, default_value: '', group: Look and Feel, description: The colour of the text on the component.}
 - {name: font_family, type: string, default_value: '', group: Text, description: The font family to use for this component.}
 - {name: font_size, type: number, group: Text, description: The font size of the text displayed on this component.}
-- {name: underline, type: boolean, default_value: false, important: false, designer_hint: font-underline, group: Text, description: "If True, this component’s text will be underlined."}
-- {name: italic, type: boolean, default_value: false, important: false, designer_hint: font-italic, group: Text, description: "If True, this component’s text will be italic."}
-- {name: bold, type: boolean, default_value: true, important: false, designer_hint: font-bold, group: Text, description: "If True, this component’s text will be bold."}
+- {name: underline, type: boolean, default_value: false, important: false, designer_hint: font-underline, group: Text, description: 'If True, this component’s text will be underlined.'}
+- {name: italic, type: boolean, default_value: false, important: false, designer_hint: font-italic, group: Text, description: 'If True, this component’s text will be italic.'}
+- {name: bold, type: boolean, default_value: true, important: false, designer_hint: font-bold, group: Text, description: 'If True, this component’s text will be bold.'}
 - include_none_option: true
   description: The icon to display on this component.
   group: Icon
@@ -47,7 +47,7 @@ properties:
   important: true
   default_value: ['8', '8', '8', '8']
   group: Layout
-  description: 'The margin (pixels) of the component.'
+  description: The margin (pixels) of the component.
 - {name: background_color, type: color, default_value: '', important: false, group: Look and Feel, description: The colour of the background of this component.}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
 - {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}

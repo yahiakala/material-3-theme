@@ -1,6 +1,6 @@
 properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: The text displayed on this component., multiline: true, group: Key Properties, important: true}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: 'A style for this component defined in CSS and added to Roles.'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
 - {name: url, type: string, default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object., group: Key Properties, important: true}
 - description: The position of this component in the available space.
   group: Layout
@@ -11,8 +11,8 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   default_value: left
-- {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: "If True, this component’s text will be bold.", group: Text, designer_hint: font-bold}
-- {name: italic, type: boolean, default_value: false, description: "If True, this component’s text will be italic.", group: Text, designerHint: font-italic, designer_hint: font-italic}
+- {name: bold, type: boolean, default_value: false, designerHint: font-bold, description: 'If True, this component’s text will be bold.', group: Text, designer_hint: font-bold}
+- {name: italic, type: boolean, default_value: false, description: 'If True, this component’s text will be italic.', group: Text, designerHint: font-italic, designer_hint: font-italic}
 - {name: font_family, type: string, default_value: '', description: The font family to use for this component., group: Text}
 - {name: font_size, type: number, group: Text, description: The font size of the text displayed on this component.}
 - name: material_icon
@@ -23,9 +23,9 @@ properties:
   default_value: null
   include_none_option: true
   none_option_label: No icon
-- {name: underline, type: boolean, default_value: true, designerHint: font-underline, description: "If True, this component’s text will be underlined.", group: Text, designer_hint: font-underline}
+- {name: underline, type: boolean, default_value: true, designerHint: font-underline, description: 'If True, this component’s text will be underlined.', group: Text, designer_hint: font-underline}
 - {name: visible, type: boolean, default_value: true, description: 'If True, the component will be displayed.', group: Look and Feel, designerHint: visible, important: true, designer_hint: visible}
-- {name: text_color, type: color, default_value: '', group: Look and Feel, description: "The colour of the text on the component.", important: true}
+- {name: text_color, type: color, default_value: '', group: Look and Feel, description: The colour of the text on the component., important: true}
 - {name: icon_color, type: color, default_value: '', group: Look and Feel, description: The colour of the icon displayed on this component., important: false}
 - {name: icon_size, type: number, default_value: 24, group: Icon, description: The size (pixels) of the icon displayed on this component.}
 - {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
