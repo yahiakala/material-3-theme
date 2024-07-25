@@ -58,6 +58,8 @@ class IconButton(IconButtonTemplate):
   #!componentProp(material_3.IconButton)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.IconButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.IconButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+
+  #!componentEvent(material_3.IconButton)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
   
   appearance = property_with_callback("appearance", _appearance_setter)
   visible = HtmlTemplate.visible
@@ -71,4 +73,4 @@ class IconButton(IconButtonTemplate):
   role = role_property('anvil-m3-iconbutton-container')
   tooltip = tooltip_property('anvil-m3-iconbutton-component')
 
-#!defClass(material_3,IconButton)!:
+#!defClass(material_3,IconButton,anvil.Component)!:

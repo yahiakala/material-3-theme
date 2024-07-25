@@ -58,7 +58,7 @@ class ToggleIconButton(IconButton):
     anvil.designer.update_component_properties(self, {'selected': self.selected})
 
   #!componentProp(material_3.ToggleIconButton)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.ToggleIconButton)!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
+  #!componentProp(material_3.ToggleIconButton)!1: {name:"appearance",type:"enum",options:["standard", "filled", "tonal", "outlined"],description:"A predefined style for this component."}  
   #!componentProp(material_3.ToggleIconButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.ToggleIconButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.ToggleIconButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
@@ -72,6 +72,8 @@ class ToggleIconButton(IconButton):
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_border",type:"string",description:"The border style when the component is in the selected state. Accepts any valid CSS border value."}
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_background",type:"color",description:"The background colour when the component is in the selected state."}
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_icon_color",type:"color",description:"The icon colour when the component is in the selected state."}
+
+  #!componentEvent(material_3.ToggleIconButton)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
   
   border = property_with_callback("border", _apply_styles)
   icon_color = property_with_callback("icon_color", _apply_styles)
