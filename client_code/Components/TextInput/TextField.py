@@ -262,6 +262,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, this component’s text will be italic."}
   #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, this component’s text will be bold."}
 
+  #!componentProp(material_3.TextField)!1: {name:"display_text_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, this component’s text will be underlined."}
@@ -274,19 +275,20 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the icon displayed on this component."}
 
-
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_font_family",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit_font_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!componentProp(material_3.TextField)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.TextField)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.TextField)!1: {name:"border_color",type:"color",description:"The colour of the background of this component."}
+
+  #!componentProp(material_3.TextField)!1: {name:"spacing",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.TextField)!1: {name:"type",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextField)!1: {name:"icon_align",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
 
 
 #!defClass(material_3,TextField, anvil.Component)!:
