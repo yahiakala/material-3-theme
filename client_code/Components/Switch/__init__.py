@@ -47,9 +47,9 @@ class Switch(SwitchTemplate):
       else:
         self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-unselected-thumb-color', 'var(--anvil-m3-outline)')
 
-  #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
-  #!componentEvent(material_3.FileLoader)!1: {name: "show", description: "When the FileLoader is shown on the screen."}
-  #!componentEvent(material_3.FileLoader)!1: {name: "hide", description: "When the FileLoader is removed from the screen."}
+  #!componentEvent(material_3.Switch)!1: {name: "change", description: "When the state of the Switch is changed.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
+  #!componentEvent(material_3.Switch)!1: {name: "show", description: "When the Switch is shown on the screen."}
+  #!componentEvent(material_3.Switch)!1: {name: "hide", description: "When the Switch is removed from the screen."}
     
   @property
   def selected_icon(self):
