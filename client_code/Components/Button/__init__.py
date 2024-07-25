@@ -98,6 +98,7 @@ class Button(ButtonTemplate):
     button.classList.remove('anvil-m3-tonal')
     button.classList.remove('anvil-m3-outlined')
     if value:
+      
       button.classList.add(f"anvil-m3-{value}")
       
   def _set_icon_align(self, value):
