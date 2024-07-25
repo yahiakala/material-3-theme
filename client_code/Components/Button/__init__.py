@@ -126,9 +126,9 @@ class Button(ButtonTemplate):
   #!componentProp(material_3.Button)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Button)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.Button)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.Button)!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
+  #!componentProp(material_3.Button)!1: {name:"icon_align",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
 
-  #!componentEvent(material_3.Button)!1: {name: "click", description: "sdfasd", parameters:[]}
+  #!componentEvent(material_3.Button)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
   
   align = property_with_callback('align', _set_align)
   role = role_property('anvil-m3-button')
