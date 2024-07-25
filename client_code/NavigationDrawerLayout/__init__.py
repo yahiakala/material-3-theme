@@ -29,28 +29,6 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
-  navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
-
-  @property
-  def background_color(self):
-    return self._props.get('background_color')
-
-  @background_color.setter
-  def background_color(self, value):
-    if value: value = theme_color_to_css(value)
-    self._props['background_color'] = value
-    window.document.body.style.backgroundColor = value
-
-  @property
-  def text_color(self):
-    return self._props.get('text_color')
-
-  @text_color.setter
-  def text_color(self, value):
-    if value: value = theme_color_to_css(value)
-    self._props['text_color'] = value
-    window.document.body.style.color = value
-
   def open_nav_drawer(self, e):
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
@@ -69,18 +47,6 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
         self.app_bar.classList.remove('anvil-m3-scrolled')
     else:
       self.app_bar.classList.add('anvil-m3-scrolled')
-
-  @property
-  def show_sidesheet(self):
-    return self._show_sidesheet
-
-  @show_sidesheet.setter
-  def show_sidesheet(self, value):
-    self._show_sidesheet = value
-    if value:
-      self._open_sidesheet()
-    else:
-      self._close_sidesheet()
 
   def _open_sidesheet(self):
     if self.sidesheet_previous_state:
@@ -106,3 +72,39 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.content.classList.remove('anvil-m3-sidesheet-open')
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
+
+
+  navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
+
+  @property
+  def background_color(self):
+    return self._props.get('background_color')
+
+  @background_color.setter
+  def background_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self._props['background_color'] = value
+    window.document.body.style.backgroundColor = value
+
+  @property
+  def text_color(self):
+    return self._props.get('text_color')
+
+  @text_color.setter
+  def text_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self._props['text_color'] = value
+    window.document.body.style.color = value
+
+  @property
+  def show_sidesheet(self):
+    return self._show_sidesheet
+
+  @show_sidesheet.setter
+  def show_sidesheet(self, value):
+    self._show_sidesheet = value
+    if value:
+      self._open_sidesheet()
+    else:
+      self._close_sidesheet()
+
