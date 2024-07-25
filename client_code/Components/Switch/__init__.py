@@ -50,7 +50,43 @@ class Switch(SwitchTemplate):
   #!componentEvent(material_3.Switch)!1: {name: "change", description: "When the state of the Switch is changed.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
   #!componentEvent(material_3.Switch)!1: {name: "show", description: "When the Switch is shown on the screen."}
   #!componentEvent(material_3.Switch)!1: {name: "hide", description: "When the Switch is removed from the screen."}
-    
+  #!componentProp(material_3.Switch)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.Switch)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Switch)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.Switch)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Switch)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Switch)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  #!componentProp(material_3.Switch)!1: {name:"selected_background_color",type:"color",description:"The color of the background of this component."}
+  
+  #!componentProp(material_3.Switch)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.Switch)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(material_3.Switch)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!componentProp(material_3.Switch)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.Switch)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.Switch)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.Switch)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Switch)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.Switch)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Switch)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.Switch)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
+  #!componentProp(material_3.Switch)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
+  #!componentProp(material_3.Switch)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Switch)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
+  #!componentProp(material_3.Switch)!1: {name:"multiple",type:"boolean",description:"If True, this Switch can load multiple files at the same time."} 
+  #!componentProp(material_3.Switch)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
+
+  enabled = enabled_property('anvil-m3-switch-input')
+  align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
+  visible = HtmlTemplate.visible
+  margin = margin_property('anvil-m3-switch-container')
+  tooltip = tooltip_property('anvil-m3-switch')
+  role = role_property('anvil-m3-switch')
+  selected_background_color = property_with_callback('selected_background_color', _set_color_styles)
+  unselected_background_color = property_with_callback('unselected_background_color', _set_color_styles)
+  selected_thumb_color = property_with_callback('selected_thumb_color', _set_color_styles)
+  unselected_thumb_color = property_with_callback('unselected_thumb_color', _set_color_styles)
+  unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
+
   @property
   def selected_icon(self):
     return self._selected_icon
@@ -92,17 +128,5 @@ class Switch(SwitchTemplate):
     self._props['selected'] = value
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self._set_color_styles()
-      
-  enabled = enabled_property('anvil-m3-switch-input')
-  align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
-  selected_background_color = property_with_callback('selected_background_color', _set_color_styles)
-  unselected_background_color = property_with_callback('unselected_background_color', _set_color_styles)
-  selected_thumb_color = property_with_callback('selected_thumb_color', _set_color_styles)
-  unselected_thumb_color = property_with_callback('unselected_thumb_color', _set_color_styles)
-  unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
-  visible = HtmlTemplate.visible
-  margin = margin_property('anvil-m3-switch-container')
-  tooltip = tooltip_property('anvil-m3-switch')
-  role = role_property('anvil-m3-switch')
 
 #!defClass(material_3, Switch, anvil.Component)!:
