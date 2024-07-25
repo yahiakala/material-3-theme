@@ -221,7 +221,7 @@ class TextField(TextInput):
   bold_display = bold_property('anvil-m3-textfield', 'bold_display')
   underline_display = underline_property('anvil-m3-textfield', 'underline_display')
   display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
-  display_font = font_family_property('anvil-m3-textfield', 'display_font')
+  display_font_family = font_family_property('anvil-m3-textfield', 'display_font')
   display_text_color = color_property('anvil-m3-textfield', 'color', 'display_text_color')
   background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
@@ -254,9 +254,11 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.TextField)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.TextField)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.TextField)!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
-  #!componentProp(material_3.TextField)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.TextField)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the text on the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.TextField)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.TextField)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}

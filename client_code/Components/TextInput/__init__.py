@@ -23,7 +23,7 @@ class TextInput(TextInputTemplate):
   bold_label = bold_property('anvil-m3-label-text', 'bold_label')
   underline_label = underline_property('anvil-m3-label-text', 'underline_label')
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
-  label_font = font_family_property('anvil-m3-label-text', 'label_font')
+  label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
   spacing = spacing_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
