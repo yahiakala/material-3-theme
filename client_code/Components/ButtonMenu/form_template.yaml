@@ -8,7 +8,7 @@ properties:
   default_value: elevated
   group: Key Properties
   important: true
-- {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled, group: Interaction, description: If True, this component allows user interaction.: null}
+- {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
 - {name: visible, type: boolean, default_value: true, designerHint: visible, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
 - {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
 - {name: bold, type: boolean, default_value: true, important: true, description: 'If True, this component’s text will be bold.', designer_hint: font-bold, group: Text}

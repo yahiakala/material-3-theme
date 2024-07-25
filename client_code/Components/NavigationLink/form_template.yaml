@@ -3,7 +3,7 @@ properties:
 - {name: text, type: string, default_value: Label, description: The text displayed on this component., group: Key Properties, important: true}
 - {name: selected, type: boolean, default_value: false, description: 'If True, the component is in the selected state.', important: true, group: Interaction, designer_hint: toggle}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {name: badge, type: boolean, default_value: false, display a notification badge on the icon: null, group: Key Properties, description: 'If True, display a notification badge on the icon.'}
+- {name: badge, type: boolean, default_value: false, group: Key Properties, description: 'If True, display a notification badge on the icon.'}
 - {name: badge_count, type: number, default_value: '', description: The number to display on the badge, group: Key Properties}
 - {name: text_color, type: color, default_value: '', description: The colour of the text on the component., group: Look and Feel}
 - {name: font_size, type: string, default_value: '', description: The font size of the text displayed on this component., group: Text}
@@ -22,7 +22,7 @@ properties:
 - {name: navigate_to, type: form, description: The Form to navigate to when the link is clicked, default_binding_prop: true, default_value: null, group: Key Properties, important: true}
 - {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
 - {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
-- {name: visible, type: boolean, default_value: true, group: Look and Feel, important: true, designer_hint: visible, description: If True, the component will be displayed.: null}
+- {name: visible, type: boolean, default_value: true, group: Look and Feel, important: true, designer_hint: visible, description: 'If True, the component will be displayed.'}
 - {name: italic, type: boolean, default_value: false, important: false, group: Text, designer_hint: font-italic, description: 'If True, this component’s text will be italic.'}
 - {name: underline, type: boolean, default_value: false, important: false, group: Text, designer_hint: font-underline, description: 'If True, this component’s text will be underlined.'}
 - {name: bold, type: boolean, default_value: false, important: false, group: Text, designer_hint: font-bold, description: 'If True, this component’s text will be bold.'}
