@@ -186,4 +186,4 @@ class FileLoader(FileLoaderTemplate):
   def file(self, value):
     self._props["file"] = value
 
-#!defClass(material_3,FileLoader, anvil.Component)!:
+#!defClass(material_3, FileLoader, anvil.Component)!:

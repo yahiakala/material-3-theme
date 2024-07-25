@@ -50,6 +50,13 @@ class NavigationLink(NavigationLinkTemplate):
   italic = italic_property('anvil-m3-navigation-link-text')
   bold = bold_property('anvil-m3-navigation-link-text')
   underline = underline_property('anvil-m3-navigation-link-text')
+  text_color = color_property('anvil-m3-navigation-link-text', 'color', 'text_color')
+  icon_color = color_property('anvil-m3-navigation-link-icon', 'color', 'icon_color')
+  font_family = font_family_property('anvil-m3-navigation-link-text')
+  font_size = font_size_property('anvil-m3-navigation-link-text', 'font_size')
+  icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
+  tooltip = tooltip_property('anvil-m3-navigation-link-container')
+  margin = margin_property('anvil-m3-navigation-link-container')
 
   @property
   def url(self):
@@ -126,14 +133,4 @@ class NavigationLink(NavigationLinkTemplate):
   def navigate_to(self, value):
     self._navigate_to = value
 
-  text_color = color_property('anvil-m3-navigation-link-text', 'color', 'text_color')
-  icon_color = color_property('anvil-m3-navigation-link-icon', 'color', 'icon_color')
-  font_family = font_family_property('anvil-m3-navigation-link-text')
-  font_size = font_size_property('anvil-m3-navigation-link-text', 'font_size')
-  icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
-  tooltip = tooltip_property('anvil-m3-navigation-link-container')
-  margin = margin_property('anvil-m3-navigation-link-container')
-
-  
-
-
+#!defClass(material_3, NavigationLink, anvil.Component)!:
