@@ -61,7 +61,8 @@ class NavigationLink(NavigationLinkTemplate):
   #!componentProp(material_3.NavigationLink)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"badge",type:"boolean",description:"If True, display a notification badge on the icon."} 
-
+  #!componentProp(material_3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
+  
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
   role = role_property('anvil-m3-navigation-link')
