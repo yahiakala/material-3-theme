@@ -2,8 +2,8 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: [Standard, Filled, Tonal, Outlined]
-  default_value: Standard
+  options: [standard, filled, tonal, outlined]
+  default_value: standard
   description: A predefined style for this component.
   group: Key Properties
 - include_none_option: true

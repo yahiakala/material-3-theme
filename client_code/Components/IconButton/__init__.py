@@ -40,10 +40,7 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
-    if value is not None:
-      class_name = value.lower()
-      if class_name == "standard":
-        return
+    if value and value != 'standard':
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
 
