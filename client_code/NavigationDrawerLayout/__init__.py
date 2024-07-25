@@ -76,9 +76,10 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
 
-  #!defAttr()!1: {name:"navigation_drawer_color",type:"color",description:"The color of the Navigation Drawer on Forms using this Layout."} 
+  #!defAttr()!1: {name:"navigation_drawer_color",type:"color",description:"The color of the navigation drawer on Forms using this Layout."} 
   #!defAttr()!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
   #!defAttr()!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
+  #!defAttr()!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
 
   navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
 
