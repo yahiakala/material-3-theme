@@ -43,29 +43,30 @@ class Link(LinkTemplate):
   #!componentEvent(material_3.Link)!1: {name: "show", description: "When the Link is shown on the screen."}
   #!componentEvent(material_3.Link)!1: {name: "hide", description: "When the Link is removed from the screen."}
 
-  #!componentProp(material_3.FileLoader)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.FileLoader)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.FileLoader)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.FileLoader)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.FileLoader)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.FileLoader)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.FileLoader)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
-  #!componentProp(material_3.FileLoader)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
+  #!componentProp(material_3.Link)!1: {name:"text",type:"string",description:"The text displayed on this component."}
+  #!componentProp(material_3.Link)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Link)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.Link)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.Link)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.Link)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Link)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Link)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Link)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.Link)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(material_3.Link)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!componentProp(material_3.Link)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.Link)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Link)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  
+  #!componentProp(material_3.Link)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.Link)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
+  #!componentProp(material_3.Link)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
+  #!componentProp(material_3.Link)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
+  #!componentProp(material_3.Link)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
+  #!componentProp(material_3.Link)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
 
   text = innerText_property('anvil-m3-link-text')
   # url = href_property('anvil-m3-link')
