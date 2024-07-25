@@ -22,7 +22,7 @@ properties:
 - {name: selected_thumb_color, type: color, default_value: '', description: The colour of the Switch thumb when toggled on., group: Look and Feel}
 - {name: unselected_outline_color, type: color, default_value: '', description: The colour of the outline of the Switch when toggled off., group: Look and Feel}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled, group: Interaction, description: If True, this component allows user interaction.: null}
+- {name: enabled, type: boolean, default_value: true, designerHint: enabled, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
 - description: The position of this component in the available space.
   group: Layout
   name: align
@@ -38,7 +38,7 @@ properties:
   important: true
   group: Layout
   description: The margin (pixels) of the component.
-- {name: visible, type: boolean, default_value: true, important: true, group: Look and Feel, designer_hint: visible, description: If True, the component will be displayed.: null}
+- {name: visible, type: boolean, default_value: true, important: true, group: Look and Feel, designer_hint: visible, description: 'If True, the component will be displayed.'}
 - {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
 is_package: true
 events:

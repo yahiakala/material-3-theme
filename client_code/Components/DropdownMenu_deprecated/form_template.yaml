@@ -1,7 +1,7 @@
 properties:
 - {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Look and Feel}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold, group: Label Style}
-- {name: enabled, type: boolean, default_value: true, important: true, description: If True, this component allows user interaction.: null, group: Interaction, designerHint: enabled, designer_hint: enabled}
+- {name: enabled, type: boolean, default_value: true, important: true, description: 'If True, this component allows user interaction.', group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label, group: Label Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels, group: Label Style}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color, group: Label Style}
