@@ -38,24 +38,24 @@ class Heading(HeadingTemplate):
     anvil.designer.start_inline_editing(self, "text", self.dom_nodes[el_name])
 
   #!componentProp(material_3.Heading)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.FileLoader)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.FileLoader)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!defAttr()!1: {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!defAttr()!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"style",type:"enum",description:"Role of the heading component: display, headline or title."}  
-  #!defAttr()!1: {name:"scale",type:"enum",description:"Size of the heading component."}
-  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Heading) {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.Heading) {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.Heading) {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Heading) {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(material_3.Heading) {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!componentProp(material_3.Heading) {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.Heading) {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Heading) {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(material_3.Heading) {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Heading) {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Heading) {name:"icon_size",type:"number",description:"Size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.Heading) {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.Heading) {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.Heading) {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.Heading) {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Heading) {name:"style",type:"enum",description:"Role of the heading component: display, headline or title."}  
+  #!componentProp(material_3.Heading) {name:"scale",type:"enum",description:"Size of the heading component."}
+  #!componentProp(material_3.Heading) {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
@@ -209,5 +209,5 @@ class Heading(HeadingTemplate):
     set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
     self._margin = value
 
-#!defClass(material_3,Heading)!:
+#!defClass(material_3,Heading, anvil.Component)!:
       
