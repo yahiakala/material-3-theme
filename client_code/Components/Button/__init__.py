@@ -106,26 +106,27 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  #!componentProp(material_3.Button)!1: {name:"align",type:"enum", options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
-  #!defAttr()!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!defAttr()!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!defAttr()!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!defAttr()!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!defAttr()!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!defAttr()!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!defAttr()!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
+  
+  #!componentProp(material_3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Button)!1: {name:"appearance",type:"enum",options:[" ", "right", "center"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.Button)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.Button)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.Button)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.Button)!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
+  #!componentProp(material_3.Button)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Button)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Button)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.Button)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
+  #!componentProp(material_3.Button)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.Button)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.Button)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.Button)!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.Button)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.Button)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.Button)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Button)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.Button)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Button)!1: {name:"icon_align",type:"enum",description:"The alignment of the icon on this component."}
 
   #!componentEvent(material_3.Button)!1: {name: "click", description: "sdfasd", parameters:[]}
   
