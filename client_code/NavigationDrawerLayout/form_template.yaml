@@ -1,7 +1,7 @@
 properties:
-- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true}
-- {name: background_color, type: string, default_value: '', important: true, description: The background color of Forms using this Layout}
-- {name: text_color, type: string, default_value: '', important: true, description: The default color of the text on Forms using this Layout}
+- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true, description: The color of the Navigation Drawer on Forms using this Layout.}
+- {name: background_color, type: string, default_value: '', important: true, description: The background color of Forms using this Layout.}
+- {name: text_color, type: string, default_value: '', important: true, description: The default color of the text on Forms using this Layout.}
 - {name: show_sidesheet, type: boolean, default_value: false, important: true}
 is_package: true
 slots:
