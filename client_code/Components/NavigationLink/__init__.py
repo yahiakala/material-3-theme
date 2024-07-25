@@ -44,6 +44,10 @@ class NavigationLink(NavigationLinkTemplate):
         }
       }]
 
+  #!componentEvent(material_3.NavigationLink)!1: {name: "click", description: "When the NavigationLink is clicked."}
+  #!componentEvent(material_3.NavigationLink)!1: {name: "show", description: "When the NavigationLink is shown on the screen."}
+  #!componentEvent(material_3.NavigationLink)!1: {name: "hide", description: "When the NavigationLink is removed from the screen."}
+
   #!componentProp(material_3.NavigationLink)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"text",type:"string",description:"The text displayed on this component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
@@ -62,6 +66,7 @@ class NavigationLink(NavigationLinkTemplate):
   #!componentProp(material_3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"badge",type:"boolean",description:"If True, display a notification badge on the icon."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
+  #!componentProp(material_3.NavigationLink)!1: {name:"navigate_to",type:"form",description:"The Form to navigate to when the link is clicked."} 
   
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
