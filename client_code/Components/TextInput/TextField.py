@@ -250,7 +250,7 @@ class TextField(TextInput):
     self.raise_event("trailing_icon_click")
 
   #!componentProp(material_3.TextField)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled","outlined", "text"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
   #!componentProp(material_3.TextField)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.TextField)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.TextField)!1: {name:"error",type:"boolean",description:"If True, this component allows user interaction."}
