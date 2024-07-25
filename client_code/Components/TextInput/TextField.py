@@ -270,6 +270,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+
   #!componentProp(material_3.TextField)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextField)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
