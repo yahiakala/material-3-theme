@@ -250,7 +250,7 @@ class TextField(TextInput):
     self.raise_event("trailing_icon_click")
 
   #!componentProp(material_3.TextField)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled","outlined", "text"],description:"A predefined style for this component."}  
   #!componentProp(material_3.TextField)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.TextField)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.TextField)!1: {name:"error",type:"boolean",description:"If True, this component allows user interaction."}
@@ -279,6 +279,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The colour of the icon displayed on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"number",description:"The size (pixels) of the icon displayed on this component."}
