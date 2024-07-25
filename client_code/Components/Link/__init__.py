@@ -61,14 +61,6 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
   #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   
-  #!componentProp(material_3.Link)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.Link)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
-  #!componentProp(material_3.Link)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
-  #!componentProp(material_3.Link)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
-  #!componentProp(material_3.Link)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
-  #!componentProp(material_3.Link)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
-
   text = innerText_property('anvil-m3-link-text')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')

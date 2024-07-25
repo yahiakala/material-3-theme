@@ -12,6 +12,14 @@ class Divider(DividerTemplate):
     self._props = properties
     self.init_components(**properties)
 
+  #!componentEvent(material_3.Divider)!1: {name: "show", description: "When the Divider is shown on the screen."}
+  #!componentEvent(material_3.Divider)!1: {name: "hide", description: "When the Divider is removed from the screen."}
+
+  #!componentProp(material_3.Divider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.Divider)!1: {name:"color",type:"color",description:"The colour of this component."}
+  #!componentProp(material_3.Divider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Divider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+
   visible = HtmlTemplate.visible
   color = color_property('anvil-m3-divider', 'border-color', 'color')
   role = role_property('anvil-m3-divider')
@@ -29,4 +37,4 @@ class Divider(DividerTemplate):
     divider.className = "anvil-m3-divider"
     self.dom_nodes['anvil-m3-divider'].classList.add(value)
 
-
+#!defClass(material_3, Divider, anvil.Component)!:
