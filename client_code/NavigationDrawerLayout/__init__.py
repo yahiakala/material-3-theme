@@ -29,12 +29,14 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
 
+  #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e):
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
     self.nav_drawer.classList.add('anvil-m3-shown')
     self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
 
+  #!defMethod(_)!2: "Hide the navigation drawer." ["hide_nav_drawer"]
   def hide_nav_drawer(self, e):
     self.nav_drawer.style.left = "-101%"
     self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
