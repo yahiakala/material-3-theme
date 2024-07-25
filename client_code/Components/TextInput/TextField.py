@@ -258,13 +258,18 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.TextField)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.TextField)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.TextField)!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the text displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the text displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextField)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
