@@ -1,7 +1,7 @@
 properties:
 - {name: show_label, type: boolean, default_value: false, group: Label, important: true, description: Display a label above the thumb}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: If True, this component allows user interaction.: null}
 - {name: progress_color, type: color, default_value: '', important: false, description: The colour of the progress bar., group: Look and feel}
 - {name: track_color, type: color, default_value: '', important: false, description: The colour of the track., group: Look and feel}
 - {name: thumb_color, type: color, default_value: '', important: false, description: The colour of the Slider thumb., group: Look and feel}
@@ -24,7 +24,7 @@ properties:
   default_value: ['', '', '', '']
   group: Layout
   description: The margin (pixels) of the component.
-- {name: show_markers, type: boolean, default_value: false, important: true, description: 'If True, display discrete markers on the track.', group: Look and feel}
+- {name: show_markers, type: boolean, default_value: false, important: true, description: If True, display discrete markers on the track.: null, group: Look and feel}
 - {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
 - {name: visible, type: boolean, default_value: true, important: true, description: 'If True, the component will be displayed.', group: Look and Feel, designer_hint: visible}
 is_package: true

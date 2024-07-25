@@ -33,7 +33,7 @@ properties:
 - {name: underline_display, type: boolean, default_value: false, important: false, description: Display this component’s text in underline, group: Text, designer_hint: font-underline}
 - {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text, group: Text}
 - {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels, group: Text}
-- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: 'If True, this component allows user interaction.': null}
+- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: If True, this component allows user interaction.: null}
 - {name: error, type: boolean, default_value: false, important: false, group: Interaction, designer_hint: toggle, description: Whether or not the checkbox is in an error state.}
 - name: spacing
   type: spacing
