@@ -150,4 +150,4 @@ class Button(ButtonTemplate):
   icon_align = property_with_callback('icon_align', _set_icon_align)
   visible = HtmlTemplate.visible
 
-#!defClass(material_3,Button, anvil.Component)!:
+#!defClass(material_3, Button, anvil.Component)!:

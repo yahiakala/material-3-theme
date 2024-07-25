@@ -20,7 +20,6 @@ class Switch(SwitchTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     
-
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self._handle_change)
     
@@ -47,6 +46,10 @@ class Switch(SwitchTemplate):
         self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-unselected-thumb-color', theme_color_to_css(self.unselected_thumb_color))
       else:
         self.dom_nodes['anvil-m3-switch-slider'].style.setProperty('--anvil-m3-unselected-thumb-color', 'var(--anvil-m3-outline)')
+
+  #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
+  #!componentEvent(material_3.FileLoader)!1: {name: "show", description: "When the FileLoader is shown on the screen."}
+  #!componentEvent(material_3.FileLoader)!1: {name: "hide", description: "When the FileLoader is removed from the screen."}
     
   @property
   def selected_icon(self):
@@ -102,9 +105,4 @@ class Switch(SwitchTemplate):
   tooltip = tooltip_property('anvil-m3-switch')
   role = role_property('anvil-m3-switch')
 
-
-  
-  
-
-  
-  
+#!defClass(material_3, Switch, anvil.Component)!:
