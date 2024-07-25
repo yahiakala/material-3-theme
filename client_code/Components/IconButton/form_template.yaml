@@ -2,7 +2,7 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: [Standard, Filled, Filled tonal, Outlined]
+  options: [Standard, Filled, Tonal, Outlined]
   default_value: Standard
   description: A predefined style for this component.
   group: Key Properties
