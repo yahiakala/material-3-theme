@@ -92,6 +92,7 @@ class FileLoader(FileLoaderTemplate):
   #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
   #!componentEvent(material_3.FileLoader)!1: {name: "show", description: "When the FileLoader is shown on the screen."}
   
+  
   #!componentProp(material_3.FileLoader)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.FileLoader)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.FileLoader)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
