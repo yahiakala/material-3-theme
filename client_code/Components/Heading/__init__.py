@@ -49,7 +49,7 @@ class Heading(HeadingTemplate):
   #!componentProp(material_3.Heading)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Heading)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Heading)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
-  #!componentProp(material_3.Heading)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.Heading)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify']description:"The position of this component in the available space."} 
   #!componentProp(material_3.Heading)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.Heading)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.Heading)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}

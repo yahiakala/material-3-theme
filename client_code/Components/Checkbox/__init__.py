@@ -29,6 +29,7 @@ class Checkbox(CheckboxTemplate):
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self._handle_change)
 
+  #!defMethod(_)!2: "Set the keyboard focus to this Checkbox." ["focus"]
   def focus(self):
     self.dom_nodes['anvil-m3-checkbox'].focus()
 
@@ -68,6 +69,10 @@ class Checkbox(CheckboxTemplate):
       self.checked = not self.checked
       self.raise_event("change")
 
+  #!componentEvent(material_3.Checkbox)!1: {name: "change", description: "When the Checkbox is checked or unchecked."}
+  #!componentEvent(material_3.Checkbox)!1: {name: "show", description: "When the Checkbox is shown on the screen."}
+  #!componentEvent(material_3.Checkbox)!1: {name: "hide", description: "When the Checkbox is removed from the screen."}
+
   #!componentProp(material_3.Checkbox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.Checkbox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.Checkbox)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
@@ -75,7 +80,7 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(material_3.Checkbox)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.Checkbox)!1: {name:"font_famil",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!componentProp(material_3.Checkbox)!1: {name:"background",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
@@ -84,9 +89,9 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.Checkbox)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.Checkbox)!1: {name:"checkbox_color",type:"color",description:"The color of the checkbox."}
-  #!componentProp(material_3.Checkbox)!1: {name:"checked",type:"boolean",description:"Whether or not the checkbox is checked."}
+  #!componentProp(material_3.Checkbox)!1: {name:"checked",type:"boolean",description:"If True, the checkbox is checked."}
   #!componentProp(material_3.Checkbox)!1: {name:"allow_indeterminate",type:"boolean",description:"If True, supports an indeterminate state. The indeterminate state can only be set in code by setting checked=None."}
-  #!componentProp(material_3.Checkbox)!1: {name:"error",type:"boolean",description:"Whether or not the checkbox is in an error state."}
+  #!componentProp(material_3.Checkbox)!1: {name:"error",type:"boolean",description:"If True, the checkbox is in an error state."}
   
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
