@@ -15,6 +15,7 @@ class Divider(DividerTemplate):
   #!componentEvent(material_3.Divider)!1: {name: "show", description: "When the Divider is shown on the screen."}
   #!componentEvent(material_3.Divider)!1: {name: "hide", description: "When the Divider is removed from the screen."}
 
+  #!componentProp(material_3.Divider)!1: {name:"type",type:"enum",options:["full width"],description:"Display the Divider across the full width of the container or inset."}
   #!componentProp(material_3.Divider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.Divider)!1: {name:"color",type:"color",description:"The colour of this component."}
   #!componentProp(material_3.Divider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
