@@ -124,3 +124,5 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
+
+#!defClass(material_3,TextArea, anvil.Component)!:

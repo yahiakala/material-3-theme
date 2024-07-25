@@ -15,6 +15,8 @@ class TextInput(TextInputTemplate):
     self.init_components(**properties)
     
     self._on_input = self._on_input
+
+  
     
   visible = HtmlTemplate.visible
   italic_label = italic_property('anvil-m3-label-text', 'italic_label')
@@ -104,3 +106,4 @@ class TextInput(TextInputTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['anvil-m3-label-text'])
       }
     }]
+
