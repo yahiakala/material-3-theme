@@ -58,10 +58,11 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Link)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
+  #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   
   #!componentProp(material_3.Link)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.Link)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
   #!componentProp(material_3.Link)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
   #!componentProp(material_3.Link)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
@@ -69,13 +70,11 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
 
   text = innerText_property('anvil-m3-link-text')
-  # url = href_property('anvil-m3-link')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
   font_family = font_family_property('anvil-m3-link', 'font_family')
   font_size = font_size_property('anvil-m3-link')
-  material_icon = innerText_property('anvil-m3-link-icon')
   underline = underline_property('anvil-m3-link-text')
   visible = HtmlTemplate.visible
   text_color = color_property('anvil-m3-link', 'color', 'text_color')
@@ -96,7 +95,6 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link'].href = value
     else:
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
-
 
   @property
   def icon_size(self):
