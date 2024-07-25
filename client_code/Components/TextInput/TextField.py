@@ -253,9 +253,11 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}  
   #!componentProp(material_3.TextField)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.TextField)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.TextField)!1: {name:"error",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.TextField)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
   #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the text on the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_text",type:"color",description:"The colour of the text on the component."} 
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, this component’s text will be underlined."}
@@ -276,6 +278,7 @@ class TextField(TextInput):
 
   #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The colour of the icon displayed on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"number",description:"The size (pixels) of the icon displayed on this component."}
@@ -284,6 +287,7 @@ class TextField(TextInput):
 
   #!componentProp(material_3.TextField)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextField)!1: {name:"border_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.TextField)!1: {name:"placeholder",type:"color",description:"The colour of the background of this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"spacing",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.TextField)!1: {name:"type",type:"string",description:"The border of this component. Can take any valid CSS border value."}
