@@ -12,10 +12,6 @@ class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._tooltip_node = None
-    self._appearance_css_classes = {
-      "Filled": "filled",
-      "Filled tonal": "filled-tonal",
-      "Outlined": "outlined"}
     self._appearance = ""
     self.init_components(**properties)
     
@@ -36,14 +32,16 @@ class IconButton(IconButtonTemplate):
 
   def _appearance_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
     if value is not None:
-      class_name = self._appearance_css_classes[value]
+      class_name = value.lower()
+      if class_name == "standard":
+        return
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
 
