@@ -281,8 +281,8 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The colour of the icon displayed on this component."}
 
-  #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The max number of characters the user can enter into this component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_font_family",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_font_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
 
