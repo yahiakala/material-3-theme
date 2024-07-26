@@ -222,7 +222,7 @@ class TextField(TextInput):
   underline_display = underline_property('anvil-m3-textfield', 'underline_display')
   display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textfield', 'display_font')
-  display_text_color = color_property('anvil-m3-textfield', 'color', 'display_text_color')
+  input_text_color = color_property('anvil-m3-textfield', 'color', 'input_text_color')
   background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
@@ -264,12 +264,12 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.TextField)!1: {name:"display_text_color",type:"color",description:"The colour of the input text displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the display text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the display text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the display text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}

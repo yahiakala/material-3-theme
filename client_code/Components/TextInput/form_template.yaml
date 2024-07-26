@@ -21,7 +21,7 @@ properties:
   description: A predefined style for this component.
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color, group: Look and Feel}
-- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color, group: Look and Feel}
+- {name: input_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color, group: Look and Feel}
 - {name: supporting_text_color, type: color, default_value: '', important: false, description: The color of this component's supporting text., group: Look and Feel}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics, group: Text}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold, group: Text}
