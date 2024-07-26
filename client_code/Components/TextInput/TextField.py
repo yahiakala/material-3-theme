@@ -259,17 +259,17 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
   #!componentProp(material_3.TextField)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
-  #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"display_text_color",type:"color",description:"The colour of the display text on this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the display text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the display text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the display text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on this component."}
