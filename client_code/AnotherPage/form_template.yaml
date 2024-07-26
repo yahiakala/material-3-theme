@@ -8,7 +8,7 @@ components_by_slot:
     type: form:Components.Switch
     layout_properties: {}
   - name: text_field_3
-    properties: {}
+    properties: {label_text: Name, placeholder: Joe Smith}
     type: form:Components.TextInput.TextField
     layout_properties: {}
     event_bindings: {pressed_enter: text_field_3_pressed_enter}
