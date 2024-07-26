@@ -7,6 +7,10 @@ components_by_slot:
     properties: {}
     type: form:Components.Text
     layout_properties: {}
+  - name: text_field_2
+    properties: {}
+    type: form:Components.TextInput.TextField
+    layout_properties: {}
   - name: circular_progress_indicator_1
     properties: {}
     type: form:Components.CircularProgressIndicator
