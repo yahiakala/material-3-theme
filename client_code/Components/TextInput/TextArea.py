@@ -147,11 +147,6 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
-  #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
-
   #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
@@ -167,9 +162,7 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"placeholder",type:"string",description:"The placeholder text to display on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.TextField)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
-  #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."
 
 #!defClass(material_3,TextArea, anvil.Component)!:
