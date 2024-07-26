@@ -281,6 +281,8 @@ class TextField(TextInput):
   #!componentEvent(material_3.TextField)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
   #!componentEvent(material_3.TextField)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
   #!componentEvent(material_3.TextField)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "trailing_icon_click", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "pressed_enter", description: "When the component loses focus.", parameters:[]}
 
   #!defMethod(_)!2: "Set the keyboard focus to this TextField." ["focus"]
   #!defMethod(_)!2: "Set the input text on this TextField." ["select"]
