@@ -5,7 +5,7 @@ from ...Functions import property_with_callback, italic_property, bold_property,
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
-text_property = {"name": "text",
+input_text_property = {"name": "input_text",
                  "type": "string",
                  "default_value": "None",
                  "description": "The text displayed on this component.",
@@ -279,7 +279,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
@@ -293,7 +293,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.TextField)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextField)!1: {name:"text",type:"string",description:"The text to display on this component"}
+  #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"The text to display when the mouse is hovered over this component."}
 
 #!defClass(material_3,TextField, anvil.Component)!:
