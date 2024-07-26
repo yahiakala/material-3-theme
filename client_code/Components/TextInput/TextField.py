@@ -278,4 +278,6 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
 
+
+
 #!defClass(material_3,TextField, anvil.Component)!:
