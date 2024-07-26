@@ -278,6 +278,11 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
 
+  #!componentEvent(material_3.TextField)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
 
+  #!defMethod(_)!2: "Set the keyboard focus to this TextField." ["focus"]
+  #!defMethod(_)!2: "Set the input text on this TextField." ["select"]
 
 #!defClass(material_3,TextField, anvil.Component)!:

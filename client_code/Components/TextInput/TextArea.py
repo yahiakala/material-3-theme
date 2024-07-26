@@ -165,4 +165,15 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.TextArea)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
 
+  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+
+  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+
+  #!defMethod(_)!2: "Set the keyboard focus to this TextArea." ["focus"]
+  #!defMethod(_)!2: "Set the input text on this TextArea." ["select"]
+
 #!defClass(material_3,TextArea, anvil.Component)!:
