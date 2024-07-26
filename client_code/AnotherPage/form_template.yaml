@@ -7,6 +7,10 @@ components_by_slot:
     properties: {unselected_icon: null, selected_icon: null, selected: false}
     type: form:Components.Switch
     layout_properties: {}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {}
   - name: text_area_1
     properties: {placeholder: '', supporting_text: supporting text, character_limit: 100}
     type: form:Components.TextInput.TextArea
