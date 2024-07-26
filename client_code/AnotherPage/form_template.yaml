@@ -8,7 +8,7 @@ components_by_slot:
     type: form:Components.Text
     layout_properties: {}
   - name: text_field_2
-    properties: {}
+    properties: {supporting_text: hello}
     type: form:Components.TextInput.TextField
     layout_properties: {}
   - name: circular_progress_indicator_1

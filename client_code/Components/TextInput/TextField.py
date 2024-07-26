@@ -271,14 +271,14 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the display text will be italic."}
   #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the display text will be bold."}
 
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
 
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
   #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The colour of the icon displayed on this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The size (pixels) of the icon displayed on this component."}
