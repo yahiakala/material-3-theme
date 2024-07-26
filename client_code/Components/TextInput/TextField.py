@@ -257,7 +257,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
   #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.TextField)!1: {name:"label_text",type:"color",description:"The colour of the text on the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_text",type:"string",description:"The colour of the text on the component."} 
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, this component’s text will be underlined."}
