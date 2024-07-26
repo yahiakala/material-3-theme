@@ -11,6 +11,7 @@ components_by_slot:
     properties: {}
     type: form:Components.TextInput.TextField
     layout_properties: {}
+    event_bindings: {pressed_enter: text_field_3_pressed_enter}
   - name: text_area_1
     properties: {placeholder: '', supporting_text: supporting text, character_limit: 100}
     type: form:Components.TextInput.TextArea

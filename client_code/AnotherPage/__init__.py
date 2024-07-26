@@ -16,6 +16,10 @@ class AnotherPage(AnotherPageTemplate):
     """This method is called when the value of the component is changed"""
     self.text_1.text = self.slider_1.value
 
+  def text_field_3_pressed_enter(self, **event_args):
+    """This method is called when the user presses enter in this component."""
+    pass
+
 
 
 
