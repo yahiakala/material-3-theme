@@ -3,8 +3,12 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: switch_1
+    properties: {unselected_icon: 18_up_rating, selected_icon: null, selected: true}
+    type: form:Components.Switch
+    layout_properties: {}
   - name: text_area_1
-    properties: {}
+    properties: {placeholder: '', supporting_text: supporting text, character_limit: 100}
     type: form:Components.TextInput.TextArea
     layout_properties: {}
   - name: text_1
