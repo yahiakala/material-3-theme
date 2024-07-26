@@ -116,14 +116,14 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].select()
   
   @property
-  def text(self):
+  def input_text(self):
     if self._props.get('type') == "number" and self.dom_nodes['anvil-m3-textfield'].value:
       return float(self.dom_nodes['anvil-m3-textfield'].value)
     else:
       return self.dom_nodes['anvil-m3-textfield'].value
 
-  @text.setter
-  def text(self, value):
+  @input_text.setter
+  def input_text(self, value):
     self.dom_nodes['anvil-m3-textfield'].value = value
       
   def _set_label(self, value):
