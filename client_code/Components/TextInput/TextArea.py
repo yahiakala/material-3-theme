@@ -147,10 +147,10 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(material_3.TextArea)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed underneath this component."}
 
   #!componentProp(material_3.TextArea)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
   #!componentProp(material_3.TextArea)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
