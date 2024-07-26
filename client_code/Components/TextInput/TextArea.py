@@ -134,7 +134,7 @@ class TextArea(TextInput):
 
   #!componentProp(material_3.TextArea)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
   #!componentProp(material_3.TextArea)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
-  #!componentProp(material_3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
   #!componentProp(material_3.TextArea)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
@@ -143,7 +143,7 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
-  #!componentProp(material_3.TextArea)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.TextArea)!1: {name:"underline_display",type:"boolean",description:"The font family to use for the label on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(material_3.TextArea)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
@@ -161,7 +161,7 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
   #!componentProp(material_3.TextArea)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
 
-  #!componentProp(material_3.TextArea)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(material_3.TextArea)!1: {name:"spacing",type:"spacing",description:"The margin and padding of this component. Default value is in pixels."}
   #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.TextArea)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
 
