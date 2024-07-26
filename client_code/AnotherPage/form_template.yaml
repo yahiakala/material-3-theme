@@ -3,12 +3,16 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: text_area_1
+    properties: {}
+    type: form:Components.TextInput.TextArea
+    layout_properties: {}
   - name: text_1
     properties: {}
     type: form:Components.Text
     layout_properties: {}
   - name: text_field_2
-    properties: {supporting_text: hello, character_limit: 10, display_font_size: 30, text: '', placeholder: hello, display_text_color: blue, display_font_family: serif, underline_display: true}
+    properties: {underline_display: true, placeholder: hello, display_font_family: serif, leading_icon: 10mp, display_text_color: blue, character_limit: 10, trailing_icon: 14mp, supporting_text: hello, display_font_size: 30, text: ''}
     type: form:Components.TextInput.TextField
     layout_properties: {}
   - name: circular_progress_indicator_1

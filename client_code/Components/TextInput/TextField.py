@@ -60,7 +60,7 @@ click_event = {"name": "trailing_icon_click", "defaultEvent": False, "descriptio
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
-  _anvil_properties_ = [text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [input_text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
@@ -163,24 +163,6 @@ class TextField(TextInput):
       self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-error-icon")
     # icon = "error" if value else self.trailing_icon
   error = property_with_callback("error", _set_error)
-
-  @anvil_property('enum')
-  def leading_icon(self):
-    return self._props.get('leading_icon')
-
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._props['leading_icon'] = value
-    self._set_leading_icon(value)
-
-  @anvil_property('enum')
-  def trailing_icon(self):
-    return self._props.get('trailing_icon')
-
-  @trailing_icon.setter
-  def trailing_icon(self, value):
-    self._props['trailing_icon'] = value
-    self._set_trailing_icon(value)
     
   def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
@@ -200,7 +182,7 @@ class TextField(TextInput):
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
-  # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
+  leading_icon = property_with_callback("leading_icon", _set_leading_icon)  
   
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
@@ -215,7 +197,7 @@ class TextField(TextInput):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
-  # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+  trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
   italic_display = italic_property('anvil-m3-textfield', 'italic_label')
   bold_display = bold_property('anvil-m3-textfield', 'bold_display')
