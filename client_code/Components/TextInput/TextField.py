@@ -265,7 +265,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"display_text_color",type:"color",description:"The colour of the display text on this component."}
-  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the display text on this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the display text will be underlined."}
   #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the display text will be italic."}
