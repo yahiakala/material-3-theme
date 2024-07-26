@@ -4,13 +4,11 @@ properties:
   options: [body, label]
   default_value: body
   important: true
-  group: Look and Feel
   description: 'Role of the text component: body or label'
 - name: scale
   type: enum
   options: [small, medium, large]
   default_value: medium
-  group: Look and Feel
   important: true
   description: Size of the text component
 - name: align
@@ -37,7 +35,7 @@ properties:
   default_value: null
   include_none_option: true
 - {name: italic, type: boolean, default_value: false, description: 'If True, this component’s text will be italic.', group: Text, designer_hint: font-italic}
-- {name: text, type: string, default_value: '', description: The text displayed on this component., multiline: true, group: Key Properties, default_binding_prop: true}
+- {name: text, type: string, default_value: '', description: The text displayed on this component., multiline: true, group: Key Properties, default_binding_prop: true, important: false}
 - {name: underline, type: boolean, default_value: false, description: 'If True, this component’s text will be underlined.', designer_hint: font-underline, group: Text}
 - {name: visible, type: boolean, default_value: true, description: 'If True, the component will be displayed.', group: Look and Feel, important: true, designer_hint: visible}
 - {name: icon_size, type: number, description: The size (pixels) of the icon displayed on this component., group: Icon}
