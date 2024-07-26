@@ -243,15 +243,15 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic_label"",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_label"",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
   #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
-  #!componentProp(material_3.TextField)!1: {name:"italic_display"",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
