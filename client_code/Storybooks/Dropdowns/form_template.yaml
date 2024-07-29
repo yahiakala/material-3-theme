@@ -83,14 +83,16 @@ components:
               layout_properties: {width: 273}
             - name: dropdown_menu_2
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+                underline_label: false
+                bold_items: false
+                label_text_color: ''
                 placeholder: placeholder
                 label_text: Dropdown Label 2
-                appearance: outlined
+                italic_label: false
                 allow_none: false
+                appearance: outlined
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 italic_items: false
-                label_text_color: ''
-                underline_label: false
               type: form:Components.DropdownMenu
               layout_properties: {width: 273, expand: false}
           - name: flow_panel_4_copy_1
