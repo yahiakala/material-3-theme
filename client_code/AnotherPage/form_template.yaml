@@ -9,6 +9,11 @@ components_by_slot:
       placeholder: Select a friend
     type: form:Components.DropdownMenu
     layout_properties: {}
+  - name: text_field_3
+    properties: {}
+    type: form:Components.TextInput.TextField
+    layout_properties: {}
+    event_bindings: {pressed_enter: text_field_3_pressed_enter}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel

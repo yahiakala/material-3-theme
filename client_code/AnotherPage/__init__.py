@@ -11,6 +11,7 @@ class AnotherPage(AnotherPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    m3_slider = Slider()
 
   def slider_1_change(self, **event_args):
     """This method is called when the value of the component is changed"""
@@ -18,7 +19,7 @@ class AnotherPage(AnotherPageTemplate):
 
   def text_field_3_pressed_enter(self, **event_args):
     """This method is called when the user presses enter in this component."""
-    pass
+    m3_slider.value = 3
 
 
 
