@@ -5,7 +5,7 @@ components_by_slot:
   slot_3:
   - name: dropdown_menu_1
     properties:
-      items: [Patricia, '']
+      items: [Patricia, Char, Sarah]
       placeholder: Select a friend
     type: form:Components.DropdownMenu
     layout_properties: {}
