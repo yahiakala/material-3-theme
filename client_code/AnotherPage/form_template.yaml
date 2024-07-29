@@ -3,45 +3,17 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: switch_1
-    properties: {unselected_icon: null, selected_icon: null, selected: false}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: text_field_3
-    properties: {label_text: Name, placeholder: Joe Smith}
-    type: form:Components.TextInput.TextField
-    layout_properties: {}
-    event_bindings: {pressed_enter: text_field_3_pressed_enter}
-  - name: text_area_1
-    properties: {placeholder: placeholder, supporting_text: supporting text, character_limit: 100, label_text: label}
-    type: form:Components.TextInput.TextArea
-    layout_properties: {}
-  - name: text_1
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: text_field_2
-    properties: {underline_display: true, placeholder: hello, display_font_family: serif, leading_icon: 10mp, display_text_color: blue, character_limit: 10, trailing_icon: 14mp, supporting_text: hello, display_font_size: 30, text: ''}
-    type: form:Components.TextInput.TextField
-    layout_properties: {}
-  - name: circular_progress_indicator_1
-    properties: {}
-    type: form:Components.CircularProgressIndicator
+  - name: dropdown_menu_1
+    properties:
+      items: [Patricia, Sarah, Char]
+      placeholder: Select a friend
+    type: form:Components.DropdownMenu
     layout_properties: {}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
     layout_properties: {}
     components:
-    - name: slider_1
-      properties: {}
-      type: form:Components.Slider
-      layout_properties: {grid_position: 'QLISHE,CFIZGG'}
-      event_bindings: {change: slider_1_change}
-    - name: text_field_1
-      properties: {appearance: filled}
-      type: form:Components.TextInput.TextField
-      layout_properties: {grid_position: 'VLITNK,OOHIGK'}
     - name: card_1
       properties:
         image_height: '400'
