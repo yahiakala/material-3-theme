@@ -67,7 +67,7 @@ components:
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3
-              properties: {appearance: Outlined, background: pink, border: 1px solid blue}
+              properties: {appearance: Outlined, background: pink, border: '', background_color: ''}
               type: form:Components.ToggleIconButton
               layout_properties: {}
             - name: text_3
