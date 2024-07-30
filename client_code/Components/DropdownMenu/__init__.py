@@ -126,7 +126,7 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    if type(value) is list:
+    if isinstance(value,list):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
@@ -192,18 +192,18 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key not in action_keys: #   #TODO: eventually want to use this to jump somewhere in the list
         return
 
-      if event.key is "ArrowUp" or event.key is "ArrowDown":
+      if event.key == "ArrowUp" or event.key == "ArrowDown":
         event.preventDefault()
-        self._iterate_hover(event.key is "ArrowDown")
+        self._iterate_hover(event.key == "ArrowDown")
         return
 
       if event.key in ["Tab", "Escape"]:
         self._set_menu_visibility(False)
 
-      if (event.key is " "): #space key as " " is stupid
+      if (event.key == " "): #space key as " " is stupid
         event.preventDefault()
         self._attempt_select()
-      if (event.key is "Enter"):
+      if (event.key == "Enter"):
         self._attempt_select()
 
   def _iterate_hover(self, inc = True):
@@ -212,25 +212,25 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = -1
       self._hoverIndex += 1
     else:
-      if self._hoverIndex is None or self._hoverIndex is 0:
+      if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
     self._update_hover_styles()
 
   def _attempt_select(self):
-    if not self._hoverIndex is None:
+    if self._hoverIndex:
       self._children[self._hoverIndex].raise_event("click")
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):
-    if self._children is not None:
+    if self._children:
       for child in self._children:
         if isinstance(child, MenuItem):
           child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
   def _update_hover_styles(self):
     self._clear_hover_styles()
-    if self._hoverIndex is None:
+    if not self._hoverIndex:
       return
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
@@ -238,7 +238,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
-    if (value is None):
+    if not value:
       value = not self.menu.visible
     self.menu.visible = value
     if value:
@@ -246,7 +246,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self.selection_field.trailing_icon = "arrow_drop_up"
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
-      if self.selected_value is None:
+      if not self.selected_value:
         self._hoverIndex = None
 
   def _body_click(self, event):
@@ -258,7 +258,7 @@ class DropdownMenu(DropdownMenuTemplate):
     event.stopPropagation()
     self._set_menu_visibility(False)
     
-    if self.selected_value is None:
+    if not self.selected_value:
       if not self.label_text and self.placeholder:
          self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self._hoverIndex = None
@@ -310,7 +310,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if type(item) is list:
+      if isinstance(item,list):
         selection.text = item[0]
       else:
         selection.text = item
@@ -334,3 +334,58 @@ class DropdownMenu(DropdownMenuTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['anvil-m3-label-text'])
       }
     }]
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.DropdownMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed below this component."}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
+
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "trailing_icon_click", description: "When the trailing icon is clicked.", parameters:[]}
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "pressed_enter", description: "When the user presses enter in this component.", parameters:[]}
+
+#!defClass(material_3,DropdownMenu, anvil.Component)!:
