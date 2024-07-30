@@ -1,6 +1,7 @@
 roles:
 - name: data-grid-header
   components: [DataRowPanel]
+  display_in_toolbox: true
 color_scheme:
   preset_groups:
   - name: Colour Scheme
