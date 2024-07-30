@@ -918,3 +918,6 @@ th.month select.monthselect::after {
   align-items:center
 }
 
+[data-grid-col-id="null"] {
+  padding: 0;
+}
