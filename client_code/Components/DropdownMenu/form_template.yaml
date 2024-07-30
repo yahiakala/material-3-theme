@@ -51,7 +51,7 @@ properties:
 - {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
 is_package: true
 events:
-- {name: change, default_event: true, description: when an item is selected}
+- {name: change, default_event: true, description: When an item is selected}
 - {name: show, description: When the component is shown on the screen.}
 - {name: hide, description: When the component is removed from the screen.}
 toolbox_item:

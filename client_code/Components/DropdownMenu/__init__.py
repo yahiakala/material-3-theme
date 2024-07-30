@@ -382,10 +382,6 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.DropdownMenu)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
 
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "trailing_icon_click", description: "When the trailing icon is clicked.", parameters:[]}
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "pressed_enter", description: "When the user presses enter in this component.", parameters:[]}
+  #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
