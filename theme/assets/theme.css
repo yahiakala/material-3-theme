@@ -918,6 +918,6 @@ th.month select.monthselect::after {
   align-items:center
 }
 
-[data-grid-col-id="null"] {
+.anvil-data-grid[data-grid-col-id="null"] {
   padding: 0;
 }
