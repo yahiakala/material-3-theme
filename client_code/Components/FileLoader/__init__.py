@@ -113,7 +113,7 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
-  #!componentProp(material_3.FileLoader)!1: {name:"show_state",type:"boolean",description:"If True, display a message describing selected files."}
+  #!componentProp(material_3.FileLoader)!1: {name:"show_state",type:"boolean",description:"If True, display a message indicating the number of selected files."}
   #!componentProp(material_3.FileLoader)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.FileLoader)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
   #!componentProp(material_3.FileLoader)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
