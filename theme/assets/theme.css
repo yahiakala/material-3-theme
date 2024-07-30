@@ -839,7 +839,6 @@ th.month select.monthselect::after {
   border-radius: 24px 24px 0 0;
 }
 
-
 .anvil-data-grid>.anvil-data-grid-child-panel>div.anvil-auto-grid-header div.anvil-data-row-col:last-child:not(.anvil-extra-column), .anvil-data-grid>.anvil-data-grid-child-panel div.anvil-role-data-grid-header div.anvil-data-row-col:last-child:not(.anvil-extra-column) {
   border-right: 0;
 }
@@ -918,6 +917,4 @@ th.month select.monthselect::after {
   align-items:center
 }
 
-.anvil-data-grid[data-grid-col-id="null"] {
-  padding: 0;
-}
+.anvil-data-grid .anvil-data-row-col[data-grid-col-id="null"] {padding: 0 !important;}
