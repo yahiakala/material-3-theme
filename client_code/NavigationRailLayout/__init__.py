@@ -81,7 +81,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom-app-bar","modal-navigation-drawer"],description:"The way the side navigation will collapse on mobile."}
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom_app_bar","modal_navigation_drawer"],description:"The way the side navigation will collapse on mobile."}
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
   
@@ -114,8 +114,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   @navigation_rail_collapse_to.setter
   def navigation_rail_collapse_to(self, value):
     self._props['navigation_rail_collapse_to'] = value
-    value = value.lower().replace(' ', '-')
-    for c in ['anvil-m3-bottom-app-bar', 'modal-navigation-drawer']:
+    value = value.lower().replace('_', '-')
+    for c in ['anvil-m3-bottom-app-bar', 'anvil-m3-modal-navigation-drawer']:
       self.nav_rail.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-{value}")
 
