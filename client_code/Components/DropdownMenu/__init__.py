@@ -351,7 +351,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items text."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
