@@ -88,9 +88,12 @@ components:
                 label_text_color: ''
                 selected_bold_display: true
                 placeholder: placeholder
+                selected_italic: true
+                selected_bold: true
                 label_text: Dropdown Label 2
                 italic_label: false
                 allow_none: false
+                selected_underline: true
                 appearance: outlined
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 selected_underline_display: true
