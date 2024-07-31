@@ -49,6 +49,7 @@ properties:
 - {name: selected_font_size, type: number, important: false, description: The font size (pixels) of the displayed text if there is a selected item, group: Selection Field Style}
 - {name: selected_text_color, type: color, default_value: '', important: false, description: The colour of the displayed text if there is a selected item, group: Selection Field Style}
 - {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
+- {name: error, type: boolean, default_value: false, important: true, description: 'If True, this component is in an error state.'}
 is_package: true
 events:
 - {name: change, default_event: true, description: When an item is selected}

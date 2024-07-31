@@ -117,6 +117,14 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.selected_text_color = value
   selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
+  def _set_selected_text_color(self, value):
+    self.selection_field.selected_text_color = value
+  selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
+
+  def _set_error(self, value):
+    self.selection_field.error = value
+  error = property_with_callback("error", _set_error)
+
   def _set_label_text(self, value):
     v = value or ""
     self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
