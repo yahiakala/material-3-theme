@@ -122,7 +122,7 @@ class DropdownMenu(DropdownMenuTemplate):
   selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
   def _set_error(self, value):
-    self.selection_field.error = value
+    self.dom_nodes['anvil-m3-dropdownMenu-textfield'].style.borderColor
   error = property_with_callback("error", _set_error)
 
   def _set_label_text(self, value):
