@@ -19,9 +19,9 @@ class TextInput(TextInputTemplate):
   
     
   visible = HtmlTemplate.visible
-  italic_label = italic_property('anvil-m3-label-text', 'italic_label')
-  bold_label = bold_property('anvil-m3-label-text', 'bold_label')
-  underline_label = underline_property('anvil-m3-label-text', 'underline_label')
+  label_italic = italic_property('anvil-m3-label-text', 'label_italic')
+  label_bold = bold_property('anvil-m3-label-text', 'label_bold')
+  label_underline = underline_property('anvil-m3-label-text', 'label_underline')
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
   label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
