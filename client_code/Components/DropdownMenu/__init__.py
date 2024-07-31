@@ -13,6 +13,7 @@ import anvil.designer
 from ..Menu.MenuItem import MenuItem
 from ...utils import fui, noop
 
+
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._props = properties
