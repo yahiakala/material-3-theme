@@ -12,8 +12,8 @@ properties:
 - name: navigation_rail_vertical_align
   type: enum
   important: true
-  options: [Top, Center, Bottom]
-  default_value: Top
+  options: [top, enter, bottom]
+  default_value: top
 is_package: true
 slots:
   slot_1:
