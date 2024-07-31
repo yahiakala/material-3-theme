@@ -137,3 +137,4 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   def open_sidesheet_with_content(self, content):
     pass
 
+#!defClass(material_3, NavigationRailLayout, anvil.Component)!:

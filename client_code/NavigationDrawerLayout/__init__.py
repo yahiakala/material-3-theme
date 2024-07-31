@@ -114,4 +114,4 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     else:
       self._close_sidesheet()
 
-#!defClass(material_3, NavigationDrawerLayout)!:
+#!defClass(material_3, NavigationDrawerLayout, anvil.Component)!:
