@@ -385,13 +385,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
 
-
-
-
-
-  #!componentProp(material_3.DropdownMenu)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
-
-
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
