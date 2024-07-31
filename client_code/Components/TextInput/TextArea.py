@@ -47,9 +47,9 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("blur", self._on_lost_focus)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
   
-  italic_display = italic_property('anvil-m3-textarea', 'italic_label')
+  display_italic = italic_property('anvil-m3-textarea', 'display_italic')
   bold_display = bold_property('anvil-m3-textarea', 'bold_display')
-  underline_display = underline_property('anvil-m3-textarea', 'underline_display')
+  display_underline = underline_property('anvil-m3-textarea', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
   input_text_color = color_property('anvil-m3-textarea', 'color', 'input_text_color')
@@ -143,8 +143,8 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
-  #!componentProp(material_3.TextArea)!1: {name:"underline_display",type:"boolean",description:"The font family to use for the label on this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.TextArea)!1: {name:"display_underline",type:"boolean",description:"The font family to use for the label on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(material_3.TextArea)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
