@@ -19,7 +19,7 @@ properties:
   type: text[]
   default_value: []
   important: true
-  description: The items to display in this dropdown
+  description: The items to display in the menu
   group: Key Properties
   default_binding_prop: true
 - {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None, group: Key Properties}

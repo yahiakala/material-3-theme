@@ -351,6 +351,14 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
+
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the displayed text if there is a selected item."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size (pixels) of the displayed text if there is a selected item."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font-family of the displayed text if there is a selected item."}
@@ -372,12 +380,13 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"allow_none",type:"boolean",description:"If True, a placeholder item is added to the menu with value None"}
   #!componentProp(material_3.DropdownMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
 
 
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
+
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
 
