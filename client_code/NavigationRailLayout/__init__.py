@@ -27,9 +27,34 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
-   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
+   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)\
+
+  #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
+  def open_nav_drawer(self, e):
+    self.nav_rail.style.width = '360px'
+    self.nav_rail.style.left = "0px"
+    self.nav_rail.classList.add('anvil-m3-shown')
+    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+
+  #!defMethod(_)!2: "Hide the navigation drawer." ["hide_nav_drawer"]
+  def hide_nav_drawer(self, e):
+    self.nav_rail.style.left = "-101%"
+    self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
+    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
+
+  def _add_scroll_class(self, e):
+    if self.app_bar.classList.contains('anvil-m3-scrolled'):
+      if window.scrollY == 0:
+        self.app_bar.classList.remove('anvil-m3-scrolled')
+    else:
+      self.app_bar.classList.add('anvil-m3-scrolled')   
+
+  
 
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
+
+  
   
   @property
   def background_color(self):
@@ -51,24 +76,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self._props['text_color'] = value
     window.document.body.style.color = value
 
-  def open_nav_drawer(self, e):
-    self.nav_rail.style.width = '360px'
-    self.nav_rail.style.left = "0px"
-    self.nav_rail.classList.add('anvil-m3-shown')
-    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
-
-  def hide_nav_drawer(self, e):
-    self.nav_rail.style.left = "-101%"
-    self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
-
-  def _add_scroll_class(self, e):
-    if self.app_bar.classList.contains('anvil-m3-scrolled'):
-      if window.scrollY == 0:
-        self.app_bar.classList.remove('anvil-m3-scrolled')
-    else:
-      self.app_bar.classList.add('anvil-m3-scrolled')    
+   
   
   @property
   def navigation_rail_collapse_to(self):

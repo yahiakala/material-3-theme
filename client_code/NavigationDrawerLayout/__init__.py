@@ -43,7 +43,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     window.setTimeout(lambda: self.nav_drawer.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245)
 
-  def add_scroll_class(self, e):
+  def _add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
       if window.scrollY == 0:
         self.app_bar.classList.remove('anvil-m3-scrolled')
