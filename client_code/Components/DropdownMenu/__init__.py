@@ -367,20 +367,17 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed below this component."}
-
   #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+
+
+  #!componentProp(material_3.DropdownMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
+
 
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
