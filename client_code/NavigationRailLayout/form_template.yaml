@@ -1,10 +1,10 @@
 properties:
 - name: navigation_rail_collapse_to
   type: enum
-  default_value: Bottom app bar
+  default_value: bottom_app_bar
   default_binding_prop: true
-  options: [Bottom app bar, Modal navigation drawer]
-  description: How should the side navigation rail collapse on mobile?
+  options: [bottom_app_bar, modal_navigation_drawer]
+  description: The way the side navigation will collapse on mobile.
 - {name: navigation_rail_color, type: color, default_value: ''}
 - {name: background_color, type: color, default_value: '', description: The background color of Forms using this Layout.}
 - {name: text_color, type: color, default_value: '', description: Default color of the text on Forms using this layout}
@@ -14,6 +14,7 @@ properties:
   important: true
   options: [top, enter, bottom]
   default_value: top
+  description: The vertical position of the content in the navigation rail.
 is_package: true
 slots:
   slot_1:
