@@ -351,9 +351,8 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text",type:"string",description:"The label text of the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items text."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the "}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the label text will be underlined."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the label text will be italic."}
