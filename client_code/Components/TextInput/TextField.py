@@ -200,8 +200,8 @@ class TextField(TextInput):
   trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
   display_italic = italic_property('anvil-m3-textfield', 'display_italic')
-  bold_display = bold_property('anvil-m3-textfield', 'bold_display')
-  underline_display = underline_property('anvil-m3-textfield', 'underline_display')
+  display_bold = bold_property('anvil-m3-textfield', 'display_bold')
+  display_underline = underline_property('anvil-m3-textfield', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textfield', 'display_font')
   input_text_color = color_property('anvil-m3-textfield', 'color', 'input_text_color')
@@ -249,9 +249,9 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
-  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"display_underline",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
   #!componentProp(material_3.TextField)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.TextField)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(material_3.TextField)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
