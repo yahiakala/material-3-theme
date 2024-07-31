@@ -2,7 +2,7 @@ properties:
 - {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Look and Feel}
 - {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold, group: Label Style}
 - {description: If True, group: Interaction, name: enabled, type: boolean, important: true, this component allows user interaction.: null, designer_hint: enabled, designerHint: enabled, default_value: true}
-- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label, group: Label Style}
+- {name: label_font_family, type: string, default_value: '', important: false, description: The font family to use for this component's label, group: Label Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels, group: Label Style}
 - {name: label_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color, group: Label Style}
 - {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics, group: Label Style}
@@ -44,7 +44,7 @@ properties:
 - {name: selected_italic_display, type: boolean, default_value: false, important: false, group: Selection Field Style, description: 'If True and there is a selected item, the displayed text is in italic.'}
 - {name: selected_bold_display, type: boolean, default_value: false, important: false, description: 'If True and there is a selected item, the displayed text is bold.', group: Selection Field Style}
 - {name: selected_underline_display, type: boolean, default_value: false, important: false, description: 'If True and there is a selected item, the displayed text is underlined', group: Selection Field Style}
-- {name: selected_font, type: string, default_value: '', important: false, description: The font-family of the displayed text if there is a selected item, group: Selection Field Style}
+- {name: selected_font_family, type: string, default_value: '', important: false, description: The font-family of the displayed text if there is a selected item, group: Selection Field Style}
 - {name: selected_font_size, type: number, important: false, description: The font size (pixels) of the displayed text if there is a selected item., group: Selection Field Style}
 - {name: selected_text_color, type: color, default_value: '', important: false, description: 'The color of the displayed text if there is a selected item,', group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: If True, a placeholder item is added to the menu with value None: null, group: Interaction}

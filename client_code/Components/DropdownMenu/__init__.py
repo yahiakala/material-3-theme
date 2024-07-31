@@ -63,7 +63,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_label_font(self, value):
     self.selection_field.label_font = value
-  label_font = property_with_callback("label_font", _set_label_font)
+  label_font_family = property_with_callback("label_font_family", _set_label_font)
 
   def _set_label_font_size(self, value):
     self.selection_field.label_font_size = value
@@ -107,7 +107,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_selected_font(self, value):
     self.selection_field.selected_font = value
-  selected_font = property_with_callback("selected_font", _set_selected_font)
+  selected_font_family = property_with_callback("selected_font_family", _set_selected_font)
 
   def _set_selected_font_size(self, value):
     self.selection_field.selected_font_size = value
@@ -351,9 +351,10 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the selected item displayed on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size of the selected item displayed on this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font family to use for selected item displayed on this component."}
+
   #!componentProp(material_3.DropdownMenu)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
