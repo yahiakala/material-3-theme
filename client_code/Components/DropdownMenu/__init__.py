@@ -57,9 +57,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.background_color = value
   background_color = property_with_callback("background_color", _set_background_color)
 
-  def _set_bold_label(self, value):
-    self.selection_field.bold_label = value
-  bold_label = property_with_callback("bold_label", _set_bold_label)
+  def _set_label_bold(self, value):
+    self.selection_field.label_bold = value
+  label_bold = property_with_callback("label_bold", _set_label_bold)
 
   def _set_label_font(self, value):
     self.selection_field.label_font = value
@@ -73,13 +73,13 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.label_text_color = value
   label_text_color = property_with_callback("label_text_color", _set_label_text_color)
 
-  def _set_italic_label(self, value):
-    self.selection_field.italic_label = value
-  italic_label = property_with_callback("italic_label", _set_italic_label)
+  def _set_label_italic(self, value):
+    self.selection_field.label_italic = value
+  label_italic = property_with_callback("label_italic", _set_label_italic)
 
-  def _set_underline_label(self, value):
-    self.selection_field.underline_label = value
-  underline_label = property_with_callback("underline_label", _set_underline_label)
+  def _set_label_underline(self, value):
+    self.selection_field.label_underline = value
+  label_underline = property_with_callback("label_underline", _set_label_underline)
 
   def _set_enabled(self, value):
     self.selection_field.enabled = value
@@ -93,17 +93,17 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.role = value
   role = property_with_callback("role", _set_role)
 
-  def _set_selected_italic_display(self, value):
-    self.selection_field.italic_display = value
-  italic_selected = property_with_callback("italic_selected", _set_selected_italic_display)
+  def _set_selected_italic(self, value):
+    self.selection_field.display_italic = value
+  selected_italic = property_with_callback("selected_italic", _set_selected_italic)
 
-  def _set_selected_bold_display(self, value):
-    self.selection_field.bold_display = value
-  bold_selected = property_with_callback("bold_selected", _set_selected_bold_display)
+  def _set_selected_bold(self, value):
+    self.selection_field.display_bold = value
+  selected_bold = property_with_callback("selected_bold", _set_selected_bold)
 
-  def _set_selected_underline_display(self, value):
-    self.selection_field.underline_display = value
-  underline_selected = property_with_callback("underline_selected", _set_selected_underline_display)
+  def _set_selected_underline(self, value):
+    self.selection_field.display_underline = value
+  selected_underline = property_with_callback("selected_underline", _set_selected_underline)
 
   def _set_selected_font(self, value):
     self.selection_field.selected_font = value
@@ -347,17 +347,17 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the displayed text if there is a selected item."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size (pixels) of the displayed text if there is a selected item."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font-family of the displayed text if there is a selected item."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_selected",type:"boolean",description:"If True and there is a selected item, the displayed text is underlined"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_selected",type:"boolean",description:"If True and there is a selected item, the displayed text in italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_selected",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_underline",type:"boolean",description:"If True and there is a selected item, the displayed text is underlined"}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_italic",type:"boolean",description:"If True and there is a selected item, the displayed text in italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_bold",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
