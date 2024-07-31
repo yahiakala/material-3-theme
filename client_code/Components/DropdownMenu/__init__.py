@@ -95,15 +95,15 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_selected_italic_display(self, value):
     self.selection_field.italic_display = value
-  selected_italic = property_with_callback("selected_italic", _set_selected_italic_display)
+  italic_selected = property_with_callback("italic_selected", _set_selected_italic_display)
 
   def _set_selected_bold_display(self, value):
     self.selection_field.bold_display = value
-  selected_bold = property_with_callback("selected_bold", _set_selected_bold_display)
+  bold_selected = property_with_callback("bold_selected", _set_selected_bold_display)
 
   def _set_selected_underline_display(self, value):
     self.selection_field.underline_display = value
-  selected_underline = property_with_callback("selected_underline", _set_selected_underline_display)
+  underline_selected = property_with_callback("underline_selected", _set_selected_underline_display)
 
   def _set_selected_font(self, value):
     self.selection_field.selected_font = value
@@ -355,9 +355,9 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size of the selected item displayed on this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font family to use for selected item displayed on this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"underline_selected",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"italic_selected",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"bold_selected",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
