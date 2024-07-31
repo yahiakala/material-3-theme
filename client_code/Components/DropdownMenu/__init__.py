@@ -360,9 +360,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"bold_selected",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
   #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
