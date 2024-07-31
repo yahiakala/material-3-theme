@@ -94,16 +94,16 @@ class DropdownMenu(DropdownMenuTemplate):
   role = property_with_callback("role", _set_role)
 
   def _set_selected_italic_display(self, value):
-    self.selection_field.selected_italic_display = value
-  selected_italic_display = property_with_callback("selected_italic_display", _set_selected_italic_display)
+    self.selection_field.italic_display = value
+  selected_italic = property_with_callback("selected_italic", _set_selected_italic_display)
 
   def _set_selected_bold_display(self, value):
-    self.selection_field.selected_bold_display = value
-  selected_bold_display = property_with_callback("selected_bold_display", _set_selected_bold_display)
+    self.selection_field.bold_display = value
+  selected_bold = property_with_callback("selected_bold", _set_selected_bold_display)
 
   def _set_selected_underline_display(self, value):
-    self.selection_field.selected_underline_display = value
-  selected_underline_display = property_with_callback("selected_underline_display", _set_selected_underline_display)
+    self.selection_field.underline_display = value
+  selected_underline = property_with_callback("selected_underline", _set_selected_underline_display)
 
   def _set_selected_font(self, value):
     self.selection_field.selected_font = value
