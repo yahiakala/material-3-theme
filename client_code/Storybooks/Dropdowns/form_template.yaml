@@ -86,6 +86,7 @@ components:
                 underline_label: false
                 bold_items: false
                 label_text_color: ''
+                selected_bold_display: true
                 placeholder: placeholder
                 label_text: Dropdown Label 2
                 italic_label: false

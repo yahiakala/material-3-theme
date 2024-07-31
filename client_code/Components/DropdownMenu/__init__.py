@@ -127,7 +127,7 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    if isinstance(value,list):
+    if type(value) is list:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
@@ -193,18 +193,18 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key not in action_keys: #   #TODO: eventually want to use this to jump somewhere in the list
         return
 
-      if event.key == "ArrowUp" or event.key == "ArrowDown":
+      if event.key is "ArrowUp" or event.key is "ArrowDown":
         event.preventDefault()
-        self._iterate_hover(event.key == "ArrowDown")
+        self._iterate_hover(event.key is "ArrowDown")
         return
 
       if event.key in ["Tab", "Escape"]:
         self._set_menu_visibility(False)
 
-      if (event.key == " "): #space key as " " is stupid
+      if (event.key is " "): #space key as " " is stupid
         event.preventDefault()
         self._attempt_select()
-      if (event.key == "Enter"):
+      if (event.key is "Enter"):
         self._attempt_select()
 
   def _iterate_hover(self, inc = True):
@@ -213,25 +213,25 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = -1
       self._hoverIndex += 1
     else:
-      if self._hoverIndex is None or self._hoverIndex == 0:
+      if self._hoverIndex is None or self._hoverIndex is 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
     self._update_hover_styles()
 
   def _attempt_select(self):
-    if self._hoverIndex:
+    if not self._hoverIndex is None:
       self._children[self._hoverIndex].raise_event("click")
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):
-    if self._children:
+    if self._children is not None:
       for child in self._children:
         if isinstance(child, MenuItem):
           child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
   def _update_hover_styles(self):
     self._clear_hover_styles()
-    if not self._hoverIndex:
+    if self._hoverIndex is None:
       return
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
@@ -239,7 +239,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
-    if not value:
+    if (value is None):
       value = not self.menu.visible
     self.menu.visible = value
     if value:
@@ -247,7 +247,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self.selection_field.trailing_icon = "arrow_drop_up"
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
-      if not self.selected_value:
+      if self.selected_value is None:
         self._hoverIndex = None
 
   def _body_click(self, event):
@@ -259,7 +259,7 @@ class DropdownMenu(DropdownMenuTemplate):
     event.stopPropagation()
     self._set_menu_visibility(False)
     
-    if not self.selected_value:
+    if self.selected_value is None:
       if not self.label_text and self.placeholder:
          self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self._hoverIndex = None
@@ -311,7 +311,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if isinstance(item,list):
+      if type(item) is list:
         selection.text = item[0]
       else:
         selection.text = item
