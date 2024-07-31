@@ -141,7 +141,7 @@ class DropdownMenu(DropdownMenuTemplate):
   italic_items = property_without_callback("italic_items")
   underline_items = property_without_callback("underline_items")
   items_text_color = property_without_callback("items_text_color")
-  items_background = property_without_callback("items_background")
+  items_background_color = property_without_callback("items_background_color")
   items_font = property_without_callback("items_font")
   items_font_size = property_without_callback("items_font_size")
 
@@ -284,7 +284,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p.italic = self.italic_items
     p.underline = self.underline_items
     p.text_color = self.items_text_color
-    p.background = self.items_background
+    p.background = self.items_background_color
     p.font = self.items_font
     p.font_size = self.items_font_size
     p.hide_leading_icon = True
@@ -307,7 +307,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.italic = self.italic_items
       selection.underline = self.underline_items
       selection.text_color = self.items_text_color
-      selection.background = self.items_background
+      selection.background = self.items_background_color
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
@@ -352,11 +352,12 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items text."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the "}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the label text on this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_bold",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the menu items will be italic."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"items_bold",type:"boolean",description:"If True, the menu items will be bold."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"menu_background_color",type:"color",description:"The background color of the menu."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the displayed text if there is a selected item."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size (pixels) of the displayed text if there is a selected item."}
@@ -380,6 +381,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
 

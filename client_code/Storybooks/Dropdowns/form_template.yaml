@@ -79,6 +79,7 @@ components:
                 enabled: true
                 visible: true
                 align: left
+                items_background_color: blue
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_2
