@@ -23,7 +23,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
 
-    window.document.addEventListener('scroll', self.add_scroll_class)
+    window.document.addEventListener('scroll', self._add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
@@ -50,12 +50,41 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     else:
       self.app_bar.classList.add('anvil-m3-scrolled')   
 
-  
+  def _open_sidesheet(self):
+    if self.sidesheet_previous_state:
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.content.classList.add('anvil-m3-transition-width')
+      window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
+      self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    else:
+      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_scrim.style.opacity = 1
+      self.sidesheet.classList.add('anvil-m3-display-block')
+      self.sidesheet.classList.add('anvil-m3-open')
+      self.content.classList.add('anvil-m3-sidesheet-open')
+      self.sidesheet_previous_state = True
+    
+  def _close_sidesheet(self):
+    self.content.classList.add('anvil-m3-transition-width')
+    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
+    window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
+    self.sidesheet.classList.remove('anvil-m3-open')
+    self.content.classList.remove('anvil-m3-sidesheet-open')
+    window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
+    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
+  def _icon_button_1_click(self, **event_args):
+    self.show_sidesheet = False
+
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_drawer_color",type:"color",description:"The color of the navigation drawer on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
+  
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
 
-  
-  
   @property
   def background_color(self):
     return self._props.get('background_color')
@@ -76,8 +105,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self._props['text_color'] = value
     window.document.body.style.color = value
 
-   
-  
   @property
   def navigation_rail_collapse_to(self):
     return self._props.get('navigation_rail_collapse_to')
@@ -113,36 +140,5 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self._open_sidesheet()
     else:
       self._close_sidesheet()
-
-  def _open_sidesheet(self):
-    if self.sidesheet_previous_state:
-      self.sidesheet.classList.add('anvil-m3-display-block')
-      window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
-      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
-      self.content.classList.add('anvil-m3-transition-width')
-      window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
-      self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
-    else:
-      self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
-      self.sidesheet_scrim.style.opacity = 1
-      self.sidesheet.classList.add('anvil-m3-display-block')
-      self.sidesheet.classList.add('anvil-m3-open')
-      self.content.classList.add('anvil-m3-sidesheet-open')
-      self.sidesheet_previous_state = True
-    
-  def _close_sidesheet(self):
-    self.content.classList.add('anvil-m3-transition-width')
-    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
-    self.sidesheet.classList.remove('anvil-m3-open')
-    self.content.classList.remove('anvil-m3-sidesheet-open')
-    window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
-    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
-
-  def _icon_button_1_click(self, **event_args):
-    self.show_sidesheet = False
-
-  def open_sidesheet_with_content(self, content):
-    pass
 
 #!defClass(material_3, NavigationRailLayout, anvil.Component)!:

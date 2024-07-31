@@ -24,7 +24,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
 
-    window.document.addEventListener('scroll', self.add_scroll_class)
+    window.document.addEventListener('scroll', self._add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
@@ -75,10 +75,10 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
-  #!componentProp()!1: {name:"navigation_drawer_color",type:"color",description:"The color of the navigation drawer on Forms using this Layout."} 
-  #!componentProp()!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
-  #!componentProp()!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
-  #!componentProp()!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"navigation_drawer_color",type:"color",description:"The color of the navigation drawer on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
+  #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
 
   navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
 
