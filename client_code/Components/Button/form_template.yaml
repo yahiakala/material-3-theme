@@ -12,10 +12,10 @@ properties:
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
 - name: appearance
   type: enum
-  options: [elevated, filled, tonal, outlined]
-  include_none_option: true
+  options: [filled, elevated, tonal, outlined, text]
   group: Key Properties
   description: A predefined style for this component.
+  default_value: filled
 - {name: text, type: string, default_value: '', description: The text displayed on this component., group: Key Properties, important: true}
 - {name: text_color, type: color, default_value: '', group: Look and Feel, description: The colour of the text on the component.}
 - {name: font_family, type: string, default_value: '', group: Text, description: The font family to use for this component.}

@@ -5,7 +5,7 @@ from ...Functions import property_with_callback, italic_property, bold_property,
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
-text_property = {"name": "text",
+input_text_property = {"name": "input_text",
                  "type": "string",
                  "default_value": "None",
                  "description": "The text displayed on this component.",
@@ -19,7 +19,7 @@ leading_icon_property = {"name": "leading_icon",
                          "default_value": "None",
                          "includeNoneOption": True, # This might change to snake case at some point
                          "noneOptionLabel": "None",
-                         "description": "The icon to display on the right side of this component."}
+                         "description": "The leading icon to display on this component."}
 trailing_icon_property = {"name": "trailing_icon",
                           "type": "enum",
                           "options": _m3_icons,
@@ -28,7 +28,7 @@ trailing_icon_property = {"name": "trailing_icon",
                           "default_value": "None",
                           "includeNoneOption": True,
                           "noneOptionLabel": "None",
-                          "description": "The icon to display on the left side of this component."}
+                          "description": "The trailing icon to display on this component."}
 type_property = {"name": "type", 
                  "type": "enum", 
                  "options": ["text", "number", "email", "tel", "url"], 
@@ -60,7 +60,7 @@ click_event = {"name": "trailing_icon_click", "defaultEvent": False, "descriptio
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
-  _anvil_properties_ = [text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [input_text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
@@ -116,14 +116,14 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].select()
   
   @property
-  def text(self):
+  def input_text(self):
     if self._props.get('type') == "number" and self.dom_nodes['anvil-m3-textfield'].value:
       return float(self.dom_nodes['anvil-m3-textfield'].value)
     else:
       return self.dom_nodes['anvil-m3-textfield'].value
 
-  @text.setter
-  def text(self, value):
+  @input_text.setter
+  def input_text(self, value):
     self.dom_nodes['anvil-m3-textfield'].value = value
       
   def _set_label(self, value):
@@ -163,24 +163,6 @@ class TextField(TextInput):
       self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-error-icon")
     # icon = "error" if value else self.trailing_icon
   error = property_with_callback("error", _set_error)
-
-  @anvil_property('enum')
-  def leading_icon(self):
-    return self._props.get('leading_icon')
-
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._props['leading_icon'] = value
-    self._set_leading_icon(value)
-
-  @anvil_property('enum')
-  def trailing_icon(self):
-    return self._props.get('trailing_icon')
-
-  @trailing_icon.setter
-  def trailing_icon(self, value):
-    self._props['trailing_icon'] = value
-    self._set_trailing_icon(value)
     
   def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
@@ -200,7 +182,7 @@ class TextField(TextInput):
       icon_container.style.paddingLeft = "16px"
       text_field_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
-  # leading_icon = property_with_callback("leading_icon", set_leading_icon)  
+  leading_icon = property_with_callback("leading_icon", _set_leading_icon)  
   
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
@@ -215,14 +197,14 @@ class TextField(TextInput):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
-  # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+  trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
   italic_display = italic_property('anvil-m3-textfield', 'italic_label')
   bold_display = bold_property('anvil-m3-textfield', 'bold_display')
   underline_display = underline_property('anvil-m3-textfield', 'underline_display')
   display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
-  display_font = font_family_property('anvil-m3-textfield', 'display_font')
-  display_text_color = color_property('anvil-m3-textfield', 'color', 'display_text_color')
+  display_font_family = font_family_property('anvil-m3-textfield', 'display_font')
+  input_text_color = color_property('anvil-m3-textfield', 'color', 'input_text_color')
   background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
@@ -249,3 +231,60 @@ class TextField(TextInput):
     event.preventDefault()
     self.raise_event("trailing_icon_click")
 
+  #!componentProp(material_3.TextField)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.TextField)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.TextField)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.TextField)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.TextField)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(material_3.TextField)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+
+  #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
+
+  #!componentProp(material_3.TextField)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(material_3.TextField)!1: {name:"underline_display",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(material_3.TextField)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.TextField)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
+
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+
+  #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed below this component."}
+
+  #!componentProp(material_3.TextField)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.TextField)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(material_3.TextField)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+
+  #!componentProp(material_3.TextField)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(material_3.TextField)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
+  #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
+
+  #!componentEvent(material_3.TextField)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "trailing_icon_click", description: "When the trailing icon is clicked.", parameters:[]}
+  #!componentEvent(material_3.TextField)!1: {name: "pressed_enter", description: "When the user presses enter in this component.", parameters:[]}
+
+  #!defMethod(_)!2: "Set the keyboard focus to this TextField." ["focus"]
+  #!defMethod(_)!2: "Set the input text on this TextField." ["select"]
+
+#!defClass(material_3,TextField, anvil.Component)!:

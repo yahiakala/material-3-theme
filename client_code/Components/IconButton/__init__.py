@@ -8,14 +8,12 @@ import anvil.designer
 from ...Functions import innerText_property, tooltip_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
 from anvil import HtmlTemplate
 
+#TODO: all classes should have anvil-m3 prefix
+
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._tooltip_node = None
-    self._appearance_css_classes = {
-      "Filled": "filled",
-      "Filled tonal": "filled-tonal",
-      "Outlined": "outlined"}
     self._appearance = ""
     self.init_components(**properties)
     
@@ -36,28 +34,29 @@ class IconButton(IconButtonTemplate):
 
   def _appearance_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled-tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
-    if value is not None:
-      class_name = self._appearance_css_classes[value]
+    if value and value != 'standard':
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
       self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
 
-  #!defAttr()!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!defAttr()!1: {name:"appearance",type:"enum",description:"A predefined style for this component."}  
-  #!defAttr()!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!defAttr()!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!defAttr()!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!defAttr()!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!defAttr()!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!defAttr()!1: {name:"background",type:"color",description:"The colour of the background of this component."}
-  #!defAttr()!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!defAttr()!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!defAttr()!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.IconButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.IconButton)!1: {name:"appearance",type:"enum",options:["standard", "filled", "tonal", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.IconButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.IconButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.IconButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.IconButton)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.IconButton)!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.IconButton)!1: {name:"background",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.IconButton)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.IconButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.IconButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+
+  #!componentEvent(material_3.IconButton)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
   
   appearance = property_with_callback("appearance", _appearance_setter)
   visible = HtmlTemplate.visible
@@ -71,4 +70,4 @@ class IconButton(IconButtonTemplate):
   role = role_property('anvil-m3-iconbutton-container')
   tooltip = tooltip_property('anvil-m3-iconbutton-component')
 
-#!defClass(material_3,IconButton)!:
+#!defClass(material_3,IconButton,anvil.Component)!:

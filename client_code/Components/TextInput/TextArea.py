@@ -5,16 +5,16 @@ import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
-text_property = {"name": "text",
+input_text_property = {"name": "input_text",
                  "type": "string",
                  "default_value": "None",
-                 "description": "The text displayed on this component",
+                 "description": "The input text displayed on this component",
                  "supportsWriteback": True,
                  # "binding_writeback_events": ["lost_focus"],
                  "important": True}
 
 class TextArea(TextInput):
-  _anvil_properties_ = [text_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [input_text_property, *TextInput._anvil_properties_]
   
   def __init__(self, **properties):
     super().__init__(**properties)
@@ -52,7 +52,7 @@ class TextArea(TextInput):
   underline_display = underline_property('anvil-m3-textarea', 'underline_display')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
-  display_text_color = color_property('anvil-m3-textarea', 'color', 'display_text_color')
+  input_text_color = color_property('anvil-m3-textarea', 'color', 'input_text_color')
   background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
 
   def focus(self):
@@ -72,11 +72,11 @@ class TextArea(TextInput):
   placeholder = property_with_callback('placeholder', _set_placeholder)
 
   @property
-  def text(self):
+  def input_text(self):
     return self.dom_nodes['anvil-m3-textarea'].value
 
-  @text.setter
-  def text(self, value):
+  @input_text.setter
+  def input_text(self, value):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
   def _set_label(self, value):
@@ -124,3 +124,56 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
+
+  #!componentProp(material_3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(material_3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.TextArea)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.TextArea)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.TextArea)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(material_3.TextArea)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+
+  #!componentProp(material_3.TextArea)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.TextArea)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"underline_label",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(material_3.TextArea)!1: {name:"italic_label",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(material_3.TextArea)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
+
+  #!componentProp(material_3.TextArea)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(material_3.TextArea)!1: {name:"underline_display",type:"boolean",description:"The font family to use for the label on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(material_3.TextArea)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed underneath this component."}
+
+  #!componentProp(material_3.TextArea)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
+  #!componentProp(material_3.TextArea)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed underneath this component."}
+
+  #!componentProp(material_3.TextArea)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+
+  #!componentProp(material_3.TextArea)!1: {name:"spacing",type:"spacing",description:"The margin and padding of this component. Default value is in pixels."}
+  #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+
+  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+
+  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+
+  #!defMethod(_)!2: "Set the keyboard focus to this TextArea." ["focus"]
+  #!defMethod(_)!2: "Set the input text on this TextArea." ["select"]
+
+#!defClass(material_3,TextArea, anvil.Component)!:
