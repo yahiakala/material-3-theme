@@ -127,6 +127,7 @@ components:
                 include_placeholder: ''
                 label_text: Dropdown Label 3
                 allow_none: true
+                error: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_4
