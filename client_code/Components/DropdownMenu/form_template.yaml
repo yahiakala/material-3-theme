@@ -45,8 +45,8 @@ properties:
 - {name: bold_selected, type: boolean, default_value: false, important: false, description: 'If True and there is a selected item, the displayed text is bold.', group: Selection Field Style}
 - {name: underline_selected, type: boolean, default_value: false, important: false, description: 'If True and there is a selected item, the displayed text is underlined', group: Selection Field Style}
 - {name: selected_font_family, type: string, default_value: '', important: false, description: The font-family of the displayed text if there is a selected item, group: Selection Field Style}
-- {name: selected_font_size, type: number, important: false, description: The font size (pixels) of the displayed text if there is a selected item., group: Selection Field Style}
-- {name: selected_text_color, type: color, default_value: '', important: false, description: 'The color of the displayed text if there is a selected item,', group: Selection Field Style}
+- {name: selected_font_size, type: number, important: false, description: The font size (pixels) of the displayed text if there is a selected item, group: Selection Field Style}
+- {name: selected_text_color, type: color, default_value: '', important: false, description: The colour of the displayed text if there is a selected item., group: Selection Field Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: If True, a placeholder item is added to the menu with value None: null, group: Interaction}
 - {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
 is_package: true
