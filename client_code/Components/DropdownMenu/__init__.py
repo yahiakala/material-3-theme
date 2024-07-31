@@ -127,7 +127,7 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    if type(value) is list:
+    if isinstance(value, list):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
@@ -193,18 +193,18 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key not in action_keys: #   #TODO: eventually want to use this to jump somewhere in the list
         return
 
-      if event.key is "ArrowUp" or event.key is "ArrowDown":
+      if event.key == "ArrowUp" or event.key == "ArrowDown":
         event.preventDefault()
-        self._iterate_hover(event.key is "ArrowDown")
+        self._iterate_hover(event.key == "ArrowDown")
         return
 
       if event.key in ["Tab", "Escape"]:
         self._set_menu_visibility(False)
 
-      if (event.key is " "): #space key as " " is stupid
+      if (event.key == " "): #space key as " " is stupid
         event.preventDefault()
         self._attempt_select()
-      if (event.key is "Enter"):
+      if (event.key == "Enter"):
         self._attempt_select()
 
   def _iterate_hover(self, inc = True):
@@ -213,13 +213,13 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = -1
       self._hoverIndex += 1
     else:
-      if self._hoverIndex is None or self._hoverIndex is 0:
+      if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
     self._update_hover_styles()
 
   def _attempt_select(self):
-    if not self._hoverIndex is None:
+    if not self._hoverIndex == None:
       self._children[self._hoverIndex].raise_event("click")
     self._set_menu_visibility(False)
 
@@ -311,7 +311,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if type(item) is list:
+      if isinstance(item, list):
         selection.text = item[0]
       else:
         selection.text = item
