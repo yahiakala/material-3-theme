@@ -3,6 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: toggle_icon_button_1
+    properties: {selected: false, icon: stars}
+    type: form:Components.ToggleIconButton
+    layout_properties: {}
   - name: dropdown_menu_1
     properties:
       items: [Patricia, Char, Sarah]
