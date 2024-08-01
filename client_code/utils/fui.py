@@ -18,7 +18,7 @@ def auto_update(
   placement="bottom",
   strategy="absolute",
   offset=6,
-  shift={"paddidng": 5},
+  shift={"padding": 5},
   hide={"padding": 15},
   arrow=None
 ):

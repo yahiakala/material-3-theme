@@ -23,8 +23,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self._field = get_dom_node(self.selection_field).querySelector("input")
-    self._input_container = self.dom_nodes['anvil-m3-input-containter']
-    print(self._input_container)
 
     self._hoverIndex = None
     self._children = None
@@ -197,7 +195,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     document.body.append(self._menuNode)
 
-    self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start")
+    self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
