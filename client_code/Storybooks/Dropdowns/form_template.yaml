@@ -74,7 +74,7 @@ components:
             - name: dropdown_menu_1
               properties:
                 align: left
-                leading_icon: 15mp
+                leading_icon: null
                 label_text: Dropdown Label 1
                 allow_none: false
                 error: false
