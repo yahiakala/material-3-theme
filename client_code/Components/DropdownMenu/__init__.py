@@ -129,6 +129,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.tooltip = value
   tooltip = property_with_callback("tooltip", _set_tooltip)
 
+  def _set_tooltip(self, value):
+    self.selection_field.tooltip = value
+  tooltip = property_with_callback("tooltip", _set_tooltip)
+
+
 
   def _set_error(self, value):
     if value: 
