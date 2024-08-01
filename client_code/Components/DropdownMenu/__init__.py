@@ -282,13 +282,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
-    print('value:', value)
     if (value is None):
-      print(self.menu.visible)
       value = not self.menu.visible
     self.menu.visible = value
     if value:
-      print('yes')
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
     else:
@@ -297,7 +294,6 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   def _body_click(self, event):
-    print('clicked')
     if self._field.contains(event.target) or self._menuNode.contains(event.target):
       return
     self._set_menu_visibility(False)
@@ -438,4 +434,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def selection_field_trailing_icon_click(self, **event_args):
     """This method is called when the trailing icon is clicked."""
-    print(event_args)
+    print(self.menu.visible)
+    self._handle_component_click(event=None)
+    print(self.menu.visible)
+    print('helloooo')
