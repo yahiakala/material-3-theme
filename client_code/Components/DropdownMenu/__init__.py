@@ -119,7 +119,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_leading_icon(self, value):
     self.selection_field.leading_icon = value
-  selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
+  leading_icon = property_with_callback("leading_icon", _set_leading_icon)
 
   def _set_error(self, value):
     if value: 

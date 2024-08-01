@@ -50,6 +50,12 @@ properties:
 - {name: selected_text_color, type: color, default_value: '', important: false, description: The colour of the displayed text if there is a selected item, group: Selection Field Style}
 - {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
 - {name: error, type: boolean, default_value: false, important: true, description: 'If True, this component is in an error state.', group: Interaction}
+- name: leading_icon
+  type: enum
+  important: true
+  description: The leading icon to display on this component.
+  options: []
+  default_value: null
 is_package: true
 events:
 - {name: change, default_event: true, description: When an item is selected}
