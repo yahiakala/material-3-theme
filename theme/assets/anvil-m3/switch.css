@@ -52,6 +52,7 @@ element {
 .anvil-m3-switch-slider.anvil-m3-has-disabled-icon:before {
   height: 24px;
   width: 24px;
+  margin: 4px;
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider {
@@ -60,9 +61,9 @@ element {
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider:before {
-  -webkit-transform: translate(16px);
-  -ms-transform: translate(16px);
-  transform: translate(16px);
+  -webkit-transform: translate(17px);
+  -ms-transform: translate(17px);
+  transform: translate(17px);
   background-color: var(--anvil-m3-selected-thumb-color);
   height: 24px;
   width: 24px;
@@ -71,7 +72,7 @@ element {
 .anvil-m3-switch-slider .anvil-m3-enabled-switch-icon, .anvil-m3-switch-slider .anvil-m3-disabled-switch-icon  {
   z-index: 1;
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: 11px;
   -webkit-transition: transform .15s .15s;
   transition: transform .15s .15s;
 }
@@ -81,7 +82,7 @@ element {
 }
 
 .anvil-m3-switch-slider.anvil-m3-has-disabled-icon:not(.anvil-m3-has-enabled-icon) .anvil-m3-disabled-switch-icon {
-  margin-left: 0px;
+  margin-left: -2px;
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider .anvil-m3-enabled-switch-icon, .anvil-m3-switch-input:checked + .anvil-m3-switch-slider .anvil-m3-disabled-switch-icon {
