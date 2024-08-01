@@ -141,9 +141,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.supporting_text_font_family = value
   supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
 
-    def _set_supporting_text_font_family(self, value):
-    self.selection_field.supporting_text_font_family = value
-  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
+  def _set_supporting_text_font_size(self, value):
+    self.selection_field.supporting_text_font_size = value
+  supporting_text_font_size = property_with_callback("supporting_text_font_size", _set_supporting_text_font_size)
 
   def _set_error(self, value):
     if value: 
