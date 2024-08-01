@@ -23,6 +23,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self._field = get_dom_node(self.selection_field).querySelector("input")
+    self._input_container = self.dom_nodes['anvil-m3-input-containter']
+    print(self._input_container)
 
     self._hoverIndex = None
     self._children = None
@@ -431,10 +433,3 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
-
-  def selection_field_trailing_icon_click(self, **event_args):
-    """This method is called when the trailing icon is clicked."""
-    print(self.menu.visible)
-    self._handle_component_click(event=None)
-    print(self.menu.visible)
-    print('helloooo')
