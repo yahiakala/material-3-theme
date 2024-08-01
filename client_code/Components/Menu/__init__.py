@@ -9,16 +9,18 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ..
+from ...Functions import color_property
 
 class Menu(MenuTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._props = properties
     self.init_components(**properties)
+    
 
   """ Properties """
   visible = HtmlTemplate.visible
-  background_color =3
+  background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
   
   # @property
   # def visible(self):
