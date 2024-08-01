@@ -316,7 +316,9 @@ class DropdownMenu(DropdownMenuTemplate):
   def form_show(self, **event_args):
     self._create_menu_items()
     print(get_dom_node(self.selection_field).offsetWidth)
-    self._menuNode.style.width = self._field.style.width
+    selection_field_width = get_dom_node(self.selection_field).offsetWidth
+    self._menuNode.style.width = f"{selection_field_width}px"
+    self._menuNode.style.border = "2px solid green"
     self._children = self.menu.get_components()
 
     if anvil.designer.in_designer:
