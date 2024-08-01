@@ -149,6 +149,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.border_color = value
   border_color = property_with_callback("border_color", _set_border_color)
 
+  def _set_menu_color(self, value):
+    self.menu.background_color = value
+  menu_background_color = property_with_callback("menu_color", _set_menu_color)
+
   def _set_error(self, value):
     if value: 
       self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.add('anvil-m3-dropdown-error')
@@ -173,7 +177,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.raise_event("change")
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
-  menu_background_color = color_property("anvil-m3-dropdownMenu-items-container", "backgroundColor", "menu_background_color")
   placeholder = property_without_callback("placeholder")
   items = property_without_callback("items")
   allow_none = property_without_callback("allow_none")
