@@ -62,6 +62,7 @@ properties:
 - {name: leading_icon_color, type: color, default_value: '', important: false, description: The colour of the leading icon, group: Look and Feel}
 - {name: tooltip, type: string, default_value: '', important: false, description: ' The text to display when the mouse is hovered over this component'}
 - {name: supporting_text, type: string, default_value: '', important: false, description: The supporting text displayed underneath this component, group: Key Properties}
+- {name: prop, type: string, default_value: '', important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: When an item is selected}
