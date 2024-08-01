@@ -42,9 +42,9 @@ class Button(ButtonTemplate):
     }]
 
   def _set_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', False)
+    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
     if value == 'full':
-      self.dom_nodes['anvil-m3-button'].classList.toggle('full-width', True)
+      self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
       
@@ -55,7 +55,7 @@ class Button(ButtonTemplate):
       if self.text:
         self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-icon-padding')
       else:
-        self.dom_nodes['anvil-m3-button'].classList.add('noText')
+        self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-no-text')
     else:
       self.dom_nodes['anvil-m3-button-icon'].innerText = ""
       self.dom_nodes['anvil-m3-button-icon'].style.display = "none"
@@ -80,7 +80,7 @@ class Button(ButtonTemplate):
 
     buttonNode.classList.remove('anvil-m3-icon-padding')
     textNode.classList.remove('anvil-m3-textlessComponentText')
-    buttonNode.classList.remove('noText')
+    buttonNode.classList.remove('anvil-m3-no-text')
     
     self._set_icon()
     self._set_text()

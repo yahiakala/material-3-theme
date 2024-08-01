@@ -24,9 +24,9 @@ class Card(CardTemplate):
   visible = HtmlTemplate.visible
 
   def _set_nodes_class_by_image(self, image_position, val):
-    self.dom_nodes['anvil-m3-card'].classList.toggle(f'{image_position}-image', val)
-    self.dom_nodes['content'].classList.toggle(f'{image_position}-image', val)
-    self.dom_nodes['image'].classList.toggle(f'{image_position}-image', val)
+    self.dom_nodes['anvil-m3-card'].classList.toggle(f'anvil-m3-{image_position}-image', val)
+    self.dom_nodes['content'].classList.toggle(f'anvil-m3-{image_position}-image', val)
+    self.dom_nodes['image'].classList.toggle(f'anvil-m3-{image_position}-image', val)
     
   def _set_image_position(self, value):
     for position in [None, 'top', 'bottom', 'left', 'right', 'full']:

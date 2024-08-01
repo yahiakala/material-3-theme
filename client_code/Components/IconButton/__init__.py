@@ -35,10 +35,10 @@ class IconButton(IconButtonTemplate):
   def _appearance_setter(self, value):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-filled", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-tonal", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-outlined", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-filled", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-tonal", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-outlined", False)
     
     if value and value != 'standard':
       self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(f'anvil-m3-{value}', True)
