@@ -129,11 +129,21 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.tooltip = value
   tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def _set_tooltip(self, value):
-    self.selection_field.tooltip = value
-  tooltip = property_with_callback("tooltip", _set_tooltip)
+  def _set_supporting_text(self, value):
+    self.selection_field.supporting_text = value
+  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
+  def _set_supporting_text_color(self, value):
+    self.selection_field.supporting_text_color = value
+  supporting_text_color = property_with_callback("supporting_text_color", _set_supporting_text_color)
 
+  def _set_supporting_text_font_family(self, value):
+    self.selection_field.supporting_text_font_family = value
+  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
+
+    def _set_supporting_text_font_family(self, value):
+    self.selection_field.supporting_text_font_family = value
+  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
 
   def _set_error(self, value):
     if value: 
