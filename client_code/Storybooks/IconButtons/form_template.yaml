@@ -56,8 +56,8 @@ components:
             properties: {appearance: Filled}
             type: form:Components.IconButton
             layout_properties: {}
-          - name: icon_button_1_copy_1
-            properties: {appearance: Filled tonal}
+          - name: icon_button_2_copy
+            properties: {appearance: tonal}
             type: form:Components.IconButton
             layout_properties: {}
           - name: icon_button_2_copy_1
@@ -81,8 +81,8 @@ components:
               properties: {appearance: Filled, enabled: false}
               type: form:Components.IconButton
               layout_properties: {}
-            - name: icon_button_1_copy_1_copy_1
-              properties: {appearance: Filled tonal, enabled: false}
+            - name: icon_button_2_copy_3
+              properties: {appearance: tonal, enabled: false}
               type: form:Components.IconButton
               layout_properties: {}
             - name: icon_button_2_copy_1_copy_1
