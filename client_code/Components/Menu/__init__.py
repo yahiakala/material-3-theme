@@ -9,6 +9,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
+from ..
 
 class Menu(MenuTemplate):
   def __init__(self, **properties):
@@ -17,6 +18,7 @@ class Menu(MenuTemplate):
 
   """ Properties """
   visible = HtmlTemplate.visible
+  background_color =3
   
   # @property
   # def visible(self):
