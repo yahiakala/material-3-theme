@@ -41,8 +41,8 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
     if value and value != 'standard':
-      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(class_name, True)
-      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(class_name, True)
+      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(value, True)
+      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(value, True)
 
   #!componentProp(material_3.IconButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!componentProp(material_3.IconButton)!1: {name:"appearance",type:"enum",options:["standard", "filled", "tonal", "outlined"],description:"A predefined style for this component."}  
