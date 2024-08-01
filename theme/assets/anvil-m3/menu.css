@@ -1,7 +1,7 @@
 /***** Menu *****/
 .anvil-m3-menu-items-container { 
   min-width: 112px;
-  max-width: 280px;
+  /* max-width: 280px; */
   min-height: 24px;
   max-height: 100vh;
   border-radius: 4px;

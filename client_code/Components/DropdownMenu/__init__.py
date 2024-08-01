@@ -30,6 +30,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self.selected_value = None
 
+
     self._has_focus = False
     self._handle_keyboard_events = self._handle_keyboard_events
     self._handle_selection_field_focus = self._handle_selection_field_focus
@@ -314,6 +315,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def form_show(self, **event_args):
     self._create_menu_items()
+    print(get_dom_node(self.selection_field).offsetWidth)
+    self._menuNode.style.width = self._field.style.width
     self._children = self.menu.get_components()
 
     if anvil.designer.in_designer:
