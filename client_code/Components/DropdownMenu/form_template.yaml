@@ -58,6 +58,7 @@ properties:
   default_value: null
   include_none_option: true
   none_option_label: No icon
+- {name: leading_icon_color, type: color, default_value: '', important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: When an item is selected}

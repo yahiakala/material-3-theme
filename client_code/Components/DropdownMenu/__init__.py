@@ -121,6 +121,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.leading_icon = value
   leading_icon = property_with_callback("leading_icon", _set_leading_icon)
 
+    def _set_leading_icon_color(self, value):
+    self.selection_field.leading_icon_color = value
+  leading_icon_color = property_with_callback("leading_icon_color", _set_leading_icon_color)
+
+
   def _set_error(self, value):
     if value: 
       self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.add('anvil-m3-dropdown-error')
