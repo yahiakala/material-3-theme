@@ -72,7 +72,7 @@ element {
 .anvil-m3-switch-slider .anvil-m3-enabled-switch-icon, .anvil-m3-switch-slider .anvil-m3-disabled-switch-icon  {
   z-index: 1;
   font-size: 16px;
-  margin-left: 11px;
+  margin-left: 10px;
   -webkit-transition: transform .15s .15s;
   transition: transform .15s .15s;
 }
@@ -86,9 +86,9 @@ element {
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider .anvil-m3-enabled-switch-icon, .anvil-m3-switch-input:checked + .anvil-m3-switch-slider .anvil-m3-disabled-switch-icon {
-  -webkit-transform: translate(16px);
-  -ms-transform: translate(16px);
-  transform: translate(16px);
+  -webkit-transform: translate(17px);
+  -ms-transform: translate(17px);
+  transform: translate(17px);
 }
 
 .anvil-m3-switch input.anvil-m3-switch-input:checked + .anvil-m3-switch-slider .anvil-m3-enabled-switch-icon {
