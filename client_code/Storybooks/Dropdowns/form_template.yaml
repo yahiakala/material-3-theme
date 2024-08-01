@@ -73,14 +73,15 @@ components:
             components:
             - name: dropdown_menu_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+                align: left
+                leading_icon: 15mp
                 label_text: Dropdown Label 1
                 allow_none: false
-                enabled: true
-                visible: true
-                align: left
-                items_background_color: blue
                 error: false
+                items_background_color: ''
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+                visible: true
+                enabled: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_2
@@ -97,7 +98,7 @@ components:
                 allow_none: false
                 selected_underline: false
                 appearance: outlined
-                error: true
+                error: false
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 selected_underline_display: true
                 italic_items: false
@@ -127,7 +128,7 @@ components:
                 include_placeholder: ''
                 label_text: Dropdown Label 3
                 allow_none: true
-                error: true
+                error: false
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_4
