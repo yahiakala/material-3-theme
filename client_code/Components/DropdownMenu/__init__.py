@@ -117,8 +117,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.selected_text_color = value
   selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
-  def _set_selected_text_color(self, value):
-    self.selection_field.selected_text_color = value
+  def _set_leading_icon(self, value):
+    self.selection_field.leading_icon = value
   selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
   def _set_error(self, value):
