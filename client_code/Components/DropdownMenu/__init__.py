@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, property_without_callback, margin_property
+from ...Functions import property_with_callback, property_without_callback, margin_property, color_property
 from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
@@ -173,6 +173,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.raise_event("change")
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
+  menu_background_color = color_property("anvil-m3-dropdownMenu-items-container", "backgroundColor", "menu_background_color")
   placeholder = property_without_callback("placeholder")
   items = property_without_callback("items")
   allow_none = property_without_callback("allow_none")
@@ -180,10 +181,12 @@ class DropdownMenu(DropdownMenuTemplate):
   italic_items = property_without_callback("italic_items")
   underline_items = property_without_callback("underline_items")
   items_text_color = property_without_callback("items_text_color")
-  items_background_color = property_without_callback("items_background_color")
+
   items_font = property_without_callback("items_font")
   items_font_size = property_without_callback("items_font_size")
 
+
+  
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
     document.addEventListener('click', self._body_click)
@@ -216,7 +219,6 @@ class DropdownMenu(DropdownMenuTemplate):
         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
     
-
   def _handle_keyboard_events(self, event):
     if not self._has_focus:
       return
@@ -346,7 +348,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.italic = self.italic_items
       selection.underline = self.underline_items
       selection.text_color = self.items_text_color
-      selection.background = self.items_background_color
+      # selection.background = self.items_background_color
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 

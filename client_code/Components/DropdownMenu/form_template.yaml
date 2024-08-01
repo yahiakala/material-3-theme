@@ -38,7 +38,7 @@ properties:
 - {name: items_italic, type: boolean, default_value: false, important: true, group: Dropdown Items Style, description: 'If True, the menu items will be italic'}
 - {name: items_underline, type: boolean, default_value: false, important: true, group: Dropdown Items Style, description: 'If True, the menu items will be underlined'}
 - {name: items_text_color, type: color, default_value: '', important: false, description: The colour of the menu items' text, group: Dropdown Items Style}
-- {name: items_background_color, type: color, default_value: '', important: false, description: Component's menu items' background color, group: Dropdown Items Style}
+- {name: menu_background_color, type: color, default_value: '', important: false, description: The background colour of the menu, group: Look and Feel}
 - {name: items_font_family, type: string, default_value: '', important: false, description: The font family to use for the menu items, group: Dropdown Items Style}
 - {name: items_font_size, type: number, important: false, description: The font size of the menu items, group: Dropdown Items Style}
 - {name: allow_none, type: boolean, default_value: false, important: true, description: 'If True, a placeholder item is added to the menu with value None', group: Interaction}

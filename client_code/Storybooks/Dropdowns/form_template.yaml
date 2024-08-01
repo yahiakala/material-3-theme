@@ -76,7 +76,7 @@ components:
                 align: left
                 supporting_text_font_family: ''
                 leading_icon: null
-                border_color: p
+                border_color: ''
                 label_text: Dropdown Label 1
                 supporting_text_color: ''
                 allow_none: false
@@ -88,6 +88,7 @@ components:
                 visible: true
                 enabled: true
                 supporting_text: ''
+                menu_background_color: lightblue
                 tooltip: This is a drop down menu
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
