@@ -145,6 +145,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.supporting_text_font_size = value
   supporting_text_font_size = property_with_callback("supporting_text_font_size", _set_supporting_text_font_size)
 
+  def _set_border_color(self, value):
+    self.selection_field.border_color = value
+  border_color = property_with_callback("border_color", _set_border_color)
+
   def _set_error(self, value):
     if value: 
       self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.add('anvil-m3-dropdown-error')
@@ -319,7 +323,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p.italic = self.italic_items
     p.underline = self.underline_items
     p.text_color = self.items_text_color
-    p.background = self.items_background_color
+    # p.background = self.items_background_color
     p.font = self.items_font
     p.font_size = self.items_font_size
     p.hide_leading_icon = True

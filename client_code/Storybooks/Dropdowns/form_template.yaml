@@ -74,16 +74,20 @@ components:
             - name: dropdown_menu_1
               properties:
                 align: left
+                supporting_text_font_family: ''
                 leading_icon: null
+                border_color: p
                 label_text: Dropdown Label 1
+                supporting_text_color: ''
                 allow_none: false
                 leading_icon_color: ''
+                supporting_text_font_size: null
                 error: false
-                items_background_color: ''
+                items_background_color: theme:Error
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 visible: true
                 enabled: true
-                supporting_text: This is a dropdown
+                supporting_text: ''
                 tooltip: This is a drop down menu
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
@@ -95,6 +99,7 @@ components:
                 selected_bold_display: true
                 placeholder: placeholder
                 selected_italic: false
+                border_color: ''
                 selected_bold: false
                 label_text: Dropdown Label 2
                 italic_label: false
