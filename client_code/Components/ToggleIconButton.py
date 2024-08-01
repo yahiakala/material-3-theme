@@ -14,12 +14,12 @@ class ToggleIconButton(IconButton):
     super().__init__(**properties)
     self.init_components(**properties)
   
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("toggle", True)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("toggle", True)   
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-toggle", True)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-toggle", True)   
 
     # I think there is a smarter way to do this. I don't know the setter isn't getting called in the beginning.
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", self.selected)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", self.selected)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-selected", self.selected)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-selected", self.selected)
 
   def _anvil_get_interactions_(self):
     return [
@@ -44,8 +44,8 @@ class ToggleIconButton(IconButton):
       self.dom_nodes['anvil-m3-iconbutton-icon'].style.color = theme_color_to_css(self.icon_color) if self.icon_color else None 
 
   def _selected_setter(self, value):
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("selected", value)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("selected", value)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-selected", value)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-selected", value)
     self._apply_styles(value)
 
   def _handle_click(self, event):

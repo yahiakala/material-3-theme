@@ -33,16 +33,16 @@ class IconButton(IconButtonTemplate):
     self.raise_event("click")
 
   def _appearance_setter(self, value):
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-filled", False)
+    self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("outlined", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("filled", False)
-    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("tonal", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-filled", False)
+    self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-tonal", False)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("outlined", False)
     
     if value and value != 'standard':
-      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(value, True)
-      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(value, True)
+      self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(f'anvil-m3-{value}', True)
+      self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle(f'anvil-m3-{value}', True)
 
   #!componentProp(material_3.IconButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!componentProp(material_3.IconButton)!1: {name:"appearance",type:"enum",options:["standard", "filled", "tonal", "outlined"],description:"A predefined style for this component."}  
