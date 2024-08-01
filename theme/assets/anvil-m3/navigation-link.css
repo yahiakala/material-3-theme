@@ -82,6 +82,7 @@
 
 .anvil-m3-navigation-link.anvil-m3-navigation-link-selected [anvil-name=anvil-m3-navigation-link-icon] {
   background-color: var(--anvil-m3-secondary-container);
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 
 }
 
 .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:hover [anvil-name=anvil-m3-navigation-link-icon] {
