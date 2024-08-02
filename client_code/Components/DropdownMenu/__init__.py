@@ -285,10 +285,16 @@ class DropdownMenu(DropdownMenuTemplate):
   def _set_menu_visibility(self, value = None):
     if (value is None):
       value = not self.menu.visible
+    
     self.menu.visible = value
+
     if value:
+      # print('yes')
+      # selection_field_width = get_dom_node(self.selection_field).offsetWidth
+      # self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
+        
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
       if self.selected_value is None:
