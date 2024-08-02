@@ -44,6 +44,6 @@ components: []
 container:
   type: HtmlTemplate
   properties:
-    html: "<a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\" class=\"anvil-m3-link\">\n  <div class=\"anvil-m3-link-icon-container\">    \n    <span anvil-name=\"anvil-m3-link-icon\" class=\"material-symbols-outlined anvil-m3-link-icon\"></span>\n    <span anvil-name=\"anvil-m3-link-text\" class=\"anvil-m3-link-text\"></span>\n  </div>\n</a>"
+    html: "<a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\" class=\"anvil-m3-link\" rel=\"noopener noreferer\">\n  <div class=\"anvil-m3-link-icon-container\">    \n    <span anvil-name=\"anvil-m3-link-icon\" class=\"material-symbols-outlined anvil-m3-link-icon\"></span>\n    <span anvil-name=\"anvil-m3-link-text\" class=\"anvil-m3-link-text\"></span>\n  </div>\n</a>"
   event_bindings: {show: form_show}
 custom_component_container: true
