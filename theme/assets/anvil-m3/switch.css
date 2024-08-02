@@ -61,9 +61,9 @@ element {
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider:before {
-  -webkit-transform: translate(17px);
-  -ms-transform: translate(17px);
-  transform: translate(17px);
+  -webkit-transform: translate(19px);
+  -ms-transform: translate(19px);
+  transform: translate(19px);
   background-color: var(--anvil-m3-selected-thumb-color);
   height: 24px;
   width: 24px;
