@@ -61,11 +61,11 @@ toolbox_sections:
   title: Menus
   items:
   - title: ButtonMenu
-  icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
-  component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
+    icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
   - title: MenuItem
-  icon: {light: 'asset:designer_icons/menu_item.svg', dark: 'asset:designer_icons/menu_item_dark.svg'}
-  component: {type: Material_3_Theme_2_0.Components.MenuItem}
+    icon: {light: 'asset:designer_icons/menu_item.svg', dark: 'asset:designer_icons/menu_item_dark.svg'}
+    component: {type: Material_3_Theme_2_0.Components.MenuItem}
 - packageName: Material_3_Theme_2_0
   title: Form Input
   items:
