@@ -42,7 +42,7 @@ element {
   content: "";
   height: 16px;
   width: 16px;
-  margin-left: 6px;
+  margin-left: 4px;
   background-color: var(--anvil-m3-unselected-thumb-color);
   -webkit-transition: height .15s, width .15s, transform .15s .15s;
   transition: height .15s, width .15s, transform .15s .15s;
