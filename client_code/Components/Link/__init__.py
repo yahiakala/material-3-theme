@@ -83,8 +83,11 @@ class Link(LinkTemplate):
   @url.setter
   def url(self, value):
     self._props['url'] = value
+    self.dom_nodes['anvil-m3-link'].removeAttribute("download")
     if value: 
       if isinstance(value, Media):
+        if value.name:
+          self.dom_nodes['anvil-m3-link'].setAttribute("download", value.name)
         with anvil.media.TempUrl(value) as url:
           self.dom_nodes['anvil-m3-link'].href = url
         # self.dom_nodes['anvil-m3-link'].href = value.get_url()

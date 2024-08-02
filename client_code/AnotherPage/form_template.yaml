@@ -3,6 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: link_3
+    properties: {text: hello}
+    type: Link
+    layout_properties: {}
   - name: link_2
     properties: {text: click me}
     type: Link
