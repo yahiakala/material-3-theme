@@ -30,7 +30,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self.selected_value = None
 
-
     self._has_focus = False
     self._handle_keyboard_events = self._handle_keyboard_events
     self._handle_selection_field_focus = self._handle_selection_field_focus
@@ -438,7 +437,6 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
-
   #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
 
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
