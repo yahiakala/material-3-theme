@@ -33,9 +33,6 @@ toolbox_sections:
   - title: ToggleIconButton
     icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
-  - title: ButtonMenu
-    icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
 - packageName: Material_3_Theme_2_0
   title: Display
   items:
@@ -60,6 +57,15 @@ toolbox_sections:
   - title: NavigationLink
     icon: {light: 'asset:designer_icons/navigation_link.svg', dark: 'asset:designer_icons/navigation_link_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.NavigationLink}
+- packageName: Material_3_Theme_2_0
+  title: Menus
+  items:
+  - title: ButtonMenu
+  icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
+  component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
+  - title: MenuItem
+  icon: {light: 'asset:designer_icons/menu_item.svg', dark: 'asset:designer_icons/menu_item_dark.svg'}
+  component: {type: Material_3_Theme_2_0.Components.MenuItem}
 - packageName: Material_3_Theme_2_0
   title: Form Input
   items:
