@@ -3,6 +3,10 @@ is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
+  - name: link_1
+    properties: {}
+    type: form:Components.Link
+    layout_properties: {}
   - name: toggle_icon_button_1
     properties: {selected: false, icon: stars}
     type: form:Components.ToggleIconButton

@@ -178,7 +178,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.raise_event("change")
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
-  placeholder = property_without_callback("placeholder")
+  def _set_placeholder(self, value):
+    self.selection_field.placeholder = value
+  placeholder = property_with_callback("placeholder", _set_placeholder)
+
+  # placeholder = property_without_callback("placeholder")
   items = property_without_callback("items")
   allow_none = property_without_callback("allow_none")
   bold_items = property_without_callback("bold_items")
