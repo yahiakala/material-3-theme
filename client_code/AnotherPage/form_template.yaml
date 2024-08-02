@@ -7,10 +7,6 @@ components_by_slot:
     properties: {selected: false, icon: stars}
     type: form:Components.ToggleIconButton
     layout_properties: {}
-  - name: switch_1
-    properties: {selected_icon: 10k, unselected_icon: 10k}
-    type: form:Components.Switch
-    layout_properties: {}
   - name: dropdown_menu_1
     properties:
       items: [Patricia, Char, Sarah]
