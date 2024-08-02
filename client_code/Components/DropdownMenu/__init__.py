@@ -10,7 +10,7 @@ from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
 import anvil.designer
-from ..Menu.MenuItem import MenuItem
+from ..MenuItem import MenuItem
 from ...utils import fui, noop
 
 
