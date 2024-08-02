@@ -27,7 +27,7 @@ properties:
 is_package: true
 events:
 - {name: click, default_event: true}
-toolbox_item: {hidden: false}
+toolbox_item: {hidden: true}
 custom_component: true
 components: []
 container:
