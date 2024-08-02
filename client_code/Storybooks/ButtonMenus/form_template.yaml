@@ -56,15 +56,15 @@ components:
             components:
             - name: menu_item_1
               properties: {text: Item 1, leading_icon: visibility, enabled: false, underline: false, italic: false, bold: false}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2
               properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C, enabled: true}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3
               properties: {text: Item 3, leading_icon: edit}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
           - name: button_menu_2
             properties: {text: menu 2, appearance: filled, menu_background: ''}
@@ -72,15 +72,15 @@ components:
             components:
             - name: menu_item_1_copy_1
               properties: {text: Item 1, leading_icon: visibility}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2_copy_1
               properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3_copy_1
               properties: {text: Item 3, leading_icon: edit}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: divider_1
               properties: {}
@@ -88,7 +88,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_4
               properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             layout_properties: {}
           - name: button_menu_2_copy_2
@@ -98,15 +98,15 @@ components:
             components:
             - name: menu_item_1_copy_1_copy_1
               properties: {text: Item 1, leading_icon: visibility}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2_copy_1_copy_1
               properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3_copy_1_copy_1
               properties: {text: Item 3, leading_icon: edit}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: divider_1_copy_1
               properties: {}
@@ -114,7 +114,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_4_copy_1
               properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
           - name: button_menu_2_copy_3
             properties: {text: menu 1, appearance: outlined}
@@ -123,15 +123,15 @@ components:
             components:
             - name: menu_item_1_copy_1_copy_2
               properties: {text: Item 1, leading_icon: visibility}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2_copy_1_copy_2
               properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3_copy_1_copy_2
               properties: {text: Item 3, leading_icon: edit}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: divider_1_copy_2
               properties: {}
@@ -139,7 +139,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_4_copy_2
               properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
-              type: form:Components.Menu.MenuItem
+              type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1_copy_1
     properties: {visible: true}

@@ -24,6 +24,7 @@ class MenuItem(MenuItemTemplate):
   @property
   def leading_icon(self):
     return self._leading_icon
+    
   @leading_icon.setter
   def leading_icon(self, value):
     self._leading_icon = value
@@ -37,13 +38,7 @@ class MenuItem(MenuItemTemplate):
   font_family = font_family_property('anvil-m3-menuItem-labelText', 'font_family')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
-  # @property
-  # def text(self):
-  #   return self._text
-  # @text.setter
-  # def text(self, value):
-  #   self._text = value
-  #   self.dom_nodes["anvil-m3-menuItem-labelText"].innerText = value
+
 
   @property
   def trailing_icon(self):

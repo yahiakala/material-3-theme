@@ -7,6 +7,10 @@ components_by_slot:
     properties: {}
     type: form:Components.ButtonMenu
     layout_properties: {}
+  - name: menu_item_1
+    properties: {}
+    type: form:Components.MenuItem
+    layout_properties: {}
   - name: link_3
     properties: {text: hello}
     type: Link
