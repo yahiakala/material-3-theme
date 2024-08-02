@@ -43,10 +43,10 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: [elevated, filled, tonal, outlined]
-  include_none_option: true
+  options: [text, elevated, filled, tonal, outlined]
   group: Key Properties
   description: A predefined style for this component.
+  default_value: text
 is_package: true
 events:
 - name: change

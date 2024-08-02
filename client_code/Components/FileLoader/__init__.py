@@ -86,7 +86,7 @@ class FileLoader(FileLoaderTemplate):
     file_loader.classList.remove('anvil-m3-filled')
     file_loader.classList.remove('anvil-m3-tonal')
     file_loader.classList.remove('anvil-m3-outlined')
-    if value:
+    if value and value != 'text':
       file_loader.classList.add(f"anvil-m3-{value}")
 
   #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
@@ -112,7 +112,7 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.FileLoader)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
-  #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
+  #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["text", "filled", "elevated", "tonal", "outlined"],description:"A predefined style for this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"show_state",type:"boolean",description:"If True, display a message indicating the number of selected files."}
   #!componentProp(material_3.FileLoader)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.FileLoader)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
