@@ -85,7 +85,9 @@ class Link(LinkTemplate):
     self._props['url'] = value
     if value: 
       if isinstance(value, Media):
-        self.dom_nodes['anvil-m3-link'].href = value.get_url()
+        with anvil.media.TempUrl(value) as url:
+          self.dom_nodes['anvil-m3-link'].href = url
+        # self.dom_nodes['anvil-m3-link'].href = value.get_url()
       else:
         self.dom_nodes['anvil-m3-link'].href = value
     else:

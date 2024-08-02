@@ -12,6 +12,10 @@ class AnotherPage(AnotherPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.m3_slider = Slider()
+    file_contents = "Hello, world".encode()
+    my_media = anvil.BlobMedia(content_type="text/plain", content=file_contents, name="hello.txt")
+    self.link_1.url = my_media
+    self.link_2.url = my_media
 
   def slider_1_change(self, **event_args):
     """This method is called when the value of the component is changed"""
