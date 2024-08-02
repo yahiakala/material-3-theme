@@ -291,6 +291,6 @@ class ButtonMenu(ButtonMenuTemplate):
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon_position",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"menu_items",type:"object",description:"A list of components to be added to the menu."}
 
-  #!componentEvent(material_3.ButtonMenu)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
+  #!componentEvent(material_3.ButtonMenu)!1: {name: "click", description: "When the Button is clicked.", parameters:[]}
 
 #!defClass(material_3, ButtonMenu, anvil.Component)!:
