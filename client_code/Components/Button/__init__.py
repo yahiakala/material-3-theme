@@ -107,6 +107,27 @@ class Button(ButtonTemplate):
     self._update_button_look()
 
   
+  align = property_with_callback('align', _set_align)
+  role = role_property('anvil-m3-button')
+  appearance = property_with_callback("appearance", _set_appearance)
+  enabled = property_with_callback("enabled", _set_enabled)
+  text = property_with_callback("text", _update_button_look)
+  icon = property_with_callback("icon", _update_button_look)
+  text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
+  font_family = font_family_property('anvil-m3-button-text')
+  font_size = font_size_property('anvil-m3-button-text')
+  underline = underline_property('anvil-m3-button-text')
+  italic = italic_property('anvil-m3-button-text')
+  bold = custom_bold_property('anvil-m3-button-text')
+  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
+  icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
+  background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
+  margin = margin_property('anvil-m3-button-component')
+  border = style_property('anvil-m3-button', 'border', 'border')
+  tooltip = tooltip_property('anvil-m3-button')
+  icon_align = property_with_callback('icon_align', _set_icon_align)
+  visible = HtmlTemplate.visible
+
   #!componentProp(material_3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(material_3.Button)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}  
   #!componentProp(material_3.Button)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
@@ -129,26 +150,5 @@ class Button(ButtonTemplate):
   #!componentProp(material_3.Button)!1: {name:"icon_align",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
 
   #!componentEvent(material_3.Button)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
-  
-  align = property_with_callback('align', _set_align)
-  role = role_property('anvil-m3-button')
-  appearance = property_with_callback("appearance", _set_appearance)
-  enabled = property_with_callback("enabled", _set_enabled)
-  text = property_with_callback("text", _update_button_look)
-  icon = property_with_callback("icon", _update_button_look)
-  text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
-  font_family = font_family_property('anvil-m3-button-text')
-  font_size = font_size_property('anvil-m3-button-text')
-  underline = underline_property('anvil-m3-button-text')
-  italic = italic_property('anvil-m3-button-text')
-  bold = custom_bold_property('anvil-m3-button-text')
-  icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
-  icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
-  background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
-  margin = margin_property('anvil-m3-button-component')
-  border = style_property('anvil-m3-button', 'border', 'border')
-  tooltip = tooltip_property('anvil-m3-button')
-  icon_align = property_with_callback('icon_align', _set_icon_align)
-  visible = HtmlTemplate.visible
 
 #!defClass(material_3, Button, anvil.Component)!:

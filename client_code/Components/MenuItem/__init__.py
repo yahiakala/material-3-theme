@@ -55,7 +55,8 @@ class MenuItem(MenuItemTemplate):
   def trailing_text(self, value):
     self._trailing_text = value
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
-  
+
+  #TODO: rename this
   @property 
   def hide_leading_icon(self):
     return self._hide_leading_icon

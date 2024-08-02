@@ -9,7 +9,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: menu_item_2
-      properties: {leading_icon: undo, text: Undo}
+      properties: {leading_icon: undo, text: Undo, hide_leading_icon: false}
       type: form:Components.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_1
