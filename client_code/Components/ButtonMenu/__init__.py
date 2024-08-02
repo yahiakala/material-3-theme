@@ -55,7 +55,7 @@ class ButtonMenu(ButtonMenuTemplate):
     if self.enabled:
       self.raise_event('click')
     
-  menu_background = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background')
+  menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
   menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
   visible = HtmlTemplate.visible
   
@@ -97,9 +97,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.border = value
   button_border = property_with_callback("button_border", _set_button_border)
 
-  def _set_button_background(self, value):
-    self.menu_button.background = value
-  button_background = property_with_callback("button_background", _set_button_background)
+  def _set_button_background_color(self, value):
+    self.menu_button.background_color = value
+  button_background_color = property_with_callback("button_background_color", _set_button_background_color)
 
   def _set_button_text_color(self, value):
     self.menu_button.text_color = value
@@ -121,9 +121,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.icon_size = value
   icon_size = property_with_callback("icon_size", _set_icon_size)
 
-  def _set_icon_align(self, value):
-    self.menu_button.icon_align = value
-  icon_align = property_with_callback("icon_align", _set_icon_align)
+  def _set_icon_position(self, value):
+    self.menu_button.icon_position = value
+  icon_position = property_with_callback("icon_position", _set_icon_position)
 
   def _set_margin(self, value):
     self.menu_button.margin = value
@@ -191,7 +191,7 @@ class ButtonMenu(ButtonMenuTemplate):
       return
     
     if event.key in ["ArrowUp", "ArrowDown"]:
-      self._iterate_hover(event.key is "ArrowDown")
+      self._iterate_hover(event.key == "ArrowDown")
       return
       
     # if event.key is "Tab":
@@ -201,12 +201,12 @@ class ButtonMenu(ButtonMenuTemplate):
     
     def attemptSelect():
       event.preventDefault();
-      if not hover is None:
+      if hover is not None:
         self._children[hover].raise_event("click")
     
-    if (event.key is " "): #space key as " " is stupid
+    if event.key == " ": #space key as " " is stupid
       attemptSelect()
-    if (event.key is "Enter"):
+    if event.key == "Enter":
       attemptSelect()
       
   def _iterate_hover(self, inc = True):
@@ -218,7 +218,7 @@ class ButtonMenu(ButtonMenuTemplate):
         if self._hoverIndex in self._itemIndices:
           break;
     else:
-      if self._hoverIndex is None or self._hoverIndex is 0:
+      if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       while True:
         self._hoverIndex -= 1
@@ -272,21 +272,23 @@ class ButtonMenu(ButtonMenuTemplate):
   #!componentProp(material_3.ButtonMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.ButtonMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.ButtonMenu)!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
-  #!componentProp(material_3.ButtonMenu)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"button_text_color",type:"color",description:"The colour of the text on the Button."} 
+  #!componentProp(material_3.ButtonMenu)!1: {name:"button_font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.ButtonMenu)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.ButtonMenu)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"button_font_size",type:"number",description:"The font size of the text displayed on the Button."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"menu_background_color",type:"color",description:"The colour of the menu."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"menu_border",type:"color",description:"The colour of the menu."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.ButtonMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.ButtonMenu)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"button_border",type:"string",description:"The border of the Button. Can take any valid CSS border value."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.ButtonMenu)!1: {name:"icon_align",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"icon_position",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
 
   #!componentEvent(material_3.ButtonMenu)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 

@@ -14,7 +14,7 @@ properties:
 - {name: bold, type: boolean, default_value: true, important: true, description: 'If True, this component’s text will be bold.', designer_hint: font-bold, group: Text}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic, group: Text, description: 'If True, this component’s text will be italic.'}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline, group: Text, description: 'If True, this component’s text will be underlined.'}
-- {name: button_background, type: color, default_value: '', important: false, group: Look and Feel, description: Color of the background of the Button.}
+- {name: button_background_color, type: color, default_value: '', important: false, group: Look and Feel, description: Color of the background of the Button.}
 - {name: button_text_color, type: color, default_value: '', group: Text, description: Color of the text on the Button.}
 - {name: button_border, type: string, default_value: '', important: false, description: The border of the Button. Can take any valid CSS border value., group: Look and Feel}
 - {name: button_font_size, type: number, group: Text, description: Font size of text displayed on the Button.}
@@ -43,7 +43,7 @@ properties:
   default_value: ['8', '8', '8', '8']
   group: Layout
 - {name: button_font_family, type: string, default_value: '', important: false, group: Text}
-- {name: menu_background, type: color, default_value: '', important: false, group: Look and Feel, description: The color of the background of the Menu}
+- {name: menu_background_color, type: color, default_value: '', important: false, group: Look and Feel, description: The color of the background of the Menu}
 - {name: menu_border, type: string, default_value: '', important: false, description: The border of the Menu. Can take any valid CSS border value., group: Look and Feel}
 - name: align
   type: enum
