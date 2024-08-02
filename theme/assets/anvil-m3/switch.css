@@ -78,7 +78,7 @@ element {
 }
 
 .anvil-m3-switch-slider .anvil-m3-disabled-switch-icon {
-  margin-left: -16px;
+  margin-left: -18px;
 }
 
 .anvil-m3-switch-slider.anvil-m3-has-disabled-icon:not(.anvil-m3-has-enabled-icon) .anvil-m3-disabled-switch-icon {
