@@ -7,18 +7,18 @@ components_by_slot:
     properties: {}
     type: form:Components.ButtonMenu
     layout_properties: {}
-    components: []
+    components:
+    - name: menu_item_2
+      properties: {leading_icon: undo, text: Undo}
+      type: form:Components.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_1
+      properties: {text: Redo, leading_icon: redo}
+      type: form:Components.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: link_3
     properties: {text: hello}
     type: Link
-    layout_properties: {}
-  - name: text_1
-    properties: {scale: small, style: label, text: Text}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: menu_item_1
-    properties: {}
-    type: form:Components.MenuItem
     layout_properties: {}
   - name: link_2
     properties: {text: click me}

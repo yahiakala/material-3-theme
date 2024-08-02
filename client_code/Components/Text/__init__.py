@@ -19,6 +19,7 @@ class Text(TextTemplate):
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
+   
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
@@ -117,6 +118,7 @@ class Text(TextTemplate):
 
   @style.setter
   def style(self, value):
+    print(value)
     self._style = value
     self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-label', 'anvil-m3-text-body')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
@@ -125,11 +127,11 @@ class Text(TextTemplate):
 
   @property
   def scale(self):
-    return self._style
+    return self._scale
 
   @scale.setter
   def scale(self, value):
-    self._style = value
+    self._scale = value
     self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
