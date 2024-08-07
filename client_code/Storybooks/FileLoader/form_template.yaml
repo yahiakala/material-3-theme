@@ -35,4 +35,8 @@ components:
       properties: {enabled: false, text: Disabled}
       type: form:Components.FileLoader
       layout_properties: {grid_position: 'BBBOHG,TIQYQS BFFTHW,SMJYMD'}
+    - name: file_loader_5
+      properties: {}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'TQQNVV,GOMIYU'}
 is_package: true
