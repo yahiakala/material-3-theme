@@ -36,7 +36,35 @@ components:
       type: form:Components.FileLoader
       layout_properties: {grid_position: 'BBBOHG,TIQYQS BFFTHW,SMJYMD'}
     - name: file_loader_5
-      properties: {}
+      properties: {appearance: elevated}
       type: form:Components.FileLoader
       layout_properties: {grid_position: 'TQQNVV,GOMIYU'}
+    - name: file_loader_5_copy
+      properties: {appearance: elevated, enabled: false}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'TQQNVV,DIEJAJ'}
+    - name: file_loader_5_copy_2
+      properties: {appearance: filled}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'JGVIIR,RRZUGV'}
+    - name: file_loader_5_copy_2_copy
+      properties: {appearance: filled, enabled: false}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'JGVIIR,VFCICM'}
+    - name: file_loader_5_copy_2_copy_2
+      properties: {appearance: tonal}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'MJLPUR,TTXJWF'}
+    - name: file_loader_5_copy_2_copy_2_copy
+      properties: {appearance: tonal, enabled: false}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'MJLPUR,MMJMIW'}
+    - name: file_loader_5_copy_2_copy_2_copy_2
+      properties: {appearance: outlined}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'GMODHC,SZVLTI JGIIIE,SBFZSH'}
+    - name: file_loader_5_copy_2_copy_2_copy_2_copy
+      properties: {appearance: outlined, enabled: false}
+      type: form:Components.FileLoader
+      layout_properties: {grid_position: 'GMODHC,LRPQHC'}
 is_package: true
