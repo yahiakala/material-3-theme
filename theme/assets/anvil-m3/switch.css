@@ -116,6 +116,7 @@ element {
 
 .anvil-m3-switch-input:disabled + .anvil-m3-switch-slider {
   border-color: var(--anvil-m3-dark-overlay-2);
+  cursor: not-allowed
 }
 
 .anvil-m3-switch-input:disabled + .anvil-m3-switch-slider:before {

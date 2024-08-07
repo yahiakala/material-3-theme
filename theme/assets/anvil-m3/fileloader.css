@@ -20,11 +20,11 @@
   color: var(--anvil-m3-primary);
   cursor: pointer
 }
-/* 
+
 .anvil-m3-fileloader-container .anvil-m3-fileloader-label {
   cursor: pointer
 }
- */
+
 .anvil-m3-fileloader-container:hover {
   color: var(--anvil-m3-on-primary-container);
   text-decoration: none;
