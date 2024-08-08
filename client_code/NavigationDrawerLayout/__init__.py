@@ -75,6 +75,10 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
     window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
 
+  #!componentEvent(material_3.NavigationDrawerLayout)!1: {name: "show", description: "When the Form is shown on the screen."}
+  #!componentEvent(material_3.NavigationDrawerLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
+  #!componentEvent(material_3.NavigationDrawerLayout)!1: {name: "refreshing_data_bindings", description: "When refresh_data_bindings is called."}
+
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"navigation_drawer_color",type:"color",description:"The color of the navigation drawer on Forms using this Layout."} 
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 

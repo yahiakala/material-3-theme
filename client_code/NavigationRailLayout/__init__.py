@@ -78,6 +78,10 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   def _icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
 
+  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "show", description: "When the Form is shown on the screen."}
+  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
+  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "refreshing_data_bindings", description: "When refresh_data_bindings is called."}
+
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
