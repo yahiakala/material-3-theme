@@ -30,7 +30,7 @@ class Switch(SwitchTemplate):
     return [
       {
         "type": "region",
-        "bounds": self.dom_nodes['anvil-m3-switch-input'],
+        "bounds": self.dom_nodes['anvil-m3-switch-container'],
         "sensitivity": 0,
         "callbacks": {
           "execute": self._toggle_selected
@@ -104,9 +104,9 @@ class Switch(SwitchTemplate):
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
     self._selected_icon = value
     link_icon.classList.remove("material-symbols-outlined")
+    link_icon.innerText = value
     if value:
       link_icon.classList.add("material-symbols-outlined")
-      link_icon.innerText = value
       switch_slider.classList.add('anvil-m3-has-enabled-icon')
   
   @property
@@ -118,11 +118,10 @@ class Switch(SwitchTemplate):
     link_icon = self.dom_nodes['anvil-m3-disabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
     self._unselected_icon = value
-    
+    link_icon.innerText = value
     link_icon.classList.remove("material-symbols-outlined")
     if value:
       link_icon.classList.add("material-symbols-outlined")
-      link_icon.innerText = value
       switch_slider.classList.add('anvil-m3-has-disabled-icon')
 
   @property
