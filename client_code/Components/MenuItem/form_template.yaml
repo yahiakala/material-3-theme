@@ -28,7 +28,7 @@ properties:
 - {name: background_color, type: color, default_value: '', important: true, group: Look and Feel, description: The colour of the background of this component.}
 is_package: true
 events:
-- {name: click, default_event: true}
+- {name: click, default_event: true, description: When the component is clicked}
 toolbox_item: {hidden: true}
 custom_component: true
 components: []

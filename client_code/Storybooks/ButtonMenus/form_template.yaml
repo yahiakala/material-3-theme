@@ -59,9 +59,10 @@ components:
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2
-              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C, enabled: true}
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C, enabled: true, trailing_icon: null}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
+              event_bindings: {}
             - name: menu_item_3
               properties: {text: Item 3, leading_icon: edit}
               type: form:Components.MenuItem

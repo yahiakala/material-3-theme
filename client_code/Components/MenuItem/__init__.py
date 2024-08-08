@@ -16,11 +16,7 @@ class MenuItem(MenuItemTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
 
-  """ Properties """
-  """
-  
-  text = innerText_property('anvil-m3-menuItem-labelText')
-  """
+
   @property
   def leading_icon(self):
     return self._leading_icon
