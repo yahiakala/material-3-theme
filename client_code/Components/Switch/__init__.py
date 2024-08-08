@@ -26,6 +26,22 @@ class Switch(SwitchTemplate):
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self._handle_change)
 
+  def _anvil_get_interactions_(self):
+    return [
+      {
+        "type": "region",
+        "bounds": self.dom_nodes['anvil-m3-switch-input'],
+        "sensitivity": 0,
+        "callbacks": {
+          "execute": self._toggle_selected
+        }
+      }
+    ]
+
+  def _toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {'selected': self.selected})
+
   def _handle_change(self, event):
     if self.enabled:
       #self.dom_nodes['anvil-m3-switch-input'].focus()
