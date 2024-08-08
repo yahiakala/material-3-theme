@@ -29,25 +29,43 @@ class RadioButton(RadioButtonTemplate):
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
-    
+
+  #!componentProp(material_3.RadioButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.RadioButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.RadioButton)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(material_3.RadioButton)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(material_3.RadioButton)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(material_3.RadioButton)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(material_3.RadioButton)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(material_3.RadioButton)!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(material_3.RadioButton)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.RadioButton)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(material_3.RadioButton)!1: {name:"radio_color",type:"color",description:"The color of the radio button."}
+  #!componentProp(material_3.RadioButton)!1: {name:"selected",type:"boolean",description:"If True, the radio button is selected."}
+  
   # Properties 
+  enabled = enabled_property('anvil-m3-radiobutton-input')
   visible = HtmlTemplate.visible
   group_name = name_property('anvil-m3-radiobutton-input', "group_name")
   value = value_property('anvil-m3-radiobutton-input')
-  enabled = enabled_property('anvil-m3-radiobutton-input')
+  underline = underline_property('anvil-m3-radiobutton-label')
   italic = italic_property('anvil-m3-radiobutton-label')
   bold = bold_property('anvil-m3-radiobutton-label')
-  underline = underline_property('anvil-m3-radiobutton-label')
   font_size = font_size_property('anvil-m3-radiobutton-label')
   border = border_property('anvil-m3-radiobutton-container')
   font_family = font_family_property('anvil-m3-radiobutton-label', 'font_family')
   text_color = color_property('anvil-m3-radiobutton-label', 'color', 'text_color')
   background = color_property('anvil-m3-radiobutton-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
-  # selected = checked_property('anvil-m3-radiobutton-input')
   margin = margin_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
   role = role_property('anvil-m3-radiobutton-container')
+  # selected = checked_property('anvil-m3-radiobutton-input')
   
   @property
   def radio_color(self):
@@ -116,6 +134,9 @@ class RadioButton(RadioButtonTemplate):
       if not self.text:
         self.dom_nodes['anvil-m3-radiobutton-label'].innerText = self._design_name
 
+  #!defMethod(str)!2: "Returns the value of the button in the group which is pressed." ["get_group_value"]
   def get_group_value(self):
     selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
     return selected_item.value
+
+#!defClass(material_3, RadioButton, anvil.Component)!:
