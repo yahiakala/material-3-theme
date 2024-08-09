@@ -85,3 +85,28 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
+
+  #!componentProp(material_3.MenuItem)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.MenuItem)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(material_3.MenuItem)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.MenuItem)!1: {name:"text_color",type:"color",description:"The colour of the text on the Button."} 
+  #!componentProp(material_3.MenuItem)!1: {name:"font_family",type:"string",description:"The font family to use for the Button"}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon",type:"enum",description:"The icon to display on the Button."} 
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on the Button."} 
+  #!componentProp(material_3.MenuItem)!1: {name:"text",type:"string",description:"The text displayed on the Button"}
+  #!componentProp(material_3.MenuItem)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on the Button."}
+  #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the Button’s text will be underlined."}
+  #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the Button’s text will be italic."}
+  #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the Button’s text will be bold."}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
+  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The colour of the menu."}
+  #!componentProp(material_3.MenuItem)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
+  #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"button_border",type:"string",description:"The border of the Button. Can take any valid CSS border value."}
+  #!componentProp(material_3.MenuItem)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+
+  #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
+
+#!defClass(material_3, MenuItem, anvil.Component)!:
