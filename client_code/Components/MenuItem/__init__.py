@@ -1,5 +1,6 @@
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
+from anvil import HtmlTemplate
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -34,7 +35,7 @@ class MenuItem(MenuItemTemplate):
   font_family = font_family_property('anvil-m3-menuItem-labelText', 'font_family')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
-
+  visible = HtmlTemplate.visible
 
   @property
   def trailing_icon(self):
@@ -85,6 +86,8 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
+#TODO: props to add: visible, margin, leading_icon_color, trailing_icon_color, role
+
 
   #!componentProp(material_3.MenuItem)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.MenuItem)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
@@ -104,8 +107,6 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"button_border",type:"string",description:"The border of the Button. Can take any valid CSS border value."}
-  #!componentProp(material_3.MenuItem)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 

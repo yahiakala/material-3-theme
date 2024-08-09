@@ -26,6 +26,7 @@ properties:
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic, group: Text Style, description: 'If True, the main text will be italic.'}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline, group: Text Style, description: 'If True, the main text will be underlined.'}
 - {name: background_color, type: color, default_value: '', important: true, group: Look and Feel, description: The colour of the background of this component.}
+- {name: visible, type: boolean, default_value: true, important: true, group: Look and Feel, designer_hint: visible, description: 'If True, this component will be displayed'}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}

@@ -16,6 +16,10 @@ components_by_slot:
       properties: {text: Redo, leading_icon: redo}
       type: form:Components.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+  - name: menu_item_3
+    properties: {}
+    type: form:Components.MenuItem
+    layout_properties: {}
   - name: link_3
     properties: {text: hello}
     type: Link
