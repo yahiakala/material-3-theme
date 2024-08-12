@@ -115,7 +115,8 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the tailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of the menu."}
-  #!componentProp(material_3.MenuItem)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_size",type:"number",description:"The size (pixels) of the leading icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
 
