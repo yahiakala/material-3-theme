@@ -77,7 +77,6 @@ class MenuItem(MenuItemTemplate):
       print(self.text, 'hello again')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
       
-  # anvil-m3-menuItem-hideLeadingIcon
 
   @property
   def enabled(self):
@@ -103,8 +102,6 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
-
-
 
   #!componentProp(material_3.MenuItem)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.MenuItem)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
