@@ -27,7 +27,7 @@ properties:
   important: true
   options: [top, left, right, bottom, full]
   default_value: null
-- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style, description: 'For top/bottom/left/right image_positions, if the image will have a rounded edge.'}
+- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style, description: 'If True, the image will have a rounded edge'}
 - {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height., group: Image Style}
 - {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width., group: Image Style}
 - name: margin

@@ -120,7 +120,8 @@ class Card(CardTemplate):
   #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", outlined"],description:"A predefined style for this component."}  
   #!componentProp(material_3.Card)!1: {name:"image",type:"uri",description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
   #!componentProp(material_3.Card)!1: {name:"image_position",type:"enum",options:["top","left","right","bottom","full"],description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
-  #!componentProp(material_3.Card)!1: {name:"rounded_image",type:"boolean",description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
+  #!componentProp(material_3.Card)!1: {name:"rounded_image",type:"boolean",description:"If True, the image will have a rounded edge"}  
+
 
   
 #!defClass(material_3,Card, anvil.Component)!:
