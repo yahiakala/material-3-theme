@@ -438,6 +438,8 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
 
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 

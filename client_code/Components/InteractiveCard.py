@@ -6,9 +6,10 @@ from ..Functions import property_with_callback
 #todo figure out how to get default value to work
 enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction"}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
+tag_property = {"name": "tag", "type": "object", "important": False, "group": "Other", "description": "Use this property to store any extra data for the component."}
 
 class InteractiveCard(Card):
-  _anvil_properties_ = [enabled_property, *Card._anvil_properties_]
+  _anvil_properties_ = [tag_property, enabled_property, *Card._anvil_properties_]
   _anvil_events_ = [click_event, *Card._anvil_events_]
   def __init__(self, **properties):
     super().__init__(**properties)

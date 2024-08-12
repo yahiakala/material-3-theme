@@ -121,6 +121,7 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
+  #!componentProp(material_3.MenuItem)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 

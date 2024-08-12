@@ -164,6 +164,7 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"spacing",type:"spacing",description:"The margin and padding of this component. Default value is in pixels."}
   #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.TextArea)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(material_3.TextArea)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
   #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}

@@ -92,7 +92,9 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"checked",type:"boolean",description:"If True, the checkbox is checked."}
   #!componentProp(material_3.Checkbox)!1: {name:"allow_indeterminate",type:"boolean",description:"If True, supports an indeterminate state. The indeterminate state can only be set in code by setting checked=None."}
   #!componentProp(material_3.Checkbox)!1: {name:"error",type:"boolean",description:"If True, the checkbox is in an error state."}
-  
+  #!componentProp(material_3.Checkbox)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
+
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-checkbox-label')

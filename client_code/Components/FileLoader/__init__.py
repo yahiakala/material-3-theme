@@ -118,7 +118,9 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
   #!componentProp(material_3.FileLoader)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
   #!componentProp(material_3.FileLoader)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
-  
+  #!componentProp(material_3.FileLoader)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
+
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
   enabled = enabled_property('anvil-m3-fileloader-input')

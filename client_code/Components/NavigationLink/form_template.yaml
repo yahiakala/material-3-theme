@@ -1,5 +1,6 @@
 properties:
 - {name: url, type: string, default_value: '', group: Other, important: false, description: The target URL of the link}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: text, type: string, default_value: Label, description: The text displayed on this component., group: Key Properties, important: true}
 - {name: selected, type: boolean, default_value: false, description: 'If True, the component is in the selected state.', important: true, group: Interaction, designer_hint: toggle}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}

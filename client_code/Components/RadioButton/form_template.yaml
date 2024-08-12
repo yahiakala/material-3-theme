@@ -5,6 +5,7 @@ properties:
 - {name: enabled, type: boolean, default_value: true, description: 'If True, this component allows user interaction.', group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component.}
 - {name: value, type: string, default_value: '', group: Key Properties, description: The value of the group when this radio button is selected}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - description: The position of this component in the available space.
   group: Look and Feel
   name: align

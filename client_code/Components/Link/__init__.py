@@ -60,7 +60,8 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
   #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  
+  #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
   text = innerText_property('anvil-m3-link-text')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')

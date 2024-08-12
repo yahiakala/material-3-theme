@@ -1,6 +1,7 @@
 properties:
 - {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'If True, the component will be displayed.'}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - name: align
   type: enum
   important: true

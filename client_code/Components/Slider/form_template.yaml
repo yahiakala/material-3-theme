@@ -6,6 +6,7 @@ properties:
 - {name: track_color, type: color, default_value: '', important: false, description: The colour of the track., group: Look and feel}
 - {name: thumb_color, type: color, default_value: '', important: false, description: The colour of the Slider thumb., group: Look and feel}
 - {name: label_color, type: color, default_value: '', important: false, description: The colour of the background of the label., group: Label}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: label_text_color, type: color, default_value: '', important: false, description: The colour of the text of the label., group: Label}
 - name: value
   type: number
