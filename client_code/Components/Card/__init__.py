@@ -108,3 +108,4 @@ class Card(CardTemplate):
   border = style_property('anvil-m3-card', 'border', 'border')
   role = role_property('anvil-m3-card')
       
+#!defClass(material_3,Card, anvil.Component)!:
