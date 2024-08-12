@@ -19,15 +19,17 @@ class MenuItem(MenuItemTemplate):
 
   @property
   def leading_icon(self):
-    return self._leading_icon
+    return self._props.get('leading_icon')
     
   @leading_icon.setter
   def leading_icon(self, value):
-    self._leading_icon = value
+    self._props['leading_icon'] = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
     if value:
       print(self.text, 'hello')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
+    elif not value and not self.add_icon_space:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
     
   text = innerText_property('anvil-m3-menuItem-labelText')
   italic = italic_property('anvil-m3-menuItem-labelText')
@@ -66,7 +68,7 @@ class MenuItem(MenuItemTemplate):
     self._props['add_icon_space'] = value
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
-    else:
+    elif not self.leading_icon and not value:
       print(self.text, 'hello again')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
       
@@ -110,12 +112,13 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the Button’s text will be underlined."}
   #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the Button’s text will be italic."}
   #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the Button’s text will be bold."}
-  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
-  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
-  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The colour of the menu."}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the tailing icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of the menu."}
   #!componentProp(material_3.MenuItem)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
+
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 
