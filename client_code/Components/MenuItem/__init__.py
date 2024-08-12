@@ -26,7 +26,6 @@ class MenuItem(MenuItemTemplate):
     self._props['leading_icon'] = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
     if value:
-      print(self.text, 'hello')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     elif not value and not self.add_icon_space:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
@@ -74,7 +73,6 @@ class MenuItem(MenuItemTemplate):
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     elif not self.leading_icon and not value:
-      print(self.text, 'hello again')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
       
 
