@@ -40,6 +40,7 @@ class MenuItem(MenuItemTemplate):
   @property
   def trailing_icon(self):
     return self._trailing_icon
+    
   @trailing_icon.setter
   def trailing_icon(self, value):
     self._trailing_icon = value
@@ -48,6 +49,7 @@ class MenuItem(MenuItemTemplate):
   @property
   def trailing_text(self):
     return self._trailing_text
+    
   @trailing_text.setter
   def trailing_text(self, value):
     self._trailing_text = value
@@ -55,11 +57,12 @@ class MenuItem(MenuItemTemplate):
 
   #TODO: rename this
   @property 
-  def hide_leading_icon(self):
-    return self._hide_leading_icon
-  @hide_leading_icon.setter
-  def hide_leading_icon(self, value):
-    self._hide_leading_icon = value
+  def add_icon_space(self):
+    return self._props.get('add_icon_space')
+    
+  @add_icon_space.setter
+  def add_icon_space(self, value):
+    self._props['add_icon_space'] = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.toggle("anvil-m3-menuItem-hideLeadingIcon", value)
   # anvil-m3-menuItem-hideLeadingIcon
 

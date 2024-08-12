@@ -38,7 +38,7 @@ container:
   properties:
     html: |-
       <div anvil-name="anvil-m3-menuItem-container" class="anvil-m3-menuItem-container">
-        <div anvil-name="anvil-m3-menuItem-leadingIcon" class="anvil-m3-menuItem-aux anvil-m3-menuItem-leadingIcon material-symbols-outlined"></div>
+        <div anvil-name="anvil-m3-menuItem-leadingIcon" class="anvil-m3-menuItem-aux anvil-m3-menuItem-leadingIcon anvil-m3-menuItem-hideLeadingIcon material-symbols-outlined"></div>
         <div anvil-name="anvil-m3-menuItem-content" class="anvil-m3-menuItem-content">
           <div anvil-name="anvil-m3-menuItem-labelText" class="anvil-m3-menuItem-labelText anvil-m3-menuItem-core"></div>
           <div anvil-name="anvil-m3-menuItem-trailingText" class="anvil-m3-menuItem-trailingText anvil-m3-menuItem-aux"></div>
