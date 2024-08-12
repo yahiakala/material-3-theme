@@ -82,7 +82,7 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.Checkbox)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.Checkbox)!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!componentProp(material_3.Checkbox)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Checkbox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
