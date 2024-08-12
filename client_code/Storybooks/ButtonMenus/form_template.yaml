@@ -75,6 +75,7 @@ components:
               properties: {text: Item 1, leading_icon: null, add_icon_space: false, leading_icon_size: null}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
+              event_bindings: {click: menu_item_5_click}
             - name: menu_item_2_copy_1
               properties:
                 text: Item 2
