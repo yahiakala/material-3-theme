@@ -148,6 +148,7 @@ class Button(ButtonTemplate):
   #!componentProp(material_3.Button)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.Button)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Button)!1: {name:"icon_position",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
+  #!componentProp(material_3.Button)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.Button)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 
