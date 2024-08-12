@@ -35,11 +35,11 @@
   min-width: 24px;
   font-size: 24px !important;
   margin-right: 12px;
-  display: none;
+  display: none !important;
 }
 
-.anvil-m3-menuItem-leadingIcon.anvil-m3-menuItem-showleadingIcon {
-  display: block;
+.anvil-m3-menuItem-leadingIcon.anvil-m3-menuItem-showLeadingIcon {
+  display: block !important;
 }
 
 .anvil-m3-menuItem-content {
