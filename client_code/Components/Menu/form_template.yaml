@@ -1,5 +1,5 @@
 properties:
-- {name: visible, type: boolean, default_value: true, default_binding_prop: true}
+- {name: visible, type: boolean, default_value: true, default_binding_prop: true, designer_hint: visible}
 - {name: background_color, type: color, default_value: '', important: true}
 is_package: true
 events: []
