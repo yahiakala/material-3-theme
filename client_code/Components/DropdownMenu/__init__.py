@@ -34,6 +34,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._handle_keyboard_events = self._handle_keyboard_events
     self._handle_selection_field_focus = self._handle_selection_field_focus
     self._child_clicked = self._child_clicked
+    self._body_click = self._body_click
     self._handle_component_click = self._handle_component_click
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
@@ -208,6 +209,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self._handle_keyboard_events)
+    document.removeEventListener('click', self._body_click)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self._handle_selection_field_blur)
@@ -305,7 +307,9 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = None
 
   def _body_click(self, event):
-    if self._field.contains(event.target) or self._menuNode.contains(event.target):
+    icon = self.selection_field.dom_nodes['anvil-m3-icon-container']
+    if self._field.contains(event.target) or self._menuNode.contains(event.target) or icon.contains(event.target):
+      self._has_focus = True
       return
     self._set_menu_visibility(False)
 
