@@ -17,7 +17,7 @@ properties:
   default_value: elevated
   group: Key Properties
   description: A predefined style for this component.
-- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style}
+- {name: image, type: uri, important: true, accept: image/*, description: The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style}
 - include_none_option: true
   description: How the image in positioned/displayed on the card.
   group: Image Style

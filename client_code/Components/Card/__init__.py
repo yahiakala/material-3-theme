@@ -68,22 +68,22 @@ class Card(CardTemplate):
   background = color_property('anvil-m3-card', 'backgroundColor', 'background')
 
   def _set_card_img(self, *_args):
-    if self.card_image:
+    if self.image:
       #set a card position so the image appears
       if not self.image_position:
         self.image_position = 'top'
-      if isinstance(self.card_image, str):
-        self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image}')"
-      elif type(self.card_image) is anvil.LazyMedia:
-        self.dom_nodes['image'].style.backgroundImage = f"url('{self.card_image.get_url()}')"
+      if isinstance(self.image, str):
+        self.dom_nodes['image'].style.backgroundImage = f"url('{self.image}')"
+      elif type(self.image) is anvil.LazyMedia:
+        self.dom_nodes['image'].style.backgroundImage = f"url('{self.image.get_url()}')"
       else:
         if self._on_page:
-          self._card_image_temp_url = anvil.media.TempUrl(self.card_image)
+          self._card_image_temp_url = anvil.media.TempUrl(self.image)
           self.dom_nodes['image'].style.backgroundImage = f"url('{self._card_image_temp_url.url}')"
     else:
       self.dom_nodes['image'].style.removeProperty = "background-image"
 
-  card_image = property_with_callback("card_image", _set_card_img)
+  image = property_with_callback("image", _set_card_img)
 
   def _set_rounded_img(self, value):
      self.dom_nodes['image'].classList.toggle('anvil-m3-card-rounded', value)
@@ -110,19 +110,17 @@ class Card(CardTemplate):
 
 
   #!componentProp(material_3.Card)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.Card)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.Card)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.Card)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.Card)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.Card)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.Card)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.Card)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.Card)!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.Card)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Card)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!componentProp(material_3.Card)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Card)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Card)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.Card)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.Card)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.Card)!1: {name:"image",type:"uri",description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
+  #!componentProp(material_3.Card)!1: {name:"image_position",type:"enum",options:["top","left","right","bottom","full"],description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
+  #!componentProp(material_3.Card)!1: {name:"rounded_image",type:"boolean",description:"The image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)."}  
+
   
 #!defClass(material_3,Card, anvil.Component)!:
