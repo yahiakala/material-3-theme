@@ -32,6 +32,7 @@ properties:
 - {name: leading_icon_color, type: color, default_value: '', important: false, group: Look and Feel, description: The colour of the leading icon displayed on this component}
 - {name: trailing_icon_color, type: color, default_value: '', important: false, group: Look and Feel, description: The colour of the trailing icon displayed on this component}
 - {name: role, type: string, default_value: '', important: false, description: A style for this component defined in CSS and added to Roles., group: Look and Feel}
+- {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}

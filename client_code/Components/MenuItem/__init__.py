@@ -5,7 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import innerText_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
+from ...Functions import innerText_property, margin_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
 
 import anvil.designer
 
@@ -40,8 +40,11 @@ class MenuItem(MenuItemTemplate):
   trailing_icon_size = font_size_property('anvil-m3-menuItem-trailingIcon', 'trailing_icon_size')
   font_family = font_family_property('anvil-m3-menuItem-labelText', 'font_family')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
+  trailing_icon_color = color_property('anvil-m3-menuItem-trailingIcon', 'color', 'trailing_icon_color')
+  leading_icon_color = color_property('anvil-m3-menuItem-leadingIcon', 'color', 'leading_icon_color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   visible = HtmlTemplate.visible
+  margin = margin_property('anvil-m3-menuItem-container')
 
   @property
   def trailing_icon(self):
@@ -100,7 +103,7 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
-#TODO: props to add: margin, leading_icon_color, trailing_icon_color, role
+
 
 
   #!componentProp(material_3.MenuItem)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
@@ -123,7 +126,6 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
-
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 
