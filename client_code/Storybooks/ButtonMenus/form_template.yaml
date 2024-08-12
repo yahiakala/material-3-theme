@@ -72,11 +72,11 @@ components:
             type: form:Components.ButtonMenu
             components:
             - name: menu_item_5
-              properties: {text: Item 1, leading_icon: null, add_icon_space: false}
+              properties: {text: Item 1, leading_icon: null, add_icon_space: false, leading_icon_size: null}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_2_copy_1
-              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C, leading_icon_size: 45}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3_copy_1

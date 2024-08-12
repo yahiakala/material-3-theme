@@ -50,7 +50,7 @@ components:
           layout_properties: {}
           event_bindings: {click: button_1_click}
         - name: button_2
-          properties: {appearance: filled, bold: true, text: '2'}
+          properties: {appearance: filled, bold: true, text: '2', icon: null, icon_size: null}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3

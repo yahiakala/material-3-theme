@@ -28,7 +28,7 @@ properties:
 - {name: background_color, type: color, default_value: '', important: true, group: Look and Feel, description: The colour of the background of this component.}
 - {name: visible, type: boolean, default_value: true, important: true, group: Look and Feel, designer_hint: visible, description: 'If True, this component will be displayed'}
 - {name: leading_icon_size, type: number, important: false, description: The size (pixels) of the leading icon displayed on this component, group: Icon}
-- {name: trailing_icon_size, type: number, important: false, description: The size (pixels) of the trailing icon displayed on this component}
+- {name: trailing_icon_size, type: number, important: false, description: The size (pixels) of the trailing icon displayed on this component, group: Icon}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}
