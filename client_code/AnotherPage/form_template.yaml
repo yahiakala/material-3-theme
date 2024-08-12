@@ -20,6 +20,7 @@ components_by_slot:
     properties: {text: hello}
     type: Link
     layout_properties: {}
+    components: []
   - name: link_2
     properties: {text: click me}
     type: Link
