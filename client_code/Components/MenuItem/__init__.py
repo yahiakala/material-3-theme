@@ -17,7 +17,6 @@ class MenuItem(MenuItemTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
 
-
   @property
   def leading_icon(self):
     return self._leading_icon
@@ -27,6 +26,7 @@ class MenuItem(MenuItemTemplate):
     self._leading_icon = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
     if value:
+      print(self.text, 'hello')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     
   text = innerText_property('anvil-m3-menuItem-labelText')
@@ -67,6 +67,7 @@ class MenuItem(MenuItemTemplate):
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     else:
+      print(self.text, 'hello again')
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
       
   # anvil-m3-menuItem-hideLeadingIcon
