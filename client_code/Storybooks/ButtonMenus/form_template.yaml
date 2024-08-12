@@ -72,7 +72,7 @@ components:
             type: form:Components.ButtonMenu
             components:
             - name: menu_item_5
-              properties: {text: Item 1, leading_icon: visibility, add_icon_space: false, leading_icon_size: null, trailing_icon: check}
+              properties: {text: Item 1, leading_icon: visibility, add_icon_space: false, leading_icon_size: null, trailing_icon: check, bold: false}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
               event_bindings: {click: menu_item_5_click}
