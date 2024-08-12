@@ -293,8 +293,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
     if value:
       # print('yes')
-      # selection_field_width = get_dom_node(self.selection_field).offsetWidth
-      # self._menuNode.style.width = f"{selection_field_width}px"
+      selection_field_width = get_dom_node(self.selection_field).offsetWidth
+      self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
         
