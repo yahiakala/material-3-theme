@@ -290,7 +290,8 @@ class DropdownMenu(DropdownMenuTemplate):
       value = not self.menu.visible
     
     self.menu.visible = value
-
+    self._menuNode.classList.toggle("anvil-m3-menu-hidden", not value)
+    
     if value:
       # print('yes')
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
