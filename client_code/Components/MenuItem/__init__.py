@@ -26,6 +26,8 @@ class MenuItem(MenuItemTemplate):
   def leading_icon(self, value):
     self._leading_icon = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
+    if value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     
   text = innerText_property('anvil-m3-menuItem-labelText')
   italic = italic_property('anvil-m3-menuItem-labelText')
@@ -55,7 +57,6 @@ class MenuItem(MenuItemTemplate):
     self._trailing_text = value
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
 
-  #TODO: rename this
   @property 
   def add_icon_space(self):
     return self._props.get('add_icon_space')
@@ -63,7 +64,11 @@ class MenuItem(MenuItemTemplate):
   @add_icon_space.setter
   def add_icon_space(self, value):
     self._props['add_icon_space'] = value
-    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.toggle("anvil-m3-menuItem-hideLeadingIcon", value)
+    if value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
+    else:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
+      
   # anvil-m3-menuItem-hideLeadingIcon
 
   @property
