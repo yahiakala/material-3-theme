@@ -77,6 +77,7 @@ class MenuItem(MenuItemTemplate):
   @property
   def enabled(self):
     return self._enabled
+    
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
@@ -108,13 +109,14 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.MenuItem)!1: {name:"text",type:"string",description:"The text displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_text",type:"string",description:"The text to be displayed on the right side of the component. Will be to the left of the trailing icon if both exist."}
   #!componentProp(material_3.MenuItem)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the Button’s text will be underlined."}
-  #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the Button’s text will be italic."}
-  #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the Button’s text will be bold."}
+  #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the text will be underlined."}
+  #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the text will be italic."}
+  #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the text will be bold."}
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the tailing icon displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of the menu."}
+  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_size",type:"number",description:"The size (pixels) of the leading icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
