@@ -52,7 +52,8 @@ class Card(CardTemplate):
   #!componentProp(material_3.Card)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Card)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.Card)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
-  #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", outlined"],description:"A predefined style for this component."}  
+  #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", outlined"],description:"A predefined style for this component."}
+  #!componentProp(material_3.Card)!1: {name:"orientation",type:"enum",options:["elevated", "filled", outlined"],description:"A predefined style for this component."}  
 
   
 #!defClass(material_3,Card, anvil.Component)!:
