@@ -38,7 +38,9 @@ toolbox_sections:
   items:
   - title: Card
     icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Card, components: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}}
+    component:
+      type: Material_3_Theme_2_0.Components.Card
+      components: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}
   - title: InteractiveCard
     icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
     component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
