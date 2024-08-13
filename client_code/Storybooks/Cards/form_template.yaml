@@ -36,10 +36,19 @@ components:
       layout_properties: {grid_position: 'CAUQQM,DFOQUU'}
       components:
       - name: heading_1
-        properties: {text: This is a Card, style: title, scale: large}
+        properties: {text: This is a Card with no padding, style: title, scale: large}
         type: form:Components.Heading
         layout_properties: {slot: card-content-slot}
       - name: text_1
-        properties: {text: 'It has some content in '}
+        properties: {text: It has some content inside}
         type: form:Components.Text
         layout_properties: {slot: card-content-slot}
+      - name: button_1
+        properties: {text: Button, icon: null}
+        type: form:Components.Button
+        layout_properties: {slot: card-content-slot}
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'JWIFYF,TSYDGP'}
+    components: []
