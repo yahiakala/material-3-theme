@@ -35,6 +35,10 @@
   flex-grow: 1;
 }
 
+.anvil-m3-card-content > div.anvil-html-templated-panel {
+  flex-grow: 1
+}
+
 .anvil-m3-card-content-container {
   display: flex;
   flex-direction: column;
