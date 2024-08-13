@@ -51,4 +51,8 @@ components:
     properties: {}
     type: form:Components.Card
     layout_properties: {grid_position: 'JWIFYF,TSYDGP'}
-    components: []
+    components:
+    - name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
