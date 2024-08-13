@@ -27,6 +27,7 @@ properties:
   options: [column, row]
   default_value: column
   group: Key Properties
+  description: The orientation of the content in this Card
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}
