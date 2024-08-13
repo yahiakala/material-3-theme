@@ -25,14 +25,14 @@
 
 .anvil-m3-card-content {
   display: flex;
-  
+  flex-direction: column;
   flex-grow: 1;
 }
 
 
 .anvil-m3-card-content-container{
-  margin: 16px;
-/*   background: yellow; */
+  display: flex;
+  flex-direction: column;
 }
 
 .anvil-m3-card.anvil-m3-interactive {

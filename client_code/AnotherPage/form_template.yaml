@@ -45,28 +45,14 @@ components_by_slot:
     type: form:Components.TextInput.TextField
     layout_properties: {}
     event_bindings: {pressed_enter: text_field_3_pressed_enter}
-  - name: card_content_container_1
-    properties: {}
-    type: form:Components.Card.CardContentContainer
-    layout_properties: {}
-    components:
-    - name: button_1
-      properties: {}
-      type: form:Components.Button
-      layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1
     properties: {}
     type: form:Components.Card
     layout_properties: {}
-    components: []
-  - name: card_2
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
     components:
-    - name: heading_2
+    - name: card_content_container_1
       properties: {}
-      type: form:Components.Heading
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
   slot_7: []
   slot_6: []
