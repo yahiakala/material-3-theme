@@ -56,7 +56,4 @@ components:
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
-  - name: card_3
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'CDVLSF,VYJLBU'}
+      components: []
