@@ -51,7 +51,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: image_1
-      properties: {}
+      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill}
       type: Image
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1
@@ -60,8 +60,12 @@ components_by_slot:
       layout_properties: {slot: card-content-slot}
       components:
       - name: heading_2
-        properties: {text: '', style: title, scale: large}
+        properties: {text: Carol Brown, style: title, scale: large}
         type: form:Components.Heading
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_1
+        properties: {text: Flight of the Conchords}
+        type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   slot_7: []
   slot_6: []

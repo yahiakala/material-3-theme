@@ -29,7 +29,9 @@ class Card(CardTemplate):
     self._set_class_of_nodes(value, True)
 
   def _set_orientation(self, value):
-    pass
+    for c in ['anvil-m3-card-direction-column', 'anvil-m3-card-direction-row']:
+      self.dom_nodes['anvil-m3-card'].classList.remove(c)
+    self.dom_nodes['anvil-m3-card'].classList.add(f'anvil-m3-card-direction-{value}')
 
   spacing = spacing_property('anvil-m3-card')
   tooltip = tooltip_property('anvil-m3-card')
