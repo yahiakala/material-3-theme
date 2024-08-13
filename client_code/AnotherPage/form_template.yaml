@@ -24,24 +24,13 @@ components_by_slot:
   - name: card_4
     properties:
       card_content_padding: ['0', '0', '0', '0']
-      image: _/theme/purple-background.jpg
+      image: ''
       image_position: top
-      image_height: '700'
-      image_width: '700'
+      image_height: ''
+      image_width: ''
     type: form:Components.Card
     layout_properties: {}
-    components:
-    - name: heading_2
-      properties:
-        text: Heading
-        margin: ['16', '16', '16', '16']
-      type: form:Components.Heading
-      layout_properties: {slot: card-content-slot}
-    - name: text_1
-      properties:
-        margin: ['16', '16', '16', '16']
-      type: form:Components.Text
-      layout_properties: {slot: card-content-slot}
+    components: []
   - name: image_1
     properties: {}
     type: Image
