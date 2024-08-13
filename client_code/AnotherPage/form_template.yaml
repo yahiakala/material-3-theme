@@ -49,6 +49,11 @@ components_by_slot:
     properties: {}
     type: form:Components.Card.CardContentContainer
     layout_properties: {}
+    components:
+    - name: button_1
+      properties: {}
+      type: form:Components.Button
+      layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1
     properties: {}
     type: form:Components.Card
