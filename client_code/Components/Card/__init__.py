@@ -15,9 +15,9 @@ class Card(CardTemplate):
     self._tooltip_node = None
     self.init_components(**properties)
     
-    if not anvil.designer.in_designer:
-      self.dom_nodes['empty-image'].style.display = "none"
-      self.dom_nodes['empty-content'].style.display = "none"
+    # if not anvil.designer.in_designer:
+    #   self.dom_nodes['empty-image'].style.display = "none"
+    #   self.dom_nodes['empty-content'].style.display = "none"
 
   def _set_class_of_nodes(self, appearance, val):
     self.dom_nodes['anvil-m3-card'].classList.toggle(f'anvil-m3-{appearance}', val)
