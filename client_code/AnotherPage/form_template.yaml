@@ -45,33 +45,15 @@ components_by_slot:
     type: form:Components.TextInput.TextField
     layout_properties: {}
     event_bindings: {pressed_enter: text_field_3_pressed_enter}
-  - name: column_panel_1
+  - name: card_content_container_1
     properties: {}
-    type: ColumnPanel
+    type: form:Components.Card.CardContentContainer
     layout_properties: {}
-    components:
-    - name: card_1
-      properties:
-        image_height: '400'
-        image_width: '400'
-        card_image: ''
-        image_position: top
-        margin: ['24', '24', 4px, '24']
-        rounded_image: false
-      type: form:Components.Card
-      layout_properties: {grid_position: 'KNROCN,PJLDFX'}
-    - name: card_2
-      properties:
-        image_position: full
-        image_height: '400'
-        image_width: '400'
-        margin: ['24', '24', 4px, '24']
-      type: form:Components.Card
-      layout_properties: {grid_position: 'ASOHSX,HVMMNT'}
-  - name: card_4
+  - name: card_1
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components: []
   slot_7: []
   slot_6: []
   slot_5:
