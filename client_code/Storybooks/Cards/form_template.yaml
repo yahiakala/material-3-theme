@@ -57,7 +57,3 @@ components:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components: []
-  - name: interactive_card_1
-    properties: {}
-    type: form:Components.InteractiveCard
-    layout_properties: {grid_position: 'YAATFA,HZHETE'}
