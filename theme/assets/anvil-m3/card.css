@@ -10,11 +10,13 @@
   flex-grow: 1;
 }
 
-.anvil-m3-card.anvil-m3-card-direction-column {
+.anvil-m3-card.anvil-m3-card-direction-column,
+.anvil-m3-card.anvil-m3-card-direction-column .anvil-m3-card-content {
   flex-direction: column;
 }
 
-.anvil-m3-card.anvil-m3-card-direction-row {
+.anvil-m3-card.anvil-m3-card-direction-row, 
+.anvil-m3-card.anvil-m3-card-direction-row .anvil-m3-card-content{
   flex-direction: row;
 }
 
@@ -35,14 +37,9 @@
   flex-grow: 1;
 }
 
-.anvil-m3-card.anvil-m3-card-direction-column .anvil-m3-card-content-container{
+.anvil-m3-card-content-container {
   display: flex;
   flex-direction: column;
-}
-
-.anvil-m3-card.anvil-m3-card-direction-row .anvil-m3-card-content-container{
-  display: flex;
-  flex-direction: row;
 }
 
 .anvil-m3-card.anvil-m3-interactive {

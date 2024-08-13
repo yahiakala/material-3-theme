@@ -46,7 +46,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {pressed_enter: text_field_3_pressed_enter}
   - name: card_1
-    properties: {orientation: column}
+    properties: {orientation: row}
     type: form:Components.Card
     layout_properties: {}
     components:
@@ -59,27 +59,32 @@ components_by_slot:
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
-      - name: heading_2
-        properties: {text: Carol Brown, style: title, scale: large}
-        type: form:Components.Heading
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
       - name: text_1
-        properties: {text: Flight of the Conchords}
+        properties: {}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+    - name: text_3
+      properties: {}
+      type: form:Components.Text
+      layout_properties: {slot: card-content-slot}
   - name: card_2
     properties: {orientation: row}
     type: form:Components.Card
     layout_properties: {}
     components:
     - name: image_2
-      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill}
+      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill, height: 213.97265625}
       type: Image
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_2
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
+      components:
+      - name: text_2
+        properties: {text: this is a lot of text and it should take up the whole card}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
   slot_7: []
   slot_6: []
   slot_5:
