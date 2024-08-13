@@ -22,19 +22,14 @@ components_by_slot:
     layout_properties: {}
     components: []
   - name: card_4
-    properties:
-      card_content_padding: ['0', '0', '0', '0']
-      image: ''
-      image_position: top
-      image_height: ''
-      image_width: ''
+    properties: {}
     type: form:Components.Card
     layout_properties: {}
-    components: []
-  - name: image_1
-    properties: {}
-    type: Image
-    layout_properties: {}
+    components:
+    - name: image_1
+      properties: {}
+      type: Image
+      layout_properties: {slot: card-content-slot}
   - name: link_2
     properties: {text: click me}
     type: Link
