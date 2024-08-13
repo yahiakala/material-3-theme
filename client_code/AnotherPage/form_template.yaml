@@ -58,16 +58,16 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components: []
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
     components:
     - name: heading_2
       properties: {}
       type: form:Components.Heading
       layout_properties: {slot: card-content-slot}
-  - name: card_2
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {}
-    components: []
   slot_7: []
   slot_6: []
   slot_5:
