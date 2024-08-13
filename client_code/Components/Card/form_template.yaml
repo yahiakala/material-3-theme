@@ -29,18 +29,16 @@ toolbox_item:
   icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
   hidden: true
 custom_component: true
-components:
-- name: card_content_container_1
-  properties: {}
-  type: form:Components.Card.CardContentContainer
-  layout_properties: {slot: card-content-slot}
+components: []
 container:
   type: HtmlTemplate
   properties:
     html: |-
       <!-- <div anvil-name="anvil-m3-card-component" style="display: flex"> -->
-        <div anvil-name="anvil-m3-card" class="anvil-m3-card" anvil-slot="card-slot">
-           <p anvil-if-slot-empty="card-slot" style="color: #BBB"><i>Card slot</i></p>
+        <div anvil-name="anvil-m3-card" class="anvil-m3-card">
+          <div anvil-slot="card-slot">
+            <p anvil-if-slot-empty="card-slot" style="color: #BBB"><i>Card slot</i></p>
+          </div>
           <div anvil-slot="card-content-slot" anvil-name="content" class="anvil-m3-card-content">
             <p anvil-name="empty-content" anvil-if-slot-empty="card-content-slot" style="color: #BBB"><i>Card Content</i></p>
           </div>
