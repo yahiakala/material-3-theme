@@ -46,7 +46,7 @@ components_by_slot:
     layout_properties: {}
     event_bindings: {pressed_enter: text_field_3_pressed_enter}
   - name: card_1
-    properties: {}
+    properties: {orientation: column}
     type: form:Components.Card
     layout_properties: {}
     components:
@@ -67,6 +67,19 @@ components_by_slot:
         properties: {text: Flight of the Conchords}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+  - name: card_2
+    properties: {orientation: row}
+    type: form:Components.Card
+    layout_properties: {}
+    components:
+    - name: image_2
+      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill}
+      type: Image
+      layout_properties: {slot: card-content-slot}
+    - name: card_content_container_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
   slot_7: []
   slot_6: []
   slot_5:
