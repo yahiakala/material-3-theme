@@ -7,7 +7,7 @@
   min-width: 24px;
   min-height: 24px;
 /*   width: fit-content; */
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .anvil-m3-card.anvil-m3-card-direction-column,
@@ -34,12 +34,13 @@
 .anvil-m3-card-content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .anvil-m3-card-content-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .anvil-m3-card.anvil-m3-interactive {

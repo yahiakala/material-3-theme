@@ -70,7 +70,7 @@ components_by_slot:
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: image_1
-      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill, height: 368.9296875}
+      properties: {source: _/theme/purple-background.jpg, display_mode: zoom_to_fill, height: 347.76171875}
       type: Image
       layout_properties: {slot: card-content-slot}
   slot_7: []
