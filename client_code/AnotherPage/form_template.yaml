@@ -42,6 +42,10 @@ components_by_slot:
         margin: ['16', '16', '16', '16']
       type: form:Components.Text
       layout_properties: {slot: card-content-slot}
+  - name: image_1
+    properties: {}
+    type: Image
+    layout_properties: {}
   - name: link_2
     properties: {text: click me}
     type: Link
