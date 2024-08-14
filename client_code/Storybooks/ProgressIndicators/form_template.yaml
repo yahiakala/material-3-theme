@@ -58,7 +58,7 @@ components:
           type: form:Components.CircularProgressIndicator
           layout_properties: {grid_position: 'GOCHRS,EAGRUI'}
         - name: linear_progress_indicator_determinate
-          properties: {visible: true, type: determinate, progress: 47.75, color: ''}
+          properties: {visible: true, type: determinate, progress: null, color: ''}
           type: form:Components.LinearProgressIndicator
           layout_properties: {grid_position: 'FJJOWZ,JMVCER'}
       - name: flow_panel_2

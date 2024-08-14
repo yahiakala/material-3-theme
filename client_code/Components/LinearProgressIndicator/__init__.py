@@ -32,7 +32,7 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     self._props['color'] = value
 
   def _update_determinance(self, value):
-    v = value is "determinate"
+    v = value == "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle('anvil-m3-progressindicator-hidden', v)
     self.dom_nodes['anvil-m3-progressindicator-determinate'].classList.toggle('anvil-m3-progressindicator-hidden', not v)
 
