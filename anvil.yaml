@@ -45,7 +45,7 @@ toolbox_sections:
         layout_properties: {slot: card-content-slot}
   - title: InteractiveCard
     icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
-        component: 
+    component: 
       type: Material_3_Theme_2_0.Components.InteractiveCard
       components:
       - type: Material_3_Theme_2_0.Components.Card.CardContentContainer
