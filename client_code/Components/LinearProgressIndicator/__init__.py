@@ -38,9 +38,8 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   @track_color.setter
   def track_color(self, value):
     if value: value = theme_color_to_css(value)
-    self.dom_nodes['anvil-m3-progressindicator-indicator'].style['stroke'] = value
-    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate'].style['stroke'] = value
-    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate-2'].style['stroke'] = value
+    self.dom_nodes['anvil-m3-progressindicator-indeterminate'].style.backgroundColor = value
+    self.dom_nodes['anvil-m3-progressindicator-determinate'].style.backgroundColor = value
     self._props['track_color'] = value
 
   def _update_determinance(self, value):
