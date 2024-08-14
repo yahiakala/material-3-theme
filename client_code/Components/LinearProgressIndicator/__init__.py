@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css, role_property
+from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css, role_property, color_property
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -20,16 +20,28 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   role = role_property('anvil-m3-progressindicator-linear')
   
   @property
-  def color(self):
-    return self._props.get('color')
+  def progress_color(self):
+    return self._props.get('progress_color')
 
-  @color.setter
-  def color(self, value):
+  @progress_color.setter
+  def progress_color(self, value):
     if value: value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-progressindicator-indicator'].style['stroke'] = value
     self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate'].style['stroke'] = value
     self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate-2'].style['stroke'] = value
-    self._props['color'] = value
+    self._props['progress_color'] = value
+
+  @property
+  def track_color(self):
+    return self._props.get('track_color')
+
+  @track_color.setter
+  def track_color(self, value):
+    if value: value = theme_color_to_css(value)
+    self.dom_nodes['anvil-m3-progressindicator-indicator'].style['stroke'] = value
+    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate'].style['stroke'] = value
+    self.dom_nodes['anvil-m3-progressindicator-indicator-indeterminate-2'].style['stroke'] = value
+    self._props['track_color'] = value
 
   def _update_determinance(self, value):
     v = value == "determinate"
