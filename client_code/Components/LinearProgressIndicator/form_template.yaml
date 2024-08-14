@@ -20,7 +20,7 @@ properties:
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type.}
 - {name: margin, type: margin, group: Layout, important: true, description: The margin (pixels) of the component.}
 - {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
-- {name: color, type: color, default_value: '', important: true, description: The color of this component.}
+- {name: progress_color, type: color, default_value: '', important: true, description: The color of this component.}
 is_package: true
 events:
 - {name: show, default_event: true}
