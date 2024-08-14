@@ -12,6 +12,18 @@ _static_arrow_position = {
   'left': 'right',
 }
 
+def size_middleware():
+    def apply(context):
+        availableWidth = context['availableWidth']
+        availableHeight = context['availableHeight']
+        elements = context['elements']
+
+        # Set styles directly in Python
+        elements.floating.style.maxWidth = f"{availableWidth}px"
+        elements.floating.style.maxHeight = f"{availableHeight}px"
+
+    return {"apply": apply}
+  
 def auto_update(
   reference_el,
   floating_el,
@@ -21,8 +33,9 @@ def auto_update(
   offset=6,
   shift={"padding": 5},
   hide={"padding": 15},
-  arrow=None
+  arrow=None,
 ):
+  
   """starts auto updating position of floating element to a reference element
   returns a cleanup function
   if using arrow, arrow should be an HTMLElement
@@ -30,12 +43,8 @@ def auto_update(
   call the cleanup in x-anvil-page-removed"""
 
   def update(*args):
-    # reset positioning
-    floating_el.style.removeProperty('height')
-    floating_el.style.removeProperty('top')
-    floating_el.style.removeProperty('bottom')
+    middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide), fui.size(size_middleware())]
     
-    middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
       middleware.append(fui.arrow({"element": arrow}))
     
@@ -46,11 +55,10 @@ def auto_update(
     })
     floating_el.style.left = f"{rv.x}px"
     floating_el.style.top = f"{rv.y}px"
-    # floating_el.style.top = f"{0}px"
-    rect = reference_el.getBoundingClientRect()
-    print(rect.top, rect.bottom)
+
 
     middlewareData = rv.middlewareData
+
     if "hide" in middlewareData:
       hidden = middlewareData.hide.referenceHidden
       floating_el.style.visibility = "hidden" if hidden else "visible"
