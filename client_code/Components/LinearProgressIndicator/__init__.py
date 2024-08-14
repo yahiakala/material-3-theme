@@ -55,3 +55,14 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     
   progress = property_with_callback("progress", _update_progress)
   margin= margin_property('anvil-m3-progressindicator-linear')
+
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"progress",type:"number",description:"The value of the LinearProgressIndicator."}
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(material_3.LinearProgressIndicator)!1: {name:"type",type:"enum",options:["determinate", "indeterminate"],description:"Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time."}
+
+#!defClass(material_3,LinearProgressIndicator,anvil.Component)!:
