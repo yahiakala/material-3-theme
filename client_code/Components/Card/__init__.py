@@ -53,6 +53,7 @@ class Card(CardTemplate):
   #!componentProp(material_3.Card)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.Card)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
   #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", "outlined"],description:"A predefined style for this component."}
-  #!componentProp(material_3.Card)!1: {name:"orientation",type:"enum",options:["column", "row"],description:"The orientation of the content in this Card"}  
+  #!componentProp(material_3.Card)!1: {name:"orientation",type:"enum",options:["column", "row"],description:"The orientation of the content in this Card"}
+
 
 #!defClass(material_3,Card, anvil.Component)!:
