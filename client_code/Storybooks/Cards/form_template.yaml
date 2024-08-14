@@ -92,7 +92,11 @@ components:
     type: form:Components.Card
     components:
     - name: image_2
-      properties: {display_mode: zoom_to_fill, source: _/theme/purple-background.jpg, height: 192.19140625}
+      properties:
+        display_mode: zoom_to_fill
+        source: _/theme/purple-background.jpg
+        height: 192.19140625
+        margin: ['', null, '', null]
       type: Image
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_4
