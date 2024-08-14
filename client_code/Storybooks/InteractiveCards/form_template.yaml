@@ -28,4 +28,38 @@ components:
   - name: interactive_card_1
     properties: {}
     type: form:Components.InteractiveCard
-    layout_properties: {grid_position: 'EBOMVV,OKGKLH'}
+    components:
+    - name: image_1
+      properties:
+        margin: ['0', null, '0', null]
+      type: Image
+      layout_properties: {slot: card-content-slot}
+    - name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: heading_1
+        properties: {text: Interactive Card}
+        type: form:Components.Heading
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+    layout_properties: {grid_position: 'ZKORQX,VBPGZD'}
+  - name: interactive_card_2
+    properties: {orientation: row}
+    type: form:Components.InteractiveCard
+    components:
+    - name: image_2
+      properties:
+        margin: ['0', null, '0', null]
+      type: Image
+      layout_properties: {slot: card-content-slot}
+    - name: card_content_container_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: heading_2
+        properties: {text: Interactive Card}
+        type: form:Components.Heading
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+    layout_properties: {grid_position: 'ZKORQX,FNZBOH'}
