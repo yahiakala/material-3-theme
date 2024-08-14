@@ -25,3 +25,7 @@ components:
       - name: text_2_copy_7
         properties: {text: Description. Properties. Link to docs. Etc}
         type: form:Components.Text
+  - name: interactive_card_1
+    properties: {}
+    type: form:Components.InteractiveCard
+    layout_properties: {grid_position: 'EBOMVV,OKGKLH'}
