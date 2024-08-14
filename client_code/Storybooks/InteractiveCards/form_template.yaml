@@ -26,7 +26,7 @@ components:
         properties: {text: Description. Properties. Link to docs. Etc}
         type: form:Components.Text
   - name: interactive_card_1
-    properties: {}
+    properties: {enabled: true}
     type: form:Components.InteractiveCard
     components:
     - name: image_1
