@@ -76,7 +76,16 @@ toolbox_item:
   icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
   hidden: true
 custom_component: true
-custom_component_container: true
+components:
+- properties: {visible: false}
+  type: form:_Components.Menu
+  layout_properties: {slot: anvil-m3-dropdownMenu-slot}
+  name: menu
+- properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' ', bold_display: false}
+  type: form:_Components.TextInput.TextField
+  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
+  event_bindings: {}
+  name: selection_field
 container:
   type: HtmlTemplate
   properties:
@@ -87,13 +96,4 @@ container:
       </div>
     visible: true
   event_bindings: {show: form_show}
-components:
-- properties: {visible: false}
-  type: form:Components.Menu
-  layout_properties: {slot: anvil-m3-dropdownMenu-slot}
-  name: menu
-- properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' ', bold_display: false}
-  type: form:Components.TextInput.TextField
-  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-  event_bindings: {}
-  name: selection_field
+custom_component_container: true

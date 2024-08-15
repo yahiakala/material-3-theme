@@ -3,19 +3,19 @@ container: {type: DataRowPanel}
 components:
 - name: text_1
   properties: {font_size: 16}
-  type: form:Components.Text
+  type: form:_Components.Text
   layout_properties: {column: AUINYA}
   data_bindings:
   - {property: text, code: 'self.item[''Job''][''Titles'']', writeback: false}
 - name: text_2
   properties: {font_size: 16}
-  type: form:Components.Text
+  type: form:_Components.Text
   layout_properties: {column: BEMEZA}
   data_bindings:
   - {property: text, code: 'self.item[''Name'']', writeback: false}
 - name: text_3
   properties: {font_size: 16}
-  type: form:Components.Text
+  type: form:_Components.Text
   layout_properties: {column: SSPCYS}
   data_bindings:
   - {property: text, code: 'self.item[''ID'']', writeback: false}

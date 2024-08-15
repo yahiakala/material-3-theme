@@ -8,24 +8,24 @@ components_by_slot:
     layout_properties: {}
   - name: slider_2
     properties: {has_label: true}
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {}
   slot_3:
   - name: link_1
     properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
-    type: form:Components.Link
+    type: form:_Components.Link
     layout_properties: {}
   - name: linear_progress_indicator_1
     properties: {}
-    type: form:Components.LinearProgressIndicator
+    type: form:_Components.LinearProgressIndicator
     layout_properties: {}
   - name: divider_1
     properties: {}
-    type: form:Components.Divider
+    type: form:_Components.Divider
     layout_properties: {}
   - name: button_1
     properties: {appearance: filled, text: Button, align: left}
-    type: form:Components.Button
+    type: form:_Components.Button
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}

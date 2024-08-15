@@ -24,19 +24,19 @@ components:
         components:
         - name: text_1
           properties: {text: TextField Component, font_size: 25, text_color: 'theme:Primary'}
-          type: form:Components.Text
+          type: form:_Components.Text
           layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
-          type: form:Components.Text
+          type: form:_Components.Text
   - name: card_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:_Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1
@@ -46,20 +46,20 @@ components:
         components:
         - name: text_field_1
           properties: {label_text: 'label, no placeholder', leading_icon: null, trailing_icon: null, enabled: true, visible: true, character_limit: 5}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'IPNJXN,XBZWCJ'}
         - name: text_field_2
           properties: {appearance: outlined, label_text: 'label, no placeholder', supporting_text: '', character_limit: 10}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'IPNJXN,DUZTXT'}
   - name: card_1_copy_2
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:_Components.Card
     layout_properties: {grid_position: 'TEIBOG,KKHAFU'}
     components:
     - name: card_content_container_1_copy_2
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2
@@ -69,20 +69,20 @@ components:
         components:
         - name: text_field_3
           properties: {label_text: label, placeholder: placeholder}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'RHIGNP,BVSLBO'}
         - name: text_field_4
           properties: {appearance: outlined, placeholder: placeholder, label_text: LABEL}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'RHIGNP,QTDRDY'}
   - name: card_1_copy
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:_Components.Card
     layout_properties: {grid_position: 'KESMMM,OWFASP'}
     components:
     - name: card_content_container_1_copy
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_3
@@ -92,20 +92,20 @@ components:
         components:
         - name: text_field_5
           properties: {placeholder: 'placeholder, no label'}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'DYUUPG,CBGNMZ'}
         - name: text_field_6
           properties: {appearance: outlined, placeholder: 'placeholder, no label'}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'DYUUPG,LMCRGO'}
   - name: card_1_copy_copy
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:_Components.Card
     layout_properties: {grid_position: 'OZUGQW,GEERBF'}
     components:
     - name: card_content_container_1_copy_copy
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_4
@@ -115,9 +115,9 @@ components:
         components:
         - name: text_field_7
           properties: {supporting_text: 'no label, no placeholder'}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'WRTPUD,AMYWUF'}
         - name: text_field_8
           properties: {appearance: outlined, supporting_text: 'no label, no placeholder'}
-          type: form:Components.TextField_deprecated
+          type: form:_Components.TextField_deprecated
           layout_properties: {grid_position: 'WRTPUD,VXWYEI'}

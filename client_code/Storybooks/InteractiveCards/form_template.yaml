@@ -20,14 +20,14 @@ components:
       components:
       - name: text_1_copy_7
         properties: {text: Card Component, font_size: 25, text_color: 'theme:Primary'}
-        type: form:Components.Text
+        type: form:_Components.Text
         layout_properties: {}
       - name: text_2_copy_7
         properties: {text: Description. Properties. Link to docs. Etc}
-        type: form:Components.Text
+        type: form:_Components.Text
   - name: interactive_card_1
     properties: {enabled: true}
-    type: form:Components.InteractiveCard
+    type: form:_Components.InteractiveCard
     components:
     - name: image_1
       properties:
@@ -38,17 +38,17 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: heading_1
         properties: {text: Interactive Card}
-        type: form:Components.Heading
+        type: form:_Components.Heading
         layout_properties: {slot: anvil-m3-card-content-container-slot}
     layout_properties: {grid_position: 'ZKORQX,VBPGZD'}
   - name: interactive_card_2
     properties: {orientation: row}
-    type: form:Components.InteractiveCard
+    type: form:_Components.InteractiveCard
     components:
     - name: image_2
       properties:
@@ -59,11 +59,11 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: heading_2
         properties: {text: Interactive Card}
-        type: form:Components.Heading
+        type: form:_Components.Heading
         layout_properties: {slot: anvil-m3-card-content-container-slot}
     layout_properties: {grid_position: 'ZKORQX,FNZBOH'}
