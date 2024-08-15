@@ -171,7 +171,7 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    if isinstance(value, list):
+    if isinstance(value, tuple):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
