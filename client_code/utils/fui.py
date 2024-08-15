@@ -11,18 +11,6 @@ _static_arrow_position = {
   'bottom': 'top',
   'left': 'right',
 }
-
-def size_middleware():
-    def apply(context):
-        availableWidth = context['availableWidth']
-        availableHeight = context['availableHeight']
-        elements = context['elements']
-
-        # Set styles directly in Python
-        elements.floating.style.maxWidth = f"{availableWidth}px"
-        elements.floating.style.maxHeight = f"{availableHeight}px"
-
-    return {"apply": apply}
   
 def auto_update(
   reference_el,
@@ -56,7 +44,6 @@ def auto_update(
     floating_el.style.left = f"{rv.x}px"
     floating_el.style.top = f"{rv.y}px"
 
-
     middlewareData = rv.middlewareData
 
     if "hide" in middlewareData:
@@ -74,6 +61,13 @@ def auto_update(
       if static_side:
         # assumes the arrow element is 8px 8px
         arrow.style[static_side] = "-4px"
-
-
+        
   return fui.autoUpdate(reference_el, floating_el, update)
+
+def size_middleware():
+  def apply(context):
+      availableHeight = context['availableHeight']
+      elements = context['elements']
+      elements.floating.style.maxHeight = f"{availableHeight}px"
+  
+  return {"apply": apply}

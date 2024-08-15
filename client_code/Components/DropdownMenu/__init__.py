@@ -265,7 +265,7 @@ class DropdownMenu(DropdownMenuTemplate):
       if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
-    self._children[self._hoverIndex].scroll_into_view()
+    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
   def _attempt_select(self):
@@ -296,11 +296,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.classList.toggle("anvil-m3-menu-hidden", not value)
     
     if value:
-      # print('yes')
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
+        self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
         
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
