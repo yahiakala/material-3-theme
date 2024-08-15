@@ -3,7 +3,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Storybooks.Dropdowns}
-package_name: Material_3_Theme_2_0
+package_name: m3
 allow_embedding: false
 toolbox_sections:
 - packageName: Material_3_Theme_2_0
