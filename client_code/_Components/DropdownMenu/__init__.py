@@ -372,7 +372,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if isinstance(item, list):
+      if isinstance(item, tuple):
         selection.text = item[0]
       else:
         selection.text = item
