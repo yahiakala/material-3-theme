@@ -2,36 +2,36 @@ container: {type: ColumnPanel}
 components:
 - name: text_1
   properties: {text: Slider Component, font_size: 25, text_color: 'theme:Primary'}
-  type: form:Components.Text
+  type: form:_Components.Text
   layout_properties: {grid_position: 'NLZEXB,ZFMOMV'}
 - name: card_1
   properties: {}
-  type: form:Components.Card
+  type: form:_Components.Card
   layout_properties: {grid_position: 'VECHOP,LDOFTY'}
   components:
   - name: heading_1
     properties: {text: Continuous (no track marks)}
-    type: form:Components.Heading
+    type: form:_Components.Heading
     layout_properties: {slot: card-content-slot}
   - name: text_2
     properties: {scale: medium, text: 'No label, enabled'}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_1
     properties: {value: 5, max: 10, show_markers: false, show_label: false}
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_3
     properties: {text: 'With label, enabled'}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_5
     properties: {show_label: true, max: 100, show_markers: false, value: 50}
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_4
     properties: {text: Disabled}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_2
     properties:
@@ -39,20 +39,20 @@ components:
       margin: [auto, auto, auto, auto]
       max: 100
       value: 50
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
 - name: card_2
   properties: {}
-  type: form:Components.Card
+  type: form:_Components.Card
   layout_properties: {grid_position: 'MKXZKB,TSPLKC'}
   components:
   - name: heading_2
     properties: {text: Discrete (with track marks)}
-    type: form:Components.Heading
+    type: form:_Components.Heading
     layout_properties: {slot: card-content-slot}
   - name: text_5
     properties: {text: 'No label, enabled'}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_4
     properties:
@@ -70,24 +70,24 @@ components:
       step: 1
       tooltip: ''
       margin: [auto, '', auto, '']
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
     data_bindings: []
     event_bindings: {change: slider_4_change}
   - name: text_6
     properties: {text: 'With label, enabled'}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_6
     properties: {show_markers: true, show_label: true, value: 5}
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
   - name: text_7
     properties: {text: Disabled}
-    type: form:Components.Text
+    type: form:_Components.Text
     layout_properties: {slot: card-content-slot}
   - name: slider_3
     properties: {show_label: true, enabled: false, value: 5, test_label: true, show_markers: true}
-    type: form:Components.Slider
+    type: form:_Components.Slider
     layout_properties: {slot: card-content-slot}
 is_package: true

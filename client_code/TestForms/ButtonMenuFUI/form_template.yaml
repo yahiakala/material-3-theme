@@ -11,15 +11,15 @@ components:
     layout_properties: {}
   - name: button_menu_1
     properties: {}
-    type: form:Components.ButtonMenu
+    type: form:_Components.ButtonMenu
     components:
     - name: menu_item_1
       properties: {leading_icon: 2k, text: foo, trailing_text: bar}
-      type: form:Components.MenuItem
+      type: form:_Components.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_2
       properties: {leading_icon: 10mp, text: abc}
-      type: form:Components.MenuItem
+      type: form:_Components.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: spacer_1
     properties: {height: 80vh}

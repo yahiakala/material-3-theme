@@ -24,19 +24,19 @@ components:
         components:
         - name: text_1
           properties: {text: ToggleIconButton Component, font_size: 25, text_color: 'theme:Primary'}
-          type: form:Components.Text
+          type: form:_Components.Text
           layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
-          type: form:Components.Text
+          type: form:_Components.Text
   - name: card_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:_Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:_Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: flow_panel_2
@@ -56,23 +56,23 @@ components:
             components:
             - name: toggle_icon_button_1_copy_4
               properties: {enabled: false}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_1_copy_1
               properties: {appearance: filled, enabled: false}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3_copy_1
               properties: {appearance: tonal, enabled: false}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_2
               properties: {appearance: outlined, enabled: false}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: text_3_copy_1
               properties: {text: Unselected/Disabled Buttons}
-              type: form:Components.Text
+              type: form:_Components.Text
               layout_properties: {}
           - name: flow_panel_3_copy_2
             properties: {}
@@ -81,22 +81,22 @@ components:
             components:
             - name: toggle_icon_button_1_copy_5
               properties: {selected: true}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_1_copy_2
               properties: {appearance: filled, selected: true}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3_copy_2
               properties: {appearance: tonal, selected: true, background: '', selected_background: pink}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {width: 38.78906899414063}
             - name: toggle_icon_button_1_copy_3_copy_2_copy_copy
               properties: {appearance: outlined, selected: true, background: '', selected_background: pink}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
             - name: text_3_copy_2
               properties: {text: Selected Buttons}
-              type: form:Components.Text
+              type: form:_Components.Text
               layout_properties: {}
           - name: flow_panel_3_copy_1_copy_1
             properties: {}
@@ -105,21 +105,21 @@ components:
             components:
             - name: toggle_icon_button_1_copy_4_copy_1
               properties: {enabled: false, selected: true}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_1_copy_1_copy_1
               properties: {appearance: filled, enabled: false, selected: true}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3_copy_1_copy_1
               properties: {appearance: tonal, enabled: false, selected: true}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: toggle_icon_button_1_copy_3_copy_2_copy
               properties: {appearance: outlined, selected: true, background: '', selected_background: pink, enabled: false}
-              type: form:Components.ToggleIconButton
+              type: form:_Components.ToggleIconButton
               layout_properties: {}
             - name: text_3_copy_2_copy_1
               properties: {text: Selected/Disabled Buttons}
-              type: form:Components.Text
+              type: form:_Components.Text
               layout_properties: {}

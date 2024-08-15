@@ -15,13 +15,13 @@ components_by_slot:
   slot_1:
   - name: navigation_link_1
     properties: {material_icon: circle}
-    type: form:Components.NavigationLink
+    type: form:_Components.NavigationLink
     layout_properties: {}
   - name: navigation_link_2
     properties: {material_icon: square}
-    type: form:Components.NavigationLink
+    type: form:_Components.NavigationLink
     layout_properties: {}
   - name: navigation_link_3
     properties: {material_icon: hexagon}
-    type: form:Components.NavigationLink
+    type: form:_Components.NavigationLink
     layout_properties: {}
