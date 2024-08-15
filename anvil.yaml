@@ -6,111 +6,111 @@ startup: {type: form, module: Storybooks.Cards}
 package_name: m3
 allow_embedding: false
 toolbox_sections:
-- packageName: Material_3_Theme_2_0
+- packageName: m3
   title: Typography
   items:
   - title: Text
     icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Text}
+    component: {type: m3.Components.Text}
   - title: Heading
     icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Heading}
+    component: {type: m3.Components.Heading}
   - title: Link
     icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Link}
+    component: {type: m3.Components.Link}
   - title: RichText
     icon: {light: /ide/img/toolbox/RichText.svg, dark: /ide/img/toolbox/RichText.dark.svg}
     component: {type: anvil.RichText}
-- packageName: Material_3_Theme_2_0
+- packageName: m3
   title: Buttons
   items:
   - title: Button
     icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Button}
+    component: {type: m3.Components.Button}
   - title: IconButton
     icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.IconButton}
+    component: {type: m3.Components.IconButton}
   - title: ToggleIconButton
     icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.ToggleIconButton}
+- packageName: m3
   title: Display
   items:
   - title: Card
     icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
     component:
-      type: Material_3_Theme_2_0.Components.Card
+      type: m3.Components.Card
       components:
-      - type: Material_3_Theme_2_0.Components.Card.CardContentContainer
+      - type: m3.Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
   - title: InteractiveCard
     icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
     component:
-      type: Material_3_Theme_2_0.Components.InteractiveCard
+      type: m3.Components.InteractiveCard
       components:
-      - type: Material_3_Theme_2_0.Components.Card.CardContentContainer
+      - type: m3.Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
   - title: CardContentContainer
     icon: null
-    component: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}
+    component: {type: m3.Components.Card.CardContentContainer}
   - title: SidesheetContent
     icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
-    component: {type: Material_3_Theme_2_0.SidesheetContent}
+    component: {type: m3.SidesheetContent}
   - title: Divider
     icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Divider}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.Divider}
+- packageName: m3
   title: Navigation
   items:
   - title: NavigationLink
     icon: {light: 'asset:designer_icons/navigation_link.svg', dark: 'asset:designer_icons/navigation_link_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.NavigationLink}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.NavigationLink}
+- packageName: m3
   title: Menus
   items:
   - title: ButtonMenu
     icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
+    component: {type: m3.Components.ButtonMenu}
   - title: MenuItem
     icon: {light: 'asset:designer_icons/menu_item.svg', dark: 'asset:designer_icons/menu_item_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.MenuItem}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.MenuItem}
+- packageName: m3
   title: Form Input
   items:
   - title: Checkbox
     icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Checkbox}
+    component: {type: m3.Components.Checkbox}
   - title: RadioButton
     icon: {light: 'asset:designer_icons/radio_button.svg', dark: 'asset:designer_icons/radio_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.RadioButton}
+    component: {type: m3.Components.RadioButton}
   - title: TextField
     icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.TextInput.TextField}
+    component: {type: m3.Components.TextInput.TextField}
   - title: TextArea
     icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.TextInput.TextArea}
+    component: {type: m3.Components.TextInput.TextArea}
   - title: DropdownMenu
     icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.DropdownMenu}
+    component: {type: m3.Components.DropdownMenu}
   - title: Switch
     icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Switch}
+    component: {type: m3.Components.Switch}
   - title: FileLoader
     icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.FileLoader}
+    component: {type: m3.Components.FileLoader}
   - title: Slider
     icon: {light: 'asset:designer_icons/slider.svg', dark: 'asset:designer_icons/slider_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Slider}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.Slider}
+- packageName: m3
   title: Feedback
   items:
   - title: LinearProgressIndicator
     icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.LinearProgressIndicator}
+    component: {type: m3.Components.LinearProgressIndicator}
   - title: CircularProgressIndicator
     icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.CircularProgressIndicator}
-- packageName: Material_3_Theme_2_0
+    component: {type: m3.Components.CircularProgressIndicator}
+- packageName: m3
   title: Integrations
   items:
   - title: Plot
