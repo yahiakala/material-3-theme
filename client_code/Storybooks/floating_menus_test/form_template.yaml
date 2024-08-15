@@ -1,0 +1,107 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
+    components:
+    - name: spacer_1
+      properties: {height: 410.779296875}
+      type: Spacer
+      layout_properties: {slot: card-content-slot}
+  - name: card_1_copy_1
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'XELRDD,LWQQOV'}
+    components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: dropdown_menu_1
+        properties:
+          items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9, dropdown item 10, dropdown item 11, dropdown item 12, dropdown item 13, dropdown item 14, dropdown item 15, dropdown item 16, dropdown item 17, dropdown item 18, dropdown item 19, dropdown item 20]
+        type: form:Components.DropdownMenu
+        layout_properties: {width: 456.5242734375}
+      - name: button_menu_1
+        properties: {}
+        type: form:Components.ButtonMenu
+        components:
+        - name: menu_item_1
+          properties: {text: item 1}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy
+          properties: {text: item 2}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_2
+          properties: {text: item 3}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_3
+          properties: {text: item4}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_4
+          properties: {text: item 5}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_5
+          properties: {text: item 6}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_6
+          properties: {text: item 7}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_7
+          properties: {text: item 8}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_8
+          properties: {text: item 9}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_9
+          properties: {text: item 10}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_10
+          properties: {text: item 11}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_11
+          properties: {text: item 12}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_12
+          properties: {text: item 13}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_13
+          properties: {text: item 14}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_1_copy_14
+          properties: {text: item 15}
+          type: form:Components.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+  - name: card_2
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'WCWYYQ,WKVBAF'}
+    components:
+    - name: spacer_1_copy
+      properties: {height: 799.2021484375}
+      type: Spacer
+      layout_properties: {slot: card-content-slot}
