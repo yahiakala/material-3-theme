@@ -1,14 +1,7 @@
 properties:
-- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'If True, the component will be displayed.'}
+- {description: 'If True, the component will be displayed.', group: Look and Feel, name: visible, default_binding_prop: true, type: boolean, important: true, designer_hint: visible, designerHint: visible, default_value: true}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right, full]
-  default_value: left
-  designer_hint: align-horizontal
-  description: The position of this component in the available space.
-  group: Layout
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - name: type
   type: enum
   important: true
@@ -19,7 +12,8 @@ properties:
 - {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type.}
 - {name: margin, type: margin, group: Layout, important: true, description: The margin (pixels) of the component.}
 - {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
-- {name: color, type: color, default_value: '', important: true, description: The color of this component.}
+- {name: progress_color, type: color, default_value: '', important: false, description: The color of the progress bar., group: Look and Feel}
+- {name: track_color, type: color, default_value: '', important: false, description: The color of the track, group: Look and Feel}
 is_package: true
 events:
 - {name: show, default_event: true}

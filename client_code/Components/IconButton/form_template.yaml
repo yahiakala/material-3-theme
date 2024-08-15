@@ -6,6 +6,7 @@ properties:
   default_value: standard
   description: A predefined style for this component.
   group: Key Properties
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - include_none_option: true
   description: Icon to display on button
   group: Key Properties

@@ -20,6 +20,7 @@ properties:
   group: Key Properties
   description: A predefined style for this component.
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: label_text_color, type: color, default_value: '', important: false, description: The colour of the label text on the component., group: Look and Feel}
 - {name: display_text_color, type: color, default_value: '', important: false, description: The colour of the input text displayed on this component., group: Look and Feel}
 - {name: supporting_text_color, type: color, default_value: '', important: false, description: The colour of the supporting text underneath this component., group: Look and Feel}

@@ -51,7 +51,8 @@ class RadioButton(RadioButtonTemplate):
   #!componentProp(material_3.RadioButton)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.RadioButton)!1: {name:"radio_color",type:"color",description:"The color of the radio button."}
   #!componentProp(material_3.RadioButton)!1: {name:"selected",type:"boolean",description:"If True, the radio button is selected."}
-  
+  #!componentProp(material_3.RadioButton)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
   # Properties 
   enabled = enabled_property('anvil-m3-radiobutton-input')
   visible = HtmlTemplate.visible

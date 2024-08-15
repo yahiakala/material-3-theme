@@ -35,6 +35,7 @@ properties:
   default_value: null
   include_none_option: true
 - {name: italic, type: boolean, default_value: false, description: 'If True, this component’s text will be italic.', group: Text, designer_hint: font-italic}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: text, type: string, default_value: '', description: The text displayed on this component., multiline: true, group: Key Properties, default_binding_prop: true, important: false}
 - {name: underline, type: boolean, default_value: false, description: 'If True, this component’s text will be underlined.', designer_hint: font-underline, group: Text}
 - {name: visible, type: boolean, default_value: true, description: 'If True, the component will be displayed.', group: Look and Feel, important: true, designer_hint: visible}

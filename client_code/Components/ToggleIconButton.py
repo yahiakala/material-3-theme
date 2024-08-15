@@ -7,9 +7,10 @@ selected_property = {"name": "selected", "type": "boolean", "group": "Interactio
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "The border style when the component is in the selected state. Accepts any valid CSS border value."}
 selected_background_property = {"name": "selected_background", "type": "color", "group": "Toggled Style" , "description": "The background color when the component is in the selected state."}
 selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "The icon color when the component is in the selected state."}
-    
+tag_property = {"name": "tag", "type": "object", "important": False, "group": "Other", "description": "Use this property to store any extra data for the component."}
+   
 class ToggleIconButton(IconButton):
-  _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
+  _anvil_properties_ = [tag_property, selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
@@ -72,6 +73,7 @@ class ToggleIconButton(IconButton):
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_border",type:"string",description:"The border style when the component is in the selected state. Accepts any valid CSS border value."}
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_background",type:"color",description:"The background colour when the component is in the selected state."}
   #!componentProp(material_3.ToggleIconButton)!1: {name:"selected_icon_color",type:"color",description:"The icon colour when the component is in the selected state."}
+  #!componentProp(material_3.ToggleIconButton)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.ToggleIconButton)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
   

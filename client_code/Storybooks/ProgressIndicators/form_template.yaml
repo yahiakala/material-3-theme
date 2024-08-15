@@ -58,7 +58,7 @@ components:
           type: form:Components.CircularProgressIndicator
           layout_properties: {grid_position: 'GOCHRS,EAGRUI'}
         - name: linear_progress_indicator_determinate
-          properties: {visible: true, type: determinate, progress: 47.75, color: ''}
+          properties: {visible: true, type: determinate, progress: 33, color: '', progress_color: '', track_color: '', align: right}
           type: form:Components.LinearProgressIndicator
           layout_properties: {grid_position: 'FJJOWZ,JMVCER'}
       - name: flow_panel_2
@@ -80,7 +80,7 @@ components:
             type: form:Components.CircularProgressIndicator
             layout_properties: {grid_position: 'KTGWGP,OENKJQ'}
           - name: linear_progress_indicator
-            properties: {visible: true, color: '', type: indeterminate, progress: 60}
+            properties: {visible: true, color: '', type: indeterminate, progress: 60, track_color: '', progress_color: '', align: right}
             type: form:Components.LinearProgressIndicator
             layout_properties: {grid_position: 'FGXMBK,JSORRS'}
   - name: card_2

@@ -81,7 +81,8 @@ class Switch(SwitchTemplate):
   #!componentProp(material_3.Switch)!1: {name:"selected_icon",type:"enum",description:"Optional icon to appear on the Switch when toggled on."} 
   #!componentProp(material_3.Switch)!1: {name:"unselected_icon",type:"enum",description:"Optional icon to appear on the Switch when toggled off."} 
   #!componentProp(material_3.Switch)!1: {name:"selected",type:"boolean",description:"If True, this component is toggled on."} 
-  
+  #!componentProp(material_3.Switch)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
   enabled = enabled_property('anvil-m3-switch-input')
   align = style_property('anvil-m3-switch-container', 'justifyContent', 'align')
   visible = HtmlTemplate.visible

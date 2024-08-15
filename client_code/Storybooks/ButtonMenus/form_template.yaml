@@ -71,12 +71,20 @@ components:
             properties: {text: menu 2, appearance: filled, menu_background: ''}
             type: form:Components.ButtonMenu
             components:
-            - name: menu_item_1_copy_1
-              properties: {text: Item 1, leading_icon: null, hide_leading_icon: false}
+            - name: menu_item_5
+              properties: {text: Item 1, leading_icon: visibility, add_icon_space: false, leading_icon_size: null, trailing_icon: check, bold: false}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
+              event_bindings: {click: menu_item_5_click}
             - name: menu_item_2_copy_1
-              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              properties:
+                text: Item 2
+                leading_icon: copy_all
+                trailing_text: cmd + C
+                leading_icon_size: null
+                leading_icon_color: ''
+                trailing_icon_color: ''
+                margin: ['', null, null, null]
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_3_copy_1
@@ -88,7 +96,7 @@ components:
               type: form:Components.Divider
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             - name: menu_item_4
-              properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
+              properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up, trailing_icon_size: null, trailing_icon_color: ''}
               type: form:Components.MenuItem
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
             layout_properties: {}

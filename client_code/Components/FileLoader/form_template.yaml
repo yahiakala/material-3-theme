@@ -1,5 +1,6 @@
 properties:
 - {name: file, type: object, default_binding_prop: true, important: true, description: 'The currently selected file (or the first, if multiple files are selected). This is a Media object.', group: Other}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: file_types, type: string, default_value: '', important: true, description: 'Specify what type of file to upload. Can accept a MIME type (eg "image/png" or "image/*"), an extension (eg ".png") or a comma-separated set of them (eg ".png,.jpg,.jpeg")', group: Other}
 - {name: files, type: object, important: true, description: A list of currently selected files. Each file is a Media object., group: Other}
 - {name: multiple, type: boolean, default_value: false, important: false, description: 'If True, this FileLoader can load multiple files at the same time', group: Other}

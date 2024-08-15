@@ -8,17 +8,20 @@ from anvil import HtmlTemplate
 class Link(LinkTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.temp_url = None
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-link'].removeEventListener("click", self._handle_click)
+    self.revoke_tmp_url()
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
@@ -60,7 +63,8 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
   #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  
+  #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+
   text = innerText_property('anvil-m3-link-text')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
@@ -84,17 +88,22 @@ class Link(LinkTemplate):
   def url(self, value):
     self._props['url'] = value
     self.dom_nodes['anvil-m3-link'].removeAttribute("download")
+    self.revoke_tmp_url()
     if value: 
       if isinstance(value, Media):
         if value.name:
           self.dom_nodes['anvil-m3-link'].setAttribute("download", value.name)
-        with anvil.media.TempUrl(value) as url:
-          self.dom_nodes['anvil-m3-link'].href = url
+        self.temp_url = anvil.media.TempUrl(value)
+        self.dom_nodes['anvil-m3-link'].href = self.temp_url.url
         # self.dom_nodes['anvil-m3-link'].href = value.get_url()
       else:
         self.dom_nodes['anvil-m3-link'].href = value
     else:
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
+
+  def revoke_tmp_url(self):
+    if self.temp_url:
+      self.temp_url.revoke()
 
   @property
   def icon_size(self):

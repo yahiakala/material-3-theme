@@ -1,3 +1,11 @@
+properties:
+- name: margin
+  type: margin
+  important: true
+  default_binding_prop: true
+  default_value: ['16', '16', '16', '16']
+  description: The margin (pixels) of this component
+  group: Layout
 is_package: true
 toolbox_item: {hidden: true}
 custom_component: true

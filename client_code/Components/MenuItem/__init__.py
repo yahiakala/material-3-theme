@@ -5,7 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import innerText_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
+from ...Functions import innerText_property, margin_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
 
 import anvil.designer
 
@@ -17,29 +17,38 @@ class MenuItem(MenuItemTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
 
-
   @property
   def leading_icon(self):
-    return self._leading_icon
+    return self._props.get('leading_icon')
     
   @leading_icon.setter
   def leading_icon(self, value):
-    self._leading_icon = value
+    self._props['leading_icon'] = value
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
+    if value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
+    elif not value and not self.add_icon_space:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
     
   text = innerText_property('anvil-m3-menuItem-labelText')
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
   font_size = font_size_property('anvil-m3-menuItem-labelText')
+  leading_icon_size = font_size_property('anvil-m3-menuItem-leadingIcon', 'leading_icon_size')
+  trailing_icon_size = font_size_property('anvil-m3-menuItem-trailingIcon', 'trailing_icon_size')
   font_family = font_family_property('anvil-m3-menuItem-labelText', 'font_family')
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
+  trailing_icon_color = color_property('anvil-m3-menuItem-trailingIcon', 'color', 'trailing_icon_color')
+  leading_icon_color = color_property('anvil-m3-menuItem-leadingIcon', 'color', 'leading_icon_color')
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   visible = HtmlTemplate.visible
+  margin = margin_property('anvil-m3-menuItem-container')
 
   @property
   def trailing_icon(self):
     return self._trailing_icon
+    
   @trailing_icon.setter
   def trailing_icon(self, value):
     self._trailing_icon = value
@@ -48,24 +57,29 @@ class MenuItem(MenuItemTemplate):
   @property
   def trailing_text(self):
     return self._trailing_text
+    
   @trailing_text.setter
   def trailing_text(self, value):
     self._trailing_text = value
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
 
-  #TODO: rename this
   @property 
-  def hide_leading_icon(self):
-    return self._hide_leading_icon
-  @hide_leading_icon.setter
-  def hide_leading_icon(self, value):
-    self._hide_leading_icon = value
-    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.toggle("anvil-m3-menuItem-hideLeadingIcon", value)
-  # anvil-m3-menuItem-hideLeadingIcon
+  def add_icon_space(self):
+    return self._props.get('add_icon_space')
+    
+  @add_icon_space.setter
+  def add_icon_space(self, value):
+    self._props['add_icon_space'] = value
+    if value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
+    elif not self.leading_icon and not value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
+      
 
   @property
   def enabled(self):
     return self._enabled
+    
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
@@ -86,8 +100,6 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
-#TODO: props to add: margin, leading_icon_color, trailing_icon_color, role
-
 
   #!componentProp(material_3.MenuItem)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.MenuItem)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
@@ -97,16 +109,19 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.MenuItem)!1: {name:"text",type:"string",description:"The text displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_text",type:"string",description:"The text to be displayed on the right side of the component. Will be to the left of the trailing icon if both exist."}
   #!componentProp(material_3.MenuItem)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the Button’s text will be underlined."}
-  #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the Button’s text will be italic."}
-  #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the Button’s text will be bold."}
-  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
-  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the icon displayed on the Button."}
-  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The colour of the menu."}
-  #!componentProp(material_3.MenuItem)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
+  #!componentProp(material_3.MenuItem)!1: {name:"underline",type:"boolean",description:"If True, the text will be underlined."}
+  #!componentProp(material_3.MenuItem)!1: {name:"italic",type:"boolean",description:"If True, the text will be italic."}
+  #!componentProp(material_3.MenuItem)!1: {name:"bold",type:"boolean",description:"If True, the text will be bold."}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the tailing icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_size",type:"number",description:"The size (pixels) of the leading icon displayed on this component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
+  #!componentProp(material_3.MenuItem)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 

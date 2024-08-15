@@ -1,6 +1,7 @@
 properties:
 - {description: Whether or not the checkbox is checked., group: Key Properties, name: checked, default_binding_prop: true, type: boolean, important: true, designer_hint: toggle, designerHint: toggle, default_value: false}
 - {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {description: 'If True, this component allows user interaction.', group: Interaction, name: enabled, type: boolean, important: true, designer_hint: enabled, designerHint: enabled, default_value: true}
 - {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
 - name: text

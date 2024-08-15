@@ -1,6 +1,7 @@
 properties:
 - {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Look and Feel}
 - {name: label_bold, type: boolean, default_value: false, important: false, description: 'If True, the label text will be bold', group: Label Style}
+- {name: tag, type: object, group: Other, important: false, description: Use this property to store any extra data for the component.}
 - {name: enabled, type: boolean, default_value: true, important: true, description: 'If True, this component allows user interaction.', group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: label_font_family, type: string, default_value: '', important: false, description: The font family to use for this component's label, group: Label Style}
 - {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels, group: Label Style}
@@ -75,17 +76,7 @@ toolbox_item:
   icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
   hidden: true
 custom_component: true
-components:
-- name: menu
-  properties: {visible: false}
-  type: form:Components.Menu
-  layout_properties: {slot: anvil-m3-dropdownMenu-slot}
-  components: []
-- name: selection_field
-  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' ', bold_display: false}
-  type: form:Components.TextInput.TextField
-  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-  event_bindings: {}
+custom_component_container: true
 container:
   type: HtmlTemplate
   properties:
@@ -96,4 +87,13 @@ container:
       </div>
     visible: true
   event_bindings: {show: form_show}
-custom_component_container: true
+components:
+- properties: {visible: false}
+  type: form:Components.Menu
+  layout_properties: {slot: anvil-m3-dropdownMenu-slot}
+  name: menu
+- properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' ', bold_display: false}
+  type: form:Components.TextInput.TextField
+  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
+  event_bindings: {}
+  name: selection_field

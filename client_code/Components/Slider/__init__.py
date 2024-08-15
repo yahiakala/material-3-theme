@@ -115,6 +115,7 @@ class Slider(SliderTemplate):
   #!componentProp(material_3.Slider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Slider)!1: {name:"track_color",type:"color",description:"The colour of the slider track."}
   #!componentProp(material_3.Slider)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(material_3.Slider)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}  
       
