@@ -3,7 +3,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Storybooks.Cards}
-package_name: Material_3_Theme_2_0
+package_name: m3
 allow_embedding: false
 toolbox_sections:
 - packageName: Material_3_Theme_2_0
@@ -125,7 +125,7 @@ toolbox_sections:
   - title: Canvas
     icon: {light: /ide/img/toolbox/Canvas.svg, dark: /ide/img/toolbox/Canvas.dark.svg}
     component: {type: anvil.Canvas}
-name: Material 3 Theme 2.0
+name: Material 3 Theme
 runtime_options:
   version: 3
   client_version: '3'
