@@ -10,5 +10,13 @@ class Dropdowns(DropdownsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    self.dropdown_menu_4.items = [["First Option", 0], ["Second Option", 1]]
+
 
     # Any code you write here will run before the form opens.
+
+  def dropdown_menu_4_change(self, **event_args):
+    if self.dropdown_menu_4.selected_value:
+      self.label_1.text = self.dropdown_menu_4.selected_value[1]
+    else:
+      self.label_1.text = "nothing selected"

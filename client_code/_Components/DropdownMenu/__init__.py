@@ -192,7 +192,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
   items_font = property_without_callback("items_font")
   items_font_size = property_without_callback("items_font_size")
-
   
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
