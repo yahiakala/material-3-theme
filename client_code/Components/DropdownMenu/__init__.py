@@ -300,7 +300,8 @@ class DropdownMenu(DropdownMenuTemplate):
       self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
-        self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
+        if self._hoverIndex:
+          self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
         
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
