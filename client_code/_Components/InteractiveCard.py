@@ -4,7 +4,8 @@ import anvil.designer
 from ..Functions import property_with_callback
 
 #todo figure out how to get default value to work
-enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction."}
+another_proerty = {"name": "asdf", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "another_property"}
+enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "asdf"}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
 
 class InteractiveCard(Card):
