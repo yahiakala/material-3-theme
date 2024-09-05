@@ -66,7 +66,7 @@ class IconButton(IconButtonTemplate):
   align = style_property('anvil-m3-iconbutton-component', 'justifyContent', 'align')
   border = border_property('anvil-m3-iconbutton-container')
   icon_color = color_property('anvil-m3-iconbutton-icon', 'color', 'icon_color')
-  background = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-iconbutton-container', 'backgroundColor', 'background_color')
   margin = margin_property('anvil-m3-iconbutton-component')
   role = role_property('anvil-m3-iconbutton-container')
   tooltip = tooltip_property('anvil-m3-iconbutton-component')

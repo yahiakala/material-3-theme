@@ -30,7 +30,7 @@ components:
             type: form:_Components.IconButton
           - layout_properties: {}
             name: icon_button_2
-            properties: {appearance: Filled}
+            properties: {appearance: Filled, background_color: ''}
             type: form:_Components.IconButton
           - layout_properties: {}
             name: icon_button_2_copy
