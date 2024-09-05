@@ -18,7 +18,8 @@
   align-items: center;
   display: inline-flex;
   color: var(--anvil-m3-primary);
-  cursor: pointer
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .anvil-m3-fileloader-container .anvil-m3-fileloader-label {
