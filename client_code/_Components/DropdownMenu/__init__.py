@@ -321,7 +321,6 @@ class DropdownMenu(DropdownMenuTemplate):
     print('selected_value:', self.selected_value)
     print('selected_menuItem:', self._selected_menuItem)
     if self.selected_value is None:
-      print("it's none")
       # if self.placeholder:
       #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self._hoverIndex = None
@@ -329,6 +328,8 @@ class DropdownMenu(DropdownMenuTemplate):
       print('else')
       # if not self.label_text:
       #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
+      #NOTE FROM BROOKE: Dropdowns are broken in my test app because of this line. I get a value error that None is not in list
+      print(self._children)
       self._hoverIndex = self._children.index(self._selected_menuItem)
     self._update_hover_styles()
 
