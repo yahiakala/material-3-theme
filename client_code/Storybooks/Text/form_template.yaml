@@ -4,16 +4,16 @@ components:
     name: text_head
     properties: {font_size: 25, text: Text and Heading Components, text_color: 'theme:Primary'}
     type: form:_Components.Text
-  - layout_properties: {grid_position: ',undefined'}
+  - layout_properties: {grid_position: ''}
     name: typography_link
     properties: {text: Typography in Material 3, url: 'https://m3.material.io/styles/typography/overview'}
     type: form:_Components.Link
-  - layout_properties: {grid_position: 'VZCCDQ,OIYCGE JFHDIX,YHHRRL'}
-    name: heading_10
-    properties: {scale: large, style: title, text: Text}
-    type: form:_Components.Heading
   - components:
     - components:
+      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: heading_10
+        properties: {scale: large, style: title, text: Text}
+        type: form:_Components.Heading
       - components:
         - layout_properties: {grid_position: 'ZXLMJG,PLIPRV'}
           name: text_1
@@ -21,7 +21,7 @@ components:
           type: form:_Components.Text
         - layout_properties: {grid_position: 'ZXLMJG,PDGWTZ'}
           name: text_4
-          properties: {scale: large, text: Body Large}
+          properties: {material_icon: null, scale: large, text: Body Large}
           type: form:_Components.Text
         - layout_properties: {grid_position: 'WJXTUG,YFNUEK'}
           name: text_2
@@ -47,11 +47,11 @@ components:
       name: card_content_container_2
       properties: {}
       type: form:_Components.Card.CardContentContainer
-    layout_properties: {grid_position: 'VZCCDQ,OIYCGE XXLMMI,VMYKZO'}
+    layout_properties: {grid_position: ''}
     name: card_1
     properties: {}
     type: form:_Components.Card
-  - layout_properties: {grid_position: 'VZCCDQ,MZWSSO WWYVUF,QOLWTO'}
+  - layout_properties: {grid_position: 'WWYVUF,QOLWTO'}
     name: heading_11
     properties: {scale: large, style: title, text: Heading}
     type: form:_Components.Heading
@@ -60,7 +60,7 @@ components:
       - components:
         - layout_properties: {grid_position: 'BQBWMG,GFZEWW KMVLFD,AUHIPA'}
           name: heading_1
-          properties: {scale: large, style: title, text: Title Large}
+          properties: {material_icon: null, scale: large, style: title, text: Title Large}
           type: form:_Components.Heading
         - layout_properties: {grid_position: 'BQBWMG,GFZEWW SECXWY,PFVBVJ'}
           name: heading_2
@@ -106,13 +106,13 @@ components:
       name: text_7
       properties: {align: center}
       type: form:_Components.Text
-    layout_properties: {grid_position: 'VZCCDQ,MZWSSO ILWORC,OFLBFB'}
+    layout_properties: {grid_position: 'ILWORC,OFLBFB'}
     name: card_2
     properties: {}
     type: form:_Components.Card
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{"OIYCGE":15,"MZWSSO":45}'}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
