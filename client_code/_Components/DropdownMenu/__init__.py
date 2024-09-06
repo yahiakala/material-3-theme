@@ -20,6 +20,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._design_name = ""
     self.init_components(**properties)
     self._cleanup = noop
+    print('dropdown')
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self._field = get_dom_node(self.selection_field).querySelector("input")
@@ -317,6 +318,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
+    print('child_clicked')
     
     if self.selected_value is None:
       print("it's none")
