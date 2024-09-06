@@ -18,3 +18,7 @@ class Dropdowns(DropdownsTemplate):
       self.label_1.text = self.dropdown_menu_4.selected_value[1]
     else:
       self.label_1.text = "nothing selected"
+
+  def dropdown_menu_2_change(self, **event_args):
+    """This method is called when an item is selected"""
+    print('hello')

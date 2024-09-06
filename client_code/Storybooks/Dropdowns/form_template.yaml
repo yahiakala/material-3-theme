@@ -64,7 +64,8 @@ components:
                 tooltip: This is a drop down menu
                 visible: true
               type: form:_Components.DropdownMenu
-            - layout_properties: {expand: false, width: 273}
+            - event_bindings: {change: dropdown_menu_2_change}
+              layout_properties: {expand: false, width: 273}
               name: dropdown_menu_2
               properties:
                 allow_none: false
