@@ -319,6 +319,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
     
     if self.selected_value is None:
+      print("it's none")
       # if self.placeholder:
       #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
       self._hoverIndex = None
