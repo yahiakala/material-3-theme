@@ -158,7 +158,10 @@ class Heading(HeadingTemplate):
   def material_icon(self, value):
     self._material_icon = value
     if value:
-      self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+      self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = "8px"
+    else:
+      self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = ""
+    self.dom_nodes['anvil-m3-heading-icon'].innerText = value
 
   @property
   def style(self):
