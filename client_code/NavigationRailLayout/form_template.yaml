@@ -52,7 +52,7 @@ properties:
   description: The vertical position of the content in the navigation rail.
   important: true
   name: navigation_rail_vertical_align
-  options: [top, enter, bottom]
+  options: [top, center, bottom]
   type: enum
 slots:
   slot_1:
