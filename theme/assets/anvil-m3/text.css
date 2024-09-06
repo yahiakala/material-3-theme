@@ -153,6 +153,7 @@
 
 .anvil-m3-link {
   display: flex;
+  text-decoration: none;
 }
 
 a.anvil-m3-link:hover, a.anvil-m3-link:focus {
