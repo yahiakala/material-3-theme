@@ -462,3 +462,10 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
+
+
+
+# todo: 
+# single source of truth for the selected value and selected menu value -> they should be able to tied in one without having to juggle the state management, should check if tuples again work.
+# if user sets one without the other -> we should be able to handle and have them sync up. 
+# how to handle invalid values (cuz could be set i code for example)
