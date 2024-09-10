@@ -22,3 +22,6 @@ class Dropdowns(DropdownsTemplate):
   def dropdown_menu_2_change(self, **event_args):
     """This method is called when an item is selected"""
     print('hello')
+
+  def set_dd_click(self, **event_args):
+    self.dropdown_menu_3.selected_value = "TEEHEEHEE"
