@@ -206,7 +206,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
 
     # todo: check if this actually makes sense and isn't super hacky. When
-    self._menuNode.addEventListener('click', self._child_clicked)
+    self._menuNode.addEventListener('mouseup', self._child_clicked)
 
   def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self._handle_keyboard_events)
@@ -214,7 +214,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self._handle_selection_field_blur)
-    self._menuNode.removeEventListener('click', self._child_clicked)
+    self._menuNode.removeEventListener('mouseup', self._child_clicked)
     self._cleanup()
     self._menuNode.remove()
 
@@ -229,6 +229,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._has_focus = False
     
   def _handle_keyboard_events(self, event):
+    print("opening", self.label_text)
     if not self._has_focus:
       return
     else:
