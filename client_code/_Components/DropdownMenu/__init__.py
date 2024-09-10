@@ -327,7 +327,6 @@ class DropdownMenu(DropdownMenuTemplate):
       # if not self.label_text:
       #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       #NOTE FROM BROOKE: Dropdowns give me an error in my test app because of this line. I get a value error that None is not in list. Dropdowns are still usable though
-      
       print('selected_menuItem in if:', self._selected_menuItem)
       self._hoverIndex = self._children.index(self._selected_menuItem)
     self._update_hover_styles()
