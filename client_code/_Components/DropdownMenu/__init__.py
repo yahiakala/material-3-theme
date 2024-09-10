@@ -386,9 +386,12 @@ class DropdownMenu(DropdownMenuTemplate):
 
       def _handle_selection_click(value = item, menuItem = selection, **e):
         print("child item itself being clicked")
-        self.selected_value = value
+        
         self._selected_menuItem = menuItem
+        self.selected_value = value
+        
         print(self.selected_value, self._selected_menuItem)
+
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
