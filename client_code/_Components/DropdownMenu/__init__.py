@@ -282,6 +282,7 @@ class DropdownMenu(DropdownMenuTemplate):
           child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
 
   def _update_hover_styles(self):
+    print("updating the hover style")
     self._clear_hover_styles()
     if self._hoverIndex is None:
       return
@@ -318,7 +319,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
-    print("child clicked")
+    print("child clicked. hover gets set here")
     event.stopPropagation()
     self._set_menu_visibility(False)
     if self.selected_value is None:
@@ -329,7 +330,7 @@ class DropdownMenu(DropdownMenuTemplate):
       # if not self.label_text:
       #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       self._hoverIndex = self._children.index(self._selected_menuItem)
-        
+    print("end ")   
     self._update_hover_styles()
 
   def form_show(self, **event_args):
@@ -361,7 +362,6 @@ class DropdownMenu(DropdownMenuTemplate):
       p.enabled = False
 
     if self.allow_none or self.placeholder:
-      print("placeholder child click")
       p.add_event_handler('click', _handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
 
@@ -383,7 +383,7 @@ class DropdownMenu(DropdownMenuTemplate):
         selection.text = item
 
       def _handle_selection_click(value = item, menuItem = selection, **e):
-        print("click menuItem")
+        print("click menuItem. selected menuItem and value gets set here")
         self.selected_value = value
         self._selected_menuItem = menuItem
 
