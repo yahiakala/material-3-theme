@@ -319,7 +319,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
-    print("child clicked. hover gets set here")
+    print("child clicked. hover gets set here", self._selected_menuItem.text)
     event.stopPropagation()
     self._set_menu_visibility(False)
     if self.selected_value is None:
@@ -330,7 +330,8 @@ class DropdownMenu(DropdownMenuTemplate):
       # if not self.label_text:
       #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
       self._hoverIndex = self._children.index(self._selected_menuItem)
-    print("end ")   
+    print("end of child_clicked")
+    
     self._update_hover_styles()
 
   def form_show(self, **event_args):
