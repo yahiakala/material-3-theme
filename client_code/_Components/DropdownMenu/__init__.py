@@ -229,7 +229,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._has_focus = False
     
   def _handle_keyboard_events(self, event):
-    print("opening", self.label_text)
     if not self._has_focus:
       return
     else:
@@ -319,7 +318,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
-    print("child clicked. hover gets set here", self._selected_menuItem.text)
+    print("child clicked. hoverIndex gets set here")
+    if self._selected_menuItem:
+      print("selected menuItem", self._selected_menuItem.value)
     event.stopPropagation()
     self._set_menu_visibility(False)
     if self.selected_value is None:
