@@ -382,7 +382,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
       def _handle_selection_click(value = item, menuItem = selection, **e):
         self.selected_value = value
-        print(menuItem)
+        print('in _handle_selection_click menuItem:', menuItem)
         self._selected_menuItem = menuItem
 
       selection.add_event_handler('click', _handle_selection_click)
