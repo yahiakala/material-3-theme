@@ -302,11 +302,22 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
+
+      # dealing with hover
       if self.allow_none is True:
         if self.selected_value is None:
           self._hoverIndex = 0
         elif self.selected_value in self.items:
-          if self.selected_value instanceof
+          
+          if isinstance(self.selected_value, tuple):
+            pass
+          else:
+            for index, child in enumerate(self._children):
+              if child.text is self.selected_value:
+                self._hoverIndex = index
+            #   self._hoverIndex = self._children.index(self._selected_menuItem)
+            # find the child that has the text that is the amr as selected value
+            
 
       # if isinstance(item, tuple):
       #   selection.text = item[0]
