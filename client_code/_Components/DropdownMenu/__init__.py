@@ -175,7 +175,6 @@ class DropdownMenu(DropdownMenuTemplate):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
-    # self.raise_event("change")
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -205,7 +204,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
 
-    # todo: check if this actually makes sense and isn't super hacky. When
     self._menuNode.addEventListener('click', self._child_clicked)
 
   def _on_cleanup(self, **event_args):
@@ -277,8 +275,10 @@ class DropdownMenu(DropdownMenuTemplate):
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
-        if isinstance(child, MenuItem):
-          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+        # if isinstance(child, MenuItem):
+        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+        
+      
 
   def _update_hover_styles(self):
 
@@ -336,7 +336,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._create_menu_items()
     # selection_field_width = get_dom_node(self.selection_field).offsetWidth
     # self._menuNode.style.width = f"{selection_field_width}px"
-    self._children = self.menu.get_components()
+    
+    # self._children = self.menu.get_components()
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
@@ -364,6 +365,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if self.allow_none or self.placeholder:
       p.add_event_handler('click', _handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
+      self._children = [p]
 
     for item in self.items:
       selection = MenuItem()
@@ -391,6 +393,10 @@ class DropdownMenu(DropdownMenuTemplate):
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
+      if self._children is None:
+        self._children = [selection]
+      else:
+        self._children.append(selection)
 
 
 
