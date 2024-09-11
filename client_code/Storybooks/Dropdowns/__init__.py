@@ -21,4 +21,16 @@ class Dropdowns(DropdownsTemplate):
 
   def dropdown_menu_2_change(self, **event_args):
     """This method is called when an item is selected"""
-    print('hello')
+    # print('hello')
+    pass
+
+  def set_dd_click(self, **event_args):
+    self.dropdown_menu_3.selected_value = "TEEHEEHEE"
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.drop_down_1.selected_value = "something else"
+
+  def button_2_click(self, **event_args):
+    """This method is called when the component is clicked."""
+    self.dropdown_menu_2.selected_value = self.dropdown_menu_2.items[2]

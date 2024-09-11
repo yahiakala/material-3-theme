@@ -26,7 +26,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self._hoverIndex = None
     self._children = None
-    self._selected_menuItem = None
 
     self.selected_value = None
 
@@ -171,11 +170,15 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    if isinstance(value, tuple):
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
+    if (value is None and self.allow_none) or (value in self.items):
+      if value is None and self.allow_none:
+        self._hoverIndex = None
+      if isinstance(value, tuple):
+        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
+      else:
+        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
     else:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
-    self.raise_event("change")
+      self.selection_field.dom_nodes['anvil-m3-textfield'].value = "<Invalid value>"
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -204,6 +207,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
+
     self._menuNode.addEventListener('click', self._child_clicked)
 
   def _on_cleanup(self, **event_args):
@@ -275,9 +279,9 @@ class DropdownMenu(DropdownMenuTemplate):
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
-        if isinstance(child, MenuItem):
-          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
-
+        # if isinstance(child, MenuItem):
+        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+        
   def _update_hover_styles(self):
     self._clear_hover_styles()
     if self._hoverIndex is None:
@@ -297,6 +301,24 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
+      
+      # dealing with hover
+      if self.allow_none is True:
+        if self.selected_value is None:
+          self._hoverIndex = 0  
+      elif self.selected_value in self.items:
+        for index, child in enumerate(self._children):
+          if isinstance(self.selected_value, tuple):
+            if child.text == self.selected_value:
+              self._hoverIndex = index
+          else:
+            if child.text is self.selected_value:
+              self._hoverIndex = index
+      else:
+        self._hoverIndex = None
+          
+      self._update_hover_styles()
+
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
         if self._hoverIndex:
@@ -317,25 +339,13 @@ class DropdownMenu(DropdownMenuTemplate):
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
-    print('selected_value:', self.selected_value)
-    print('selected_menuItem:', self._selected_menuItem)
-    if self.selected_value is None:
-      # if self.placeholder:
-      #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
-      self._hoverIndex = None
-    else:
-      # if not self.label_text:
-      #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
-      #NOTE FROM BROOKE: Dropdowns give me an error in my test app because of this line. I get a value error that None is not in list. Dropdowns are still usable though
-      print(self._children)
-      self._hoverIndex = self._children.index(self._selected_menuItem)
-    self._update_hover_styles()
 
   def form_show(self, **event_args):
     self._create_menu_items()
     # selection_field_width = get_dom_node(self.selection_field).offsetWidth
     # self._menuNode.style.width = f"{selection_field_width}px"
-    self._children = self.menu.get_components()
+    
+    # self._children = self.menu.get_components()
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
@@ -355,6 +365,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     def _handle_select_placeholder(**e):
       if self.allow_none: self.selected_value = None
+      self.raise_event("change")
 
     if not self.allow_none:
       p.enabled = False
@@ -362,6 +373,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if self.allow_none or self.placeholder:
       p.add_event_handler('click', _handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
+      self._children = [p]
 
     for item in self.items:
       selection = MenuItem()
@@ -375,18 +387,22 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if isinstance(item, tuple):
-        selection.text = item[0]
-      else:
-        selection.text = item
+      # if isinstance(item, tuple):
+      #   selection.text = item[0]
+      # else:
+      #   selection.text = item
+      selection.text = item
 
-      def _handle_selection_click(value = item, menuItem = selection, **e):
+      def _handle_selection_click(value = item, **e):
         self.selected_value = value
-        print('in _handle_selection_click menuItem:', menuItem)
-        self._selected_menuItem = menuItem
+        self.raise_event("change")
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
+      if self._children is None:
+        self._children = [selection]
+      else:
+        self._children.append(selection)
 
 # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -454,3 +470,4 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
+
