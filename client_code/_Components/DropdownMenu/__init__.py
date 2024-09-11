@@ -172,8 +172,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_selected_value(self, value):
     if (value is None and self.allow_none) or (value in self.items):
-    # check if the value is accurate -> if no then set to invalid state
-    # figure out the hover here and remove it from the actual select
+      if value is None and self.allow_none:
+        self._hoverIndex = None
       if isinstance(value, tuple):
         self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
       else:
