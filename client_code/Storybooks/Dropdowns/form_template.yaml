@@ -141,11 +141,20 @@ components:
         name: flow_panel_2
         properties: {}
         type: FlowPanel
-      - event_bindings: {click: set_dd_click}
+      - components:
+        - event_bindings: {click: set_dd_click}
+          name: set_dd
+          properties: {text: Set dropdown 3 to something wrong}
+          type: form:_Components.Button
+        - event_bindings: {click: button_2_click}
+          layout_properties: {}
+          name: button_2
+          properties: {text: set value of dropdown 2}
+          type: form:_Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
-        name: set_dd
-        properties: {text: Set dropdown 3 to something wrong}
-        type: form:_Components.Button
+        name: flow_panel_5
+        properties: {}
+        type: FlowPanel
       - layout_properties: {slot: anvil-m3-card-content-container-slot}
         name: drop_down_1
         properties:

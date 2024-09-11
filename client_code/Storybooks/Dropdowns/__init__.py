@@ -29,3 +29,7 @@ class Dropdowns(DropdownsTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.drop_down_1.selected_value = "something else"
+
+  def button_2_click(self, **event_args):
+    """This method is called when the component is clicked."""
+    self.dropdown_menu_2.selected_value = self.dropdown_menu_2.items[2]
