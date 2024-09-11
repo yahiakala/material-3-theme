@@ -88,6 +88,7 @@ class Link(LinkTemplate):
   def url(self, value):
     self._props['url'] = value
     self.dom_nodes['anvil-m3-link'].removeAttribute("download")
+    self.dom_nodes['anvil-m3-link'].removeAttribute("target")
     self.revoke_tmp_url()
     if value: 
       if isinstance(value, Media):
@@ -98,6 +99,7 @@ class Link(LinkTemplate):
         # self.dom_nodes['anvil-m3-link'].href = value.get_url()
       else:
         self.dom_nodes['anvil-m3-link'].href = value
+        self.dom_nodes['anvil-m3-link'].setAttribute("target", "_blank")
     else:
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
 
