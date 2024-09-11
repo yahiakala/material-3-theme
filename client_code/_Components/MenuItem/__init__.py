@@ -5,7 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import innerText_property, margin_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
+from ...Functions import property_with_callback, innerText_property, margin_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property
 
 import anvil.designer
 
@@ -30,7 +30,7 @@ class MenuItem(MenuItemTemplate):
     elif not value and not self.add_icon_space:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
     
-  text = innerText_property('anvil-m3-menuItem-labelText')
+  # text = innerText_property('anvil-m3-menuItem-labelText')
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
@@ -44,6 +44,19 @@ class MenuItem(MenuItemTemplate):
   background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-menuItem-container')
+
+  # def innerText_property(dom_node_name, prop_name="text"):
+  # def set_innerText(self, value):
+  #   self.dom_nodes[dom_node_name].innerText = value
+  # return property_with_callback(prop_name, set_innerText)
+
+  
+  def _set_text(self, value):
+    if isinstance(value, tuple):
+      self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value[0]
+    else:
+      self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
+  text = property_with_callback("text", _set_text)
 
   @property
   def trailing_icon(self):

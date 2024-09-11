@@ -270,7 +270,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
-    # self._update_hover_styles()
+    self._update_hover_styles()
 
   def _attempt_select(self):
     if not self._hoverIndex == None:
@@ -302,27 +302,24 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
-
+      
+      
       # dealing with hover
       if self.allow_none is True:
         if self.selected_value is None:
           self._hoverIndex = 0
-        elif self.selected_value in self.items:
-          
+      if self.selected_value in self.items:
+        for index, child in enumerate(self._children):
           if isinstance(self.selected_value, tuple):
-            pass
+            if child.text == self.selected_value:
+              self._hoverIndex = index
           else:
-            for index, child in enumerate(self._children):
-              if child.text is self.selected_value:
-                self._hoverIndex = index
-            #   self._hoverIndex = self._children.index(self._selected_menuItem)
-            # find the child that has the text that is the amr as selected value
-            
-
-      # if isinstance(item, tuple):
-      #   selection.text = item[0]
-      # else:
-      #   selection.text = item
+            if child.text is self.selected_value:
+              self._hoverIndex = index
+      else:
+        self._hoverIndex = None
+          
+      self._update_hover_styles()
 
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
@@ -344,16 +341,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
-    # if self.selected_value is None:
-    #   # if self.placeholder:
-    #   #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
-    #   self._hoverIndex = None
-    # else:
-    #   # if not self.label_text:
-    #   #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
-    #   self._hoverIndex = self._children.index(self._selected_menuItem)
-
-    # self._update_hover_styles()
 
   def form_show(self, **event_args):
     self._create_menu_items()
@@ -402,10 +389,11 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      if isinstance(item, tuple):
-        selection.text = item[0]
-      else:
-        selection.text = item
+      # if isinstance(item, tuple):
+      #   selection.text = item[0]
+      # else:
+      #   selection.text = item
+      selection.text = item
 
       def _handle_selection_click(value = item, menuItem = selection, **e):
         self._selected_menuItem = menuItem
@@ -418,8 +406,6 @@ class DropdownMenu(DropdownMenuTemplate):
         self._children = [selection]
       else:
         self._children.append(selection)
-
-
 
 # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
