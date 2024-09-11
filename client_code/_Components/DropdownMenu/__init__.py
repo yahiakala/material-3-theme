@@ -267,7 +267,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
-    self._update_hover_styles()
+    # self._update_hover_styles()
 
   def _attempt_select(self):
     if not self._hoverIndex == None:
@@ -280,14 +280,11 @@ class DropdownMenu(DropdownMenuTemplate):
         # if isinstance(child, MenuItem):
         child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
         
-      
-
-  def _update_hover_styles(self):
-
-    self._clear_hover_styles()
-    if self._hoverIndex is None:
-      return
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+  # def _update_hover_styles(self):
+  #   self._clear_hover_styles()
+  #   if self._hoverIndex is None:
+  #     return
+  #   self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
     self._set_menu_visibility()
@@ -322,17 +319,16 @@ class DropdownMenu(DropdownMenuTemplate):
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
-    if self.selected_value is None:
-      # if self.placeholder:
-      #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
-      self._hoverIndex = None
-    else:
-      # if not self.label_text:
-      #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
-      self._hoverIndex = self._children.index(self._selected_menuItem)
+    # if self.selected_value is None:
+    #   # if self.placeholder:
+    #   #    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
+    #   self._hoverIndex = None
+    # else:
+    #   # if not self.label_text:
+    #   #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
+    #   self._hoverIndex = self._children.index(self._selected_menuItem)
 
-    
-    self._update_hover_styles()
+    # self._update_hover_styles()
 
   def form_show(self, **event_args):
     self._create_menu_items()
