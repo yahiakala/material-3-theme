@@ -151,13 +151,17 @@
 
 /*LINK*/
 
-.anvil-m3-link {
+.anvil-m3-link-containr {
   display: flex;
   text-decoration: none;
 }
 
 a.anvil-m3-link:hover, a.anvil-m3-link:focus {
   text-decoration: none;
+}
+
+.anvil-m3-link {
+  width: fit-content
 }
 
 .anvil-m3-link, .anvil-m3-link:focus {
