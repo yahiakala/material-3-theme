@@ -175,7 +175,7 @@ class DropdownMenu(DropdownMenuTemplate):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
     else:
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
-    self.raise_event("change")
+    # self.raise_event("change")
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -318,7 +318,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
-    print("dropdown component child is clicked")
     event.stopPropagation()
     self._set_menu_visibility(False)
     if self.selected_value is None:
@@ -359,6 +358,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     def _handle_select_placeholder(**e):
       if self.allow_none: self.selected_value = None
+      self.raise_event("change")
 
     if not self.allow_none:
       p.enabled = False
@@ -385,13 +385,9 @@ class DropdownMenu(DropdownMenuTemplate):
         selection.text = item
 
       def _handle_selection_click(value = item, menuItem = selection, **e):
-        print("child item itself being clicked")
-        
         self._selected_menuItem = menuItem
         self.selected_value = value
-        
-        print(self.selected_value, self._selected_menuItem)
-
+        self.raise_event("change")
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
