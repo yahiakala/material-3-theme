@@ -300,6 +300,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.classList.toggle("anvil-m3-menu-hidden", not value)
     
     if value:
+      print(self.selected_value)
+      if self.selected_value in self.items:
+        
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
