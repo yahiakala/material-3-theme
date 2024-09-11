@@ -283,11 +283,11 @@ class DropdownMenu(DropdownMenuTemplate):
         # if isinstance(child, MenuItem):
         child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
         
-  # def _update_hover_styles(self):
-  #   self._clear_hover_styles()
-  #   if self._hoverIndex is None:
-  #     return
-  #   self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+  def _update_hover_styles(self):
+    self._clear_hover_styles()
+    if self._hoverIndex is None:
+      return
+    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
     self._set_menu_visibility()
@@ -300,11 +300,19 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.classList.toggle("anvil-m3-menu-hidden", not value)
     
     if value:
-      print(self.selected_value)
-      if self.selected_value in self.items:
-        
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
+      if self.allow_none is True:
+        if self.selected_value is None:
+          self._hoverIndex = 0
+        elif self.selected_value in self.items:
+          if self.selected_value instanceof
+
+      # if isinstance(item, tuple):
+      #   selection.text = item[0]
+      # else:
+      #   selection.text = item
+
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
         if self._hoverIndex:
