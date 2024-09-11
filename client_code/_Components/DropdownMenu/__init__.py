@@ -171,7 +171,7 @@ class DropdownMenu(DropdownMenuTemplate):
   label_text = property_with_callback("label_text", _set_label_text)
 
   def _set_selected_value(self, value):
-    # check if the value is accurate
+    # check if the value is accurate -> if no then set to invalid state
     # figure out the hover here and remove it from the actual select
     if isinstance(value, tuple):
       self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
