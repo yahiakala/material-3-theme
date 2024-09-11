@@ -149,7 +149,7 @@ components:
       - layout_properties: {slot: anvil-m3-card-content-container-slot}
         name: drop_down_1
         properties:
-          items: [a, b, c, d, e]
+          items: [a, a, a, a, a]
         type: DropDown
       - event_bindings: {click: button_1_click}
         layout_properties: {slot: anvil-m3-card-content-container-slot}
