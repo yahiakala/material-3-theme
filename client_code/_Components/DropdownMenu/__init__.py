@@ -327,8 +327,6 @@ class DropdownMenu(DropdownMenuTemplate):
     else:
       # if not self.label_text:
       #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
-      
-      # *****************************
       self._hoverIndex = self._children.index(self._selected_menuItem)
 
     
@@ -394,7 +392,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
 
-  def 
+
 
 # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
