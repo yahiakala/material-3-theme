@@ -26,7 +26,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self._hoverIndex = None
     self._children = None
-    self._selected_menuItem = None
 
     self.selected_value = None
 
@@ -179,7 +178,7 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
     else:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = "<INVALID>"
+      self.selection_field.dom_nodes['anvil-m3-textfield'].value = "<Invalid value>"
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -303,12 +302,11 @@ class DropdownMenu(DropdownMenuTemplate):
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
       
-      
       # dealing with hover
       if self.allow_none is True:
         if self.selected_value is None:
-          self._hoverIndex = 0
-      if self.selected_value in self.items:
+          self._hoverIndex = 0  
+      elif self.selected_value in self.items:
         for index, child in enumerate(self._children):
           if isinstance(self.selected_value, tuple):
             if child.text == self.selected_value:
@@ -395,8 +393,7 @@ class DropdownMenu(DropdownMenuTemplate):
       #   selection.text = item
       selection.text = item
 
-      def _handle_selection_click(value = item, menuItem = selection, **e):
-        self._selected_menuItem = menuItem
+      def _handle_selection_click(value = item, **e):
         self.selected_value = value
         self.raise_event("change")
 
@@ -474,9 +471,3 @@ class DropdownMenu(DropdownMenuTemplate):
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
 
-
-
-# todo: 
-# single source of truth for the selected value and selected menu value -> they should be able to tied in one without having to juggle the state management, should check if tuples again work.
-# if user sets one without the other -> we should be able to handle and have them sync up. 
-# how to handle invalid values (cuz could be set i code for example)
