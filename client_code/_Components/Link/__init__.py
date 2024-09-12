@@ -65,7 +65,7 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-  text = innerText_property('anvil-m3-link-text')
+  # text = innerText_property('anvil-m3-link-text')
   align = style_property('anvil-m3-link', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
@@ -123,10 +123,25 @@ class Link(LinkTemplate):
 
   @material_icon.setter
   def material_icon(self, value):
-    if value:
+    if value and self.text:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-link-icon'].innerText = value
+
+  @property
+  def text(self):
+    return self.props.get('text')
+
+  @text.setter
+  def text(self, value):
+    self.props['text'] = value
+    self.dom_nodes['anvil-m3-link-text'].innerText = value
+    if value:
+      self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
+    else:
+      self.dom_nodes['anvil-m3-link-text'].style.display = 'none'
+
+
 
 #!defClass(material_3, Link, anvil.Component)!:
