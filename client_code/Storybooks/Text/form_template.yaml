@@ -6,7 +6,7 @@ components:
     type: form:_Components.Text
   - layout_properties: {grid_position: ''}
     name: typography_link
-    properties: {text: Typography in Material 3, url: 'https://m3.material.io/styles/typography/overview'}
+    properties: {material_icon: '', text: Typography in Material 3, url: 'https://m3.material.io/styles/typography/overview'}
     type: form:_Components.Link
   - components:
     - components:
