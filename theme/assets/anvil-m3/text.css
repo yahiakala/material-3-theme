@@ -173,11 +173,11 @@ a.anvil-m3-link:hover, a.anvil-m3-link:focus {
   color: var(--anvil-m3-on-primary-container)
 }
 
-.anvil-m3-link:focus .anvil-m3-link-text, .anvil-m3-link:focus-visible .anvil-m3-link-text {
+/* .anvil-m3-link:focus .anvil-m3-link-text, .anvil-m3-link:focus-visible .anvil-m3-link-text {
   border: 2px solid var(--anvil-m3-primary);
   border-radius: 3px;
-}
-}
+} */
+
 
 .anvil-m3-link:focus:hover .anvil-m3-link-icon-container {
   color: var(--anvil-m3-on-primary-container)
