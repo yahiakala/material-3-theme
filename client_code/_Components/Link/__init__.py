@@ -131,11 +131,11 @@ class Link(LinkTemplate):
 
   @property
   def text(self):
-    return self.props.get('text')
+    return self._props.get('text')
 
   @text.setter
   def text(self, value):
-    self.props['text'] = value
+    self._props['text'] = value
     self.dom_nodes['anvil-m3-link-text'].innerText = value
     if value:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
