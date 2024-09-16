@@ -23,19 +23,19 @@ components:
     type: LinearPanel
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_1
         properties: {text: With Label}
         type: form:_Components.Heading
-      - components:
-        - layout_properties: {width: 268.1875}
-          name: text_3
-          properties: {text: 'No allow_none, no placeholder'}
-          type: form:_Components.Text
-        - layout_properties: {}
-          name: text_5
-          properties: {text: 'no allow_none, placeholder'}
-          type: form:_Components.Text
+      - layout_properties: {slot: card-content-container-slot}
+        name: text_3
+        properties: {text: 'No allow_none, no placeholder'}
+        type: form:_Components.Text
+      - layout_properties: {slot: card-content-container-slot}
+        name: text_5
+        properties: {text: 'no allow_none, placeholder'}
+        type: form:_Components.Text
+      - components: []
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         name: flow_panel_4
         properties: {align: left, vertical_align: full}
