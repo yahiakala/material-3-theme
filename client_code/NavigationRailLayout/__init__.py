@@ -147,4 +147,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     else:
       self._close_sidesheet()
 
+  content_padding = mpa_property('anvil-m3-link')
+
 #!defClass(material_3, NavigationRailLayout, anvil.Component)!:
