@@ -557,7 +557,7 @@ body {
   height: 100%;
   width: 300px;
   position: fixed;
-  transition: right 1050ms;
+  transition: right 250ms;
   bottom: 0;
   right: -301px; 
   top: 0;
