@@ -39,6 +39,12 @@ properties:
 - {default_value: '', description: The background color of Forms using this Layout., important: true, name: background_color, type: string}
 - {default_value: '', description: The default color of the text on Forms using this Layout., important: true, name: text_color, type: string}
 - {default_value: false, description: 'If True, the sidesheet will be shown on Forms using this Layout.', important: true, name: show_sidesheet, type: boolean}
+- default_value: ['8', '8', '8', '8']
+  description: The padding (pixels) around the content of the page
+  group: Layout
+  important: true
+  name: content_padding
+  type: padding
 slots:
   slot_1:
     index: 0

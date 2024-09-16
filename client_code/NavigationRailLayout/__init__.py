@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Functions import innerText_property, color_property, theme_color_to_css
+from ..Functions import innerText_property, color_property, theme_color_to_css, padding_property
 from anvil.js import window
 
 
@@ -88,6 +88,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom_app_bar","modal_navigation_drawer"],description:"The way the side navigation will collapse on mobile."}
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."} 
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
   
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
 
@@ -147,6 +148,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     else:
       self._close_sidesheet()
 
-  content_padding = mpa_property('anvil-m3-link')
+  content_padding = padding_property('anvil-m3-content')
 
 #!defClass(material_3, NavigationRailLayout, anvil.Component)!:

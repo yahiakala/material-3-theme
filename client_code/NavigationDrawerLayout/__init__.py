@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Functions import innerText_property, color_property, theme_color_to_css
+from ..Functions import innerText_property, color_property, theme_color_to_css, padding_property
 from anvil.js import window
 
 
@@ -83,6 +83,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
   #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
+  #!componentProp(material_3.NavigationDrawerLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
 
   navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
 
@@ -117,5 +118,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
       self._open_sidesheet()
     else:
       self._close_sidesheet()
+
+  content_padding = padding_property('anvil-m3-content')
 
 #!defClass(material_3, NavigationDrawerLayout, anvil.Component)!:
