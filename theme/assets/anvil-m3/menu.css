@@ -156,6 +156,6 @@
 }
 
 .anvil-m3-dropdownMenu-textfield.anvil-m3-dropdown-error
-.anvil-m3-textinput .anvil-m3-textinput-input:not(:disabled) {
+.anvil-m3-textinput:not(.outlined) .anvil-m3-textinput-input:not(:disabled) {
   box-shadow: inset 0 -1px 0 var(--anvil-m3-error)
 }
