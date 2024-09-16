@@ -54,6 +54,7 @@ properties:
   name: navigation_rail_vertical_align
   options: [top, center, bottom]
   type: enum
+- {default_value: '', important: true, name: content_padding, type: string}
 slots:
   slot_1:
     index: 0
