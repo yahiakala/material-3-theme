@@ -35,6 +35,10 @@ components_by_slot:
     name: text_field_3
     properties: {}
     type: form:_Components.TextInput.TextField
+  - layout_properties: {}
+    name: navigation_link_1
+    properties: {}
+    type: form:_Components.NavigationLink
   - components:
     - components:
       - layout_properties: {slot: anvil-m3-card-content-container-slot}
