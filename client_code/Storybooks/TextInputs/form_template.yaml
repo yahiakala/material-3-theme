@@ -32,7 +32,20 @@ components:
           - {code: 'self.item['''']', property: text, writeback: false}
           layout_properties: {grid_position: 'ZKYVEF,HZUOQJ'}
           name: text_area_4
-          properties: {appearance: outlined, bold_display: false, character_limit: 10, error: false, italic_display: false, italic_label: false, label_text: Label, supporting_text: Supporting text, underline_display: false, underline_label: false}
+          properties:
+            appearance: outlined
+            bold_display: false
+            character_limit: 10
+            error: false
+            italic_display: false
+            italic_label: false
+            label_text: Label
+            spacing:
+              margin: [auto, null, null, '40']
+              padding: [auto, null, null, null]
+            supporting_text: Supporting text
+            underline_display: false
+            underline_label: false
           type: form:_Components.TextInput.TextArea
         - layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
           name: text_area_1_copy_copy

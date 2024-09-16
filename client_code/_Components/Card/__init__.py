@@ -19,6 +19,9 @@ class Card(CardTemplate):
     #   self.dom_nodes['empty-image'].style.display = "none"
     #   self.dom_nodes['empty-content'].style.display = "none"
 
+  def add_component(self, component, slot="card-content-slot", **layout_props):
+    super().add_component(component, slot=slot, **layout_props)
+    
   def _set_class_of_nodes(self, appearance, val):
     self.dom_nodes['anvil-m3-card'].classList.toggle(f'anvil-m3-{appearance}', val)
     self.dom_nodes['content'].classList.toggle(f'anvil-m3-{appearance}', val)

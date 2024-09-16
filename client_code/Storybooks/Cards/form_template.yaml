@@ -19,11 +19,11 @@ components:
     type: FlowPanel
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_1
         properties: {text: Column card}
         type: form:_Components.Heading
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: text_1
         properties: {text: This card has content in it.}
         type: form:_Components.Text
@@ -38,14 +38,15 @@ components:
   - components:
     - layout_properties: {slot: card-content-slot}
       name: image_1
-      properties: {}
+      properties:
+        margin: ['0', null, '0', null]
       type: Image
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_2
         properties: {text: Column card with image}
         type: form:_Components.Heading
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: text_2
         properties: {text: This card has an image added outside of the CardContentContainer}
         type: form:_Components.Text
@@ -59,11 +60,11 @@ components:
     type: form:_Components.Card
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_3
         properties: {text: Row card}
         type: form:_Components.Heading
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: text_3
         properties: {text: This is a row oriented card. Content within the CardConent Container will still be oriented as a column}
         type: form:_Components.Text
@@ -85,15 +86,15 @@ components:
       properties:
         display_mode: zoom_to_fill
         height: 192.19140625
-        margin: ['', null, '', null]
+        margin: ['0', null, '0', null]
         source: _/theme/purple-background.jpg
       type: Image
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_4
         properties: {text: Row card with image}
         type: form:_Components.Heading
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: text_3_copy
         properties: {text: This is a row oriented card with an image added. Content within the CardConent Container will still be oriented as a column}
         type: form:_Components.Text

@@ -18,4 +18,6 @@ class CardContentContainer(CardContentContainerTemplate):
 
   margin = margin_property('anvil-m3-card-content-container')
 
-    # Any code you write here will run before the form opens.
+  def add_component(self, component, slot="card-content-container-slot", **layout_props):
+    super().add_component(component, slot=slot, **layout_props)
+    
