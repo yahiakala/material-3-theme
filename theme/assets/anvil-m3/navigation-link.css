@@ -26,14 +26,17 @@
 .anvil-m3-navigation-link-icon-label {
   display: flex;
   align-items: center;
-}
-
-.anvil-m3-navigation-rail .anvil-m3-navigation-link-icon-label {
   flex-direction: column;
 }
 
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-icon-label {
+/* .anvil-m3-navigation-rail .anvil-m3-navigation-link-icon-label {
+  flex-direction: column;
+} */
+
+@media(max-width: 600px) {
+  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-icon-label {
   flex-direction: row;
+  }
 }
 
 

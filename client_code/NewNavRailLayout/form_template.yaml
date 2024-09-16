@@ -16,6 +16,7 @@ is_package: true
 layout:
   properties:
     content_padding: ['24', '24', '24', '24']
+    navigation_rail_collapse_to: bottom_app_bar
     navigation_rail_vertical_align: Top
   type: form:NavigationRailLayout
 slots:

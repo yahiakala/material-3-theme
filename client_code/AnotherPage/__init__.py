@@ -25,6 +25,9 @@ class AnotherPage(AnotherPageTemplate):
     """This method is called when the user presses enter in this component."""
     self.m3_slider.value = 3
 
+  def icon_button_1_click(self, **event_args):
+    self.layout.layout.show_sidesheet = False
+
 
 
 
