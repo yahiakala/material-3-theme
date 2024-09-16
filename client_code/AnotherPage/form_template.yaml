@@ -1,24 +1,22 @@
 components_by_slot:
   slot_1: []
   slot_3:
-  - components:
-    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      name: menu_item_2
-      properties: {hide_leading_icon: false, leading_icon: undo, text: Undo}
-      type: form:_Components.MenuItem
-    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      name: menu_item_1
-      properties: {leading_icon: redo, text: Redo}
-      type: form:_Components.MenuItem
-    layout_properties: {}
-    name: button_menu_1
-    properties: {}
-    type: form:_Components.ButtonMenu
   - components: []
     layout_properties: {}
     name: link_3
     properties: {text: hello}
     type: Link
+  - components:
+    - layout_properties: {full_width_row: true, grid_position: 'IHASJD,XQTMGB'}
+      name: dropdown_menu_1
+      properties:
+        items: [Patricia, Char, Sarah]
+        placeholder: Select a friend
+      type: form:_Components.DropdownMenu
+    layout_properties: {}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
   - components: []
     layout_properties: {}
     name: link_2
@@ -32,12 +30,6 @@ components_by_slot:
     name: toggle_icon_button_1
     properties: {icon: stars, selected: false}
     type: form:_Components.ToggleIconButton
-  - layout_properties: {}
-    name: dropdown_menu_1
-    properties:
-      items: [Patricia, Char, Sarah]
-      placeholder: Select a friend
-    type: form:_Components.DropdownMenu
   - event_bindings: {pressed_enter: text_field_3_pressed_enter}
     layout_properties: {}
     name: text_field_3
