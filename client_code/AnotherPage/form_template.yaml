@@ -1,6 +1,10 @@
 components_by_slot:
   slot_1: []
   slot_3:
+  - layout_properties: {}
+    name: divider_1
+    properties: {}
+    type: form:_Components.Divider
   - components: []
     layout_properties: {}
     name: link_3
