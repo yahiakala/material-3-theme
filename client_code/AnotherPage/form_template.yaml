@@ -1,6 +1,10 @@
 components_by_slot:
   slot_1: []
   slot_3:
+  - layout_properties: {}
+    name: link_4
+    properties: {}
+    type: form:_Components.Link
   - components: []
     layout_properties: {}
     name: link_3
@@ -24,7 +28,7 @@ components_by_slot:
     type: Link
   - layout_properties: {}
     name: link_1
-    properties: {text: click me}
+    properties: {align: right, text: click me}
     type: form:_Components.Link
   - layout_properties: {}
     name: toggle_icon_button_1
