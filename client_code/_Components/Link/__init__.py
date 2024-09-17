@@ -26,7 +26,6 @@ class Link(LinkTemplate):
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text and not self.material_icon and not self.get_components():
-      print('yes', anvil.designer.get_design_name(self))
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
     
