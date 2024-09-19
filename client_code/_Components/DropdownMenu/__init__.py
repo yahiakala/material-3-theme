@@ -23,6 +23,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if not self.allow_none:
       if len(self.items):
         self.selected_value = self.items[0]
+      else:
+        self.selection_field.dom_nodes['anvil-m3-textfield'].value = ""
         
     self._cleanup = noop
 
