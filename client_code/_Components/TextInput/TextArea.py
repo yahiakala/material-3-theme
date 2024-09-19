@@ -28,7 +28,6 @@ class TextArea(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['anvil-m3-textfield']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
-    self._grab = None
 
     # self.update_height = self.update_height
     self._on_change = self._on_change
@@ -153,7 +152,7 @@ class TextArea(TextInput):
     def on_drop(dx, dy):
       h = self._grab_height + dy
       self.height = h
-      anvil.designer.update_component_properties(self, {"height", h})
+      anvil.designer.update_component_properties(self, {"height": h})
     
     return [
       {
@@ -161,9 +160,9 @@ class TextArea(TextInput):
         "position": "bottom",
         "direction": "y",
         "callbacks": {
-          "grab": on_grab, # lambda x, y: print("GRAB", x, y),
-          "drag": on_drag, #lambda dx, dy, ctrl: print("DRAG", dx, dy, ctrl),
-          "drop": on_drop, #lambda dx, dy: print("DROP", dx, dy),
+          "grab": on_grab,
+          "drag": on_drag,
+          "drop": on_drop,
         },
       }
     ]  
