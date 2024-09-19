@@ -28,7 +28,8 @@ class Button(ButtonTemplate):
   def _handle_click(self, event):
     event.preventDefault()
     if self.enabled:
-      self.raise_event("click")
+      keys = {'shift': event.shiftKey, 'alt': False, 'ctrl': False, 'meta': False}
+      self.raise_event("click", keys=keys)
 
   def _anvil_get_interactions_(self):
     return [{
