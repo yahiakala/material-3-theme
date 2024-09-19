@@ -21,6 +21,7 @@ class TextArea(TextInput):
     self.init_components(**properties)
     hiddenInput = self.dom_nodes['anvil-m3-textfield']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
+    self._grab = None
 
     # self.update_height = self.update_height
     self._on_change = self._on_change
@@ -124,6 +125,36 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)
+
+  def _anvil_get_interactions_(self):
+
+    def on_grab(x,y):
+      self._grab = {
+        #"x": x,
+        #"y": y,
+        "h": self.dom_nodes['anvil-m3-textarea'].scrollHeight
+      }
+      
+
+    def on_drag(dx, dy, ctrl):
+      self._set_height()
+      ...
+
+    def on_drop(dx, dy):
+      ...
+    
+    return [
+      {
+        "type": "handle",
+        "position": "bottom",
+        "direction": "y",
+        "callbacks": {
+          "grab": on_grab, # lambda x, y: print("GRAB", x, y),
+          "drag": on_drag, #lambda dx, dy, ctrl: print("DRAG", dx, dy, ctrl),
+          "drop": on_drop, #lambda dx, dy: print("DROP", dx, dy),
+        },
+      }
+    ]  
 
   #!componentProp(material_3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(material_3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
