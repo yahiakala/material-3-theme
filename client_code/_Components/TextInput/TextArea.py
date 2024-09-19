@@ -13,8 +13,15 @@ input_text_property = {"name": "input_text",
                  # "binding_writeback_events": ["lost_focus"],
                  "important": True}
 
+height_property = {
+  "name": "height",
+  "type": "number",
+  "default_value": None,
+  "description": "The initial height of this TextArea",
+}
+
 class TextArea(TextInput):
-  _anvil_properties_ = [input_text_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [input_text_property, height_property, *TextInput._anvil_properties_]
   
   def __init__(self, **properties):
     super().__init__(**properties)
@@ -103,7 +110,6 @@ class TextArea(TextInput):
     self.dom_nodes["anvil-m3-textarea"].id = value
 
   def _update_height(self, event):
-    self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #min-height based off specs
     h = event.target.scrollHeight;
     self._set_height(h)
 
@@ -113,8 +119,17 @@ class TextArea(TextInput):
     requestAnimationFrame(lambda _: self._set_height(h))
 
   def _set_height(self, h):
+    # Keep this function, because it's easier to call it from a lambda than setting the height property.
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
     self.dom_nodes['anvil-m3-border-container'].style.height = f'{h}px'
+
+  @property
+  def height(self):
+    return self.dom_nodes['anvil-m3-textarea'].scrollHeight
+
+  @height.setter
+  def height(self, value):
+    self._set_height(value)
 
   def _set_character_limit(self, value):
     if value is None or value < 1:
@@ -129,19 +144,15 @@ class TextArea(TextInput):
   def _anvil_get_interactions_(self):
 
     def on_grab(x,y):
-      self._grab = {
-        #"x": x,
-        #"y": y,
-        "h": self.dom_nodes['anvil-m3-textarea'].scrollHeight
-      }
-      
+      self._grab_height = self.height
 
     def on_drag(dx, dy, ctrl):
-      self._set_height()
-      ...
+      self.height = self._grab_height + dy
 
     def on_drop(dx, dy):
-      ...
+      h = self._grab_height + dy
+      self.height = h
+      anvil.designer.update_component_properties(self, {"height", h})
     
     return [
       {
