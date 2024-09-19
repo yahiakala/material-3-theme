@@ -19,6 +19,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)
+
+    if not self.allow_none:
+      if len(self.items):
+        self.selected_value = self.items[0]
+        
     self._cleanup = noop
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
