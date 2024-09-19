@@ -16,7 +16,7 @@ components_by_slot:
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
     name: text_area_2
-    properties: {appearance: outlined, label_text: Hello}
+    properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
   slot_5: []
   slot_6: []
