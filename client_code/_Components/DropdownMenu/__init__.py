@@ -349,9 +349,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._create_menu_items()
     # selection_field_width = get_dom_node(self.selection_field).offsetWidth
     # self._menuNode.style.width = f"{selection_field_width}px"
-    
-    if not self.allow_none:
-      self.selected_value = self.items[0]
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
