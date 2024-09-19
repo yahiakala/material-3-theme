@@ -39,7 +39,7 @@ class TextArea(TextInput):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._update_height)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._expand_to_fit_content)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("focus", self._on_focus)
@@ -48,7 +48,7 @@ class TextArea(TextInput):
     self.resize_observer.observe(self.dom_nodes['anvil-m3-textarea'])
     
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._update_height)
+    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._expand_to_fit_content)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("focus", self._on_focus)
@@ -109,9 +109,10 @@ class TextArea(TextInput):
     super()._set_id(value)
     self.dom_nodes["anvil-m3-textarea"].id = value
 
-  def _update_height(self, event):
-    h = event.target.scrollHeight;
-    self._set_height(h)
+  def _expand_to_fit_content(self, event):
+    if event.target.scrollHeight > event.target.clientHeight:
+      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #min-height based off specs
+      self._set_height(event.target.scrollHeight)
 
   def _on_resize(self, entries, observer):
     for entry in entries:
@@ -121,7 +122,7 @@ class TextArea(TextInput):
   def _set_height(self, h):
     # Keep this function, because it's easier to call it from a lambda than setting the height property.
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
-    self.dom_nodes['anvil-m3-border-container'].style.height = f'{h}px'
+    self.dom_nodes['anvil-m3-border-container'].style.height = f"{self.dom_nodes['anvil-m3-textarea'].clientHeight}px"
 
   @property
   def height(self):
