@@ -92,7 +92,7 @@ class TextInput(TextInputTemplate):
     self.raise_event("focus")
 
   def _on_lost_focus(self, e):
-    self.raise_event("x-anvil-write-back-text")
+    self.raise_event("x-anvil-write-back-input_text")
     self.raise_event("lost_focus")
 
 
