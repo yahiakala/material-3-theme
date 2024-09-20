@@ -31,7 +31,7 @@ class Link(LinkTemplate):
     
   def _handle_click(self, event):
     keys = {'shift': event.shiftKey, 'alt': event.altKey, 'ctrl': event.ctrlKey, 'meta': event.metaKey}
-    self.raise_event("click", keys=keys)
+    self.raise_event("click", keys=keys, event=event)
 
   def _anvil_get_interactions_(self):
     return [{
