@@ -83,16 +83,18 @@ class TextInput(TextInputTemplate):
         self.dom_nodes['anvil-m3-label-text'].innerText = anvil.designer.get_design_name(self)
 
   def _on_input(self, e):
-    self.dom_nodes['anvil-m3-character-amount'].innerText = len(e.target.value);
+    self.dom_nodes['anvil-m3-character-amount'].innerText = len(e.target.value)
+    # input event is anvil's change event
+    self.raise_event("change")
 
   def _on_change(self, e):
-    self.raise_event("change")
+    # on text input/textarea the change event fires when we lose focus
+    self.raise_event("x-anvil-write-back-input_text")
 
   def _on_focus(self, e):
     self.raise_event("focus")
 
   def _on_lost_focus(self, e):
-    self.raise_event("x-anvil-write-back-input_text")
     self.raise_event("lost_focus")
 
 
