@@ -26,6 +26,10 @@ components_by_slot:
     name: column_panel_1
     properties: {}
     type: ColumnPanel
+  - layout_properties: {}
+    name: button_1
+    properties: {align: center}
+    type: form:_Components.Button
 is_package: true
 layout:
   properties: {show_sidesheet: false}
