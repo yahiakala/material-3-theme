@@ -8,7 +8,8 @@ from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
 from ...components import RadioGroup
-from ...Functions import checked_property, role_property, tooltip_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, spacing_property
+from ...Functions import role_property, tooltip_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, spacing_property
+from ...Functions import property_with_callback, property_without_callback
 from ...utils import gen_id
 
 class RadioButton(RadioButtonTemplate):
@@ -19,6 +20,9 @@ class RadioButton(RadioButtonTemplate):
     self._design_name = ""
     self.group = None
     self.init_components(**properties)
+
+    if not anvil.designer.in_designer and self._props["value"] == "":
+      self._props["value"] = self._props["text"]
     
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -65,8 +69,7 @@ class RadioButton(RadioButtonTemplate):
   # Properties 
   enabled = enabled_property('anvil-m3-radiobutton-input')
   visible = HtmlTemplate.visible
-  group_name = name_property('anvil-m3-radiobutton-input', "group_name")
-  value = value_property('anvil-m3-radiobutton-input')
+  value = property_without_callback('value')
   underline = underline_property('anvil-m3-radiobutton-label')
   italic = italic_property('anvil-m3-radiobutton-label')
   bold = bold_property('anvil-m3-radiobutton-label')
@@ -79,7 +82,6 @@ class RadioButton(RadioButtonTemplate):
   spacing = spacing_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
   role = role_property('anvil-m3-radiobutton-container')
-  # selected = checked_property('anvil-m3-radiobutton-input')
   
   @property
   def radio_color(self):
