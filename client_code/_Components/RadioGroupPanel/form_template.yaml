@@ -14,5 +14,6 @@ events:
 - {description: When the component is removed from the screen, name: hide}
 - {description: When the component is shown on the screen, name: show}
 is_package: true
-properties: []
+properties:
+- {default_binding_prop: true, default_value: '', description: Value property of the selected RadioButton, important: true, name: selected_value, type: string}
 toolbox_item: {group: Form Input}

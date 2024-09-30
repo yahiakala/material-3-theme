@@ -41,6 +41,22 @@ class RadioGroup:
     else:
       button.selected = True
 
+  @property
+  def selected_value(self):
+    button = self.selected_button
+    if button is None:
+      return None
+    else:
+      return button.value
+
+  @selected_value.setter
+  def selected_value(self, requested_value):
+    for button in self._buttons:
+      if button.value == requested_value:
+        self.selected_button = button
+        return
+    self.selected_button = None
+  
   @classmethod
   def enclosing(cls, component):
     while component:
@@ -56,7 +72,7 @@ class RadioGroup:
 global_radio_group = RadioGroup()
 
 
-class RadioGroupPanel(RadioGroupPanelTemplate, RadioGroup):
+class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
   def __init__(self, **properties):
-    RadioGroup.__init__(self)
+    super().__init__()
     self.init_components(**properties)
