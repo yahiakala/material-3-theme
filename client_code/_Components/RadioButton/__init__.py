@@ -99,8 +99,14 @@ class RadioButton(RadioButtonTemplate):
     return self.dom_nodes['anvil-m3-radiobutton-input'].checked
 
   @selected.setter
-  def selected(self, value):
-    self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
+  def selected(self, new_state):
+    self.dom_nodes['anvil-m3-radiobutton-input'].checked = new_state
+
+    # The previously selected RadioButton needs deselecting in the designer yml
+    if anvil.designer.in_designer and new_state and self.group is not None:
+      for button in self.group.buttons:
+        if button is not self:
+          anvil.designer.update_component_properties(button, {'selected': False})
 
   def _set_text(self, value):
     v = value
