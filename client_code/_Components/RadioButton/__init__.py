@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
+from ...components import RadioGroup
 from ...Functions import checked_property, role_property, tooltip_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, spacing_property
 from ...utils import gen_id
 
@@ -15,7 +16,8 @@ class RadioButton(RadioButtonTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
-    self._design_name = "" 
+    self._design_name = ""
+    self.group = None
     self.init_components(**properties)
     
     self.add_event_handler("x-anvil-page-added", self._on_mount)
@@ -23,13 +25,19 @@ class RadioButton(RadioButtonTemplate):
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
+        self.dom_nodes["anvil-m3-radiobutton-input"].value = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("change", self._handle_change)
+    self.group = RadioGroup.enclosing(self)
+    self.group._add_button(self)
+    self.dom_nodes["anvil-m3-radiobutton-input"].name = id(self.group)
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].removeEventListener("change", self._handle_change)
   
   #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
@@ -132,17 +140,16 @@ class RadioButton(RadioButtonTemplate):
     if self.enabled:
       self.dom_nodes['anvil-m3-radiobutton-input'].focus()
       self.selected = True 
-      self.raise_event("change")
+      self._handle_change(self)
+
+  def _handle_change(self, event):
+    self.group._handle_change()
+    self.raise_event("change")
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
       if not self.text:
         self.dom_nodes['anvil-m3-radiobutton-label'].innerText = self._design_name
-
-  #!defMethod(str)!2: "Returns the value of the button in the group which is pressed." ["get_group_value"]
-  def get_group_value(self):
-    selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
-    return selected_item.value
 
 #!defClass(material_3, RadioButton, anvil.Component)!:
