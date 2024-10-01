@@ -18,6 +18,9 @@ class RadioGroup:
   def _add_button(self, button):
     self._buttons.append(button)
 
+  def _remove_button(self, button):
+    self._buttons.remove(button)
+
   def _handle_change(self):
     try:
       self.raise_event("change")
