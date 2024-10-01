@@ -1,9 +1,9 @@
-from anvil.js import import_from
+from anvil.js.window import FloatingUIDOM
 from anvil.js.window import window
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
-fui = import_from("https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.5.3/+esm")
+fui = FloatingUIDOM
 
 _static_arrow_position = {
   'top': 'bottom',
