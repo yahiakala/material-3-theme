@@ -8,6 +8,7 @@ from anvil.tables import app_tables
 
 class RadioGroup:
   def __init__(self):
+    super().__init__()
     self._buttons = []
     self._selected_button = None
 
