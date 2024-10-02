@@ -19,6 +19,7 @@ class RadioButton(RadioButtonTemplate):
     self._tooltip_node = None
     self._design_name = ""
     self._group = None
+    self._group_set_from_code = False
     self.init_components(**properties)
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
@@ -33,8 +34,8 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
     self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("change", self._handle_change)
 
-    if self.group is None:
-      self.group = RadioGroup.enclosing(self)
+    if not self._group_set_from_code:
+      self._set_group(RadioGroup.enclosing(self))
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
@@ -97,12 +98,22 @@ class RadioButton(RadioButtonTemplate):
 
   @group.setter
   def group(self, new_group):
+    if not isinstance(new_group, RadioGroup):
+      raise ValueError("group must be a RadioGroup object")
+
+    self._group_set_from_code = True
+    self._set_group(new_group)
+
+  def _set_group(self, new_group):
     if self._group is not None:
       self._group._remove_button(self)
 
-    new_group._add_button(self)
-    self.dom_nodes["anvil-m3-radiobutton-input"].name = id(new_group)
     self._group = new_group
+    if new_group is None:
+      self.dom_nodes["anvil-m3-radiobutton-input"].name = ""
+    else:
+      new_group._add_button(self)
+      self.dom_nodes["anvil-m3-radiobutton-input"].name = id(new_group)
 
   @property
   def selected(self):
