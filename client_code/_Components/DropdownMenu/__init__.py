@@ -73,9 +73,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.label_font_size = value
   label_font_size = property_with_callback("label_font_size", _set_label_font_size)
 
-  def _set_label_text_color(self, value):
-    self.selection_field.label_text_color = value
-  label_text_color = property_with_callback("label_text_color", _set_label_text_color)
+  def _set_label_color(self, value):
+    self.selection_field.label_color = value
+  label_color = property_with_callback("label_color", _set_label_color)
 
   def _set_label_italic(self, value):
     self.selection_field.label_italic = value
@@ -164,14 +164,14 @@ class DropdownMenu(DropdownMenuTemplate):
       self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.remove('anvil-m3-dropdown-error')
   error = property_with_callback("error", _set_error)
 
-  def _set_label_text(self, value):
+  def _set_label(self, value):
     v = value or ""
     self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
-    self.selection_field.label_text = v
-  label_text = property_with_callback("label_text", _set_label_text)
+    self.selection_field.label = v
+  label = property_with_callback("label", _set_label)
 
   def _set_selected_value(self, value):
     if (value is None and self.allow_none) or (value in self.items):
@@ -225,12 +225,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.remove()
 
   def _handle_selection_field_focus(self, event):
-    if not self.label_text:
+    if not self.label:
         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
-    # if not self.label_text and self.placeholder and self.selected_value is None:
+    # if not self.label and self.placeholder and self.selected_value is None:
     #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
     
@@ -351,7 +351,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
-      if not self.label_text:
+      if not self.label:
         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self._design_name
 
   def _create_menu_items(self):
@@ -415,7 +415,7 @@ class DropdownMenu(DropdownMenuTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['anvil-m3-label-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label", self.selection_field.dom_nodes['anvil-m3-label-text'])
       }
     }]
 
@@ -426,8 +426,8 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}

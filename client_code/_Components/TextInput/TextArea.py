@@ -5,7 +5,7 @@ import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
-input_text_property = {"name": "input_text",
+text_property = {"name": "text",
                  "type": "string",
                  "default_value": "None",
                  "description": "The input text displayed on this component",
@@ -21,7 +21,7 @@ height_property = {
 }
 
 class TextArea(TextInput):
-  _anvil_properties_ = [input_text_property, height_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [text_property, height_property, *TextInput._anvil_properties_]
   
   def __init__(self, **properties):
     super().__init__(**properties)
@@ -59,7 +59,7 @@ class TextArea(TextInput):
   display_underline = underline_property('anvil-m3-textarea', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
-  input_text_color = color_property('anvil-m3-textarea', 'color', 'input_text_color')
+  text_color = color_property('anvil-m3-textarea', 'color', 'text_color')
   background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
 
   def focus(self):
@@ -79,11 +79,11 @@ class TextArea(TextInput):
   placeholder = property_with_callback('placeholder', _set_placeholder)
 
   @property
-  def input_text(self):
+  def text(self):
     return self.dom_nodes['anvil-m3-textarea'].value
 
-  @input_text.setter
-  def input_text(self, value):
+  @text.setter
+  def text(self, value):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
   def _set_label(self, value):
@@ -174,15 +174,15 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(material_3.TextArea)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.TextArea)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.TextArea)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.TextArea)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.TextArea)!1: {name:"label",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
   #!componentProp(material_3.TextArea)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.TextArea)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.TextArea)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
   #!componentProp(material_3.TextArea)!1: {name:"display_underline",type:"boolean",description:"The font family to use for the label on this component."}
@@ -205,7 +205,7 @@ class TextArea(TextInput):
 
   #!componentProp(material_3.TextArea)!1: {name:"spacing",type:"spacing",description:"The margin and padding of this component. Default value is in pixels."}
   #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(material_3.TextArea)!1: {name:"text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.TextArea)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}

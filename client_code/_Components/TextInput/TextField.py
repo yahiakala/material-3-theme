@@ -5,7 +5,7 @@ from ...Functions import property_with_callback, italic_property, bold_property,
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 
-input_text_property = {"name": "input_text",
+text_property = {"name": "text",
                  "type": "string",
                  "default_value": "None",
                  "description": "The text displayed on this component.",
@@ -60,7 +60,7 @@ click_event = {"name": "trailing_icon_click", "defaultEvent": False, "descriptio
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
 class TextField(TextInput):
-  _anvil_properties_ = [input_text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
   
   def __init__(self, **properties):
@@ -96,7 +96,7 @@ class TextField(TextInput):
 
   def _on_key_down(self, e):
     if e.key == "Enter":
-      self.raise_event("x-anvil-write-back-input_text")
+      self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
 
   def _set_placeholder(self, value):
@@ -116,14 +116,14 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].select()
   
   @property
-  def input_text(self):
+  def text(self):
     if self._props.get('type') == "number" and self.dom_nodes['anvil-m3-textfield'].value:
       return float(self.dom_nodes['anvil-m3-textfield'].value)
     else:
       return self.dom_nodes['anvil-m3-textfield'].value
 
-  @input_text.setter
-  def input_text(self, value):
+  @text.setter
+  def text(self, value):
     self.dom_nodes['anvil-m3-textfield'].value = value
       
   def _set_label(self, value):
@@ -204,7 +204,7 @@ class TextField(TextInput):
   display_underline = underline_property('anvil-m3-textfield', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textfield', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textfield', 'display_font')
-  input_text_color = color_property('anvil-m3-textfield', 'color', 'input_text_color')
+  text_color = color_property('anvil-m3-textfield', 'color', 'text_color')
   background = color_property('anvil-m3-textfield', 'backgroundColor', 'background' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
@@ -246,7 +246,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(material_3.TextField)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.TextField)!1: {name:"input_text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(material_3.TextField)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(material_3.TextField)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
   #!componentProp(material_3.TextField)!1: {name:"display_underline",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
@@ -275,7 +275,7 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.TextField)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
   #!componentProp(material_3.TextField)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextField)!1: {name:"input_text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(material_3.TextField)!1: {name:"text",type:"string",description:"The input text to display on this component"}
   #!componentProp(material_3.TextField)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
   #!componentProp(material_3.TextField)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
