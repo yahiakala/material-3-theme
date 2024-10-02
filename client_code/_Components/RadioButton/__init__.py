@@ -116,7 +116,10 @@ class RadioButton(RadioButtonTemplate):
     if anvil.designer.in_designer and new_state and self.group is not None:
       for button in self.group.buttons:
         if button is not self:
-          anvil.designer.update_component_properties(button, {'selected': False})
+          try:
+            anvil.designer.update_component_properties(button, {'selected': False})
+          except Exception:
+            pass  # Ignore error if the component isn't on the currently editing form
 
   def _set_text(self, value):
     v = value
