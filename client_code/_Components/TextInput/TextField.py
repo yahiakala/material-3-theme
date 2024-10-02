@@ -135,15 +135,15 @@ class TextField(TextInput):
   label = property_with_callback("label", _set_label)
 
   def _set_enabled(self, value):
-    supporting_text = self.dom_nodes['anvil-m3-subcontent']
+    description = self.dom_nodes['anvil-m3-subcontent']
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     if value:
       self.dom_nodes['anvil-m3-textfield'].removeAttribute("disabled")
-      supporting_text.classList.remove("anvil-m3-textinput-disabled")
+      description.classList.remove("anvil-m3-textinput-disabled")
       trailing_icon.classList.remove("anvil-m3-disable-icon")
     else:
       self.dom_nodes['anvil-m3-textfield'].setAttribute("disabled", " ")
-      supporting_text.classList.add("anvil-m3-textinput-disabled")
+      description.classList.add("anvil-m3-textinput-disabled")
       trailing_icon.classList.add("anvil-m3-disable-icon")
   enabled = property_with_callback("enabled", _set_enabled)
   
@@ -258,10 +258,10 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
   #!componentProp(material_3.TextField)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
 
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.TextField)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"description",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.TextField)!1: {name:"description_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"description_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(material_3.TextField)!1: {name:"description_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
   #!componentProp(material_3.TextField)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
   #!componentProp(material_3.TextField)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
