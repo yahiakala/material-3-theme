@@ -40,7 +40,10 @@ class RadioButton(RadioButtonTemplate):
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
     self.dom_nodes['anvil-m3-radiobutton-input'].removeEventListener("change", self._handle_change)
-  
+
+    if not self._group_set_from_code:
+      self._set_group(None)
+
   #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
   #!componentEvent(material_3.RadioButton)!1: {name: "hide", description: "When the Raio Button is removed from the screen."}
