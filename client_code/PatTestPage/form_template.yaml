@@ -6,30 +6,105 @@ components_by_slot:
     type: form:_Components.NavigationLink
   slot_3:
   - components:
-    - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
+    - layout_properties: {grid_position: 'SBHZWX,VWPVMI'}
+      name: button_1
+      properties: {align: left, text: vcbxcv}
+      type: form:_Components.Button
+    - layout_properties: {grid_position: 'SBHZWX,ZTQMDN'}
+      name: button_menu_1
+      properties: {}
+      type: form:_Components.ButtonMenu
+    - layout_properties: {grid_position: 'WEJHKL,UNMFRX'}
+      name: menu_item_1
+      properties: {}
+      type: form:_Components.MenuItem
+    - components:
+      - layout_properties: {slot: card-content-slot}
+        name: card_content_container_1
+        properties: {}
+        type: form:_Components.Card.CardContentContainer
+      layout_properties: {grid_position: 'JEHRZS,WQPOZK'}
+      name: card_1
+      properties: {}
+      type: form:_Components.Card
+    - components:
+      - layout_properties: {slot: card-content-slot}
+        name: card_content_container_2
+        properties: {}
+        type: form:_Components.Card.CardContentContainer
+      layout_properties: {grid_position: 'JEHRZS,VAPLZN'}
+      name: interactive_card_1
+      properties: {}
+      type: form:_Components.InteractiveCard
+    - layout_properties: {grid_position: 'OFTZTP,OGOSHG'}
+      name: checkbox_1
+      properties: {}
+      type: form:_Components.Checkbox
+    - layout_properties: {grid_position: 'OFTZTP,JYUECI'}
+      name: radio_button_1
+      properties: {}
+      type: form:_Components.RadioButton
+    - layout_properties: {grid_position: 'OFTZTP,RITCKD'}
+      name: switch_1
+      properties: {}
+      type: form:_Components.Switch
+    - layout_properties: {grid_position: 'GXEKNB,GAVAFH'}
+      name: circular_progress_indicator_1
+      properties: {}
+      type: form:_Components.CircularProgressIndicator
+    - layout_properties: {grid_position: 'GXEKNB,BESZWQ'}
+      name: linear_progress_indicator_1
+      properties: {}
+      type: form:_Components.LinearProgressIndicator
+    - layout_properties: {grid_position: 'UKIUNN,ALGTAN'}
+      name: divider_1
+      properties: {}
+      type: form:_Components.Divider
+    - layout_properties: {grid_position: 'ZUEFOH,JLPEUN'}
+      name: dropdown_menu_1
+      properties: {}
+      type: form:_Components.DropdownMenu
+    - layout_properties: {grid_position: 'NSFQGZ,ILHWFM'}
+      name: file_loader_1
+      properties: {}
+      type: form:_Components.FileLoader
+    - layout_properties: {grid_position: 'ZLOQDP,VBFWAJ'}
+      name: heading_1
+      properties: {}
+      type: form:_Components.Heading
+    - layout_properties: {grid_position: 'ZLOQDP,LNBTEZ'}
+      name: text_1
+      properties: {}
+      type: form:_Components.Text
+    - layout_properties: {grid_position: 'ZLOQDP,OWEXXB'}
+      name: link_1
+      properties: {}
+      type: form:_Components.Link
+    - layout_properties: {grid_position: 'XUHPLX,SJBCJX'}
+      name: icon_button_1
+      properties: {}
+      type: form:_Components.IconButton
+    - layout_properties: {grid_position: 'XUHPLX,RZAIIB'}
+      name: toggle_icon_button_1
+      properties: {}
+      type: form:_Components.ToggleIconButton
+    - layout_properties: {grid_position: 'IEEIUU,CFRYNB'}
+      name: slider_1
+      properties: {}
+      type: form:_Components.Slider
+    - layout_properties: {grid_position: 'QRUMHO,LQSYIK'}
       name: text_field_1
       properties: {label_text: Hi}
       type: form:_Components.TextInput.TextField
-    - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
-      name: text_field_2
-      properties: {appearance: outlined}
-      type: form:_Components.TextInput.TextField
-    - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
+    - layout_properties: {grid_position: 'QRUMHO,IETTBH'}
       name: text_area_1
       properties: {}
-      type: form:_Components.TextInput.TextArea
-    - layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
-      name: text_area_2
-      properties: {appearance: outlined}
       type: form:_Components.TextInput.TextArea
     layout_properties: {}
     name: column_panel_1
     properties: {}
     type: ColumnPanel
-  - layout_properties: {}
-    name: button_1
-    properties: {align: center, text: vcbxcv}
-    type: form:_Components.Button
+  slot_5: []
 is_package: true
 layout:
   properties: {show_sidesheet: false}
