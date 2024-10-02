@@ -3,10 +3,10 @@ from anvil.js.window import window
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
 try:
-    fui = window.FloatingUIDOM
-except AttributeError as e:
-    print(e)
-    fui = None
+    FloatingUIDOM = window.FloatingUIDOM
+except AttributeError:
+    # don't fail on load - fail when we try to use it
+    FloatingUIDOM = None
 
 _static_arrow_position = {
   'top': 'bottom',
@@ -32,14 +32,16 @@ def auto_update(
   if using arrow, arrow should be an HTMLElement
   call this function in x-anvil-page-added
   call the cleanup in x-anvil-page-removed"""
+  if FloatingUIDOM is None:
+     raise RuntimeError("FloatingUIDOM failed to load")
 
   def update(*args):
-    middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide), fui.size(size_middleware())]
+    middleware = [FloatingUIDOM.offset(offset), FloatingUIDOM.flip(), FloatingUIDOM.shift(shift), FloatingUIDOM.hide(hide), FloatingUIDOM.size(size_middleware())]
     
     if arrow:
-      middleware.append(fui.arrow({"element": arrow}))
+      middleware.append(FloatingUIDOM.arrow({"element": arrow}))
     
-    rv = fui.computePosition(reference_el, floating_el, {
+    rv = FloatingUIDOM.computePosition(reference_el, floating_el, {
       'placement': placement,
       'strategy': strategy,
       'middleware': middleware,
@@ -65,7 +67,7 @@ def auto_update(
         # assumes the arrow element is 8px 8px
         arrow.style[static_side] = "-4px"
         
-  return fui.autoUpdate(reference_el, floating_el, update)
+  return FloatingUIDOM.autoUpdate(reference_el, floating_el, update)
 
 def size_middleware():
   def apply(context):
