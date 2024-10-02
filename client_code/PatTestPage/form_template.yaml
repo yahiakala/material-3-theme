@@ -16,7 +16,7 @@ components_by_slot:
       type: form:_Components.DropdownMenu
     - layout_properties: {grid_position: 'QRUMHO,GXNTSR'}
       name: text_field_1
-      properties: {align: left, hide_text: false, label: '', label_text: Hi, placeholder: '', text: dfgsfdgsdf}
+      properties: {align: left, character_limit: 10, description: fghfgh, hide_text: false, label: '', label_text: Hi, placeholder: '', text: dfgsfdgsdf}
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'QRUMHO,WDYJJP'}
       name: text_area_1

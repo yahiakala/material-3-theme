@@ -133,21 +133,21 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.tooltip = value
   tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def _set_supporting_text(self, value):
-    self.selection_field.supporting_text = value
-  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
+  def _set_description(self, value):
+    self.selection_field.description = value
+  description = property_with_callback("description", _set_description)
 
-  def _set_supporting_text_color(self, value):
-    self.selection_field.supporting_text_color = value
-  supporting_text_color = property_with_callback("supporting_text_color", _set_supporting_text_color)
+  def _set_description_color(self, value):
+    self.selection_field.description_color = value
+  description_color = property_with_callback("description_color", _set_description_color)
 
-  def _set_supporting_text_font_family(self, value):
-    self.selection_field.supporting_text_font_family = value
-  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
+  def _set_description_font_family(self, value):
+    self.selection_field.description_font_family = value
+  description_font_family = property_with_callback("description_font_family", _set_description_font_family)
 
-  def _set_supporting_text_font_size(self, value):
-    self.selection_field.supporting_text_font_size = value
-  supporting_text_font_size = property_with_callback("supporting_text_font_size", _set_supporting_text_font_size)
+  def _set_description_font_size(self, value):
+    self.selection_field.description_font_size = value
+  description_font_size = property_with_callback("description_font_size", _set_description_font_size)
 
   def _set_border_color(self, value):
     self.selection_field.border_color = value
@@ -453,10 +453,10 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
