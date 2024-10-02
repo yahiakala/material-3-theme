@@ -1,9 +1,12 @@
-from anvil.js.window import FloatingUIDOM
 from anvil.js.window import window
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
-fui = FloatingUIDOM
+try:
+    fui = window.FloatingUIDOM
+except AttributeError as e:
+    print(e)
+    fui = None
 
 _static_arrow_position = {
   'top': 'bottom',
