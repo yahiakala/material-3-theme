@@ -40,6 +40,8 @@ class RadioGroup:
       if selected_button:
         selected_button.selected = False
     else:
+      if button not in self._buttons:
+        raise ValueError("RadioButton is not in this group")
       button.selected = True
 
   @property
