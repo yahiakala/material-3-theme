@@ -21,9 +21,6 @@ class RadioButton(RadioButtonTemplate):
     self._group = None
     self.init_components(**properties)
 
-    if not anvil.designer.in_designer and self._props["value"] == "":
-      self._props["value"] = self._props["text"]
-    
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
