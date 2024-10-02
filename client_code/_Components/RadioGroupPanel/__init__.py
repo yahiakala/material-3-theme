@@ -23,10 +23,7 @@ class RadioGroup:
     self._buttons.remove(button)
 
   def _handle_change(self):
-    try:
-      self.raise_event("change")
-    except AttributeError:
-      pass  # Do nothing if we're not a component
+    pass  # Override when used in a component
   
   @property
   def selected_button(self):
@@ -80,3 +77,6 @@ class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
   def __init__(self, **properties):
     super().__init__()
     self.init_components(**properties)
+
+  def _handle_change(self):
+    self.raise_event("change")
