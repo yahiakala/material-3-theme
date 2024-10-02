@@ -34,10 +34,6 @@ components_by_slot:
     name: text_area_2
     properties: {align: right}
     type: TextArea
-  - layout_properties: {}
-    name: image_1
-    properties: {}
-    type: Image
   slot_5: []
 is_package: true
 layout:
