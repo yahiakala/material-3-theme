@@ -22,10 +22,15 @@ components_by_slot:
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
-  - layout_properties: {}
-    name: text_1
+  - components:
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: menu_item_1
+      properties: {text: Item, tooltip: A menuitem}
+      type: form:_Components.MenuItem
+    layout_properties: {}
+    name: button_menu_1
     properties: {}
-    type: form:_Components.Text
+    type: form:_Components.ButtonMenu
   slot_5: []
   slot_6: []
   slot_7: []
