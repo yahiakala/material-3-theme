@@ -13,7 +13,7 @@ events:
 - {description: When the component loses focus., name: lost_focus}
 is_package: true
 properties:
-- {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: false, name: label_text, type: string}
+- {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: false, name: label, type: string}
 - {default_value: '', description: The text to be displayed when the component is empty., group: Key Properties, important: false, name: placeholder, type: string}
 - {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}
 - {default_value: 0, description: The max number of characters a user can enter into this component. The limit is displayed below the component., group: Key Properties, important: false, name: character_limit, type: number}
@@ -35,7 +35,7 @@ properties:
   type: enum
 - {default_value: true, description: 'If True, the component will be displayed.', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
-- {default_value: '', description: The colour of the label text on the component., group: Look and Feel, important: false, name: label_text_color, type: color}
+- {default_value: '', description: The colour of the label text on the component., group: Look and Feel, important: false, name: label_color, type: color}
 - {default_value: '', description: The colour of the input text displayed on this component., group: Look and Feel, important: false, name: display_text_color, type: color}
 - {default_value: '', description: The colour of the supporting text underneath this component., group: Look and Feel, important: false, name: supporting_text_color, type: color}
 - {default_value: false, description: 'If True, the label text will be italic.', group: Text, important: false, name: label_italic, type: boolean}

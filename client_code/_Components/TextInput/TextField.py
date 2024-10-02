@@ -132,7 +132,7 @@ class TextField(TextInput):
       self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', True)
     else:
       self.dom_nodes['anvil-m3-textfield'].classList.toggle('has_label_text', anvil.designer.in_designer);
-  label_text = property_with_callback("anvil-m3-label-text", _set_label)
+  label = property_with_callback("anvil-m3-label-text", _set_label)
 
   def _set_enabled(self, value):
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
@@ -238,8 +238,8 @@ class TextField(TextInput):
   #!componentProp(material_3.TextField)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(material_3.TextField)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.TextField)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.TextField)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.TextField)!1: {name:"label",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.TextField)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(material_3.TextField)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.TextField)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
