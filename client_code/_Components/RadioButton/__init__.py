@@ -178,7 +178,7 @@ class RadioButton(RadioButtonTemplate):
   def _handle_change(self, event):
     if self._group is not None:
       self._group._handle_change()
-    self.raise_event("change")
+    self.raise_event("select")
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
