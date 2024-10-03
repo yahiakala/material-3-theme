@@ -6,7 +6,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class RadioGroup:
+class RadioGroup(Component):
+  _anvil_events_ = [{"name": "change"}]
+
   def __init__(self):
     super().__init__()
     self._buttons = []
@@ -23,7 +25,7 @@ class RadioGroup:
     self._buttons.remove(button)
 
   def _handle_change(self):
-    pass  # Override when used in a component
+    self.raise_event("change")
   
   @property
   def selected_button(self):
@@ -79,6 +81,3 @@ class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
   def __init__(self, **properties):
     super().__init__()
     self.init_components(**properties)
-
-  def _handle_change(self):
-    self.raise_event("change")
