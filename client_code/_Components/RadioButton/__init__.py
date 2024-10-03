@@ -24,10 +24,10 @@ class RadioButton(RadioButtonTemplate):
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
-        self.dom_nodes["anvil-m3-radiobutton-input"].value = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
