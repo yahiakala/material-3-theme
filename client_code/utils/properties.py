@@ -61,7 +61,7 @@ def get_unset_spacing(element_margin, element_padding, current_value):
 
 def get_unset_value(element, key, current_value):
     print(current_value)
-    if current_value is not None or current_value != "":
+    if current_value is not None and current_value != "":
         return {"value": None, "css": None}
 
     styles = window.getComputedStyle(element)
