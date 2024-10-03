@@ -101,7 +101,7 @@ class RadioButton(RadioButtonTemplate):
 
   @group.setter
   def group(self, new_group):
-    if not isinstance(new_group, RadioGroup):
+    if not (new_group is None or isinstance(new_group, RadioGroup)):
       raise ValueError("group must be a RadioGroup object")
 
     self._group_set_from_code = True
