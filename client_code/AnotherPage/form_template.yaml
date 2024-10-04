@@ -31,6 +31,10 @@ components_by_slot:
     name: button_menu_1
     properties: {}
     type: form:_Components.ButtonMenu
+  - layout_properties: {}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
   slot_5: []
   slot_6: []
   slot_7: []
