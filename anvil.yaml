@@ -84,6 +84,8 @@ services:
   source: /runtime/services/tables.yml
 startup: {module: AnotherPage, type: form}
 startup_form: null
+toolbox: 
+  hide_classic_components: true
 toolbox_sections:
 - items:
   - component: {type: m3._Components.Text}
@@ -99,6 +101,7 @@ toolbox_sections:
     icon: {dark: /ide/img/toolbox/RichText.dark.svg, light: /ide/img/toolbox/RichText.svg}
     title: RichText
   packageName: m3
+  description: Use Typography components to display text
   title: Typography
 - items:
   - component: {type: m3._Components.Button}
@@ -111,6 +114,7 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/toggle_icon_button_dark.svg', light: 'asset:designer_icons/toggle_icon_button.svg'}
     title: ToggleIconButton
   packageName: m3
+  description: Use Buttons to have users perform actions
   title: Buttons
 - items:
   - component:
@@ -137,12 +141,14 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/divider_dark.svg', light: 'asset:designer_icons/divider.svg'}
     title: Divider
   packageName: m3
+  description: Display components help display content on the page
   title: Display
 - items:
   - component: {type: m3._Components.NavigationLink}
     icon: {dark: 'asset:designer_icons/navigation_link_dark.svg', light: 'asset:designer_icons/navigation_link.svg'}
     title: NavigationLink
   packageName: m3
+  description: Use navigation components to navigate between parts of your app
   title: Navigation
 - items:
   - component: {type: m3._Components.ButtonMenu}
@@ -152,6 +158,7 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/menu_item_dark.svg', light: 'asset:designer_icons/menu_item.svg'}
     title: MenuItem
   packageName: m3
+  description: Use menus to hold other components and display them as a list of options
   title: Menus
 - items:
   - component: {type: m3._Components.Checkbox}
@@ -179,6 +186,7 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/slider_dark.svg', light: 'asset:designer_icons/slider.svg'}
     title: Slider
   packageName: m3
+  description: Use Form Input containers to get data from the user
   title: Form Input
 - items:
   - component: {type: m3._Components.LinearProgressIndicator}
@@ -188,6 +196,7 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/circular_progress_indicator_dark.svg', light: 'asset:designer_icons/circular_progress_indicator.svg'}
     title: CircularProgressIndicator
   packageName: m3
+  description: Use Feedback componentes to show the status of a process
   title: Feedback
 - items:
   - component: {type: anvil.Plot}
@@ -203,4 +212,48 @@ toolbox_sections:
     icon: {dark: /ide/img/toolbox/Canvas.dark.svg, light: /ide/img/toolbox/Canvas.svg}
     title: Canvas
   packageName: m3
+  description: Integrations allow you to connect to other platforms and services
   title: Integrations
+- items:
+  - component: {type: anvil.ColumnPanel}
+    icon: {dark: /ide/img/toolbox/ColumnPanel.dark.svg, light: /ide/img/toolbox/ColumnPanel.svg}
+    title: ColumnPanel
+  - component: {type: anvil.FlowPanel}
+    icon: {dark: /ide/img/toolbox/FlowPanel.dark.svg, light: /ide/img/toolbox/FlowPanel.svg}
+    title: FlowPanel
+  - component: {type: anvil.RepeatingPanel}
+    icon: {dark: /ide/img/toolbox/RepeatingPanel.dark.svg, light: /ide/img/toolbox/RepeatingPanel.svg}
+    title: RepeatingPanel
+  - component: {type: anvil.DataGrid}
+    icon: {dark: /ide/img/toolbox/DataGrid.dark.svg, light: /ide/img/toolbox/DataGrid.svg}
+    title: DataGrid
+  - component: {type: anvil.DataRowPanel}
+    icon: {dark: /ide/img/toolbox/DataRowPanel.dark.svg, light: /ide/img/toolbox/DataRowPanel.svg}
+    title: DataRowPanel
+  - component: {type: anvil.LinearPanel}
+    icon: {dark: /ide/img/toolbox/RepeatingPanel.dark.svg, light: /ide/img/toolbox/RepeatingPanel.svg}
+    title: LinerPanel
+  - component: {type: anvil.GridPanel}
+    icon: {dark: /ide/img/toolbox/GridPanel.dark.svg, light: /ide/img/toolbox/GridPanel.svg}
+    title: GridPanel
+  - component: {type: anvil.XYPanel}
+    icon: {dark: /ide/img/toolbox/XYPanel.dark.svg, light: /ide/img/toolbox/XYPanel.svg}
+    title: XYPanel
+  packageName: m3
+  description: Use Containers to lay out the components on the page
+  title: Containers
+- items:
+  - component: {type: anvil.Image}
+    icon: {dark: /ide/img/toolbox/Image.dark.svg, light: /ide/img/toolbox/Image.svg}
+    title: Image
+  - component: {type: anvil.Spacer}
+    icon: {dark: /ide/img/toolbox/Spacer.dark.svg, light: /ide/img/toolbox/Spacer.svg}
+    title: Spacer
+  - component: {type: anvil.DatePicker}
+    icon: {dark: /ide/img/toolbox/DatePicker.dark.svg, light: /ide/img/toolbox/DatePicker.svg}
+    title: DatePicker
+  - component: {type: anvil.Timer}
+    icon: {dark: /ide/img/toolbox/Timer.dark.svg, light: /ide/img/toolbox/Timer.svg}
+    title: Timer
+  packageName: m3
+  title: Other
