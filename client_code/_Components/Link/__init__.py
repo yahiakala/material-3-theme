@@ -69,7 +69,7 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
   # text = innerText_property('anvil-m3-link-text')
-  align = style_property('anvil-m3-link-container', 'justifyContent', 'align')
+  # align = style_property('anvil-m3-link-container', 'justifyContent', 'align')
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
   font_family = font_family_property('anvil-m3-link', 'font_family')
@@ -92,6 +92,7 @@ class Link(LinkTemplate):
   def align(self, value):
     self._props['align'] = value
     self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
+    self.dom_nodes['anvil-m3-link'].style.justifyContent = value
   
   @property
   def url(self):
