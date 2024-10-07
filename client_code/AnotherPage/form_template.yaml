@@ -19,6 +19,17 @@ components_by_slot:
     properties: {label_text: hello}
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
+    name: button_1
+    properties:
+      margin:
+        margin: ['100', null, '20', null]
+        padding: ['20', '40', '20', '20']
+      spacing:
+        margin: ['20', null, null, null]
+        padding: ['20', null, null, null]
+      text: Hello
+    type: form:_Components.Button
+  - layout_properties: {}
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
@@ -31,10 +42,6 @@ components_by_slot:
     name: button_menu_1
     properties: {}
     type: form:_Components.ButtonMenu
-  - layout_properties: {}
-    name: button_1
-    properties: {}
-    type: form:_Components.Button
   slot_5: []
   slot_6: []
   slot_7: []

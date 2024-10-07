@@ -123,7 +123,7 @@ class Button(ButtonTemplate):
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
   background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
-  spacing = spacing_property('anvil-m3-button-component')
+  spacing = spacing_property('anvil-m3-button')
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
   icon_position = property_with_callback('icon_position', _set_icon_position)
