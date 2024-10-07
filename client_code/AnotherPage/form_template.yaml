@@ -7,8 +7,8 @@ components_by_slot:
     properties:
       label_text: hello
       spacing:
-        margin: [auto, null, null, '']
-        padding: [auto, null, null, null]
+        margin: ['100', null, null, '']
+        padding: ['', null, '', null]
     type: form:_Components.TextInput.TextField
   - layout_properties: {}
     name: text_field_1
