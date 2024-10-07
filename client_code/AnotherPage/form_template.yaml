@@ -33,7 +33,7 @@ components_by_slot:
       type: Image
     layout_properties: {}
     name: link_1
-    properties: {align: center, text: Link, url: 'https://anvil.works'}
+    properties: {align: right, text: Link, url: 'https://anvil.works'}
     type: form:_Components.Link
   slot_5: []
   slot_6: []

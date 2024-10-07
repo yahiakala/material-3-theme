@@ -85,6 +85,15 @@ class Link(LinkTemplate):
   background_color = color_property('anvil-m3-link-container', 'backgroundColor', 'background_color')
 
   @property
+  def align(self):
+    return self._props.get('align')
+
+  @align.setter
+  def align(self, value):
+    self._props['align'] = value
+    self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
+  
+  @property
   def url(self):
     return self._props.get('url')
 
