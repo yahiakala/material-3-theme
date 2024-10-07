@@ -25,11 +25,18 @@ components_by_slot:
   - components:
     - layout_properties: {slot: anvil-m3-link-slot}
       name: heading_1
-      properties: {}
+      properties: {text: I'm in a link}
       type: form:_Components.Heading
     layout_properties: {}
     name: link_1
     properties: {}
+    type: form:_Components.Link
+  - layout_properties: {}
+    name: link_2
+    properties:
+      spacing:
+        margin: ['30', null, null, null]
+      text: I'm an empty link
     type: form:_Components.Link
   slot_5: []
   slot_6: []
