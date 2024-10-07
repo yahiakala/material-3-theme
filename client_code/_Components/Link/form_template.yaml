@@ -43,8 +43,9 @@ properties:
 - {default_value: '', description: The colour of the icon displayed on this component., group: Look and Feel, important: false, name: icon_color, type: color}
 - {default_value: 24, description: The size (pixels) of the icon displayed on this component., group: Icon, name: icon_size, type: number}
 - {default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel, important: false, name: border, type: string}
-- {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
+- {description: The margin and padding (pixels) of the component., group: Layout, important: true, name: spacing, type: spacing}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+- {default_value: '', description: The color of the background of this component, important: true, name: background_color, type: color}
 toolbox_item:
   hidden: true
   icon: {dark: 'asset:designer_icons/link_dark.svg', light: 'asset:designer_icons/link.svg'}

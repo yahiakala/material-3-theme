@@ -1,7 +1,7 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
 import anvil.designer
-from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, margin_property
+from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
 
 from anvil import HtmlTemplate
 
@@ -60,12 +60,13 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!componentProp(material_3.Link)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
   #!componentProp(material_3.Link)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.Link)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Link)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.Link)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
   #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
   # text = innerText_property('anvil-m3-link-text')
   align = style_property('anvil-m3-link-container', 'justifyContent', 'align')
@@ -78,9 +79,10 @@ class Link(LinkTemplate):
   text_color = color_property('anvil-m3-link', 'color', 'text_color')
   icon_color = color_property('anvil-m3-link-icon', 'color', 'icon_color')
   border = style_property('anvil-m3-link', 'border', 'border')
-  margin = margin_property('anvil-m3-link')
+  spacing = spacing_property('anvil-m3-link-container')
   tooltip = tooltip_property('anvil-m3-link')
   role = role_property('anvil-m3-link')
+  background_color = color_property('anvil-m3-link-container', 'backgroundColor', 'background_color')
 
   @property
   def url(self):
