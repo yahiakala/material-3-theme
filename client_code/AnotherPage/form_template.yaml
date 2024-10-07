@@ -23,6 +23,16 @@ components_by_slot:
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
+    name: checkbox_1
+    properties:
+      background_color: lightgreen
+      checkbox_color: ''
+      checked: true
+      spacing:
+        margin: ['', null, null, null]
+        padding: ['', null, null, null]
+    type: form:_Components.Checkbox
+  - layout_properties: {}
     name: dropdown_menu_1
     properties:
       label_text: Hello
