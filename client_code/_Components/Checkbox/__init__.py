@@ -132,13 +132,9 @@ class Checkbox(CheckboxTemplate):
     self._props['checkbox_color'] = value
     if value:
       value = theme_color_to_css(value)
-      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
-      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
-      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
-    else:
-      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = ""
-      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = ""
-      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = ""
+    self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
+    self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
+    self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
 
   @property
   def checked(self):
