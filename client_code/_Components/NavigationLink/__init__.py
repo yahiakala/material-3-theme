@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
-from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, margin_property, italic_property, bold_property, underline_property
+from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, spacing_property, italic_property, bold_property, underline_property
 import anvil.designer
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
@@ -60,7 +60,7 @@ class NavigationLink(NavigationLinkTemplate):
   #!componentProp(material_3.NavigationLink)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.NavigationLink)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
   #!componentProp(material_3.NavigationLink)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
@@ -82,7 +82,7 @@ class NavigationLink(NavigationLinkTemplate):
   font_size = font_size_property('anvil-m3-navigation-link-text', 'font_size')
   icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
   tooltip = tooltip_property('anvil-m3-navigation-link-container')
-  margin = margin_property('anvil-m3-navigation-link-container')
+  spacing = spacing_property('anvil-m3-navigation-link-container')
   background_color = color_property('anvil-m3-navigation-link-container', 'backgroundColor', 'background_color')
 
   @property

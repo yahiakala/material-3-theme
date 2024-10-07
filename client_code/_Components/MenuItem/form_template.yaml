@@ -43,7 +43,7 @@ properties:
 - {default_value: '', description: The colour of the text on the component., group: Text Style, important: true, name: text_color, type: color}
 - {default_value: false, description: 'If True, the main text will be italic.', designer_hint: font-italic, group: Text Style, important: true, name: italic, type: boolean}
 - {default_value: false, description: 'If True, the main text will be underlined.', designer_hint: font-underline, group: Text Style, important: true, name: underline, type: boolean}
-- {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: true, name: background_color, type: color}
+- {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: true, description: 'If True, this component will be displayed', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
 - {description: The size (pixels) of the leading icon displayed on this component, group: Icon, important: false, name: leading_icon_size, type: number}
 - {description: The size (pixels) of the trailing icon displayed on this component, group: Icon, important: false, name: trailing_icon_size, type: number}

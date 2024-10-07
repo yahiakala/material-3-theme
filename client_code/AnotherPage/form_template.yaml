@@ -19,6 +19,10 @@ components_by_slot:
     properties: {label_text: hello}
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
+    name: button_1
+    properties: {}
+    type: form:_Components.Button
+  - layout_properties: {}
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea

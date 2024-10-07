@@ -2,7 +2,12 @@ components_by_slot:
   slot_1:
   - layout_properties: {}
     name: navigation_link_1
-    properties: {material_icon: circle}
+    properties:
+      background_color: ''
+      material_icon: circle
+      spacing:
+        margin: ['', null, null, null]
+        padding: ['', null, null, null]
     type: form:_Components.NavigationLink
   - layout_properties: {}
     name: navigation_link_2
