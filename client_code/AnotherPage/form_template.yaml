@@ -26,7 +26,11 @@ components_by_slot:
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
-  - components: []
+  - components:
+    - layout_properties: {slot: anvil-m3-link-slot}
+      name: image_1
+      properties: {source: _/theme/anvil-extras.png}
+      type: Image
     layout_properties: {}
     name: link_1
     properties: {align: center, text: Link, url: 'https://anvil.works'}
