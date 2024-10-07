@@ -5,7 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_with_callback, innerText_property, margin_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
+from ...Functions import property_with_callback, innerText_property, spacing_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
 
 import anvil.designer
 
@@ -42,9 +42,9 @@ class MenuItem(MenuItemTemplate):
   text_color = color_property('anvil-m3-menuItem-labelText', 'color', 'text_color')
   trailing_icon_color = color_property('anvil-m3-menuItem-trailingIcon', 'color', 'trailing_icon_color')
   leading_icon_color = color_property('anvil-m3-menuItem-leadingIcon', 'color', 'leading_icon_color')
-  background = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-menuItem-container', 'backgroundColor', 'background')
   visible = HtmlTemplate.visible
-  margin = margin_property('anvil-m3-menuItem-container')
+  spacing = spacing_property('anvil-m3-menuItem-container')
   tooltip = tooltip_property('anvil-m3-menuItem-container')
 
   # def innerText_property(dom_node_name, prop_name="text"):
@@ -134,7 +134,7 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"background_color",type:"color",description:"The background colour of this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"leading_icon_size",type:"number",description:"The size (pixels) of the leading icon displayed on this component."}
   #!componentProp(material_3.MenuItem)!1: {name:"trailing_icon_size",type:"number",description:"The size (pixels) of the trailing icon displayed on this component."}
-  #!componentProp(material_3.MenuItem)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.MenuItem)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
   #!componentProp(material_3.MenuItem)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}

@@ -68,6 +68,7 @@ class NavigationLink(NavigationLinkTemplate):
   #!componentProp(material_3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"navigate_to",type:"form",description:"The Form to navigate to when the link is clicked."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(material_3.NavigationLink)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
@@ -82,6 +83,7 @@ class NavigationLink(NavigationLinkTemplate):
   icon_size = font_size_property('anvil-m3-navigation-link-icon', 'icon_size')
   tooltip = tooltip_property('anvil-m3-navigation-link-container')
   margin = margin_property('anvil-m3-navigation-link-container')
+  background_color = color_property('anvil-m3-navigation-link-container', 'backgroundColor', 'background_color')
 
   @property
   def url(self):
