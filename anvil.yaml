@@ -66,12 +66,14 @@ db_schema:
     title: Users
 name: Material 3 Theme
 native_deps:
-  head_html: |-
+  head_html: |
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <script src="_/theme/anvil-m3/floating-ui/core@1.6.7.js"></script>
+    <script src="_/theme/anvil-m3/floating-ui/dom@1.6.10.js"></script>
 package_name: m3
 runtime_options:
   client_version: '3'
@@ -84,10 +86,10 @@ services:
   source: /runtime/services/tables.yml
 startup: {module: AnotherPage, type: form}
 startup_form: null
-toolbox: 
-  hide_classic_components: true
+toolbox: {hide_classic_components: true}
 toolbox_sections:
-- items:
+- description: Use Typography components to display text
+  items:
   - component: {type: m3._Components.Text}
     icon: {dark: 'asset:designer_icons/text_dark.svg', light: 'asset:designer_icons/text.svg'}
     title: Text
@@ -101,9 +103,9 @@ toolbox_sections:
     icon: {dark: /ide/img/toolbox/RichText.dark.svg, light: /ide/img/toolbox/RichText.svg}
     title: RichText
   packageName: m3
-  description: Use Typography components to display text
   title: Typography
-- items:
+- description: Use Buttons to have users perform actions
+  items:
   - component: {type: m3._Components.Button}
     icon: {dark: 'asset:designer_icons/button_dark.svg', light: 'asset:designer_icons/button.svg'}
     title: Button
@@ -114,9 +116,9 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/toggle_icon_button_dark.svg', light: 'asset:designer_icons/toggle_icon_button.svg'}
     title: ToggleIconButton
   packageName: m3
-  description: Use Buttons to have users perform actions
   title: Buttons
-- items:
+- description: Display components help display content on the page
+  items:
   - component:
       components:
       - layout_properties: {slot: card-content-slot}
@@ -141,16 +143,16 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/divider_dark.svg', light: 'asset:designer_icons/divider.svg'}
     title: Divider
   packageName: m3
-  description: Display components help display content on the page
   title: Display
-- items:
+- description: Use navigation components to navigate between parts of your app
+  items:
   - component: {type: m3._Components.NavigationLink}
     icon: {dark: 'asset:designer_icons/navigation_link_dark.svg', light: 'asset:designer_icons/navigation_link.svg'}
     title: NavigationLink
   packageName: m3
-  description: Use navigation components to navigate between parts of your app
   title: Navigation
-- items:
+- description: Use menus to hold other components and display them as a list of options
+  items:
   - component: {type: m3._Components.ButtonMenu}
     icon: {dark: 'asset:designer_icons/button_menu_dark.svg', light: 'asset:designer_icons/button_menu.svg'}
     title: ButtonMenu
@@ -158,9 +160,9 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/menu_item_dark.svg', light: 'asset:designer_icons/menu_item.svg'}
     title: MenuItem
   packageName: m3
-  description: Use menus to hold other components and display them as a list of options
   title: Menus
-- items:
+- description: Use Form Input containers to get data from the user
+  items:
   - component: {type: m3._Components.Checkbox}
     icon: {dark: 'asset:designer_icons/checkbox_dark.svg', light: 'asset:designer_icons/checkbox.svg'}
     title: Checkbox
@@ -186,9 +188,9 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/slider_dark.svg', light: 'asset:designer_icons/slider.svg'}
     title: Slider
   packageName: m3
-  description: Use Form Input containers to get data from the user
   title: Form Input
-- items:
+- description: Use Feedback componentes to show the status of a process
+  items:
   - component: {type: m3._Components.LinearProgressIndicator}
     icon: {dark: 'asset:designer_icons/linear_progress_indicator_dark.svg', light: 'asset:designer_icons/linear_progress_indicator.svg'}
     title: LinearProgressIndicator
@@ -196,9 +198,9 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/circular_progress_indicator_dark.svg', light: 'asset:designer_icons/circular_progress_indicator.svg'}
     title: CircularProgressIndicator
   packageName: m3
-  description: Use Feedback componentes to show the status of a process
   title: Feedback
-- items:
+- description: Integrations allow you to connect to other platforms and services
+  items:
   - component: {type: anvil.Plot}
     icon: {dark: /ide/img/toolbox/Plot.dark.svg, light: /ide/img/toolbox/Plot.svg}
     title: Plot
@@ -212,9 +214,9 @@ toolbox_sections:
     icon: {dark: /ide/img/toolbox/Canvas.dark.svg, light: /ide/img/toolbox/Canvas.svg}
     title: Canvas
   packageName: m3
-  description: Integrations allow you to connect to other platforms and services
   title: Integrations
-- items:
+- description: Use Containers to lay out the components on the page
+  items:
   - component: {type: anvil.ColumnPanel}
     icon: {dark: /ide/img/toolbox/ColumnPanel.dark.svg, light: /ide/img/toolbox/ColumnPanel.svg}
     title: ColumnPanel
@@ -240,7 +242,6 @@ toolbox_sections:
     icon: {dark: /ide/img/toolbox/XYPanel.dark.svg, light: /ide/img/toolbox/XYPanel.svg}
     title: XYPanel
   packageName: m3
-  description: Use Containers to lay out the components on the page
   title: Containers
 - items:
   - component: {type: anvil.Image}
