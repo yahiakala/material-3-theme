@@ -215,4 +215,16 @@ class Heading(HeadingTemplate):
     set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
     self._margin = value
 
+  @property
+  def line_height(self):
+    return self._props.get('line_height')
+
+  @line_height.setter
+  def line_height(self, value):
+    self._props['line_height'] = value
+    self.dom_nodes['anvil-m3-heading-display'].style.lineHeight = value
+    self.dom_nodes['anvil-m3-heading-headline'].style.lineHeight = value
+    self.dom_nodes['anvil-m3-heading-title'].style.lineHeight = value
+    self.dom_nodes['anvil-m3-heading-container'].style.lineHeight = {value}
+
 #!defClass(material_3, Heading, anvil.Component)!:

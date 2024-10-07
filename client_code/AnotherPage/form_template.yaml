@@ -33,7 +33,7 @@ components_by_slot:
     type: form:_Components.ButtonMenu
   - layout_properties: {}
     name: text_1
-    properties: {}
+    properties: {line_height: '', text: Some text}
     type: form:_Components.Text
   slot_5: []
   slot_6: []

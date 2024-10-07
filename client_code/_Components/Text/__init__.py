@@ -56,6 +56,7 @@ class Text(TextTemplate):
   #!componentProp(material_3.Text)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
   #!componentProp(material_3.Text)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
   #!componentProp(material_3.Text)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Text)!1: {name:"line_height",type:"string",description:"The line height of this component."}
   #!componentProp(material_3.Text)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Text)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the text component: display, headline or title."}  
   #!componentProp(material_3.Text)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the text component."}
@@ -107,9 +108,8 @@ class Text(TextTemplate):
   @line_height.setter
   def line_height(self, value):
     self._props['line_height'] = value
-    if value: value = f'{value}px'
-    self.dom_nodes['anvil-m3-text'].style.fontSize = value
-    self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
+    self.dom_nodes['anvil-m3-text'].style.lineHeight = value
+    self.dom_nodes['anvil-m3-text-container'].style.lineHeight = value
 
   @property
   def material_icon(self):
