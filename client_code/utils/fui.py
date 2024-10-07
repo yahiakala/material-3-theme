@@ -1,7 +1,6 @@
 from anvil.js.window import window
 
 # https://floating-ui.com/
-# can't import from cdn, load js file in assets and import from there
 try:
     FloatingUIDOM = window.FloatingUIDOM
 except AttributeError:
