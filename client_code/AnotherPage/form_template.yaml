@@ -29,7 +29,7 @@ components_by_slot:
   - components:
     - layout_properties: {slot: anvil-m3-link-slot}
       name: image_1
-      properties: {source: _/theme/anvil-extras.png}
+      properties: {source: _/theme/anvil-extras.png, spacing_above: none, spacing_below: none}
       type: Image
     layout_properties: {}
     name: link_1
@@ -40,11 +40,11 @@ components_by_slot:
       border: 1px solid black
       icon_color: ''
       icon_size: 24
-      material_icon: 11mp
+      material_icon: ''
       spacing:
         margin: ['40', null, null, null]
         padding: ['40', null, null, null]
-      text: Link
+      text: ''
       text_color: green
       url: https://anvil.works
       visible: true
