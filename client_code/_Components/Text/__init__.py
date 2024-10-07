@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.js.window import document
-from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, margin_property
+from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, spacing_property
 from ...utils import fui, noop
 import time
 #TODO: figure out what to do with line height
@@ -51,7 +51,7 @@ class Text(TextTemplate):
   #!componentProp(material_3.Text)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Text)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(material_3.Text)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.Text)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Text)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.Text)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Text)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
   #!componentProp(material_3.Text)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
@@ -72,7 +72,7 @@ class Text(TextTemplate):
   background_color = color_property('anvil-m3-text-container', 'backgroundColor', 'background_color')
   text = innerText_property('anvil-m3-text')
   icon_size = font_size_property('anvil-m3-text-icon', 'icon_size')
-  margin = margin_property('anvil-m3-text-container')
+  spacing = spacing_property('anvil-m3-text-container')
   tooltip = tooltip_property('anvil-m3-text-container')
   role = role_property('anvil-m3-text-container')
 

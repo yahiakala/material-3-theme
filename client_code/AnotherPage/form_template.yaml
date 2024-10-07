@@ -23,23 +23,9 @@ components_by_slot:
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
-    name: checkbox_1
-    properties:
-      background_color: lightgreen
-      checkbox_color: ''
-      checked: true
-      spacing:
-        margin: ['', null, null, null]
-        padding: ['', null, null, null]
-    type: form:_Components.Checkbox
-  - layout_properties: {}
-    name: dropdown_menu_1
-    properties:
-      label_text: Hello
-      spacing:
-        margin: ['30', null, null, null]
-        padding: ['30', null, null, null]
-    type: form:_Components.DropdownMenu
+    name: radio_button_1
+    properties: {}
+    type: form:_Components.RadioButton
   slot_5: []
   slot_6: []
   slot_7: []

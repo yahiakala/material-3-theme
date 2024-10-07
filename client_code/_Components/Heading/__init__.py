@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
-from anvil.property_utils import set_element_margin
+from anvil.property_utils import set_element_spacing
 
 
 class Heading(HeadingTemplate):
@@ -58,7 +58,7 @@ class Heading(HeadingTemplate):
   #!componentProp(material_3.Heading)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Heading)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the heading component: display, headline or title."}  
   #!componentProp(material_3.Heading)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the heading component."}
-  #!componentProp(material_3.Heading)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Heading)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.Heading)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   visible = HtmlTemplate.visible
@@ -205,14 +205,14 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
 
   @property
-  def margin(self):
-    return self._margin
+  def spacing(self):
+    return self._props.get('spacing')
 
-  @margin.setter
-  def margin(self, value):
-    set_element_margin(self.dom_nodes['anvil-m3-heading-display'], value)
-    set_element_margin(self.dom_nodes['anvil-m3-heading-headline'], value)
-    set_element_margin(self.dom_nodes['anvil-m3-heading-title'], value)
-    self._margin = value
+  @spacing.setter
+  def spacing(self, value):
+    set_element_spacing(self.dom_nodes['anvil-m3-heading-container'], value)
+    # set_element_spacing(self.dom_nodes['anvil-m3-heading-headline'], value)
+    # set_element_spacing(self.dom_nodes['anvil-m3-heading-title'], value)
+    self._props['spacing'] = value
 
 #!defClass(material_3, Heading, anvil.Component)!:

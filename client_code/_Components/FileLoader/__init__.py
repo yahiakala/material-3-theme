@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, margin_property
+from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 
@@ -109,7 +109,7 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
   #!componentProp(material_3.FileLoader)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.FileLoader)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.FileLoader)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.FileLoader)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["text", "filled", "elevated", "tonal", "outlined"],description:"A predefined style for this component."}
@@ -135,7 +135,7 @@ class FileLoader(FileLoaderTemplate):
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
   border = style_property('anvil-m3-fileloader-container', 'border', 'border')
-  margin = margin_property('anvil-m3-fileloader-form')
+  spacing = spacing_property('anvil-m3-fileloader-form')
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
   appearance = property_with_callback("appearance", _set_appearance)
