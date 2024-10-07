@@ -27,10 +27,6 @@ components_by_slot:
       name: heading_1
       properties: {}
       type: form:_Components.Heading
-    - layout_properties: {slot: anvil-m3-link-slot}
-      name: text_1
-      properties: {}
-      type: form:_Components.Text
     layout_properties: {}
     name: link_1
     properties: {}
