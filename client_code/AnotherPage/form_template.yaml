@@ -19,36 +19,9 @@ components_by_slot:
     properties: {label_text: hello}
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
-    name: button_1
-    properties: {border: 2px dashed cyan}
-    type: form:_Components.Button
-  - layout_properties: {}
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
-  - components:
-    - layout_properties: {slot: anvil-m3-link-slot}
-      name: image_1
-      properties: {source: _/theme/anvil-extras.png, spacing_above: none, spacing_below: none}
-      type: Image
-    layout_properties: {}
-    name: link_1
-    properties:
-      align: center
-      background_color: lightcyan
-      bold: false
-      border: 1px solid black
-      icon_color: ''
-      icon_size: 24
-      material_icon: ''
-      spacing:
-        margin: ['40', null, null, null]
-        padding: ['40', null, null, null]
-      text: ''
-      text_color: green
-      url: https://anvil.works
-      visible: true
-    type: form:_Components.Link
   slot_5: []
   slot_6: []
   slot_7: []
