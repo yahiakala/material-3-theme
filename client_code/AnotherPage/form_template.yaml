@@ -22,15 +22,6 @@ components_by_slot:
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
-  - components:
-    - layout_properties: {slot: card-content-slot}
-      name: card_content_container_1
-      properties: {}
-      type: form:_Components.Card.CardContentContainer
-    layout_properties: {}
-    name: card_1
-    properties: {}
-    type: form:_Components.Card
   slot_5: []
   slot_6: []
   slot_7: []
