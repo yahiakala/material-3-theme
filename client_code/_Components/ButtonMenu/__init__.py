@@ -126,7 +126,7 @@ class ButtonMenu(ButtonMenuTemplate):
   icon_position = property_with_callback("icon_position", _set_icon_position)
 
   def _set_margin(self, value):
-    self.menu_button.margin = value
+    self.menu_button.spacing = value
   margin = property_with_callback("margin", _set_margin)
 
   def _set_align(self, value):
