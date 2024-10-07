@@ -20,7 +20,7 @@ components_by_slot:
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
     name: button_1
-    properties: {}
+    properties: {border: 2px dashed cyan}
     type: form:_Components.Button
   - layout_properties: {}
     name: text_area_2
