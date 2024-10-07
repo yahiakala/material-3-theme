@@ -101,6 +101,17 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
 
   @property
+  def line_height(self):
+    return self._props.get('line_height')
+
+  @line_height.setter
+  def line_height(self, value):
+    self._props['line_height'] = value
+    if value: value = f'{value}px'
+    self.dom_nodes['anvil-m3-text'].style.fontSize = value
+    self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
+
+  @property
   def material_icon(self):
     return self._material_icon
 
