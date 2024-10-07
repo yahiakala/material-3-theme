@@ -12,6 +12,10 @@ class AnotherPage(AnotherPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def text_field_3_pressed_enter(self, **event_args):
+    """This method is called when the user presses enter in this component."""
+    pass
+
  
     
 
