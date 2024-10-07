@@ -62,6 +62,7 @@ properties:
 - {default_value: '', description: The colour of the icon displayed on this component., group: Look and Feel, name: icon_color, type: color}
 - {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+- {default_value: '', description: The line height of the component, group: Text, important: false, name: line_height, type: string}
 toolbox_item:
   hidden: true
   icon: {dark: 'asset:designer_icons/heading_dark.svg', light: 'asset:designer_icons/heading.svg'}

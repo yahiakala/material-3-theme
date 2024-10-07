@@ -60,6 +60,7 @@ class Heading(HeadingTemplate):
   #!componentProp(material_3.Heading)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the heading component."}
   #!componentProp(material_3.Heading)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.Heading)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(material_3.Heading)!1: {name:"line_height",type:"string",description:"The line height of this component."}
 
   visible = HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
