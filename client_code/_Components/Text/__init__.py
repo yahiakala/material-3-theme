@@ -41,7 +41,6 @@ class Text(TextTemplate):
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-text']
     rv = get_unset_value(el, "fontSize", self.font_size)
-    print(rv)
     return {"font_size": rv}
 
   #!componentEvent(material_3.Text)!1: {name: "show", description: "When the Text is shown on the screen."}
