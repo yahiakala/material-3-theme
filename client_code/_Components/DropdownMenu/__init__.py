@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, property_without_callback, margin_property, color_property
+from ...Functions import property_with_callback, property_without_callback, spacing_property, color_property
 from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
@@ -55,7 +55,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  margin = margin_property('anvil-m3-dropdownMenu-textfield')
+  spacing = spacing_property('anvil-m3-dropdownMenu-textfield')
 
   def _set_background_color(self, value):
     self.selection_field.background_color = value
@@ -461,7 +461,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
   #!componentProp(material_3.DropdownMenu)!1: {name:"allow_none",type:"boolean",description:"If True, a placeholder item is added to the menu with value None"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
