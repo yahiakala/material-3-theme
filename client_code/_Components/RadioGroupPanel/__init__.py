@@ -10,7 +10,6 @@ class RadioGroup(Component):
   _anvil_events_ = [{"name": "change"}]
 
   def __init__(self):
-    super().__init__()
     self._buttons = []
     self._selected_button = None
 
