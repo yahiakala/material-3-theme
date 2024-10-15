@@ -38,6 +38,10 @@ components_by_slot:
         margin: ['30', null, null, null]
       text: I'm an empty link
     type: form:_Components.Link
+  - layout_properties: {}
+    name: text_1
+    properties: {}
+    type: form:_Components.Text
   slot_5: []
   slot_6: []
   slot_7: []
