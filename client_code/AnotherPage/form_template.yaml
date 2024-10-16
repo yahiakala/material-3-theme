@@ -13,46 +13,6 @@ components_by_slot:
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
-  - components:
-    - layout_properties: {slot: anvil-m3-link-slot}
-      name: text_2
-      properties: {}
-      type: form:_Components.Text
-    layout_properties: {}
-    name: link_1
-    properties: {}
-    type: form:_Components.Link
-  - components:
-    - event_bindings: {pressed_enter: text_field_3_pressed_enter}
-      layout_properties: {slot: anvil-m3-link-slot}
-      name: text_field_3
-      properties:
-        label_text: hello
-        spacing:
-          margin: ['100', null, null, '']
-          padding: ['', null, '', null]
-      type: form:_Components.TextInput.TextField
-    layout_properties: {}
-    name: link_2
-    properties:
-      spacing:
-        margin: ['30', null, null, null]
-      text: I'm an empty link
-      url: https://anvil.works
-    type: form:_Components.Link
-  - components:
-    - layout_properties: {slot: anvil-m3-link-slot}
-      name: heading_1
-      properties: {align: left, text: I'm in a link}
-      type: form:_Components.Heading
-    layout_properties: {}
-    name: link_3
-    properties: {align: center, url: 'https://google.com'}
-    type: form:_Components.Link
-  - layout_properties: {}
-    name: text_1
-    properties: {}
-    type: form:_Components.Text
   slot_5: []
   slot_6: []
   slot_7: []

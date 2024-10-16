@@ -43,6 +43,11 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
 
+  #!defMethod(_)!2: "Add components, ideally n" ["add_to_nav_rail"]
+  def add_to_nav_rail(self, components=[]):
+    for c in components:
+      self.slots['nav_links_slot'].add_component(c)
+
   def _add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
       if window.scrollY == 0:
