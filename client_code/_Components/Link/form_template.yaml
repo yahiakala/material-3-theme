@@ -13,7 +13,6 @@ events:
 is_package: true
 properties:
 - {default_binding_prop: true, default_value: '', description: The text displayed on this component., group: Key Properties, important: true, multiline: true, name: text, type: string}
-- {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - {default_value: '', description: The target URL of the link. Can be set to a URL string or to a Media object., group: Key Properties, important: true, name: url, type: string}
 - default_value: left
