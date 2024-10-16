@@ -1,5 +1,5 @@
 components_by_slot:
-  slot_1:
+  nav_rail_slot:
   - layout_properties: {}
     name: navigation_link_1
     properties:
@@ -17,6 +17,7 @@ components_by_slot:
     name: navigation_link_3
     properties: {material_icon: hexagon}
     type: form:_Components.NavigationLink
+  slot_1: []
 is_package: true
 layout:
   properties:
