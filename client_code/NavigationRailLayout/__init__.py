@@ -27,7 +27,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
-   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)\
+   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
 
   #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e):
@@ -44,9 +44,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
 
   #!defMethod(_)!2: "Add components to the navigation rail." ["add_to_nav_rail"]
-  def add_to_nav_rail(self, components=[]):
-    for c in components:
-      self.slots['slot_1'].add_component(c)
+  def add_to_nav_rail(self, component):
+    self.slots['slot_1'].add_component(component)
 
   def _add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):
