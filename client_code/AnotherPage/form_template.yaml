@@ -1,15 +1,6 @@
 components_by_slot:
   slot_1: []
   slot_3:
-  - event_bindings: {pressed_enter: text_field_3_pressed_enter}
-    layout_properties: {}
-    name: text_field_3
-    properties:
-      label_text: hello
-      spacing:
-        margin: ['100', null, null, '']
-        padding: ['', null, '', null]
-    type: form:_Components.TextInput.TextField
   - layout_properties: {}
     name: text_field_1
     properties: {appearance: outlined, label_text: Hello}
@@ -27,15 +18,20 @@ components_by_slot:
       name: text_2
       properties: {}
       type: form:_Components.Text
-    - layout_properties: {slot: anvil-m3-link-slot}
-      name: heading_1
-      properties: {text: I'm in a link}
-      type: form:_Components.Heading
     layout_properties: {}
     name: link_1
     properties: {}
     type: form:_Components.Link
-  - components: []
+  - components:
+    - event_bindings: {pressed_enter: text_field_3_pressed_enter}
+      layout_properties: {slot: anvil-m3-link-slot}
+      name: text_field_3
+      properties:
+        label_text: hello
+        spacing:
+          margin: ['100', null, null, '']
+          padding: ['', null, '', null]
+      type: form:_Components.TextInput.TextField
     layout_properties: {}
     name: link_2
     properties:
@@ -43,7 +39,11 @@ components_by_slot:
         margin: ['30', null, null, null]
       text: I'm an empty link
     type: form:_Components.Link
-  - components: []
+  - components:
+    - layout_properties: {slot: anvil-m3-link-slot}
+      name: heading_1
+      properties: {text: I'm in a link}
+      type: form:_Components.Heading
     layout_properties: {}
     name: link_3
     properties: {}

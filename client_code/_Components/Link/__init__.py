@@ -78,10 +78,10 @@ class Link(LinkTemplate):
   text_color = color_property('anvil-m3-link', 'color', 'text_color')
   icon_color = color_property('anvil-m3-link-icon', 'color', 'icon_color')
   border = style_property('anvil-m3-link', 'border', 'border')
-  spacing = spacing_property('anvil-m3-link-container')
+  # spacing = spacing_property('anvil-m3-link-container')
   tooltip = tooltip_property('anvil-m3-link')
   role = role_property('anvil-m3-link')
-  background_color = color_property('anvil-m3-link-container', 'backgroundColor', 'background_color')
+  # background_color = color_property('anvil-m3-link-container', 'backgroundColor', 'background_color')
 
   @property
   def align(self):
@@ -90,8 +90,9 @@ class Link(LinkTemplate):
   @align.setter
   def align(self, value):
     self._props['align'] = value
-    self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
-    self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
+    self.dom_nodes['anvil-m3-link'].style.textAlign = value
+    # self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
+    # self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
   
   @property
   def url(self):
