@@ -69,7 +69,6 @@ class RadioGroup(Component):
         return component
 
     # No enclosing RadioGroup container, return a global one
-    global global_radio_group
     return global_radio_group
 
 
