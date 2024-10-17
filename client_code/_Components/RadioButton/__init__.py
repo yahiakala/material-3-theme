@@ -132,7 +132,7 @@ class RadioButton(RadioButtonTemplate):
         if button is not self:
           try:
             anvil.designer.update_component_properties(button, {'selected': False})
-          except Exception:
+          except anvil.js.ExternalError:
             pass  # Ignore error if the component isn't on the currently editing form
 
   def _set_text(self, value):
