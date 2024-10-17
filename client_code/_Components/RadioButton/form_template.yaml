@@ -18,7 +18,7 @@ container:
   type: HtmlTemplate
 custom_component: true
 events:
-- {default_event: true, description: When the component is selected., name: select}
+- {default_event: true, description: When the radio button is selected., name: select}
 - {description: When the component is shown on the screen., name: show}
 - {description: When the component is removed from the screen., name: hide}
 is_package: true
@@ -50,7 +50,13 @@ properties:
 - {description: The margin and padding (pixels) of the component., group: Layout, important: true, name: spacing, type: spacing}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
 - {default_value: '', description: The color of the radio button., group: Look and Feel, important: true, name: radio_color, type: color}
-- {description: RadioGroup that contains this component, important: false, name: group, type: object}
+- description: |-
+    The RadioGroup that contains this radio button.
+    If this radio button is placed inside a RadioGroupPanel, this property is will refer to that RadioGroupPanel.
+    If this radio button has no enclosing RadioGroupPanel, this property will refer to to a global RadioGroup containing all radio buttons that don't have an enclosing RadioGroupPanel.
+  important: false
+  name: group
+  type: object
 toolbox_item:
   hidden: true
   icon: {dark: 'asset:designer_icons/radio_button_dark.svg', light: 'asset:designer_icons/radio_button.svg'}
