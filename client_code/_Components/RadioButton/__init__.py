@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
-from ...Functions import checked_property, role_property, tooltip_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, margin_property
+from ...Functions import checked_property, role_property, tooltip_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, spacing_property
 from ...utils import gen_id
 
 class RadioButton(RadioButtonTemplate):
@@ -43,9 +43,9 @@ class RadioButton(RadioButtonTemplate):
   #!componentProp(material_3.RadioButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.RadioButton)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.RadioButton)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.RadioButton)!1: {name:"background",type:"color",description:"The color of the background of this component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.RadioButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!componentProp(material_3.RadioButton)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.RadioButton)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.RadioButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.RadioButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.RadioButton)!1: {name:"text",type:"string",description:"The text displayed on this component"}
@@ -65,9 +65,9 @@ class RadioButton(RadioButtonTemplate):
   border = border_property('anvil-m3-radiobutton-container')
   font_family = font_family_property('anvil-m3-radiobutton-label', 'font_family')
   text_color = color_property('anvil-m3-radiobutton-label', 'color', 'text_color')
-  background = color_property('anvil-m3-radiobutton-component', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-radiobutton-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-radiobutton-component', 'justifyContent', 'align')
-  margin = margin_property('anvil-m3-radiobutton-component')
+  spacing = spacing_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
   role = role_property('anvil-m3-radiobutton-container')
   # selected = checked_property('anvil-m3-radiobutton-input')

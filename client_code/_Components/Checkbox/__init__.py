@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, margin_property, font_family_property, border_property
+from ...Functions import enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, spacing_property, font_family_property, border_property
 from ...utils import gen_id
 import anvil.designer
 
@@ -84,7 +84,7 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!componentProp(material_3.Checkbox)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!componentProp(material_3.Checkbox)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.Checkbox)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.Checkbox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.Checkbox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.Checkbox)!1: {name:"text",type:"string",description:"The text displayed on this component"}
@@ -104,9 +104,9 @@ class Checkbox(CheckboxTemplate):
   border = border_property('anvil-m3-checkbox-container')
   font_family = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color', 'text_color')
-  background = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
-  margin = margin_property('anvil-m3-checkbox-component')
+  spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
 
@@ -135,6 +135,10 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
       self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
+    else:
+      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = ""
+      self.dom_nodes['anvil-m3-checkbox-checked'].style.color = ""
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = ""
 
   @property
   def checked(self):

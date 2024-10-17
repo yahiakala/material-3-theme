@@ -125,9 +125,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.icon_position = value
   icon_position = property_with_callback("icon_position", _set_icon_position)
 
-  def _set_margin(self, value):
-    self.menu_button.margin = value
-  margin = property_with_callback("margin", _set_margin)
+  def _set_spacing(self, value):
+    self.menu_button.spacing = value
+  spacing = property_with_callback("spacing", _set_spacing)
 
   def _set_align(self, value):
     self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
@@ -287,7 +287,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #!componentProp(material_3.ButtonMenu)!1: {name:"menu_border",type:"color",description:"The border of the menu. Can take any valid CSS border value."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"button_background_color",type:"color",description:"The colour of the background of the Button."}
-  #!componentProp(material_3.ButtonMenu)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(material_3.ButtonMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"button_border",type:"string",description:"The border of the Button. Can take any valid CSS border value."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.ButtonMenu)!1: {name:"icon_position",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}

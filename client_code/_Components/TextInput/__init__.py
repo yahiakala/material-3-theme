@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, spacing_property, tooltip_property, theme_color_to_css
+from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, margin_property, tooltip_property, theme_color_to_css
 from anvil import HtmlTemplate
 from ...utils import gen_id
 
@@ -25,7 +25,7 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
   label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
-  spacing = spacing_property('anvil-m3-textinput')
+  margin = margin_property('anvil-m3-textfield')
   tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
   supporting_text_font_family = font_family_property('anvil-m3-supporting-text', 'supporting_text_font_family')

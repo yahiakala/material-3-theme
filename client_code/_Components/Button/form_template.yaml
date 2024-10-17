@@ -63,12 +63,7 @@ properties:
   name: icon_position
   options: [left, right]
   type: enum
-- default_value: ['8', '8', '8', '8']
-  description: The margin (pixels) of the component.
-  group: Layout
-  important: true
-  name: margin
-  type: margin
+- {description: The margin and padding (pixels) of the component., group: Layout, important: true, name: spacing, type: spacing}
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel, important: false, name: border, type: string}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}

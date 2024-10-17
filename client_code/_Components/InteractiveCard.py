@@ -4,7 +4,7 @@ import anvil.designer
 from ..Functions import property_with_callback
 
 #todo figure out how to get default value to work
-another_proerty = {"name": "asdf", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "another_property"}
+# another_proerty = {"name": "asdf", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "another_property"}
 enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "asdf"}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
 
@@ -37,7 +37,7 @@ class InteractiveCard(Card):
   #!componentProp(material_3.InteractiveCard)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.InteractiveCard)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(material_3.InteractiveCard)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!componentProp(material_3.InteractiveCard)!1: {name:"spacing",type:"margin",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(material_3.InteractiveCard)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.InteractiveCard)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.InteractiveCard)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(material_3.InteractiveCard)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}

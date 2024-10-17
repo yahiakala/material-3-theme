@@ -1,15 +1,6 @@
 components_by_slot:
   slot_1: []
   slot_3:
-  - event_bindings: {pressed_enter: text_field_3_pressed_enter}
-    layout_properties: {}
-    name: text_field_3
-    properties:
-      label_text: hello
-      spacing:
-        margin: [auto, null, null, '']
-        padding: [auto, null, null, null]
-    type: form:_Components.TextInput.TextField
   - layout_properties: {}
     name: text_field_1
     properties: {appearance: outlined, label_text: Hello}

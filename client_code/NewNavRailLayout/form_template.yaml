@@ -1,8 +1,14 @@
 components_by_slot:
+  nav_rail_slot: []
   slot_1:
   - layout_properties: {}
     name: navigation_link_1
-    properties: {material_icon: circle}
+    properties:
+      background_color: ''
+      material_icon: circle
+      spacing:
+        margin: ['', null, null, null]
+        padding: ['', null, null, null]
     type: form:_Components.NavigationLink
   - layout_properties: {}
     name: navigation_link_2
@@ -18,6 +24,7 @@ layout:
     content_padding: ['24', '24', '24', '24']
     navigation_rail_collapse_to: bottom_app_bar
     navigation_rail_vertical_align: Top
+    show_sidesheet: false
   type: form:NavigationRailLayout
 slots:
   slot_3:
