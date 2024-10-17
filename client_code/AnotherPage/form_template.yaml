@@ -26,6 +26,10 @@ components_by_slot:
     name: text_1
     properties: {line_height: '', text: Some text}
     type: form:_Components.Text
+  - layout_properties: {}
+    name: link_1
+    properties: {}
+    type: form:_Components.Link
   slot_5: []
   slot_6: []
   slot_7: []
