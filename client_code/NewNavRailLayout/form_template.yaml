@@ -24,7 +24,7 @@ layout:
     content_padding: ['24', '24', '24', '24']
     navigation_rail_collapse_to: bottom_app_bar
     navigation_rail_vertical_align: Top
-    show_sidesheet: false
+    show_sidesheet: true
   type: form:NavigationRailLayout
 slots:
   slot_3:
@@ -34,4 +34,4 @@ slots:
   slot_5:
     index: 0
     set_layout_properties: {}
-    target: {name: slot_5, type: slot}
+    target: {name: sidesheet_slot, type: slot}

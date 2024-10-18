@@ -52,9 +52,9 @@ slots:
     set_layout_properties: {}
     target: {name: slot_4, type: slot}
   slot_5:
-    index: 1
+    index: 0
     set_layout_properties: {}
-    target: {name: slot_5, type: slot}
+    target: {name: sidesheet_slot, type: slot}
   slot_6:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet-title}
