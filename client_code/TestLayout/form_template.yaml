@@ -21,14 +21,15 @@ components_by_slot:
     name: navigation_link_3
     properties: {badge: false, bold: false, italic: false, material_icon: logout, role: null, selected: false, text: Log out, underline: false, url: 'https://anvil.works'}
     type: form:_Components.NavigationLink
-  slot_1: []
-  slot_2: []
-  slot_3: []
-  slot_5:
+  sidesheet_slot:
   - layout_properties: {}
     name: sidesheet_content_1
     properties: {}
     type: form:SidesheetContent
+  slot_1: []
+  slot_2: []
+  slot_3: []
+  slot_5: []
 is_package: true
 layout:
   properties: {app_title: Material Design 3, background_color: '', navigation_rail_collapse_to: bottom_app_bar, navigation_rail_color: '', navigation_rail_vertical_align: Top, show_sidesheet: true, text_color: ''}
