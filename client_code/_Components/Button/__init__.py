@@ -15,6 +15,8 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._text = properties.get('text', '')
+    c = ComponentTag()
+    print(c)
     self._tooltip_node = None
     self.init_components(**properties)
     
