@@ -46,23 +46,23 @@ properties:
   name: content_padding
   type: padding
 slots:
-  app_bar_links_slot:
+  app_bar_links:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-bar-links}
     target: {name: '', type: container}
-  app_bar_title_slot:
+  app_bar_title:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-title}
     target: {name: '', type: container}
-  content_slot:
+  content:
     index: 0
     set_layout_properties: {slot: anvil-m3-content}
     target: {name: '', type: container}
-  nav_drawer_slot:
+  nav_drawer:
     index: 0
     set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
     target: {name: '', type: container}
-  slot_5:
+  sidesheet:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {name: '', type: container}

@@ -1,5 +1,5 @@
 components_by_slot:
-  nav_rail_slot:
+  nav_rail:
   - event_bindings: {click: navigation_link_1_click}
     layout_properties: {}
     name: navigation_link_1
@@ -21,11 +21,13 @@ components_by_slot:
     name: navigation_link_3
     properties: {badge: false, bold: false, italic: false, material_icon: logout, role: null, selected: false, text: Log out, underline: false, url: 'https://anvil.works'}
     type: form:_Components.NavigationLink
-  sidesheet_slot:
+  nav_rail_slot: []
+  sidesheet:
   - layout_properties: {}
     name: sidesheet_content_1
     properties: {}
     type: form:SidesheetContent
+  sidesheet_slot: []
   slot_1: []
   slot_2: []
   slot_3: []
@@ -40,14 +42,10 @@ slots:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {name: sidesheet_content_1, type: container}
-  slot_2:
-    index: 0
-    set_layout_properties: {}
-    target: {name: slot_2, type: slot}
   slot_3:
     index: 0
     set_layout_properties: {}
-    target: {name: content_slot, type: slot}
+    target: {name: content, type: slot}
   slot_4:
     index: 0
     set_layout_properties: {}

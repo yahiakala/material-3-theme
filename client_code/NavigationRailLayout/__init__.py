@@ -45,7 +45,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
   #!defMethod(_)!2: "Add components to the navigation rail." ["add_to_nav_rail"]
   def add_to_nav_rail(self, component):
-    self.slots['slot_1'].add_component(component)
+    self.slots['nav_rail_slot'].add_component(component)
 
   def _add_scroll_class(self, e):
     if self.app_bar.classList.contains('anvil-m3-scrolled'):

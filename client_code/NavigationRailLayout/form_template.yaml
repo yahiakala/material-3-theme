@@ -61,15 +61,15 @@ properties:
   name: content_padding
   type: padding
 slots:
-  content_slot:
+  content:
     index: 0
     set_layout_properties: {slot: anvil-m3-content}
     target: {name: '', type: container}
-  nav_rail_slot:
+  nav_rail:
     index: 0
     set_layout_properties: {slot: anvil-m3-navigation-rail-content}
     target: {name: '', type: container}
-  sidesheet_slot:
+  sidesheet:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {name: '', type: container}
