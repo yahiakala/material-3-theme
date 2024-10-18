@@ -1,5 +1,5 @@
 components_by_slot:
-  slot_1:
+  content_slot:
   - layout_properties: {}
     name: card_1
     properties:
@@ -15,7 +15,7 @@ components_by_slot:
       image_position: full
       margin: [4px, '28', 4px, '28']
     type: form:_Components.Card
-  slot_2:
+  nav_drawer_slot:
   - layout_properties: {}
     name: navigation_link_2
     properties: {badge: false, badge_count: null, material_icon: circle, selected: true, text: Label}
@@ -28,6 +28,8 @@ components_by_slot:
     name: navigation_link_3
     properties: {badge: false, material_icon: hexagon, text: Label}
     type: form:_Components.NavigationLink
+  slot_1: []
+  slot_2: []
   slot_5:
   - components:
     - layout_properties: {slot: anvil-m3-sidesheet-close-button}

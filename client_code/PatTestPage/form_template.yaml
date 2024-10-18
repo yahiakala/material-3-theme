@@ -1,10 +1,5 @@
 components_by_slot:
-  slot_1:
-  - layout_properties: {}
-    name: navigation_link_1
-    properties: {}
-    type: form:_Components.NavigationLink
-  slot_3:
+  content_slot:
   - components:
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
       name: text_field_1
@@ -30,6 +25,13 @@ components_by_slot:
     name: button_1
     properties: {align: center, text: vcbxcv}
     type: form:_Components.Button
+  nav_rail_slot:
+  - layout_properties: {}
+    name: navigation_link_1
+    properties: {}
+    type: form:_Components.NavigationLink
+  slot_1: []
+  slot_3: []
 is_package: true
 layout:
   properties: {show_sidesheet: false}
