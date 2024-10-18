@@ -13,8 +13,6 @@ from ...utils.properties import ComponentTag
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
-    c = ComponentTag()
-    print(c)
     self._props = properties
     self._text = properties.get('text', '')
     self._tooltip_node = None
