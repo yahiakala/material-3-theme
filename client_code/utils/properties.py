@@ -79,4 +79,5 @@ except (ImportError, AttributeError):
     pass
 
 class ComponentTag():
-  def __init__(self)
+  def __init__(self):
+    pass

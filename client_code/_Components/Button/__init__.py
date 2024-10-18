@@ -9,9 +9,12 @@ from ...Functions import color_property, role_property, tooltip_property, custom
 from ...utils.properties import get_unset_value, get_unset_spacing
 from anvil import HtmlTemplate
 import anvil.designer
+from ...utils.properties import ComponentTag
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
+    c = ComponentTag()
+    print(c)
     self._props = properties
     self._text = properties.get('text', '')
     self._tooltip_node = None
