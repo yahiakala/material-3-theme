@@ -41,7 +41,7 @@ components:
             italic_label: false
             label_text: Label
             spacing:
-              margin: [auto, null, null, '40']
+              margin: [auto, null, null, '']
               padding: [auto, null, null, null]
             supporting_text: Supporting text
             underline_display: false
