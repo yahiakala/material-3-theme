@@ -1,5 +1,5 @@
 components_by_slot:
-  slot_1:
+  nav_rail_slot:
   - event_bindings: {click: navigation_link_1_click}
     layout_properties: {}
     name: navigation_link_1
@@ -21,6 +21,7 @@ components_by_slot:
     name: navigation_link_3
     properties: {badge: false, bold: false, italic: false, material_icon: logout, role: null, selected: false, text: Log out, underline: false, url: 'https://anvil.works'}
     type: form:_Components.NavigationLink
+  slot_1: []
   slot_2: []
   slot_3: []
   slot_5:
