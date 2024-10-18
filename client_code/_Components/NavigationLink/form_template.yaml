@@ -1,6 +1,5 @@
 components: []
 container:
-  data_bindings: []
   event_bindings: {}
   properties:
     html: |

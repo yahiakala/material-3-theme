@@ -8,6 +8,7 @@ from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, spacing_property, font_family_property, border_property
 from ...utils import gen_id
 import anvil.designer
+from ...utils.properties import get_unset_value, get_unset_spacing
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
@@ -28,6 +29,11 @@ class Checkbox(CheckboxTemplate):
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self._handle_change)
+
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes['anvil-m3-checkbox-label']
+    rv = get_unset_value(el, "fontSize", self.font_size)
+    return {"font_size": rv}
 
   #!defMethod(_)!2: "Set the keyboard focus to this Checkbox." ["focus"]
   def focus(self):

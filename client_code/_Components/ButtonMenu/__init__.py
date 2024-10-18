@@ -12,6 +12,7 @@ import anvil.designer
 from ..MenuItem import MenuItem
 from ...Functions import property_with_callback, color_property, border_property, role_property
 from ...utils import fui, noop
+from ...utils.properties import get_unset_value, get_unset_spacing
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
@@ -50,6 +51,12 @@ class ButtonMenu(ButtonMenuTemplate):
     # remove the menu node we put on the body
     self._menuNode.remove()
 
+  def _anvil_get_unset_property_values_(self):
+    text = self.menu_button.dom_nodes['anvil-m3-button-text']
+    icon = self.menu_button.dom_nodes['anvil-m3-button-icon']
+    tfs = get_unset_value(text, "fontSize", self.button_font_size)
+    ifs = tfs = get_unset_value(icon, "fontSize", self.button_font_size)
+    return {"button_font_size": tfs, "icon_size": ifs}
 
   def _handle_click(self, event):
     if self.enabled:

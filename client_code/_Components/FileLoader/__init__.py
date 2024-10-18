@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
+from ...utils.properties import get_unset_value, get_unset_spacing
 
 #todo: fix focus state within column panel
 
@@ -39,6 +40,13 @@ class FileLoader(FileLoaderTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-fileloader-label'])
       }
     }]
+
+  def _anvil_get_unset_property_values_(self):
+    text = self.dom_nodes['anvil-m3-fileloader-label']
+    icon = self.dom_nodes['anvil-m3-fileloader-icon']
+    tfs = get_unset_value(text, "fontSize", self.font_size)
+    ifs = get_unset_value(icon, "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs}
 
   #!defMethod(_)!2: "Clear any selected files from this FileLoader." ["clear"]
   def clear(self):
