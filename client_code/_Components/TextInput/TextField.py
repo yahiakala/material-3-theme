@@ -4,6 +4,7 @@ import anvil.designer
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
+from ...utils.properties import get_unset_value
 
 input_text_property = {"name": "input_text",
                  "type": "string",
@@ -98,7 +99,7 @@ class TextField(TextInput):
     if e.key == "Enter":
       self.raise_event("x-anvil-write-back-input_text")
       self.raise_event("pressed_enter")
-
+    
   def _set_placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textfield']
     if value:

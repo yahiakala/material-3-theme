@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.js
 from ...Functions import color_property, role_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, margin_property 
+from ...utils.properties import get_unset_value, get_unset_spacing
 from anvil import HtmlTemplate
 import anvil.designer
 
@@ -41,6 +42,13 @@ class Button(ButtonTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-button-text'])
       }
     }]
+
+  def _anvil_get_unset_property_values_(self):
+    text = self.dom_nodes['anvil-m3-button-text']
+    icon = self.dom_nodes['anvil-m3-button-icon']
+    tfs = get_unset_value(text, "fontSize", self.font_size)
+    ifs = get_unset_value(icon, "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs}
 
   def _set_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)

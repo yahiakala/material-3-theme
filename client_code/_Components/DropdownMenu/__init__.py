@@ -12,6 +12,7 @@ import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
 from ...utils import fui, noop
+from ...utils.properties import get_unset_value
 
 
 class DropdownMenu(DropdownMenuTemplate):
@@ -52,6 +53,12 @@ class DropdownMenu(DropdownMenuTemplate):
 
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways.
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+
+  def _anvil_get_unset_property_values_(self):
+    lfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
+    stfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
+    sfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-textfield'], "fontSize", self.selected_font_size)
+    return {"label_font_size": lfs, "supporting_text_font_size": stfs, "selected_font_size": sfs}
 
   #properties
   visible = HtmlTemplate.visible

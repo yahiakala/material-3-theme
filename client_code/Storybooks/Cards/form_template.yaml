@@ -37,6 +37,7 @@ components:
     properties:
       spacing:
         margin: [null, null, null, '']
+        padding: [null, null, null, '']
     type: form:_Components.Card
   - components:
     - layout_properties: {slot: card-content-slot}

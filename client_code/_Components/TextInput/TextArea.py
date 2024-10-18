@@ -4,6 +4,7 @@ import anvil.designer
 import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...utils.properties import get_unset_value
 
 input_text_property = {"name": "input_text",
                  "type": "string",

@@ -8,6 +8,7 @@ from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 from anvil.property_utils import set_element_margin
+from ...utils.properties import get_unset_value, get_unset_spacing
 
 
 class Heading(HeadingTemplate):
@@ -32,6 +33,13 @@ class Heading(HeadingTemplate):
         "execute": self._start_inline_editing
       }
     }]
+
+  def _anvil_get_unset_property_values_(self):
+    text = self.dom_nodes['anvil-m3-button-text']
+    icon = self.dom_nodes['anvil-m3-button-icon']
+    tfs = get_unset_value(text, "fontSize", self.font_size)
+    ifs = get_unset_value(icon, "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs}
 
   def _start_inline_editing(self):
     el_name = f'anvil-m3-heading-{self.style}'
