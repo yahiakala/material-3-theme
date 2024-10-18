@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 import anvil.js
 from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, margin_property, italic_property, bold_property, underline_property
 import anvil.designer
+from ...utils.properties import get_unset_value, get_unset_spacing
 
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
@@ -43,6 +44,13 @@ class NavigationLink(NavigationLinkTemplate):
           "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-navigation-link-text'])
         }
       }]
+
+  def _anvil_get_unset_property_values_(self):
+    text = self.dom_nodes['anvil-m3-navigation-link-text']
+    icon = self.dom_nodes['anvil-m3-navigation-link-icon']
+    tfs = get_unset_value(text, "fontSize", self.font_size)
+    ifs = get_unset_value(icon, "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs}
 
   #!componentEvent(material_3.NavigationLink)!1: {name: "click", description: "When the NavigationLink is clicked."}
   #!componentEvent(material_3.NavigationLink)!1: {name: "show", description: "When the NavigationLink is shown on the screen."}

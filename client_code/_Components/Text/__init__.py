@@ -39,9 +39,11 @@ class Text(TextTemplate):
     }]
 
   def _anvil_get_unset_property_values_(self):
-    el = self.dom_nodes['anvil-m3-text']
-    rv = get_unset_value(el, "fontSize", self.font_size)
-    return {"font_size": rv}
+    text = self.dom_nodes['anvil-m3-text']
+    icon = self.dom_nodes['anvil-m3-text-icon']
+    tfs = get_unset_value(text, "fontSize", self.font_size)
+    ifs = get_unset_value(icon, "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs}
 
   #!componentEvent(material_3.Text)!1: {name: "show", description: "When the Text is shown on the screen."}
   #!componentEvent(material_3.Text)!1: {name: "hide", description: "When the Text is removed from the screen."}

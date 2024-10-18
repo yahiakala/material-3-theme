@@ -62,7 +62,7 @@ components:
           name: column_panel_1_copy_1
           properties: {}
           type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        layout_properties: {slot: card-content-container-slot}
         name: flow_panel_2_copy_1
         properties: {}
         type: FlowPanel
@@ -76,7 +76,7 @@ components:
     type: form:_Components.Card
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: text_3_copy_1
         properties: {text: Group 2}
         type: form:_Components.Text
@@ -115,7 +115,7 @@ components:
           name: column_panel_1_copy_1_copy_1
           properties: {}
           type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        layout_properties: {slot: card-content-container-slot}
         name: flow_panel_2_copy_1_copy_1
         properties: {}
         type: FlowPanel
@@ -129,11 +129,11 @@ components:
     type: form:_Components.Card
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: radio_button_5
         properties: {group_name: groupx, selected: false, text: ''}
         type: form:_Components.RadioButton
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: radio_button_6
         properties:
           background: ''
