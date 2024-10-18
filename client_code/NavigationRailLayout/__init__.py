@@ -22,7 +22,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
     self.init_components(**properties)
-    self.sidesheet
 
     window.document.addEventListener('scroll', self._add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)

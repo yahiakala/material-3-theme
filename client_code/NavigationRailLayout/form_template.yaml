@@ -69,6 +69,10 @@ slots:
     index: 0
     set_layout_properties: {slot: anvil-m3-navigation-rail-content}
     target: {name: '', type: container}
+  sidesheet_slot:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {name: '', type: container}
   slot_2:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-bar-links}
@@ -76,9 +80,5 @@ slots:
   slot_4:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-title}
-    target: {name: '', type: container}
-  slot_5:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-sidesheet}
     target: {name: '', type: container}
 toolbox_item: {hidden: true}
