@@ -31,9 +31,10 @@ class Checkbox(CheckboxTemplate):
     self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self._handle_change)
 
   def _anvil_get_unset_property_values_(self):
-    el = self.dom_nodes['anvil-m3-checkbox-label']
-    rv = get_unset_value(el, "fontSize", self.font_size)
-    return {"font_size": rv}
+    el = self.dom_nodes["anvil-m3-checkbox-component"]
+    sp = get_unset_spacing(el, el, self.spacing)
+    fs = get_unset_value(self.dom_nodes['anvil-m3-checkbox-label'], "fontSize", self.font_size)
+    return {"font_size": fs, "spacing": sp}
 
   #!defMethod(_)!2: "Set the keyboard focus to this Checkbox." ["focus"]
   def focus(self):
