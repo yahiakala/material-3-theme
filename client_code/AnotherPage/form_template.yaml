@@ -34,6 +34,10 @@ components_by_slot:
     name: button_1
     properties: {text: ''}
     type: form:_Components.Button
+  - layout_properties: {}
+    name: image_1
+    properties: {}
+    type: Image
   slot_5: []
   slot_6: []
   slot_7: []

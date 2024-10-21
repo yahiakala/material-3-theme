@@ -14,6 +14,8 @@ class AnotherPage(AnotherPageTemplate):
     self.init_components(**properties)
     nav_link = NavigationLink(text="Test")
     self.layout.layout.add_to_nav_rail(nav_link)
+    self.image_1.tag.test = 'hello'
+    print('image:', self.image_1.tag, self.image_1.tag.test)
 
 
   def text_field_3_pressed_enter(self, **event_args):
