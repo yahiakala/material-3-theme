@@ -1,7 +1,7 @@
 import anvil.server
 from . import TextInput
 import anvil.designer
-from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
 from anvil.property_utils import anvil_property
 from ...utils import _m3_icons
 from ...utils.properties import get_unset_value
@@ -201,7 +201,8 @@ class TextField(TextInput):
   trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
   def _set_align(self, value):
-    text_field = 
+    text_field = self.dom_nodes['anvil-m3-textfield']
+    
 
   display_italic = italic_property('anvil-m3-textfield', 'display_italic')
   display_bold = bold_property('anvil-m3-textfield', 'display_bold')
