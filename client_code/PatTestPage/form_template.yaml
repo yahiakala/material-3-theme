@@ -58,11 +58,39 @@ components_by_slot:
   - layout_properties: {}
     name: file_loader_1
     properties:
+      align: center
       appearance: filled
       spacing:
         margin: [null, null, null, '']
         padding: [null, null, null, '']
     type: form:_Components.FileLoader
+  - layout_properties: {}
+    name: slider_1
+    properties: {}
+    type: form:_Components.Slider
+  - layout_properties: {}
+    name: switch_1
+    properties:
+      margin: ['', '', '', '']
+    type: form:_Components.Switch
+  - layout_properties: {}
+    name: text_1
+    properties: {}
+    type: form:_Components.Text
+  - layout_properties: {}
+    name: heading_1
+    properties:
+      spacing:
+        margin: [null, null, null, '']
+    type: form:_Components.Heading
+  - layout_properties: {}
+    name: circular_progress_indicator_1
+    properties: {}
+    type: form:_Components.CircularProgressIndicator
+  - layout_properties: {}
+    name: linear_progress_indicator_1
+    properties: {}
+    type: form:_Components.LinearProgressIndicator
 is_package: true
 layout:
   properties:

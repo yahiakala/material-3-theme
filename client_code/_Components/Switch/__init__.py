@@ -9,6 +9,7 @@ from anvil.js import window
 from anvil import HtmlTemplate
 from ...Functions import theme_color_to_css, role_property, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 import anvil.designer
+from ...utils.properties import get_unset_margin
 
 
 class Switch(SwitchTemplate):
@@ -25,6 +26,11 @@ class Switch(SwitchTemplate):
     
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self._handle_change)
+
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes["anvil-m3-switch-container"]
+    m = get_unset_margin(el, self.margin)
+    return {"margin": m}
 
   def _anvil_get_interactions_(self):
     return [
