@@ -8,7 +8,9 @@ components_by_slot:
   - components:
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
       name: text_field_1
-      properties: {label_text: Hi}
+      properties:
+        label_text: Hi
+        margin: ['', null, '', null]
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
       name: text_field_2
@@ -17,13 +19,13 @@ components_by_slot:
     - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
       name: text_area_1
       properties:
-        margin: [null, null, '500', null]
+        margin: [null, null, '', null]
       type: form:_Components.TextInput.TextArea
     - layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
       name: text_area_2
       properties:
         appearance: outlined
-        margin: ['500', null, null, null]
+        margin: ['', null, null, null]
       type: form:_Components.TextInput.TextArea
     layout_properties: {}
     name: column_panel_1

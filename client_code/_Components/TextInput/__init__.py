@@ -18,7 +18,7 @@ class TextInput(TextInputTemplate):
     self._on_input = self._on_input
 
   def _anvil_get_unset_property_values_(self):
-    el = self.dom_nodes["anvil-m3-textfield"]
+    el = self.dom_nodes["anvil-m3-textinput"]
     m = get_unset_margin(el, self.margin)
     label = self.dom_nodes['anvil-m3-label-text']
     supporting_text = self.dom_nodes['anvil-m3-supporting-text']
@@ -35,7 +35,7 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
   label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
-  margin = margin_property('anvil-m3-textfield')
+  margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
   supporting_text_font_family = font_family_property('anvil-m3-supporting-text', 'supporting_text_font_family')
