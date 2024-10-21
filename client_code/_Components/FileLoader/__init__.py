@@ -143,7 +143,7 @@ class FileLoader(FileLoaderTemplate):
   font_size = font_size_property('anvil-m3-fileloader-label', 'font_size')
   align = style_property('anvil-m3-fileloader-form', 'justifyContent', 'align')
   border = style_property('anvil-m3-fileloader-container', 'border', 'border')
-  spacing = spacing_property('anvil-m3-fileloader-form')
+  spacing = spacing_property('anvil-m3-fileloader-container')
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
   appearance = property_with_callback("appearance", _set_appearance)
