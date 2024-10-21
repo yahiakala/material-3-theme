@@ -39,6 +39,14 @@ components_by_slot:
     properties:
       margin: [null, null, null, null]
     type: form:_Components.Divider
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties:
+      spacing:
+        margin: [null, null, null, '']
+        padding: [null, null, '', '']
+      supporting_text: ''
+    type: form:_Components.DropdownMenu
 is_package: true
 layout:
   properties:
