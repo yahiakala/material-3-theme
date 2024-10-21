@@ -47,6 +47,22 @@ components_by_slot:
         padding: [null, null, '', '']
       supporting_text: ''
     type: form:_Components.DropdownMenu
+  - layout_properties: {}
+    name: checkbox_1
+    properties:
+      background_color: theme:Primary Container
+      spacing:
+        margin: [null, null, null, '']
+        padding: [null, null, null, '']
+    type: form:_Components.Checkbox
+  - layout_properties: {}
+    name: file_loader_1
+    properties:
+      appearance: filled
+      spacing:
+        margin: [null, null, null, '']
+        padding: [null, null, null, '']
+    type: form:_Components.FileLoader
 is_package: true
 layout:
   properties:

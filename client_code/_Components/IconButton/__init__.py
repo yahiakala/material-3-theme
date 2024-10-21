@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 import anvil.designer
 from ...Functions import innerText_property, tooltip_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
 from anvil import HtmlTemplate
+from ...utils.properties import get_unset_margin
 
 #TODO: all classes should have anvil-m3 prefix
 
@@ -26,8 +27,12 @@ class IconButton(IconButtonTemplate):
     self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self._handle_click)
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self._handle_click)
-    
 
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes["anvil-m3-iconbutton-container"]
+    m = get_unset_margin(el, self.margin)
+    return {"margin": m}
+    
   def _handle_click(self, event):
     event.preventDefault()
     self.raise_event("click")
