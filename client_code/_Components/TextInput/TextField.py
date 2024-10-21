@@ -200,10 +200,8 @@ class TextField(TextInput):
       text_field_input.style.paddingRight = "16px"
   trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
-  def _set_align(self, value):
-    text_field = self.dom_nodes['anvil-m3-textfield']
-    
 
+  align = style_property('anvil-m3-textfield', 'textAlign', 'align')
   display_italic = italic_property('anvil-m3-textfield', 'display_italic')
   display_bold = bold_property('anvil-m3-textfield', 'display_bold')
   display_underline = underline_property('anvil-m3-textfield', 'display_underline')
