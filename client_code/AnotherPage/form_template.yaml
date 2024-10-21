@@ -26,6 +26,10 @@ components_by_slot:
     name: text_field_1
     properties: {}
     type: form:_Components.TextInput.TextField
+  - layout_properties: {}
+    name: image_1
+    properties: {}
+    type: Image
   slot_5: []
   slot_6: []
   slot_7: []
