@@ -13,6 +13,7 @@ from ...utils.properties import get_unset_value, get_unset_spacing
 
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     # Set Form properties and Data Bindings.

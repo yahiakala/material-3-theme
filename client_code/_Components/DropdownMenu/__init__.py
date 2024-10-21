@@ -17,6 +17,7 @@ from ...utils.properties import get_unset_value
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)

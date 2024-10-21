@@ -14,6 +14,7 @@ from ...Functions import color_property
 class Menu(MenuTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
     

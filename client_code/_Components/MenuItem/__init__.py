@@ -12,7 +12,7 @@ import anvil.designer
 class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)

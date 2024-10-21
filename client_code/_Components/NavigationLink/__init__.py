@@ -12,6 +12,7 @@ from ...utils.properties import get_unset_value, get_unset_spacing
 #Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     # Set Form properties and Data Bindings.

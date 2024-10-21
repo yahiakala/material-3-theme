@@ -12,6 +12,7 @@ from anvil import HtmlTemplate
 
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     self._appearance = ""
