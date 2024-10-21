@@ -42,4 +42,6 @@ components_by_slot:
   slot_6: []
   slot_7: []
 is_package: true
-layout: {type: 'form:NewNavRailLayout'}
+layout:
+  form_event_bindings: {show: form_show}
+  type: form:NewNavRailLayout

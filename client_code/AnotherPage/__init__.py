@@ -16,14 +16,17 @@ class AnotherPage(AnotherPageTemplate):
     self.layout.layout.add_to_nav_rail(nav_link)
     self.image_1.tag.test = 'hello'
     print('image:', self.image_1.tag, self.image_1.tag.test)
-    print('button:', self.button_1.tag)
-    self.button_1.tag.color = 'green'
-    print(self.button_1.tag, self.button_1.tag.color)
 
 
   def text_field_3_pressed_enter(self, **event_args):
     """This method is called when the user presses enter in this component."""
     pass
+
+  def form_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    print('button:', self.button_1.tag)
+    self.button_1.tag.color = 'green'
+    print(self.button_1.tag, self.button_1.tag.color)
 
  
     

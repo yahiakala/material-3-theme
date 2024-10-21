@@ -13,6 +13,7 @@ from ...utils.properties import ComponentTag
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._text = properties.get('text', '')
 
@@ -117,14 +118,15 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  @property
-  def tag(self):
-    return self._props.get('tag')
+  # @property
+  # def tag(self):
+  #   print('getting tag')
+  #   return self._props.get('tag')
 
-  @tag.setter
-  def tag(self, value):
-    print('setting tag')
-    self._props['tag'] = ComponentTag()
+  # @tag.setter
+  # def tag(self, value):
+  #   print('setting tag')
+  #   self._props['tag'] = ComponentTag()
   
   align = property_with_callback('align', _set_align)
   role = role_property('anvil-m3-button')
