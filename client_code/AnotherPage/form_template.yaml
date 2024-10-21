@@ -13,6 +13,11 @@ components_by_slot:
     name: text_area_2
     properties: {appearance: outlined, height: 132, label_text: Hello}
     type: form:_Components.TextInput.TextArea
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties:
+      margin: ['16', '16', '16', '16']
+    type: form:_Components.DropdownMenu
   - components:
     - layout_properties: {slot: anvil-m3-buttonMenu-slot}
       name: menu_item_1

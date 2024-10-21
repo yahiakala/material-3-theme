@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, property_without_callback, spacing_property, color_property
+from ...Functions import property_with_callback, property_without_callback, margin_property, color_property
 from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
@@ -62,7 +62,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  spacing = spacing_property('anvil-m3-dropdownMenu-textfield')
+  margin = margin_property('anvil-m3-dropdownMenu-textfield')
 
   def _set_background_color(self, value):
     self.selection_field.background_color = value
