@@ -80,6 +80,10 @@ except (ImportError, AttributeError):
 
 class ComponentTag():
   def __init__(self):
-    self._data = {}
+    self.__dict__['_data'] = {}
+
+  def __setattr__(self, key, value):
+    self._data[key] = value
+    
   def __repr__(self):
     return f"ComponentTag({self._data})"
