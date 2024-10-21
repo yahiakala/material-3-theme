@@ -3,7 +3,7 @@ from . import TextInput
 import anvil.designer
 import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
-from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
 from ...utils.properties import get_unset_value
 
 input_text_property = {"name": "input_text",
@@ -62,6 +62,7 @@ class TextArea(TextInput):
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
   input_text_color = color_property('anvil-m3-textarea', 'color', 'input_text_color')
   background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
+  align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 
   def focus(self):
     self.dom_nodes['anvil-m3-textarea'].focus()

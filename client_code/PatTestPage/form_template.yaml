@@ -8,15 +8,15 @@ components_by_slot:
   - components:
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
       name: text_field_1
-      properties: {label_text: Hi}
+      properties: {align: left, display_text_color: 'theme:Secondary Container', input_text: Hello, label_text: Hi}
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
       name: text_field_2
-      properties: {appearance: outlined}
+      properties: {appearance: outlined, input_text: asdfasd}
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
       name: text_area_1
-      properties: {}
+      properties: {align: center, input_text: Hi}
       type: form:_Components.TextInput.TextArea
     - layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
       name: text_area_2
