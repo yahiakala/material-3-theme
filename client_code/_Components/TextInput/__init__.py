@@ -17,15 +17,12 @@ class TextInput(TextInputTemplate):
     
     self._on_input = self._on_input
 
-  def _anvil_get_unset_property_values_(self):
+  def _get_common_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-textinput']
     m = get_unset_margin(el, self.margin)
-    label = 
-    supporting_text = self.dom_nodes['anvil-m3-supporting-text']
-    char_limit = self.dom_nodes['anvil-m3-character-counter']
-    lfs = get_unset_value(label, "fontSize", self.label_font_size)
-    spfs = get_unset_value(supporting_text, "fontSize", self.supporting_text_font_size)
-    clfs = get_unset_value(char_limit, "fontSize", self.character_limit_font_size)
+    lfs = get_unset_value(self.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
+    spfs = get_unset_value(self.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
+    clfs = get_unset_value(self.dom_nodes['anvil-m3-character-counter'], "fontSize", self.character_limit_font_size)
     return {"label_font_size": lfs, "supporting_text_font_size": spfs, "character_limit_font_size": clfs, "margin": m}
     
   visible = HtmlTemplate.visible
