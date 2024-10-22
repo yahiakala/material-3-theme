@@ -26,7 +26,7 @@ class Link(LinkTemplate):
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
-    if anvil.designer.in_designer and not self.text and not self.material_icon and not self.get_components():
+    if anvil.designer.in_designer and not self.text and not self.icon and not self.get_components():
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
     
@@ -56,7 +56,7 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(material_3.Link)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
   #!componentProp(material_3.Link)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.Link)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Link)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Link)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.Link)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
   #!componentProp(material_3.Link)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
@@ -133,16 +133,17 @@ class Link(LinkTemplate):
     self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
 
   @property
-  def material_icon(self):
-    return self.dom_nodes['anvil-m3-link-icon'].innerText
+  def icon(self):
+    return self._props.get('icon')
 
-  @material_icon.setter
-  def material_icon(self, value):
+  @icon.setter
+  def icon(self, value):
+    self._props['icon'] = value
     if value and self.text:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-link-icon'].innerText = value
+    self.dom_nodes['anvil-m3-link-icon'].innerText = value[3:]
 
   @property
   def text(self):

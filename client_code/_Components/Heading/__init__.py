@@ -64,7 +64,7 @@ class Heading(HeadingTemplate):
   #!componentProp(material_3.Heading)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(material_3.Heading)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(material_3.Heading)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.Heading)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Heading)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Heading)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the heading component: display, headline or title."}  
   #!componentProp(material_3.Heading)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the heading component."}
   #!componentProp(material_3.Heading)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
@@ -161,17 +161,17 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-title'].innerText = value
 
   @property
-  def material_icon(self):
-    return self._material_icon
+  def icon(self):
+    return self._icon
 
-  @material_icon.setter
-  def material_icon(self, value):
-    self._material_icon = value
+  @icon.setter
+  def icon(self, value):
+    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+    self.dom_nodes['anvil-m3-heading-icon'].innerText = value[3:]
 
   @property
   def style(self):

@@ -65,6 +65,7 @@ class Text(TextTemplate):
   #!componentProp(material_3.Text)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
   #!componentProp(material_3.Text)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
   #!componentProp(material_3.Text)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(material_3.Text)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Text)!1: {name:"line_height",type:"string",description:"The line height of this component."}
   #!componentProp(material_3.Text)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Text)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the text component: display, headline or title."}  
@@ -111,27 +112,27 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
 
   @property
+  def icon(self):
+    return self._icon
+
+  @property
   def line_height(self):
     return self._props.get('line_height')
 
   @line_height.setter
   def line_height(self, value):
     self._props['line_height'] = value
-    self.dom_nodes['anvil-m3-text'].style.lineHeight = value
     self.dom_nodes['anvil-m3-text-container'].style.lineHeight = value
+    self.dom_nodes['anvil-m3-text'].style.lineHeight = value
 
-  @property
-  def material_icon(self):
-    return self._material_icon
-
-  @material_icon.setter
-  def material_icon(self, value):
-    self._material_icon = value
+  @icon.setter
+  def icon(self, value):
+    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-text-icon'].innerText = value
+    self.dom_nodes['anvil-m3-text-icon'].innerText = value[3:]
 
   @property
   def style(self):
