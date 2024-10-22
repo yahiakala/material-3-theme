@@ -20,7 +20,7 @@ class TextInput(TextInputTemplate):
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-textinput']
     m = get_unset_margin(el, self.margin)
-    label = self.dom_nodes['anvil-m3-label-text']
+    label = 
     supporting_text = self.dom_nodes['anvil-m3-supporting-text']
     char_limit = self.dom_nodes['anvil-m3-character-counter']
     lfs = get_unset_value(label, "fontSize", self.label_font_size)
