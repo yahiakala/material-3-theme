@@ -133,10 +133,10 @@ class TextArea(TextInput):
 
   def _set_character_limit(self, value):
     if value is None or value < 1:
-      text_field_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
+      text_area_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
-      text_field_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
+      text_area_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
   character_limit = property_with_callback("character_limit", _set_character_limit)

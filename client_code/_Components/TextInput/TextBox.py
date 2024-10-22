@@ -167,36 +167,36 @@ class TextBox(TextInput):
   def _set_leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['anvil-m3-leading-icon']
-    text_field_input = self.dom_nodes['anvil-m3-textbox']
+    text_box_input = self.dom_nodes['anvil-m3-textbox']
     border_container = self.dom_nodes['anvil-m3-border-container']
 
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value
       icon_container.style.paddingLeft = "12px"
-      text_field_input.style.paddingLeft = "48px"
+      text_box_input.style.paddingLeft = "48px"
       border_container.classList.add("with-icon")
     else:
       leading_icon.style.display = "none"
       leading_icon.innerText = ""
       icon_container.style.paddingLeft = "16px"
-      text_field_input.style.paddingLeft = "16px"
+      text_box_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
   leading_icon = property_with_callback("leading_icon", _set_leading_icon)  
   
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
-    text_field_input = self.dom_nodes['anvil-m3-textbox']
+    text_box_input = self.dom_nodes['anvil-m3-textbox']
 
     if value:
       trailing_icon.style.display = "block"
       trailing_icon.innerText = value
-      text_field_input.style.paddingRight = "48px"
+      text_box_input.style.paddingRight = "48px"
     else:
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
-      text_field_input.style.paddingRight = "16px"
+      text_box_input.style.paddingRight = "16px"
   trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
   display_italic = italic_property('anvil-m3-textbox', 'display_italic')
@@ -211,10 +211,10 @@ class TextBox(TextInput):
 
   def _set_character_limit(self, value):
     if value is None or value < 1:
-      text_field_input = self.dom_nodes['anvil-m3-textbox'].removeAttribute("maxlength")
+      text_box_input = self.dom_nodes['anvil-m3-textbox'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
-      text_field_input = self.dom_nodes['anvil-m3-textbox'].setAttribute("maxlength", value)
+      text_box_input = self.dom_nodes['anvil-m3-textbox'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline"
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value)
   character_limit = property_with_callback("character_limit", _set_character_limit)

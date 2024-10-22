@@ -11,13 +11,3 @@ class TextInputs(TextInputsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def text_field_1_copy_2_click(self, **event_args):
-    alert("clicked outlined style")
-
-  def text_field_1_click(self, **event_args):
-    alert("clicked filled style")
-
-  def text_field_1_copy_2_copy_3_icon_click(self, **event_args):
-    """This method is called when the trailing icon is clicked."""
-    alert("hello")
