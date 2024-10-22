@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import color_property, role_property, margin_property
+from ...utils.properties import get_unset_margin
 
 class Divider(DividerTemplate):
   def __init__(self, **properties):
@@ -12,6 +13,11 @@ class Divider(DividerTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
+
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes["anvil-m3-divider"]
+    m = get_unset_margin(el, self.margin)
+    return {"margin": m}
 
   #!componentEvent(material_3.Divider)!1: {name: "show", description: "When the Divider is shown on the screen."}
   #!componentEvent(material_3.Divider)!1: {name: "hide", description: "When the Divider is removed from the screen."}

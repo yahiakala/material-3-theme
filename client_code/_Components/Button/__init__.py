@@ -47,11 +47,11 @@ class Button(ButtonTemplate):
     }]
 
   def _anvil_get_unset_property_values_(self):
-    text = self.dom_nodes['anvil-m3-button-text']
-    icon = self.dom_nodes['anvil-m3-button-icon']
-    tfs = get_unset_value(text, "fontSize", self.font_size)
-    ifs = get_unset_value(icon, "fontSize", self.icon_size)
-    return {"font_size": tfs, "icon_size": ifs}
+    el = self.dom_nodes["anvil-m3-button"]
+    sp = get_unset_spacing(el, el, self.spacing)
+    tfs = get_unset_value(self.dom_nodes['anvil-m3-button-text'], "fontSize", self.font_size)
+    ifs = get_unset_value(self.dom_nodes['anvil-m3-button-icon'], "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
 
   def _set_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)

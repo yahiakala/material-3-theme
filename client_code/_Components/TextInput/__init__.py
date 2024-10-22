@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from ...Functions import property_without_callback, property_with_callback, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, margin_property, tooltip_property, theme_color_to_css
 from anvil import HtmlTemplate
 from ...utils import gen_id
-from ...utils.properties import get_unset_value
+from ...utils.properties import get_unset_value, get_unset_margin
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
@@ -18,14 +18,13 @@ class TextInput(TextInputTemplate):
     
     self._on_input = self._on_input
 
-  def _anvil_get_unset_property_values_(self):
-    label = self.dom_nodes['anvil-m3-label-text']
-    supporting_text = self.dom_nodes['anvil-m3-supporting-text']
-    char_limit = self.dom_nodes['anvil-m3-character-counter']
-    lfs = get_unset_value(label, "fontSize", self.label_font_size)
-    spfs = get_unset_value(supporting_text, "fontSize", self.supporting_text_font_size)
-    clfs = get_unset_value(char_limit, "fontSize", self.character_limit_font_size)
-    return {"label_font_size": lfs, "supporting_text_font_size": spfs, "character_limit_font_size": clfs}
+  def _get_common_unset_property_values_(self):
+    el = self.dom_nodes['anvil-m3-textinput']
+    m = get_unset_margin(el, self.margin)
+    lfs = get_unset_value(self.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
+    spfs = get_unset_value(self.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
+    clfs = get_unset_value(self.dom_nodes['anvil-m3-character-counter'], "fontSize", self.character_limit_font_size)
+    return {"label_font_size": lfs, "supporting_text_font_size": spfs, "character_limit_font_size": clfs, "margin": m}
     
   visible = HtmlTemplate.visible
   label_italic = italic_property('anvil-m3-label-text', 'label_italic')
@@ -34,7 +33,7 @@ class TextInput(TextInputTemplate):
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
   label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
   label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
-  margin = margin_property('anvil-m3-textfield')
+  margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
   supporting_text_font_family = font_family_property('anvil-m3-supporting-text', 'supporting_text_font_family')

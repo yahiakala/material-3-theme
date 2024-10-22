@@ -76,7 +76,7 @@ properties:
 - {default_value: '', description: The font-family of the displayed text if there is a selected item, group: Selection Field Style, important: false, name: selected_font_family, type: string}
 - {description: The font size (pixels) of the displayed text if there is a selected item, group: Selection Field Style, important: false, name: selected_font_size, type: number}
 - {default_value: '', description: The colour of the displayed text if there is a selected item, group: Selection Field Style, important: false, name: selected_text_color, type: color}
-- {description: The margin and padding (pixels) of the component., group: Layout, important: true, name: spacing, type: spacing}
+- {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
 - {default_value: false, description: 'If True, this component is in an error state.', group: Interaction, important: true, name: error, type: boolean}
 - default_value: ''
   description: The leading icon to display on this component.

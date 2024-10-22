@@ -35,7 +35,12 @@ components:
           type: form:_Components.Button
         - layout_properties: {}
           name: button_3
-          properties: {appearance: tonal, text: '3'}
+          properties:
+            appearance: tonal
+            spacing:
+              margin: [null, null, null, '']
+              padding: [null, null, null, '']
+            text: '3'
           type: form:_Components.Button
         - layout_properties: {}
           name: button_4

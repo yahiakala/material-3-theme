@@ -46,11 +46,11 @@ class NavigationLink(NavigationLinkTemplate):
       }]
 
   def _anvil_get_unset_property_values_(self):
-    text = self.dom_nodes['anvil-m3-navigation-link-text']
-    icon = self.dom_nodes['anvil-m3-navigation-link-icon']
-    tfs = get_unset_value(text, "fontSize", self.font_size)
-    ifs = get_unset_value(icon, "fontSize", self.icon_size)
-    return {"font_size": tfs, "icon_size": ifs}
+    el = self.dom_nodes["anvil-m3-navigation-link-container"]
+    sp = get_unset_spacing(el, el, self.spacing)
+    tfs = get_unset_value(self.dom_nodes['anvil-m3-navigation-link-text'], "fontSize", self.font_size)
+    ifs = get_unset_value(self.dom_nodes['anvil-m3-navigation-link-icon'], "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
 
   #!componentEvent(material_3.NavigationLink)!1: {name: "click", description: "When the NavigationLink is clicked."}
   #!componentEvent(material_3.NavigationLink)!1: {name: "show", description: "When the NavigationLink is shown on the screen."}

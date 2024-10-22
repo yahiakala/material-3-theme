@@ -5,6 +5,7 @@ import anvil.js
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
 from anvil.designer import in_designer
+from ...utils.properties import get_unset_margin
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -36,6 +37,11 @@ class Slider(SliderTemplate):
     self.dom_nodes['anvil-m3-slider-input'].removeEventListener("change", self._on_change)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
     self._mounted = False
+
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes["anvil-m3-slider"]
+    m = get_unset_margin(el, self.margin)
+    return {"margin": m}
 
   def _on_change(self, event):
     self.raise_event("change")

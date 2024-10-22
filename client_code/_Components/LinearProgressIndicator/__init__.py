@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, property_with_callback, margin_property, theme_color_to_css, role_property, color_property
+from ...utils.properties import get_unset_margin
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -15,6 +16,11 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes["anvil-m3-progressindicator-linear"]
+    m = get_unset_margin(el, self.margin)
+    return {"margin": m}
 
   visible = HtmlTemplate.visible
   tooltip = tooltip_property('anvil-m3-progressindicator-linear')

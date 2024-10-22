@@ -2,6 +2,28 @@ components_by_slot:
   slot_1: []
   slot_3:
   - layout_properties: {}
+    name: text_field_1
+    properties: {appearance: outlined, label_text: Hello}
+    type: form:_Components.TextInput.TextField
+  - layout_properties: {}
+    name: text_area_1
+    properties: {label_text: hello}
+    type: form:_Components.TextInput.TextArea
+  - layout_properties: {}
+    name: text_area_2
+    properties: {appearance: outlined, height: 132, label_text: Hello}
+    type: form:_Components.TextInput.TextArea
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties:
+      margin: ['16', '16', '16', '16']
+    type: form:_Components.DropdownMenu
+  - components:
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: menu_item_1
+      properties: {text: Item, tooltip: A menuitem}
+      type: form:_Components.MenuItem
+    layout_properties: {}
     name: button_menu_1
     properties: {}
     type: form:_Components.ButtonMenu

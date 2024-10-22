@@ -53,11 +53,11 @@ class ButtonMenu(ButtonMenuTemplate):
     self._menuNode.remove()
 
   def _anvil_get_unset_property_values_(self):
-    text = self.menu_button.dom_nodes['anvil-m3-button-text']
-    icon = self.menu_button.dom_nodes['anvil-m3-button-icon']
-    tfs = get_unset_value(text, "fontSize", self.button_font_size)
-    ifs = tfs = get_unset_value(icon, "fontSize", self.button_font_size)
-    return {"button_font_size": tfs, "icon_size": ifs}
+    el = self.menu_button.dom_nodes["anvil-m3-button"]
+    sp = get_unset_spacing(el, el, self.spacing)
+    tfs = get_unset_value(self.menu_button.dom_nodes['anvil-m3-button-text'], "fontSize", self.button_font_size)
+    ifs = tfs = get_unset_value(self.menu_button.dom_nodes['anvil-m3-button-icon'], "fontSize", self.button_font_size)
+    return {"button_font_size": tfs, "icon_size": ifs, "spacing": sp}
 
   def _handle_click(self, event):
     if self.enabled:

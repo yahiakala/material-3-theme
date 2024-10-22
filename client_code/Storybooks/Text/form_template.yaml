@@ -68,7 +68,7 @@ components:
           type: form:_Components.Heading
         - layout_properties: {grid_position: 'BQBWMG,DYCYXB'}
           name: heading_4
-          properties: {font_size: null, scale: large, style: headline, text: Headline Large}
+          properties: {font_size: null, material_icon: 16mp, scale: large, style: headline, text: Headline Large}
           type: form:_Components.Heading
         - layout_properties: {grid_position: 'BQBWMG,KRPVFE'}
           name: heading_7

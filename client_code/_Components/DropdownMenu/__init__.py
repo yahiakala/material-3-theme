@@ -5,14 +5,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import property_with_callback, property_without_callback, spacing_property, color_property
+from ...Functions import property_with_callback, property_without_callback, margin_property, color_property
 from anvil.js import window, get_dom_node
 from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value
+from ...utils.properties import get_unset_value, get_unset_margin
 
 
 class DropdownMenu(DropdownMenuTemplate):
@@ -56,14 +56,16 @@ class DropdownMenu(DropdownMenuTemplate):
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
   def _anvil_get_unset_property_values_(self):
+    el = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
+    m = get_unset_margin(el, self.margin)
     lfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
     stfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
     sfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-textfield'], "fontSize", self.selected_font_size)
-    return {"label_font_size": lfs, "supporting_text_font_size": stfs, "selected_font_size": sfs}
+    return {"label_font_size": lfs, "supporting_text_font_size": stfs, "selected_font_size": sfs, "margin": m}
 
   #properties
   visible = HtmlTemplate.visible
-  spacing = spacing_property('anvil-m3-dropdownMenu-textfield')
+  margin = margin_property('anvil-m3-dropdownMenu-textfield')
 
   def _set_background_color(self, value):
     self.selection_field.background_color = value

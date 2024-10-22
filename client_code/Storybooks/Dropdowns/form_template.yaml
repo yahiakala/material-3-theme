@@ -56,6 +56,7 @@ components:
                 label_text: Dropdown Label 1
                 leading_icon: null
                 leading_icon_color: ''
+                margin: [null, null, null, '']
                 menu_background_color: lightblue
                 supporting_text: ''
                 supporting_text_color: ''

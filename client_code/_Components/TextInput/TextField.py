@@ -93,6 +93,11 @@ class TextField(TextInput):
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textfield'].removeEventListener("blur", self._on_lost_focus)
 
+  def _anvil_get_unset_property_values_(self):
+    common_props = TextInput._get_common_unset_property_values_(self)
+    common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textfield'], "fontSize", self.display_font_size)
+    return common_props
+
   def _on_key_down(self, e):
     if e.key == "Enter":
       self.raise_event("x-anvil-write-back-input_text")

@@ -9,7 +9,7 @@ import anvil.designer
 from anvil.js.window import document
 from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, spacing_property
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value
+from ...utils.properties import get_unset_value, get_unset_spacing
 import time
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
@@ -40,11 +40,11 @@ class Text(TextTemplate):
     }]
 
   def _anvil_get_unset_property_values_(self):
-    text = self.dom_nodes['anvil-m3-text']
-    icon = self.dom_nodes['anvil-m3-text-icon']
-    tfs = get_unset_value(text, "fontSize", self.font_size)
-    ifs = get_unset_value(icon, "fontSize", self.icon_size)
-    return {"font_size": tfs, "icon_size": ifs}
+    el = self.dom_nodes["anvil-m3-text-container"]
+    sp = get_unset_spacing(el, el, self.spacing)
+    tfs = get_unset_value(self.dom_nodes['anvil-m3-text'], "fontSize", self.font_size)
+    ifs = get_unset_value(self.dom_nodes['anvil-m3-text-icon'], "fontSize", self.icon_size)
+    return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
 
   #!componentEvent(material_3.Text)!1: {name: "show", description: "When the Text is shown on the screen."}
   #!componentEvent(material_3.Text)!1: {name: "hide", description: "When the Text is removed from the screen."}
