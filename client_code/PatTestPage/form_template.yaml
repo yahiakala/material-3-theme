@@ -31,68 +31,7 @@ components_by_slot:
     properties: {align: center, icon: '', text: vcbxcv}
     type: form:_Components.Button
   content_slot: []
-  nav_rail:
-  - layout_properties: {}
-    name: navigation_link_1
-    properties: {}
-    type: form:_Components.ButtonMenu
-  - layout_properties: {}
-    name: divider_1
-    properties:
-      margin: [null, null, null, null]
-    type: form:_Components.Divider
-  - layout_properties: {}
-    name: dropdown_menu_1
-    properties:
-      spacing:
-        margin: [null, null, null, '']
-        padding: [null, null, '', '']
-      supporting_text: ''
-    type: form:_Components.DropdownMenu
-  - layout_properties: {}
-    name: checkbox_1
-    properties:
-      background_color: theme:Primary Container
-      spacing:
-        margin: [null, null, null, '']
-        padding: [null, null, null, '']
-    type: form:_Components.Checkbox
-  - layout_properties: {}
-    name: file_loader_1
-    properties:
-      align: center
-      appearance: filled
-      spacing:
-        margin: [null, null, null, '']
-        padding: [null, null, null, '']
-    type: form:_Components.FileLoader
-  - layout_properties: {}
-    name: slider_1
-    properties: {}
-    type: form:_Components.Slider
-  - layout_properties: {}
-    name: switch_1
-    properties:
-      margin: ['', '', '', '']
-    type: form:_Components.Switch
-  - layout_properties: {}
-    name: text_1
-    properties: {}
-    type: form:_Components.Text
-  - layout_properties: {}
-    name: heading_1
-    properties:
-      spacing:
-        margin: [null, null, null, '']
-    type: form:_Components.Heading
-  - layout_properties: {}
-    name: circular_progress_indicator_1
-    properties: {}
-    type: form:_Components.CircularProgressIndicator
-  - layout_properties: {}
-    name: linear_progress_indicator_1
-    properties: {}
-    type: form:_Components.LinearProgressIndicator
+  nav_rail: []
 is_package: true
 layout:
   properties:
