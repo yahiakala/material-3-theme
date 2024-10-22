@@ -45,7 +45,7 @@ components_by_slot:
   - components: []
     layout_properties: {}
     name: button_menu_1
-    properties: {}
+    properties: {icon: 'mi:11mp'}
     type: form:_Components.ButtonMenu
   - layout_properties: {}
     name: link_2
