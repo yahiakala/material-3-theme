@@ -26,7 +26,7 @@ class TextArea(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    hiddenInput = self.dom_nodes['anvil-m3-textfield']
+    hiddenInput = self.dom_nodes['anvil-m3-textbox']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
 
     # self.update_height = self.update_height

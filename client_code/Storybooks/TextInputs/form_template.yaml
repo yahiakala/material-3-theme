@@ -232,42 +232,15 @@ components:
     properties: {visible: true}
     type: form:_Components.Card
   - components:
-    - layout_properties: {slot: card-content-slot}
-      name: text_1_copy_copy
-      properties: {font_size: 25, text: TextField, text_color: 'theme:Primary'}
-      type: form:_Components.Text
     - components:
-      - components:
-        - event_bindings: {click: text_field_1_copy_2_click}
-          layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
-          name: text_field_1_copy_2
-          properties: {appearance: outlined, character_limit: 10, enabled: true, error: false, label_text: Label, leading_icon: 2k_plus, placeholder: '', supporting_text: Supporting text, trailing_icon: 10mp}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'ORPGYO,JKONFE'}
-          name: text_field_1_copy_copy
-          properties: {appearance: outlined, bold_display: false, character_limit: null, display_font: '', display_text_color: '', enabled: true, error: false, italic_display: false, label_text: Label, leading_icon: 12mp, placeholder: Placeholder, supporting_text: Supporting text, underline_label: false}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
-          name: text_field_3_copy
-          properties: {appearance: outlined, enabled: true, error: false, label_text: Label only, leading_icon: 13mp}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
-          name: text_field_4_copy
-          properties:
-            appearance: outlined
-            enabled: true
-            error: false
-            label_text: ''
-            leading_icon: 13mp
-            margin: [auto, '', null, null]
-            placeholder: Placeholder only
-            spacing:
-              padding: [auto, null, null, null]
-          type: form:_Components.TextInput.TextField
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        name: column_panel_2_copy
+      - layout_properties: {slot: card-content-container-slot}
+        name: text_1_copy_copy
+        properties: {font_size: 25, text: TextField, text_color: 'theme:Primary'}
+        type: form:_Components.Text
+      - layout_properties: {slot: card-content-container-slot}
+        name: text_field_1
         properties: {}
-        type: ColumnPanel
+        type: form:_Components.TextInput.TextField
       layout_properties: {slot: card-content-slot}
       name: card_content_container_1_copy_copy_copy
       properties: {}
@@ -276,37 +249,7 @@ components:
       name: divider_2
       properties: {}
       type: form:_Components.Divider
-    - components:
-      - components:
-        - event_bindings: {click: text_field_1_click}
-          layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
-          name: text_field_1
-          properties: {character_limit: 10, enabled: true, error: false, label_text: Label, leading_icon: 10k, placeholder: '', supporting_text: Supporting text, trailing_icon: 13mp}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'ORPGYO,JKONFE'}
-          name: text_field_1_copy
-          properties: {appearance: null, enabled: true, error: false, label_text: Label, leading_icon: '', placeholder: Placeholder, supporting_text: Supporting text}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
-          name: text_field_3
-          properties: {enabled: true, error: false, label_text: Label only}
-          type: form:_Components.TextInput.TextField
-        - layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
-          name: text_field_4
-          properties:
-            bold_display: false
-            display_font_size: null
-            enabled: true
-            error: false
-            placeholder: Placeholder only
-            spacing:
-              margin: [0px, null, null, null]
-              padding: ['0', null, null, null]
-          type: form:_Components.TextInput.TextField
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        name: column_panel_2
-        properties: {}
-        type: ColumnPanel
+    - components: []
       layout_properties: {slot: card-content-slot}
       name: card_content_container_1_copy_copy
       properties: {}

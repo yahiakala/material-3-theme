@@ -31,7 +31,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selected_value = None
 
     if not self.allow_none:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = ""
+      self.selection_field.dom_nodes['anvil-m3-textbox'].value = ""
 
     self._has_focus = False
     self._handle_keyboard_events = self._handle_keyboard_events
@@ -43,9 +43,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-    self.selection_field.dom_nodes['anvil-m3-textfield'].style.caretColor = 'transparent'
-    self.selection_field.dom_nodes['anvil-m3-textfield'].style.cursor = "pointer"
-    self.selection_field.dom_nodes['anvil-m3-textfield'].setAttribute("readonly", True)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].style.caretColor = 'transparent'
+    self.selection_field.dom_nodes['anvil-m3-textbox'].style.cursor = "pointer"
+    self.selection_field.dom_nodes['anvil-m3-textbox'].setAttribute("readonly", True)
 
     # if self.placeholder: #when no label, in unfocused state, use the placeholder as the display text.
     #   self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
@@ -55,7 +55,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  margin = margin_property('anvil-m3-dropdownMenu-textfield')
+  margin = margin_property('anvil-m3-dropdownMenu-textbox')
 
   def _set_background_color(self, value):
     self.selection_field.background_color = value
@@ -159,9 +159,9 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_error(self, value):
     if value: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.add('anvil-m3-dropdown-error')
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add('anvil-m3-dropdown-error')
     else: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.remove('anvil-m3-dropdown-error')
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove('anvil-m3-dropdown-error')
   error = property_with_callback("error", _set_error)
 
   def _set_label(self, value):
@@ -178,11 +178,11 @@ class DropdownMenu(DropdownMenuTemplate):
       if value is None and self.allow_none:
         self._hoverIndex = None
       if isinstance(value, tuple):
-        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value[0]
       else:
-        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value
     else:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = "<Invalid value>"
+      self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -209,8 +209,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('focus', self._handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('blur', self._handle_selection_field_blur)
 
     self._menuNode.addEventListener('click', self._child_clicked)
 
@@ -218,8 +218,8 @@ class DropdownMenu(DropdownMenuTemplate):
     document.removeEventListener('keydown', self._handle_keyboard_events)
     document.removeEventListener('click', self._body_click)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self._handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('focus', self._handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('blur', self._handle_selection_field_blur)
     self._menuNode.removeEventListener('click', self._child_clicked)
     self._cleanup()
     self._menuNode.remove()
