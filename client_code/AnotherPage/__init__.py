@@ -14,11 +14,17 @@ class AnotherPage(AnotherPageTemplate):
     self.init_components(**properties)
     nav_link = NavigationLink(text="Test")
     self.layout.layout.add_to_nav_rail(nav_link)
+    print(self.text_area_1.tag)
+    self.text_area_1.tag.hello = 'world'
+    print(self.text_area_1.tag, self.text_area_1.tag.hello)
 
 
   def text_field_3_pressed_enter(self, **event_args):
     """This method is called when the user presses enter in this component."""
     pass
+
+
+
 
  
     

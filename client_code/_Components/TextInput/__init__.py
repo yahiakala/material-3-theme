@@ -11,6 +11,7 @@ from ...utils.properties import get_unset_value
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)

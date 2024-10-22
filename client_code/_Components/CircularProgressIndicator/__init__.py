@@ -10,6 +10,7 @@ from math import pi, cos, sin
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._tooltip_node = None
     self._props = properties
     self.init_components(**properties)

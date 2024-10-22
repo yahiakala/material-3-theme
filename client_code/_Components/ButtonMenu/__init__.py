@@ -12,10 +12,11 @@ import anvil.designer
 from ..MenuItem import MenuItem
 from ...Functions import property_with_callback, color_property, border_property, role_property
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)

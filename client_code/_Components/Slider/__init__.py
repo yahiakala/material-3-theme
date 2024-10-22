@@ -8,6 +8,7 @@ from anvil.designer import in_designer
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._shown = False
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')

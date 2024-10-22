@@ -9,11 +9,14 @@ from ...Functions import color_property, role_property, tooltip_property, custom
 from ...utils.properties import get_unset_value, get_unset_spacing
 from anvil import HtmlTemplate
 import anvil.designer
+from ...utils.properties import ComponentTag
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
+    self.tag = ComponentTag()
     self._props = properties
     self._text = properties.get('text', '')
+
     self._tooltip_node = None
     self.init_components(**properties)
     
@@ -115,6 +118,15 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
+  # @property
+  # def tag(self):
+  #   print('getting tag')
+  #   return self._props.get('tag')
+
+  # @tag.setter
+  # def tag(self, value):
+  #   print('setting tag')
+  #   self._props['tag'] = ComponentTag()
   
   align = property_with_callback('align', _set_align)
   role = role_property('anvil-m3-button')

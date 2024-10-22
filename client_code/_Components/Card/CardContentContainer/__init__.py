@@ -10,6 +10,7 @@ from ....Functions import margin_property
 class CardContentContainer(CardContentContainerTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
     

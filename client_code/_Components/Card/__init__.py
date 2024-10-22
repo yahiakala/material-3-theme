@@ -14,6 +14,7 @@ from ...utils.properties import get_unset_spacing
 class Card(CardTemplate):
   def __init__(self, **properties):
     self.tooltip_node = None
+    self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)

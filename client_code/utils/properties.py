@@ -77,3 +77,7 @@ try:
     )
 except (ImportError, AttributeError):
     pass
+
+class ComponentTag():
+  def __repr__(self):
+    return f"ComponentTag({self.__dict__})"

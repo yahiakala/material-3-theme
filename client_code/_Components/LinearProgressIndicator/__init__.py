@@ -10,6 +10,7 @@ from ...Functions import tooltip_property, property_with_callback, margin_proper
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):
     self._tooltip_node = None
+    self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
 

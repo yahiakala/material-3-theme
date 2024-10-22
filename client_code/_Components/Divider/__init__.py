@@ -9,6 +9,7 @@ from ...Functions import color_property, role_property, margin_property
 class Divider(DividerTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
 
