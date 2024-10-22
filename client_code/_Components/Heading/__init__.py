@@ -35,9 +35,17 @@ class Heading(HeadingTemplate):
     }]
 
   def _anvil_get_unset_property_values_(self):
-    el = self.dom_nodes["anvil-m3-heading-container"]
-    sp = get_unset_spacing(el, el, self.spacing)
-    return {"spacing": sp}
+    full_el = self.dom_nodes["anvil-m3-heading-container"]
+    sp = get_unset_spacing(full_el, full_el, self.spacing)
+    if self.style == "display":
+      h = self.dom_nodes['anvil-m3-heading-display']
+    elif self.style == "headline":
+      h = self.dom_nodes['anvil-m3-heading-headline']
+    elif self.style == "title":
+      h = self.dom_nodes['anvil-m3-heading-title']
+    fs = get_unset_value(h, "fontSize", self.font_size)
+    ifs = get_unset_value(self.dom_nodes['anvil-m3-heading-icon'], "fontSize", self.icon_size)
+    return {"spacing": sp, "font_size": fs, "icon_size": ifs}
 
   def _start_inline_editing(self):
     el_name = f'anvil-m3-heading-{self.style}'
