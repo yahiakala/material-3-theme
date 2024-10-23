@@ -50,7 +50,7 @@ components:
           name: button_5
           properties:
             spacing:
-              padding: ['54', '100', '54', '54']
+              padding: ['', '', '', '']
             text: '5'
           type: form:_Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
