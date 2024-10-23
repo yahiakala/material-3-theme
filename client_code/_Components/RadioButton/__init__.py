@@ -25,22 +25,19 @@ class RadioButton(RadioButtonTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("change", self._handle_change)
+
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
-    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("change", self._handle_change)
-
     if not self._group_set_from_code:
       self._set_group(RadioGroup.enclosing(self))
 
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
-    self.dom_nodes['anvil-m3-radiobutton-input'].removeEventListener("change", self._handle_change)
-
     if not self._group_set_from_code:
       self._set_group(None)
 
