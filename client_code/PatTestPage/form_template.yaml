@@ -30,6 +30,18 @@ components_by_slot:
     name: button_1
     properties: {align: center, icon: '', text: vcbxcv}
     type: form:_Components.Button
+  - layout_properties: {}
+    name: slider_1
+    properties:
+      margin: ['50', '', '', '']
+      show_label: true
+    type: form:_Components.Slider
+  - layout_properties: {}
+    name: slider_2
+    properties:
+      margin: ['50', '', '', '']
+      show_label: true
+    type: form:_Components.Slider
   content_slot: []
   nav_rail: []
 is_package: true
