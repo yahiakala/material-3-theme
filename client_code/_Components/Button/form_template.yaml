@@ -34,6 +34,7 @@ properties:
 - default_value: filled
   description: A predefined style for this component.
   group: Key Properties
+  important: true
   name: appearance
   options: [filled, elevated, tonal, outlined, text]
   type: enum
