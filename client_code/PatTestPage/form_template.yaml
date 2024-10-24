@@ -18,4 +18,6 @@ components_by_slot:
     properties: {supporting_text: asdfasd}
     type: form:_Components.TextInput.TextArea
 is_package: true
-layout: {type: 'form:NavigationRailLayout'}
+layout:
+  properties: {show_sidesheet: false}
+  type: form:NavigationRailLayout
