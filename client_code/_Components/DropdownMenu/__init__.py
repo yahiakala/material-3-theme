@@ -56,11 +56,11 @@ class DropdownMenu(DropdownMenuTemplate):
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
   def _anvil_get_unset_property_values_(self):
-    el = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
+    el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
     m = get_unset_margin(el, self.margin)
     lfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
     stfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
-    sfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-textfield'], "fontSize", self.selected_font_size)
+    sfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-textbox'], "fontSize", self.selected_font_size)
     return {"label_font_size": lfs, "supporting_text_font_size": stfs, "selected_font_size": sfs, "margin": m}
 
   #properties

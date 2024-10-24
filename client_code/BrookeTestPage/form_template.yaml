@@ -14,15 +14,6 @@ components_by_slot:
     name: column_panel_1
     properties: {}
     type: ColumnPanel
-  - layout_properties: {}
-    name: link_1
-    properties:
-      spacing:
-        margin: ['100', null, '100', null]
-        padding: ['100', null, null, null]
-      text: |
-        Hello
-    type: form:_Components.Link
   slot_5: []
   slot_7:
   - event_bindings: {click: icon_button_1_click}
