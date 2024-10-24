@@ -19,7 +19,7 @@ components_by_slot:
     type: form:_Components.TextInput.TextBox
   - layout_properties: {}
     name: dropdown_menu_1
-    properties: {align: left}
+    properties: {align: left, icon: ''}
     type: form:_Components.DropdownMenu
 is_package: true
 layout:
