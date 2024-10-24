@@ -160,7 +160,7 @@ a.anvil-m3-link:hover, a.anvil-m3-link:focus {
 }
 
 .anvil-m3-link {
-  /* display: flex; */
+  display: inline-block;
   text-decoration: none;
 }
 
