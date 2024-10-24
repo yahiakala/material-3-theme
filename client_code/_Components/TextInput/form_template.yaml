@@ -15,7 +15,7 @@ is_package: true
 properties:
 - {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: false, name: label, type: string}
 - {default_value: '', description: The text to be displayed when the component is empty., group: Key Properties, important: false, name: placeholder, type: string}
-- {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: description, type: string}
+- {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}
 - {default_value: 0, description: The max number of characters a user can enter into this component. The limit is displayed below the component., group: Key Properties, important: false, name: character_limit, type: number}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles, group: Look and Feel, name: role, type: themeRole}
 - default_value: left
@@ -37,7 +37,7 @@ properties:
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: The colour of the label text on the component., group: Look and Feel, important: false, name: label_color, type: color}
 - {default_value: '', description: The colour of the input text displayed on this component., group: Look and Feel, important: false, name: display_text_color, type: color}
-- {default_value: '', description: The colour of the supporting text underneath this component., group: Look and Feel, important: false, name: description_color, type: color}
+- {default_value: '', description: The colour of the supporting text underneath this component., group: Look and Feel, important: false, name: supporting_text_color, type: color}
 - {default_value: false, description: 'If True, the label text will be italic.', group: Text, important: false, name: label_italic, type: boolean}
 - {default_value: false, description: 'If True, the label text will be bold.', group: Text, important: false, name: label_bold, type: boolean}
 - {default_value: false, description: 'If True, the label text will be underlined.', group: Text, important: false, name: label_underline, type: boolean}
@@ -60,8 +60,8 @@ properties:
   type: spacing
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
-- {default_value: '', description: The font family to use for the supporting text underneath this component., group: Text, important: false, name: description_font_family, type: string}
-- {description: The font size of the supporting text displayed underneath this component., group: Text, important: false, name: description_font_size, type: number}
+- {default_value: '', description: The font family to use for the supporting text underneath this component., group: Text, important: false, name: supporting_text_font_family, type: string}
+- {description: The font size of the supporting text displayed underneath this component., group: Text, important: false, name: supporting_text_font_size, type: number}
 - {default_value: '', description: The colour of the character limit text displayed underneath this component., group: Look and Feel, important: false, name: character_limit_color, type: color}
 - {default_value: '', description: The font family of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font, type: string}
 - {description: The font size of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font_size, type: number}

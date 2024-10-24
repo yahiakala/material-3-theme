@@ -27,9 +27,9 @@ class TextInput(TextInputTemplate):
   label_color = color_property('anvil-m3-label-text', 'color', 'label_color')
   spacing = spacing_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
-  description_color = color_property('anvil-m3-supporting-text', 'color', 'description_color')
-  description_font_family = font_family_property('anvil-m3-supporting-text', 'description_font_family')
-  description_font_size = font_size_property('anvil-m3-supporting-text', 'description_font_size')
+  supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
+  supporting_text_font_family = font_family_property('anvil-m3-supporting-text', 'supporting_text_font_family')
+  supporting_text_font_size = font_size_property('anvil-m3-supporting-text', 'supporting_text_font_size')
   character_limit_color = color_property('anvil-m3-character-counter', 'color', 'charcter_limit_color')
   character_limit_font_family = font_family_property('anvil-m3-character-counter', 'character_limit_font_family')
   character_limit_font_size = font_size_property('anvil-m3-character-counter', 'character_limit_font_size')
@@ -41,9 +41,9 @@ class TextInput(TextInputTemplate):
       self.dom_nodes['anvil-m3-textinput'].classList.toggle('outlined', False)
   appearance = property_with_callback("appearance", _set_appearance)
   
-  def _set_description(self, value):
+  def _set_supporting_text(self, value):
     self.dom_nodes['anvil-m3-supporting-text'].innerHTML = value
-  description = property_with_callback("description_text", _set_description)
+  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
   def _set_error(self, value):
     classes = self.dom_nodes['anvil-m3-textinput'].classList
