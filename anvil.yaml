@@ -169,9 +169,9 @@ toolbox_sections:
   - component: {type: m3._Components.RadioButton}
     icon: {dark: 'asset:designer_icons/radio_button_dark.svg', light: 'asset:designer_icons/radio_button.svg'}
     title: RadioButton
-  - component: {type: m3._Components.TextInput.TextField}
+  - component: {type: m3._Components.TextInput.TextBox}
     icon: {dark: 'asset:designer_icons/textfield_dark.svg', light: 'asset:designer_icons/textfield.svg'}
-    title: TextField
+    title: TextBox
   - component: {type: m3._Components.TextInput.TextArea}
     icon: {dark: 'asset:designer_icons/textfield_dark.svg', light: 'asset:designer_icons/textfield.svg'}
     title: TextArea

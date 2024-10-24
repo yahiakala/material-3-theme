@@ -60,7 +60,7 @@ properties:
   designer_hint: align-horizontal
   group: Icon
   important: true
-  name: icon_position
+  name: icon_align
   options: [left, right]
   type: enum
 - {description: The margin and padding (pixels) of the component., group: Layout, important: true, name: spacing, type: spacing}

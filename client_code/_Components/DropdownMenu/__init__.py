@@ -33,7 +33,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selected_value = None
 
     if not self.allow_none:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = ""
+      self.selection_field.dom_nodes['anvil-m3-textbox'].value = ""
 
     self._has_focus = False
     self._handle_keyboard_events = self._handle_keyboard_events
@@ -45,9 +45,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
-    self.selection_field.dom_nodes['anvil-m3-textfield'].style.caretColor = 'transparent'
-    self.selection_field.dom_nodes['anvil-m3-textfield'].style.cursor = "pointer"
-    self.selection_field.dom_nodes['anvil-m3-textfield'].setAttribute("readonly", True)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].style.caretColor = 'transparent'
+    self.selection_field.dom_nodes['anvil-m3-textbox'].style.cursor = "pointer"
+    self.selection_field.dom_nodes['anvil-m3-textbox'].setAttribute("readonly", True)
 
     # if self.placeholder: #when no label, in unfocused state, use the placeholder as the display text.
     #   self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
@@ -65,7 +65,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
-  margin = margin_property('anvil-m3-dropdownMenu-textfield')
+  margin = margin_property('anvil-m3-dropdownMenu-textbox')
 
   def _set_background_color(self, value):
     self.selection_field.background_color = value
@@ -83,9 +83,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.label_font_size = value
   label_font_size = property_with_callback("label_font_size", _set_label_font_size)
 
-  def _set_label_text_color(self, value):
-    self.selection_field.label_text_color = value
-  label_text_color = property_with_callback("label_text_color", _set_label_text_color)
+  def _set_label_color(self, value):
+    self.selection_field.label_color = value
+  label_color = property_with_callback("label_color", _set_label_color)
 
   def _set_label_italic(self, value):
     self.selection_field.label_italic = value
@@ -143,21 +143,21 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.tooltip = value
   tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def _set_supporting_text(self, value):
-    self.selection_field.supporting_text = value
-  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
+  def _set_description(self, value):
+    self.selection_field.description = value
+  description = property_with_callback("description", _set_description)
 
-  def _set_supporting_text_color(self, value):
-    self.selection_field.supporting_text_color = value
-  supporting_text_color = property_with_callback("supporting_text_color", _set_supporting_text_color)
+  def _set_description_color(self, value):
+    self.selection_field.description_color = value
+  description_color = property_with_callback("description_color", _set_description_color)
 
-  def _set_supporting_text_font_family(self, value):
-    self.selection_field.supporting_text_font_family = value
-  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
+  def _set_description_font_family(self, value):
+    self.selection_field.description_font_family = value
+  description_font_family = property_with_callback("description_font_family", _set_description_font_family)
 
-  def _set_supporting_text_font_size(self, value):
-    self.selection_field.supporting_text_font_size = value
-  supporting_text_font_size = property_with_callback("supporting_text_font_size", _set_supporting_text_font_size)
+  def _set_description_font_size(self, value):
+    self.selection_field.description_font_size = value
+  description_font_size = property_with_callback("description_font_size", _set_description_font_size)
 
   def _set_border_color(self, value):
     self.selection_field.border_color = value
@@ -169,30 +169,30 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _set_error(self, value):
     if value: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.add('anvil-m3-dropdown-error')
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add('anvil-m3-dropdown-error')
     else: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textfield'].classList.remove('anvil-m3-dropdown-error')
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove('anvil-m3-dropdown-error')
   error = property_with_callback("error", _set_error)
 
-  def _set_label_text(self, value):
+  def _set_label(self, value):
     v = value or ""
     self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
-    self.selection_field.label_text = v
-  label_text = property_with_callback("label_text", _set_label_text)
+    self.selection_field.label = v
+  label = property_with_callback("label", _set_label)
 
   def _set_selected_value(self, value):
     if (value is None and self.allow_none) or (value in self.items):
       if value is None and self.allow_none:
         self._hoverIndex = None
       if isinstance(value, tuple):
-        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value[0]
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value[0]
       else:
-        self.selection_field.dom_nodes['anvil-m3-textfield'].value = value
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value
     else:
-      self.selection_field.dom_nodes['anvil-m3-textfield'].value = "<Invalid value>"
+      self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
   selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def _set_placeholder(self, value):
@@ -219,8 +219,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('focus', self._handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('blur', self._handle_selection_field_blur)
 
     self._menuNode.addEventListener('click', self._child_clicked)
 
@@ -228,19 +228,19 @@ class DropdownMenu(DropdownMenuTemplate):
     document.removeEventListener('keydown', self._handle_keyboard_events)
     document.removeEventListener('click', self._body_click)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self._handle_selection_field_blur)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('focus', self._handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('blur', self._handle_selection_field_blur)
     self._menuNode.removeEventListener('click', self._child_clicked)
     self._cleanup()
     self._menuNode.remove()
 
   def _handle_selection_field_focus(self, event):
-    if not self.label_text:
+    if not self.label:
         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
-    # if not self.label_text and self.placeholder and self.selected_value is None:
+    # if not self.label and self.placeholder and self.selected_value is None:
     #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
     
@@ -361,7 +361,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
-      if not self.label_text:
+      if not self.label:
         self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self._design_name
 
   def _create_menu_items(self):
@@ -425,7 +425,7 @@ class DropdownMenu(DropdownMenuTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['anvil-m3-label-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label", self.selection_field.dom_nodes['anvil-m3-label-text'])
       }
     }]
 
@@ -436,8 +436,8 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_text",type:"string",description:"The label text of the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(material_3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
@@ -463,10 +463,10 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
   #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(material_3.DropdownMenu)!1: {name:"description_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
   #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}

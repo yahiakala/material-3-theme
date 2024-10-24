@@ -20,7 +20,7 @@ from .._Components.Slider import Slider
 from .._Components.Switch import Switch
 from .._Components.Text import Text
 from .._Components.TextInput import TextArea
-from .._Components.TextInput import TextField
+from .._Components.TextInput import TextBox
 from .._Components.ToggleIconButton import ToggleIconButton
 
 

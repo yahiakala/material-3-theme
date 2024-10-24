@@ -32,7 +32,7 @@ properties:
 - {default_value: true, description: 'If True, this component allows user interaction.', designerHint: enabled, designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
 - {default_value: '', description: The font family to use for this component's label, group: Label Style, important: false, name: label_font_family, type: string}
 - {description: The height of text displayed on this component's label in pixels, group: Label Style, important: false, name: label_font_size, type: number}
-- {default_value: '', description: The colour of the label text on the component., group: Label Style, important: false, name: label_text_color, type: color}
+- {default_value: '', description: The colour of the label text on the component., group: Label Style, important: false, name: label_color, type: color}
 - {default_value: false, description: 'If True, the label text will be italic', group: Label Style, important: false, name: label_italic, type: boolean}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - default_value: left
@@ -61,7 +61,7 @@ properties:
 - {description: The value of the currently selected item. Can only be set at runtime., group: Interaction, important: true, name: selected_value, type: object}
 - {default_value: false, description: 'If True, the label text will be underlined', group: Label Style, important: false, name: label_underline, type: boolean}
 - {default_value: true, description: 'If True, the component will be displayed.', designerHint: visible, designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
-- {default_value: '', description: Label text associated with the component. Usually the prompt., group: Key Properties, important: true, name: label_text, type: string}
+- {default_value: '', description: Label text associated with the component. Usually the prompt., group: Key Properties, important: true, name: label, type: string}
 - {default_value: false, description: 'If True, the menu items will be bold', group: Dropdown Items Style, important: true, name: items_bold, type: boolean}
 - {default_value: false, description: 'If True, the menu items will be italic', group: Dropdown Items Style, important: true, name: items_italic, type: boolean}
 - {default_value: false, description: 'If True, the menu items will be underlined', group: Dropdown Items Style, important: true, name: items_underline, type: boolean}

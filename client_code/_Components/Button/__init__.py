@@ -112,7 +112,7 @@ class Button(ButtonTemplate):
     if value and value != 'text':
       button.classList.add(f"anvil-m3-{value}")
       
-  def _set_icon_position(self, value):
+  def _set_icon_align(self, value):
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
       
   def form_show(self, **event_args):
@@ -146,7 +146,7 @@ class Button(ButtonTemplate):
   spacing = spacing_property('anvil-m3-button')
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
-  icon_position = property_with_callback('icon_position', _set_icon_position)
+  icon_align = property_with_callback('icon_align', _set_icon_align)
   visible = HtmlTemplate.visible
 
   #!componentProp(material_3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
@@ -168,7 +168,7 @@ class Button(ButtonTemplate):
   #!componentProp(material_3.Button)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(material_3.Button)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(material_3.Button)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.Button)!1: {name:"icon_position",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
+  #!componentProp(material_3.Button)!1: {name:"icon_align",type:"enum",options:["left", "right"],description:"The alignment of the icon on this component."}
   #!componentProp(material_3.Button)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.Button)!1: {name: "click", description: "When the component is clicked.", parameters:[]}

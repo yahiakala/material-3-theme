@@ -32,7 +32,7 @@ class TextInput(TextInputTemplate):
   label_underline = underline_property('anvil-m3-label-text', 'label_underline')
   label_font_size = font_size_property('anvil-m3-label-text', 'label_font_size')
   label_font_family = font_family_property('anvil-m3-label-text', 'label_font_family')
-  label_text_color = color_property('anvil-m3-label-text', 'color', 'label_text_color')
+  label_color = color_property('anvil-m3-label-text', 'color', 'label_color')
   margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   supporting_text_color = color_property('anvil-m3-supporting-text', 'color', 'supporting_text_color')
@@ -87,7 +87,7 @@ class TextInput(TextInputTemplate):
     id = gen_id();
     self._set_id(id)
     if anvil.designer.in_designer:
-      if not self.label_text:
+      if not self.label:
         self.dom_nodes['anvil-m3-label-text'].innerText = anvil.designer.get_design_name(self)
 
   def _on_input(self, e):
