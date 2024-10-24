@@ -18,8 +18,4 @@ components_by_slot:
     properties: {supporting_text: asdfasd}
     type: form:_Components.TextInput.TextArea
 is_package: true
-layout:
-  properties:
-    content_padding: ['8', '8', '8', '8']
-    show_sidesheet: false
-  type: form:NavigationRailLayout
+layout: {type: 'form:NavigationRailLayout'}
