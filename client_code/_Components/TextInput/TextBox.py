@@ -12,8 +12,8 @@ text_property = {"name": "text",
                  "supportsWriteback": True,
                  "important": True}
 leading_icon_property = {"name": "leading_icon",
-                         "type": "enum",
-                         "options": _m3_icons,
+                         "type": "icon",
+                         "iconsets": ["material-icons"],
                          "group": "Icon",
                          "important": True,
                          "default_value": "None",
@@ -22,7 +22,6 @@ leading_icon_property = {"name": "leading_icon",
                          "description": "The leading icon to display on this component."}
 trailing_icon_property = {"name": "trailing_icon",
                           "type": "icon",
-                          "options": _m3_icons,
                           "group": "Icon",
                           "iconsets": ["material-icons"],
                           "important": True,
@@ -173,7 +172,7 @@ class TextBox(TextInput):
 
     if value:
       leading_icon.style.display = "block"
-      leading_icon.innerText = value
+      leading_icon.innerText = value[3:]
       icon_container.style.paddingLeft = "12px"
       text_box_input.style.paddingLeft = "48px"
       border_container.classList.add("with-icon")
@@ -192,7 +191,7 @@ class TextBox(TextInput):
 
     if value:
       trailing_icon.style.display = "block"
-      trailing_icon.innerText = value
+      trailing_icon.innerText = value[3:]
       text_box_input.style.paddingRight = "48px"
     else:
       trailing_icon.style.display = "none"

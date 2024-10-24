@@ -15,8 +15,12 @@ components_by_slot:
     type: form:_Components.TextInput.TextArea
   - layout_properties: {}
     name: text_box_1
-    properties: {trailing_icon: 'mi:10k'}
+    properties: {leading_icon: 'mi:10mp', trailing_icon: 'mi:10k'}
     type: form:_Components.TextInput.TextBox
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties: {}
+    type: form:_Components.DropdownMenu
 is_package: true
 layout:
   properties:

@@ -334,12 +334,12 @@ class DropdownMenu(DropdownMenuTemplate):
       self._update_hover_styles()
 
       if not anvil.designer.in_designer:
-        self.selection_field.trailing_icon = "arrow_drop_up"
+        self.selection_field.trailing_icon = "mi:arrow_drop_up"
         if self._hoverIndex:
           self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
         
     else:
-      self.selection_field.trailing_icon = "arrow_drop_down"
+      self.selection_field.trailing_icon = "mi:arrow_drop_down"
       if self.selected_value is None:
         self._hoverIndex = None
 
