@@ -10,13 +10,13 @@ components_by_slot:
     properties: {}
     type: ColumnPanel
   - layout_properties: {}
-    name: text_box_1
-    properties: {supporting_text: sdfsd}
-    type: form:_Components.TextInput.TextBox
-  - layout_properties: {}
     name: text_area_1
     properties: {supporting_text: asdfasd}
     type: form:_Components.TextInput.TextArea
+  - layout_properties: {}
+    name: text_box_1
+    properties: {trailing_icon: 'mi:10k'}
+    type: form:_Components.TextInput.TextBox
 is_package: true
 layout:
   properties:
