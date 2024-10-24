@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
-from ...components import RadioGroup
+from ..._Components.RadioGroupPanel import RadioGroup
 from ...Functions import role_property, tooltip_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, spacing_property
 from ...Functions import property_with_callback, property_without_callback
 from ...utils import gen_id
