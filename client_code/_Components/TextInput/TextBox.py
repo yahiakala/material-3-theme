@@ -27,7 +27,6 @@ trailing_icon_property = {"name": "trailing_icon",
                           "important": True,
                           "default_value": "None",
                           "includeNoneOption": True,
-                          "noneOptionLabel": "None",
                           "description": "The trailing icon to display on this component."}
 type_property = {"name": "type", 
                  "type": "enum", 
