@@ -1,13 +1,12 @@
 components:
+- layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
+  name: selection_field
+  properties: {trailing_icon: arrow_drop_down}
+  type: form:_Components.TextInput.TextBox
 - layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   name: menu
   properties: {visible: false}
   type: form:_Components.Menu
-- event_bindings: {}
-  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-  name: selection_field
-  properties: {appearance: '', bold_display: false, enabled: true, label_text: '', placeholder: '', supporting_text: ' ', trailing_icon: arrow_drop_down}
-  type: form:_Components.TextInput.TextField
 container:
   event_bindings: {show: form_show}
   properties:
