@@ -79,7 +79,7 @@ components_by_slot:
       type: form:_Components.IconButton
     - layout_properties: {grid_position: 'YSHNWR,EMLXUC FRKUZE,GPUDVK'}
       name: toggle_icon_button_2
-      properties: {align: center}
+      properties: {align: center, appearance: filled}
       type: form:_Components.ToggleIconButton
     - layout_properties: {grid_position: 'YSHNWR,IXVEVP TDCPFO,WQBGAU'}
       name: icon_button_3
@@ -91,7 +91,10 @@ components_by_slot:
       type: form:_Components.ToggleIconButton
     - layout_properties: {grid_position: 'YSHNWR,CQEGRD MTNDEH,PVMNCV'}
       name: icon_button_4
-      properties: {align: left, appearance: outlined}
+      properties:
+        align: left
+        appearance: outlined
+        margin: ['4', '4', '4', '4']
       type: form:_Components.IconButton
     - layout_properties: {grid_position: 'YSHNWR,CQEGRD CRYAKN,JNCKBH'}
       name: toggle_icon_button_4
@@ -99,7 +102,7 @@ components_by_slot:
       type: form:_Components.ToggleIconButton
     layout_properties: {}
     name: IconButtons
-    properties: {col_widths: '{"OHRRKP":19,"EMLXUC":9,"IXVEVP":7,"CQEGRD":9,"GPUDVK":60,"ALQQWB":60}'}
+    properties: {col_spacing: none, col_widths: '{"OHRRKP":26,"EMLXUC":4,"IXVEVP":4,"CQEGRD":26,"GPUDVK":60,"ALQQWB":60}', spacing_above: none, spacing_below: none}
     type: ColumnPanel
   - components:
     - components:
