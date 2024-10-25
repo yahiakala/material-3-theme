@@ -1,3 +1,8 @@
+.anvil-m3-progressindicator-component { 
+  display: flex;
+  margin: 4px 0;
+}
+
 .anvil-m3-progressindicator-track {
   position: relative;
   margin: 0px;
