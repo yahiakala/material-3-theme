@@ -22,6 +22,7 @@
   border: none;
   text-align: center;
   background-color: transparent;
+  margin: 4px;
 } 
 
 .anvil-m3-iconbutton-container:disabled {
