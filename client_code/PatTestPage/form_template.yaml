@@ -28,18 +28,36 @@ components_by_slot:
     type: ColumnPanel
   - layout_properties: {}
     name: button_1
-    properties: {align: center, icon: '', text: vcbxcv}
+    properties:
+      align: center
+      icon: ''
+      spacing:
+        margin: ['5', null, '5', null]
+        padding: [null, null, null, null]
+      text: vcbxcv
     type: form:_Components.Button
+  - layout_properties: {}
+    name: button_2
+    properties:
+      align: center
+      spacing:
+        margin: ['5', null, '5', null]
+      text: gjghk
+    type: form:_Components.Button
+  - layout_properties: {}
+    name: column_panel_2
+    properties: {}
+    type: ColumnPanel
   - layout_properties: {}
     name: slider_1
     properties:
-      margin: ['50', '', '', '']
+      margin: ['5', '', '5', '']
       show_label: true
     type: form:_Components.Slider
   - layout_properties: {}
     name: slider_2
     properties:
-      margin: ['50', '', '', '']
+      margin: ['5', '', '5', '']
       show_label: true
     type: form:_Components.Slider
   content_slot: []
