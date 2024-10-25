@@ -107,10 +107,16 @@ class Heading(HeadingTemplate):
   @font_size.setter
   def font_size(self, value):
     self._font_size = value
-    self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = ''
 
   @property
   def icon_size(self):
