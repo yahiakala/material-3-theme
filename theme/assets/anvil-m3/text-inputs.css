@@ -7,7 +7,10 @@ element {
   --anvil-m3-filled-border-focus: var(--anvil-m3-primary);
 }
 
-.anvil-m3-textinput { padding-top: 5px }
+.anvil-m3-textinput { 
+  padding-top: 4px;
+  margin: 4px 0;
+}
 .anvil-m3-textinput-input-container {position: relative; overflow: visible; }
 .anvil-m3-textinput-input {
   height: 56px;

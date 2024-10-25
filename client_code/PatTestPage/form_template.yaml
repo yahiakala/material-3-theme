@@ -1,33 +1,5 @@
 components_by_slot:
   content:
-  - components:
-    - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
-      name: text_field_1
-      properties:
-        label_text: Hi
-        margin: ['', null, '', null]
-      type: form:_Components.TextInput.TextField
-    - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
-      name: text_field_2
-      properties: {appearance: outlined, label_text: dfgsdf, leading_icon: ''}
-      type: form:_Components.TextInput.TextField
-    - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
-      name: text_area_1
-      properties:
-        label_text: dfgsdf
-        margin: ['', null, '', '']
-      type: form:_Components.TextInput.TextArea
-    - layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
-      name: text_area_2
-      properties:
-        appearance: outlined
-        label_text: dsfgsdf
-        margin: ['', null, null, null]
-      type: form:_Components.TextInput.TextArea
-    layout_properties: {}
-    name: TextInputs
-    properties: {}
-    type: ColumnPanel
   - layout_properties: {}
     name: slider_1
     properties:
@@ -40,15 +12,31 @@ components_by_slot:
       margin: ['5', '', '5', '']
       show_label: true
     type: form:_Components.Slider
-  - layout_properties: {}
-    name: circular_progress_indicator_1
-    properties: {}
-    type: form:_Components.CircularProgressIndicator
-  - layout_properties: {}
-    name: linear_progress_indicator_1
-    properties:
-      margin: ['5', null, '5', null]
-    type: form:_Components.LinearProgressIndicator
+  - components:
+    - layout_properties: {grid_position: 'ESBTXV,FYKRDF'}
+      name: file_loader_1
+      properties: {align: right, appearance: elevated}
+      type: form:_Components.FileLoader
+    - layout_properties: {grid_position: 'ESBTXV,XXMTNS'}
+      name: file_loader_2
+      properties: {align: center, appearance: filled}
+      type: form:_Components.FileLoader
+    - layout_properties: {grid_position: 'ESBTXV,SCLKMB'}
+      name: file_loader_3
+      properties: {appearance: tonal}
+      type: form:_Components.FileLoader
+    - layout_properties: {grid_position: 'MXNKWY,DXMGPC'}
+      name: file_loader_5
+      properties: {align: right, appearance: outlined}
+      type: form:_Components.FileLoader
+    - layout_properties: {grid_position: 'MXNKWY,CIEHRU'}
+      name: file_loader_4
+      properties: {}
+      type: form:_Components.FileLoader
+    layout_properties: {}
+    name: column_panel_1
+    properties: {col_spacing: none, col_widths: '{"FYKRDF":23,"XXMTNS":17,"SCLKMB":20}', spacing_above: small}
+    type: ColumnPanel
   content_slot: []
   nav_rail: []
 is_package: true
