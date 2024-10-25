@@ -1,7 +1,7 @@
 from ._anvil_designer import FileLoaderTemplate
 from anvil import *
 import anvil.server
-from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
+from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
 from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
