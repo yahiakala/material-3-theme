@@ -45,6 +45,10 @@ components_by_slot:
     name: checkbox_1
     properties: {allow_indeterminate: true, checked: false}
     type: form:_Components.Checkbox
+  - layout_properties: {}
+    name: heading_1
+    properties: {font_size: null}
+    type: form:_Components.Heading
 is_package: true
 layout:
   properties: {content_padding: null, show_sidesheet: false}
