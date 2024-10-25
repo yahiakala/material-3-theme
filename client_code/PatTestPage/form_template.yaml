@@ -33,7 +33,7 @@ components_by_slot:
         align: right
         icon: ''
         spacing:
-          margin: ['4', '4', '4', '4']
+          margin: ['', '', '', '']
           padding: [null, null, null, null]
         text: vcbxcv
       type: form:_Components.Button
@@ -41,7 +41,7 @@ components_by_slot:
       name: button_3
       properties:
         spacing:
-          margin: ['4', '4', '4', '4']
+          margin: ['', '', '', '']
         text: sdfsd
       type: form:_Components.Button
     - layout_properties: {grid_position: 'TSZUUI,MSTBLB'}
@@ -49,7 +49,7 @@ components_by_slot:
       properties:
         align: right
         spacing:
-          margin: ['4', '4', '4', '4']
+          margin: ['', '4', '', '']
         text: gjghk
       type: form:_Components.Button
     - layout_properties: {grid_position: 'BSNJUQ,LUHRHM TSZUUI,ECJQFW'}
@@ -57,7 +57,7 @@ components_by_slot:
       properties:
         align: left
         spacing:
-          margin: ['4', '4', '4', '4']
+          margin: ['', '', '', '']
         text: fadf
       type: form:_Components.Button
     layout_properties: {}
