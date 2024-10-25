@@ -41,6 +41,10 @@ components_by_slot:
     name: button_menu_1
     properties: {align: full}
     type: form:_Components.ButtonMenu
+  - layout_properties: {}
+    name: checkbox_1
+    properties: {allow_indeterminate: true, checked: false}
+    type: form:_Components.Checkbox
 is_package: true
 layout:
   properties: {content_padding: null, show_sidesheet: false}
