@@ -1,6 +1,5 @@
 from ._anvil_designer import CardTemplate
 from anvil import *
-import anvil.server
 import anvil.designer
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, role_property, style_property, spacing_property, margin_property, padding_property, color_property, border_property
