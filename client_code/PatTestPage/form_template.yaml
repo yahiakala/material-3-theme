@@ -21,6 +21,10 @@ components_by_slot:
     name: dropdown_menu_1
     properties: {align: left, icon: ''}
     type: form:_Components.DropdownMenu
+  - layout_properties: {}
+    name: button_menu_1
+    properties: {align: full}
+    type: form:_Components.ButtonMenu
 is_package: true
 layout:
   properties:
