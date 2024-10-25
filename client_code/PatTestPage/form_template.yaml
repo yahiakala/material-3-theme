@@ -46,7 +46,8 @@ components_by_slot:
     type: form:_Components.CircularProgressIndicator
   - layout_properties: {}
     name: linear_progress_indicator_1
-    properties: {}
+    properties:
+      margin: ['5', null, '5', null]
     type: form:_Components.LinearProgressIndicator
   content_slot: []
   nav_rail: []
