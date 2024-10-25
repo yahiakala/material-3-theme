@@ -154,7 +154,7 @@ class TextBox(TextInput):
   def _set_error(self, value):
     super()._set_error(value)
     if value:
-      icon = "error"
+      icon = "mi:error"
       self._set_trailing_icon(icon)
       self.dom_nodes["anvil-m3-trailing-icon"].classList.add("anvil-m3-error-icon")
     else:
