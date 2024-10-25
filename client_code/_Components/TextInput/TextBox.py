@@ -95,7 +95,6 @@ class TextBox(TextInput):
     self.dom_nodes['anvil-m3-textbox'].removeEventListener("blur", self._on_lost_focus)
 
   def _on_key_down(self, e):
-    print(e.type)
     if e.key == "Enter":
       self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
