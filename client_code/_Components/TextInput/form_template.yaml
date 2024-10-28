@@ -53,7 +53,7 @@ properties:
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
 - {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
-- {default_value: '', description: The colour of the supporting text and the character limit underneath this component., group: Subcontent style, important: true, name: subcontent_color, type: color}
-- {default_value: '', description: The font family of the supporting text and the character limit displayed underneath this component., group: Key Properties, important: true, name: subcontent_font_family, type: string}
-- {description: The font size of the supporting text and character limit displayed underneath this component., important: true, name: subcontent_font_size, type: number}
+- {default_value: '', description: The colour of the supporting text and the character limit underneath this component., group: Subcontent Style, important: false, name: subcontent_color, type: color}
+- {default_value: '', description: The font family of the supporting text and the character limit displayed underneath this component., group: Subcontent Style, important: false, name: subcontent_font_family, type: string}
+- {description: The font size of the supporting text and character limit displayed underneath this component., group: Subcontent Style, important: false, name: subcontent_font_size, type: number}
 toolbox_item: {hidden: true}
