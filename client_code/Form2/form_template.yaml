@@ -1,4 +1,8 @@
 components_by_slot:
-  sidesheet: []
+  sidesheet:
+  - layout_properties: {}
+    name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
 is_package: true
 layout: {type: 'form:Layouts.NavigationRailLayout'}
