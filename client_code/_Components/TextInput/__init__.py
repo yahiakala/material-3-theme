@@ -33,7 +33,7 @@ class TextInput(TextInputTemplate):
   margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   subcontent_color = color_property('anvil-m3-subcontent', 'color', 'subcontent_text_color')
-  subcontent_font_family = font_family_property('anvil-m3-subctontent', 'subcontent_font_family')
+  subcontent_font_family = font_family_property('anvil-m3-subcontent', 'subcontent_font_family')
   supporting_text_font_family = font_family_property('anvil-m3-supporting-text', 'supporting_text_font_family')
   supporting_text_font_size = font_size_property('anvil-m3-supporting-text', 'supporting_text_font_size')
   character_limit_font_family = font_family_property('anvil-m3-character-counter', 'character_limit_font_family')
