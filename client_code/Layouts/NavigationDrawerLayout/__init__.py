@@ -1,7 +1,7 @@
 from ._anvil_designer import NavigationDrawerLayoutTemplate
 from anvil import *
 import anvil.server
-from ..._utils.properties import innerText_property, color_property, theme_color_to_css, padding_property
+from ..._utils.properties import innerText_property, color_property, theme_color_to_css, padding_property, anvil_prop
 from anvil.js import window
 
 
@@ -83,24 +83,14 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
 
   navigation_drawer_color = color_property('anvil-m3-navigation-drawer', 'backgroundColor', 'navigation_drawer_color')
 
-  @property
-  def background_color(self):
-    return self._props.get('background_color')
-
-  @background_color.setter
+  @anvil_prop
   def background_color(self, value):
     if value: value = theme_color_to_css(value)
-    self._props['background_color'] = value
     window.document.body.style.backgroundColor = value
 
-  @property
-  def text_color(self):
-    return self._props.get('text_color')
-
-  @text_color.setter
+  @anvil_prop
   def text_color(self, value):
     if value: value = theme_color_to_css(value)
-    self._props['text_color'] = value
     window.document.body.style.color = value
 
   @property
