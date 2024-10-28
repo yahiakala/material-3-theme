@@ -65,15 +65,14 @@ def get_unset_value(element, key, current_value):
     return {"value": _get_value(css), "css": css}
 
 #TODO: after prod deploy, remove this try and delete the overwritten functions above
-try:
-    from anvil.property_utils import (
-        get_unset_margin,
-        get_unset_padding,
-        get_unset_spacing,
-        get_unset_value,
-    )
-except (ImportError, AttributeError):
-    pass
+
+from anvil.property_utils import (
+    get_unset_margin,
+    get_unset_padding,
+    get_unset_spacing,
+    get_unset_value,
+)
+
 
 class ComponentTag():
   def __repr__(self):
