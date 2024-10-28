@@ -10,7 +10,7 @@ text_property = {"name": "text",
                  "default_value": "None",
                  "description": "The text displayed on this component.",
                  "supportsWriteback": True,
-                 "important": False}
+                 "important": True}
 leading_icon_property = {"name": "leading_icon",
                          "type": "icon",
                          "iconsets": ["material-icons"],

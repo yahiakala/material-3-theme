@@ -6,13 +6,14 @@ from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
 from ...utils.properties import get_unset_value
 
-text_property = {"name": "text",
-                 "type": "string",
-                 "default_value": "None",
-                 "description": "The input text displayed on this component",
-                 "supportsWriteback": True,
-                 # "binding_writeback_events": ["lost_focus"],
-                 "important": False}
+text_property = {
+  "name": "text",
+  "type": "string",
+  "default_value": "None",
+  "description": "The input text displayed on this component",
+  "supportsWriteback": True,
+  "important": True
+}
 
 height_property = {
   "name": "height",
