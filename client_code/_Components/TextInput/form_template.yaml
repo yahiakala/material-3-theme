@@ -52,8 +52,6 @@ properties:
 - {description: The margin (pixels) of this component., group: Layout, important: true, name: margin, type: margin}
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
-- {description: The font size of the supporting text displayed underneath this component., group: Text, important: false, name: supporting_text_font_size, type: number}
-- {description: The font size of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font_size, type: number}
 - {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
 - {default_value: '', group: Key Properties, important: true, name: subcontent_color, type: color}
 - {default_value: '', group: Key Properties, important: true, name: subcontent_font_family, type: string}
