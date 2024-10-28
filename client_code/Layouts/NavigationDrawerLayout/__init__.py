@@ -1,7 +1,7 @@
 from ._anvil_designer import NavigationDrawerLayoutTemplate
 from anvil import *
 import anvil.server
-from ..Functions import innerText_property, color_property, theme_color_to_css, padding_property
+from ..._utils.properties import innerText_property, color_property, theme_color_to_css, padding_property
 from anvil.js import window
 
 

@@ -27,7 +27,7 @@ components_by_slot:
     properties: {}
     type: form:SidesheetContent
 is_package: true
-layout: {type: 'form:NavigationRailLayout'}
+layout: {type: 'form:Layouts.NavigationRailLayout'}
 slots:
   content:
     index: 0
