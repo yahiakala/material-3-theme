@@ -2,8 +2,8 @@ from ._anvil_designer import TextInputTemplate
 from anvil import *
 import anvil.server
 from anvil import HtmlTemplate
-from ...utils import gen_id
-from ...utils.properties import property_with_callback, get_unset_value, get_unset_margin, anvil_prop, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, margin_property, tooltip_property, theme_color_to_css
+from ..._utils import gen_id
+from ..._utils.properties import property_with_callback, get_unset_value, get_unset_margin, anvil_prop, italic_property, bold_property, underline_property, font_size_property, font_family_property, color_property, margin_property, tooltip_property, theme_color_to_css
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):

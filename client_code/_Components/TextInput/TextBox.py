@@ -2,7 +2,7 @@ import anvil.server
 from . import TextInput
 import anvil.designer
 from anvil.property_utils import anvil_property
-from ...utils.properties import property_with_callback, anvil_prop, get_unset_value, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ..._utils.properties import property_with_callback, anvil_prop, get_unset_value, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
 text_property = {"name": "text",
                  "type": "string",

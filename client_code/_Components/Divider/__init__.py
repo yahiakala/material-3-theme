@@ -1,6 +1,6 @@
 from ._anvil_designer import DividerTemplate
 from anvil import *
-from ...utils.properties import get_unset_margin, anvil_prop, color_property, role_property, margin_property
+from ..._utils.properties import get_unset_margin, anvil_prop, color_property, role_property, margin_property
 
 class Divider(DividerTemplate):
   def __init__(self, **properties):

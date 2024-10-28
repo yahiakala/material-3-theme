@@ -4,7 +4,7 @@ import anvil.server
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.property_utils import set_element_spacing
-from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
+from ..._utils.properties import get_unset_value, get_unset_spacing, anvil_prop, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 
 
 class Heading(HeadingTemplate):

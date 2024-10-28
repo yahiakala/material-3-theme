@@ -6,8 +6,8 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
-from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop, color_property, border_property, role_property
+from ..._utils import fui, noop
+from ..._utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop, color_property, border_property, role_property
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):

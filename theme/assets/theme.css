@@ -211,9 +211,7 @@ body {
 .anvil-m3-top-app-bar.anvil-m3-scrolled {
   transition: background-color .25s; 
   background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-
 }
-
 
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar {

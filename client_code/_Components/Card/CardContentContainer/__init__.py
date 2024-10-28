@@ -2,7 +2,7 @@ from ._anvil_designer import CardContentContainerTemplate
 from anvil import *
 import anvil.server
 import anvil.designer
-from ....utils.properties import margin_property
+from ...._utils.properties import margin_property
 
 class CardContentContainer(CardContentContainerTemplate):
   def __init__(self, **properties):

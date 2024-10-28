@@ -7,8 +7,8 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
-from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property
+from ..._utils import fui, noop
+from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property
 
 
 class DropdownMenu(DropdownMenuTemplate):

@@ -5,7 +5,7 @@ from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
 import anvil.designer
-from ...utils.properties import get_unset_margin, anvil_prop, theme_color_to_css, role_property, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
+from ..._utils.properties import get_unset_margin, anvil_prop, theme_color_to_css, role_property, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 
 
 class Switch(SwitchTemplate):
