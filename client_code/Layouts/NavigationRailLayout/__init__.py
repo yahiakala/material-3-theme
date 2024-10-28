@@ -96,46 +96,27 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   #!componentProp(material_3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
   
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
-
-  @property
-  def background_color(self):
-    return self._props.get('background_color')
-
-  @background_color.setter
+  content_padding = padding_property('anvil-m3-content')
+  
+  @anvil_prop
   def background_color(self, value):
     if value: value = theme_color_to_css(value)
-    self._props['background_color'] = value
     window.document.body.style.backgroundColor = value
 
-  @property
-  def text_color(self):
-    return self._props.get('text_color')
-
-  @text_color.setter
+  @anvil_prop
   def text_color(self, value):
     if value: value = theme_color_to_css(value)
-    self._props['text_color'] = value
     window.document.body.style.color = value
 
-  @property
-  def navigation_rail_collapse_to(self):
-    return self._props.get('navigation_rail_collapse_to')
-
-  @navigation_rail_collapse_to.setter
+  @anvil_prop
   def navigation_rail_collapse_to(self, value):
-    self._props['navigation_rail_collapse_to'] = value
     value = value.lower().replace('_', '-')
     for c in ['anvil-m3-bottom-app-bar', 'anvil-m3-modal-navigation-drawer']:
       self.nav_rail.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-{value}")
 
-  @property
-  def navigation_rail_vertical_align(self):
-    return self._props.get('navigation_rail_vertical_align')
-
-  @navigation_rail_vertical_align.setter
+  @anvil_prop
   def navigation_rail_vertical_align(self, value):
-    self._props['navigation_rail_vertical_align'] = value
     value = value.lower()
     for c in ['anvil-m3-align-top', 'anvil-m3-align-center', 'anvil-m3-align-bottom']:
       self.nav_rail.classList.remove(c)
@@ -152,7 +133,5 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self._open_sidesheet()
     else:
       self._close_sidesheet()
-
-  content_padding = padding_property('anvil-m3-content')
 
 #!defClass(material_3, NavigationRailLayout, anvil.Component)!:

@@ -22,5 +22,6 @@ from .._Components.Text import Text
 from .._Components.TextInput import TextArea
 from .._Components.TextInput import TextBox
 from .._Components.ToggleIconButton import ToggleIconButton
+from .._Components.SidesheetContent import SidesheetContent
 
 

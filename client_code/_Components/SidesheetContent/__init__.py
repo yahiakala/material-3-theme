@@ -2,8 +2,6 @@ from ._anvil_designer import SidesheetContentTemplate
 from anvil import *
 import anvil.server
 
-#TODO: add to _Components
-
 class SidesheetContent(SidesheetContentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
