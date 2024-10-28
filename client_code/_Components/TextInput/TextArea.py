@@ -12,7 +12,7 @@ text_property = {"name": "text",
                  "description": "The input text displayed on this component",
                  "supportsWriteback": True,
                  # "binding_writeback_events": ["lost_focus"],
-                 "important": True}
+                 "important": False}
 
 height_property = {
   "name": "height",
@@ -197,14 +197,10 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed underneath this component."}
-
   #!componentProp(material_3.TextArea)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
-  #!componentProp(material_3.TextArea)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit underneath this component."}
+  #!componentProp(material_3.TextArea)!1: {name:"subcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed underneath this component."}
 
   #!componentProp(material_3.TextArea)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextArea)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}

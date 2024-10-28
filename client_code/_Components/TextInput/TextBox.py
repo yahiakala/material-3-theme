@@ -10,7 +10,7 @@ text_property = {"name": "text",
                  "default_value": "None",
                  "description": "The text displayed on this component.",
                  "supportsWriteback": True,
-                 "important": True}
+                 "important": False}
 leading_icon_property = {"name": "leading_icon",
                          "type": "icon",
                          "iconsets": ["material-icons"],
@@ -259,14 +259,10 @@ class TextBox(TextInput):
   #!componentProp(material_3.TextBox)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
 
   #!componentProp(material_3.TextBox)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.TextBox)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
-
   #!componentProp(material_3.TextBox)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
-  #!componentProp(material_3.TextBox)!1: {name:"character_limit_color",type:"color",description:"The colour of the character limit text displayed below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"character_limit_font_family",type:"number",description:"The font family of the character limit text displayed below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"character_limit_font_size",type:"number",description:"The font size of the character limit text displayed below this component."}
+  #!componentProp(material_3.TextBox)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit below this component."}
+  #!componentProp(material_3.TextBox)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit below this component."}
+  #!componentProp(material_3.TextBox)!1: {name:"ssubcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed below this component."}
 
   #!componentProp(material_3.TextBox)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(material_3.TextBox)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}

@@ -13,8 +13,8 @@ events:
 - {description: When the component loses focus., name: lost_focus}
 is_package: true
 properties:
-- {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: false, name: label, type: string}
-- {default_value: '', description: The text to be displayed when the component is empty., group: Key Properties, important: false, name: placeholder, type: string}
+- {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: true, name: label, type: string}
+- {default_value: '', description: The text to be displayed when the component is empty., group: Key Properties, important: true, name: placeholder, type: string}
 - {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}
 - {default_value: 0, description: The max number of characters a user can enter into this component. The limit is displayed below the component., group: Key Properties, important: false, name: character_limit, type: number}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles, group: Look and Feel, name: role, type: themeRole}
@@ -53,7 +53,7 @@ properties:
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
 - {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
-- {default_value: '', group: Key Properties, important: true, name: subcontent_color, type: color}
-- {default_value: '', group: Key Properties, important: true, name: subcontent_font_family, type: string}
+- {default_value: '', description: The colour of the supporting text and the character limit underneath this component., group: Subcontent style, important: true, name: subcontent_color, type: color}
+- {default_value: '', description: The font family of the supporting text and the character limit displayed underneath this component., group: Key Properties, important: true, name: subcontent_font_family, type: string}
 - {description: The font size of the supporting text and character limit displayed underneath this component., important: true, name: subcontent_font_size, type: number}
 toolbox_item: {hidden: true}
