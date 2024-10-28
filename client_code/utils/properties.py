@@ -267,7 +267,7 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
 
 def anvil_prop(*args, **kwargs):
   if 'default_value' in kwargs:
-    #we were called with a default value, return a decorator
+    # We were called with a default value, return a decorator
     def dec(fn):
       if isinstance(fn, str):
         return property_without_callback(fn)
@@ -275,7 +275,7 @@ def anvil_prop(*args, **kwargs):
         return property_with_callback(fn.__name__, fn, kwargs['default_value'])
     return dec
   else:
-    #we were used directly as a decorator with a setter or to create a property without a callback. 
+    # We were used directly as a decorator with a setter or to create a property without a callback. 
     if isinstance(args[0], str):
       return property_without_callback(args[0])
     else:

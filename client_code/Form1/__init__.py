@@ -16,4 +16,8 @@ class Form1(Form1Template):
     print("Hi")
     self.text_box_1.text = ""
 
+  def menu_item_1_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    print("hi")
+
   
