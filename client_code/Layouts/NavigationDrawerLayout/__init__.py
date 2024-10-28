@@ -12,7 +12,6 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     
     self.nav_drawer = self.dom_nodes['anvil-m3-navigation-drawer']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
-    # self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
@@ -22,19 +21,16 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.init_components(**properties)
 
     window.document.addEventListener('scroll', self._on_scroll)
-    self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
-    # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
-    self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
+    self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
+    self.nav_drawer_scrim.addEventListener('click', self._hide_nav_drawer)
 
-  #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
-  def open_nav_drawer(self, e):
+  def _open_nav_drawer(self, e):
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
     self.nav_drawer.classList.add('anvil-m3-shown')
     self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
 
-  #!defMethod(_)!2: "Hide the navigation drawer." ["hide_nav_drawer"]
-  def hide_nav_drawer(self, e):
+  def _hide_nav_drawer(self, e):
     self.nav_drawer.style.left = "-101%"
     self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
     window.setTimeout(lambda: self.nav_drawer.style.setProperty('width', '0px'), 250)
