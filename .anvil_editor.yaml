@@ -18,7 +18,6 @@ unique_ids:
     anvil-m3/text-fields.css: '1690380154363843520236981.625'
     anvil-m3/text-inputs.css: '1704273625879558438128090.6605'
     anvil-m3/text.css: '1691587464344929257845739.1733'
-    clever-layout.html: '1708612629201740530546140.2069'
     designer_icons/.gitkeep: '1702399955422687289669130.4792'
     designer_icons/button.svg: '1702402255403425630787410.6227'
     designer_icons/button_dark.svg: '1702402268626506072666642.36383'
@@ -66,14 +65,9 @@ unique_ids:
     designer_icons/textfield_dark.svg: '1702402307460382509534197.2156'
     designer_icons/toggle_icon_button.svg: X3PPQYH2PRT3SVAH6IEOB7A5JEZD5QBO
     designer_icons/toggle_icon_button_dark.svg: 7DAFFO5P4PSMHDQ73R2FXYVFP4ARD7VN
-    icon-512x512.png: '1700150055035744222934586.8975'
-    pexels-erik-mclean-10894354.jpg: '1701790693460174259160744.11484'
-    pexels-pixabay-67857.jpg: '1720798006487216167362127.67163'
-    purple-background.jpg: '1723480272122934754136188.9169'
     theme.css: ETNISNSUVCSJYUF6AOQQTK6JLIO7LPER
   forms:
     Form1: '1729690706540357123331720.2935'
-    Form2: '1730120597885803395731998.1062'
     Layouts.NavigationDrawerLayout: '1718099721235160190367802.35773'
     Layouts.NavigationRailLayout: '1687425784458804083712790.1608'
     Storybooks.ButtonMenus: 645R43WBRQYMJT6EFUN7OQSO6SPMCZCV
@@ -134,5 +128,4 @@ unique_ids:
     _utils.properties: Y3NC6AD7NRD45BWEUOKRSS7YEKY553LE
     components: '172372848777778606650063.94086'
   scripts: {}
-  server_modules:
-    TestModule: '1696934771505893542874780.1255'
+  server_modules: {}
