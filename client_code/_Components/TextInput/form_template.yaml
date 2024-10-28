@@ -41,11 +41,11 @@ properties:
 - {default_value: false, description: 'If True, the label text will be underlined.', group: Label Style, important: false, name: label_underline, priority: 1, type: boolean}
 - {description: The font size of the label text on this component., group: Label Style, important: false, name: label_font_size, type: number}
 - {default_value: '', description: The font family to use for the label on this component., group: Label Style, important: false, name: label_font_family, type: string}
-- {default_value: '', description: The colour of the input text displayed on this component., group: Display Style, important: false, name: display_text_color, type: color}
-- {default_value: false, description: 'If True, the input and placeholder text will be italic.', designer_hint: font-italic, group: Display Style, important: false, name: display_italic, type: boolean}
-- {default_value: false, description: 'If True, the input and placeholder text will be bold.', designer_hint: font-bold, group: Display Style, important: false, name: display_bold, type: boolean}
-- {default_value: false, description: 'If True, the input and placeholder text will be underlined.', designer_hint: font-underline, group: Display Style, important: false, name: display_underline, type: boolean}
+- {default_value: false, description: 'If True, the input and placeholder text will be bold.', designer_hint: font-bold, group: Display Style, important: false, name: display_bold, priority: 3, type: boolean}
+- {default_value: false, description: 'If True, the input and placeholder text will be italic.', designer_hint: font-italic, group: Display Style, important: false, name: display_italic, priority: 2, type: boolean}
+- {default_value: false, description: 'If True, the input and placeholder text will be underlined.', designer_hint: font-underline, group: Display Style, important: false, name: display_underline, priority: 1, type: boolean}
 - {default_value: '', description: The font family to use for the input and placeholder text., group: Display Style, important: false, name: display_font_family, type: string}
+- {default_value: '', description: The colour of the input text displayed on this component., group: Display Style, important: false, name: display_text_color, type: color}
 - {description: The font size of the input and placeholder text., group: Display Style, important: false, name: display_font_size, type: number}
 - {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
 - {default_value: false, description: 'If True, this component is in an error state.', designer_hint: toggle, group: Interaction, important: false, name: error, type: boolean}

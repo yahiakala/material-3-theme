@@ -9,6 +9,10 @@ components_by_slot:
     name: text_area_1
     properties: {character_limit: 250, subcontent_font_size: null, supporting_text: asdfasd}
     type: form:_Components.TextInput.TextArea
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties: {}
+    type: form:_Components.DropdownMenu
 is_package: true
 layout:
   properties: {content_padding: null, show_sidesheet: false}
