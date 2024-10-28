@@ -37,7 +37,6 @@ properties:
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: The colour of the label text on the component., group: Look and Feel, important: false, name: label_color, type: color}
 - {default_value: '', description: The colour of the input text displayed on this component., group: Look and Feel, important: false, name: display_text_color, type: color}
-- {default_value: '', description: The colour of the supporting text underneath this component., group: Look and Feel, important: false, name: supporting_text_color, type: color}
 - {default_value: false, description: 'If True, the label text will be italic.', group: Text, important: false, name: label_italic, type: boolean}
 - {default_value: false, description: 'If True, the label text will be bold.', group: Text, important: false, name: label_bold, type: boolean}
 - {default_value: false, description: 'If True, the label text will be underlined.', group: Text, important: false, name: label_underline, type: boolean}
@@ -55,9 +54,9 @@ properties:
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
 - {default_value: '', description: The font family to use for the supporting text underneath this component., group: Text, important: false, name: supporting_text_font_family, type: string}
 - {description: The font size of the supporting text displayed underneath this component., group: Text, important: false, name: supporting_text_font_size, type: number}
-- {default_value: '', description: The colour of the character limit text displayed underneath this component., group: Look and Feel, important: false, name: character_limit_color, type: color}
 - {default_value: '', description: The font family of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font, type: string}
 - {description: The font size of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font_size, type: number}
 - {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
-- {default_value: '', group: Key Properties, important: true, name: subcontent_text_color, type: color}
+- {default_value: '', group: Key Properties, important: true, name: subcontent_color, type: color}
+- {default_value: '', group: Key Properties, important: true, name: subcontent_font_family, type: string}
 toolbox_item: {hidden: true}

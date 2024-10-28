@@ -3,7 +3,7 @@ components_by_slot:
   - event_bindings: {}
     layout_properties: {}
     name: text_box_1
-    properties: {character_limit: 10, leading_icon: 'mi:10mp', supporting_text: dsfasdf, trailing_icon: 'mi:10k'}
+    properties: {character_limit: 10, leading_icon: 'mi:10mp', subcontent_text_color: 'theme:Primary Container', supporting_text: dsfasdf, trailing_icon: 'mi:10k'}
     type: form:_Components.TextInput.TextBox
   - layout_properties: {}
     name: text_area_1
