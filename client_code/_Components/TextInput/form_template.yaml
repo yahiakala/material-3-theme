@@ -59,4 +59,5 @@ properties:
 - {default_value: '', description: The font family of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font, type: string}
 - {description: The font size of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font_size, type: number}
 - {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
+- {default_value: '', important: true, name: subcontent_text_color, type: color}
 toolbox_item: {hidden: true}

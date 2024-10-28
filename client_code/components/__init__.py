@@ -1,6 +1,3 @@
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from .._Components.Button import Button
 from .._Components.ButtonMenu import ButtonMenu
 from .._Components.Card import Card

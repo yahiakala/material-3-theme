@@ -1,8 +1,5 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.designer
 from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
 

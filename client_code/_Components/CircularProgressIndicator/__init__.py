@@ -1,9 +1,6 @@
 from ._anvil_designer import CircularProgressIndicatorTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, property_with_callback, margin_property
 from math import pi, cos, sin

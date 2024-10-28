@@ -1,9 +1,6 @@
 from ._anvil_designer import DropdownMenuTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import property_with_callback, property_without_callback, margin_property, color_property
 from anvil.js import window, get_dom_node
