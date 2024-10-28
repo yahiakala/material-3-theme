@@ -71,7 +71,7 @@ toolbox_sections:
     icon: {dark: 'asset:designer_icons/interactive_card_dark.svg', light: 'asset:designer_icons/interactive_card.svg'}
     title: InteractiveCard
   - component: {type: m3._Components.Card.CardContentContainer}
-    icon: null
+    icon: {dark: 'asset:designer_icons/card_content_container_dark.svg', light: 'asset:designer_icons/card_content_container.svg'}
     title: CardContentContainer
   - component: {type: m3._Components.SidesheetContent}
     icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}
