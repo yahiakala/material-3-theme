@@ -34,7 +34,7 @@ class TextInput(TextInputTemplate):
 
   def _on_change(self, e):
     # On text input/textarea the change event fires when we lose focus
-    self.raise_event("x-anvil-write-back-input_text")
+    self.raise_event("x-anvil-write-back-text")
 
   def _on_focus(self, e):
     self.raise_event("focus")
