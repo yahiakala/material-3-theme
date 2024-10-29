@@ -37,9 +37,9 @@ class RadioButton(RadioButtonTemplate):
     if not self._group_set_from_code:
       self._set_group(None)
 
-  #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
+  #!componentEvent(material_3.RadioButton)!1: {name: "select", description: "When the Radio Button is selected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
-  #!componentEvent(material_3.RadioButton)!1: {name: "hide", description: "When the Raio Button is removed from the screen."}
+  #!componentEvent(material_3.RadioButton)!1: {name: "hide", description: "When the Radio Button is removed from the screen."}
 
   #!componentProp(material_3.RadioButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(material_3.RadioButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 

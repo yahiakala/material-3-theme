@@ -10,6 +10,12 @@ class RadioGroup(Component):
     self._buttons = []
     self._selected_button = None
 
+  #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button selection changes."}
+  #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the component is shown on the screen."}
+  #!componentEvent(material_3.RadioButton)!1: {name: "hide", description: "When the component is removed from the screen."}
+
+  #!componentProp(material_3.RadioButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+
   @property
   def buttons(self):
     return self._buttons
@@ -71,8 +77,10 @@ class RadioGroup(Component):
 
 global_radio_group = RadioGroup()
 
-
 class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
   def __init__(self, **properties):
     super().__init__()
     self.init_components(**properties)
+
+#!defClass(material_3, RadioGroupPanel, anvil.Component)!:
+
