@@ -43,29 +43,29 @@ class Link(LinkTemplate):
     if self.temp_url:
       self.temp_url.revoke()
 
-  #!componentEvent(material_3.Link)!1: {name: "click", description: "When the Link is clicked."}
-  #!componentEvent(material_3.Link)!1: {name: "show", description: "When the Link is shown on the screen."}
-  #!componentEvent(material_3.Link)!1: {name: "hide", description: "When the Link is removed from the screen."}
+  #!componentEvent(m3.Link)!1: {name: "click", description: "When the Link is clicked."}
+  #!componentEvent(m3.Link)!1: {name: "show", description: "When the Link is shown on the screen."}
+  #!componentEvent(m3.Link)!1: {name: "hide", description: "When the Link is removed from the screen."}
 
-  #!componentProp(material_3.Link)!1: {name:"text",type:"string",description:"The text displayed on this component."}
-  #!componentProp(material_3.Link)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.Link)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.Link)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.Link)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.Link)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.Link)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.Link)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.Link)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.Link)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.Link)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!componentProp(material_3.Link)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.Link)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.Link)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
-  #!componentProp(material_3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
-  #!componentProp(material_3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
-  #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(m3.Link)!1: {name:"text",type:"string",description:"The text displayed on this component."}
+  #!componentProp(m3.Link)!1: {name:"align",type:"enum", options:["left", "center", "right"],description:"The position of this component in the available space."} 
+  #!componentProp(m3.Link)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(m3.Link)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(m3.Link)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(m3.Link)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(m3.Link)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(m3.Link)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(m3.Link)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Link)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(m3.Link)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!componentProp(m3.Link)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(m3.Link)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.Link)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.Link)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  #!componentProp(m3.Link)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
+  #!componentProp(m3.Link)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(m3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
@@ -125,4 +125,4 @@ class Link(LinkTemplate):
     else:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'none'
 
-#!defClass(material_3, Link, anvil.Component)!:
+#!defClass(m3, Link, anvil.Component)!:

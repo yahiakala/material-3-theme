@@ -83,17 +83,17 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   def _icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
 
-  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "show", description: "When the Form is shown on the screen."}
-  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
-  #!componentEvent(material_3.NavigationRailLayout)!1: {name: "refreshing_data_bindings", description: "When refresh_data_bindings is called."}
+  #!componentEvent(m3.NavigationRailLayout)!1: {name: "show", description: "When the Form is shown on the screen."}
+  #!componentEvent(m3.NavigationRailLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
+  #!componentEvent(m3.NavigationRailLayout)!1: {name: "refreshing_data_bindings", description: "When refresh_data_bindings is called."}
 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom_app_bar","modal_navigation_drawer"],description:"The way the side navigation will collapse on mobile."}
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
-  #!componentProp(material_3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom_app_bar","modal_navigation_drawer"],description:"The way the side navigation will collapse on mobile."}
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
   
   navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
   content_padding = padding_property('anvil-m3-content')
@@ -134,4 +134,4 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     else:
       self._close_sidesheet()
 
-#!defClass(material_3, NavigationRailLayout, anvil.Component)!:
+#!defClass(m3, NavigationRailLayout, anvil.Component)!:

@@ -46,16 +46,16 @@ class Card(CardTemplate):
   visible = HtmlTemplate.visible
   background_color = color_property('anvil-m3-card', 'backgroundColor', 'background_color')
 
-  #!componentProp(material_3.Card)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.Card)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.Card)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.Card)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!componentProp(material_3.Card)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.Card)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.Card)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.Card)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
-  #!componentProp(material_3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", "outlined"],description:"A predefined style for this component."}
-  #!componentProp(material_3.Card)!1: {name:"orientation",type:"enum",options:["column", "row"],description:"The orientation of the content in this Card"}
+  #!componentProp(m3.Card)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Card)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(m3.Card)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(m3.Card)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(m3.Card)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.Card)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.Card)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(m3.Card)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.Card)!1: {name:"appearance",type:"enum",options:["elevated", "filled", "outlined"],description:"A predefined style for this component."}
+  #!componentProp(m3.Card)!1: {name:"orientation",type:"enum",options:["column", "row"],description:"The orientation of the content in this Card"}
 
 
-#!defClass(material_3,Card, anvil.Component)!:
+#!defClass(m3,Card, anvil.Component)!:

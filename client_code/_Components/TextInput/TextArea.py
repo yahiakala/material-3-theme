@@ -167,52 +167,52 @@ class TextArea(TextInput):
       }
     ]  
 
-  #!componentProp(material_3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(material_3.TextArea)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.TextArea)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.TextArea)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
-  #!componentProp(material_3.TextArea)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(m3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(m3.TextArea)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.TextArea)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(m3.TextArea)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(m3.TextArea)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.TextArea)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.TextArea)!1: {name:"label",type:"string",description:"The label text of the component."} 
-  #!componentProp(material_3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.TextArea)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.TextArea)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(m3.TextArea)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(m3.TextArea)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
+  #!componentProp(m3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(m3.TextArea)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(m3.TextArea)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(m3.TextArea)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.TextArea)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
-  #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
-  #!componentProp(material_3.TextArea)!1: {name:"display_underline",type:"boolean",description:"The font family to use for the label on this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.TextArea)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(m3.TextArea)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(m3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(m3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(m3.TextArea)!1: {name:"display_underline",type:"boolean",description:"The font family to use for the label on this component."}
+  #!componentProp(m3.TextArea)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(m3.TextArea)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
-  #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
-  #!componentProp(material_3.TextArea)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
-  #!componentProp(material_3.TextArea)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit underneath this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"subcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed underneath this component."}
+  #!componentProp(m3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
+  #!componentProp(m3.TextArea)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
+  #!componentProp(m3.TextArea)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit underneath this component."}
+  #!componentProp(m3.TextArea)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit underneath this component."}
+  #!componentProp(m3.TextArea)!1: {name:"subcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed underneath this component."}
 
-  #!componentProp(material_3.TextArea)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+  #!componentProp(m3.TextArea)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(m3.TextArea)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(m3.TextArea)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
 
-  #!componentProp(material_3.TextArea)!1: {name:"margin",type:"margin",description:"The margin of this component. Default value is in pixels."}
-  #!componentProp(material_3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextArea)!1: {name:"text",type:"string",description:"The input text to display on this component"}
-  #!componentProp(material_3.TextArea)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.TextArea)!1: {name:"margin",type:"margin",description:"The margin of this component. Default value is in pixels."}
+  #!componentProp(m3.TextArea)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.TextArea)!1: {name:"text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(m3.TextArea)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
-  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
-  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
 
-  #!componentEvent(material_3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
-  #!componentEvent(material_3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
-  #!componentEvent(material_3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(m3.TextArea)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
 
   #!defMethod(_)!2: "Set the keyboard focus to this TextArea." ["focus"]
   #!defMethod(_)!2: "Set the input text on this TextArea." ["select"]
 
-#!defClass(material_3,TextArea, anvil.Component)!:
+#!defClass(m3,TextArea, anvil.Component)!:

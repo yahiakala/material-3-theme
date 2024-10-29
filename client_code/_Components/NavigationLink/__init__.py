@@ -42,31 +42,31 @@ class NavigationLink(NavigationLinkTemplate):
     ifs = get_unset_value(self.dom_nodes['anvil-m3-navigation-link-icon'], "fontSize", self.icon_size)
     return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
 
-  #!componentEvent(material_3.NavigationLink)!1: {name: "click", description: "When the NavigationLink is clicked."}
-  #!componentEvent(material_3.NavigationLink)!1: {name: "show", description: "When the NavigationLink is shown on the screen."}
-  #!componentEvent(material_3.NavigationLink)!1: {name: "hide", description: "When the NavigationLink is removed from the screen."}
+  #!componentEvent(m3.NavigationLink)!1: {name: "click", description: "When the NavigationLink is clicked."}
+  #!componentEvent(m3.NavigationLink)!1: {name: "show", description: "When the NavigationLink is shown on the screen."}
+  #!componentEvent(m3.NavigationLink)!1: {name: "hide", description: "When the NavigationLink is removed from the screen."}
 
-  #!componentProp(material_3.NavigationLink)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"text",type:"string",description:"The text displayed on this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"badge",type:"boolean",description:"If True, display a notification badge on the icon."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"navigate_to",type:"form",description:"The Form to navigate to when the link is clicked."} 
-  #!componentProp(material_3.NavigationLink)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"text",type:"string",description:"The text displayed on this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(m3.NavigationLink)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(m3.NavigationLink)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(m3.NavigationLink)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
+  #!componentProp(m3.NavigationLink)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"badge",type:"boolean",description:"If True, display a notification badge on the icon."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"navigate_to",type:"form",description:"The Form to navigate to when the link is clicked."} 
+  #!componentProp(m3.NavigationLink)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.NavigationLink)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
   visible = HtmlTemplate.visible
   text = innerHTML_property('anvil-m3-navigation-link-text')
@@ -126,4 +126,4 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].innerHTML = ""
       self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].classList.remove("anvil-m3-large-badge")
 
-#!defClass(material_3, NavigationLink, anvil.Component)!:
+#!defClass(m3, NavigationLink, anvil.Component)!:

@@ -121,25 +121,25 @@ class Slider(SliderTemplate):
         markers_container_bg.appendChild(marker_bg)
         markers_container_progress.appendChild(marker_progress)
  
-  #!componentProp(material_3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
-  #!componentProp(material_3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
-  #!componentProp(material_3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.Slider)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.Slider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.Slider)!1: {name:"thumb_color",type:"color",description:"The colour of the slider thumb."} 
-  #!componentProp(material_3.Slider)!1: {name:"label_color",type:"color",description:"The colour of the background of the label"}
-  #!componentProp(material_3.Slider)!1: {name:"label_text_color",type:"color",description:"The colour of the text of the label"} 
-  #!componentProp(material_3.Slider)!1: {name:"value",type:"number",description:"The value of the slider."}
-  #!componentProp(material_3.Slider)!1: {name:"min",type:"number",description:"The minimum value of the Slider."}
-  #!componentProp(material_3.Slider)!1: {name:"max",type:"number",description:"The maximum value of the Slider."}
-  #!componentProp(material_3.Slider)!1: {name:"step",type:"number",description:"The stepping interval for the Slider."}
-  #!componentProp(material_3.Slider)!1: {name:"show_markers",type:"boolean",description:"If True, display discrete markers on the track."}
-  #!componentProp(material_3.Slider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.Slider)!1: {name:"track_color",type:"color",description:"The colour of the slider track."}
-  #!componentProp(material_3.Slider)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.Slider)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
+  #!componentProp(m3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
+  #!componentProp(m3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Slider)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(m3.Slider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(m3.Slider)!1: {name:"thumb_color",type:"color",description:"The colour of the slider thumb."} 
+  #!componentProp(m3.Slider)!1: {name:"label_color",type:"color",description:"The colour of the background of the label"}
+  #!componentProp(m3.Slider)!1: {name:"label_text_color",type:"color",description:"The colour of the text of the label"} 
+  #!componentProp(m3.Slider)!1: {name:"value",type:"number",description:"The value of the slider."}
+  #!componentProp(m3.Slider)!1: {name:"min",type:"number",description:"The minimum value of the Slider."}
+  #!componentProp(m3.Slider)!1: {name:"max",type:"number",description:"The maximum value of the Slider."}
+  #!componentProp(m3.Slider)!1: {name:"step",type:"number",description:"The stepping interval for the Slider."}
+  #!componentProp(m3.Slider)!1: {name:"show_markers",type:"boolean",description:"If True, display discrete markers on the track."}
+  #!componentProp(m3.Slider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(m3.Slider)!1: {name:"track_color",type:"color",description:"The colour of the slider track."}
+  #!componentProp(m3.Slider)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.Slider)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-  #!componentEvent(material_3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}  
+  #!componentEvent(m3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}  
 
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
@@ -231,4 +231,4 @@ class Slider(SliderTemplate):
     if in_designer and self._mounted:
       anvil.designer.update_component_properties(self, {"value": self.value})
   
-#!defClass(material_3,Slider,anvil.Component)!:
+#!defClass(m3,Slider,anvil.Component)!:

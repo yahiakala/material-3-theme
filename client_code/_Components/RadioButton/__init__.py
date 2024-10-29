@@ -37,28 +37,28 @@ class RadioButton(RadioButtonTemplate):
     if not self._group_set_from_code:
       self._set_group(None)
 
-  #!componentEvent(material_3.RadioButton)!1: {name: "select", description: "When the Radio Button is selected."}
-  #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
-  #!componentEvent(material_3.RadioButton)!1: {name: "hide", description: "When the Radio Button is removed from the screen."}
+  #!componentEvent(m3.RadioButton)!1: {name: "select", description: "When the Radio Button is selected."}
+  #!componentEvent(m3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
+  #!componentEvent(m3.RadioButton)!1: {name: "hide", description: "When the Radio Button is removed from the screen."}
 
-  #!componentProp(material_3.RadioButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.RadioButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.RadioButton)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
-  #!componentProp(material_3.RadioButton)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
-  #!componentProp(material_3.RadioButton)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
-  #!componentProp(material_3.RadioButton)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.RadioButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
-  #!componentProp(material_3.RadioButton)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(material_3.RadioButton)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
-  #!componentProp(material_3.RadioButton)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(material_3.RadioButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
-  #!componentProp(material_3.RadioButton)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.RadioButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.RadioButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(material_3.RadioButton)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(material_3.RadioButton)!1: {name:"radio_color",type:"color",description:"The color of the radio button."}
-  #!componentProp(material_3.RadioButton)!1: {name:"selected",type:"boolean",description:"If True, the radio button is selected."}
-  #!componentProp(material_3.RadioButton)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.RadioButton)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(m3.RadioButton)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.RadioButton)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
+  #!componentProp(m3.RadioButton)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
+  #!componentProp(m3.RadioButton)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
+  #!componentProp(m3.RadioButton)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
+  #!componentProp(m3.RadioButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
+  #!componentProp(m3.RadioButton)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
+  #!componentProp(m3.RadioButton)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(m3.RadioButton)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
+  #!componentProp(m3.RadioButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(m3.RadioButton)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.RadioButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.RadioButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(m3.RadioButton)!1: {name:"text",type:"string",description:"The text displayed on this component"}
+  #!componentProp(m3.RadioButton)!1: {name:"radio_color",type:"color",description:"The color of the radio button."}
+  #!componentProp(m3.RadioButton)!1: {name:"selected",type:"boolean",description:"If True, the radio button is selected."}
+  #!componentProp(m3.RadioButton)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   # Properties 
   enabled = enabled_property('anvil-m3-radiobutton-input')
@@ -174,4 +174,4 @@ class RadioButton(RadioButtonTemplate):
       if not self.text:
         self.dom_nodes['anvil-m3-radiobutton-label'].innerText = self._design_name
 
-#!defClass(material_3, RadioButton, anvil.Component)!:
+#!defClass(m3, RadioButton, anvil.Component)!:

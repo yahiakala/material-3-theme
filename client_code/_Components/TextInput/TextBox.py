@@ -218,57 +218,57 @@ class TextBox(TextInput):
   def hide_text(self, value):
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", "password" if value else self.type)
 
-  #!componentProp(material_3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(material_3.TextBox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.TextBox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.TextBox)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
-  #!componentProp(material_3.TextBox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(m3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(m3.TextBox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.TextBox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(m3.TextBox)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(m3.TextBox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.TextBox)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.TextBox)!1: {name:"label",type:"string",description:"The label text of the component."} 
-  #!componentProp(material_3.TextBox)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.TextBox)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.TextBox)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(m3.TextBox)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(m3.TextBox)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.TextBox)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(m3.TextBox)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(m3.TextBox)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(m3.TextBox)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(m3.TextBox)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.TextBox)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
-  #!componentProp(material_3.TextBox)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
-  #!componentProp(material_3.TextBox)!1: {name:"display_underline",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
-  #!componentProp(material_3.TextBox)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.TextBox)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(m3.TextBox)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(m3.TextBox)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
+  #!componentProp(m3.TextBox)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
+  #!componentProp(m3.TextBox)!1: {name:"display_underline",type:"boolean",description:"If True, the input and placeholder text will be underlined."}
+  #!componentProp(m3.TextBox)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
+  #!componentProp(m3.TextBox)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
-  #!componentProp(material_3.TextBox)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
-  #!componentProp(material_3.TextBox)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
+  #!componentProp(m3.TextBox)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(m3.TextBox)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
+  #!componentProp(m3.TextBox)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(m3.TextBox)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
 
-  #!componentProp(material_3.TextBox)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.TextBox)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
-  #!componentProp(material_3.TextBox)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit below this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"ssubcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed below this component."}
+  #!componentProp(m3.TextBox)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(m3.TextBox)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
+  #!componentProp(m3.TextBox)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit below this component."}
+  #!componentProp(m3.TextBox)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit below this component."}
+  #!componentProp(m3.TextBox)!1: {name:"ssubcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed below this component."}
 
-  #!componentProp(material_3.TextBox)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+  #!componentProp(m3.TextBox)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(m3.TextBox)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(m3.TextBox)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
 
-  #!componentProp(material_3.TextBox)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.TextBox)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
-  #!componentProp(material_3.TextBox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"text",type:"string",description:"The input text to display on this component"}
-  #!componentProp(material_3.TextBox)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
-  #!componentProp(material_3.TextBox)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.TextBox)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.TextBox)!1: {name:"type",type:"enum",options:["text", "number", "email", "tel", "url"],description:"The type of data that the user can enter into this box."}
+  #!componentProp(m3.TextBox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.TextBox)!1: {name:"text",type:"string",description:"The input text to display on this component"}
+  #!componentProp(m3.TextBox)!1: {name:"hide_text",type:"boolean",description:"If True, display stars instead of text when the user types input into this component."}
+  #!componentProp(m3.TextBox)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-  #!componentEvent(material_3.TextBox)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
-  #!componentEvent(material_3.TextBox)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
-  #!componentEvent(material_3.TextBox)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
-  #!componentEvent(material_3.TextBox)!1: {name: "trailing_icon_click", description: "When the trailing icon is clicked.", parameters:[]}
-  #!componentEvent(material_3.TextBox)!1: {name: "pressed_enter", description: "When the user presses enter in this component.", parameters:[]}
+  #!componentEvent(m3.TextBox)!1: {name: "change", description: "When the text in this component is edited.", parameters:[]}
+  #!componentEvent(m3.TextBox)!1: {name: "focus", description: "When the component gets focus.", parameters:[]}
+  #!componentEvent(m3.TextBox)!1: {name: "lost_focus", description: "When the component loses focus.", parameters:[]}
+  #!componentEvent(m3.TextBox)!1: {name: "trailing_icon_click", description: "When the trailing icon is clicked.", parameters:[]}
+  #!componentEvent(m3.TextBox)!1: {name: "pressed_enter", description: "When the user presses enter in this component.", parameters:[]}
 
   #!defMethod(_)!2: "Set the keyboard focus to this TextBox." ["focus"]
   #!defMethod(_)!2: "Set the input text on this TextBox." ["select"]
 
-#!defClass(material_3,TextBox, anvil.Component)!:
+#!defClass(m3,TextBox, anvil.Component)!:

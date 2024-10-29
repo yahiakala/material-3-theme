@@ -10,11 +10,11 @@ class RadioGroup(Component):
     self._buttons = []
     self._selected_button = None
 
-  #!componentEvent(material_3.RadioGroupPanel)!1: {name: "change", description: "When the Radio Button selection changes."}
-  #!componentEvent(material_3.RadioGroupPanel)!1: {name: "show", description: "When the component is shown on the screen."}
-  #!componentEvent(material_3.RadioGroupPanel)!1: {name: "hide", description: "When the component is removed from the screen."}
+  #!componentEvent(m3.RadioGroupPanel)!1: {name: "change", description: "When the Radio Button selection changes."}
+  #!componentEvent(m3.RadioGroupPanel)!1: {name: "show", description: "When the component is shown on the screen."}
+  #!componentEvent(m3.RadioGroupPanel)!1: {name: "hide", description: "When the component is removed from the screen."}
 
-  #!componentProp(material_3.RadioGroupPanel)!1: {name:"selected_value",type:"object",description:"Value property of the selected RadioButton."} 
+  #!componentProp(m3.RadioGroupPanel)!1: {name:"selected_value",type:"object",description:"Value property of the selected RadioButton."} 
 
   @property
   def buttons(self):
@@ -82,5 +82,5 @@ class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
     super().__init__()
     self.init_components(**properties)
 
-#!defClass(material_3, RadioGroupPanel, anvil.Component)!:
+#!defClass(m3, RadioGroupPanel, anvil.Component)!:
 

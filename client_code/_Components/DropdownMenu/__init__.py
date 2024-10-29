@@ -405,57 +405,57 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(material_3.DropdownMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
+  #!componentProp(m3.DropdownMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the menu items will be italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items_bold",type:"boolean",description:"If True, the menu items will be bold."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"menu_background_color",type:"color",description:"The background color of the menu."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the menu items will be italic."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_bold",type:"boolean",description:"If True, the menu items will be bold."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"menu_background_color",type:"color",description:"The background color of the menu."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the displayed text if there is a selected item."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size (pixels) of the displayed text if there is a selected item."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font-family of the displayed text if there is a selected item."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_text_color",type:"color",description:"The colour of the displayed text if there is a selected item."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_font_size",type:"number",description:"The font size (pixels) of the displayed text if there is a selected item."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_font_family",type:"string",description:"The font-family of the displayed text if there is a selected item."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_underline",type:"boolean",description:"If True and there is a selected item, the displayed text is underlined"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_italic",type:"boolean",description:"If True and there is a selected item, the displayed text in italic."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_bold",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_underline",type:"boolean",description:"If True and there is a selected item, the displayed text is underlined"}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_italic",type:"boolean",description:"If True and there is a selected item, the displayed text in italic."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_bold",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
+  #!componentProp(m3.DropdownMenu)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text below this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"supporting_text_font_family",type:"color",description:"The font family to use for the supporting text below this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"supporting_text_font_size",type:"color",description:"The font size of the supporting text displayed below this component."}
 
-  #!componentProp(material_3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"allow_none",type:"boolean",description:"If True, a placeholder item is added to the menu with value None"}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
-  #!componentProp(material_3.DropdownMenu)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"placeholder",type:"string",description:"The text to be displayed when the component is empty"}
+  #!componentProp(m3.DropdownMenu)!1: {name:"allow_none",type:"boolean",description:"If True, a placeholder item is added to the menu with value None"}
+  #!componentProp(m3.DropdownMenu)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items",type:"string list",description:"The items to display in the menu."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"selected_value",type:"object",description:"The value of the currently selected item. Can only be set at runtime."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
 
-  #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
+  #!componentEvent(m3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
-#!defClass(material_3,DropdownMenu, anvil.Component)!:
+#!defClass(m3,DropdownMenu, anvil.Component)!:
 

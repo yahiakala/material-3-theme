@@ -14,14 +14,14 @@ class Divider(DividerTemplate):
     m = get_unset_margin(el, self.margin)
     return {"margin": m}
 
-  #!componentEvent(material_3.Divider)!1: {name: "show", description: "When the Divider is shown on the screen."}
-  #!componentEvent(material_3.Divider)!1: {name: "hide", description: "When the Divider is removed from the screen."}
+  #!componentEvent(m3.Divider)!1: {name: "show", description: "When the Divider is shown on the screen."}
+  #!componentEvent(m3.Divider)!1: {name: "hide", description: "When the Divider is removed from the screen."}
 
-  #!componentProp(material_3.Divider)!1: {name:"type",type:"enum",options:["full_width", "inset"],description:"Display the Divider across the full width of the container or inset."}
-  #!componentProp(material_3.Divider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
-  #!componentProp(material_3.Divider)!1: {name:"color",type:"color",description:"The colour of this component."}
-  #!componentProp(material_3.Divider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
-  #!componentProp(material_3.Divider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
+  #!componentProp(m3.Divider)!1: {name:"type",type:"enum",options:["full_width", "inset"],description:"Display the Divider across the full width of the container or inset."}
+  #!componentProp(m3.Divider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Divider)!1: {name:"color",type:"color",description:"The colour of this component."}
+  #!componentProp(m3.Divider)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
+  #!componentProp(m3.Divider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
 
   visible = HtmlTemplate.visible
   color = color_property('anvil-m3-divider', 'border-color', 'color')
@@ -35,4 +35,4 @@ class Divider(DividerTemplate):
     divider.className = "anvil-m3-divider"
     self.dom_nodes['anvil-m3-divider'].classList.add(value)
 
-#!defClass(material_3, Divider, anvil.Component)!:
+#!defClass(m3, Divider, anvil.Component)!:
