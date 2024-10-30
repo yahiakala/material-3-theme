@@ -224,3 +224,41 @@ def anvil_prop(*args, **kwargs):
     else:
       fn = args[0]
       return property_with_callback(fn.__name__,fn)
+
+
+
+def inline_editing(component, placeholder_node, set_text, prop="text", get_node=None):
+  if get_node is None:
+
+    def get_node():
+      return placeholder_node
+
+  def set_designer_text_placeholder(text=None):
+    if not anvil.designer.in_designer:
+      return
+    
+    if text or getattr(component, prop):
+      placeholder_node.classList.remove('anvil-m3-textlessComponentText')
+    else:
+      text = anvil.designer.get_design_name(component)
+      set_text(text)
+      placeholder_node.classList.add('anvil-m3-textlessComponentText')
+
+  def start_inline_editing():
+    set_designer_text_placeholder(True)
+    if not getattr(component, prop):
+      set_text("")
+
+    dom_node = get_node()
+    anvil.designer.start_inline_editing(
+      component,
+      prop,
+      dom_node,
+      #   on_finished=set_designer_text_placeholder,
+    )
+
+  component.add_event_handler(
+    "x-anvil-page-added", lambda **e: set_designer_text_placeholder()
+  )
+
+  return set_designer_text_placeholder, start_inline_editing

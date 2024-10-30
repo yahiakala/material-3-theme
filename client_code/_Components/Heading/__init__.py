@@ -12,6 +12,7 @@ from ..._utils.properties import (
   italic_property,
   role_property,
   tooltip_property,
+  inline_editing,
 )
 from ._anvil_designer import HeadingTemplate
 
@@ -21,11 +22,14 @@ class Heading(HeadingTemplate):
     self.tag = anvil.ComponentTag()
     self._props = properties
     self._tooltip_node = None
+    self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
+      self,
+      self.dom_nodes['anvil-m3-heading-container'],
+      self._set_text,
+      get_node=lambda: self.dom_nodes[f'anvil-m3-heading-{self.style}'],
+    )
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-  def form_show(self, **event_args):
-    self._set_designer_text_placeholder()
 
   def _anvil_get_interactions_(self):
     return [
@@ -57,29 +61,6 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-display'].innerText = value
     self.dom_nodes['anvil-m3-heading-headline'].innerText = value
     self.dom_nodes['anvil-m3-heading-title'].innerText = value
-
-  def _set_designer_text_placeholder(self, text=None):
-    if not anvil.designer.in_designer:
-      return
-
-    if text or self.text:
-      self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-textlessComponentText')
-    else:
-      text = anvil.designer.get_design_name(self)
-      self._set_text(text)
-      self.dom_nodes['anvil-m3-heading-container'].classList.add('anvil-m3-textlessComponentText')
-
-  def _start_inline_editing(self):
-    el_name = f'anvil-m3-heading-{self.style}'
-    self._set_designer_text_placeholder(True)
-    if not self.text:
-      self._set_text("")
-
-    anvil.designer.start_inline_editing(
-      self,
-      "text",
-      self.dom_nodes[el_name],
-    )
 
   #!componentEvent(m3.Heading)!1: {name: "show", description: "When the Heading is shown on the screen."}
   #!componentEvent(m3.Heading)!1: {name: "hide", description: "When the Heading is removed from the screen."}

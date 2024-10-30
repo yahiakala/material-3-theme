@@ -4,18 +4,22 @@ import anvil.server
 from anvil import HtmlTemplate
 from anvil.js import window, get_dom_node
 from anvil.js.window import document
-import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
 from ..._utils import fui, noop
-from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property
+from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
 
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self.tag = ComponentTag()
     self._props = properties
-    self._design_name = ""
+    self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
+      self,
+      self.selection_field.dom_nodes['anvil-m3-label-text'],
+      self._set_label,
+      "label"
+    )
     self.init_components(**properties)
     self._cleanup = noop
 
@@ -194,10 +198,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def form_show(self, **event_args):
     self._create_menu_items()
-    if anvil.designer.in_designer:
-      self._design_name = anvil.designer.get_design_name(self)
-      if not self.label:
-        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self._design_name
+    self._set_designer_text_placeholder()
+
 
   def _create_menu_items(self):
     p = MenuItem()
@@ -251,14 +253,13 @@ class DropdownMenu(DropdownMenuTemplate):
   def _anvil_get_interactions_(self):
     return [
       {
-      "type": "whole_component",
-      "title": "Edit Label",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label", self.selection_field.dom_nodes['anvil-m3-label-text'])
+        "type": "whole_component",
+        "title": "Edit Label",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {"execute": self._start_inline_editing},
       }
-    }]
+    ]
 
   #properties
   visible = HtmlTemplate.visible
@@ -380,14 +381,13 @@ class DropdownMenu(DropdownMenuTemplate):
     else: 
       self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove('anvil-m3-dropdown-error')
 
+  def _set_label(self, value):
+    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = value
+
   @anvil_prop
   def label(self, value):
-    v = value or ""
-    self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
-    if anvil.designer.in_designer and not value:
-      v = self._design_name
-      self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
-    self.selection_field.label = v
+    self._set_label(value)
+    self._set_designer_text_placeholder()
 
   @anvil_prop
   def selected_value(self, value):

@@ -15,6 +15,7 @@ from ..._utils.properties import (
   spacing_property,
   tooltip_property,
   underline_property,
+  inline_editing,
 )
 from ._anvil_designer import TextTemplate
 
@@ -25,34 +26,13 @@ class Text(TextTemplate):
     self.tag = anvil.ComponentTag()
     self._props = properties
     self._tooltip_node = None
+    self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
+      self, self.dom_nodes['anvil-m3-text'], self._set_text
+    )
     self.init_components(**properties)
-
-  def form_show(self, **event_args):
-    self._set_designer_text_placeholder()
 
   def _set_text(self, value):
     self.dom_nodes['anvil-m3-text'].innerText = value
-
-  def _set_designer_text_placeholder(self, text=None):
-    if not anvil.designer.in_designer:
-      return
-
-    if text or self.text:
-      self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-textlessComponentText')
-    else:
-      text = anvil.designer.get_design_name(self)
-      self._set_text(text)
-      self.dom_nodes['anvil-m3-text'].classList.add('anvil-m3-textlessComponentText')
-
-  def _start_inline_editing(self):
-    self._set_designer_text_placeholder(True)
-    if not self.text:
-      self._set_text("")
-    anvil.designer.start_inline_editing(
-      self,
-      "text",
-      self.dom_nodes["anvil-m3-text"],
-    )
 
   def _anvil_get_interactions_(self):
     return [
