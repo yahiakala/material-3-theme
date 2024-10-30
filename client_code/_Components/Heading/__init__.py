@@ -63,15 +63,11 @@ class Heading(HeadingTemplate):
       return
 
     if text or self.text:
-      self.dom_nodes['anvil-m3-heading-container'].style.opacity = ''
-      self.dom_nodes['anvil-m3-heading-container'].style.fontStyle = (
-        'italic' if self.italic else ''
-      )
+      self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-textlessComponentText')
     else:
       text = anvil.designer.get_design_name(self)
       self._set_text(text)
-      self.dom_nodes['anvil-m3-heading-container'].style.opacity = '0.5'
-      self.dom_nodes['anvil-m3-heading-container'].style.fontStyle = 'italic'
+      self.dom_nodes['anvil-m3-heading-container'].classList.add('anvil-m3-textlessComponentText')
 
   def _start_inline_editing(self):
     el_name = f'anvil-m3-heading-{self.style}'

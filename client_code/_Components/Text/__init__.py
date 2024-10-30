@@ -38,13 +38,11 @@ class Text(TextTemplate):
       return
 
     if text or self.text:
-      self.dom_nodes['anvil-m3-text'].style.opacity = ''
-      self.dom_nodes['anvil-m3-text'].style.fontStyle = 'italic' if self.italic else ''
+      self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-textlessComponentText')
     else:
       text = anvil.designer.get_design_name(self)
       self._set_text(text)
-      self.dom_nodes['anvil-m3-text'].style.opacity = '0.5'
-      self.dom_nodes['anvil-m3-text'].style.fontStyle = 'italic'
+      self.dom_nodes['anvil-m3-text'].classList.add('anvil-m3-textlessComponentText')
 
   def _start_inline_editing(self):
     self._set_designer_text_placeholder(True)
