@@ -1,35 +1,46 @@
-from ._anvil_designer import HeadingTemplate
-from anvil import *
-import anvil.server
-from anvil import HtmlTemplate
+import anvil
 import anvil.designer
 from anvil.property_utils import set_element_spacing
-from ..._utils.properties import get_unset_value, get_unset_spacing, anvil_prop, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
+
+from ..._utils.properties import (
+  anvil_prop,
+  border_property,
+  color_property,
+  font_family_property,
+  get_unset_spacing,
+  get_unset_value,
+  italic_property,
+  role_property,
+  tooltip_property,
+  inline_editing,
+)
+from ._anvil_designer import HeadingTemplate
 
 
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
-    self.tag = ComponentTag()
+    self.tag = anvil.ComponentTag()
     self._props = properties
     self._tooltip_node = None
+    self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
+      self,
+      self.dom_nodes['anvil-m3-heading-container'],
+      self._set_text,
+      get_node=lambda: self.dom_nodes[f'anvil-m3-heading-{self.style}'],
+    )
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def form_show(self, **event_args):
-    """This method is called when the HTML panel is shown on the screen"""
-    if anvil.designer.in_designer and not self.text:
-      self.text = anvil.designer.get_design_name(self)
-
   def _anvil_get_interactions_(self):
-    return [{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": self._start_inline_editing
+    return [
+      {
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {"execute": self._start_inline_editing},
       }
-    }]
+    ]
 
   def _anvil_get_unset_property_values_(self):
     full_el = self.dom_nodes["anvil-m3-heading-container"]
@@ -41,45 +52,50 @@ class Heading(HeadingTemplate):
     elif self.style == "title":
       h = self.dom_nodes['anvil-m3-heading-title']
     fs = get_unset_value(h, "fontSize", self.font_size)
-    ifs = get_unset_value(self.dom_nodes['anvil-m3-heading-icon'], "fontSize", self.icon_size)
+    ifs = get_unset_value(
+      self.dom_nodes['anvil-m3-heading-icon'], "fontSize", self.icon_size
+    )
     return {"spacing": sp, "font_size": fs, "icon_size": ifs}
 
-  def _start_inline_editing(self):
-    el_name = f'anvil-m3-heading-{self.style}'
-    anvil.designer.start_inline_editing(self, "text", self.dom_nodes[el_name])
+  def _set_text(self, value):
+    self.dom_nodes['anvil-m3-heading-display'].innerText = value
+    self.dom_nodes['anvil-m3-heading-headline'].innerText = value
+    self.dom_nodes['anvil-m3-heading-title'].innerText = value
 
   #!componentEvent(m3.Heading)!1: {name: "show", description: "When the Heading is shown on the screen."}
   #!componentEvent(m3.Heading)!1: {name: "hide", description: "When the Heading is removed from the screen."}
 
-  #!componentProp(m3.Heading)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Heading)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.Heading)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!componentProp(m3.Heading)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(m3.Heading)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(m3.Heading)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(m3.Heading)!1: {name:"text_color",type:"color",description:"The color of the text on the component."}
   #!componentProp(m3.Heading)!1: {name:"icon_color",type:"color",description:"The color of the icon displayed on this component."}
   #!componentProp(m3.Heading)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
   #!componentProp(m3.Heading)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(m3.Heading)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
-  #!componentProp(m3.Heading)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
+  #!componentProp(m3.Heading)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."}
   #!componentProp(m3.Heading)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(m3.Heading)!1: {name:"icon_size",type:"number",description:"The size (pixels) of the icon displayed on this component."}
   #!componentProp(m3.Heading)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(m3.Heading)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(m3.Heading)!1: {name:"text",type:"string",description:"The text displayed on this component"}
-  #!componentProp(m3.Heading)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
-  #!componentProp(m3.Heading)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the heading component: display, headline or title."}  
+  #!componentProp(m3.Heading)!1: {name:"icon",type:"enum",description:"The icon to display on this component."}
+  #!componentProp(m3.Heading)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the heading component: display, headline or title."}
   #!componentProp(m3.Heading)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the heading component."}
   #!componentProp(m3.Heading)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(m3.Heading)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
   #!componentProp(m3.Heading)!1: {name:"line_height",type:"string",description:"The line height of this component."}
 
-  visible = HtmlTemplate.visible
+  visible = anvil.HtmlTemplate.visible
   italic = italic_property('anvil-m3-heading-container')
   border = border_property('anvil-m3-heading-container')
   font_family = font_family_property('anvil-m3-heading-container')
   text_color = color_property('anvil-m3-heading-container', 'color', 'text_color')
   icon_color = color_property('anvil-m3-heading-icon', 'color', 'icon_color')
-  background_color = color_property('anvil-m3-heading-container', 'backgroundColor', 'background_color')
+  background_color = color_property(
+    'anvil-m3-heading-container', 'backgroundColor', 'background_color'
+  )
   tooltip = tooltip_property('anvil-m3-heading-container')
   role = role_property('anvil-m3-heading-container')
 
@@ -134,10 +150,8 @@ class Heading(HeadingTemplate):
 
   @anvil_prop
   def text(self, value):
-    if value:
-      self.dom_nodes['anvil-m3-heading-display'].innerText = value
-      self.dom_nodes['anvil-m3-heading-headline'].innerText = value
-      self.dom_nodes['anvil-m3-heading-title'].innerText = value
+    self._set_text(value)
+    self._set_designer_text_placeholder()
 
   @anvil_prop
   def icon(self, value):
@@ -152,8 +166,12 @@ class Heading(HeadingTemplate):
     display = self.dom_nodes['anvil-m3-heading-display']
     headline = self.dom_nodes['anvil-m3-heading-headline']
     title = self.dom_nodes['anvil-m3-heading-title']
-    self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-heading-display', 'anvil-m3-heading-headline', 'anvil-m3-heading-title')
-    self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
+    self.dom_nodes['anvil-m3-heading-container'].classList.remove(
+      'anvil-m3-heading-display', 'anvil-m3-heading-headline', 'anvil-m3-heading-title'
+    )
+    self.dom_nodes['anvil-m3-heading-container'].classList.add(
+      f'anvil-m3-heading-{value}'
+    )
     if value == 'display':
       display.style.display = 'block'
       headline.style.display = 'none'
@@ -169,14 +187,28 @@ class Heading(HeadingTemplate):
 
   @anvil_prop
   def scale(self, value):
-    self.dom_nodes['anvil-m3-heading-display'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
-    self.dom_nodes['anvil-m3-heading-headline'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
-    self.dom_nodes['anvil-m3-heading-title'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
-    self.dom_nodes['anvil-m3-heading-container'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
-    self.dom_nodes['anvil-m3-heading-display'].classList.add(f'anvil-m3-heading-{value}')
-    self.dom_nodes['anvil-m3-heading-headline'].classList.add(f'anvil-m3-heading-{value}')
+    self.dom_nodes['anvil-m3-heading-display'].classList.remove(
+      'anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small'
+    )
+    self.dom_nodes['anvil-m3-heading-headline'].classList.remove(
+      'anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small'
+    )
+    self.dom_nodes['anvil-m3-heading-title'].classList.remove(
+      'anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small'
+    )
+    self.dom_nodes['anvil-m3-heading-container'].classList.remove(
+      'anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small'
+    )
+    self.dom_nodes['anvil-m3-heading-display'].classList.add(
+      f'anvil-m3-heading-{value}'
+    )
+    self.dom_nodes['anvil-m3-heading-headline'].classList.add(
+      f'anvil-m3-heading-{value}'
+    )
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
-    self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
+    self.dom_nodes['anvil-m3-heading-container'].classList.add(
+      f'anvil-m3-heading-{value}'
+    )
 
   @anvil_prop
   def spacing(self, value):
@@ -188,5 +220,6 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-headline'].style.lineHeight = value
     self.dom_nodes['anvil-m3-heading-title'].style.lineHeight = value
     self.dom_nodes['anvil-m3-heading-container'].style.lineHeight = {value}
+
 
 #!defClass(m3, Heading, anvil.Component)!:
