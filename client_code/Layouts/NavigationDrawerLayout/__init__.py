@@ -71,11 +71,15 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
 
   def _hide_nav_drawer(self, e=None):
     self.nav_drawer.style.left = "-101%"
-    self.nav_drawer_scrim.animate(
+    animation = self.nav_drawer_scrim.animate(
       [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
     )
-    window.setTimeout(lambda: self.nav_drawer.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245)
+
+    def on_finished(e):
+      self.nav_drawer.style.setProperty('width', '0px')
+      self.nav_drawer.classList.remove('anvil-m3-shown')
+
+    animation.addEventListener('finish', on_finished)
 
   def _on_scroll(self, e):
     if window.scrollY == 0:
@@ -105,20 +109,19 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
 
   def _close_sidesheet(self):
     self.content.classList.add('anvil-m3-transition-width')
-    self.sidesheet_scrim.animate(
+    animation = self.sidesheet_scrim.animate(
       [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
     )
-    window.setTimeout(
-      lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245
-    )
+
+    def on_finished(e):
+      self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open')
+      self.content.classList.remove('anvil-m3-sidesheet-open')
+      self.sidesheet.classList.remove('anvil-m3-display-block')
+
+    animation.addEventListener('finish', on_finished)
+
     self.sidesheet.classList.remove('anvil-m3-open')
     self.content.classList.remove('anvil-m3-sidesheet-open')
-    window.setTimeout(
-      lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245
-    )
-    window.setTimeout(
-      lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245
-    )
 
   #!componentEvent(m3.NavigationDrawerLayout)!1: {name: "show", description: "When the Form is shown on the screen."}
   #!componentEvent(m3.NavigationDrawerLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
