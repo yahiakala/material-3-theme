@@ -54,7 +54,6 @@ class Text(TextTemplate):
       self,
       "text",
       self.dom_nodes["anvil-m3-text"],
-      on_finished=self._set_designer_text_placeholder,
     )
 
   def _anvil_get_interactions_(self):

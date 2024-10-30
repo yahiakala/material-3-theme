@@ -83,7 +83,6 @@ class Heading(HeadingTemplate):
       self,
       "text",
       self.dom_nodes[el_name],
-      on_finished=self._set_designer_text_placeholder,
     )
 
   #!componentEvent(m3.Heading)!1: {name: "show", description: "When the Heading is shown on the screen."}
