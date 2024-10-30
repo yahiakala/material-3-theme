@@ -124,8 +124,8 @@ class Button(ButtonTemplate):
     if value and value != 'text':
       button.classList.add(f"anvil-m3-{value}")
 
-  #!componentProp(m3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(m3.Button)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}  
+  #!componentProp(m3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
+  #!componentProp(m3.Button)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
   #!componentProp(m3.Button)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(m3.Button)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(m3.Button)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
