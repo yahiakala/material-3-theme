@@ -1,9 +1,9 @@
+from anvil.designer import in_designer, register_interaction
 from anvil.js import window
 
 from ..._utils.properties import (
   anvil_prop,
   color_property,
-  innerText_property,
   padding_property,
   theme_color_to_css,
 )
@@ -25,11 +25,43 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
 
-    window.document.addEventListener('scroll', self._on_scroll)
     self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self._hide_nav_drawer)
+    self.add_event_handler('x-anvil-page-added', self._on_page_added)
+    self.add_event_handler('x-anvil-page-removed', self._on_page_removed)
 
-  def _open_nav_drawer(self, e):
+  def _on_page_added(self, **event_args):
+    window.document.addEventListener('scroll', self._on_scroll)
+
+    if in_designer:
+      # interactions are for when we are not the main form
+      register_interaction(
+        self, self.nav_drawer_open_btn, 'dblclick', self._open_nav_drawer
+      )
+      register_interaction(
+        self, self.nav_drawer_scrim, 'dblclick', self._hide_nav_drawer
+      )
+
+  def _on_page_removed(self, **event_args):
+    window.document.removeEventListener('scroll', self._on_scroll)
+
+  def _anvil_get_interactions_(self):
+    return [
+      {
+        'type': 'region',
+        'bounds': self.nav_drawer_open_btn,
+        'sensitivity': 0,
+        'callbacks': {'execute': self._open_nav_drawer},
+      },
+      {
+        'type': 'region',
+        'bounds': self.nav_drawer_scrim,
+        'sensitivity': 0,
+        'callbacks': {'execute': self._hide_nav_drawer},
+      },
+    ]
+
+  def _open_nav_drawer(self, e=None):
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
     self.nav_drawer.classList.add('anvil-m3-shown')
@@ -37,7 +69,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
       [{'opacity': '0'}, {'opacity': '1'}], {'duration': 250, 'iterations': 1}
     )
 
-  def _hide_nav_drawer(self, e):
+  def _hide_nav_drawer(self, e=None):
     self.nav_drawer.style.left = "-101%"
     self.nav_drawer_scrim.animate(
       [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
