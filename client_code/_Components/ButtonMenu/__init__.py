@@ -133,10 +133,11 @@ class ButtonMenu(ButtonMenuTemplate):
   @anvil_prop
   def align(self, value):
     self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
-    self.menu_button.dom_nodes['anvil-m3-button-component'].style.removeProperty('justifyContent')
+    self.menu_button.dom_nodes['anvil-m3-button-component'].style.removeProperty('justify-content')
     if value == 'full':
       self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
     else:
+      self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width')
       self.menu_button.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
 
   @anvil_prop
