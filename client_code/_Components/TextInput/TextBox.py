@@ -64,6 +64,26 @@ class TextBox(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
+
+    self.display_italic = self.display_italic
+    self.display_bold = self.display_bold
+    self.display_underline = self.display_underline
+    self.display_font_size = self.display_font_size
+    self.display_font_family = self.display_font_family
+    self.text_color = self.text_color
+    self.background_color = self.background_color
+    self.leading_icon_color = self.leading_icon_color
+    self.trailing_icon_color = self.trailing_icon_color
+    self.placeholder = self.placeholder
+    self.text = self.text
+    self.label = self.label
+    self.enabled = self.enabled
+    self.error = self.error
+    self.leading_icon = self.leading_icon
+    self.character_limit = self.character_limit
+    self.type = self.type
+    self.hide_text = self.hide_text
+    
     hiddenInput = self.dom_nodes['anvil-m3-textarea']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
     
@@ -110,7 +130,7 @@ class TextBox(TextInput):
   display_font_size = font_size_property('anvil-m3-textbox', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textbox', 'display_font')
   text_color = color_property('anvil-m3-textbox', 'color', 'text_color')
-  background = color_property('anvil-m3-textbox', 'backgroundColor', 'background' )
+  background_color = color_property('anvil-m3-textbox', 'backgroundColor', 'background_color' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
 
