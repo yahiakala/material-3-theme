@@ -17,5 +17,5 @@ is_package: true
 properties:
 - {default_binding_prop: true, description: Value property of the selected RadioButton, important: true, name: selected_value, type: object}
 toolbox_item:
-  group: Form Input
+  hidden: true
   icon: {dark: 'asset:designer_icons/radio_group_panel_dark.svg', light: 'asset:designer_icons/radio_group_panel.svg'}

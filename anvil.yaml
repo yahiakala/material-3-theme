@@ -39,6 +39,7 @@ toolbox_sections:
   - component: {type: anvil.RichText}
     icon: {dark: /ide/img/toolbox/RichText.dark.svg, light: /ide/img/toolbox/RichText.svg}
     title: RichText
+    url: /docs/client/components/containers#richtext
   packageName: m3
   title: Typography
 - description: Use Buttons to have users perform actions
@@ -124,6 +125,14 @@ toolbox_sections:
   - component: {type: m3._Components.Slider}
     icon: {dark: 'asset:designer_icons/slider_dark.svg', light: 'asset:designer_icons/slider.svg'}
     title: Slider
+  - component:
+      components:
+      - {type: m3._Components.RadioButton}
+      - {type: m3._Components.RadioButton}
+      - {type: m3._Components.RadioButton}
+      type: m3._Components.RadioGroupPanel
+    icon: {dark: 'asset:designer_icons/radio_group_panel_dark.svg', light: 'asset:designer_icons/radio_group_panel.svg'}
+    title: RadioGroupPanel
   packageName: m3
   title: Form Input
 - description: Use Feedback componentes to show the status of a process
@@ -141,15 +150,19 @@ toolbox_sections:
   - component: {type: anvil.Plot}
     icon: {dark: /ide/img/toolbox/Plot.dark.svg, light: /ide/img/toolbox/Plot.svg}
     title: Plot
+    url: /docs/client/components/plot
   - component: {type: anvil.YouTubeVideo}
     icon: {dark: /ide/img/toolbox/YouTubeVideo.dark.svg, light: /ide/img/toolbox/YouTubeVideo.svg}
     title: YouTube Video
+    url: /docs/client/components/basic#youtube-video
   - component: {type: anvil.GoogleMap}
     icon: {dark: /ide/img/toolbox/GoogleMap.dark.svg, light: /ide/img/toolbox/GoogleMap.svg}
     title: Google Map
+    url: /docs/client/components/maps
   - component: {type: anvil.Canvas}
     icon: {dark: /ide/img/toolbox/Canvas.dark.svg, light: /ide/img/toolbox/Canvas.svg}
     title: Canvas
+    url: /docs/client/components/canvas
   packageName: m3
   title: Integrations
 - description: Use Containers to lay out the components on the page
@@ -157,41 +170,68 @@ toolbox_sections:
   - component: {type: anvil.ColumnPanel}
     icon: {dark: /ide/img/toolbox/ColumnPanel.dark.svg, light: /ide/img/toolbox/ColumnPanel.svg}
     title: ColumnPanel
+    url: /docs/client/components/containers#columnpanel
   - component: {type: anvil.FlowPanel}
     icon: {dark: /ide/img/toolbox/FlowPanel.dark.svg, light: /ide/img/toolbox/FlowPanel.svg}
     title: FlowPanel
-  - component: {type: anvil.RepeatingPanel}
+    url: /docs/client/components/containers#flowpanel
+  - component:
+      properties: {item_template: '#form#ITEM_TEMPLATE'}
+      type: anvil.RepeatingPanel
+    createForms:
+      ITEM_TEMPLATE: {className: ItemTemplate, container: anvil.ColumnPanel}
     icon: {dark: /ide/img/toolbox/RepeatingPanel.dark.svg, light: /ide/img/toolbox/RepeatingPanel.svg}
-    title: RepeatingPanel
-  - component: {type: anvil.DataGrid}
-    icon: {dark: /ide/img/toolbox/DataGrid.dark.svg, light: /ide/img/toolbox/DataGrid.svg}
-    title: DataGrid
+    title: Repeating Panel
+    url: /docs/client/components/repeating-panel
   - component: {type: anvil.DataRowPanel}
     icon: {dark: /ide/img/toolbox/DataRowPanel.dark.svg, light: /ide/img/toolbox/DataRowPanel.svg}
     title: DataRowPanel
+    url: /docs/client/components/containers#datarowpanel
   - component: {type: anvil.LinearPanel}
     icon: {dark: /ide/img/toolbox/RepeatingPanel.dark.svg, light: /ide/img/toolbox/RepeatingPanel.svg}
     title: LinerPanel
+    url: /docs/client/components/containers#linearpanel
   - component: {type: anvil.GridPanel}
     icon: {dark: /ide/img/toolbox/GridPanel.dark.svg, light: /ide/img/toolbox/GridPanel.svg}
     title: GridPanel
+    url: /docs/client/components/containers#gridpanel
   - component: {type: anvil.XYPanel}
     icon: {dark: /ide/img/toolbox/XYPanel.dark.svg, light: /ide/img/toolbox/XYPanel.svg}
     title: XYPanel
+    url: /docs/client/components/containers#xypanel
+  - component:
+      components:
+      - properties: {item_template: '#form#ROW_TEMPLATE'}
+        type: anvil.RepeatingPanel
+      type: anvil.DataGrid
+    createForms:
+      ROW_TEMPLATE: {className: RowTemplate, container: anvil.DataRowPanel}
+    icon: {dark: /ide/img/toolbox/DataGrid.dark.svg, light: /ide/img/toolbox/DataGrid.svg}
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Column 1}
+      - {data_key: column_2, id: VJQQOR, title: Column 2}
+      - {data_key: column_3, id: OJLQEN, title: Column 3}
+    title: Data Grid
+    url: /docs/client/components/data-grids
   packageName: m3
   title: Containers
 - items:
   - component: {type: anvil.Image}
     icon: {dark: /ide/img/toolbox/Image.dark.svg, light: /ide/img/toolbox/Image.svg}
     title: Image
+    url: /docs/client/components/basic#image
   - component: {type: anvil.Spacer}
     icon: {dark: /ide/img/toolbox/Spacer.dark.svg, light: /ide/img/toolbox/Spacer.svg}
     title: Spacer
+    url: /docs/client/components/basic#spacer
   - component: {type: anvil.DatePicker}
     icon: {dark: /ide/img/toolbox/DatePicker.dark.svg, light: /ide/img/toolbox/DatePicker.svg}
     title: DatePicker
+    url: /docs/client/components/basic#datepicker
   - component: {type: anvil.Timer}
     icon: {dark: /ide/img/toolbox/Timer.dark.svg, light: /ide/img/toolbox/Timer.svg}
     title: Timer
+    url: /docs/client/components/basic#timer
   packageName: m3
   title: Other
