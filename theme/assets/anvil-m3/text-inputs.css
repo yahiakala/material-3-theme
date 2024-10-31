@@ -59,12 +59,8 @@ element {
   line-height: 16px;
 }
 
-.anvil-m3-textinput-supporting-text {
-  flex: 1 1 auto;
-}
-.anvil-m3-textinput-character-count {
-  flex: 0 1 auto;
-}
+.anvil-m3-textinput-supporting-text { flex: 1 1 auto; }
+.anvil-m3-textinput-character-count { flex: 0 1 auto; }
 
 .anvil-m3-textinput-input:hover {
   box-shadow: inset 0 -1px 0 var(--anvil-m3-filled-border-hover);
@@ -207,6 +203,4 @@ element {
 .anvil-m3-textarea { resize: vertical; }
 
 /*  text field specific */
-.anvil-m3-textbox { }
-
 .anvil-m3-disable-icon, .anvil-m3-error-icon  { pointer-events: none; }
