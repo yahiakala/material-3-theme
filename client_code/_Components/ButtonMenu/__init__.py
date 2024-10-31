@@ -132,7 +132,11 @@ class ButtonMenu(ButtonMenuTemplate):
 
   @anvil_prop
   def align(self, value):
-    self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
+    self.dom_nodes['anvil-m3-buttonMenu-container'].classList.toggle('anvil-m3-full-width', False)
+    if value == 'full':
+      self.dom_nodes['anvil-m3-buttonMenu-container'].classList.toggle('anvil-m3-full-width', True)
+    else:
+      self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
 
   @anvil_prop
   def button_font_family(self, value):
