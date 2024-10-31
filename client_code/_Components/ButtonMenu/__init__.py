@@ -137,7 +137,6 @@ class ButtonMenu(ButtonMenuTemplate):
     if value == 'full':
       self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
     else:
-      self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width')
       self.menu_button.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
 
   @anvil_prop
