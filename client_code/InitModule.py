@@ -12,7 +12,6 @@ pluggable_ui.provide("m3", {
   "anvil.TextBox": TextBox,
   "anvil.Button": Button,
   "anvil.CheckBox": Checkbox,
-  "anvil.Link": Link,
   "anvil.alerts.FooterButton": make_footer_button
 })
 
