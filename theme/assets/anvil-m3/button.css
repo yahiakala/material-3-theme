@@ -89,9 +89,10 @@
 
 
 
-.anvil-m3-button.anvil-m3-full-width {
+.anvil-m3-button.anvil-m3-full-width, .anvil-m3-buttonMenu-container .anvil-m3-full-width {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
