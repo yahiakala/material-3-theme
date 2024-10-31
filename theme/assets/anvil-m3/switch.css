@@ -53,7 +53,6 @@ element {
 .anvil-m3-switch-slider.anvil-m3-has-disabled-icon:before {
   height: 24px;
   width: 24px;
-  /* margin: 4px; */
 }
 
 .anvil-m3-switch-input:checked + .anvil-m3-switch-slider {

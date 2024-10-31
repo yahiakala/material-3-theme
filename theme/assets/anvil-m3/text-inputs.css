@@ -182,7 +182,6 @@ element {
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:hover + .anvil-m3-textinput-border { border-color: var(--anvil-m3-on-error-container); }
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:hover ~ .anvil-m3-textinput-icon-container .anvil-m3-textinput-trailing-icon { color: var(--anvil-m3-on-error-container); }
 
-
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-tl,
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-t,
 .anvil-m3-textinput.outlined.anvil-m3-textinput-error .anvil-m3-textinput-input:focus + .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-tr,
@@ -197,7 +196,6 @@ element {
   'GRAD' 0,
   'opsz' 48
 }
-
 
 /* text area specific */
 .anvil-m3-textarea { resize: vertical; }
