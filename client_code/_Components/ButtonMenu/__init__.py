@@ -21,6 +21,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._hoverIndex = None
     self._itemIndices = set()
     self._children = None
+    self._shown = False
 
     self.init_components(**properties)
 
@@ -28,11 +29,13 @@ class ButtonMenu(ButtonMenuTemplate):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _setup_fui(self):
-    self._cleanup()
-    self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
+    if self._shown:
+        self._cleanup()
+        self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
 
 
   def _on_mount(self, **event_args):
+    self._shown = True
     document.addEventListener('keydown', self._handle_keyboard_events)
     self._menuNode.addEventListener('click', self._child_clicked)
     self._btnNode.addEventListener('click', self._handle_click)
@@ -43,6 +46,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._setup_fui()
   
   def _on_cleanup(self, **event_args):
+    self._shown = False
     document.removeEventListener('keydown', self._handle_keyboard_events)
     self._menuNode.removeEventListener('click', self._child_clicked)
     document.removeEventListener('click', self._body_click)
