@@ -14,19 +14,23 @@ class ButtonMenu(ButtonMenuTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self._design_name = ""
-    self.init_components(**properties)
-    self._open = False
     self._cleanup = noop
-
+    self._menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self._btnNode = get_dom_node(self.menu_button).querySelector("button")
+    self._open = False
     self._hoverIndex = None
     self._itemIndices = set()
     self._children = None
 
-    self._menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    self._btnNode = get_dom_node(self.menu_button).querySelector("button")
+    self.init_components(**properties)
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+
+  def _setup_fui(self):
+    self._cleanup()
+    self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
+
 
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
@@ -36,7 +40,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # We still have a reference to the dom node but we've moved it to the body
     # This gets around the fact that Anvil containers set their overflow to hidden
     document.body.append(self._menuNode)
-    self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
+    self._setup_fui()
   
   def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self._handle_keyboard_events)
@@ -138,6 +142,7 @@ class ButtonMenu(ButtonMenuTemplate):
       self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
     else:
       self.menu_button.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+    self._setup_fui()
 
   @anvil_prop
   def button_font_family(self, value):
