@@ -9,9 +9,9 @@ from ..MenuItem import MenuItem
 from ..._utils import fui, noop
 from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
 
-
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
+    self._init = False
     self.tag = ComponentTag()
     self._props = properties
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
@@ -54,6 +54,9 @@ class DropdownMenu(DropdownMenuTemplate):
   
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+      
+    self._init = True
+    self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
@@ -197,18 +200,19 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def form_show(self, **event_args):
-    self._create_menu_items()
     self._set_designer_text_placeholder()
 
-
   def _create_menu_items(self):
+    self.menu.clear()
+    
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
-    p.italic = self.italic_items
-    p.underline = self.underline_items
+    p.bold = self.items_bold
+    p.italic = self.items_italic
+    p.underline = self.items_underline
     p.text_color = self.items_text_color
     # p.background = self.items_background_color
-    p.font = self.items_font
+    p.font_family = self.items_font_family
     p.font_size = self.items_font_size
     p.hide_leading_icon = True
 
@@ -229,11 +233,11 @@ class DropdownMenu(DropdownMenuTemplate):
       selection = MenuItem()
       selection.hide_leading_icon = True
 
-      selection.bold = self.bold_items
-      selection.italic = self.italic_items
-      selection.underline = self.underline_items
+      selection.bold = self.items_bold
+      selection.italic = self.items_italic
+      selection.underline = self.items_underline
       selection.text_color = self.items_text_color
-      selection.font = self.items_font
+      selection.font_family = self.items_font_family
       selection.font_size = self.items_font_size
 
       selection.text = item
@@ -264,15 +268,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #properties
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
-  items = anvil_prop("items")
   allow_none = anvil_prop("allow_none")
-  bold_items = anvil_prop("bold_items")
-  italic_items = anvil_prop("italic_items")
-  underline_items = anvil_prop("underline_items")
-  items_text_color = anvil_prop("items_text_color")
-  bold_items = anvil_prop('bold_items')
-  items_font = anvil_prop("items_font")
-  items_font_size = anvil_prop("items_font_size")
 
   @anvil_prop
   def background_color(self, value):
@@ -371,7 +367,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.border_color = value
 
   @anvil_prop
-  def menu_color(self, value):
+  def menu_background_color(self, value):
     self.menu.background_color = value
 
   @anvil_prop
@@ -404,6 +400,38 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def placeholder(self, value):
     self.selection_field.placeholder = value
+    
+  def _recreate_items(self):
+    if self._init:
+      self._create_menu_items()
+  
+  @anvil_prop
+  def items(self, value):
+    self._recreate_items()
+    
+  @anvil_prop
+  def items_italic(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_underline(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_text_color(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_bold(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_font_family(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_font_size(self, value):
+    self._recreate_items()
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  

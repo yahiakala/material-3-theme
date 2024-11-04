@@ -25,6 +25,22 @@ class TextArea(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
+    
+    self.display_italic = self.display_italic
+    self.display_bold = self.display_bold
+    self.display_underline = self.display_underline
+    self.display_font_size = self.display_font_size
+    self.display_font = self.display_font
+    self.text_color = self.text_color
+    self.background_color = self.background_color
+    self.align = self.align
+    self.placeholder = self.placeholder
+    self.label = self.label
+    self.text = self.text
+    self.enabled = self.enabled
+    self.height = self.height
+    self.character_limit = self.character_limit
+
     hiddenInput = self.dom_nodes['anvil-m3-textbox']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
 
@@ -84,7 +100,7 @@ class TextArea(TextInput):
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
   text_color = color_property('anvil-m3-textarea', 'color', 'text_color')
-  background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
+  background_color = color_property('anvil-m3-textarea', 'backgroundColor', 'background_color')
   align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 
   @anvil_prop

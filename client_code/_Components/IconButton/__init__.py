@@ -30,7 +30,7 @@ class IconButton(IconButtonTemplate):
   #!componentProp(m3.IconButton)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
   #!componentProp(m3.IconButton)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(m3.IconButton)!1: {name:"icon_color",type:"color",description:"The colour of the icon displayed on this component."}
-  #!componentProp(m3.IconButton)!1: {name:"background",type:"color",description:"The colour of the background of this component."}
+  #!componentProp(m3.IconButton)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(m3.IconButton)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(m3.IconButton)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(m3.IconButton)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
