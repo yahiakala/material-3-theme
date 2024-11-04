@@ -511,7 +511,14 @@ body {
 }
 
 @media(min-width: 980px) {
-  .anvil-m3-content.anvil-m3-content-navigation-drawer {
+  .anvil-m3-navigation-drawer-out-designer ~.anvil-m3-content.anvil-m3-content-navigation-drawer {
+    left: 360px;
+    width: calc(100% - 360px);
+    }
+}
+
+@media(min-width: 780px) {
+  .anvil-m3-navigation-drawer-in-designer ~ .anvil-m3-content.anvil-m3-content-navigation-drawer {
     left: 360px;
     width: calc(100% - 360px);
     }
