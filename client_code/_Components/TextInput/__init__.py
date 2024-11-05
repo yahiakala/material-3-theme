@@ -42,16 +42,16 @@ class TextInput(TextInputTemplate):
   def _on_lost_focus(self, e):
     self.raise_event("lost_focus")
 
-  # def _anvil_get_interactions_(self):
-  #   return [{
-  #     "type": "whole_component",
-  #     "title": "Edit text",
-  #     "icon": "edit",
-  #     "default": True,
-  #     "callbacks": {
-  #       "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['anvil-m3-label-text'])
-  #     }
-  #   }]
+  def _anvil_get_interactions_(self):
+    return [{
+      "type": "whole_component",
+      "title": "Edit text",
+      "icon": "edit",
+      "default": True,
+      "callbacks": {
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['anvil-m3-label-text'])
+      }
+    }]
  
   visible = HtmlTemplate.visible
   label_italic = italic_property('anvil-m3-label-text', 'label_italic')
