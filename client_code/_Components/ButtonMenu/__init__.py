@@ -1,13 +1,22 @@
-from ._anvil_designer import ButtonMenuTemplate
+import anvil.designer
 from anvil import *
 from anvil import HtmlTemplate
-from anvil.js import window, get_dom_node
+from anvil.js import get_dom_node
 from anvil.js.window import document
-import random, string, math
-import anvil.designer
-from ..MenuItem import MenuItem
+
 from ..._utils import fui, noop
-from ..._utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop, color_property, border_property, role_property
+from ..._utils.properties import (
+  ComponentTag,
+  anvil_prop,
+  border_property,
+  color_property,
+  get_unset_spacing,
+  get_unset_value,
+  role_property,
+)
+from ..MenuItem import MenuItem
+from ._anvil_designer import ButtonMenuTemplate
+
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):

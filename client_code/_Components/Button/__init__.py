@@ -6,7 +6,6 @@ from anvil import HtmlTemplate
 from ..._utils.properties import (
   ComponentTag,
   anvil_prop,
-  bold_property,
   color_property,
   custom_bold_property,
   font_family_property,
