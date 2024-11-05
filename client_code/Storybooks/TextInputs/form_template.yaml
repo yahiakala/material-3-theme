@@ -213,7 +213,7 @@ components:
         type: form:_Components.Text
       - layout_properties: {slot: card-content-container-slot}
         name: text_box_1
-        properties: {appearance: outlined, character_limit: 10, label: '', label_text: Hello}
+        properties: {appearance: outlined, character_limit: 10, label: Hello, label_text: Hello}
         type: form:_Components.TextInput.TextBox
       - layout_properties: {slot: card-content-container-slot}
         name: text_box_2
