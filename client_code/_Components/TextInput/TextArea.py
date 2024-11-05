@@ -31,7 +31,7 @@ class TextArea(TextInput):
     self.display_underline = self.display_underline
     self.display_font_size = self.display_font_size
     self.display_font = self.display_font
-    self.text_color = self.text_color
+    self.display_text_color = self.display_ text_color
     self.background_color = self.background_color
     self.align = self.align
     self.placeholder = self.placeholder
@@ -198,7 +198,7 @@ class TextArea(TextInput):
   #!componentProp(m3.TextArea)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(m3.TextArea)!1: {name:"bold_label",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(m3.TextArea)!1: {name:"text_color",type:"color",description:"The colour of the input text displayed on this component."}
+  #!componentProp(m3.TextArea)!1: {name:"display_text_color",type:"color",description:"The colour of the input text displayed on this component."}
   #!componentProp(m3.TextArea)!1: {name:"display_font_family",type:"string",description:"The font family to use for the input and placeholder text."}
   #!componentProp(m3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
   #!componentProp(m3.TextArea)!1: {name:"display_underline",type:"boolean",description:"The font family to use for the label on this component."}
