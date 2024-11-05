@@ -49,7 +49,7 @@ class TextInput(TextInputTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['anvil-m3-label-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "label", self.dom_nodes['anvil-m3-label-text'])
       }
     }]
  
