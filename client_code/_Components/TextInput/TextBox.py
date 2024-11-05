@@ -129,7 +129,7 @@ class TextBox(TextInput):
   display_underline = underline_property('anvil-m3-textbox', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textbox', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textbox', 'display_font')
-  text_color = color_property('anvil-m3-textbox', 'color', 'text_color')
+  display_text_color = color_property('anvil-m3-textbox', 'color', 'display_text_color')
   background_color = color_property('anvil-m3-textbox', 'backgroundColor', 'background_color' )
   leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
   trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')

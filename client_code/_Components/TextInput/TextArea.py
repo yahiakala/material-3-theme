@@ -99,7 +99,7 @@ class TextArea(TextInput):
   display_underline = underline_property('anvil-m3-textarea', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
-  text_color = color_property('anvil-m3-textarea', 'color', 'text_color')
+  display_text_color = color_property('anvil-m3-textarea', 'color', 'display_text_color')
   background_color = color_property('anvil-m3-textarea', 'backgroundColor', 'background_color')
   align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 

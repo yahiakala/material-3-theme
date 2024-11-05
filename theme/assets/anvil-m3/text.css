@@ -162,6 +162,7 @@ a.anvil-m3-link:hover, a.anvil-m3-link:focus {
 .anvil-m3-link {
   display: inline-block;
   text-decoration: none;
+  width: 100%;
 }
 
 .anvil-m3-link, .anvil-m3-link:focus {

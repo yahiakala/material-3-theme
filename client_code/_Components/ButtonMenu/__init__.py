@@ -14,21 +14,28 @@ class ButtonMenu(ButtonMenuTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self._design_name = ""
-    self.init_components(**properties)
-    self._open = False
     self._cleanup = noop
-
+    self._menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self._btnNode = get_dom_node(self.menu_button).querySelector("button")
+    self._open = False
     self._hoverIndex = None
     self._itemIndices = set()
     self._children = None
+    self._shown = False
 
-    self._menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    self._btnNode = get_dom_node(self.menu_button).querySelector("button")
+    self.init_components(**properties)
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
+  def _setup_fui(self):
+    if self._shown:
+        self._cleanup()
+        self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
+
+
   def _on_mount(self, **event_args):
+    self._shown = True
     document.addEventListener('keydown', self._handle_keyboard_events)
     self._menuNode.addEventListener('click', self._child_clicked)
     self._btnNode.addEventListener('click', self._handle_click)
@@ -36,9 +43,10 @@ class ButtonMenu(ButtonMenuTemplate):
     # We still have a reference to the dom node but we've moved it to the body
     # This gets around the fact that Anvil containers set their overflow to hidden
     document.body.append(self._menuNode)
-    self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
+    self._setup_fui()
   
   def _on_cleanup(self, **event_args):
+    self._shown = False
     document.removeEventListener('keydown', self._handle_keyboard_events)
     self._menuNode.removeEventListener('click', self._child_clicked)
     document.removeEventListener('click', self._body_click)
@@ -132,7 +140,13 @@ class ButtonMenu(ButtonMenuTemplate):
 
   @anvil_prop
   def align(self, value):
-    self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
+    self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
+    self.menu_button.dom_nodes['anvil-m3-button-component'].style.removeProperty('justify-content')
+    if value == 'full':
+      self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
+    else:
+      self.menu_button.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+    self._setup_fui()
 
   @anvil_prop
   def button_font_family(self, value):

@@ -508,8 +508,6 @@ body {
   display: flex !important;
   flex-direction: column;
   justify-items: center !important;
-  /* top: unset !important;
-  bottom: 20px; */
 }
 
 .anvil-alert.anvil-alert-danger {
@@ -649,6 +647,9 @@ body {
     display:block;
   }
 }
+
+/* Modals */
+a.anvil-inlinable { color: %color:Primary%%; }
 
 /*TOOLTIP PROPERTY*/
 
