@@ -208,7 +208,22 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
         self._cleanup = noop
   return property_with_callback(prop_name, set_tooltip)
 
+
 def anvil_prop(*args, **kwargs):
+  """
+  Can be used to return a property descriptor for a named property:
+
+    my_property = anvil_prop("my_property")
+    
+  Can be used as a plain decorator on a property setter:
+    
+    @anvil_prop
+    def my_property(new_value):
+      ...
+
+  
+  
+  """
   if 'default_value' in kwargs:
     # We were called with a default value, return a decorator
     def dec(fn):
