@@ -1,13 +1,20 @@
-from ._anvil_designer import DropdownMenuTemplate
-from anvil import *
-import anvil.server
-from anvil import HtmlTemplate
-from anvil.js import window, get_dom_node
-from anvil.js.window import document
 import anvil.designer
-from ..MenuItem import MenuItem
+import anvil.server
+from anvil import *
+from anvil import HtmlTemplate
+from anvil.js import get_dom_node
+from anvil.js.window import document
+
 from ..._utils import fui, noop
-from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
+from ..._utils.properties import (
+  anvil_prop,
+  get_unset_margin,
+  get_unset_value,
+  inline_editing,
+  margin_property,
+)
+from ..MenuItem import MenuItem
+from ._anvil_designer import DropdownMenuTemplate
 
 
 class DropdownMenu(DropdownMenuTemplate):

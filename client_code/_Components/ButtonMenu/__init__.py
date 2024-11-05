@@ -12,7 +12,6 @@ from ..._utils.properties import (
   color_property,
   get_unset_spacing,
   get_unset_value,
-  role_property,
 )
 from ..MenuItem import MenuItem
 from ._anvil_designer import ButtonMenuTemplate
