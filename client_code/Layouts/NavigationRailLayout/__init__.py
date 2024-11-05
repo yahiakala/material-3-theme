@@ -16,7 +16,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self._props = properties
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
-    # self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_rail = self.dom_nodes['anvil-m3-navigation-rail']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
     self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
@@ -29,9 +28,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
     window.document.addEventListener('scroll', self._add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
-    # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
-   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
 
   #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e):

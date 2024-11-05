@@ -254,7 +254,6 @@ def inline_editing(component, placeholder_node, set_text, prop="text", get_node=
       component,
       prop,
       dom_node,
-      #   on_finished=set_designer_text_placeholder,
     )
 
   component.add_event_handler(

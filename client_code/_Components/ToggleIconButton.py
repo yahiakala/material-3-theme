@@ -19,7 +19,6 @@ class ToggleIconButton(IconButton):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-toggle", True)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-toggle", True)   
 
-    # I think there is a smarter way to do this. I don't know the setter isn't getting called in the beginning.
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-selected", self.selected)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-selected", self.selected)
 

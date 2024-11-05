@@ -18,8 +18,7 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
+    
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-progressindicator-linear"]

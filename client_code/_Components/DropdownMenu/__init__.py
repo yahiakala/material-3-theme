@@ -142,7 +142,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
-        # if isinstance(child, MenuItem):
         child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
         
   def _update_hover_styles(self):
@@ -214,7 +213,6 @@ class DropdownMenu(DropdownMenuTemplate):
     p.italic = self.italic_items
     p.underline = self.underline_items
     p.text_color = self.items_text_color
-    # p.background = self.items_background_color
     p.font = self.items_font
     p.font_size = self.items_font_size
     p.hide_leading_icon = True

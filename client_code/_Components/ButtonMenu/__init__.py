@@ -207,7 +207,7 @@ class ButtonMenu(ButtonMenuTemplate):
       if hover is not None:
         self._children[hover].raise_event("click")
     
-    if event.key == " ": #space key as " " is stupid
+    if event.key == " ": # " " indicates the space key
       attemptSelect()
     if event.key == "Enter":
       attemptSelect()
