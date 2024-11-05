@@ -229,52 +229,18 @@ def anvil_prop(*args, **kwargs):
     def my_property(new_value):
       ...
   """
-  # my_property = anvil_prop("my_property")
-  # my_property = anvil_prop("my_property", default_value=42)
-  # my_property = anvil_prop(my_property_setter)
-  # my_property = anvil_prop(default_value=42)(my_property_setter)
-
-  def get_decorator(default_value=None)
-    def dec(fn):
-      return property_with_callback(fn.__name__, fn, default_value=default_value)
-    return dec
+  def get_decorator(default_value=None):
+    return lambda fn: property_with_callback(fn.__name__, fn, default_value=default_value)
   
-  if len(args) == 0:
-    
-    fn = args[0]
-    return get_decorator()
+  if len(args) > 0 and isinstance(args[0], str):
+    # We have been called as a function, with the name of the property as our first arg
+    return property_without_callback(args[0], default_value=kwargs.get("default_value"))
+  elif len(args) == 0:
+    # We have been used as a decorator with kwargs
+    return get_decorator(kwargs.get("default_value"))
   else:
-    if len(args) > 0 and isinstance(args[0], str):
-      # We have been called as a function, with the name of the property as our first arg
-      return property_without_callback(args[0], default_value=kwargs.get("default_value", None))
-    elif len(args) == 0:
-      # We have been used as a decorator with kwargs
-    else:
-      # We have been called as a plain decorator, with no args/kwargs
-      fn = args[0]
-      return get_decorator()(fn)
-
-
-
-
-  
-  if 'default_value' in kwargs:
-    # We were called with a default value, return a decorator
-    def dec(*args):
-      if isinstance(args[0], str):
-        return property_without_callback(args[0])
-      else:
-        fn = args[0]
-        return property_with_callback(fn.__name__, fn, kwargs['default_value'])
-    return dec
-  else:
-    # We were used directly as a decorator with a setter or to create a property without a callback. 
-    if isinstance(args[0], str):
-      return property_without_callback(args[0])
-    else:
-      fn = args[0]
-      return property_with_callback(fn.__name__,fn)
-
+    # We have been called as a plain decorator, with no args/kwargs
+    return get_decorator()(args[0])
 
 
 def inline_editing(component, placeholder_node, set_text, prop="text", get_node=None):
