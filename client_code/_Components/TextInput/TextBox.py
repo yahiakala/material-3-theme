@@ -64,7 +64,6 @@ class TextBox(TextInput):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    print('bonjour')
 
     self.display_italic = self.display_italic
     self.display_bold = self.display_bold
