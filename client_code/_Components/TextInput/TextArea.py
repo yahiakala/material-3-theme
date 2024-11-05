@@ -158,7 +158,7 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
 
   def _anvil_get_interactions_(self):
-    
+    text_input_interactions = super()._anvil_get_interactions_()
     def on_grab(x,y):
       self._grab_height = self.height
 
@@ -170,7 +170,7 @@ class TextArea(TextInput):
       self.height = h
       anvil.designer.update_component_properties(self, {"height": h})
     
-    return [
+    return text_input_interactions + [
       {
         "type": "handle",
         "position": "bottom",
