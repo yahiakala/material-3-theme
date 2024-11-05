@@ -79,12 +79,9 @@ toolbox_sections:
       - layout_properties: {slot: anvil-m3-sidesheet-title}
         type: m3._Components.Heading
       - layout_properties: {slot: anvil-m3-sidesheet-close-button}
-        properties: {icon: 'mi:close', name: close_sidesheet_button}
+        properties: {icon: 'mi:close', name: 'close_sidesheet_button'}
         type: m3._Components.IconButton
       type: m3._Components.SidesheetContent
-    icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}
-    title: SidesheetContent
-  - component: {type: m3._Components.SidesheetContent}
     icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}
     title: SidesheetContent
   - component: {type: m3._Components.Divider}
