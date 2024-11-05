@@ -1,9 +1,28 @@
-from ._anvil_designer import ButtonTemplate
-from anvil import *
-import anvil.js
-from ..._utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop, color_property, role_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, spacing_property
-from anvil import HtmlTemplate
 import anvil.designer
+import anvil.js
+from anvil import *
+from anvil import HtmlTemplate
+
+from ..._utils.properties import (
+  ComponentTag,
+  anvil_prop,
+  bold_property,
+  color_property,
+  custom_bold_property,
+  font_family_property,
+  font_size_property,
+  get_unset_spacing,
+  get_unset_value,
+  italic_property,
+  property_with_callback,
+  role_property,
+  spacing_property,
+  style_property,
+  tooltip_property,
+  underline_property,
+)
+from ._anvil_designer import ButtonTemplate
+
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
