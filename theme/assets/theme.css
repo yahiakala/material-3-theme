@@ -207,7 +207,7 @@ body {
   inherits: false;
 }
 
-/*TODO: figure out transition*/
+
 .anvil-m3-top-app-bar.anvil-m3-scrolled {
   transition: background-color .25s; 
   background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
@@ -485,17 +485,6 @@ body {
   border-top: none;
 }
 
-/*TODO: remove this when buttons are styled?*/
-.anvil-modal-footer .btn {
-  color: %color:Primary%;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.1px;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  background-image: none;
-}
 
 /*Notifications*/
 .anvil-alert {
