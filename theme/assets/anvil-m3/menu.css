@@ -121,7 +121,6 @@
 .anvil-m3-buttonMenu-items-hidden {
   pointer-events: none;
   opacity: 0;
-/*   height: 1px; */
   overflow: hidden;
 }
 
