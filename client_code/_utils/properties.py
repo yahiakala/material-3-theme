@@ -234,7 +234,21 @@ def anvil_prop(*args, **kwargs):
   # my_property = anvil_prop(my_property_setter)
   # my_property = anvil_prop(default_value=42)(my_property_setter)
 
-  
+  def dec(fn, default_value=None):
+    return property_with_callback(fn.__name__, fn, default_value=default_value)
+    
+  if len(args) == 0:
+    # We have been used as a decorator with kwargs
+    fn = args[0]
+    
+  else:
+    if isinstance(args[0], str):
+      # We have been called as a function, with the name of the property as our first arg
+      return property_without_callback(args[0], default_value=kwargs.get("default_value", None))
+    else:
+      # We have been called as a plain decorator, with no args/kwargs
+      fn = args[0]
+      return property_with_callback(fn.__name__, fn, default_value=None)
   
   if 'default_value' in kwargs:
     # We were called with a default value, return a decorator
