@@ -31,7 +31,7 @@ class TextArea(TextInput):
     self.display_underline = self.display_underline
     self.display_font_size = self.display_font_size
     self.display_font = self.display_font
-    self.display_text_color = self.display_ text_color
+    self.display_text_color = self.display_text_color
     self.background_color = self.background_color
     self.align = self.align
     self.placeholder = self.placeholder
