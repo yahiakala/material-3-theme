@@ -1,6 +1,5 @@
 import anvil.designer
 from anvil import *
-from anvil.js import window
 from anvil.js.window import document
 from anvil.property_utils import (
   get_margin_styles,

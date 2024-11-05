@@ -1,6 +1,5 @@
 import anvil.designer
 import anvil.server
-from anvil.property_utils import anvil_property
 
 from ..._utils.properties import (
   anvil_prop,

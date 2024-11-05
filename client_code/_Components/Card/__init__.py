@@ -1,4 +1,3 @@
-import anvil.designer
 from anvil import *
 from anvil import HtmlTemplate
 
