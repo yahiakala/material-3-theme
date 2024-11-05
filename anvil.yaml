@@ -74,7 +74,14 @@ toolbox_sections:
   - component: {type: m3._Components.Card.CardContentContainer}
     icon: {dark: 'asset:designer_icons/card_content_container_dark.svg', light: 'asset:designer_icons/card_content_container.svg'}
     title: CardContentContainer
-  - component: {type: m3._Components.SidesheetContent}
+  - component:
+      components:
+      - layout_properties: {slot: anvil-m3-sidesheet-title}
+        type: m3._Components.Heading
+      - layout_properties: {slot: anvil-m3-sidesheet-close-button}
+        properties: {icon: 'mi:close'}
+        type: m3._Components.IconButton
+      type: m3._Components.SidesheetContent
     icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}
     title: SidesheetContent
   - component: {type: m3._Components.Divider}

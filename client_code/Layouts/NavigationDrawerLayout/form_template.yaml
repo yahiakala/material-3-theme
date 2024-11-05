@@ -58,7 +58,7 @@ slots:
     index: 0
     set_layout_properties: {slot: anvil-m3-content}
     target: {name: '', type: container}
-  nav_drawer:
+  navigation:
     index: 0
     set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
     target: {name: '', type: container}
