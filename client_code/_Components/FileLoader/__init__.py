@@ -1,11 +1,26 @@
-from ._anvil_designer import FileLoaderTemplate
-from anvil import *
 import anvil.server
-from anvil.js.window import FileReader, Uint8Array
-from ..._utils import gen_id
-from ..._utils.properties import get_unset_value, get_unset_spacing, anvil_prop, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
+from anvil import *
 
-#todo: fix focus state within column panel
+from ..._utils import gen_id
+from ..._utils.properties import (
+  anvil_prop,
+  bold_property,
+  color_property,
+  enabled_property,
+  font_family_property,
+  font_size_property,
+  get_unset_spacing,
+  get_unset_value,
+  innerText_property,
+  italic_property,
+  role_property,
+  spacing_property,
+  style_property,
+  tooltip_property,
+  underline_property,
+)
+from ._anvil_designer import FileLoaderTemplate
+
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):

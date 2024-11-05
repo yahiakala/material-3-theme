@@ -40,17 +40,6 @@
   text-decoration: underline 2px !important;
 }
 
-/* .anvil-m3-fileloader-container:focus {
-  border: 1px solid var(--anvil-m3-primary);
-  color: var(--anvil-m3-primary);
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 1px var(--anvil-m3-surface);
-  margin: -1px;
-  padding-right: 3px;
-  outline: 0;
-  text-decoration: none;
-} */
-
 .anvil-m3-fileloader-container:focus:hover {
   color: var(--anvil-m3-on-primary-container)
 }
@@ -75,9 +64,7 @@
 .anvil-m3-fileloader-form:has(input.anvil-m3-fileloader-input:disabled) a.anvil-m3-fileloader-container.anvil-m3-elevated{ background-color: var(--anvil-m3-disabled-container); color: var(--anvil-m3-on-disabled); box-shadow: none; }
 
 /* Filled */
-.anvil-m3-fileloader-container.anvil-m3-filled { background-color: var(--anvil-m3-primary); color: var(--anvil-m3-on-primary); 
-                                  padding: 0 24px; 
-                                 }
+.anvil-m3-fileloader-container.anvil-m3-filled { background-color: var(--anvil-m3-primary); color: var(--anvil-m3-on-primary); padding: 0 24px; }
 .anvil-m3-fileloader-container.anvil-m3-filled:hover { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)), var(--anvil-m3-primary); box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); }
 .anvil-m3-fileloader-container.anvil-m3-filled:focus { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary);}
 .anvil-m3-fileloader-container.anvil-m3-filled:active { background: linear-gradient(0deg, var(--anvil-m3-light-overlay-2), var(--anvil-m3-light-overlay-2)), var(--anvil-m3-primary);}

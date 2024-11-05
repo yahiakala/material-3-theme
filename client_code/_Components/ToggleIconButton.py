@@ -1,7 +1,8 @@
-import anvil.server
-from .IconButton import IconButton
 import anvil.designer
+import anvil.server
+
 from .._utils.properties import property_with_callback, theme_color_to_css
+from .IconButton import IconButton
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Interaction", "important": True, "default_value": False, "description": "If True, the component is in the selected state"}
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "The border style when the component is in the selected state. Accepts any valid CSS border value."}
@@ -26,7 +27,6 @@ class ToggleIconButton(IconButton):
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-toggle", True)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-toggle", True)   
 
-    # I think there is a smarter way to do this. I don't know the setter isn't getting called in the beginning.
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle("anvil-m3-selected", self.selected)
     self.dom_nodes['anvil-m3-iconbutton-icon'].classList.toggle("anvil-m3-selected", self.selected)
 

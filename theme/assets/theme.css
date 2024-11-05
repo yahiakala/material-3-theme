@@ -59,7 +59,6 @@
   --anvil-m3-on-surface-variant-overlay-2: %color:On Surface Variant Overlay 2%;
   --anvil-m3-inverse-on-surface-overlay-1: %color:Inverse On Surface Overlay 1%;
   --anvil-m3-inverse-on-surface-overlay-2: %color:Inverse On Surface Overlay 2%;
-/*   --anvil-m3-slider-thumb-color: var(--anvil-m3-primary); */
 
 }
 
@@ -119,7 +118,6 @@ body {
     left: 0px !important;
     background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%; 
     width: 80px !important;
-  /* padding: 56px 12px; */
     height: 100%;
   }
 }
@@ -205,7 +203,6 @@ body {
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
     display: block;
-/*     width: 0px; */
     height: 100%;
     padding: 28px;
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
@@ -225,7 +222,7 @@ body {
   inherits: false;
 }
 
-/*TODO: figure out transition*/
+
 .anvil-m3-top-app-bar.anvil-m3-scrolled {
   transition: background-color .25s; 
   background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
@@ -254,7 +251,6 @@ body {
 
 @media(max-width: 980px) {
   .anvil-m3-navigation-drawer.anvil-m3-navigation-drawer-out-designer + .anvil-m3-top-app-bar {
-/*     height: 64px; */
     padding: 20px 16px 24px;
     justify-content: space-between;
     align-items: start;
@@ -267,7 +263,6 @@ body {
 
 @media(max-width: 780px) {
   .anvil-m3-navigation-drawer.anvil-m3-navigation-drawer-in-designer + .anvil-m3-top-app-bar {
-/*     height: 64px; */
     padding: 20px 16px 24px;
     justify-content: space-between;
     align-items: start;
@@ -281,7 +276,6 @@ body {
 
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer + .anvil-m3-top-app-bar, .anvil-m3-navigation-drawer + .anvil-m3-top-app-bar {
-/*     height: 64px; */
     padding: 20px 16px 24px;
     justify-content: space-between;
     align-items: start;
@@ -373,7 +367,6 @@ body {
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
     display: block;
-/*     padding-left: 28px; */
   }
 }
 
@@ -440,8 +433,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 5;
-/*     opacity: 0; */
-/*     transition: opacity 0.25s; */
   }
 }
 
@@ -524,11 +515,6 @@ body {
     }
 }
 
-/* @media(max-width: 600px) {
-  .anvil-m3-content.anvil-m3-modal-navigation-drawer {
-    top: 64px;
-    }
-} */
 
 /*DIALOGS: ALERTS AND NOTIFICATIONS*/
 /*Default Anvil alert*/
@@ -571,17 +557,6 @@ body {
   border-top: none;
 }
 
-/*TODO: remove this when buttons are styled?*/
-.anvil-modal-footer .btn {
-  color: %color:Primary%;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.1px;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  background-image: none;
-}
 
 /*Notifications*/
 .anvil-alert {
@@ -651,7 +626,6 @@ body {
 .anvil-m3-sidesheet-title-container {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   column-gap: 12px;
   padding-bottom: 24px;
 
@@ -831,18 +805,6 @@ a.anvil-inlinable { color: %color:Primary%%; }
   background: linear-gradient(0deg, var(--anvil-m3-light-overlay-1), var(--anvil-m3-light-overlay-1)),  var(--anvil-m3-primary) !important;
 }
 
-/* .daterangepicker td.today {
-  background-color: transparent;
-  border: 1px solid var(--anvil-m3-primary);
-  color: var(--anvil-m3-primary);
-}
-
-.daterangepicker td.today:hover {
-  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-1), var(--anvil-m3-primary-overlay-1)),  transparent !important;
-  color: var(--anvil-m3-primary) !important;
-  border: 1px solid var(--anvil-m3-primary)
-} */
-
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
   font-weight: normal;
   font-size: 16px;
@@ -880,7 +842,6 @@ a.anvil-inlinable { color: %color:Primary%%; }
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   width: 70px;
-/*   appearance: none; */
 }
 
 th.month select.monthselect {

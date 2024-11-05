@@ -1,9 +1,19 @@
-from ._anvil_designer import CircularProgressIndicatorTemplate
+from math import cos, pi, sin
+
 from anvil import *
-import anvil.server
 from anvil import HtmlTemplate
-from math import pi, cos, sin
-from ..._utils.properties import get_unset_margin, anvil_prop, tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, margin_property
+
+from ..._utils.properties import (
+  anvil_prop,
+  get_unset_margin,
+  margin_property,
+  role_property,
+  style_property,
+  theme_color_to_css,
+  tooltip_property,
+)
+from ._anvil_designer import CircularProgressIndicatorTemplate
+
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -12,7 +22,6 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     self._props = properties
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-progressindicator-component"]

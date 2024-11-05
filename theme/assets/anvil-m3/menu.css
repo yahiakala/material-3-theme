@@ -95,7 +95,6 @@
   color: var(--anvil-m3-on-surface-variant)
 }
 
-/* todo: focus and active */
 
 /***** ButtonMenu *****/
 .anvil-m3-buttonMenu-container { 
@@ -122,7 +121,6 @@
 .anvil-m3-buttonMenu-items-hidden {
   pointer-events: none;
   opacity: 0;
-/*   height: 1px; */
   overflow: hidden;
 }
 
@@ -135,7 +133,6 @@
 
 
 .anvil-m3-dropdownMenu-items-container { 
-/*   position: fixed; */
   position: absolute;
   overflow-y: auto;
   z-index: 1050;

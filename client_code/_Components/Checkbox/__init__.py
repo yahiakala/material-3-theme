@@ -1,9 +1,28 @@
-from ._anvil_designer import CheckboxTemplate
+import anvil.designer
 from anvil import *
 from anvil import HtmlTemplate
-import anvil.designer
+
 from ..._utils import gen_id
-from ..._utils.properties import get_unset_value, get_unset_spacing, anvil_prop, enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, spacing_property, font_family_property, border_property
+from ..._utils.properties import (
+  anvil_prop,
+  bold_property,
+  border_property,
+  color_property,
+  enabled_property,
+  font_family_property,
+  font_size_property,
+  get_unset_spacing,
+  get_unset_value,
+  italic_property,
+  role_property,
+  spacing_property,
+  style_property,
+  theme_color_to_css,
+  tooltip_property,
+  underline_property,
+)
+from ._anvil_designer import CheckboxTemplate
+
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):

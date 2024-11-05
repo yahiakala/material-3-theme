@@ -87,8 +87,6 @@
 .anvil-m3-button.anvil-m3-outlined:disabled { background: none; border: 1px solid var(--anvil-m3-on-disabled); }
 
 
-
-
 .anvil-m3-button.anvil-m3-full-width, .anvil-m3-buttonMenu-container .anvil-m3-full-width {
   flex-grow: 1;
   display: flex;

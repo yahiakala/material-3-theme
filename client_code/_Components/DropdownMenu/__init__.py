@@ -1,13 +1,20 @@
-from ._anvil_designer import DropdownMenuTemplate
-from anvil import *
-import anvil.server
-from anvil import HtmlTemplate
-from anvil.js import window, get_dom_node
-from anvil.js.window import document
 import anvil.designer
-from ..MenuItem import MenuItem
+import anvil.server
+from anvil import *
+from anvil import HtmlTemplate
+from anvil.js import get_dom_node
+from anvil.js.window import document
+
 from ..._utils import fui, noop
-from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
+from ..._utils.properties import (
+  anvil_prop,
+  get_unset_margin,
+  get_unset_value,
+  inline_editing,
+  margin_property,
+)
+from ..MenuItem import MenuItem
+from ._anvil_designer import DropdownMenuTemplate
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
@@ -138,7 +145,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
-        # if isinstance(child, MenuItem):
         child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
         
   def _update_hover_styles(self):
@@ -211,7 +217,6 @@ class DropdownMenu(DropdownMenuTemplate):
     p.italic = self.items_italic
     p.underline = self.items_underline
     p.text_color = self.items_text_color
-    # p.background = self.items_background_color
     p.font_family = self.items_font_family
     p.font_size = self.items_font_size
     p.hide_leading_icon = True

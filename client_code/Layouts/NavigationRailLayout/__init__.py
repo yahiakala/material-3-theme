@@ -1,8 +1,13 @@
-from ._anvil_designer import NavigationRailLayoutTemplate
 from anvil import *
-import anvil.server
-from ..._utils.properties import innerText_property, color_property, theme_color_to_css, padding_property, anvil_prop
 from anvil.js import window
+
+from ..._utils.properties import (
+  anvil_prop,
+  color_property,
+  padding_property,
+  theme_color_to_css,
+)
+from ._anvil_designer import NavigationRailLayoutTemplate
 
 
 class NavigationRailLayout(NavigationRailLayoutTemplate):
@@ -11,7 +16,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self._props = properties
     self.app_bar = self.dom_nodes['anvil-m3-top-app-bar']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
-    # self.nav_drawer_close_btn = self.dom_nodes['anvil-m3-drawer-close-btn']
     self.nav_rail = self.dom_nodes['anvil-m3-navigation-rail']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
     self.sidesheet_scrim = self.dom_nodes['anvil-m3-sidesheet-scrim']
@@ -24,9 +28,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
     window.document.addEventListener('scroll', self._add_scroll_class)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
-    # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
-   #self.sidesheet_scrim.addEventListener('click', self.close_sidesheet)
 
   #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e):
@@ -70,7 +72,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self.sidesheet.classList.add('anvil-m3-open')
       self.content.classList.add('anvil-m3-sidesheet-open')
       self.sidesheet_previous_state = True
-    #TODO: check timeout stuff
+
   def _close_sidesheet(self):
     self.content.classList.add('anvil-m3-transition-width')
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
