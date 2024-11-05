@@ -3,7 +3,6 @@ import anvil.server
 from anvil import *
 from anvil import HtmlTemplate
 
-
 from ..._utils.properties import (
   anvil_prop,
   enabled_property,
