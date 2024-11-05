@@ -229,12 +229,20 @@ def anvil_prop(*args, **kwargs):
     def my_property(new_value):
       ...
   """
+  # my_property = anvil_prop("my_property")
+  # my_property = anvil_prop("my_property", default_value=42)
+  # my_property = anvil_prop(my_property_setter)
+  # my_property = anvil_prop(default_value=42)(my_property_setter)
+
+  
+  
   if 'default_value' in kwargs:
     # We were called with a default value, return a decorator
-    def dec(fn):
-      if isinstance(fn, str):
-        return property_without_callback(fn)
+    def dec(*args):
+      if isinstance(args[0], str):
+        return property_without_callback(args[0])
       else:
+        fn = args[0]
         return property_with_callback(fn.__name__, fn, kwargs['default_value'])
     return dec
   else:
