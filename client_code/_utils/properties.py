@@ -221,8 +221,13 @@ def anvil_prop(*args, **kwargs):
     def my_property(new_value):
       ...
 
-  
-  
+  In both cases, you can pass a default_value kwarg if required:
+
+    my_property = anvil_prop("my_property", default_value=42)
+
+    @anvil_prop(default_value=42)
+    def my_property(new_value):
+      ...
   """
   if 'default_value' in kwargs:
     # We were called with a default value, return a decorator
