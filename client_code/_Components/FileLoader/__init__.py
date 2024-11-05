@@ -21,7 +21,6 @@ from ..._utils.properties import (
 )
 from ._anvil_designer import FileLoaderTemplate
 
-#todo: fix focus state within column panel
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
