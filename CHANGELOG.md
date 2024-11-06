@@ -1,8 +1,10 @@
 ## Version 1.2.0
 _Release date: 6 November 2024_
 
-**Updated**
-* BREAKING CHANGE: The navigation slot in the NavigationDrawerLayout and the NavigationRailLayout now have the same name. This means that if you change the layout of your Form, the components in the navigation slot will stay there. For existing apps, components that were in a navigation slot will need to be dragged from the orphaned components panel back into the correct slot.
+**Breaking Changes**
+* The navigation slot in the NavigationDrawerLayout and the NavigationRailLayout now have the same name. This means that if you change the layout of your Form, the components in the navigation slot will stay there. For existing apps, components that were in a navigation slot will need to be dragged from the [orphaned components panel](https://anvil.works/docs/ui/layouts#orphaned-components) back into the correct slot.
+
+**Updates**
 * The SidesheetContent component is now pre-populated with a Heading and IconButton.
 * The RadioGroupPanel component is now pre-populated with three RadioButtons.
 * When using the NavigationDrawerLayout that has collapsed to mobile view, you can now double click on the hamburger menu button in the designer to open the navigation drawer.
@@ -11,10 +13,10 @@ _Release date: 6 November 2024_
 * When Text and Heading components have no `text`, their component names actually look like placeholders.
 * The `label` of a TextArea can now be edited from the Object Palette or by double clicking the component.
 
-**Fixed**
+**Fixes**
 * FileLoader now has a `files` property that works as expected.
 * DataGrids now work as expected - they're automatically populated with a RepeatingPanel.
-* Fixed and issue where DropdownMenu items were being duplicated when the `show` event was fired.
+* Fixed an issue where DropdownMenu items were being duplicated when the `show` event was fired.
 * Fixed an issue where you couldn't make changes to DropdownMenu items once the component was rendered.
 * Material Icons no longer flash as text before being rendered as icons.
 * Fixed an issue where Data Binding writeback wasn't working for TextBoxes and TextAreas.
