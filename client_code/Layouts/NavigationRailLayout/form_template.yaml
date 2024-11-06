@@ -41,6 +41,7 @@ properties:
 - default_binding_prop: true
   default_value: bottom_app_bar
   description: The way the side navigation will collapse on mobile.
+  important: true
   name: navigation_rail_collapse_to
   options: [bottom_app_bar, modal_navigation_drawer]
   type: enum
