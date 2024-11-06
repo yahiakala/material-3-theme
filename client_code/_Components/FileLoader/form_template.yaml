@@ -17,12 +17,12 @@ events:
 - {description: When the component is removed from the screen., name: hide}
 is_package: true
 properties:
-- {default_binding_prop: true, description: 'The currently selected file (or the first, if multiple files are selected). This is a Media object.', group: Other, important: true, name: file, type: object}
+- {default_binding_prop: true, description: 'The currently selected file (or the first, if multiple files are selected). This is a Media object.', group: Other, important: false, name: file, type: object}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: 'Specify what type of file to upload. Can accept a MIME type (eg "image/png" or "image/*"), an extension (eg ".png") or a comma-separated set of them (eg ".png,.jpg,.jpeg")', group: Other, important: true, name: file_types, type: string}
-- {description: A list of currently selected files. Each file is a Media object., group: Other, important: true, name: files, type: object}
-- {default_value: false, description: 'If True, this FileLoader can load multiple files at the same time', group: Other, important: false, name: multiple, type: boolean}
-- {default_value: false, description: 'If True, display a message indicating the number of selected files.', group: Other, important: false, name: show_state, type: boolean}
+- {description: A list of currently selected files. Each file is a Media object., group: Other, important: false, name: files, type: object}
+- {default_value: false, description: 'If True, this FileLoader can load multiple files at the same time', group: Other, important: true, name: multiple, type: boolean}
+- {default_value: false, description: 'If True, display a message indicating the number of selected files.', group: Other, important: true, name: show_state, type: boolean}
 - {default_value: File upload, description: The text displayed on this component., group: Key Properties, important: true, name: text, type: string}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - default_value: mi:file_upload
