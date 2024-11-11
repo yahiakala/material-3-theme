@@ -29,6 +29,7 @@ class Link(LinkTemplate):
       self,
       self.dom_nodes['anvil-m3-link-text'],
       self._set_text,
+      enabled=lambda: not self.icon and not self.get_components(),
     )
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
@@ -136,6 +137,7 @@ class Link(LinkTemplate):
     else:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-link-icon'].innerText = value[3:]
+    self._set_designer_text_placeholder()
 
   def _set_text(self, value):
     self.dom_nodes['anvil-m3-link-text'].innerText = value
