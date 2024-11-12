@@ -30,7 +30,17 @@ properties:
   include_none_option: true
   name: selected_icon
   type: icon
-- {default_binding_prop: true, default_value: false, description: 'If True, this component is toggled on.', designerHint: toggle, designer_hint: toggle, group: Key Properties, important: true, name: selected, type: boolean}
+- allow_binding_writeback: true
+  binding_writeback_events: [change]
+  default_binding_prop: true
+  default_value: false
+  description: If True, this component is toggled on.
+  designerHint: toggle
+  designer_hint: toggle
+  group: Key Properties
+  important: true
+  name: selected
+  type: boolean
 - default_value: ''
   description: Optional icon on the Switch when toggled off.
   group: Icon
