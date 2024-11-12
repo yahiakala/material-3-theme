@@ -20,10 +20,20 @@ container:
 custom_component: true
 events:
 - {default_event: true, description: When the value of the component is changed, name: change}
+- {name: change_end}
 - {description: When the component is shown on the screen, name: show}
 - {description: When the component is removed from the screen, name: hide}
 is_package: true
 properties:
+- allow_binding_writeback: true
+  binding_writeback_events: [change_end]
+  default_value: null
+  description: The value of the slider
+  group: Key properties
+  important: true
+  name: value
+  priority: 100
+  type: number
 - {default_value: false, description: Display a label above the thumb, group: Label, important: true, name: show_label, type: boolean}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, name: enabled, type: boolean}
@@ -33,14 +43,6 @@ properties:
 - {default_value: '', description: The colour of the background of the label., group: Label, important: false, name: label_color, type: color}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: The colour of the text of the label., group: Label, important: false, name: label_text_color, type: color}
-- allow_binding_writeback: true
-  default_value: null
-  description: The value of the slider
-  group: Key properties
-  important: true
-  priority: 100
-  name: value
-  type: number
 - {default_value: 0, description: The minimum value of the Slider., group: Key properties, important: true, name: min, type: number}
 - {default_value: 10, description: The maximum value of the Slider., group: Key properties, important: true, name: max, type: number}
 - {description: The stepping interval for the Slider, group: Key properties, important: true, name: step, type: number}
