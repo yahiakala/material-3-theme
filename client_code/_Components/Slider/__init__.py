@@ -53,7 +53,7 @@ class Slider(SliderTemplate):
     return {"margin": m}
 
   def _on_change(self, event):
-    self.raise_event("x-anvil-write-back-value")
+    self.raise_event("change_end")
 
   def _on_input(self, event):
     self._update_progress()
