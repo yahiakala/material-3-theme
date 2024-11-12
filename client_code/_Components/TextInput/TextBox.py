@@ -117,7 +117,16 @@ class TextBox(TextInput):
 
   def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("trailing_icon_click")
+    self.raise_event(
+      "trailing_icon_click",
+      event=event,
+      keys={
+        "shift": event.shiftKey,
+        "alt": event.altKey,
+        "ctrl": event.ctrlKey,
+        "meta": event.metaKey,
+      },
+    )
 
   def _set_id(self, value):
     super()._set_id(value)

@@ -136,9 +136,9 @@ class DropdownMenu(DropdownMenuTemplate):
 
       if event.key == " ":
         event.preventDefault()
-        self._attempt_select()
+        self._attempt_select(event)
       if event.key == "Enter":
-        self._attempt_select()
+        self._attempt_select(event)
 
   def _iterate_hover(self, inc=True):
     if inc:
@@ -154,9 +154,18 @@ class DropdownMenu(DropdownMenuTemplate):
     ].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
-  def _attempt_select(self):
+  def _attempt_select(self, event):
     if self._hoverIndex is not None:
-      self._children[self._hoverIndex].raise_event("click")
+        self._children[self._hoverIndex].raise_event(
+          "click",
+          event=event,
+          keys={
+            "shift": event.shiftKey,
+            "alt": event.altKey,
+            "ctrl": event.ctrlKey,
+            "meta": event.metaKey,
+          },
+        )
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):

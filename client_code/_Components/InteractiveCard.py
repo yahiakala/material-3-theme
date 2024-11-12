@@ -21,7 +21,16 @@ class InteractiveCard(Card):
 
   def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("click")
+    self.raise_event(
+      "click",
+      event=event,
+      keys={
+        "shift": event.shiftKey,
+        "alt": event.altKey,
+        "ctrl": event.ctrlKey,
+        "meta": event.metaKey,
+      },
+    )
 
   #!componentProp(m3.InteractiveCard)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(m3.InteractiveCard)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
