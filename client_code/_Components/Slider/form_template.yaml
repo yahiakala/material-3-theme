@@ -39,6 +39,7 @@ properties:
   description: The value of the slider
   group: Key properties
   important: true
+  priority: 100
   name: value
   type: number
 - {default_value: 0, description: The minimum value of the Slider., group: Key properties, important: true, name: min, type: number}
