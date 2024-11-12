@@ -16,7 +16,6 @@ events:
 is_package: true
 properties:
 - allow_binding_writeback: true
-  binding_writeback_events: [change]
   default_binding_prop: true
   description: Value property of the selected RadioButton
   important: true

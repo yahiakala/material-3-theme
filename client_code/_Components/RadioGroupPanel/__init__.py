@@ -27,6 +27,7 @@ class RadioGroup(Component):
     self._buttons.remove(button)
 
   def _handle_change(self):
+    self.raise_event("x-anvil-write-back-selected_value")
     self.raise_event("change")
   
   @property
