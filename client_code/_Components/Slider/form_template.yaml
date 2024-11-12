@@ -34,7 +34,6 @@ properties:
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: '', description: The colour of the text of the label., group: Label, important: false, name: label_text_color, type: color}
 - allow_binding_writeback: true
-  binding_writeback_events: [change]
   default_value: null
   description: The value of the slider
   group: Key properties
