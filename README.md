@@ -7,7 +7,7 @@
 The Material 3 theme is just an Anvil app that you can add as a [dependency](https://anvil.works/docs/deployment-new-ide/dependencies) to other Anvil apps. 
 
 > [!Important]
-> The Material 3 theme is still in beta while we work out the bugs, add more components and make it more user-friendly. If you'd like to help us improve the theme, check out our [contributing](/contributing.md) file to learn how to get involved!
+> The Material 3 theme is still in beta while we work out the bugs, add more components and make it more user-friendly. If you'd like to help us improve the theme, check out our [contributing](/CONTRIBUTING.md) file to learn how to get involved!
 
 ## How to use the theme
 
@@ -23,7 +23,7 @@ You can also add the theme to an existing app. Go to Settings -> Dependencies an
 
 ## Want to contribute?
 
-The Material 3 theme is currently incomplete! If you'd like to pitch in and help us make the theme better and more complete, read our [contributing file](/contributing) to learn how to get started.
+The Material 3 theme is currently incomplete! If you'd like to pitch in and help us make the theme better and more complete, read our [contributing file](/CONTRIBUTING.md) to learn how to get started.
 
 ## What is Anvil?
 
