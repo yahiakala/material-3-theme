@@ -543,13 +543,9 @@ body {
   text-shadow: none;
   color: %color:Inverse On Surface%;
   opacity: 1;
-  content: "\e5cd"
+  /* content: "\e5cd" */
 }
 
-.anvil-close::before {
-  font-family: "Material Icons";
-  content: "\e878"
-}
 
 .anvil-modal-title {
   font-size: 24px;
