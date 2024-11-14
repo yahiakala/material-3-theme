@@ -540,7 +540,8 @@ body {
   border:none;
   background: transparent;
   font-family: "Material Icons";
-  content:"e5cd"
+  text-shadow: none;
+  color: %color:Inverse On Surface%
 }
 
 .anvil-modal-title {
@@ -579,17 +580,22 @@ body {
   color: %color:On Error%
 }
 
+
 .anvil-alert.anvil-alert-success {
   background-color: %color:Primary%;
   color: %color:On Primary%
 }
+
 
 .anvil-alert.anvil-alert-warning {
   background-color:#f7edb6;
   color: #2b2b2b;
 }
 
-
+.anvil-alert.anvil-alert-warning .anvil-close {
+  color: #2b2b2b;
+}
+  
 /*DIVIDER*/
 .anvil-m3-divider {
   border-top: solid 1px %color:Outline Variant%;
