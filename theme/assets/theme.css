@@ -537,7 +537,10 @@ body {
 }
 
 .anvil-close {
-  /* display: none; */
+  border:none;
+  background: transparent;
+  font-family: "Material Icons";
+  content:"e5cd"
 }
 
 .anvil-modal-title {
@@ -566,7 +569,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.25px;
   min-height: 48px;
-  display: flex !important;
+  /* display: flex !important; */
   flex-direction: column;
   justify-items: center !important;
 }
