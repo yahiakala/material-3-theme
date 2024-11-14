@@ -537,7 +537,7 @@ body {
 }
 
 .anvil-close {
-  display: none;
+  /* display: none; */
 }
 
 .anvil-modal-title {
