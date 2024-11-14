@@ -546,6 +546,11 @@ body {
   content: "\e5cd"
 }
 
+.anvil-close::before {
+  font-family: "Material Icons";
+  content: "\e878"
+}
+
 .anvil-modal-title {
   font-size: 24px;
   line-height: 32px;
