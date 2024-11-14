@@ -541,7 +541,9 @@ body {
   background: transparent;
   font-family: "Material Icons";
   text-shadow: none;
-  color: %color:Inverse On Surface%
+  color: %color:Inverse On Surface%;
+  opacity: 1;
+  content: "\e5cd"
 }
 
 .anvil-modal-title {
