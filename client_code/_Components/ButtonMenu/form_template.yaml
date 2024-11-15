@@ -13,9 +13,9 @@ custom_component: true
 custom_component_container: true
 data_bindings: []
 events:
-- {default_event: true, description: When the component is shown on the screen, name: show}
+- {default_event: true, description: When the Button is clicked, name: click}
+- {description: When the component is shown on the screen, name: show}
 - {description: When the component is removed from the screen, name: hide}
-- {description: When the Button is clicked, name: click}
 is_package: true
 properties:
 - {default_binding_prop: true, default_value: '', description: The text displayed on the Button., group: Key Properties, important: true, name: text, type: string}

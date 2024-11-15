@@ -32,7 +32,16 @@ class IconButton(IconButtonTemplate):
     
   def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("click")
+    self.raise_event(
+      "click",
+      event=event,
+      keys={
+        "shift": event.shiftKey,
+        "alt": event.altKey,
+        "ctrl": event.ctrlKey,
+        "meta": event.metaKey,
+      },
+    )
 
   #!componentProp(m3.IconButton)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
   #!componentProp(m3.IconButton)!1: {name:"appearance",type:"enum",options:["standard", "filled", "tonal", "outlined"],description:"A predefined style for this component."}  

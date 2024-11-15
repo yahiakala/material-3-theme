@@ -24,7 +24,7 @@ class MenuItem(MenuItemTemplate):
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
+    self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self._handle_click)
 
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
@@ -73,9 +73,18 @@ class MenuItem(MenuItemTemplate):
     self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-disabled", not value)
 
   """ Functions """
-  def handle_click(self, event):
+  def _handle_click(self, event):
     event.preventDefault()
-    self.raise_event("click")
+    self.raise_event(
+      "click",
+      event=event,
+      keys={
+        "shift": event.shiftKey,
+        "alt": event.altKey,
+        "ctrl": event.ctrlKey,
+        "meta": event.metaKey,
+      },
+    )
 
   def _anvil_get_interactions_(self):
     return [{

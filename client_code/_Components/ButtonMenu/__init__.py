@@ -71,8 +71,17 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _handle_click(self, event):
     if self.enabled:
-      self.raise_event('click')
-    
+      self.raise_event(
+        "click",
+        event=event,
+        keys={
+          "shift": event.shiftKey,
+          "alt": event.altKey,
+          "ctrl": event.ctrlKey,
+          "meta": event.metaKey,
+        },
+      )
+
   menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
   menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
   visible = HtmlTemplate.visible
@@ -190,7 +199,16 @@ class ButtonMenu(ButtonMenuTemplate):
     # do the click action. The child should handle this
     self._toggle_visibility(False)
     if self.enabled:
-      self.raise_event("click")
+      self.raise_event(
+        "click",
+        event=event,
+        keys={
+          "shift": event.shiftKey,
+          "alt": event.altKey,
+          "ctrl": event.ctrlKey,
+          "meta": event.metaKey,
+        },
+      )
 
   def _body_click(self, event):
     if self._btnNode.contains(event.target) or self._menuNode.contains(event.target):
@@ -219,7 +237,16 @@ class ButtonMenu(ButtonMenuTemplate):
     def attemptSelect():
       event.preventDefault()
       if hover is not None:
-        self._children[hover].raise_event("click")
+        self._children[hover].raise_event(
+          "click",
+          event=event,
+          keys={
+            "shift": event.shiftKey,
+            "alt": event.altKey,
+            "ctrl": event.ctrlKey,
+            "meta": event.metaKey,
+          },
+        )
     
     if event.key == " ": # " " indicates the space key
       attemptSelect()

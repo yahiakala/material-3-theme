@@ -60,7 +60,16 @@ class ToggleIconButton(IconButton):
   def _handle_click(self, event):
     event.preventDefault()
     self.selected = not self.selected
-    self.raise_event("click")
+    self.raise_event(
+      "click",
+      event=event,
+      keys={
+        "shift": event.shiftKey,
+        "alt": event.altKey,
+        "ctrl": event.ctrlKey,
+        "meta": event.metaKey,
+      },
+    )
 
   def _toggle_selected(self):
     self.selected = not self.selected
