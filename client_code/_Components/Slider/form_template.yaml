@@ -20,7 +20,7 @@ container:
 custom_component: true
 events:
 - {default_event: true, description: When the value of the component is changed, name: change}
-- {name: change_end}
+- {description: When the Slider is no longer being dragged, name: change_end}
 - {description: When the component is shown on the screen, name: show}
 - {description: When the component is removed from the screen, name: hide}
 is_package: true
