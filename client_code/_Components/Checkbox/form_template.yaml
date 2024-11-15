@@ -22,7 +22,17 @@ events:
 - {description: When the component is removed from the screen., name: hide}
 is_package: true
 properties:
-- {default_binding_prop: true, default_value: false, description: Whether or not the checkbox is checked., designerHint: toggle, designer_hint: toggle, group: Key Properties, important: true, name: checked, type: boolean}
+- allow_binding_writeback: true
+  binding_writeback_events: [change]
+  default_binding_prop: true
+  default_value: false
+  description: Whether or not the checkbox is checked.
+  designerHint: toggle
+  designer_hint: toggle
+  group: Key Properties
+  important: true
+  name: checked
+  type: boolean
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_value: true, description: 'If True, this component allows user interaction.', designerHint: enabled, designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
