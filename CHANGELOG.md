@@ -5,14 +5,14 @@ _Release date: 15 November 2024_
 * When in the designer, the placeholder text for the Link looks more like placeholder text
   
 **Fixes**
-The Dropdown border is now rounded on the dropdown menu 
-Fixed an issue with the Dropdown where when the items are a list of tuples, the selected_value is the entire tuple
-Fixed an issue where the label text for Dropdowns was appearing beind the outline
-Add writeback support for various components (Checkbox, DropdownMenu, RadioGroupPanel, Switch)
-Placeholder text reappears when a component is removed from a Link
-Added close button to Notifications and Confirms
-Added click event parameters to all click events. Add the keys argument to ButtomMenus, IconButtons and ToggleIconButtons
-Added slider change_end event
+* The Dropdown border is now rounded on the dropdown menu 
+* Fixed an issue with the Dropdown where when the items are a list of tuples, the selected_value is the entire tuple
+* Fixed an issue where the label text for Dropdowns was appearing beind the outline
+* Add writeback support for various components (Checkbox, DropdownMenu, RadioGroupPanel, Switch)
+* Placeholder text reappears when a component is removed from a Link
+* Added close button to Notifications and Confirms
+* Added click event parameters to all click events. Add the keys argument to ButtomMenus, IconButtons and ToggleIconButtons
+* Added slider change_end event
 
 ## Version 1.2.0
 _Release date: 6 November 2024_
