@@ -323,6 +323,8 @@ def inline_editing(
       text = anvil.designer.get_design_name(component)
       set_text(text)
       placeholder_node.classList.add('anvil-m3-textlessComponentText')
+    else:
+      set_text(getattr(component, prop))
 
   def start_inline_editing():
     set_designer_text_placeholder(True)
