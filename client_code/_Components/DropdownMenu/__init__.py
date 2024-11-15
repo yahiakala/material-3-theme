@@ -1,7 +1,6 @@
+import anvil
 import anvil.designer
 import anvil.server
-from anvil import *
-from anvil import HtmlTemplate
 from anvil.js import get_dom_node
 from anvil.js.window import document
 
@@ -16,41 +15,41 @@ from ..._utils.properties import (
 from ..MenuItem import MenuItem
 from ._anvil_designer import DropdownMenuTemplate
 
+
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._init = False
-    self.tag = ComponentTag()
+    self.tag = anvil.ComponentTag()
     self._props = properties
+    self._clean_items = []
+    self._children = []
+    self._hoverIndex = None
+    self.selected_value = None
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
       self,
       self.selection_field.dom_nodes['anvil-m3-label-text'],
       self._set_label,
-      "label"
+      "label",
     )
-    self.init_components(**properties)
     self._cleanup = noop
-
+    self._has_focus = False
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self._field = get_dom_node(self.selection_field).querySelector("input")
 
-    self._hoverIndex = None
-    self._children = None
-
-    self.selected_value = None
+    self.init_components(**properties)
 
     if not self.allow_none:
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = ""
 
-    self._has_focus = False
-    self._handle_keyboard_events = self._handle_keyboard_events
-    self._handle_selection_field_focus = self._handle_selection_field_focus
-    self._child_clicked = self._child_clicked
-    self._body_click = self._body_click
-    self._handle_component_click = self._handle_component_click
-
-    self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('blur', self._handle_selection_field_blur)
+    self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener(
+      'click', self._handle_component_click
+    )
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener(
+      'focus', self._handle_selection_field_focus
+    )
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener(
+      'blur', self._handle_selection_field_blur
+    )
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -58,27 +57,45 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['anvil-m3-textbox'].style.caretColor = 'transparent'
     self.selection_field.dom_nodes['anvil-m3-textbox'].style.cursor = "pointer"
     self.selection_field.dom_nodes['anvil-m3-textbox'].setAttribute("readonly", True)
-  
+
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
-      
+
     self._init = True
     self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
     m = get_unset_margin(el, self.margin)
-    lfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size)
-    stfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-supporting-text'], "fontSize", self.supporting_text_font_size)
-    sfs = get_unset_value(self.selection_field.dom_nodes['anvil-m3-textbox'], "fontSize", self.selected_font_size)
-    return {"label_font_size": lfs, "supporting_text_font_size": stfs, "selected_font_size": sfs, "margin": m}
+    lfs = get_unset_value(
+      self.selection_field.dom_nodes['anvil-m3-label-text'],
+      "fontSize",
+      self.label_font_size,
+    )
+    stfs = get_unset_value(
+      self.selection_field.dom_nodes['anvil-m3-supporting-text'],
+      "fontSize",
+      self.supporting_text_font_size,
+    )
+    sfs = get_unset_value(
+      self.selection_field.dom_nodes['anvil-m3-textbox'],
+      "fontSize",
+      self.selected_font_size,
+    )
+    return {
+      "label_font_size": lfs,
+      "supporting_text_font_size": stfs,
+      "selected_font_size": sfs,
+      "margin": m,
+    }
 
-  
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
     document.addEventListener('click', self._body_click)
     document.body.append(self._menuNode)
-    self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
+    self._cleanup = fui.auto_update(
+      self._field, self._menuNode, placement="bottom-start", offset=0
+    )
     self._menuNode.addEventListener('click', self._child_clicked)
 
   def _on_cleanup(self, **event_args):
@@ -90,12 +107,12 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _handle_selection_field_focus(self, event):
     if not self.label:
-        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
+      self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
     self._has_focus = False
-    
+
   def _handle_keyboard_events(self, event):
     if not self._has_focus:
       return
@@ -119,13 +136,13 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key in ["Tab", "Escape"]:
         self._set_menu_visibility(False)
 
-      if (event.key == " "):
+      if event.key == " ":
         event.preventDefault()
         self._attempt_select()
-      if (event.key == "Enter"):
+      if event.key == "Enter":
         self._attempt_select()
 
-  def _iterate_hover(self, inc = True):
+  def _iterate_hover(self, inc=True):
     if inc:
       if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
         self._hoverIndex = -1
@@ -134,61 +151,63 @@ class DropdownMenu(DropdownMenuTemplate):
       if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       self._hoverIndex -= 1
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
+    self._children[self._hoverIndex].dom_nodes[
+      'anvil-m3-menuItem-container'
+    ].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
   def _attempt_select(self):
-    if not self._hoverIndex is None:
+    if self._hoverIndex is not None:
       self._children[self._hoverIndex].raise_event("click")
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
-        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
-        
+        child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle(
+          'anvil-m3-menuItem-container-keyboardHover', False
+        )
+
   def _update_hover_styles(self):
     self._clear_hover_styles()
     if self._hoverIndex is None:
       return
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+    self._children[self._hoverIndex].dom_nodes[
+      'anvil-m3-menuItem-container'
+    ].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
     self._set_menu_visibility()
 
-  def _set_menu_visibility(self, value = None):
-    if (value is None):
+  def _set_menu_visibility(self, value=None):
+    if value is None:
       value = not self.menu.visible
-    
+
     self.menu.visible = value
     self._menuNode.classList.toggle("anvil-m3-menu-hidden", not value)
-    
+
     if value:
       selection_field_width = get_dom_node(self.selection_field).offsetWidth
       self._menuNode.style.width = f"{selection_field_width}px"
-      
+
       # dealing with hover
-      if self.allow_none is True:
-        if self.selected_value is None:
-          self._hoverIndex = 0  
-      elif self.selected_value in self.items:
-        for index, child in enumerate(self._children):
-          if isinstance(self.selected_value, tuple):
-            if child.text == self.selected_value:
-              self._hoverIndex = index
-          else:
-            if child.text is self.selected_value:
-              self._hoverIndex = index
-      else:
+      selected_value = self.selected_value
+      for index, child in enumerate(self._children):
+        if child.tag.value == selected_value:
+          self._hoverIndex = index
+          break
+      else:  # no break
         self._hoverIndex = None
-          
+
       self._update_hover_styles()
 
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "mi:arrow_drop_up"
         if self._hoverIndex:
-          self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
-        
+          self._children[self._hoverIndex].dom_nodes[
+            'anvil-m3-menuItem-container'
+          ].scrollIntoView({'block': 'nearest'})
+
     else:
       self.selection_field.trailing_icon = "mi:arrow_drop_down"
       if self.selected_value is None:
@@ -196,7 +215,11 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _body_click(self, event):
     icon = self.selection_field.dom_nodes['anvil-m3-icon-container']
-    if self._field.contains(event.target) or self._menuNode.contains(event.target) or icon.contains(event.target):
+    if (
+      self._field.contains(event.target)
+      or self._menuNode.contains(event.target)
+      or icon.contains(event.target)
+    ):
       self._has_focus = True
       return
     self._set_menu_visibility(False)
@@ -210,53 +233,50 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _create_menu_items(self):
     self.menu.clear()
-    
-    p = MenuItem()
-    p.text = self.placeholder if self.placeholder else ""
-    p.bold = self.items_bold
-    p.italic = self.items_italic
-    p.underline = self.items_underline
-    p.text_color = self.items_text_color
-    p.font_family = self.items_font_family
-    p.font_size = self.items_font_size
-    p.hide_leading_icon = True
+    item_props = {
+      "hide_leading_icon": True,
+      "bold": self.items_bold,
+      "italic": self.items_italic,
+      "underline": self.items_underline,
+      "text_color": self.items_text_color,
+      "font_family": self.items_font_family,
+      "font_size": self.items_font_size,
+    }
+
+    p = MenuItem(**item_props, text=self.placeholder or "")
+    p.tag.value = None
+    p.tag.label = ""
 
     def _handle_select_placeholder(**e):
-      if self.allow_none: 
+      if self.allow_none:
         self.selected_value = None
       self.raise_event("change")
 
     if not self.allow_none:
       p.enabled = False
 
+    self._children = []
+
     if self.allow_none or self.placeholder:
       p.add_event_handler('click', _handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
-      self._children = [p]
+      self._children.append(p)
 
-    for item in self.items:
-      selection = MenuItem()
-      selection.hide_leading_icon = True
+    for label, value in self._clean_items:
+      selection = MenuItem(**item_props, text=label)
+      selection.tag.value = value
+      selection.tag.label = label
 
-      selection.bold = self.items_bold
-      selection.italic = self.items_italic
-      selection.underline = self.items_underline
-      selection.text_color = self.items_text_color
-      selection.font_family = self.items_font_family
-      selection.font_size = self.items_font_size
-
-      selection.text = item
-
-      def _handle_selection_click(value = item, **e):
+      def _handle_selection_click(value=value, **e):
         self.selected_value = value
         self.raise_event("change")
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
-      if self._children is None:
-        self._children = [selection]
-      else:
-        self._children.append(selection)
+      self._children.append(selection)
+    
+    if not anvil.designer.in_designer:
+      self.selected_value = self.selected_value
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -270,10 +290,13 @@ class DropdownMenu(DropdownMenuTemplate):
       }
     ]
 
-  #properties
-  visible = HtmlTemplate.visible
+  # properties
+  visible = anvil.HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
-  allow_none = anvil_prop("allow_none")
+
+  @anvil_prop
+  def allow_none(self, value):
+    self._recreate_items()
 
   @anvil_prop
   def background_color(self, value):
@@ -377,10 +400,14 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def error(self, value):
-    if value: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add('anvil-m3-dropdown-error')
-    else: 
-      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove('anvil-m3-dropdown-error')
+    if value:
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add(
+        'anvil-m3-dropdown-error'
+      )
+    else:
+      self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove(
+        'anvil-m3-dropdown-error'
+      )
 
   def _set_label(self, value):
     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = value
@@ -392,68 +419,83 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def selected_value(self, value):
-    if (value is None and self.allow_none) or (value in self.items):
-      if value is None and self.allow_none:
-        self._hoverIndex = None
-      if isinstance(value, tuple):
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value[0]
-      else:
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value
-    else:
+    for child in self._children:
+      if child.tag.value == value:
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = child.tag.label
+        break
+    else:  # no break
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
 
   @anvil_prop
   def placeholder(self, value):
     self.selection_field.placeholder = value
-    
+    self._recreate_items()
+
   def _recreate_items(self):
     if self._init:
       self._create_menu_items()
-  
+
   @anvil_prop
   def items(self, value):
+    items = value
+    clean_items = self._clean_items = []
+    for i, item in enumerate(items):
+      if isinstance(item, str):
+        clean_items.append((item, item))
+      elif not isinstance(item, (tuple, list)):
+        raise TypeError("DropdownMenu items must be a list of strings or tuples")
+      else:
+        label, value = item
+        if not isinstance(label, str):
+          raise TypeError(
+            "Dropdown item tuples must be of the form ('label', value),"
+            f" (at item ${i} got {item!r})"
+          )
+
+        clean_items.append((label, value))
+
     self._recreate_items()
-    
+
   @anvil_prop
   def items_italic(self, value):
     self._recreate_items()
-  
+
   @anvil_prop
   def items_underline(self, value):
     self._recreate_items()
-  
+
   @anvil_prop
   def items_text_color(self, value):
     self._recreate_items()
-  
+
   @anvil_prop
   def items_bold(self, value):
     self._recreate_items()
-  
+
   @anvil_prop
   def items_font_family(self, value):
     self._recreate_items()
-  
+
   @anvil_prop
   def items_font_size(self, value):
     self._recreate_items()
 
-  #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(m3.DropdownMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.DropdownMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(m3.DropdownMenu)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(m3.DropdownMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(m3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(m3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"label",type:"string",description:"The label text of the component."}
   #!componentProp(m3.DropdownMenu)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(m3.DropdownMenu)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(m3.DropdownMenu)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
   #!componentProp(m3.DropdownMenu)!1: {name:"label_italic",type:"boolean",description:"If True, the label text will be italic."}
   #!componentProp(m3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
-  #!componentProp(m3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
@@ -469,7 +511,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(m3.DropdownMenu)!1: {name:"selected_italic",type:"boolean",description:"If True and there is a selected item, the displayed text in italic."}
   #!componentProp(m3.DropdownMenu)!1: {name:"selected_bold",type:"boolean",description:"If True and there is a selected item, the displayed text is bold."}
 
-  #!componentProp(m3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(m3.DropdownMenu)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."}
   #!componentProp(m3.DropdownMenu)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
 
   #!componentProp(m3.DropdownMenu)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed below this component"}
@@ -487,8 +529,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(m3.DropdownMenu)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
   #!componentProp(m3.DropdownMenu)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-
   #!componentEvent(m3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
-#!defClass(m3,DropdownMenu, anvil.Component)!:
 
+#!defClass(m3,DropdownMenu, anvil.Component)!:
