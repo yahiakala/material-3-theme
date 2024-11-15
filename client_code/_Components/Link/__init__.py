@@ -35,6 +35,17 @@ class Link(LinkTemplate):
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
+  def add_component(self, component, **layout_props):
+    if not anvil.designer.in_designer:
+      return super().add_component(component, **layout_props)
+
+    def on_removed(sender, **event_args):
+      sender.remove_event_handler("x-anvil-page-removed", on_removed)
+      self._set_designer_text_placeholder()
+
+    component.add_event_handler("x-anvil-page-removed", on_removed)
+    return super().add_component(component, **layout_props)
+
   def _on_cleanup(self, **event_args):
     self._revoke_tmp_url()
 
