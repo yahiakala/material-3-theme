@@ -111,7 +111,6 @@
   position: absolute;
   margin-top: -34px;
   margin-left: 35px;
-  font-family: Roboto;
 }
 
 .anvil-m3-navigation-link .anvil-m3-icon-badge.anvil-m3-large-badge {
@@ -221,6 +220,7 @@
 @media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-navigation-link-container {
   display: block;
+}
 }
   
 @media(max-width: 600px) {
