@@ -37,19 +37,13 @@ class TextInput(TextInputTemplate):
       self.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size
     )
     spfs = get_unset_value(
-      self.dom_nodes['anvil-m3-supporting-text'],
+      self.dom_nodes['anvil-m3-subcontent'],
       "fontSize",
-      self.supporting_text_font_size,
-    )
-    clfs = get_unset_value(
-      self.dom_nodes['anvil-m3-character-counter'],
-      "fontSize",
-      self.character_limit_font_size,
+      self.subcontent_font_size,
     )
     return {
       "label_font_size": lfs,
-      "supporting_text_font_size": spfs,
-      "character_limit_font_size": clfs,
+      "subcontent_font_size": spfs,
       "margin": m,
     }
 
@@ -97,23 +91,14 @@ class TextInput(TextInputTemplate):
   label_color = color_property('anvil-m3-label-text', 'color', 'label_color')
   margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
-  supporting_text_color = color_property(
-    'anvil-m3-supporting-text', 'color', 'supporting_text_color'
+  subcontent_color = color_property(
+    'anvil-m3-subcontent', 'color', 'subcontent_color'
   )
-  supporting_text_font_family = font_family_property(
-    'anvil-m3-supporting-text', 'supporting_text_font_family'
+  subcontent_font_family = font_family_property(
+    'anvil-m3-subcontent', 'subcontent_font_family'
   )
-  supporting_text_font_size = font_size_property(
-    'anvil-m3-supporting-text', 'supporting_text_font_size'
-  )
-  character_limit_color = color_property(
-    'anvil-m3-character-counter', 'color', 'charcter_limit_color'
-  )
-  character_limit_font_family = font_family_property(
-    'anvil-m3-character-counter', 'character_limit_font_family'
-  )
-  character_limit_font_size = font_size_property(
-    'anvil-m3-character-counter', 'character_limit_font_size'
+  subcontent_font_size = font_size_property(
+    'anvil-m3-subcontent', 'subcontent_font_size'
   )
 
   @anvil_prop
