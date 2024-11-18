@@ -41,15 +41,9 @@ class TextInput(TextInputTemplate):
       "fontSize",
       self.subcontent_font_size,
     )
-    clfs = get_unset_value(
-      self.dom_nodes['anvil-m3-character-counter'],
-      "fontSize",
-      self.character_limit_font_size,
-    )
     return {
       "label_font_size": lfs,
       "subcontent_font_size": spfs,
-      "character_limit_font_size": clfs,
       "margin": m,
     }
 
