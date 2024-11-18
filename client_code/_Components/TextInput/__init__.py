@@ -92,13 +92,13 @@ class TextInput(TextInputTemplate):
   margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
   subcontent_color = color_property(
-    'anvil-m3-supporting-text', 'color', 'subcontent_color'
+    'anvil-m3-subcontent', 'color', 'subcontent_color'
   )
   subcontent_font_family = font_family_property(
-    'anvil-m3-supporting-text', 'subcontent_font_family'
+    'anvil-m3-subcontent', 'subcontent_font_family'
   )
   subcontent_font_size = font_size_property(
-    'anvil-m3-supporting-text', 'subcontent_font_size'
+    'anvil-m3-subcontent', 'subcontent_font_size'
   )
 
   @anvil_prop
