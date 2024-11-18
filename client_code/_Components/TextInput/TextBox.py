@@ -307,7 +307,7 @@ class TextBox(TextInput):
       "type", "password" if value else self.type
     )
 
-  align = style_property('anvil-m3-textarea', 'textAlign', 'align')
+  align = style_property('anvil-m3-textbox', 'textAlign', 'align')
 
   #!componentProp(m3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
   #!componentProp(m3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}
