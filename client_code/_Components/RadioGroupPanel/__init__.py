@@ -4,7 +4,8 @@ from ._anvil_designer import RadioGroupPanelTemplate
 
 
 class RadioGroup(Component):
-  _anvil_events_ = [{"name": "change"}]
+  #TODO: why is this here?
+  # _anvil_events_ = [{"name": "change", "default_true": "True"}]
 
   def __init__(self):
     self._buttons = []
