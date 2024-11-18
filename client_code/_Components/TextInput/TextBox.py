@@ -337,7 +337,7 @@ class TextBox(TextInput):
   #!componentProp(m3.TextBox)!1: {name:"character_limit",type:"number",description:"The max number of characters a user can enter into this component. The limit is displayed below the component."}
   #!componentProp(m3.TextBox)!1: {name:"subcontent_color",type:"color",description:"The colour of the supporting text and the character limit below this component."}
   #!componentProp(m3.TextBox)!1: {name:"subcontent_font_family",type:"color",description:"The font family to use for the supporting text and the character limit below this component."}
-  #!componentProp(m3.TextBox)!1: {name:"ssubcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed below this component."}
+  #!componentProp(m3.TextBox)!1: {name:"subcontent_font_size",type:"color",description:"The font size of the supporting text and the character limit displayed below this component."}
 
   #!componentProp(m3.TextBox)!1: {name:"background_color",type:"color",description:"The colour of the background of this component."}
   #!componentProp(m3.TextBox)!1: {name:"border_color",type:"color",description:"The colour of the border of this component."}
