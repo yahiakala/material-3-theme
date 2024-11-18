@@ -37,7 +37,7 @@ class TextInput(TextInputTemplate):
       self.dom_nodes['anvil-m3-label-text'], "fontSize", self.label_font_size
     )
     spfs = get_unset_value(
-      self.dom_nodes['anvil-m3-supporting-text'],
+      self.dom_nodes['anvil-m3-subcontent'],
       "fontSize",
       self.subcontent_font_size,
     )
