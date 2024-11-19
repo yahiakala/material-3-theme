@@ -339,6 +339,10 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def appearance(self, value):
     self.selection_field.appearance = value
+  
+  @anvil_prop
+  def align(self, value):
+    self.selection_field.align = value
 
   @anvil_prop
   def role(self, value):
