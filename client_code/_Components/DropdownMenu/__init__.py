@@ -390,15 +390,15 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def supporting_text_color(self, value):
-    self.selection_field.supporting_text_color = value
+    self.selection_field.subcontent_color = value
 
   @anvil_prop
   def supporting_text_font_family(self, value):
-    self.selection_field.supporting_text_font_family = value
+    self.selection_field.subcontent_font_family = value
 
   @anvil_prop
   def supporting_text_font_size(self, value):
-    self.selection_field.supporting_text_font_size = value
+    self.selection_field.subcontent_font_size = value
 
   @anvil_prop
   def border_color(self, value):
