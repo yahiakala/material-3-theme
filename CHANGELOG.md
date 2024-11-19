@@ -1,18 +1,23 @@
 ## Version 1.2.1
-_Release date: 15 November 2024_
+_Release date: 19 November 2024_
 
 **Updates**
 * When in the designer, the placeholder text for the Link looks more like placeholder text
+* The RadioGroupPanel's `change` event now appears in the Object Palette
   
 **Fixes**
-* The Dropdown border is now rounded on the dropdown menu 
-* Fixed an issue with the Dropdown where when the items are a list of tuples, the selected_value is the entire tuple
-* Fixed an issue where the label text for Dropdowns was appearing beind the outline
+* The border of the DropdownMenu menu is now rounded
+* Fixed an issue with the DropdownMenu where when the items are a list of tuples, the selected_value is the entire tuple
+* Fixed an issue with outlined DropdownMenu where the label was appearing beind the component's border
 * Add writeback support for various components (Checkbox, DropdownMenu, RadioGroupPanel, Switch)
-* Placeholder text reappears when a component is removed from a Link
-* Added close button to Notifications and Confirms
+* The placeholder text reappears when a component is removed from a Link
+* Added a close button to Notification and Confirm modals
 * Added click event parameters to all click events. Add the keys argument to ButtomMenus, IconButtons and ToggleIconButtons
-* Added slider change_end event
+* Added the `change_end` event to Sliders, which triggers when the user stops dragging the Slider thumb
+* Inherit the font-family of Buttons and NavigationLinks from the body
+* Fix typo in the Toolbox with the LinearPanel
+* Fixed the TextInput subcontent style properties to work as expected
+* The align property now works as expected for TextBoxes and DropdownMenus
 
 ## Version 1.2.0
 _Release date: 6 November 2024_
