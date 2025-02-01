@@ -4,6 +4,10 @@ container:
   type: HtmlTemplate
 is_package: true
 slots:
+  slot_account:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-dream-account-content}
+    target: {name: '', type: container}
   slot_content:
     index: 0
     set_layout_properties: {slot: anvil-m3-dream-content}
