@@ -2,7 +2,7 @@ components_by_slot:
   slot_account:
   - layout_properties: {}
     name: button_menu_1
-    properties: {}
+    properties: {align: full}
     type: form:_Components.ButtonMenu
   slot_content:
   - components:
