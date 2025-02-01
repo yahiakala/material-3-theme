@@ -1,0 +1,148 @@
+/* Dream Layout - A Material Design 3 layout component */
+
+/* Navigation Rail */
+.anvil-m3-dream-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 8;
+  top: 0;
+  left: 0px !important;
+  background: linear-gradient(0deg, var(--anvil-m3-primary-overlay-2), var(--anvil-m3-primary-overlay-2)), var(--anvil-m3-background);
+  width: 80px !important;
+  height: 100%;
+}
+
+.anvil-m3-dream-nav-content {
+  display: flex;
+  margin-top: 20px;
+  width: 80px;
+  flex-direction: column;
+}
+
+/* Vertical alignment variants */
+.anvil-m3-dream-nav.anvil-m3-align-top {
+  justify-content: flex-start;
+}
+
+.anvil-m3-dream-nav.anvil-m3-align-center {
+  justify-content: center;
+}
+
+.anvil-m3-dream-nav.anvil-m3-align-bottom {
+  justify-content: flex-end;
+}
+
+/* Top App Bar */
+.anvil-m3-dream-top-bar {
+  display: none;
+}
+
+.anvil-m3-dream-title-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.anvil-m3-dream-menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* Content Area */
+.anvil-m3-dream-content {
+  top: 0;
+  padding: 8px;
+  position: relative;
+}
+
+@media(min-width: 600px) {
+  .anvil-m3-dream-content {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+/* Scrim */
+.anvil-m3-dream-scrim {
+  display: none;
+}
+
+/* Mobile Adaptations */
+@media(max-width: 600px) {
+  /* Bottom App Bar Mode */
+  .anvil-m3-dream-nav.anvil-m3-bottom-app-bar {
+    bottom: 0;
+    top: unset;
+    height: 80px;
+    width: 100%;
+    padding: 12px 8px 16px 8px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .anvil-m3-dream-nav.anvil-m3-bottom-app-bar .anvil-m3-dream-nav-content {
+    margin-top: 0px;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    column-gap: 8px;
+  }
+
+  /* Modal Navigation Drawer Mode */
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer {
+    width: 360px;
+    max-width: 90vw;
+    height: 100%;
+    padding: 28px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    left: -101%;
+    border-radius: 0 20px 20px 0;
+    transition: left .25s;
+  }
+
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer.shown {
+    left: 0px;
+  }
+
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer .anvil-m3-dream-nav-content {
+    width: 100%;
+  }
+
+  /* Content Adjustments */
+  .anvil-m3-dream-content.anvil-m3-bottom-app-bar {
+    margin-bottom: 80px;
+  }
+
+  /* Top Bar */
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer + .anvil-m3-dream-top-bar {
+    padding: 20px 16px 24px;
+    justify-content: space-between;
+    align-items: start;
+    display: flex !important;
+    width: 100%;
+    column-gap: 24px;
+    position: relative;
+  }
+
+  /* Menu Button */
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer + .anvil-m3-dream-top-bar .anvil-m3-dream-menu-btn {
+    display: flex;
+  }
+
+  /* Scrim */
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer.shown ~ .anvil-m3-dream-scrim {
+    background-color: rgba(0, 0, 0, 0.32);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: block;
+  }
+}
