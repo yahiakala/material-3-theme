@@ -17,19 +17,19 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+.anvil-m3-dream-account-section {
+  padding: 12px 0;
+  border-bottom: 1px solid #dadce0;
+  width: 80px;
+}
+
 .anvil-m3-dream-nav-content {
   display: flex;
-  margin-top: 20px;
   width: 80px;
   flex-direction: column;
   gap: 12px;
   padding: 12px 0;
-}
-
-.anvil-m3-dream-account-section {
-  margin-top: auto;
-  padding: 12px 0;
-  border-top: 1px solid #dadce0;
+  flex: 1;
 }
 
 /* Navigation Items */
@@ -112,10 +112,17 @@
   .anvil-m3-dream-nav.anvil-m3-bottom-app-bar .anvil-m3-dream-nav-content {
     margin-top: 0px;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: 80px;
     justify-content: center;
     column-gap: 8px;
+    flex: 0;
+  }
+
+  .anvil-m3-dream-nav.anvil-m3-bottom-app-bar .anvil-m3-dream-account-section {
+    width: auto;
+    border: none;
+    padding: 0;
   }
 
   /* Modal Navigation Drawer Mode */
@@ -136,6 +143,12 @@
 
   .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer .anvil-m3-dream-nav-content {
     width: 100%;
+    padding-top: 24px;
+  }
+
+  .anvil-m3-dream-nav.anvil-m3-modal-navigation-drawer .anvil-m3-dream-account-section {
+    width: 100%;
+    padding: 0 0 12px 0;
   }
 
   /* Content Adjustments */
