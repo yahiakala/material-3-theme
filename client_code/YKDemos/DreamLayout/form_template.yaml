@@ -28,4 +28,4 @@ components_by_slot:
     properties: {}
     type: form:_Components.NavigationLink
 is_package: true
-layout: {type: 'form:Layouts.DreamLayout'}
+layout: {type: 'form:YK.DreamLayout'}
