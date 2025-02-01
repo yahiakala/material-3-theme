@@ -90,6 +90,10 @@ body {
   color: var(--dream-outline);
 }
 
+.anvil-m3-dream-nav .anvil-m3-navigation-link-icon-label {
+  flex-direction: row;
+}
+
 /* Top App Bar */
 .anvil-m3-dream-top-bar {
   display: none;
