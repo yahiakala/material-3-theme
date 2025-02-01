@@ -90,8 +90,65 @@ body {
   color: var(--dream-outline);
 }
 
-.anvil-m3-dream-nav .anvil-m3-navigation-link-icon-label {
+/* Navigation Link Styling */
+.anvil-m3-dream-nav .anvil-m3-navigation-link {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-radius: 100px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link .anvil-m3-navigation-link-icon-label {
   flex-direction: row;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link .anvil-m3-navigation-link-text {
+  margin: 0px;
+  padding: 0px;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link [anvil-name=anvil-m3-navigation-link-icon] {
+  margin: 0px;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected [anvil-name=anvil-m3-navigation-link-icon] {
+  background: transparent;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected {
+  background-color: var(--anvil-m3-secondary-container);
+  color: var(--anvil-m3-on-secondary-container);
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link:hover {
+  background-color: var(--anvil-m3-dark-overlay-1);
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link:active,
+.anvil-m3-dream-nav .anvil-m3-navigation-link:focus {
+  background-color: var(--anvil-m3-dark-overlay-2);
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1) 0%, var(--anvil-m3-dark-overlay-1) 100%), var(--anvil-m3-secondary-container);
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:active,
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:focus {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-2) 0%, var(--anvil-m3-dark-overlay-2) 100%), var(--anvil-m3-secondary-container);
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link:hover [anvil-name=anvil-m3-navigation-link-icon],
+.anvil-m3-dream-nav .anvil-m3-navigation-link:focus [anvil-name=anvil-m3-navigation-link-icon],
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:hover [anvil-name=anvil-m3-navigation-link-icon],
+.anvil-m3-dream-nav .anvil-m3-navigation-link.anvil-m3-navigation-link-selected:focus [anvil-name=anvil-m3-navigation-link-icon] {
+  background: unset;
+}
+
+.anvil-m3-dream-nav .anvil-m3-navigation-link-icon-container {
+  margin: 0;
 }
 
 /* Top App Bar */
