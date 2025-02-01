@@ -4,6 +4,8 @@ unique_ids:
     anvil-m3/button.css: '1689852840093884237320513.6318'
     anvil-m3/card.css: '1700072176102883618663397.0227'
     anvil-m3/checkbox.css: '1689947587450398517756099.98175'
+    anvil-m3/dream-layout.css: LT34NRN2NR6EGBFRM2IAPJSYSSFN5DXF
+    anvil-m3/dream-layout.html: DHPRQBC4PIS5NAVIZ3EZWDJXQDPA3KHG
     anvil-m3/fileloader.css: '1699026052050532507046407.12885'
     anvil-m3/floating-ui/.gitkeep: '1727859508280419247875190.8084'
     anvil-m3/floating-ui/core@1.6.7.js: '1727797016359922181874191.5599'
@@ -70,8 +72,10 @@ unique_ids:
     designer_icons/toggle_icon_button_dark.svg: 7DAFFO5P4PSMHDQ73R2FXYVFP4ARD7VN
     theme.css: ETNISNSUVCSJYUF6AOQQTK6JLIO7LPER
   forms:
+    Layouts.DreamLayout: '1738443706356388516234527.34674'
     Layouts.NavigationDrawerLayout: '1718099721235160190367802.35773'
     Layouts.NavigationRailLayout: '1687425784458804083712790.1608'
+    YKDemos.DreamLayout: '1738443876550437537902342.57806'
     _Components.Button: '1688638796100476667734674.68195'
     _Components.ButtonMenu: '1691491348095506750812828.60736'
     _Components.Card: '1700072210669648729275536.3859'
@@ -98,6 +102,7 @@ unique_ids:
   modules:
     InitModule: '1729773387629974098018934.2618'
     Layouts: '1729688261865957178219315.7664'
+    YKDemos: '1738443828662473026003299.8752'
     _Components: '1689356081598516648538000.70355'
     _Components.InteractiveCard: '1700082450053581141325640.6907'
     _Components.TextInput.TextArea: '1704292074596382117568730.4692'
