@@ -1,6 +1,11 @@
 components_by_slot:
   slot_account:
-  - layout_properties: {}
+  - components:
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: menu_item_3
+      properties: {}
+      type: form:_Components.MenuItem
+    layout_properties: {}
     name: button_menu_1
     properties: {align: full}
     type: form:_Components.ButtonMenu
